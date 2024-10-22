@@ -72,7 +72,7 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
         };
 
         const response = await axios.get(
-            'https://www.tp.blood.org.tw/Internet/taipei/LocationMonth.aspx?site_id=2',
+            `https://www.tp.blood.org.tw/Internet/taipei/LocationMonth.aspx?site_id=2`,
             { headers }
         );
 
