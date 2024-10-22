@@ -1,7 +1,8 @@
-// app/api/blood-donations/route.ts
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+import { promises as fs } from 'fs';
+import path from 'path';
 
 interface DonationEvent {
     id?: string;
@@ -24,9 +25,9 @@ class MemoryCache {
         data: Record<string, DonationEvent[]> | null;
         timestamp: number;
     } = {
-            data: null,
-            timestamp: 0
-        };
+        data: null,
+        timestamp: 0
+    };
 
     private static TTL = 3600000; // 1小時，單位為毫秒
 
@@ -57,13 +58,68 @@ class MemoryCache {
 const urls = [
     'https://www.tp.blood.org.tw/Internet/taipei/LocationMonth.aspx?site_id=2',
     'https://www.sc.blood.org.tw/Internet/hsinchu/LocationMonth.aspx?site_id=3',
-    // 'https://www.tc.blood.org.tw/Internet/Taichung/LocationMonth.aspx?site_id=4',
-    // 'https://www.ks.blood.org.tw/Internet/Kaohsiung/LocationMonth.aspx?site_id=6',
+    'https://www.tc.blood.org.tw/Internet/Taichung/LocationMonth.aspx?site_id=4',
+    'https://www.ks.blood.org.tw/Internet/Kaohsiung/LocationMonth.aspx?site_id=6',
 ];
+
+// 保存資料到本地 JSON 文件
+async function saveLocalData(data: Record<string, DonationEvent[]>, filePath: string): Promise<void> {
+    try {
+        await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
+    } catch (error) {
+        console.error('Error saving local data:', error);
+    }
+}
+
+// 從本地文件中讀取資料
+async function loadLocalData(filePath: string): Promise<Record<string, DonationEvent[]> | null> {
+    try {
+        const fileContent = await fs.readFile(filePath, 'utf-8');
+        return JSON.parse(fileContent);
+    } catch (error) {
+        console.log('Error reading local data:', error);
+        return null;
+    }
+}
+
+// 生成動態檔案名稱
+function generateFileName(donationsByDate: Record<string, DonationEvent[]>): string {
+    const dates = Object.keys(donationsByDate);
+    let currentYear = new Date().getFullYear();
+    let latestMonth = 1; // 默認為1月
+
+    dates.forEach(date => {
+        const monthMatch = date.match(/(\d+)月/);
+        if (monthMatch) {
+            const month = parseInt(monthMatch[1], 10);
+            if (month > latestMonth) {
+                latestMonth = month;
+            }
+        }
+    });
+
+    if (latestMonth < new Date().getMonth() + 1) {
+        currentYear -= 1; 
+    }
+
+    const formattedMonth = latestMonth.toString().padStart(2, '0');
+    return `bloodInfo-${currentYear}${formattedMonth}.json`;
+}
 
 // GET - 取得捐血活動列表
 export async function GET(): Promise<NextResponse<ApiResponse>> {
     try {
+        const filePath = path.join(process.cwd(), 'data', 'bloodData.json');
+
+        // 檢查本地 JSON 檔案
+        const localData = await loadLocalData(filePath);
+        if (localData) {
+            return NextResponse.json({
+                success: true,
+                data: localData
+            });
+        }
+
         // 檢查記憶體快取
         const cachedData = MemoryCache.get();
         if (cachedData) {
@@ -86,20 +142,17 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
             const response = await axios.get(url, { headers });
             const $ = cheerio.load(response.data);
 
-            // 遍歷所有<td>標籤，並選擇其中包含的<a>和<font.tooltip>元素
             $('table#ctl00_ContentPlaceHolder1_cale_bloodSpotCalendar tbody tr td').each((_, element) => {
-                const date = $(element).find('a').attr('title'); // 獲取日期，例如 "10月9日"
+                const date = $(element).find('a').attr('title'); 
                 const tooltipElement = $(element).find('font.tooltip');
-                const tooltipText = tooltipElement.attr('title'); // 獲取活動詳細信息
+                const tooltipText = tooltipElement.attr('title'); 
 
                 if (date && tooltipText) {
-                    // 使用 '◎' 作為分隔符來分割每個活動
                     const eventsArray = tooltipText.split(/<font color=red>◎<\/font>/).filter(text => text.trim() !== '');
 
                     eventsArray.forEach(eventText => {
                         const cleanText = eventText.replace(/<\/?.*?>/g, '').trim();
 
-                        // 使用正則表達式來匹配時間、組織和地點
                         const timeRegex = /作業時間：([\d:]+~[\d:]+)/;
                         const organizationRegex = /主辦單位：([^。]+)/;
                         const locationRegex = /地址：([^<]+)/;
@@ -110,7 +163,7 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
 
                         if (timeMatch && organizationMatch && locationMatch) {
                             const eventInfo: DonationEvent = {
-                                id: Buffer.from(cleanText).toString('base64'), // 唯一標識符
+                                id: Buffer.from(cleanText).toString('base64'), 
                                 time: timeMatch[1].trim(),
                                 organization: organizationMatch[1].trim(),
                                 location: locationMatch[1].trim(),
@@ -127,7 +180,11 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
             });
         }
 
-        // 設置記憶體快取
+        const fileName = generateFileName(donationsByDate);
+        const filePathToSave = path.join(process.cwd(), 'data', fileName);
+
+        await saveLocalData(donationsByDate, filePathToSave);
+
         MemoryCache.set(donationsByDate);
 
         return NextResponse.json({
@@ -142,53 +199,6 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
                 success: false,
                 error: '無法取得捐血活動資料'
             },
-            { status: 500 }
-        );
-    }
-}
-
-// POST - 新增自定義註記
-export async function POST(request: Request): Promise<NextResponse<ApiResponse>> {
-    try {
-        const { id, customNote } = await request.json();
-        const cachedData = MemoryCache.get();
-
-        if (!cachedData) {
-            return NextResponse.json(
-                { success: false, error: '找不到活動資料' },
-                { status: 404 }
-            );
-        }
-
-        const updatedData = { ...cachedData };
-        for (const date in updatedData) {
-            updatedData[date] = updatedData[date].map(event => {
-                if (event.id === id) {
-                    return { ...event, customNote };
-                }
-                return event;
-            });
-        }
-
-        MemoryCache.set(updatedData);
-
-        return NextResponse.json({ success: true, data: updatedData });
-    } catch (error) {
-        return NextResponse.json(
-            { success: false, error: `無法更新註記 -${error}` },
-            { status: 500 }
-        );
-    }
-}
-
-// DELETE - 刪除記憶點
-export async function DELETE(): Promise<NextResponse<ApiResponse>> {
-    try {
-        MemoryCache.clear();
-        return NextResponse.json({ success: true });
-    } catch (error) {
-        return NextResponse.json(
-            { success: false, error: `無法刪除記憶點 -${error}` },
             { status: 500 }
         );
     }
