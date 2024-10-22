@@ -2,11 +2,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Loader2 } from 'lucide-react';
 import { debounce } from '@/utils';
+import CardInfo from '@/components/cardInfo';
 
 interface DonationEvent {
   id?: string;
@@ -60,23 +60,6 @@ export default function BloodDonationPage() {
     setSearchKeyword(value);
   }, 300);
 
-  const highlightText = (text: string, keyword: string) => {
-    if (!keyword) return text;
-    const parts = text.split(new RegExp(`(${keyword})`, 'gi'));
-    return (
-      <>
-        {parts.map((part, index) =>
-          part.toLowerCase() === keyword.toLowerCase() ? (
-            <span key={index} className="bg-yellow-200 p-1 rounded-sm">
-              {part}
-            </span>
-          ) : (
-            part
-          )
-        )}
-      </>
-    );
-  };
 
   if (loading) {
     return (
@@ -110,7 +93,7 @@ export default function BloodDonationPage() {
   );
 
   return (
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto p-8">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">捐血活動列表</h1>
         <Button onClick={refreshData}>重新整理</Button>
@@ -130,31 +113,11 @@ export default function BloodDonationPage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {events.map((donation, index) =>
               donation.id ? (
-                <Card key={`${donation.id}-${index}`} className="shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-lg">
-                      {highlightText(donation.organization, searchKeyword)}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-2">
-                      <p>
-                        <span className="font-semibold">時間：</span>
-                        {highlightText(donation.time, searchKeyword)}
-                      </p>
-                      <p>
-                        <span className="font-semibold">地點：</span>
-                        {highlightText(donation.location, searchKeyword)}
-                      </p>
-                      {donation.customNote && (
-                        <p className="text-blue-600">
-                          <span className="font-semibold">註記：</span>
-                          {donation.customNote}
-                        </p>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
+                <CardInfo
+                  key={`${donation.id}-${index}`}
+                  donation={donation}
+                  searchKeyword={searchKeyword}
+                />
               ) : null
             )}
           </div>
