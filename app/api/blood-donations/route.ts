@@ -18,7 +18,7 @@ interface ApiResponse {
     error?: string;
 }
 
-// 使用記憶點充積
+// 使用記憶體快取
 class MemoryCache {
     private static cache: {
         data: Record<string, DonationEvent[]> | null;
@@ -53,10 +53,18 @@ class MemoryCache {
     }
 }
 
+// 定義要爬取的網址列表
+const urls = [
+    'https://www.tp.blood.org.tw/Internet/taipei/LocationMonth.aspx?site_id=2',
+    'https://www.sc.blood.org.tw/Internet/hsinchu/LocationMonth.aspx?site_id=3',
+    'https://www.tc.blood.org.tw/Internet/Taichung/LocationMonth.aspx?site_id=4',
+    'https://www.ks.blood.org.tw/Internet/Kaohsiung/LocationMonth.aspx?site_id=6',
+];
+
 // GET - 取得捐血活動列表
 export async function GET(): Promise<NextResponse<ApiResponse>> {
     try {
-        // 檢查記憶點充積
+        // 檢查記憶體快取
         const cachedData = MemoryCache.get();
         if (cachedData) {
             return NextResponse.json({
@@ -71,55 +79,55 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
             'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
         };
 
-        const response = await axios.get(
-            `https://www.tp.blood.org.tw/Internet/taipei/LocationMonth.aspx?site_id=2`,
-            { headers }
-        );
-
-        const $ = cheerio.load(response.data);
         const donationsByDate: Record<string, DonationEvent[]> = {};
 
-        // 遍歷所有<td>標籤，並選擇其中包含的<a>和<font.tooltip>元素
-        $('table#ctl00_ContentPlaceHolder1_cale_bloodSpotCalendar tbody tr td').each((_, element) => {
-            const date = $(element).find('a').attr('title'); // 獲取日期，例如 "10月9日"
-            const tooltipElement = $(element).find('font.tooltip');
-            const tooltipText = tooltipElement.attr('title'); // 獲取活動詳細信息
+        // 遍歷所有網址，並對每個網址進行爬取
+        for (const url of urls) {
+            const response = await axios.get(url, { headers });
+            const $ = cheerio.load(response.data);
 
-            if (date && tooltipText) {
-                // 使用 '◎' 作為分隔符來分割每個活動
-                const eventsArray = tooltipText.split(/<font color=red>◎<\/font>/).filter(text => text.trim() !== '');
+            // 遍歷所有<td>標籤，並選擇其中包含的<a>和<font.tooltip>元素
+            $('table#ctl00_ContentPlaceHolder1_cale_bloodSpotCalendar tbody tr td').each((_, element) => {
+                const date = $(element).find('a').attr('title'); // 獲取日期，例如 "10月9日"
+                const tooltipElement = $(element).find('font.tooltip');
+                const tooltipText = tooltipElement.attr('title'); // 獲取活動詳細信息
 
-                eventsArray.forEach(eventText => {
-                    const cleanText = eventText.replace(/<\/?.*?>/g, '').trim();
+                if (date && tooltipText) {
+                    // 使用 '◎' 作為分隔符來分割每個活動
+                    const eventsArray = tooltipText.split(/<font color=red>◎<\/font>/).filter(text => text.trim() !== '');
 
-                    // 使用正則表達式來匹配時間、組織和地點
-                    const timeRegex = /作業時間：([\d:]+~[\d:]+)/;
-                    const organizationRegex = /主辦單位：([^。]+)/;
-                    const locationRegex = /地址：([^<]+)/;
+                    eventsArray.forEach(eventText => {
+                        const cleanText = eventText.replace(/<\/?.*?>/g, '').trim();
 
-                    const timeMatch = cleanText.match(timeRegex);
-                    const organizationMatch = cleanText.match(organizationRegex);
-                    const locationMatch = cleanText.match(locationRegex);
+                        // 使用正則表達式來匹配時間、組織和地點
+                        const timeRegex = /作業時間：([\d:]+~[\d:]+)/;
+                        const organizationRegex = /主辦單位：([^。]+)/;
+                        const locationRegex = /地址：([^<]+)/;
 
-                    if (timeMatch && organizationMatch && locationMatch) {
-                        const eventInfo: DonationEvent = {
-                            id: Buffer.from(cleanText).toString('base64'), // 唯一標識符
-                            time: timeMatch[1].trim(),
-                            organization: organizationMatch[1].trim(),
-                            location: locationMatch[1].trim(),
-                            rawContent: cleanText,
-                        };
+                        const timeMatch = cleanText.match(timeRegex);
+                        const organizationMatch = cleanText.match(organizationRegex);
+                        const locationMatch = cleanText.match(locationRegex);
 
-                        if (!donationsByDate[date]) {
-                            donationsByDate[date] = [];
+                        if (timeMatch && organizationMatch && locationMatch) {
+                            const eventInfo: DonationEvent = {
+                                id: Buffer.from(cleanText).toString('base64'), // 唯一標識符
+                                time: timeMatch[1].trim(),
+                                organization: organizationMatch[1].trim(),
+                                location: locationMatch[1].trim(),
+                                rawContent: cleanText,
+                            };
+
+                            if (!donationsByDate[date]) {
+                                donationsByDate[date] = [];
+                            }
+                            donationsByDate[date].push(eventInfo);
                         }
-                        donationsByDate[date].push(eventInfo);
-                    }
-                });
-            }
-        });
+                    });
+                }
+            });
+        }
 
-        // 設置記憶點充積
+        // 設置記憶體快取
         MemoryCache.set(donationsByDate);
 
         return NextResponse.json({
