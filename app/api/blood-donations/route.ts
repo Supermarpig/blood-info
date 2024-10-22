@@ -57,8 +57,8 @@ class MemoryCache {
 const urls = [
     'https://www.tp.blood.org.tw/Internet/taipei/LocationMonth.aspx?site_id=2',
     'https://www.sc.blood.org.tw/Internet/hsinchu/LocationMonth.aspx?site_id=3',
-    'https://www.tc.blood.org.tw/Internet/Taichung/LocationMonth.aspx?site_id=4',
-    'https://www.ks.blood.org.tw/Internet/Kaohsiung/LocationMonth.aspx?site_id=6',
+    // 'https://www.tc.blood.org.tw/Internet/Taichung/LocationMonth.aspx?site_id=4',
+    // 'https://www.ks.blood.org.tw/Internet/Kaohsiung/LocationMonth.aspx?site_id=6',
 ];
 
 // GET - 取得捐血活動列表
