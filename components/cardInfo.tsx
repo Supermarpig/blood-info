@@ -1,4 +1,3 @@
-// components/cardInfo.tsx
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface DonationEvent {
@@ -13,6 +12,7 @@ interface DonationEvent {
 interface CardInfoProps {
     donation: DonationEvent;
     searchKeyword: string;
+    className?: string; // 新增 className 屬性
 }
 
 const highlightText = (text: string, keyword: string) => {
@@ -33,9 +33,9 @@ const highlightText = (text: string, keyword: string) => {
     );
 };
 
-export default function CardInfo({ donation, searchKeyword }: CardInfoProps) {
+export default function CardInfo({ donation, searchKeyword, className = '' }: CardInfoProps) {
     return (
-        <Card key={donation.id} className="shadow-lg">
+        <Card key={donation.id} className={`shadow-lg ${className}`}>
             <CardHeader>
                 <CardTitle className="text-lg">
                     {highlightText(donation.organization, searchKeyword)}

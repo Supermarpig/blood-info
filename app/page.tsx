@@ -1,12 +1,12 @@
 // app/page.tsx
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-// import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Loader2 } from 'lucide-react';
-import { debounce, parseEventDate } from '@/utils';
-import CardInfo from '@/components/cardInfo';
+import { useState, useEffect } from "react";
+import { Input } from "@/components/ui/input";
+import { Loader2, ChevronDown, ChevronUp } from "lucide-react";
+import { debounce, parseEventDate } from "@/utils";
+import CardInfo from "@/components/cardInfo";
+import BackToTopButton from "@/components/BackToTopButton"; 
 
 interface DonationEvent {
   id?: string;
@@ -18,10 +18,13 @@ interface DonationEvent {
 }
 
 export default function BloodDonationPage() {
-  const [donationsByDate, setDonationsByDate] = useState<Record<string, DonationEvent[]>>({});
+  const [donationsByDate, setDonationsByDate] = useState<
+    Record<string, DonationEvent[]>
+  >({});
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [searchKeyword, setSearchKeyword] = useState<string>('');
+  const [searchKeyword, setSearchKeyword] = useState<string>("");
+  const [showPastEvents, setShowPastEvents] = useState<boolean>(false); // 用來控制是否顯示過去的活動
 
   useEffect(() => {
     fetchDonations();
@@ -30,7 +33,7 @@ export default function BloodDonationPage() {
   const fetchDonations = async (): Promise<void> => {
     try {
       setLoading(true);
-      const response = await fetch('/api/blood-donations');
+      const response = await fetch("/api/blood-donations");
       const data = await response.json();
 
       if (data.success) {
@@ -43,33 +46,21 @@ export default function BloodDonationPage() {
 
         setDonationsByDate(parsedData);
       } else {
-        setError(data.error || '發生錯誤');
+        setError(data.error || "發生錯誤");
       }
     } catch (error) {
-      setError('無法取得捐血活動資料');
+      setError("無法取得捐血活動資料");
       console.log(error);
     } finally {
       setLoading(false);
     }
   };
 
-
-  // const refreshData = async (): Promise<void> => {
-  //   try {
-  //     await fetch('/api/blood-donations', { method: 'DELETE' });
-  //     await fetchDonations();
-  //   } catch (error) {
-  //     setError('無法重新整理資料');
-  //     console.log(error);
-  //   }
-  // };
-
   const handleSearchChange = debounce((value: string) => {
     setSearchKeyword(value);
   }, 300);
 
-  // 分類活動為過去、今天、以及未來活動
-  const today = new Date().toISOString().split('T')[0];
+  const today = new Date().toISOString().split("T")[0];
   const pastEvents: Record<string, DonationEvent[]> = {};
   const todayEvents: Record<string, DonationEvent[]> = {};
   const upcomingEvents: Record<string, DonationEvent[]> = {};
@@ -84,7 +75,6 @@ export default function BloodDonationPage() {
     }
   });
 
-  // 過濾符合搜尋關鍵字的活動
   const filterEvents = (events: DonationEvent[]) =>
     events.filter(
       (event) =>
@@ -93,13 +83,19 @@ export default function BloodDonationPage() {
         event.time.includes(searchKeyword)
     );
 
-  const filterAndRenderEventsByDate = (eventsByDate: Record<string, DonationEvent[]>) =>
+  const filterAndRenderEventsByDate = (
+    eventsByDate: Record<string, DonationEvent[]>,
+    backgroundColor: string
+  ) =>
     Object.entries(eventsByDate)
       .map(([date, events]) => {
         const filteredEvents = filterEvents(events);
         if (filteredEvents.length === 0) return null;
         return (
-          <div key={date} className="mb-4">
+          <div
+            key={date}
+            className={`mb-4 bg-${backgroundColor} p-4 rounded-md shadow-md`}
+          >
             <div className="sticky top-0 bg-white z-10">
               <h2 className="text-lg font-medium mb-2 py-2">{date}</h2>
             </div>
@@ -109,6 +105,7 @@ export default function BloodDonationPage() {
                   key={`${donation.id}-${index}`}
                   donation={donation}
                   searchKeyword={searchKeyword}
+                  className="transition-transform transform hover:scale-105"
                 />
               ))}
             </div>
@@ -116,6 +113,10 @@ export default function BloodDonationPage() {
         );
       })
       .filter((element) => element !== null);
+
+  const togglePastEvents = () => {
+    setShowPastEvents(!showPastEvents);
+  };
 
   if (loading) {
     return (
@@ -137,7 +138,6 @@ export default function BloodDonationPage() {
     <div className="container mx-auto p-8">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">捐血活動列表</h1>
-        {/* <Button onClick={refreshData}>重新整理</Button> */}
       </div>
 
       <div className="mb-6">
@@ -150,18 +150,38 @@ export default function BloodDonationPage() {
 
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-4">今日活動</h2>
-        {filterAndRenderEventsByDate(todayEvents)}
+        {filterAndRenderEventsByDate(todayEvents, "yellow-100")}
       </div>
 
       <div className="mb-8">
         <h2 className="text-xl font-semibold mb-4">即將開始的活動</h2>
-        {filterAndRenderEventsByDate(upcomingEvents)}
+        {filterAndRenderEventsByDate(upcomingEvents, "green-100")}
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-4">已過期的活動</h2>
-        {filterAndRenderEventsByDate(pastEvents)}
+        <div className="flex items-center justify-between">
+          <h2 className="text-xl font-semibold mb-4">已過期的活動</h2>
+          <button
+            onClick={togglePastEvents}
+            className="text-green-700 flex items-center"
+          >
+            {showPastEvents ? (
+              <>
+                <ChevronUp className="h-5 w-5 mr-2" /> 
+                <span>隱藏</span>
+              </>
+            ) : (
+              <>
+                <ChevronDown className="h-5 w-5 mr-2" /> 
+                <span>顯示</span>
+              </>
+            )}
+          </button>
+        </div>
+        {showPastEvents && filterAndRenderEventsByDate(pastEvents, "gray-100")}
       </div>
+
+      <BackToTopButton />
     </div>
   );
 }
