@@ -7,7 +7,8 @@ export default async function BloodDonationPage() {
   let error = null;
 
   try {
-    const response = await fetch("http://localhost:3000/api/blood-donations");
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    const response = await fetch(`${baseUrl}/api/blood-donations`);
     data = await response.json();
 
     if (!data.success) {
