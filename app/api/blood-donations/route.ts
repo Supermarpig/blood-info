@@ -25,9 +25,9 @@ class MemoryCache {
         data: Record<string, DonationEvent[]> | null;
         timestamp: number;
     } = {
-        data: null,
-        timestamp: 0
-    };
+            data: null,
+            timestamp: 0
+        };
 
     private static TTL = 3600000; // 1小時，單位為毫秒
 
@@ -62,10 +62,59 @@ const urls = [
     'https://www.ks.blood.org.tw/Internet/Kaohsiung/LocationMonth.aspx?site_id=6',
 ];
 
-// 保存資料到本地 JSON 文件
-async function saveLocalData(data: Record<string, DonationEvent[]>, filePath: string): Promise<void> {
+// 生成當前月份的 JSON 文件名稱
+function getCurrentMonthFileName(): string {
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // 月份補零
+    // console.log(`bloodInfo-${year}${month}.json😍😍😍`)
+    return `bloodInfo-${year}${month}.json`;
+}
+
+// 檢查當月的 JSON 文件是否存在
+async function findCurrentMonthFile(): Promise<string | null> {
+    const fileName = getCurrentMonthFileName();
+    const filePath = path.join(process.cwd(), 'data', fileName);
+
     try {
-        await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
+        // 檢查文件是否存在
+        await fs.access(filePath);
+        return filePath; // 文件存在，返回文件路徑
+    } catch (error) {
+        console.error(`File not found: ${filePath} ,${error}`);
+        return null; // 文件不存在
+    }
+}
+
+// 定義函數將中文日期轉換為標準日期格式
+function parseChineseDate(chineseDate: string): string {
+    const currentYear = new Date().getFullYear();
+
+    // 匹配中文日期格式，如 "10月1日"
+    const dateMatch = chineseDate.match(/(\d+)月(\d+)日/);
+    if (!dateMatch) return chineseDate; // 如果無法匹配，返回原日期
+
+    const month = parseInt(dateMatch[1], 10);
+    const day = parseInt(dateMatch[2], 10);
+
+    // 檢查月份，確保正確處理跨年情況
+    const parsedYear = (month < new Date().getMonth() + 1) ? currentYear + 1 : currentYear;
+
+    // 格式化為 YYYY-MM-DD
+    const formattedDate = `${parsedYear}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    return formattedDate;
+}
+
+// 保存資料到本地 JSON 文件，並將日期轉換為標準格式
+async function saveLocalDataWithFormattedDates(data: Record<string, DonationEvent[]>, filePath: string): Promise<void> {
+    const formattedData = Object.keys(data).reduce((acc, date) => {
+        const formattedDate = parseChineseDate(date); // 轉換日期格式
+        acc[formattedDate] = data[date]; // 保存轉換後的日期
+        return acc;
+    }, {} as Record<string, DonationEvent[]>);
+
+    try {
+        await fs.writeFile(filePath, JSON.stringify(formattedData, null, 2), 'utf-8');
     } catch (error) {
         console.error('Error saving local data:', error);
     }
@@ -82,42 +131,16 @@ async function loadLocalData(filePath: string): Promise<Record<string, DonationE
     }
 }
 
-// 生成動態檔案名稱
-function generateFileName(donationsByDate: Record<string, DonationEvent[]>): string {
-    const dates = Object.keys(donationsByDate);
-    let currentYear = new Date().getFullYear();
-    let latestMonth = 1; // 默認為1月
-
-    dates.forEach(date => {
-        const monthMatch = date.match(/(\d+)月/);
-        if (monthMatch) {
-            const month = parseInt(monthMatch[1], 10);
-            if (month > latestMonth) {
-                latestMonth = month;
-            }
-        }
-    });
-
-    if (latestMonth < new Date().getMonth() + 1) {
-        currentYear -= 1; 
-    }
-
-    const formattedMonth = latestMonth.toString().padStart(2, '0');
-    return `bloodInfo-${currentYear}${formattedMonth}.json`;
-}
-
 // GET - 取得捐血活動列表
 export async function GET(): Promise<NextResponse<ApiResponse>> {
     try {
-        const filePath = path.join(process.cwd(), 'data', 'bloodData.json');
+        const filePath = await findCurrentMonthFile(); // 動態尋找當月的 JSON 文件
 
-        // 檢查本地 JSON 檔案
-        const localData = await loadLocalData(filePath);
-        if (localData) {
+        if (!filePath) {
             return NextResponse.json({
-                success: true,
-                data: localData
-            });
+                success: false,
+                error: '當月的捐血活動資料不存在'
+            }, { status: 404 });
         }
 
         // 檢查記憶體快取
@@ -126,6 +149,15 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
             return NextResponse.json({
                 success: true,
                 data: cachedData
+            });
+        }
+
+        // 檢查本地 JSON 檔案
+        const localData = await loadLocalData(filePath);
+        if (localData) {
+            return NextResponse.json({
+                success: true,
+                data: localData
             });
         }
 
@@ -143,9 +175,9 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
             const $ = cheerio.load(response.data);
 
             $('table#ctl00_ContentPlaceHolder1_cale_bloodSpotCalendar tbody tr td').each((_, element) => {
-                const date = $(element).find('a').attr('title'); 
+                const date = $(element).find('a').attr('title');
                 const tooltipElement = $(element).find('font.tooltip');
-                const tooltipText = tooltipElement.attr('title'); 
+                const tooltipText = tooltipElement.attr('title');
 
                 if (date && tooltipText) {
                     const eventsArray = tooltipText.split(/<font color=red>◎<\/font>/).filter(text => text.trim() !== '');
@@ -163,7 +195,7 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
 
                         if (timeMatch && organizationMatch && locationMatch) {
                             const eventInfo: DonationEvent = {
-                                id: Buffer.from(cleanText).toString('base64'), 
+                                id: Buffer.from(cleanText).toString('base64'),
                                 time: timeMatch[1].trim(),
                                 organization: organizationMatch[1].trim(),
                                 location: locationMatch[1].trim(),
@@ -180,10 +212,11 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
             });
         }
 
-        const fileName = generateFileName(donationsByDate);
+        const fileName = getCurrentMonthFileName(); // 動態生成當月文件名稱
         const filePathToSave = path.join(process.cwd(), 'data', fileName);
 
-        await saveLocalData(donationsByDate, filePathToSave);
+        // 使用轉換後的日期格式來保存資料
+        await saveLocalDataWithFormattedDates(donationsByDate, filePathToSave);
 
         MemoryCache.set(donationsByDate);
 

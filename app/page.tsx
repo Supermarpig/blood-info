@@ -4,9 +4,9 @@
 import { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Loader2, ChevronDown, ChevronUp } from "lucide-react";
-import { debounce, parseEventDate } from "@/utils";
+import { debounce } from "@/utils";
 import CardInfo from "@/components/cardInfo";
-import BackToTopButton from "@/components/BackToTopButton"; 
+import BackToTopButton from "@/components/BackToTopButton";
 
 interface DonationEvent {
   id?: string;
@@ -39,11 +39,11 @@ export default function BloodDonationPage() {
       if (data.success) {
         const parsedData = Object.fromEntries(
           Object.entries(data.data).map(([date, events]) => [
-            parseEventDate(date),
+            date,
             events,
           ])
         ) as Record<string, DonationEvent[]>;
-
+        console.log(parsedData, "======parsedData😍😍😍")
         setDonationsByDate(parsedData);
       } else {
         setError(data.error || "發生錯誤");
@@ -167,12 +167,12 @@ export default function BloodDonationPage() {
           >
             {showPastEvents ? (
               <>
-                <ChevronUp className="h-5 w-5 mr-2" /> 
+                <ChevronUp className="h-5 w-5 mr-2" />
                 <span>隱藏</span>
               </>
             ) : (
               <>
-                <ChevronDown className="h-5 w-5 mr-2" /> 
+                <ChevronDown className="h-5 w-5 mr-2" />
                 <span>顯示</span>
               </>
             )}
