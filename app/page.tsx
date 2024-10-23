@@ -43,7 +43,6 @@ export default function BloodDonationPage() {
             events,
           ])
         ) as Record<string, DonationEvent[]>;
-        console.log(parsedData, "======parsedData😍😍😍")
         setDonationsByDate(parsedData);
       } else {
         setError(data.error || "發生錯誤");

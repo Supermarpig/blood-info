@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 interface DonationEvent {
     id?: string;
@@ -47,10 +48,21 @@ export default function CardInfo({ donation, searchKeyword, className = '' }: Ca
                         <span className="font-semibold">時間：</span>
                         {highlightText(donation.time, searchKeyword)}
                     </p>
-                    <p>
-                        <span className="font-semibold">地點：</span>
-                        {highlightText(donation.location, searchKeyword)}
+                    <p className="flex items-center">
+                        {/* 地圖 icon，點擊後打開 Google Maps */}
+                        <a
+                            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(donation.location)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-orange-500 hover:text-orange-700 hover:underline flex items-center"
+                        >
+                            <FaMapMarkerAlt className=" mr-1" />
+                            {highlightText(donation.location, searchKeyword)}
+                        </a>
                     </p>
+
+
+
                     {donation.customNote && (
                         <p className="text-blue-600">
                             <span className="font-semibold">註記：</span>
