@@ -91,22 +91,23 @@ export default function BloodDonationPage() {
         const filteredEvents = filterEvents(events);
         if (filteredEvents.length === 0) return null;
         return (
-          <div
-            key={date}
-            className={`mb-4 bg-${backgroundColor} p-4 rounded-md shadow-md`}
-          >
-            <div className="sticky top-0 bg-white z-10">
-              <h2 className="text-lg font-medium mb-2 py-2">{date}</h2>
+          <div key={date}>
+            <div className="sticky top-0 bg-white z-10 shadow-md">
+              <h2 className="text-lg font-medium mb-2 p-2">{date}</h2>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {filteredEvents.map((donation, index) => (
-                <CardInfo
-                  key={`${donation.id}-${index}`}
-                  donation={donation}
-                  searchKeyword={searchKeyword}
-                  className="transition-transform transform hover:scale-105"
-                />
-              ))}
+            <div
+              className={`mb-4 bg-${backgroundColor} p-4 rounded-md shadow-md`}
+            >
+              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {filteredEvents.map((donation, index) => (
+                  <CardInfo
+                    key={`${donation.id}-${index}`}
+                    donation={donation}
+                    searchKeyword={searchKeyword}
+                    className="transition-transform transform hover:scale-105"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         );
