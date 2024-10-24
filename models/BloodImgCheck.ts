@@ -28,6 +28,6 @@ type IBloodImgInfoModel = Model<IImgUrl>;
 
 // 創建並導出模型
 const BloodImgInfoModel =
-    mongoose.models.BloodImgInfo as IBloodImgInfoModel || mongoose.model<IImgUrl, IBloodImgInfoModel>('bloodImgInfo', ImgUrlSchema);
+    mongoose.models.BloodImgInfo as IBloodImgInfoModel || mongoose.model<IImgUrl, IBloodImgInfoModel>('BloodImgInfo', ImgUrlSchema);
 
 export default BloodImgInfoModel;

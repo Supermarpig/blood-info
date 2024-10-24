@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
+import { Loader2 } from 'lucide-react';
 
 // 定義 Zod schema 進行表單驗證
 const schema = z.object({
@@ -24,6 +25,7 @@ interface ImageUploadModalProps {
 
 export default function ImageUploadModal({ image, setImage, buttonText = '+', donationID, organization }: ImageUploadModalProps) {
     const [isSubmitted, setIsSubmitted] = useState(false); // 控制提交後狀態
+    const [isLoading, setIsLoading] = useState(false); // 控制 loading 狀態
     const {
         register,
         handleSubmit,
@@ -40,6 +42,8 @@ export default function ImageUploadModal({ image, setImage, buttonText = '+', do
             return;
         }
 
+        setIsLoading(true); // 開始 loading
+
         try {
             const response = await fetch('/api/save-image-url', {
                 method: 'POST',
@@ -54,8 +58,6 @@ export default function ImageUploadModal({ image, setImage, buttonText = '+', do
             });
 
             if (response.ok) {
-                const result = await response.json();
-                console.log('提交成功:', result);
                 // 更新圖片狀態並顯示提交成功訊息
                 setImage(data.imageUrl);
                 setIsSubmitted(true);
@@ -68,6 +70,8 @@ export default function ImageUploadModal({ image, setImage, buttonText = '+', do
         } catch (error) {
             console.error('提交時發生錯誤:', error);
             // 你可以根據需要顯示錯誤訊息
+        } finally {
+            setIsLoading(false); // 結束 loading
         }
     };
 
@@ -110,6 +114,7 @@ export default function ImageUploadModal({ image, setImage, buttonText = '+', do
                                 {...register('imageUrl')}
                                 className="p-4 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                                 placeholder="請輸入圖片 URL"
+                                disabled={isLoading} 
                             />
                             {errors.imageUrl && (
                                 <p className="mt-2 text-sm text-red-600">{errors.imageUrl.message}</p>
@@ -118,9 +123,18 @@ export default function ImageUploadModal({ image, setImage, buttonText = '+', do
                         <div className="flex justify-end">
                             <button
                                 type="submit"
-                                className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                                className={`flex items-center bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''
+                                    }`}
+                                disabled={isLoading} 
                             >
-                                提交
+                                {isLoading ? (
+                                    <>
+                                        <Loader2 className="animate-spin h-5 w-5 mr-3" />
+                                        提交中...
+                                    </>
+                                ) : (
+                                    '提交'
+                                )}
                             </button>
                         </div>
                     </form>
