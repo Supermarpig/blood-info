@@ -1,14 +1,32 @@
+// /api/save-image-url/route.ts
 import { NextResponse } from 'next/server';
+import { createBloodImgInfo } from '@/services/bloodService';
+import { IImgUrlInput } from '@/models/BloodImgCheck';
 
-// 定義 POST 方法
 export async function POST(request: Request) {
     try {
-        const { imageUrl } = await request.json();
+        const body: Partial<IImgUrlInput> = await request.json();
 
-        // 在這裡處理 imageUrl，例如保存到 Google Sheets 或數據庫中
-        console.log('Received image URL:', imageUrl);
+        // 驗證必要欄位
+        const { id, organization, imgUrl } = body;
+        if (!id || !organization || !imgUrl) {
+            return NextResponse.json(
+                { error: 'Missing required fields: id, organization, imgUrl' },
+                { status: 400 }
+            );
+        }
 
-        return NextResponse.json({ message: 'URL submitted successfully' }, { status: 200 });
+        // 建立新的血液圖片信息
+        const newBloodImgInfo = await createBloodImgInfo({
+            id,
+            organization,
+            imgUrl,
+        });
+
+        return NextResponse.json(
+            { message: 'URL submitted successfully', data: newBloodImgInfo },
+            { status: 201 }
+        );
     } catch (error) {
         console.error('Error handling POST request:', error);
         return NextResponse.json({ error: 'Failed to save URL' }, { status: 500 });
