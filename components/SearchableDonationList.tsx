@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { debounce } from "@/utils";
-import CardInfo from "@/components/cardInfo";
+import CardInfo from "@/components/CardInfo";
 import BackToTopButton from "@/components/BackToTopButton";
 
 interface DonationEvent {

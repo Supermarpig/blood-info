@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { FaMapMarkerAlt } from 'react-icons/fa';
+import { useState } from 'react';
+import ImageUploadModal from './ImageUploadModal';
 
 interface DonationEvent {
     id?: string;
@@ -35,12 +37,19 @@ const highlightText = (text: string, keyword: string) => {
 };
 
 export default function CardInfo({ donation, searchKeyword, className = '' }: CardInfoProps) {
+    const [image, setImage] = useState<string | null>(null); // 管理圖片狀態
+
     return (
         <Card key={donation.id} className={`shadow-lg ${className}`}>
-            <CardHeader>
+            <CardHeader className="relative">
                 <CardTitle className="text-lg">
                     {highlightText(donation.organization, searchKeyword)}
                 </CardTitle>
+                {/* 卡牌右上角圖片上傳按鈕 */}
+                <div className="absolute top-2 right-2 m-2">
+                    <ImageUploadModal image={image} setImage={setImage} />
+                    {/* <ImageUploadModal image={'https://i.imgur.com/kzByXHL.jpeg'} setImage={setImage} /> */}
+                </div>
             </CardHeader>
             <CardContent>
                 <div className="space-y-2">
@@ -60,9 +69,6 @@ export default function CardInfo({ donation, searchKeyword, className = '' }: Ca
                             {highlightText(donation.location, searchKeyword)}
                         </a>
                     </p>
-
-
-
                     {donation.customNote && (
                         <p className="text-blue-600">
                             <span className="font-semibold">註記：</span>
