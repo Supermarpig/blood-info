@@ -121,22 +121,24 @@ export default function ImageUploadModal({
                 )}
 
             </DialogTrigger>
-            <DialogContent className="max-w-[425px] w-[90%]">
+            <DialogContent aria-describedby={image ? "dialog-description" : undefined} className="max-w-[425px] w-[90%]">
                 <DialogHeader>
                     <DialogTitle>{image ? '更新圖片' : '添加活動圖片'}</DialogTitle>
                 </DialogHeader>
                 {image ? (
                     <div className="space-y-4">
                         {isSubmitted && (
-                            <p className="text-green-500 text-center">圖片提交成功，等待審核！</p>
+                            <p id="dialog-description" className="text-green-500 text-center">圖片提交成功，等待審核！</p>
                         )}
                         <img src={image} alt="Uploaded" className="w-full h-auto object-contain" />
                     </div>
                 ) : (
+
                     <Tabs defaultValue="url" className="w-full">
+                        <p id="dialog-description" className='hidden'>支持 URL 🔗 或文件上傳📁</p>
                         <TabsList className="grid w-full grid-cols-2">
-                            <TabsTrigger value="url">URL</TabsTrigger>
-                            <TabsTrigger value="file">文件上傳</TabsTrigger>
+                            <TabsTrigger value="url">URL  🔗</TabsTrigger>
+                                <TabsTrigger value="file">圖片上傳  🖼️</TabsTrigger>
                         </TabsList>
                         <Form {...form}>
                             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -146,7 +148,7 @@ export default function ImageUploadModal({
                                         name="imageUrl"
                                         render={({ field }) => (
                                             <FormItem>
-                                                <FormLabel>圖片網址</FormLabel>
+                                                <FormLabel>圖片網址 🔗🔗🔗</FormLabel>
                                                 <FormControl>
                                                     <Input placeholder="請輸入活動圖片網址" {...field} disabled={isLoading} />
                                                 </FormControl>
@@ -161,7 +163,7 @@ export default function ImageUploadModal({
                                         name="imageFile"
                                         render={({ field: { onChange, value, ...rest } }) => (
                                             <FormItem>
-                                                <FormLabel>上傳圖片</FormLabel>
+                                                <FormLabel>上傳圖片 🖼️🖼️🖼️</FormLabel>
                                                 <FormControl>
                                                     <Input
                                                         type="file"
