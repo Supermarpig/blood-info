@@ -158,32 +158,37 @@ export default function ImageUploadModal({
                                     />
                                 </TabsContent>
                                 <TabsContent value="file">
-                                    <FormField
-                                        control={form.control}
-                                        name="imageFile"
-                                        render={({ field: { onChange, value, ...rest } }) => (
-                                            <FormItem>
-                                                <FormLabel>上傳圖片 🖼️🖼️🖼️</FormLabel>
-                                                <FormControl>
-                                                    <Input
-                                                        type="file"
-                                                        accept="image/jpeg,image/png,image/webp"
-                                                        value={value ? value.name : ''}
-                                                        onChange={(e) => {
-                                                            const file = e.target.files?.[0]
-                                                            if (file) {
-                                                                onChange(file)
-                                                                form.setValue('uploadType', 'file')
-                                                            }
-                                                        }}
-                                                        disabled={isLoading}
-                                                        {...rest}
-                                                    />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
-                                    />
+                                        <FormField
+                                            control={form.control}
+                                            name="imageFile"
+                                            render={({ field }) => {
+                                                const { onChange, onBlur, name, ref } = field;
+                                                return (
+                                                    <FormItem>
+                                                        <FormLabel>上傳圖片 🖼️🖼️🖼️</FormLabel>
+                                                        <FormControl>
+                                                            <Input
+                                                                type="file"
+                                                                accept="image/jpeg,image/png,image/webp"
+                                                                name={name}
+                                                                onBlur={onBlur}
+                                                                ref={ref}
+                                                                onChange={(e) => {
+                                                                    const file = e.target.files?.[0];
+                                                                    if (file) {
+                                                                        onChange(file);
+                                                                        form.setValue('uploadType', 'file');
+                                                                    }
+                                                                }}
+                                                                disabled={isLoading}
+                                                            />
+                                                        </FormControl>
+                                                        <FormMessage />
+                                                    </FormItem>
+                                                );
+                                            }}
+                                        />
+
                                 </TabsContent>
                                 <Button type="submit" disabled={isLoading} className="w-full">
                                     {isLoading ? (
