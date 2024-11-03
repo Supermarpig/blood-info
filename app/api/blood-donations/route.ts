@@ -137,10 +137,14 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
         // 檢查記憶體快取
         const cachedData = MemoryCache.get();
         if (cachedData) {
-            return NextResponse.json({
-                success: true,
-                data: cachedData
-            });
+            return NextResponse.json(
+                { success: true, data: cachedData },
+                {
+                    headers: {
+                        'Cache-Control': 'no-store', // 禁用快取
+                    },
+                }
+            );
         }
 
         // 動態尋找當月的 JSON 文件
