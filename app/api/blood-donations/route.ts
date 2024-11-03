@@ -134,15 +134,6 @@ async function loadLocalData(filePath: string): Promise<Record<string, DonationE
 // GET - 取得捐血活動列表
 export async function GET(): Promise<NextResponse<ApiResponse>> {
     try {
-        const filePath = await findCurrentMonthFile(); // 動態尋找當月的 JSON 文件
-
-        if (!filePath) {
-            return NextResponse.json({
-                success: false,
-                error: '當月的捐血活動資料不存在'
-            }, { status: 404 });
-        }
-
         // 檢查記憶體快取
         const cachedData = MemoryCache.get();
         if (cachedData) {
@@ -152,15 +143,23 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
             });
         }
 
-        // 檢查本地 JSON 檔案
-        const localData = await loadLocalData(filePath);
-        if (localData) {
-            return NextResponse.json({
-                success: true,
-                data: localData
-            });
+        // 動態尋找當月的 JSON 文件
+        const filePath = await findCurrentMonthFile();
+
+        if (filePath) {
+            // 檢查本地 JSON 檔案
+            const localData = await loadLocalData(filePath);
+            if (localData) {
+                // 快取並返回本地資料
+                MemoryCache.set(localData);
+                return NextResponse.json({
+                    success: true,
+                    data: localData
+                });
+            }
         }
 
+        // 若無文件或本地檔案不可讀，開始爬取資料
         const headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -169,11 +168,11 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
 
         const donationsByDate: Record<string, DonationEvent[]> = {};
 
-        // 遍歷所有網址，並對每個網址進行爬取
         for (const url of urls) {
             const response = await axios.get(url, { headers });
             const $ = cheerio.load(response.data);
 
+            // 解析網站並組織資料
             $('table#ctl00_ContentPlaceHolder1_cale_bloodSpotCalendar tbody tr td').each((_, element) => {
                 const date = $(element).find('a').attr('title');
                 const tooltipElement = $(element).find('font.tooltip');
@@ -181,14 +180,11 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
 
                 if (date && tooltipText) {
                     const eventsArray = tooltipText.split(/<font color=red>◎<\/font>/).filter(text => text.trim() !== '');
-
                     eventsArray.forEach(eventText => {
                         const cleanText = eventText.replace(/<\/?.*?>/g, '').trim();
-
                         const timeRegex = /作業時間：([\d:]+~[\d:]+)/;
                         const organizationRegex = /主辦單位：([^。]+)/;
                         const locationRegex = /地址：([^<]+)/;
-
                         const timeMatch = cleanText.match(timeRegex);
                         const organizationMatch = cleanText.match(organizationRegex);
                         const locationMatch = cleanText.match(locationRegex);
@@ -212,12 +208,12 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
             });
         }
 
-        const fileName = getCurrentMonthFileName(); // 動態生成當月文件名稱
+        // 保存爬取到的資料
+        const fileName = getCurrentMonthFileName();
         const filePathToSave = path.join(process.cwd(), 'data', fileName);
-
-        // 使用轉換後的日期格式來保存資料
         await saveLocalDataWithFormattedDates(donationsByDate, filePathToSave);
 
+        // 將資料存入快取
         MemoryCache.set(donationsByDate);
 
         return NextResponse.json({

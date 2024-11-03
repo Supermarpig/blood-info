@@ -7,7 +7,7 @@ export default async function BloodDonationPage() {
   let error = null;
 
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
     const response = await fetch(`${baseUrl}/api/blood-donations`);
     data = await response.json();
 
@@ -15,7 +15,7 @@ export default async function BloodDonationPage() {
       error = data.error || "發生錯誤";
     }
   } catch (err) {
-    error = "無法獲取捐血活動資料";
+    error = "無法獲取捐血活動資料😍😍😍";
     console.error(err);
   }
 
