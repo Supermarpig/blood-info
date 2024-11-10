@@ -119,7 +119,7 @@ export async function POST(request: Request) {
         }
 
         // 傳遞確保為 string 類型的 accessToken 和 albumId
-        const imgurResponse = await uploadToImgur(imageBase64, accessToken, albumId);
+        const imgurResponse = await uploadToImgur(imageBase64, accessToken);
 
         if (!imgurResponse.success || !imgurResponse.data?.link) {
             console.error('Imgur upload failed:', imgurResponse);
