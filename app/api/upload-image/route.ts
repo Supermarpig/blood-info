@@ -37,8 +37,9 @@ async function refreshImgurToken() {
 }
 
 // 上傳圖片至 Imgur
-async function uploadToImgur(imageBase64: string, accessToken: string, albumId: string) {
-    let response = await fetch('https://api.imgur.com/3/image', {
+// async function uploadToImgur(imageBase64: string, accessToken: string, albumId: string) {
+async function uploadToImgur(imageBase64: string, accessToken: string) {
+let response = await fetch('https://api.imgur.com/3/image', {
         method: 'POST',
         headers: {
             Authorization: `Bearer ${accessToken}`,
