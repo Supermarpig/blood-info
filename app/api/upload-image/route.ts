@@ -138,9 +138,8 @@ export async function POST(request: Request) {
             organization,
             imgUrl,
         });
-        console.log({ message: 'Image uploaded successfully', imgUrl:imgUrl, imageInfo: newImageInfo},)
         return NextResponse.json(
-            { message: 'Image uploaded successfully', imgUrl:imgUrl, imageInfo: newImageInfo },
+            { message: 'Image uploaded successfully',  data: newImageInfo },
             { status: 201 }
         );
     } catch (error) {

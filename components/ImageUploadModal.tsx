@@ -19,7 +19,7 @@ const fileSchema = z.object({
     imageFile: z.instanceof(File).refine((file) => file.size <= 5000000, `文件大小不能超過 5MB.`)
         .refine(
             (file) => ['image/jpeg', 'image/png', 'image/webp'].includes(file.type),
-            "僅支持 .jpg、.png 和 .webp 格式"
+            "僅支援 .jpg、.png 和 .webp 格式"
         ),
 })
 
@@ -55,19 +55,17 @@ export default function ImageUploadModal({
             imageUrl: '',
         },
     })
-
     const onSubmit = async (data: FormData) => {
         if (!donationID || !organization) {
-            console.error('donationID or organization is undefined')
-            return
+            console.error('donationID or organization is undefined');
+            return;
         }
-
-        setIsLoading(true)
-
+    
+        setIsLoading(true);
+    
         try {
-            let response
             if (data.uploadType === 'url') {
-                response = await fetch('/api/save-image-url', {
+                const response = await fetch('/api/save-image-url', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
@@ -75,42 +73,66 @@ export default function ImageUploadModal({
                         organization,
                         imgUrl: data.imageUrl,
                     }),
-                })
+                });
+    
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log(result, "====== result from save-image-url");
+    
+                    // 根據實際的回響結構獲取imgUrl
+                    const imgUrl = result.data?.imgUrl || result.imgUrl;
+                    if (imgUrl) {
+                        setImage(imgUrl);
+                    } else {
+                        console.error('imgUrl not found in response');
+                    }
+    
+                    setIsSubmitted(true);
+                    form.reset();
+                } else {
+                    const errorData = await response.json();
+                    console.error('Submission failed:', errorData);
+                }
             } else if (data.uploadType === 'file' && data.imageFile) {
-                const formData = new FormData()
-                formData.append('file', data.imageFile)
-                formData.append('id', donationID)
-                formData.append('organization', organization)
-
-                // // 檢查 formData 的內容
-                // formData.forEach((value, key) => {
-                //     console.log(`${key}: ${value}`);
-                // });
-                
-                response = await fetch('/api/upload-image', {
+                const formData = new FormData();
+                formData.append('file', data.imageFile);
+                formData.append('id', donationID);
+                formData.append('organization', organization);
+    
+                const response = await fetch('/api/upload-image', {
                     method: 'POST',
                     body: formData,
-                })
+                });
+    
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log(result, "====== result from upload-image");
+    
+                    // 根據實際的res結構獲取imgUrl
+                    const imgUrl = result.data?.imgUrl || result.imgUrl;
+                    if (imgUrl) {
+                        setImage(imgUrl);
+                    } else {
+                        console.error('imgUrl not found in response');
+                    }
+    
+                    setIsSubmitted(true);
+                    form.reset();
+                } else {
+                    const errorData = await response.json();
+                    console.error('Submission failed:', errorData);
+                }
             } else {
-                throw new Error('無效的上傳類型或缺少文件')
-            }
-
-            if (response.ok) {
-                const result = await response.json()
-// console.log(result,"======result")
-                setImage(result.imgUrl)
-                setIsSubmitted(true)
-                form.reset()
-            } else {
-                const errorData = await response.json()
-                console.error('Submission failed:', errorData)
+                throw new Error('無效的上載類型或缺少文件');
             }
         } catch (error) {
-            console.error('Error during submission:', error)
+            console.error('Error during submission:', error);
         } finally {
-            setIsLoading(false)
+            setIsLoading(false);
         }
-    }
+    };
+    
+    
 
     return (
         <Dialog>
@@ -140,7 +162,7 @@ export default function ImageUploadModal({
                 ) : (
 
                     <Tabs defaultValue="url" className="w-full">
-                        <p id="dialog-description" className='hidden'>支持 URL 🔗 或文件上傳📁</p>
+                        <p id="dialog-description" className='hidden'>支援 URL 🔗 或文件上傳📁</p>
                         <TabsList className="grid w-full grid-cols-2">
                             <TabsTrigger value="url">URL  🔗</TabsTrigger>
                                 <TabsTrigger value="file">圖片上傳  🖼️</TabsTrigger>
