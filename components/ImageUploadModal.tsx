@@ -82,6 +82,11 @@ export default function ImageUploadModal({
                 formData.append('id', donationID)
                 formData.append('organization', organization)
 
+                // // 檢查 formData 的內容
+                // formData.forEach((value, key) => {
+                //     console.log(`${key}: ${value}`);
+                // });
+                
                 response = await fetch('/api/upload-image', {
                     method: 'POST',
                     body: formData,
@@ -92,8 +97,8 @@ export default function ImageUploadModal({
 
             if (response.ok) {
                 const result = await response.json()
-
-                setImage(result.data.imgUrl)
+// console.log(result,"======result")
+                setImage(result.imgUrl)
                 setIsSubmitted(true)
                 form.reset()
             } else {
