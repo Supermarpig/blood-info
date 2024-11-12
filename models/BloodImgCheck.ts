@@ -6,16 +6,18 @@ export interface IImgUrl extends Document {
     id: string;
     organization: string;
     imgUrl: string;
+    date: string;
 }
 
 // 使用 Pick 工具類型來創建 IImgUrlInput
-export type IImgUrlInput = Pick<IImgUrl, 'id' | 'organization' | 'imgUrl'>;
+export type IImgUrlInput = Pick<IImgUrl, 'id' | 'organization' | 'imgUrl' | 'date'>;
 
 // IImgFileInput 包含 base64 圖片數據（imageBase64）
 export type IImgFileInput = {
     id: string;
     organization: string;
     imageBase64: string; // 新增的 base64 圖片數據
+    date: string;
 };
 
 const ImgUrlSchema = new Schema<IImgUrl>(

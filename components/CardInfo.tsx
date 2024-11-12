@@ -10,6 +10,7 @@ interface DonationEvent {
     location: string;
     rawContent: string;
     customNote?: string;
+    date: string;
 }
 
 interface CardInfoProps {
@@ -47,7 +48,7 @@ export default function CardInfo({ donation, searchKeyword, className = '' }: Ca
                 </CardTitle>
                 {/* 卡牌右上角圖片上傳按鈕 */}
                 <div className="absolute top-2 right-2 m-2">
-                    <ImageUploadModal image={image} setImage={setImage} donationID={donation.id} organization={donation.organization} />
+                    <ImageUploadModal image={image} setImage={setImage} donationID={donation.id} organization={donation.organization} date={donation.date} />
                     {/* <ImageUploadModal image={'https://i.imgur.com/kzByXHL.jpeg'} setImage={setImage} /> */}
                 </div>
             </CardHeader>

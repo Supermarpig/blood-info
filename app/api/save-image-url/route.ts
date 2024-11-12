@@ -8,8 +8,8 @@ export async function POST(request: Request) {
         const body: Partial<IImgUrlInput> = await request.json();
 
         // 驗證必要欄位
-        const { id, organization, imgUrl } = body;
-        if (!id || !organization || !imgUrl) {
+        const { id, organization, imgUrl, date } = body;
+        if (!id || !organization || !imgUrl || !date) {
             return NextResponse.json(
                 { error: 'Missing required fields: id, organization, imgUrl' },
                 { status: 400 }
@@ -21,6 +21,7 @@ export async function POST(request: Request) {
             id,
             organization,
             imgUrl,
+            date
         });
 
         return NextResponse.json(
