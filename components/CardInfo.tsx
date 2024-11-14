@@ -43,7 +43,7 @@ export default function CardInfo({ donation, searchKeyword, className = '' }: Ca
     return (
         <Card key={donation.id} className={`shadow-lg ${className}`}>
             <CardHeader className="relative">
-                <CardTitle className="text-lg">
+                <CardTitle className={`text-lg ${image ? 'w-[75%]' :'w-[90%]'}`}>
                     {highlightText(donation.organization, searchKeyword)}
                 </CardTitle>
                 {/* 卡牌右上角圖片上傳按鈕 */}
