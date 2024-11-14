@@ -86,7 +86,7 @@ export async function POST(request: Request) {
         const id = formData.get('id') as string;
         const organization = formData.get('organization') as string;
         const imageFile = formData.get('file') as File;
-        const date = formData.get('date') as string;
+        const activityDate = formData.get('activityDate') as string;
 
 
         if (!id || !organization || !imageFile) {
@@ -139,7 +139,7 @@ export async function POST(request: Request) {
             id,
             organization,
             imgUrl,
-            date
+            activityDate
         });
         return NextResponse.json(
             { message: 'Image uploaded successfully',  data: newImageInfo },

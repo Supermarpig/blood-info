@@ -74,7 +74,7 @@ export default function ImageUploadModal({
                         id: donationID,
                         organization,
                         imgUrl: data.imageUrl,
-                        date: date
+                        activityDate: date
                     }),
                 });
 
@@ -101,7 +101,7 @@ export default function ImageUploadModal({
                 formData.append('file', data.imageFile);
                 formData.append('id', donationID);
                 formData.append('organization', organization);
-                formData.append('date', date);
+                formData.append('activityDate', date);
 
                 const response = await fetch('/api/upload-image', {
                     method: 'POST',

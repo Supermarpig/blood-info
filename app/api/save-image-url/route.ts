@@ -5,23 +5,25 @@ import { IImgUrlInput } from '@/models/BloodImgCheck';
 
 export async function POST(request: Request) {
     try {
-        const body: Partial<IImgUrlInput> = await request.json();
+        const body: Partial<IImgUrlInput> = await request.json();       
 
+        // console.log(body,"==========body😂😂😂")
         // 驗證必要欄位
-        const { id, organization, imgUrl, date } = body;
-        if (!id || !organization || !imgUrl || !date) {
+        const { id, organization, imgUrl, activityDate } = body;
+        if (!id || !organization || !imgUrl || !activityDate) {
             return NextResponse.json(
                 { error: 'Missing required fields: id, organization, imgUrl' },
                 { status: 400 }
             );
         }
 
+
         // 建立新的血液圖片信息
         const newBloodImgInfo = await createBloodImgInfo({
             id,
             organization,
             imgUrl,
-            date
+            activityDate
         });
 
         return NextResponse.json(
