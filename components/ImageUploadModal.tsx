@@ -79,7 +79,7 @@ export default function ImageUploadModal({
                     const result = await response.json();
                     console.log(result, "====== result from save-image-url");
     
-                    // 根據實際的回響結構獲取imgUrl
+                    // 根據實際的res結構獲取imgUrl
                     const imgUrl = result.data?.imgUrl || result.imgUrl;
                     if (imgUrl) {
                         setImage(imgUrl);
