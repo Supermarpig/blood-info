@@ -15,6 +15,7 @@ interface DonationEvent {
     location: string;
     rawContent: string;
     customNote?: string;
+    date: string;
 }
 
 interface SearchableDonationListProps {

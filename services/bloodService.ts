@@ -13,7 +13,9 @@ export async function createBloodImgInfo(data: IImgUrlInput): Promise<IImgUrl> {
         return existingData;
     }
 
+    // console.log(data,"================data😂😂😂")
     const newData = new BloodImgInfoModel(data);
+    // console.log("New Data to be saved:😍😍😍", newData);
     await newData.save();
     return newData;
 }

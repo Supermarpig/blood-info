@@ -11,6 +11,7 @@ interface DonationEvent {
     location: string;
     rawContent: string;
     customNote?: string;
+    activityDate: string;
 }
 
 interface ApiResponse {
@@ -200,6 +201,7 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
                                 organization: organizationMatch[1].trim(),
                                 location: locationMatch[1].trim(),
                                 rawContent: cleanText,
+                                activityDate: parseChineseDate(date)
                             };
 
                             if (!donationsByDate[date]) {

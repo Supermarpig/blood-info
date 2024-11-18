@@ -86,6 +86,8 @@ export async function POST(request: Request) {
         const id = formData.get('id') as string;
         const organization = formData.get('organization') as string;
         const imageFile = formData.get('file') as File;
+        const activityDate = formData.get('activityDate') as string;
+
 
         if (!id || !organization || !imageFile) {
             console.error('Missing required fields:', { id, organization, imageFile });
@@ -137,6 +139,7 @@ export async function POST(request: Request) {
             id,
             organization,
             imgUrl,
+            activityDate
         });
         return NextResponse.json(
             { message: 'Image uploaded successfully',  data: newImageInfo },
