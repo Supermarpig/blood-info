@@ -13,8 +13,6 @@ interface ImageApprovalListProps {
     organization: string
     imgUrl: string
     activityDate?: string
-    createdAt: string
-    updatedAt: string
   }[]
 }
 
