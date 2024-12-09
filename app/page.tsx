@@ -9,10 +9,11 @@ export default async function BloodDonationPage() {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
     const response = await fetch(`${baseUrl}/api/blood-donations`);
-    data = await response.json();
+    const apiData = await response.json();
+    data = apiData.data;
 
-    if (!data.success) {
-      error = data.error || "發生錯誤";
+    if (!apiData.success) {
+      error = apiData.error || "發生錯誤";
     }
   } catch (err) {
     error = "無法獲取捐血活動資料😍😍😍";
@@ -33,7 +34,7 @@ export default async function BloodDonationPage() {
         <h1 className="text-2xl font-bold">捐血活動列表</h1>
       </div>
 
-      <SearchableDonationList data={data.data} />
+      <SearchableDonationList data={data} />
     </div>
   );
 }
