@@ -5749,14 +5749,6 @@
       "activityDate": "2024-12-15"
     },
     {
-      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlj7DljZfmlofljJbkuK3lv4PjgILlnLDlnYDvvJrlj7DljZfmlofljJbkuK3lv4Mo5Y+w5Y2X5biC5p2x5Y2A5Lit6I+v5p2x6Lev6IiH5bSH5piO6Lev5Y+jKQ==",
-      "time": "10:00~18:00",
-      "organization": "台南文化中心",
-      "location": "台南文化中心(台南市東區中華東路與崇明路口)",
-      "rawContent": "作業時間：10:00~18:00。主辦單位：台南文化中心。地址：台南文化中心(台南市東區中華東路與崇明路口)",
-      "activityDate": "2024-12-15"
-    },
-    {
       "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWPsOeBo+iJvuWkmue+juiCoeS7veaciemZkOWFrOWPuOmrmOmbhOemvuaYjOaVmeiCsuS4reW/g+OAguWcsOWdgO+8mumrmOmbhOW4gualoOaik+WNgOmrmOaloOWFrOi3rzE4MzfomZ8oUzcx5qWg5qKT5o2Q6KGA5a6kKQ==",
       "time": "8:00~17:00",
       "organization": "台灣艾多美股份有限公司高雄禾昌教育中心",
@@ -5855,6 +5847,70 @@
   ],
   "2024-12-16": [
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTE6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJroh7rljJfmpq7msJHnuL3phqvpmaLjgILlnLDlnYDvvJrlj7DljJfluILnn7PniYzot6/kuozmrrUyMDHomZ8o5LiA6ZaA6Ki6KQ==",
+      "time": "11:00~18:00",
+      "organization": "臺北榮民總醫院",
+      "location": "台北市石牌路二段201號(一門診)",
+      "rawContent": "作業時間：11:00~18:00。主辦單位：臺北榮民總醫院。地址：台北市石牌路二段201號(一門診)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MDDjgILkuLvovqbllq7kvY3vvJrnjonph4zmibbovKrnpL7jgILlnLDlnYDvvJroirHok67njonph4zlnJPnkrDpgooo6Iqx6JOu546J6YeM5beh6L+05a6a6bueKQ==",
+      "time": "10:00~16:00",
+      "organization": "玉里扶輪社",
+      "location": "花蓮玉里圓環邊(花蓮玉里巡迴定點)",
+      "rawContent": "作業時間：10:00~16:00。主辦單位：玉里扶輪社。地址：花蓮玉里圓環邊(花蓮玉里巡迴定點)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOiKseiTrum+jeWQn+eNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：國際獅子會300A 5區花蓮龍吟獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzowMOOAguS4u+i+puWWruS9je+8muefs+mgrea6queNheacg0IgMuOAguWcsOWdgO+8muaWsOWMl+W4guS4ieWzveWNgOWtuOWLpOi3rzHomZ8o5YWo5a626LaF5ZWG5YmNKQ==",
+      "time": "9:30~17:00",
+      "organization": "石頭溪獅會B 2",
+      "location": "新北市三峽區學勤路1號(全家超商前)",
+      "rawContent": "作業時間：9:30~17:00。主辦單位：石頭溪獅會B 2。地址：新北市三峽區學勤路1號(全家超商前)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrnpL7lnJjms5XkurrkuK3oj6/os4DogZblrq7mhJvlv4PljZTmnIPjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDkuK3oj6/ot68r5b6p6IiI6Lev5Y+jKOmFjeWQiOaWsOiOiuiZnyk=",
+      "time": "10:00~18:00",
+      "organization": "社團法人中華賀聖宮愛心協會",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：社團法人中華賀聖宮愛心協會。地址：新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MDDjgILkuLvovqbllq7kvY3vvJrlhYPlrrbkvIHmpa3ogqHku73mnInpmZDlhazlj7jjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDmlrDljJflpKfpgZPkuozmrrUyMTnomZ/lpKfploDlj6Ppgb/ou4rlvY4=",
+      "time": "10:00~16:00",
+      "organization": "元家企業股份有限公司",
+      "location": "新北市新莊區新北大道二段219號大門口避車彎",
+      "rawContent": "作業時間：10:00~16:00。主辦單位：元家企業股份有限公司。地址：新北市新莊區新北大道二段219號大門口避車彎",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muaoueael+Wumum7nuOAguWcsOWdgO+8muaWsOWMl+W4guaoueael+WNgOS/neWuieihl+S4gOautTfomZ/mv5/lronlrq7lsI3pnaIo5qi55p6X5a6a6bueKQ==",
+      "time": "9:30~16:30",
+      "organization": "樹林定點",
+      "location": "新北市樹林區保安街一段7號濟安宮對面(樹林定點)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：樹林定點。地址：新北市樹林區保安街一段7號濟安宮對面(樹林定點)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrmma/mlrDnjYXlrZDmnINBIDPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "景新獅子會A 3",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：景新獅子會A 3。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-16"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlhavlvrfpvo3mrablrq7jgILlnLDlnYDvvJrlhavlvrfljYDku4vlo73ot6/kuIDmrrU2NDXlt7cxMeW8hDPomZ8o55Sx5LuL5aO96Lev5LiA5q61NjEz5be3VU5JUUxP6L2J5YWlKQ==",
       "time": "10:00~17:00",
       "organization": "八德龍武宮",
@@ -5908,6 +5964,118 @@
       "organization": "桃園蘆竹獅子會",
       "location": "蘆竹區公所(台灣桃園市蘆竹區南崁路150號)",
       "rawContent": "作業時間：9:00~16:00。主辦單位：桃園蘆竹獅子會。地址：蘆竹區公所(台灣桃園市蘆竹區南崁路150號)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muaymem5v+eOieeah+auv+euoeeQhuWnlOWToeacg+OAguWcsOWdgO+8mueOieeah+auv+WcluabuOmkqOWJjSjmspnpub/ljYDlm5vlubPooZcxMjPomZ8p",
+      "time": "9:30~16:00",
+      "organization": "沙鹿玉皇殿管理委員會",
+      "location": "玉皇殿圖書館前(沙鹿區四平街123號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：沙鹿玉皇殿管理委員會。地址：玉皇殿圖書館前(沙鹿區四平街123號)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmjbfnq4vlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJrku4HlkozmjZDooYDou4oo5p2+56u56Lev6IiH5piM5bmz6Lev5Y+jKQ==",
+      "time": "10:00~18:00",
+      "organization": "捷立國際同濟會",
+      "location": "仁和捐血車(松竹路與昌平路口)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：捷立國際同濟會。地址：仁和捐血車(松竹路與昌平路口)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muekvumgremEieWppuWls+acg+OAguWcsOWdgO+8muekvumgremEieWFrOaJgCjlvbDljJbnuKPnpL7poK3phInnpL7mlpfot6/kuIDmrrUyOTXomZ8p",
+      "time": "9:30~16:00",
+      "organization": "社頭鄉婦女會",
+      "location": "社頭鄉公所(彰化縣社頭鄉社斗路一段295號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：社頭鄉婦女會。地址：社頭鄉公所(彰化縣社頭鄉社斗路一段295號)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWSjOaLk+eSsOS/neenkeaKgOaciemZkOWFrOWPuOOAguWcsOWdgO+8muilv+ieuuWkp+WQjOi3r+W7tuW5s+i3r+WPo+Wcn+WcsOWFrOW7n+awuOiIiOWuruWJjSjopb/onrrpjq7lpKfmqYvot6846JmfKQ==",
+      "time": "9:00~16:00",
+      "organization": "和拓環保科技有限公司",
+      "location": "西螺大同路延平路口土地公廟永興宮前(西螺鎮大橋路8號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：和拓環保科技有限公司。地址：西螺大同路延平路口土地公廟永興宮前(西螺鎮大橋路8號)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaJi+W/g+mbnuibi+ezleOAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "手心雞蛋糕",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：手心雞蛋糕。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJvueRquWci+mam+iyv+aYk+aciemZkOWFrOWPuOOAguWcsOWdgO+8muS4ieawkeaNkOihgOWupCjoh7rkuK3luILopb/ljYDkuInmsJHot6/kuIDmrrUxNzTomZ835qiTKQ==",
+      "time": "8:00~17:00",
+      "organization": "艾瑪國際貿易有限公司",
+      "location": "三民捐血室(臺中市西區三民路一段174號7樓)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：艾瑪國際貿易有限公司。地址：三民捐血室(臺中市西區三民路一段174號7樓)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8mumHkeiYreeNheWtkOacg+OAguWcsOWdgO+8muS4rea4r+aNkOihgOWupCjoh7rkuK3luILopb/lsa/ljYDoh7rngaPlpKfpgZPlm5vmrrUxMTc26JmfKQ==",
+      "time": "8:00~18:00",
+      "organization": "金蘭獅子會",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：金蘭獅子會。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8mueah+WQjueNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "皇后獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：皇后獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNTozMOOAguS4u+i+puWWruS9je+8muiNieWxr+eNheWtkOacg+OAguWcsOWdgO+8muiNieWxr+Wkqua4heWurijojYnlsa/pjq7lpKrlubPot6/kuozmrrUxMTTomZ8p",
+      "time": "9:00~15:30",
+      "organization": "草屯獅子會",
+      "location": "草屯太清宮(草屯鎮太平路二段114號)",
+      "rawContent": "作業時間：9:00~15:30。主辦單位：草屯獅子會。地址：草屯太清宮(草屯鎮太平路二段114號)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muixkOWOn+S4reWOn+eNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "豐原中原獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：豐原中原獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTowMOOAguS4u+i+puWWruS9je+8mue0q+WNl+WuruOAguWcsOWdgO+8muerueWxsee0q+WNl+Wurijnq7nlsbHpjq7lpKflhazooZc0MOiZnynmsLTmv4Llu6PloLQoN+aYn+e0muW7geaJgOaWnOS4i+aWuSk=",
+      "time": "9:30~15:00",
+      "organization": "紫南宮",
+      "location": "竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "rawContent": "作業時間：9:30~15:00。主辦單位：紫南宮。地址：竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrkuK3lpK7lnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "中央國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：中央國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+eOieWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "良玉國際同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：良玉國際同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-16"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8mum+jeS6leWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8mum+jeS6leWNgOWFrOaJgOaXgSjoh7rkuK3luILpvo3kupXljYDmspnnlLDot6805q61MjQ36JmfKQ==",
+      "time": "9:30~16:00",
+      "organization": "龍井國際同濟會",
+      "location": "龍井區公所旁(臺中市龍井區沙田路4段247號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：龍井國際同濟會。地址：龍井區公所旁(臺中市龍井區沙田路4段247號)",
       "activityDate": "2024-12-16"
     },
     {
@@ -5977,6 +6145,70 @@
   ],
   "2024-12-17": [
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWkqee+jueNheWtkOacg0EgMeOAguWcsOWdgO+8muWPsOWMl+W4guWjq+ael+WNgOWkp+adsei3rzE2NeiZn+Wjq+ael+Wci+Wwj+WJjSjlo6vmnpflrprpu54p",
+      "time": "9:30~16:30",
+      "organization": "天美獅子會A 1",
+      "location": "台北市士林區大東路165號士林國小前(士林定點)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：天美獅子會A 1。地址：台北市士林區大東路165號士林國小前(士林定點)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOiKseiTrum+jeWQn+eNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：國際獅子會300A 5區花蓮龍吟獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTQ6MzB+MjA6MzDjgILkuLvovqbllq7kvY3vvJrlro/lnIvlvrfpnJbnp5HlpKfjgILlnLDlnYDvvJrmlrDljJfluILlnJ/ln47ljYDpnZLpm7Lot68zODDlt7cx6Jmf5aCJ55Cq5qiT",
+      "time": "14:30~20:30",
+      "organization": "宏國德霖科大",
+      "location": "新北市土城區青雲路380巷1號堉琪樓",
+      "rawContent": "作業時間：14:30~20:30。主辦單位：宏國德霖科大。地址：新北市土城區青雲路380巷1號堉琪樓",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJroh7rljJfphqvlrbjlpKflrbjpm5nlkozmoKHljYDjgILlnLDlnYDvvJrmlrDljJfluILkuK3lkozljYDlnJPpgJrot68zMDHomZ805qiT5buj5aC0KOS4reW3tCk=",
+      "time": "10:00~17:00",
+      "organization": "臺北醫學大學雙和校區",
+      "location": "新北市中和區圓通路301號4樓廣場(中巴)",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：臺北醫學大學雙和校區。地址：新北市中和區圓通路301號4樓廣場(中巴)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MDDjgILkuLvovqbllq7kvY3vvJrovJTku4HlpKflrbjjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDkuK3mraPot681MTDomZ/liKnnkarnq4co6aKo6I+v5buj5aC05peBKQ==",
+      "time": "10:00~16:00",
+      "organization": "輔仁大學",
+      "location": "新北市新莊區中正路510號利瑪竇(風華廣場旁)",
+      "rawContent": "作業時間：10:00~16:00。主辦單位：輔仁大學。地址：新北市新莊區中正路510號利瑪竇(風華廣場旁)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmlrDljJfluILmlrDojorljYDpq5TogrLpgYvli5Xlv5flt6XljZTmnIPjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDkuK3oj6/ot68r5b6p6IiI6Lev5Y+jKOmFjeWQiOaWsOiOiuiZnyk=",
+      "time": "10:00~18:00",
+      "organization": "新北市新莊區體育運動志工協會",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：新北市新莊區體育運動志工協會。地址：新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWYieiBr+ebiuenkeaKgOiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muaWsOWMl+W4guaoueael+WNgOWNmuaEm+ihlzI0OOiZn+WBnOi7iuWgtA==",
+      "time": "9:30~16:30",
+      "organization": "嘉聯益科技股份有限公司",
+      "location": "新北市樹林區博愛街248號停車場",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：嘉聯益科技股份有限公司。地址：新北市樹林區博愛街248號停車場",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrnoqfmuZbnjYXmnINBIDPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "碧湖獅會A 3",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：碧湖獅會A 3。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-17"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muahg+aWsOiIiOeNheOAguWcsOWdgO+8muWNl+mWgOaNkOihgOWupCjmoYPlnJLluILmoYPlnJLljYDkuInmsJHot68z5q61MTgy6JmfM+aok+S5izEp",
       "time": "9:00~16:00",
       "organization": "桃新興獅",
@@ -6022,6 +6254,102 @@
       "organization": "桃園市鑽石獅子會",
       "location": "國道3號橋下體育休閒園區(龍潭區東龍路/黃梅生紀念館斜對面)",
       "rawContent": "作業時間：9:00~16:00。主辦單位：桃園市鑽石獅子會。地址：國道3號橋下體育休閒園區(龍潭區東龍路/黃梅生紀念館斜對面)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmjbfnq4vlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJrku4HlkozmjZDooYDou4oo5p2+56u56Lev6IiH5piM5bmz6Lev5Y+jKQ==",
+      "time": "10:00~18:00",
+      "organization": "捷立國際同濟會",
+      "location": "仁和捐血車(松竹路與昌平路口)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：捷立國際同濟會。地址：仁和捐血車(松竹路與昌平路口)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaJi+W/g+mbnuibi+ezleOAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "手心雞蛋糕",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：手心雞蛋糕。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8mlNNT0voo73nlJzmiYAo5pav6I6r5YWL5oCd5paH5Ym15pyJ6ZmQ5YWs5Y+4KeOAguWcsOWdgO+8muWNl+aKleaNkOihgOWupCjkuK3oiIjot682MTbomZ8x5qiTKQ==",
+      "time": "9:00~17:00",
+      "organization": "SMOK製甜所(斯莫克思文創有限公司)",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：SMOK製甜所(斯莫克思文創有限公司)。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muS4ieS/oeWVhualremKgOihjOOAguWcsOWdgO+8muS4ieS/oeWVhualremKgOihjCjoh7rkuK3luILkuK3ljYDluILlupzot681OeiZnyk=",
+      "time": "9:00~16:00",
+      "organization": "三信商業銀行",
+      "location": "三信商業銀行(臺中市中區市府路59號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：三信商業銀行。地址：三信商業銀行(臺中市中區市府路59號)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJvueRquWci+mam+iyv+aYk+aciemZkOWFrOWPuOOAguWcsOWdgO+8muS4ieawkeaNkOihgOWupCjoh7rkuK3luILopb/ljYDkuInmsJHot6/kuIDmrrUxNzTomZ835qiTKQ==",
+      "time": "8:00~17:00",
+      "organization": "艾瑪國際貿易有限公司",
+      "location": "三民捐血室(臺中市西區三民路一段174號7樓)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：艾瑪國際貿易有限公司。地址：三民捐血室(臺中市西區三民路一段174號7樓)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWNl+aKleWNl+W0l+aJtui8quekvuOAguWcsOWdgO+8muiNieWxr+aDoOW+t+WurijojYnlsa/pjq7lpKrlubPot6/kuozmrrUyODfomZ8p",
+      "time": "9:00~16:00",
+      "organization": "南投南崗扶輪社",
+      "location": "草屯惠德宮(草屯鎮太平路二段287號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：南投南崗扶輪社。地址：草屯惠德宮(草屯鎮太平路二段287號)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8mumHkeiYreeNheWtkOacg+OAguWcsOWdgO+8muS4rea4r+aNkOihgOWupCjoh7rkuK3luILopb/lsa/ljYDoh7rngaPlpKfpgZPlm5vmrrUxMTc26JmfKQ==",
+      "time": "8:00~18:00",
+      "organization": "金蘭獅子會",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：金蘭獅子會。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8mueah+WQjueNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "皇后獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：皇后獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muixkOWOn+S4reWOn+eNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "豐原中原獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：豐原中原獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTowMOOAguS4u+i+puWWruS9je+8mue0q+WNl+WuruOAguWcsOWdgO+8muerueWxsee0q+WNl+Wurijnq7nlsbHpjq7lpKflhazooZc0MOiZnynmsLTmv4Llu6PloLQoN+aYn+e0muW7geaJgOaWnOS4i+aWuSk=",
+      "time": "9:30~15:00",
+      "organization": "紫南宮",
+      "location": "竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "rawContent": "作業時間：9:30~15:00。主辦單位：紫南宮。地址：竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muW9sOWMlue4o+WSjOe+juitpuWvn+W/l+W3peWNlOmAsuacg+OAguWcsOWdgO+8muWSjOe+juitpuWIhuWxgCjlvbDljJbnuKPlkoznvo7pjq7lvbDnvo7ot6815q61MzI46JmfKQ==",
+      "time": "9:30~16:00",
+      "organization": "彰化縣和美警察志工協進會",
+      "location": "和美警分局(彰化縣和美鎮彰美路5段328號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：彰化縣和美警察志工協進會。地址：和美警分局(彰化縣和美鎮彰美路5段328號)",
+      "activityDate": "2024-12-17"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiyoeelnuWQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "財神同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：財神同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
       "activityDate": "2024-12-17"
     },
     {
@@ -6123,6 +6451,78 @@
   ],
   "2024-12-18": [
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWci+mYsumGq+WtuOmZouS4iei7jee4vemGq+mZouOAguWcsOWdgO+8muWPsOWMl+W4guWFp+a5luWNgOaIkOWKn+i3r+S6jOautTMyNeiZnyjmgKXoqLrml4HnqbrlnLAp",
+      "time": "9:30~16:30",
+      "organization": "國防醫學院三軍總醫院",
+      "location": "台北市內湖區成功路二段325號(急診旁空地)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：國防醫學院三軍總醫院。地址：台北市內湖區成功路二段325號(急診旁空地)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTE6MDB+MTc6MzDjgILkuLvovqbllq7kvY3vvJrmlL/msrvlpKflrbjjgILlnLDlnYDvvJrlj7DljJfluILmloflsbHljYDmjIfljZfot6/kuozmrrU2NOiZn+WFq+inkuS6rSjnlLHmgYblhYnooZflvozploDpgLLlhaXmoKHljYAp",
+      "time": "11:00~17:30",
+      "organization": "政治大學",
+      "location": "台北市文山區指南路二段64號八角亭(由恆光街後門進入校區)",
+      "rawContent": "作業時間：11:00~17:30。主辦單位：政治大學。地址：台北市文山區指南路二段64號八角亭(由恆光街後門進入校區)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTc6MzDjgILkuLvovqbllq7kvY3vvJrljJfphqvlpKflrbjjgILlnLDlnYDvvJrlj7DljJfluILkv6HnvqnljYDlkLPoiIjooZcyNTDomZ/pkJjmqJPliY0=",
+      "time": "10:30~17:30",
+      "organization": "北醫大學",
+      "location": "台北市信義區吳興街250號鐘樓前",
+      "rawContent": "作業時間：10:30~17:30。主辦單位：北醫大學。地址：台北市信義區吳興街250號鐘樓前",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muadseiPr+Wkp+WtuOOAguWcsOWdgO+8muiKseiTruadseiPr+Wkp+WtuOa5lueVlOmkkOW7s+WJjQ==",
+      "time": "9:30~16:30",
+      "organization": "東華大學",
+      "location": "花蓮東華大學湖畔餐廳前",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：東華大學。地址：花蓮東華大學湖畔餐廳前",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOiKseiTrum+jeWQn+eNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：國際獅子會300A 5區花蓮龍吟獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS9m+WFieadv+api+WIhuacg+OAguWcsOWdgO+8muaWsOWMl+W4guadv+api+WNgOmbmeWNgei3r+S4ieautTI36JmfMuaokyjphY3lkIjmnb/mqYvnq5kp",
+      "time": "8:00~17:00",
+      "organization": "佛光板橋分會",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：佛光板橋分會。地址：新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTU6MzDjgILkuLvovqbllq7kvY3vvJrmlrDljJfluILmvrPlupXku4Hlkozlrq7jgILlnLDlnYDvvJrmlrDljJfluILosqLlr67ljYDku4Hlkozot6856Jmf5LuB5ZKM5a6u5buj5aC0",
+      "time": "10:00~15:30",
+      "organization": "新北市澳底仁和宮",
+      "location": "新北市貢寮區仁和路9號仁和宮廣場",
+      "rawContent": "作業時間：10:00~15:30。主辦單位：新北市澳底仁和宮。地址：新北市貢寮區仁和路9號仁和宮廣場",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MDDjgILkuLvovqbllq7kvY3vvJrovJTku4HlpKflrbjjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDkuK3mraPot681MTDomZ/liKnnkarnq4co6aKo6I+v5buj5aC05peBKQ==",
+      "time": "10:00~16:00",
+      "organization": "輔仁大學",
+      "location": "新北市新莊區中正路510號利瑪竇(風華廣場旁)",
+      "rawContent": "作業時間：10:00~16:00。主辦單位：輔仁大學。地址：新北市新莊區中正路510號利瑪竇(風華廣場旁)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrlnIvpmpvnjYXlrZDmnIMzMDBBIDPljYDlj7DljJfluILml6Xlg5HnjYXlrZDmnIPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "國際獅子會300A 3區台北市日僑獅子會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：國際獅子會300A 3區台北市日僑獅子會。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-18"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWFq+W+t+eNheOAguWcsOWdgO+8muWFq+W+t+W7o+ixkOWFkuS4gOWFrOWckijlhavlvrflrprpu54p",
       "time": "9:00~16:00",
       "organization": "八德獅",
@@ -6176,6 +6576,102 @@
       "organization": "台灣中油公司竹苗營業",
       "location": "竹北愛心樓(新竹縣竹北市光明11路215巷8號)",
       "rawContent": "作業時間：8:00~17:00。主辦單位：台灣中油公司竹苗營業。地址：竹北愛心樓(新竹縣竹北市光明11路215巷8號)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTozMOOAguS4u+i+puWWruS9je+8muWPo+a5luadjuiLseWsjOeVnOeJp+WgtOOAguWcsOWdgO+8muiZjuWwvumOrueri+WcluabuOmkqCjomY7lsL7pjq7lhYnmmI7ot682OOiZnyk=",
+      "time": "9:30~15:30",
+      "organization": "口湖李英嬌畜牧場",
+      "location": "虎尾鎮立圖書館(虎尾鎮光明路68號)",
+      "rawContent": "作業時間：9:30~15:30。主辦單位：口湖李英嬌畜牧場。地址：虎尾鎮立圖書館(虎尾鎮光明路68號)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muieouS5i+WFieWSluWVoeOAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "螢之光咖啡",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：螢之光咖啡。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzozMOOAguS4u+i+puWWruS9je+8mk1JVFNVSSBPVVRMRVQgUEFSS+WPsOS4rea4r+OAguWcsOWdgO+8mua1t+e3muaNkOihgOWupCjmoqfmo7LljYDkuK3oj6/ot6/kuIDmrrUxMDAx5LmLMeiZnyk=",
+      "time": "9:30~17:30",
+      "organization": "MITSUI OUTLET PARK台中港",
+      "location": "海線捐血室(梧棲區中華路一段1001之1號)",
+      "rawContent": "作業時間：9:30~17:30。主辦單位：MITSUI OUTLET PARK台中港。地址：海線捐血室(梧棲區中華路一段1001之1號)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmjbfnq4vlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJrku4HlkozmjZDooYDou4oo5p2+56u56Lev6IiH5piM5bmz6Lev5Y+jKQ==",
+      "time": "10:00~18:00",
+      "organization": "捷立國際同濟會",
+      "location": "仁和捐血車(松竹路與昌平路口)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：捷立國際同濟會。地址：仁和捐血車(松竹路與昌平路口)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muWCheW8t+aciemZkOWFrOWPuOOAguWcsOWdgO+8mum5v+a4r+mOruWFrOaJgCjpub/muK/pjq7msJHmrIrot68xNjjomZ8p",
+      "time": "9:30~16:00",
+      "organization": "傅強有限公司",
+      "location": "鹿港鎮公所(鹿港鎮民權路168號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：傅強有限公司。地址：鹿港鎮公所(鹿港鎮民權路168號)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJvueRquWci+mam+iyv+aYk+aciemZkOWFrOWPuOOAguWcsOWdgO+8muS4ieawkeaNkOihgOWupCjoh7rkuK3luILopb/ljYDkuInmsJHot6/kuIDmrrUxNzTomZ835qiTKQ==",
+      "time": "8:00~17:00",
+      "organization": "艾瑪國際貿易有限公司",
+      "location": "三民捐血室(臺中市西區三民路一段174號7樓)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：艾瑪國際貿易有限公司。地址：三民捐血室(臺中市西區三民路一段174號7樓)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS9j+WVhuS4jeWLleeUouS4reiIiOaWsOadkeW6l+OAguWcsOWdgO+8muWNl+aKleaNkOihgOWupCjkuK3oiIjot682MTbomZ8x5qiTKQ==",
+      "time": "9:00~17:00",
+      "organization": "住商不動產中興新村店",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：住商不動產中興新村店。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8mumHkeiYreeNheWtkOacg+OAguWcsOWdgO+8muS4rea4r+aNkOihgOWupCjoh7rkuK3luILopb/lsa/ljYDoh7rngaPlpKfpgZPlm5vmrrUxMTc26JmfKQ==",
+      "time": "8:00~18:00",
+      "organization": "金蘭獅子會",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：金蘭獅子會。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8mueah+WQjueNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "皇后獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：皇后獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muixkOWOn+S4reWOn+eNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "豐原中原獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：豐原中原獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrogrLmiJDlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "育成國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：育成國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "activityDate": "2024-12-18"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muadseWzsOWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "東峰國際同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：東峰國際同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
       "activityDate": "2024-12-18"
     },
     {
@@ -6277,6 +6773,102 @@
   ],
   "2024-12-19": [
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWBpeWWrOS/oeWFg+mGq+iXpeeUn+aKgOiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWPsOWMl+W4guWFp+a5luWNgOWFp+a5lui3r+S4gOautTM5NuiZnw==",
+      "time": "9:30~16:30",
+      "organization": "健喬信元醫藥生技股份有限公司",
+      "location": "台北市內湖區內湖路一段396號",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：健喬信元醫藥生技股份有限公司。地址：台北市內湖區內湖路一段396號",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWci+mYsumGq+WtuOmZouS4iei7jee4vemGq+mZouOAguWcsOWdgO+8muWPsOWMl+W4guWFp+a5luWNgOaIkOWKn+i3r+S6jOautTMyNeiZnyjmgKXoqLrml4HnqbrlnLAp",
+      "time": "9:30~16:30",
+      "organization": "國防醫學院三軍總醫院",
+      "location": "台北市內湖區成功路二段325號(急診旁空地)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：國防醫學院三軍總醫院。地址：台北市內湖區成功路二段325號(急診旁空地)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTE6MDB+MTc6MzDjgILkuLvovqbllq7kvY3vvJrmlL/msrvlpKflrbjjgILlnLDlnYDvvJrlj7DljJfluILmloflsbHljYDmjIfljZfot6/kuozmrrU2NOiZn+WFq+inkuS6rSjnlLHmgYblhYnooZflvozploDpgLLlhaXmoKHljYAp",
+      "time": "11:00~17:30",
+      "organization": "政治大學",
+      "location": "台北市文山區指南路二段64號八角亭(由恆光街後門進入校區)",
+      "rawContent": "作業時間：11:00~17:30。主辦單位：政治大學。地址：台北市文山區指南路二段64號八角亭(由恆光街後門進入校區)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlnIvnq4voh7rljJforbfnkIblgaXlurflpKflrbjjgILlnLDlnYDvvJrlj7DljJfluILljJfmipXljYDmmI7lvrfot68zNjXomZ/nhr7pmb3lpKfpgZM=",
+      "time": "10:00~17:00",
+      "organization": "國立臺北護理健康大學",
+      "location": "台北市北投區明德路365號熾陽大道",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：國立臺北護理健康大學。地址：台北市北投區明德路365號熾陽大道",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrkuK3lnIvkv6HoqJfllYbmpa3pioDooYzogqHku73mnInpmZDlhazlj7jjgILlnLDlnYDvvJrlj7DljJfluILljZfmuK/ljYDntpPosr/kuozot68xMDblt7flgZzou4rmoLw=",
+      "time": "10:00~17:00",
+      "organization": "中國信託商業銀行股份有限公司",
+      "location": "台北市南港區經貿二路106巷停車格",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：中國信託商業銀行股份有限公司。地址：台北市南港區經貿二路106巷停車格",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muadseiPr+Wkp+WtuOOAguWcsOWdgO+8muiKseiTruadseiPr+Wkp+WtuOa5lueVlOmkkOW7s+WJjQ==",
+      "time": "9:30~16:30",
+      "organization": "東華大學",
+      "location": "花蓮東華大學湖畔餐廳前",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：東華大學。地址：花蓮東華大學湖畔餐廳前",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOiKseiTrum+jeWQn+eNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：國際獅子會300A 5區花蓮龍吟獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjozMOOAguS4u+i+puWWruS9je+8muaWsOWMl+W4gua3oeawtOWNgOWppuWls+acg+OAguWcsOWdgO+8muaWsOWMl+W4gua3oeawtOWNgOS4reWxseWMl+i3r+S4gOautTE2MOiZn+awtOeik+a0vuWHuuaJgCjmt6HmsLTlrprpu54p",
+      "time": "9:00~16:30",
+      "organization": "新北市淡水區婦女會",
+      "location": "新北市淡水區中山北路一段160號水碓派出所(淡水定點)",
+      "rawContent": "作業時間：9:00~16:30。主辦單位：新北市淡水區婦女會。地址：新北市淡水區中山北路一段160號水碓派出所(淡水定點)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MDDjgILkuLvovqbllq7kvY3vvJrovJTku4HlpKflrbjjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDkuK3mraPot681MTDomZ/liKnnkarnq4co6aKo6I+v5buj5aC05peBKQ==",
+      "time": "10:00~16:00",
+      "organization": "輔仁大學",
+      "location": "新北市新莊區中正路510號利瑪竇(風華廣場旁)",
+      "rawContent": "作業時間：10:00~16:00。主辦單位：輔仁大學。地址：新北市新莊區中正路510號利瑪竇(風華廣場旁)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmlrDljJfluILmlrDojorljYDpq5TogrLpgYvli5Xlv5flt6XljZTmnIPjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDkuK3oj6/ot68r5b6p6IiI6Lev5Y+jKOmFjeWQiOaWsOiOiuiZnyk=",
+      "time": "10:00~18:00",
+      "organization": "新北市新莊區體育運動志工協會",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：新北市新莊區體育運動志工協會。地址：新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlj7DljJfluILmmI7mmJ/njYXlrZDmnINBMuOAguWcsOWdgO+8muiHuuWMl+W4guS4reato+WNgOilhOmZvei3r+iIh+WFrOWckui3r+S6pOWPieWPoyjphY3lkIjlhazlnJLomZ8p",
+      "time": "10:00~18:00",
+      "organization": "台北市明星獅子會A2",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：台北市明星獅子會A2。地址：臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrlj7DljJfluILmmI7mmJ/njYXlrZDmnINBMuOAguWcsOWdgO+8muiHuuWMl+W4guiQrOiPr+WNgOWzqOW1i+ihlzgz6Jmf5bOo5bWL56uL6auU5YGc6LuK5aC05peBKOmFjeWQiOWzqOW1i+iZnyk=",
+      "time": "13:00~21:00",
+      "organization": "台北市明星獅子會A2",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：台北市明星獅子會A2。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-19"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muahg+WckuW/l+W3peeZvOWxleacjeWLmeWNlOacg+OAguWcsOWdgO+8muWkp+WckuWkp+ingOi3r+S7geWjveWurijmoYPlnJLluILlpKflnJLljYDlpKfop4Dot68xOOiZnyk=",
       "time": "9:00~16:00",
       "organization": "桃園志工發展服務協會",
@@ -6357,6 +6949,94 @@
       "activityDate": "2024-12-19"
     },
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muieouS5i+WFieWSluWVoeOAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "螢之光咖啡",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：螢之光咖啡。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJvueRquWci+mam+iyv+aYk+aciemZkOWFrOWPuOOAguWcsOWdgO+8muS4ieawkeaNkOihgOWupCjoh7rkuK3luILopb/ljYDkuInmsJHot6/kuIDmrrUxNzTomZ835qiTKQ==",
+      "time": "8:00~17:00",
+      "organization": "艾瑪國際貿易有限公司",
+      "location": "三民捐血室(臺中市西區三民路一段174號7樓)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：艾瑪國際貿易有限公司。地址：三民捐血室(臺中市西區三民路一段174號7樓)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS9j+WVhuS4jeWLleeUouS4reiIiOaWsOadkeW6l+OAguWcsOWdgO+8muWNl+aKleaNkOihgOWupCjkuK3oiIjot682MTbomZ8x5qiTKQ==",
+      "time": "9:00~17:00",
+      "organization": "住商不動產中興新村店",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：住商不動產中興新村店。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8mumHkeiYreeNheWtkOacg+OAguWcsOWdgO+8muS4rea4r+aNkOihgOWupCjoh7rkuK3luILopb/lsa/ljYDoh7rngaPlpKfpgZPlm5vmrrUxMTc26JmfKQ==",
+      "time": "8:00~18:00",
+      "organization": "金蘭獅子會",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：金蘭獅子會。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8mueah+WQjueNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "皇后獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：皇后獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muW9sOWMluaIkOWKn+eNheWtkOacg+OAguWcsOWdgO+8muW9sOWMluW4guWFrOaJgCjlvbDljJbluILlhYnlvqnot683NOiZnyk=",
+      "time": "9:30~16:00",
+      "organization": "彰化成功獅子會",
+      "location": "彰化市公所(彰化市光復路74號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：彰化成功獅子會。地址：彰化市公所(彰化市光復路74號)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muixkOWOn+S4reWOn+eNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "豐原中原獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：豐原中原獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTowMOOAguS4u+i+puWWruS9je+8mue0q+WNl+WuruOAguWcsOWdgO+8muerueWxsee0q+WNl+Wurijnq7nlsbHpjq7lpKflhazooZc0MOiZnynmsLTmv4Llu6PloLQoN+aYn+e0muW7geaJgOaWnOS4i+aWuSk=",
+      "time": "9:30~15:00",
+      "organization": "紫南宮",
+      "location": "竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "rawContent": "作業時間：9:30~15:00。主辦單位：紫南宮。地址：竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrkuK3oi7HlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "中英國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：中英國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWQieelpeWQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "吉祥同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：吉祥同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-19"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlvbDmv7Hnp4DlgrPntIDlv7XphqvpmaLjgILlnLDlnYDvvJrphqvpmaLlpKfploDliY0o6bm/5riv6Y6u6bm/5bel6LevNuiZnyk=",
+      "time": "10:00~17:00",
+      "organization": "彰濱秀傳紀念醫院",
+      "location": "醫院大門前(鹿港鎮鹿工路6號)",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：彰濱秀傳紀念醫院。地址：醫院大門前(鹿港鎮鹿工路6號)",
+      "activityDate": "2024-12-19"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS9m+WFieacg+aBhuaYpeWIhuacg+OAguWcsOWdgO+8mumFjeWQiOaei+WvruWbuuWumuW3oei/tOm7nijmnovlr67ngavou4rnq5nliY0p",
       "time": "9:00~17:00",
       "organization": "佛光會恆春分會",
@@ -6370,14 +7050,6 @@
       "organization": "高雄市蓮潭8號慈善會",
       "location": "大社區農會(大社區三民路391號)",
       "rawContent": "作業時間：9:30~17:30。主辦單位：高雄市蓮潭8號慈善會。地址：大社區農會(大社區三民路391號)",
-      "activityDate": "2024-12-19"
-    },
-    {
-      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MzDjgILkuLvovqbllq7kvY3vvJrkuIvnh5/npL7ljYDnmbzlsZXljZTmnIPjgILlnLDlnYDvvJrkuIvnh5/lnIvlsI8o5Y+w5Y2X5biC5LiL54ef5Y2A5Lit5bGx6Lev5LqM5q61NzLomZ8p",
-      "time": "10:00~16:30",
-      "organization": "下營社區發展協會",
-      "location": "下營國小(台南市下營區中山路二段72號)",
-      "rawContent": "作業時間：10:00~16:30。主辦單位：下營社區發展協會。地址：下營國小(台南市下營區中山路二段72號)",
       "activityDate": "2024-12-19"
     },
     {
@@ -6437,14 +7109,6 @@
       "activityDate": "2024-12-19"
     },
     {
-      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muawkembhOW3oei/tOOAguWcsOWdgO+8muawkembhOmEieWFrOaJgCjlmInnvqnnuKPmsJHpm4TphInkuK3mqILmnZHmlofljJbot6836JmfKQ==",
-      "time": "9:30~16:30",
-      "organization": "民雄巡迴",
-      "location": "民雄鄉公所(嘉義縣民雄鄉中樂村文化路7號)",
-      "rawContent": "作業時間：9:30~16:30。主辦單位：民雄巡迴。地址：民雄鄉公所(嘉義縣民雄鄉中樂村文化路7號)",
-      "activityDate": "2024-12-19"
-    },
-    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEU15Y2A5LiA5b+D542F5a2Q5pyD44CC5Zyw5Z2A77ya6auY6ZuE5biC5bKh5bGx5Y2A5aO96I+v6LevNTjomZ8oUzcy5bKh5bGx5o2Q6KGA5a6kKQ==",
       "time": "9:00~17:00",
       "organization": "國際獅子會300E5區一心獅子會",
@@ -6454,6 +7118,118 @@
     }
   ],
   "2024-12-20": [
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlro/mupDnjYXlrZDmnINBIDHjgILlnLDlnYDvvJrlj7DljJfluILlo6vmnpfljYDlvrfooYzopb/ot680N+iZn+WkqeavjeWutuaoguemj+WJjQ==",
+      "time": "10:00~17:00",
+      "organization": "宏源獅子會A 1",
+      "location": "台北市士林區德行西路47號天母家樂福前",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：宏源獅子會A 1。地址：台北市士林區德行西路47號天母家樂福前",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWPsOWMl+W4gumJheaYn+WMr+eNheWtkOacgyDjgILlnLDlnYDvvJrlj7DljJfluILkuK3lsbHljYDmlrDnlJ/ljJfot6/kuozmrrUyOOiZnw==",
+      "time": "9:30~16:30",
+      "organization": "台北市鉅星匯獅子會",
+      "location": "台北市中山區新生北路二段28號",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：台北市鉅星匯獅子會 。地址：台北市中山區新生北路二段28號",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlj6Hmj5ros4foqIrogqHku73mnInpmZDlhazlj7jjgILlnLDlnYDvvJrlj7DljJfluILkuK3lsbHljYDlvrfmg6DooZc56Jmf",
+      "time": "10:30~17:00",
+      "organization": "叡揚資訊股份有限公司",
+      "location": "台北市中山區德惠街9號",
+      "rawContent": "作業時間：10:30~17:00。主辦單位：叡揚資訊股份有限公司。地址：台北市中山區德惠街9號",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWci+mam+S9m+WFieacg+S4reiPr+e4veacg+WMl+aKleesrOS4gOWIhuacg+OAguWcsOWdgO+8muWPsOWMl+W4guWMl+aKleWNgOS4reWkruWMl+i3r+S4gOautTbomZ/lr4zpgqbpioDooYzlsI3pnaLmppXmqLnml4E=",
+      "time": "9:30~16:30",
+      "organization": "國際佛光會中華總會北投第一分會",
+      "location": "台北市北投區中央北路一段6號富邦銀行對面榕樹旁",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：國際佛光會中華總會北投第一分會。地址：台北市北投區中央北路一段6號富邦銀行對面榕樹旁",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzowMOOAguS4u+i+puWWruS9je+8muWPsOWMl+W4gumbsuael+WQjOmEiee4veacg+OAguWcsOWdgO+8muWPsOWMl+W4guaJv+W+t+i3rzPmrrUyNDbomZ/liY0=",
+      "time": "9:30~17:00",
+      "organization": "台北市雲林同鄉總會",
+      "location": "台北市承德路3段246號前",
+      "rawContent": "作業時間：9:30~17:00。主辦單位：台北市雲林同鄉總會。地址：台北市承德路3段246號前",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiyoeWcmOazleS6uuaWsOWMl+W4guengeeri+e0q+iTruaFiOWWhOS6i+alreWfuumHkeacg+OAguWcsOWdgO+8muWPsOWMl+W4guadvuWxseWNgOWNl+S6rOadsei3r+S6lOautTE1OOiZn+WNl+S6rOS4ieawkeermTLomZ/lh7rlj6M=",
+      "time": "9:30~17:00",
+      "organization": "財團法人新北市私立紫蓮慈善事業基金會",
+      "location": "台北市松山區南京東路五段158號南京三民站2號出口",
+      "rawContent": "作業時間：9:30~17:00。主辦單位：財團法人新北市私立紫蓮慈善事業基金會。地址：台北市松山區南京東路五段158號南京三民站2號出口",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muiHuueBo+mbhuS4reS/neeuoee1kOeul+aJgOiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWPsOWMl+W4guadvuWxseWNgOW+qeiIiOWMl+i3rzM2M+iZnyjnrKzkuIDpioDooYwp",
+      "time": "9:30~16:30",
+      "organization": "臺灣集中保管結算所股份有限公司",
+      "location": "台北市松山區復興北路363號(第一銀行)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：臺灣集中保管結算所股份有限公司。地址：台北市松山區復興北路363號(第一銀行)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOWunOiYree4o+iYh+a+s+eNheWtkOacgyAg44CC5Zyw5Z2A77ya5a6c6Jit57ij6JiH5r6z6Y6u5rGf5aSP6LevODXomZ8o5Y2X5pa55r6z6YCy5a6J5a6u5peBKQ==",
+      "time": "9:00~16:00",
+      "organization": "國際獅子會300A 5區宜蘭縣蘇澳獅子會",
+      "location": "宜蘭縣蘇澳鎮江夏路85號(南方澳進安宮旁)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：國際獅子會300A 5區宜蘭縣蘇澳獅子會  。地址：宜蘭縣蘇澳鎮江夏路85號(南方澳進安宮旁)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MDDjgILkuLvovqbllq7kvY3vvJrmiJDkurrlj4rntYLouqvmlZnogrLlrbjmnIPjgILlnLDlnYDvvJroirHok67nuKPlhYnosZDlnLDljYDovrLmnIPotoXluILliY0o6Iqx6JOu57ij5YWJ5b6p6YSJ6I+v5paw6KGXMeiZnyk=",
+      "time": "10:00~16:00",
+      "organization": "成人及終身教育學會",
+      "location": "花蓮縣光豐地區農會超市前(花蓮縣光復鄉華新街1號)",
+      "rawContent": "作業時間：10:00~16:00。主辦單位：成人及終身教育學會。地址：花蓮縣光豐地區農會超市前(花蓮縣光復鄉華新街1號)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOiKseiTrum+jeWQn+eNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：國際獅子會300A 5區花蓮龍吟獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWci+mam+S9m+WFieacg+S4reiPr+e4veacg+S4iemHjeesrOS6lOWIhuacg+OAguWcsOWdgO+8muaWsOWMl+W4guS4iemHjeWNgOaWsOWMl+Wkp+mBkzHmrrUxN+iZnyjkuInph43pg7XlsYAp",
+      "time": "9:30~16:30",
+      "organization": "國際佛光會中華總會三重第五分會",
+      "location": "新北市三重區新北大道1段17號(三重郵局)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：國際佛光會中華總會三重第五分會。地址：新北市三重區新北大道1段17號(三重郵局)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrmlrDlhYnmmI7lkIzmv5/mnIMo5YyX5LqM5Y2AKeOAguWcsOWdgO+8muaWsOWMl+W4guaWsOW6l+WNgOWMl+aWsOi3r+S4gOautTg45be35Y+j5paw5bqX5Y2A5YWs5omA5o236YGL56uZMuiZn+WHuuWPow==",
+      "time": "10:00~17:00",
+      "organization": "新光明同濟會(北二區)",
+      "location": "新北市新店區北新路一段88巷口新店區公所捷運站2號出口",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：新光明同濟會(北二區)。地址：新北市新店區北新路一段88巷口新店區公所捷運站2號出口",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWuj+eSn+W7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muiHuuWMl+W4guadvuWxseWNgOW+qeiIiOWMl+i3rzY56JmfNeaokyjphY3lkIjplbfmmKXlrqQp",
+      "time": "9:00~17:00",
+      "organization": "宏璟建設股份有限公司",
+      "location": "臺北市松山區復興北路69號5樓(配合長春室)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：宏璟建設股份有限公司。地址：臺北市松山區復興北路69號5樓(配合長春室)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrnmb7lkIjnjYXlrZDmnINBIDPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "百合獅子會A 3",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：百合獅子會A 3。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-20"
+    },
     {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWkp+a6queNheOAguWcsOWdgO+8muS4reiPr+mbu+S/oeWJjSjmoYPlnJLluILlpKfmuqrljYDmhYjmuZbot683OOiZnyk=",
       "time": "9:00~16:00",
@@ -6519,6 +7295,118 @@
       "activityDate": "2024-12-20"
     },
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlkIzlv4PlnJPlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "同心圓國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：同心圓國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTozMOOAguS4u+i+puWWruS9je+8muemj+eIvuaRqeaymemVt+eFp+iKs+eZgueNheWtkOacg+OAguWcsOWdgO+8muWMl+a4r+mBi+WLleWFrOWckijpm7LmnpfnuKPljJfmuK/pjq7ljJfovrDot6/kuIDomZ/lsI3pnaIp",
+      "time": "9:30~15:30",
+      "organization": "福爾摩沙長照芳療獅子會",
+      "location": "北港運動公園(雲林縣北港鎮北辰路一號對面)",
+      "rawContent": "作業時間：9:30~15:30。主辦單位：福爾摩沙長照芳療獅子會。地址：北港運動公園(雲林縣北港鎮北辰路一號對面)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTozMOOAguS4u+i+puWWruS9je+8muWPsOeBo+eNhemtmuaxoOacg+OAguWcsOWdgO+8mumtmuaxoOmEieeUoualreaWh+WMlumkqCjprZrmsaDooZczNTTlt7cy6JmfKQ==",
+      "time": "9:30~15:30",
+      "organization": "台灣獅魚池會",
+      "location": "魚池鄉產業文化館(魚池街354巷2號)",
+      "rawContent": "作業時間：9:30~15:30。主辦單位：台灣獅魚池會。地址：魚池鄉產業文化館(魚池街354巷2號)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muaVkeWci+WcmOaWsOekvuWNgOWcmOWnlOacg+OAguWcsOWdgO+8muaWsOekvuWkmuWKn+iDvee2nOWQiOWVhualreWkp+aokyjmlrDnpL7ljYDoiIjnpL7ooZflm5vmrrU1N+iZnyk=",
+      "time": "9:30~16:00",
+      "organization": "救國團新社區團委會",
+      "location": "新社多功能綜合商業大樓(新社區興社街四段57號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：救國團新社區團委會。地址：新社多功能綜合商業大樓(新社區興社街四段57號)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaJi+W/g+mbnuibi+ezleOAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "手心雞蛋糕",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：手心雞蛋糕。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS9j+WVhuS4jeWLleeUouS4reiIiOaWsOadkeW6l+OAguWcsOWdgO+8muWNl+aKleaNkOihgOWupCjkuK3oiIjot682MTbomZ8x5qiTKQ==",
+      "time": "9:00~17:00",
+      "organization": "住商不動產中興新村店",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：住商不動產中興新村店。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8mumHkeiYreeNheWtkOacg+OAguWcsOWdgO+8muS4rea4r+aNkOihgOWupCjoh7rkuK3luILopb/lsa/ljYDoh7rngaPlpKfpgZPlm5vmrrUxMTc26JmfKQ==",
+      "time": "8:00~18:00",
+      "organization": "金蘭獅子會",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：金蘭獅子會。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8mueah+WQjueNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "皇后獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：皇后獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muixkOWOn+S4reWOn+eNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "豐原中原獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：豐原中原獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTowMOOAguS4u+i+puWWruS9je+8mue0q+WNl+WuruOAguWcsOWdgO+8muerueWxsee0q+WNl+Wurijnq7nlsbHpjq7lpKflhazooZc0MOiZnynmsLTmv4Llu6PloLQoN+aYn+e0muW7geaJgOaWnOS4i+aWuSk=",
+      "time": "9:30~15:00",
+      "organization": "紫南宮",
+      "location": "竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "rawContent": "作業時間：9:30~15:00。主辦單位：紫南宮。地址：竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muecvuaEm+aFiOWWhOacg+OAguWcsOWdgO+8mumcp+WzsOi+suacgyjoh7rkuK3luILpnKfls7DljYDlm5vlvrfot68xMOiZnyk=",
+      "time": "9:30~16:00",
+      "organization": "眾愛慈善會",
+      "location": "霧峰農會(臺中市霧峰區四德路10號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：眾愛慈善會。地址：霧峰農會(臺中市霧峰區四德路10號)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlvbDljJbnuKPpu4PovYnntIDlv7XmhYjlloTmnIPjgILlnLDlnYDvvJrlk6HmnpfmjZDooYDlrqQo5ZOh5p6X54Gr6LuK56uZ5LiA5qiT5aSn5buz5YWnKQ==",
+      "time": "10:00~18:00",
+      "organization": "彰化縣黃轉紀念慈善會",
+      "location": "員林捐血室(員林火車站一樓大廳內)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：彰化縣黃轉紀念慈善會。地址：員林捐血室(員林火車站一樓大廳內)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muWkp+Wxr+Wci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muWkquW5s+adseW5s+WknOW4gijlpKrlubPljYDmnbHlubPot681MDHomZ8p",
+      "time": "9:30~16:00",
+      "organization": "大屯國際同濟會",
+      "location": "太平東平夜市(太平區東平路501號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：大屯國際同濟會。地址：太平東平夜市(太平區東平路501號)",
+      "activityDate": "2024-12-20"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS4reiIiOWQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "中興同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：中興同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-20"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8mumbhOiumua1t+WyuOW3oeWuiOW/l+W3pemaiuOAguWcsOWdgO+8mumrmOmbhOW4guW3pueHn+WNgOWNmuaEm+S4iei3rzYzNeiZnyhEMDnlt6bnh5/mjZDooYDlrqQp",
       "time": "9:30~18:00",
       "organization": "雄讚海岸巡守志工隊",
@@ -6577,6 +7465,150 @@
   ],
   "2024-12-21": [
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlvq7poqjmhYjlloTln7rph5HmnIPjgILlnLDlnYDvvJrlj7DljJfluILkuK3mraPljYDljJflubPopb/ot68z6JmfKOWPsOWMl+i7iuermeadseS4iemWgCk=",
+      "time": "10:00~17:00",
+      "organization": "微風慈善基金會",
+      "location": "台北市中正區北平西路3號(台北車站東三門)",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：微風慈善基金會。地址：台北市中正區北平西路3號(台北車站東三門)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mua5r+WnhueGiuatoeaoguS4lueVjC3omK3ln47mlrDmnIjlupfjgILlnLDlnYDvvJrlrpzomK3nuKPlrpzomK3luILmk7rljpjot68xNi036JmfMeaokyjphY3lkIjlrpzomK3nq5kp",
+      "time": "8:00~17:00",
+      "organization": "湯姆熊歡樂世界-蘭城新月店",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：湯姆熊歡樂世界-蘭城新月店。地址：宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8mue+headseS4reWNgOaJtui8quekvuOAguWcsOWdgO+8muWunOiYree4o+e+headsemOruWFrOato+i3rzE5OeiZnyjlhazmraPlnIvlsI/ogrLoi7HloILliY0p",
+      "time": "9:00~16:00",
+      "organization": "羅東中區扶輪社",
+      "location": "宜蘭縣羅東鎮公正路199號(公正國小育英堂前)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：羅東中區扶輪社。地址：宜蘭縣羅東鎮公正路199號(公正國小育英堂前)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWci+eri+iHuuWMl+WVhualreWkp+WtuOiKseiTruagoeWPi+acg+OAguWcsOWdgO+8muiKseiTrumBoOadseeZvuiyqOaYn+W3tOWFi+W7o+WgtCjoirHok67luILlu7rmnpfooZcp",
+      "time": "9:30~16:30",
+      "organization": "國立臺北商業大學花蓮校友會",
+      "location": "花蓮遠東百貨星巴克廣場(花蓮市建林街)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：國立臺北商業大學花蓮校友會。地址：花蓮遠東百貨星巴克廣場(花蓮市建林街)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOiKseiTrum+jeWQn+eNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：國際獅子會300A 5區花蓮龍吟獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWFq+mHjOeNheWtkOacg0IgMeOAguWcsOWdgO+8muaWsOWMl+W4guWFq+mHjOWNgOS4reWxsei3r+S6jOautTM1NuW3tzE26JmfKOWFq+mHjOW4guawkea0u+WLleS4reW/gyk=",
+      "time": "9:00~17:00",
+      "organization": "八里獅子會B 1",
+      "location": "新北市八里區中山路二段356巷16號(八里市民活動中心)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：八里獅子會B 1。地址：新北市八里區中山路二段356巷16號(八里市民活動中心)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjozMOOAguS4u+i+puWWruS9je+8muaNt+emvuW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muaWsOWMl+W4guS4iemHjeWNgOS4ieS/oei3rzE2NuiZnyjnoqfoj6/lnIvkuK0p",
+      "time": "9:00~16:30",
+      "organization": "捷禾建設股份有限公司",
+      "location": "新北市三重區三信路166號(碧華國中)",
+      "rawContent": "作業時間：9:00~16:30。主辦單位：捷禾建設股份有限公司。地址：新北市三重區三信路166號(碧華國中)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MzDjgILkuLvovqbllq7kvY3vvJrmlrDljJfluILlnJ/ln47ljYDlvLHli6Lpl5zmh7fljZTmnIPjgILlnLDlnYDvvJrmlrDljJfluILlnJ/ln47ljYDph5Hln47ot68y5q61MjY56Jmf6IKv5b635Z+6",
+      "time": "10:00~17:30",
+      "organization": "新北市土城區弱勢關懷協會",
+      "location": "新北市土城區金城路2段269號肯德基",
+      "rawContent": "作業時間：10:00~17:30。主辦單位：新北市土城區弱勢關懷協會。地址：新北市土城區金城路2段269號肯德基",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS4reiPr+aNkOihgOS6uuWNlOacg+OAguWcsOWdgO+8muaWsOWMl+W4guS4reWSjOWNgOS4reWuieihl+WcluabuOmkqOaXgTgyM+WFrOWckuWFpyjphY3lkIjkuK3lkozomZ8p",
+      "time": "9:00~17:00",
+      "organization": "中華捐血人協會",
+      "location": "新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：中華捐血人協會。地址：新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzowMOOAguS4u+i+puWWruS9je+8muW8tee2reWAqeitsOWToeacjeWLmeiZleOAguWcsOWdgO+8muaWsOWMl+W4guS4reWSjOWNgOeri+S6uuihlzLomZ8=",
+      "time": "9:30~17:00",
+      "organization": "張維倩議員服務處",
+      "location": "新北市中和區立人街2號",
+      "rawContent": "作業時間：9:30~17:00。主辦單位：張維倩議員服務處。地址：新北市中和區立人街2號",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS4reato+eNheWtkOacg0IgMuOAguWcsOWdgO+8muaWsOWMl+W4guadv+api+WNgOmbmeWNgei3r+S4ieautTI36JmfMuaokyjphY3lkIjmnb/mqYvnq5kp",
+      "time": "8:00~17:00",
+      "organization": "中正獅子會B 2",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：中正獅子會B 2。地址：新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmlrDljJfluILmlrDojorljYDpnZLmuqrlqaboga/mnI3li5nljZTmnIPjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDkuK3oj6/ot68r5b6p6IiI6Lev5Y+jKOmFjeWQiOaWsOiOiuiZnyk=",
+      "time": "10:00~18:00",
+      "organization": "新北市新莊區青溪婦聯服務協會",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：新北市新莊區青溪婦聯服務協會。地址：新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzowMOOAguS4u+i+puWWruS9je+8muaWsOWMl+W4guiPqeaPkOmHkeWJm+aFiOWWhOacg+OAguWcsOWdgO+8muaWsOWMl+W4guaoueael+WNgOS/neWuieihl+S4gOautTMy6Jmf5r+f5a6J5a6u5bCN6Z2i",
+      "time": "9:30~17:00",
+      "organization": "新北市菩提金剛慈善會",
+      "location": "新北市樹林區保安街一段32號濟安宮對面",
+      "rawContent": "作業時間：9:30~17:00。主辦單位：新北市菩提金剛慈善會。地址：新北市樹林區保安街一段32號濟安宮對面",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muitpumbgeeNheWtkOacg0EgM+OAguWcsOWdgO+8muiHuuWMl+W4guWkp+WuieWNgOW7uuWci+WNl+i3r+S6jOauteWcsOS4i+WBnOi7iuWgtOWFpeWPo+aXgeepuuWcsCjphY3lkIjlpKflronomZ8p",
+      "time": "9:00~17:00",
+      "organization": "警雁獅子會A 3",
+      "location": "臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：警雁獅子會A 3。地址：臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzozMOOAguS4u+i+puWWruS9je+8muWPsOWMl+W4guWFq+W+t+eNheWtkOacg0Ey44CC5Zyw5Z2A77ya6Ie65YyX5biC5Lit5q2j5Y2A5Y2X5rW36LevMeiZnzPmqJMo6YWN5ZCI5Y2X5rW35a6kKQ==",
+      "time": "8:00~17:30",
+      "organization": "台北市八德獅子會A2",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "rawContent": "作業時間：8:00~17:30。主辦單位：台北市八德獅子會A2。地址：臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlj7DljJfluILopb/ploDnjYXlrZDmnINBMuOAguWcsOWdgO+8muiHuuWMl+W4guS4reato+WNgOilhOmZvei3r+iIh+WFrOWckui3r+S6pOWPieWPoyjphY3lkIjlhazlnJLomZ8p",
+      "time": "10:00~18:00",
+      "organization": "台北市西門獅子會A2",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：台北市西門獅子會A2。地址：臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+S9m+WFieacg+S4reiPr+e4veacg+awkeasiuesrOS4gOWIhuacg+OAguWcsOWdgO+8muiHuuWMl+W4guadvuWxseWNgOW+qeiIiOWMl+i3rzY56JmfNeaokyjphY3lkIjplbfmmKXlrqQp",
+      "time": "9:00~17:00",
+      "organization": "國際佛光會中華總會民權第一分會",
+      "location": "臺北市松山區復興北路69號5樓(配合長春室)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：國際佛光會中華總會民權第一分會。地址：臺北市松山區復興北路69號5樓(配合長春室)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrph5HppqzmibbovKrnpL7jgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "金馬扶輪社",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：金馬扶輪社。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-21"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muahg+WckuW4gumdkuWflOeNheWtkOacg+OAguWcsOWdgO+8muaWh+iIiOWFrOWckuaNkOihgOS6rSjkuK3lo6LljYDmloflvrfot6/mlofoiIjlhazlnJIp",
       "time": "9:00~16:00",
       "organization": "桃園市青埔獅子會",
@@ -6633,11 +7665,139 @@
       "activityDate": "2024-12-21"
     },
     {
-      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8mueZveexs+aFiOWWhOWIl+i7iuOAguWcsOWdgO+8mumrmOmbhOW4guS4ieawkeWNgOS5neWmguS4gOi3rzE5OOiZnzHmqJMoRDIx5Lmd5aaC5o2Q6KGA5a6kKQ==",
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTg6MzDjgILkuLvovqbllq7kvY3vvJrkuqzln47pkb3nn7Pnj6Dlr7bjgILlnLDlnYDvvJrmlrDlhYnkuInotormjZDooYDou4oo5oOg5a6J5YGc6LuK5aC0LeaDoOS+hui3r+S6jOauteW4guaUv+WMl+S4g+i3r+WPoyk=",
+      "time": "10:30~18:30",
+      "organization": "京城鑽石珠寶",
+      "location": "新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "rawContent": "作業時間：10:30~18:30。主辦單位：京城鑽石珠寶。地址：新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTozMOOAguS4u+i+puWWruS9je+8muWNl+aKlee4o+WxseWfjuWci+mam+eNheWtkOacg+OAguWcsOWdgO+8muerueWxseWFi+aYjuWurijnq7nlsbHpjq7mnovlnarlt7cx6JmfLeerueWxsemrmOS4reaXgSk=",
+      "time": "9:30~15:30",
+      "organization": "南投縣山城國際獅子會",
+      "location": "竹山克明宮(竹山鎮枋坪巷1號-竹山高中旁)",
+      "rawContent": "作業時間：9:30~15:30。主辦單位：南投縣山城國際獅子會。地址：竹山克明宮(竹山鎮枋坪巷1號-竹山高中旁)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muWPsOS4reW4gue+juWlveWPsOeBo+Wwj+iNieaOqOW7o+WNlOacgyjmnbHlj7DkuK3ljYAp44CC5Zyw5Z2A77ya6LGQ5Y6f5o2Q6KGA5a6kKOiHuuS4reW4guixkOWOn+WNgOWMl+mZvei3rzLomZ8p",
+      "time": "9:00~18:00",
+      "organization": "台中市美好台灣小草推廣協會(東台中區)",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：台中市美好台灣小草推廣協會(東台中區)。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWlveedoeeOi+WutuWxhembhuWcmOOAguWcsOWdgO+8muWlveedoeeOi+WutuWxheWJjSjlj7DkuK3luILopb/lsa/ljYDkuK3muIXot6/kuozmrrUxNDA56JmfICk=",
+      "time": "9:00~16:00",
+      "organization": "好睡王家居集團",
+      "location": "好睡王家居前(台中市西屯區中清路二段1409號 )",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：好睡王家居集團。地址：好睡王家居前(台中市西屯區中清路二段1409號 )",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmlrDli5XlipvlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "新動力國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：新動力國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mua0quWnkOWmueamleaoueS4i+aJo+S7lOWXsijpm7Lmnpcp44CC5Zyw5Z2A77ya6Zuy5p6X5o2Q6KGA56uZKOaWl+WFreW4gua8ouWPo+i3rzE4N+iZnyk=",
+      "time": "8:00~17:00",
+      "organization": "洪姐妹榕樹下扣仔嗲(雲林)",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：洪姐妹榕樹下扣仔嗲(雲林)。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muWCheW8t+aciemZkOWFrOWPuOOAguWcsOWdgO+8mua6qua5luezluW7oOizo+WGsOmDqOesrOS6jOWBnOi7iuWgtCjlvbDljJbnuKPmuqrmuZbpjq7lvbDmsLTot6/kuozmrrU3NjLomZ8p",
+      "time": "9:30~16:00",
+      "organization": "傅強有限公司",
+      "location": "溪湖糖廠賣冰部第二停車場(彰化縣溪湖鎮彰水路二段762號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：傅強有限公司。地址：溪湖糖廠賣冰部第二停車場(彰化縣溪湖鎮彰水路二段762號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlu7rlvLfovKrog47mnInpmZDlhazlj7jjgILlnLDlnYDvvJrlk6HmnpfmjZDooYDlrqQo5ZOh5p6X54Gr6LuK56uZ5LiA5qiT5aSn5buz5YWnKQ==",
+      "time": "10:00~18:00",
+      "organization": "建強輪胎有限公司",
+      "location": "員林捐血室(員林火車站一樓大廳內)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：建強輪胎有限公司。地址：員林捐血室(員林火車站一樓大廳內)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8mueyvuixkOeDmOeEmeWdiuOAguWcsOWdgO+8mueDj+aXpeS5neW+t+Wci+Wwjyjlj7DkuK3luILng4/ml6XljYDplbfmmKXooZczMDDomZ8p",
+      "time": "9:30~16:00",
+      "organization": "精豐烘焙坊",
+      "location": "烏日九德國小(台中市烏日區長春街300號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：精豐烘焙坊。地址：烏日九德國小(台中市烏日區長春街300號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8muaIkOamrueNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "成榮獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：成榮獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8mk5B44CC5Zyw5Z2A77ya5aSn6IKa5Y2A5YWs5omA5YmN5buj5aC0KOiHuuS4reW4guWkp+iCmuWNgOaymeeUsOi3rzLmrrU2NDbomZ8p",
+      "time": "9:30~16:00",
+      "organization": "NA",
+      "location": "大肚區公所前廣場(臺中市大肚區沙田路2段646號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：NA。地址：大肚區公所前廣場(臺中市大肚區沙田路2段646號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8mumHkeiYreeNheWtkOacg+OAguWcsOWdgO+8muS4rea4r+aNkOihgOWupCjoh7rkuK3luILopb/lsa/ljYDoh7rngaPlpKfpgZPlm5vmrrUxMTc26JmfKQ==",
+      "time": "8:00~18:00",
+      "organization": "金蘭獅子會",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：金蘭獅子會。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muekvuWcmOazleS6uuaYjumBk+WQjOW/g+aFiOWWhOOAguWcsOWdgO+8muW9sOWMlueBq+i7iuermSjlvbDljJbluILkuInmsJHot68x6JmfKQ==",
+      "time": "9:30~16:00",
+      "organization": "社團法人明道同心慈善",
+      "location": "彰化火車站(彰化市三民路1號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：社團法人明道同心慈善。地址：彰化火車站(彰化市三民路1號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muekvuWcmOazleS6uuaYjumBk+WQjOW/g+aFiOWWhOOAguWcsOWdgO+8muW9sOWMluaNkOihgOermSjlvbDljJbluILkuK3lsbHot6/kuIDmrrUzNDjomZ8p",
+      "time": "8:00~17:00",
+      "organization": "社團法人明道同心慈善",
+      "location": "彰化捐血站(彰化市中山路一段348號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：社團法人明道同心慈善。地址：彰化捐血站(彰化市中山路一段348號)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8mumHkee2vuWtkOWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
       "time": "9:00~17:00",
+      "organization": "金綾子國際同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：金綾子國際同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWvjOWBieeNheWtkOacgyjljZfmipUp44CC5Zyw5Z2A77ya5Y2X5oqV5o2Q6KGA5a6kKOS4reiIiOi3rzYxNuiZnzHmqJMp",
+      "time": "9:00~17:00",
+      "organization": "富偉獅子會(南投)",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：富偉獅子會(南投)。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-21"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzozMOOAguS4u+i+puWWruS9je+8mueZveexs+aFiOWWhOWIl+i7iuOAguWcsOWdgO+8mumrmOmbhOW4guS4ieawkeWNgOS5neWmguS4gOi3rzE5OOiZnzHmqJMoRDIx5Lmd5aaC5o2Q6KGA5a6kKQ==",
+      "time": "9:00~17:30",
       "organization": "白米慈善列車",
       "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
-      "rawContent": "作業時間：9:00~17:00。主辦單位：白米慈善列車。地址：高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "rawContent": "作業時間：9:00~17:30。主辦單位：白米慈善列車。地址：高雄市三民區九如一路198號1樓(D21九如捐血室)",
       "activityDate": "2024-12-21"
     },
     {
@@ -6713,14 +7873,6 @@
       "activityDate": "2024-12-21"
     },
     {
-      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlsYjoh6PmsI/msLjoj6/lupco6Ieq6L6mKeOAguWcsOWdgO+8muWuieW5s+WxiOiHo+awjyjlj7DljZfluILlronlubPljYDmsLjoj6/ot6/kuozmrrU4MTXomZ8p",
-      "time": "10:00~18:00",
-      "organization": "屈臣氏永華店(自辦)",
-      "location": "安平屈臣氏(台南市安平區永華路二段815號)",
-      "rawContent": "作業時間：10:00~18:00。主辦單位：屈臣氏永華店(自辦)。地址：安平屈臣氏(台南市安平區永華路二段815號)",
-      "activityDate": "2024-12-21"
-    },
-    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzozMOOAguS4u+i+puWWruS9je+8muS4ieWSjOaFiOWWhOacg+OAguWcsOWdgO+8mumrmOmbhOW4guWJjemHkeWNgOS4reiPr+S4iei3rzfomZ825qiTKFM3NeWJjemHkeaNkOihgOWupCk=",
       "time": "9:00~17:30",
       "organization": "三和慈善會",
@@ -6785,14 +7937,6 @@
       "activityDate": "2024-12-21"
     },
     {
-      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzozMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muawkeaXj+Wkp+aogijkuInmsJHljYDmsJHml4/kuIDot680NjPomZ8p",
-      "time": "9:30~17:30",
-      "organization": "良堅建設股份有限公司",
-      "location": "民族大樂(三民區民族一路463號)",
-      "rawContent": "作業時間：9:30~17:30。主辦單位：良堅建設股份有限公司。地址：民族大樂(三民區民族一路463號)",
-      "activityDate": "2024-12-21"
-    },
-    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzozMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4gumzs+WxseWNgOWFiemBoOi3rzIyNuiZnyjmjbfpgYvps7PlsbHmjZDooYDlrqQp",
       "time": "9:00~17:30",
       "organization": "良堅建設股份有限公司",
@@ -6826,6 +7970,190 @@
     }
   ],
   "2024-12-22": [
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJroh7rljJfluILlnJjli5nmjIflsI7lp5Tlk6HmnIPjgILlnLDlnYDvvJrlj7DljJfluILkuK3lsbHljYDmsJHmrIropb/ot683MOiZnyjmsJHmrIropb/ot6/nq5kx6Jmf5Ye65Y+jKQ==",
+      "time": "10:00~17:00",
+      "organization": "臺北市團務指導委員會",
+      "location": "台北市中山區民權西路70號(民權西路站1號出口)",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：臺北市團務指導委員會。地址：台北市中山區民權西路70號(民權西路站1號出口)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTc6MzDjgILkuLvovqbllq7kvY3vvJrlnIvpmpvkvZvlhYnmnIPkuK3oj6/nuL3mnIPmnb7pmobliIbmnIPjgILlnLDlnYDvvJrlj7DljJfluILmnb7lsbHljYDlhasg5b636Lev5Zub5q61NzYx6JmfKOaFiOelkOWurueliOemj+mQmOWJjSk=",
+      "time": "10:30~17:30",
+      "organization": "國際佛光會中華總會松隆分會",
+      "location": "台北市松山區八 德路四段761號(慈祐宮祈福鐘前)",
+      "rawContent": "作業時間：10:30~17:30。主辦單位：國際佛光會中華總會松隆分會。地址：台北市松山區八 德路四段761號(慈祐宮祈福鐘前)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWunOiYree4o+aogua0u+mAsuS/ruWtuOiLkeWNlOacg+OAguWcsOWdgO+8muWunOiYree4o+WunOiYreW4guelnui+sui3r+S6jOautTE2MuiZnyjlrpzomK3luILkupTnqYDlu58p",
+      "time": "9:00~16:00",
+      "organization": "宜蘭縣樂活進修學苑協會",
+      "location": "宜蘭縣宜蘭市神農路二段162號(宜蘭市五穀廟)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：宜蘭縣樂活進修學苑協會。地址：宜蘭縣宜蘭市神農路二段162號(宜蘭市五穀廟)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muato+W+t+ekvuemj+WfuumHkeacg+WunOiYreOAguWcsOWdgO+8muWunOiYree4o+WunOiYreW4guaTuuWOmOi3rzE2LTfomZ8x5qiTKOmFjeWQiOWunOiYreermSk=",
+      "time": "8:00~17:00",
+      "organization": "正德社福基金會宜蘭",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：正德社福基金會宜蘭。地址：宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8mijoirEp5q2j5b635Z+66YeR5pyD44CC5Zyw5Z2A77ya6Iqx6JOu5biC5piO56au5ZyL5bCP6ZmE6Kit5bm85YWS5ZyS5YmNKOS4reato+i3rzU5NuiZnyk=",
+      "time": "9:30~16:30",
+      "organization": "(花)正德基金會",
+      "location": "花蓮市明禮國小附設幼兒園前(中正路596號)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：(花)正德基金會。地址：花蓮市明禮國小附設幼兒園前(中正路596號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOiKseiTrum+jeWQn+eNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：國際獅子會300A 5區花蓮龍吟獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOWfuumahuWSjOW5s+acg+OAguWcsOWdgO+8muWfuumahuW4guS4g+WgteWNgOemj+S4gOihlzEzNuiZnyjnmb7npo/lrq7liY3lu6PloLQp",
+      "time": "9:30~16:30",
+      "organization": "國際獅子會300A 5區基隆和平會",
+      "location": "基隆市七堵區福一街136號(百福宮前廣場)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：國際獅子會300A 5區基隆和平會。地址：基隆市七堵區福一街136號(百福宮前廣場)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOWfuumahuW4guS/oee+qeeNheWtkOacg+OAguWcsOWdgO+8muWfuumahuW4guS7geS6jOi3ryvmhJvkuozot6/lj6Mo5LqM5L+hKQ==",
+      "time": "9:30~16:30",
+      "organization": "國際獅子會300A 5區基隆市信義獅子會",
+      "location": "基隆市仁二路+愛二路口(二信)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：國際獅子會300A 5區基隆市信義獅子會。地址：基隆市仁二路+愛二路口(二信)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgNeWNgOWfuumahuW4guS/oee+qeeNheWtkOacg+OAguWcsOWdgO+8muWfuumahuW4guS/oee+qeWNgOS/oeS4gOi3rzE06JmfMeaokyjphY3lkIjln7rpmobnq5kp",
+      "time": "8:00~17:00",
+      "organization": "國際獅子會300A 5區基隆市信義獅子會",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：國際獅子會300A 5區基隆市信義獅子會。地址：基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzowMOOAguS4u+i+puWWruS9je+8muS4iemHjeeOhOW+t+WuruOAguWcsOWdgO+8muaWsOWMl+W4guS4iemHjeWNgOW/oOWtnei3r+S6jOautTIyOOWFrOWckg==",
+      "time": "9:30~17:00",
+      "organization": "三重玄德宮",
+      "location": "新北市三重區忠孝路二段228公園",
+      "rawContent": "作業時間：9:30~17:00。主辦單位：三重玄德宮。地址：新北市三重區忠孝路二段228公園",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaZqOWFieWQjOa/n+acgyjljJfkuozljYAp44CC5Zyw5Z2A77ya5paw5YyX5biC5Lit5ZKM5Y2A5Lit5a6J6KGX5ZyW5pu46aSo5peBODIz5YWs5ZyS5YWnKOmFjeWQiOS4reWSjOiZnyk=",
+      "time": "9:00~17:00",
+      "organization": "晨光同濟會(北二區)",
+      "location": "新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：晨光同濟會(北二區)。地址：新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzowMOOAguS4u+i+puWWruS9je+8muaWsOWMl+W4guapn+i7iuWVhualreWQjOalreWFrOacg+awuOWSjOWIhuacg+OAguWcsOWdgO+8muaWsOWMl+W4guawuOWSjOWNgOWci+WFiei3ryjmsLjlkozlnIvniLbntIDlv7XppKgp",
+      "time": "9:30~17:00",
+      "organization": "新北市機車商業同業公會永和分會",
+      "location": "新北市永和區國光路(永和國父紀念館)",
+      "rawContent": "作業時間：9:30~17:00。主辦單位：新北市機車商業同業公會永和分會。地址：新北市永和區國光路(永和國父紀念館)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrmlZHlnIvlnJjmlrDljJfluILmnb/mqYvljYDlnJjlp5TmnIPjgILlnLDlnYDvvJrmlrDljJfluILmnb/mqYvljYDmlofljJbot6/kuIDmrrUzNjDomZ8o5LiJ54y/5buj5aC0KQ==",
+      "time": "10:00~17:00",
+      "organization": "救國團新北市板橋區團委會",
+      "location": "新北市板橋區文化路一段360號(三猿廣場)",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：救國團新北市板橋區團委會。地址：新北市板橋區文化路一段360號(三猿廣場)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlkozlubPnjYXlrZDmnINCIDLjgILlnLDlnYDvvJrmlrDljJfluILmnb/mqYvljYDmlrDlupzot68o6YGg5p2x55m+6LKoKQ==",
+      "time": "10:00~17:00",
+      "organization": "和平獅子會B 2",
+      "location": "新北市板橋區新府路(遠東百貨)",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：和平獅子會B 2。地址：新北市板橋區新府路(遠東百貨)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muW3pemdkuS4iemaiuOAguWcsOWdgO+8muaWsOWMl+W4guadv+api+WNgOmbmeWNgei3r+S4ieautTI36JmfMuaokyjphY3lkIjmnb/mqYvnq5kp",
+      "time": "8:00~17:00",
+      "organization": "工青三隊",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：工青三隊。地址：新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjozMOOAguS4u+i+puWWruS9je+8muaWsOWMl+W4gumgreWJjeaJtui8quekvuOAguWcsOWdgO+8muaWsOWMl+W4guaWsOiOiuWNgOS4reW5s+i3rzM4NeiZn+S4reW5s+Wci+S4rQ==",
+      "time": "9:00~16:30",
+      "organization": "新北市頭前扶輪社",
+      "location": "新北市新莊區中平路385號中平國中",
+      "rawContent": "作業時間：9:00~16:30。主辦單位：新北市頭前扶輪社。地址：新北市新莊區中平路385號中平國中",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmgJ3mupDnjYXmnINCIDHjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDkuK3oj6/ot68r5b6p6IiI6Lev5Y+jKOmFjeWQiOaWsOiOiuiZnyk=",
+      "time": "10:00~18:00",
+      "organization": "思源獅會B 1",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：思源獅會B 1。地址：新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzowMOOAguS4u+i+puWWruS9je+8muWPsOeBo+W4jOacm+S5i+WFieaFiOWWhOacg+OAguWcsOWdgO+8muaWsOWMl+W4guaWsOiOiuWNgOS4reiPr+i3r+S4ieauteWvjOiytOi3r+WPoyjou4rlgZzkuK3oj6/ot68p",
+      "time": "9:30~17:00",
+      "organization": "台灣希望之光慈善會",
+      "location": "新北市新莊區中華路三段富貴路口(車停中華路)",
+      "rawContent": "作業時間：9:30~17:00。主辦單位：台灣希望之光慈善會。地址：新北市新莊區中華路三段富貴路口(車停中華路)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTE6MDB+MTk6MDDjgILkuLvovqbllq7kvY3vvJrlj7DngaPmpI3niZnphqvlrbjmnIPjgILlnLDlnYDvvJroh7rljJfluILlpKflronljYBCMeadseWNgOWcsOS4i+ihlznomZ/lh7rlj6Pml4Hlia/otbDpgZMo56ys5Zub5buj5aC05peBKSjphY3lkIjlv6DlrZ3lrqQp",
+      "time": "11:00~19:00",
+      "organization": "台灣植牙醫學會",
+      "location": "臺北市大安區B1東區地下街9號出口旁副走道(第四廣場旁)(配合忠孝室)",
+      "rawContent": "作業時間：11:00~19:00。主辦單位：台灣植牙醫學會。地址：臺北市大安區B1東區地下街9號出口旁副走道(第四廣場旁)(配合忠孝室)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEgM+WNgOiBr+WPi+eNheWtkOacg+OAguWcsOWdgO+8muiHuuWMl+W4guWkp+WuieWNgOW7uuWci+WNl+i3r+S6jOauteWcsOS4i+WBnOi7iuWgtOWFpeWPo+aXgeepuuWcsCjphY3lkIjlpKflronomZ8p",
+      "time": "9:00~17:00",
+      "organization": "國際獅子會300A 3區聯友獅子會",
+      "location": "臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：國際獅子會300A 3區聯友獅子會。地址：臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzozMOOAguS4u+i+puWWruS9je+8muWPsOenkeWkp0VNQkHnjYXlrZDmnINBMuOAguWcsOWdgO+8muiHuuWMl+W4guS4reato+WNgOWNl+a1t+i3rzHomZ8z5qiTKOmFjeWQiOWNl+a1t+WupCk=",
+      "time": "8:00~17:30",
+      "organization": "台科大EMBA獅子會A2",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "rawContent": "作業時間：8:00~17:30。主辦單位：台科大EMBA獅子會A2。地址：臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrpgaDmnbHlkIzmv5/mnIMo5YyX5biC5Y2AKeOAguWcsOWdgO+8muiHuuWMl+W4guS4reato+WNgOilhOmZvei3r+iIh+WFrOWckui3r+S6pOWPieWPoyjphY3lkIjlhazlnJLomZ8p",
+      "time": "10:00~18:00",
+      "organization": "遠東同濟會(北市區)",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：遠東同濟會(北市區)。地址：臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrnpL7lnJjms5Xkurrlj7DljJfluILmhJvlv4PmnIPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "社團法人台北市愛心會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：社團法人台北市愛心會。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-22"
+    },
     {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muerueadseeNheWtkOacg+OAguWcsOWdgO+8muerueadseesrOS4gOmKgOihjOWJjSjnq7nmnbHpjq7mnbHmnpfot68zMOiZnyk=",
       "time": "9:00~16:00",
@@ -6880,6 +8208,126 @@
       "organization": "新竹中山獅子會",
       "location": "竹北愛心樓(新竹縣竹北市光明11路215巷8號)",
       "rawContent": "作業時間：9:00~16:30。主辦單位：新竹中山獅子會。地址：竹北愛心樓(新竹縣竹北市光明11路215巷8號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlvpflsZXmo4nmpa3ogqHku73mnInpmZDlhazlj7jjgILlnLDlnYDvvJrlk6HmnpfmjZDooYDlrqQo5ZOh5p6X54Gr6LuK56uZ5LiA5qiT5aSn5buz5YWnKQ==",
+      "time": "10:00~18:00",
+      "organization": "得展棉業股份有限公司",
+      "location": "員林捐血室(員林火車站一樓大廳內)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：得展棉業股份有限公司。地址：員林捐血室(員林火車站一樓大廳內)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muiyoeWcmOazleS6uumrmOmbhOW4guWFg+avjea0nuekvuacg+emj+WIqeaFiOWWhOWfuumHkeacgyjopb/lj7DkuK3ljYAp44CC5Zyw5Z2A77ya5aSn55Sy6auU6IKy5aC0KOiHuuS4reW4guWkp+eUsuWNgOWkp+Wuiea4r+i3rzLomZ8p",
+      "time": "9:30~16:00",
+      "organization": "財團法人高雄市元母洞社會福利慈善基金會(西台中區)",
+      "location": "大甲體育場(臺中市大甲區大安港路2號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：財團法人高雄市元母洞社會福利慈善基金會(西台中區)。地址：大甲體育場(臺中市大甲區大安港路2號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8muWQjeS7leeNheWtkOacg+OAguWcsOWdgO+8muS4rea4r+aNkOihgOWupCjoh7rkuK3luILopb/lsa/ljYDoh7rngaPlpKfpgZPlm5vmrrUxMTc26JmfKQ==",
+      "time": "8:00~18:00",
+      "organization": "名仕獅子會",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：名仕獅子會。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTg6MzDjgILkuLvovqbllq7kvY3vvJroiLnkupXnlJ/phqvogqHku73mnInpmZDlhazlj7jjgILlnLDlnYDvvJrmlrDlhYnkuInotormjZDooYDou4oo5oOg5a6J5YGc6LuK5aC0LeaDoOS+hui3r+S6jOauteW4guaUv+WMl+S4g+i3r+WPoyk=",
+      "time": "10:30~18:30",
+      "organization": "船井生醫股份有限公司",
+      "location": "新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "rawContent": "作業時間：10:30~18:30。主辦單位：船井生醫股份有限公司。地址：新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mum6l+WvjOW6t+Wci+mam+iCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muS4ieawkeaNkOihgOWupCjoh7rkuK3luILopb/ljYDkuInmsJHot6/kuIDmrrUxNzTomZ835qiTKQ==",
+      "time": "8:00~17:00",
+      "organization": "麗富康國際股份有限公司",
+      "location": "三民捐血室(臺中市西區三民路一段174號7樓)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：麗富康國際股份有限公司。地址：三民捐血室(臺中市西區三民路一段174號7樓)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWhlOWQieeJueiSn+iSu+OAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "塔吉特蒟蒻",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：塔吉特蒟蒻。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNTozMOOAguS4u+i+puWWruS9je+8muemj+eIvuaRqeiOjuWckuiXnembhuWcmOOAguWcsOWdgO+8muWflOmHjOaNkOihgOermSjln5Tph4zpjq7ljJfnkrDot68yMjLomZ8p",
+      "time": "9:00~15:30",
+      "organization": "福爾摩莎園藝集團",
+      "location": "埔里捐血站(埔里鎮北環路222號)",
+      "rawContent": "作業時間：9:00~15:30。主辦單位：福爾摩莎園藝集團。地址：埔里捐血站(埔里鎮北環路222號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8mueZvuW5tOeNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "百年獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：百年獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8muWci+mam+S9m+WFieacg+Wkp+mHjOesrOS4gOWIhuacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "國際佛光會大里第一分會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：國際佛光會大里第一分會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muW9sOWNl+aFiOWWhOacg+OAguWcsOWdgO+8muW9sOWPi+eUn+murui2heW4gijlvbDljJbluILlvbDljZfot6/kuInmrrUzNjYtMeiZnyk=",
+      "time": "9:30~16:00",
+      "organization": "彰南慈善會",
+      "location": "彰友生鮮超市(彰化市彰南路三段366-1號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：彰南慈善會。地址：彰友生鮮超市(彰化市彰南路三段366-1號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muilv+a/seWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muWSjOe+jumBk+WRqOmGq+mZouaXgSjlvbDljJbnuKPlkoznvo7pjq7lkozlhYnot68xODDomZ8p",
+      "time": "9:30~16:00",
+      "organization": "西濱國際同濟會",
+      "location": "和美道周醫院旁(彰化縣和美鎮和光路180號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：西濱國際同濟會。地址：和美道周醫院旁(彰化縣和美鎮和光路180號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrnnJ/lloTnvo7lnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "真善美國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：真善美國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWvjOWBieeNheWtkOacgyjljZfmipUp44CC5Zyw5Z2A77ya5Y2X5oqV5o2Q6KGA5a6kKOS4reiIiOi3rzYxNuiZnzHmqJMp",
+      "time": "9:00~17:00",
+      "organization": "富偉獅子會(南投)",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：富偉獅子會(南投)。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8mum5v+a4r+aJk+mQteWOneWkqeWSjOWuruOAguWcsOWdgO+8mum5v+a4r+mOruWFrOaJgCjlvbDljJbnuKPpub/muK/pjq7msJHmrIrot68xNjjomZ8p",
+      "time": "9:30~16:00",
+      "organization": "鹿港打鐵厝天和宮",
+      "location": "鹿港鎮公所(彰化縣鹿港鎮民權路168號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：鹿港打鐵厝天和宮。地址：鹿港鎮公所(彰化縣鹿港鎮民權路168號)",
+      "activityDate": "2024-12-22"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guWFieeFp+iXneaWh+eZvOWxleWNlOOAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "臺中市光照藝文發展協",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：臺中市光照藝文發展協。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
       "activityDate": "2024-12-22"
     },
     {
@@ -6995,11 +8443,11 @@
       "activityDate": "2024-12-22"
     },
     {
-      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzozMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4guS4ieawkeWNgOS5neWmguS4gOi3rzE5OOiZnzHmqJMoRDIx5Lmd5aaC5o2Q6KGA5a6kKQ==",
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzozMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEU15Y2A6auY6ZuE5biC6YeR6bOz5Yew542F5a2Q5pyD44CC5Zyw5Z2A77ya6auY6ZuE5biC5LiJ5rCR5Y2A5Lmd5aaC5LiA6LevMTk46JmfMeaokyhEMjHkuZ3lpoLmjZDooYDlrqQp",
       "time": "9:00~17:30",
-      "organization": "良堅建設股份有限公司",
+      "organization": "國際獅子會300E5區高雄市金鳳凰獅子會",
       "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
-      "rawContent": "作業時間：9:00~17:30。主辦單位：良堅建設股份有限公司。地址：高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "rawContent": "作業時間：9:00~17:30。主辦單位：國際獅子會300E5區高雄市金鳳凰獅子會。地址：高雄市三民區九如一路198號1樓(D21九如捐血室)",
       "activityDate": "2024-12-22"
     },
     {
@@ -7044,6 +8492,46 @@
     }
   ],
   "2024-12-23": [
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MzB+MTY6MzDjgILkuLvovqbllq7kvY3vvJrosqHmlL/pg6josqHmlL/os4foqIrkuK3lv4PjgILlnLDlnYDvvJrlj7DljJfluILkv6HnvqnljYDlv6DlrZ3mnbHot6/lm5vmrrU1NDfomZ8=",
+      "time": "13:30~16:30",
+      "organization": "財政部財政資訊中心",
+      "location": "台北市信義區忠孝東路四段547號",
+      "rawContent": "作業時間：13:30~16:30。主辦單位：財政部財政資訊中心。地址：台北市信義區忠孝東路四段547號",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mumLkuacqOmtmumFpeOAguWcsOWdgO+8muWunOiYree4o+WunOiYreW4guaTuuWOmOi3rzE2LTfomZ8x5qiTKOmFjeWQiOWunOiYreermSk=",
+      "time": "8:00~17:00",
+      "organization": "鋒木魚酥",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：鋒木魚酥。地址：宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiKseiTruiTruiKseeNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "花蓮蓮花獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：花蓮蓮花獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muaWsOWMl+W4guaVkembo+WNlOacg+OAguWcsOWdgO+8muaWsOWMl+W4guiYhua0suWNgOS4ieawkei3r+WNgOWFrOaJgOWJjSjomIbmtLLlrprpu54p",
+      "time": "9:30~16:30",
+      "organization": "新北市救難協會",
+      "location": "新北市蘆洲區三民路區公所前(蘆洲定點)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：新北市救難協會。地址：新北市蘆洲區三民路區公所前(蘆洲定點)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrlj4vpgqbnjYXlrZDmnIPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "友邦獅子會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：友邦獅子會。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-23"
+    },
     {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muiLl+agl+e4o+S4iee+qemEieW+jOWCmeaGsuWFteiNt+advuWNlOacg+OAguWcsOWdgO+8muS4iee+qeWFreinkuS6reWJjSjphY3lkIjkuInnvqnlrprpu54pIOiLl+agl+e4o+S4iee+qemEieS4reato+i3rw==",
       "time": "9:00~16:00",
@@ -7109,6 +8597,86 @@
       "activityDate": "2024-12-23"
     },
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlkIzlv4PlnJPlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "同心圓國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：同心圓國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmnpc/6LK044CC5Zyw5Z2A77ya5ZOh5p6X5o2Q6KGA5a6kKOWToeael+eBq+i7iuermeS4gOaok+Wkp+W7s+WFpyk=",
+      "time": "10:00~18:00",
+      "organization": "林?貴",
+      "location": "員林捐血室(員林火車站一樓大廳內)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：林?貴。地址：員林捐血室(員林火車站一樓大廳內)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJroh7rkuK3luILmlL/lupzmtojpmLLlsYAo5Y+w5Lit5biCKeOAguWcsOWdgO+8muS7geWSjOaNkOihgOi7iijmnb7nq7not6/oiIfmmIzlubPot6/lj6Mp",
+      "time": "10:00~18:00",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "仁和捐血車(松竹路與昌平路口)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：臺中市政府消防局(台中市)。地址：仁和捐血車(松竹路與昌平路口)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guWkp+WQjOWci+mam+WCkeS6uuacgyjmnbHlj7DkuK3ljYAp44CC5Zyw5Z2A77ya6LGQ5Y6f5o2Q6KGA5a6kKOiHuuS4reW4guixkOWOn+WNgOWMl+mZvei3rzLomZ8p",
+      "time": "9:00~18:00",
+      "organization": "臺中市大同國際傑人會(東台中區)",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：臺中市大同國際傑人會(東台中區)。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWhlOWQieeJueiSn+iSu+OAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "塔吉特蒟蒻",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：塔吉特蒟蒻。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muS6jOael+eNheWtkOacg+OAguWcsOWdgO+8muS6jOael+mOruWcluabuOmkqCjlvbDljJbnuKPkuozmnpfpjq7mlpfoi5Hot6805q61NjI26JmfKQ==",
+      "time": "9:30~16:00",
+      "organization": "二林獅子會",
+      "location": "二林鎮圖書館(彰化縣二林鎮斗苑路4段626號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：二林獅子會。地址：二林鎮圖書館(彰化縣二林鎮斗苑路4段626號)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8muWPsOS4reW4guWkp+mHjOeNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "台中市大里獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：台中市大里獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTowMOOAguS4u+i+puWWruS9je+8mue0q+WNl+WuruOAguWcsOWdgO+8muerueWxsee0q+WNl+Wurijnq7nlsbHpjq7lpKflhazooZc0MOiZnynmsLTmv4Llu6PloLQoN+aYn+e0muW7geaJgOaWnOS4i+aWuSk=",
+      "time": "9:30~15:00",
+      "organization": "紫南宮",
+      "location": "竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "rawContent": "作業時間：9:30~15:00。主辦單位：紫南宮。地址：竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWQvuaEm+mEsOWQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "吾愛鄰同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：吾愛鄰同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-23"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muiHqui+pi3lj7DngaPmpZPlurfotoXluILng4/ml6Xlupflt6Hov7TjgILlnLDlnYDvvJrlj7DngaPmpZPlurfotoXluILng4/ml6Xpq5jpkLXlupco6Ie65Lit5biC54OP5pel5Y2A5Lit5bGx6LevMuautTExOOiZnyk=",
+      "time": "9:30~16:00",
+      "organization": "自辦-台灣楓康超市烏日店巡迴",
+      "location": "台灣楓康超市烏日高鐵店(臺中市烏日區中山路2段118號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：自辦-台灣楓康超市烏日店巡迴。地址：台灣楓康超市烏日高鐵店(臺中市烏日區中山路2段118號)",
+      "activityDate": "2024-12-23"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mua6ouazsOWvpualreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWxj+adsee4o+Wxj+adseW4guW/oOWtnei3rzI5NeiZnyhTNzPlsY/mnbHmjZDooYDnq5kp",
       "time": "8:00~17:00",
       "organization": "溢泰實業股份有限公司",
@@ -7122,14 +8690,6 @@
       "organization": "高雄市玉旨玄德堂行道會",
       "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
       "rawContent": "作業時間：9:00~17:00。主辦單位：高雄市玉旨玄德堂行道會。地址：高雄市岡山區壽華路58號(S72岡山捐血室)",
-      "activityDate": "2024-12-23"
-    },
-    {
-      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MzDjgILkuLvovqbllq7kvY3vvJrlnIvpmpvkvZvlhYnmnIPkuK3oj6/nuL3mnIPmlrDluILliIbmnIPjgILlnLDlnYDvvJrmlrDluILovrLmnIMo5Y+w5Y2X5biC5paw5biC5Y2A5b6p6IiI6LevMeS5izHomZ8p",
-      "time": "10:00~16:30",
-      "organization": "國際佛光會中華總會新市分會",
-      "location": "新市農會(台南市新市區復興路1之1號)",
-      "rawContent": "作業時間：10:00~16:30。主辦單位：國際佛光會中華總會新市分會。地址：新市農會(台南市新市區復興路1之1號)",
       "activityDate": "2024-12-23"
     },
     {
@@ -7191,11 +8751,91 @@
   ],
   "2024-12-24": [
     {
-      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8mua1t+mbgeWQjOa/n+acg+OAguWcsOWdgO+8muS4reWjouWcluabuOmkqCjkuK3lo6LljYDkuK3nvo7ot683NuiZnyk=",
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muS4reiIiOS/neWFqOiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWPsOWMl+W4guWkp+WQjOWNgOmEreW3nui3rzEzOeiZnw==",
       "time": "9:30~16:30",
+      "organization": "中興保全股份有限公司",
+      "location": "台北市大同區鄭州路139號",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：中興保全股份有限公司。地址：台北市大同區鄭州路139號",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muS4reiPr+WppuWls+iBr+WQiOacg+WPsOWMl+WIhuacg+WFp+a5luaUr+acg+OAguWcsOWdgO+8muWPsOWMl+W4guWFp+a5luWNgOaIkOWKn+i3r+Wbm+autTE2NuiZn+S4g+a1t+mkkOW7s+WJjSjlhafmuZblrprpu54p",
+      "time": "9:30~16:30",
+      "organization": "中華婦女聯合會台北分會內湖支會",
+      "location": "台北市內湖區成功路四段166號七海餐廳前(內湖定點)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：中華婦女聯合會台北分會內湖支會。地址：台北市內湖區成功路四段166號七海餐廳前(內湖定點)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8mue3r+WJteizh+mAmuOAguWcsOWdgO+8muWPsOWMl+W4guWFp+a5luWNgOihjOWWhOi3rzE1OOiZnw==",
+      "time": "9:30~16:30",
+      "organization": "緯創資通",
+      "location": "台北市內湖區行善路158號",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：緯創資通。地址：台北市內湖區行善路158號",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muaUuOazsOenkeaKgOiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWPsOWMl+W4guWFp+a5luWNgOmZveWFieihlzMwMOiZnw==",
+      "time": "9:30~16:30",
+      "organization": "攸泰科技股份有限公司",
+      "location": "台北市內湖區陽光街300號",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：攸泰科技股份有限公司。地址：台北市內湖區陽光街300號",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muS4iei7jee4vemGq+mZouWMl+aKleWIhumZouOAguWcsOWdgO+8muWPsOWMl+W4guWMl+aKleWNgOaWsOawkei3rzYw6Jmf",
+      "time": "9:30~16:30",
+      "organization": "三軍總醫院北投分院",
+      "location": "台北市北投區新民路60號",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：三軍總醫院北投分院。地址：台北市北投區新民路60號",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muS4reWkrueglOeptumZouOAguWcsOWdgO+8muWPsOWMl+W4guWNl+a4r+WNgOeglOeptumZoui3r+S6jOautTEyOOiZnyjlrbjooZPmtLvli5XkuK3lv4Mp5YmN",
+      "time": "9:30~16:30",
+      "organization": "中央研究院",
+      "location": "台北市南港區研究院路二段128號(學術活動中心)前",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：中央研究院。地址：台北市南港區研究院路二段128號(學術活動中心)前",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWci+eri+mZveaYjuS6pOmAmuWkp+WtuOmZhOioremGq+mZoijlrpzomK0p44CC5Zyw5Z2A77ya5a6c6Jit57ij5a6c6Jit5biC5qCh6IiN6LevMTY56JmfKOiYremZvemZouWNgCk=",
+      "time": "9:00~16:00",
+      "organization": "國立陽明交通大學附設醫院(宜蘭)",
+      "location": "宜蘭縣宜蘭市校舍路169號(蘭陽院區)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：國立陽明交通大學附設醫院(宜蘭)。地址：宜蘭縣宜蘭市校舍路169號(蘭陽院區)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mumLkuacqOmtmumFpeOAguWcsOWdgO+8muWunOiYree4o+WunOiYreW4guaTuuWOmOi3rzE2LTfomZ8x5qiTKOmFjeWQiOWunOiYreermSk=",
+      "time": "8:00~17:00",
+      "organization": "鋒木魚酥",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：鋒木魚酥。地址：宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiKseiTruiTruiKseeNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "花蓮蓮花獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：花蓮蓮花獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrmspDomK3njYXlrZDmnIPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "沐蘭獅子會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：沐蘭獅子會。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MzDjgILkuLvovqbllq7kvY3vvJrmtbfpm4HlkIzmv5/mnIPjgILlnLDlnYDvvJrkuK3lo6LlnJbmm7jppKgo5Lit5aOi5Y2A5Lit576O6LevNzbomZ8p",
+      "time": "10:00~16:30",
       "organization": "海雁同濟會",
       "location": "中壢圖書館(中壢區中美路76號)",
-      "rawContent": "作業時間：9:30~16:30。主辦單位：海雁同濟會。地址：中壢圖書館(中壢區中美路76號)",
+      "rawContent": "作業時間：10:00~16:30。主辦單位：海雁同濟會。地址：中壢圖書館(中壢區中美路76號)",
       "activityDate": "2024-12-24"
     },
     {
@@ -7239,6 +8879,110 @@
       "activityDate": "2024-12-24"
     },
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiQrOazsOenkeaKgOiCoeS7veaciemZkOWFrOWPuCjljZfmipXljYAp44CC5Zyw5Z2A77ya5Y2X5oqV5o2Q6KGA5a6kKOS4reiIiOi3rzYxNuiZnzHmqJMp",
+      "time": "9:00~17:00",
+      "organization": "萬泰科技股份有限公司(南投區)",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：萬泰科技股份有限公司(南投區)。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmnpc/6LK044CC5Zyw5Z2A77ya5ZOh5p6X5o2Q6KGA5a6kKOWToeael+eBq+i7iuermeS4gOaok+Wkp+W7s+WFpyk=",
+      "time": "10:00~18:00",
+      "organization": "林?貴",
+      "location": "員林捐血室(員林火車站一樓大廳內)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：林?貴。地址：員林捐血室(員林火車站一樓大廳內)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTg6MzDjgILkuLvovqbllq7kvY3vvJroh7rkuK3luILmlL/lupzmtojpmLLlsYAo5Y+w5Lit5biCKeOAguWcsOWdgO+8muaWsOWFieS4iei2iuaNkOihgOi7iijmg6DlronlgZzou4rloLQt5oOg5L6G6Lev5LqM5q615biC5pS/5YyX5LiD6Lev5Y+jKQ==",
+      "time": "10:30~18:30",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "rawContent": "作業時間：10:30~18:30。主辦單位：臺中市政府消防局(台中市)。地址：新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJroh7rkuK3luILmlL/lupzmtojpmLLlsYAo5Y+w5Lit5biCKeOAguWcsOWdgO+8muS7geWSjOaNkOihgOi7iijmnb7nq7not6/oiIfmmIzlubPot6/lj6Mp",
+      "time": "10:00~18:00",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "仁和捐血車(松竹路與昌平路口)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：臺中市政府消防局(台中市)。地址：仁和捐血車(松竹路與昌平路口)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guaUv+W6nOa2iOmYsuWxgCjlj7DkuK3luIIp44CC5Zyw5Z2A77ya5Lit5riv5o2Q6KGA5a6kKOiHuuS4reW4guilv+Wxr+WNgOiHuueBo+Wkp+mBk+Wbm+autTExNzbomZ8p",
+      "time": "8:00~18:00",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：臺中市政府消防局(台中市)。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guaUv+W6nOa2iOmYsuWxgCjlj7DkuK3luIIp44CC5Zyw5Z2A77ya5LiJ5rCR5o2Q6KGA5a6kKOiHuuS4reW4guilv+WNgOS4ieawkei3r+S4gOautTE3NOiZnzfmqJMp",
+      "time": "8:00~17:00",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "三民捐血室(臺中市西區三民路一段174號7樓)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：臺中市政府消防局(台中市)。地址：三民捐血室(臺中市西區三民路一段174號7樓)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guWkp+WQjOWci+mam+WCkeS6uuacgyjmnbHlj7DkuK3ljYAp44CC5Zyw5Z2A77ya6LGQ5Y6f5o2Q6KGA5a6kKOiHuuS4reW4guixkOWOn+WNgOWMl+mZvei3rzLomZ8p",
+      "time": "9:00~18:00",
+      "organization": "臺中市大同國際傑人會(東台中區)",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：臺中市大同國際傑人會(東台中區)。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTozMOOAguS4u+i+puWWruS9je+8muWci+Wnk+eNheWPi+acg+OAguWcsOWdgO+8muWci+Wnk+mEieWFrOaJgOWwjemdouWBnOi7iuWgtCjlnIvlp5Pot68yNjfomZ8p",
+      "time": "9:30~15:30",
+      "organization": "國姓獅友會",
+      "location": "國姓鄉公所對面停車場(國姓路267號)",
+      "rawContent": "作業時間：9:30~15:30。主辦單位：國姓獅友會。地址：國姓鄉公所對面停車場(國姓路267號)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaJi+W/g+mbnuibi+ezleOAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "手心雞蛋糕",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：手心雞蛋糕。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muWkp+mbheS4rea6kOeNheWtkOacg+OAguWcsOWdgO+8muWPsOeBo+alk+W6t+i2heW4guWkp+mbheW6lyjlpKfpm4XljYDkuK3muIXmnbHot68yMTjomZ8p",
+      "time": "9:30~16:00",
+      "organization": "大雅中源獅子會",
+      "location": "台灣楓康超市大雅店(大雅區中清東路218號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：大雅中源獅子會。地址：台灣楓康超市大雅店(大雅區中清東路218號)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS6lOWAq+Wci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "五倫國際同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：五倫國際同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MTY6MDDjgILkuLvovqbllq7kvY3vvJrooZvnlJ/npo/liKnpg6jlvbDljJbphqvpmaLjgILlnLDlnYDvvJrlvbDljJbphqvpmaLlpKfploDlj6Mo5b2w5YyW57ij5Z+U5b+D6YSJ5Lit5q2j6Lev5LqM5q61ODDomZ/lgZzou4rloLTlhacp",
+      "time": "13:00~16:00",
+      "organization": "衛生福利部彰化醫院",
+      "location": "彰化醫院大門口(彰化縣埔心鄉中正路二段80號停車場內)",
+      "rawContent": "作業時間：13:00~16:00。主辦單位：衛生福利部彰化醫院。地址：彰化醫院大門口(彰化縣埔心鄉中正路二段80號停車場內)",
+      "activityDate": "2024-12-24"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8muiAgeS6lemkkOmjsumbhuWcmCjmnbHlj7DkuK3ljYAp44CC5Zyw5Z2A77ya5aSn6YeM5o2Q6KGA5a6kKOiHuuS4reW4guWkp+mHjOWNgOWci+WFiei3r+S6jOautTIzOeiZnzHmqJMp",
+      "time": "9:30~18:00",
+      "organization": "老井餐飲集團(東台中區)",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：老井餐飲集團(東台中區)。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-24"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mua6ouazsOWvpualreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWxj+adsee4o+Wxj+adseW4guW/oOWtnei3rzI5NeiZnyhTNzPlsY/mnbHmjZDooYDnq5kp",
       "time": "8:00~17:00",
       "organization": "溢泰實業股份有限公司",
@@ -7252,14 +8996,6 @@
       "organization": "高雄市玉旨玄德堂行道會",
       "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
       "rawContent": "作業時間：9:00~17:00。主辦單位：高雄市玉旨玄德堂行道會。地址：高雄市岡山區壽華路58號(S72岡山捐血室)",
-      "activityDate": "2024-12-24"
-    },
-    {
-      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muaVkeWci+WcmOWPsOWNl+W4guatuOS7geWNgOWcmOWnlOacg+OAguWcsOWdgO+8muatuOS7geWNgOWFrOaJgCjlj7DljZfluILmrbjku4HljYDkuK3lsbHot6/kuozmrrUy6JmfKQ==",
-      "time": "9:30~16:30",
-      "organization": "救國團台南市歸仁區團委會",
-      "location": "歸仁區公所(台南市歸仁區中山路二段2號)",
-      "rawContent": "作業時間：9:30~16:30。主辦單位：救國團台南市歸仁區團委會。地址：歸仁區公所(台南市歸仁區中山路二段2號)",
       "activityDate": "2024-12-24"
     },
     {
@@ -7353,6 +9089,54 @@
   ],
   "2024-12-25": [
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTE6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJroh7rljJfmpq7msJHnuL3phqvpmaLjgILlnLDlnYDvvJrlj7DljJfluILnn7PniYzot6/kuozmrrUyMDHomZ8o5LiA6ZaA6Ki6KQ==",
+      "time": "11:00~18:00",
+      "organization": "臺北榮民總醫院",
+      "location": "台北市石牌路二段201號(一門診)",
+      "rawContent": "作業時間：11:00~18:00。主辦單位：臺北榮民總醫院。地址：台北市石牌路二段201號(一門診)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mumLkuacqOmtmumFpeOAguWcsOWdgO+8muWunOiYree4o+WunOiYreW4guaTuuWOmOi3rzE2LTfomZ8x5qiTKOmFjeWQiOWunOiYreermSk=",
+      "time": "8:00~17:00",
+      "organization": "鋒木魚酥",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：鋒木魚酥。地址：宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MDDjgILkuLvovqbllq7kvY3vvJrnkZ7nqZflrojmnJvlt6HlrojpmorjgILlnLDlnYDvvJroirHok67nkZ7nqZfphInlhazmiYDliY3lsZXmvJTloLQo6Iqx6JOu55Ge56mX5beh6L+05a6a6bueKQ==",
+      "time": "10:00~16:00",
+      "organization": "瑞穗守望巡守隊",
+      "location": "花蓮瑞穗鄉公所前展演場(花蓮瑞穗巡迴定點)",
+      "rawContent": "作業時間：10:00~16:00。主辦單位：瑞穗守望巡守隊。地址：花蓮瑞穗鄉公所前展演場(花蓮瑞穗巡迴定點)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiKseiTruiTruiKseeNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "花蓮蓮花獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：花蓮蓮花獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaFiOaCsumWgOOAguWcsOWdgO+8muaWsOWMl+W4guadv+api+WNgOmbmeWNgei3r+S4ieautTI36JmfMuaokyjphY3lkIjmnb/mqYvnq5kp",
+      "time": "8:00~17:00",
+      "organization": "慈悲門",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：慈悲門。地址：新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muiQrOmHjOeNheWtkOacg+OAguWcsOWdgO+8muaWsOWMl+W4guiQrOmHjOWNgOeRqumLiei3rzE1N+iZnyjokKzph4zooZvnlJ/miYDliY0p",
+      "time": "9:30~16:30",
+      "organization": "萬里獅子會",
+      "location": "新北市萬里區瑪鋉路157號(萬里衛生所前)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：萬里獅子會。地址：新北市萬里區瑪鋉路157號(萬里衛生所前)",
+      "activityDate": "2024-12-25"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muiLl+agl+eOieixkOeNheWtkOacg+OAguWcsOWdgO+8muiLl+agl+aNkOihgOermSjoi5fmoJfnuKPoi5fmoJfluILngrrlhazot68yODLomZ8p",
       "time": "9:00~16:00",
       "organization": "苗栗玉豐獅子會",
@@ -7390,6 +9174,102 @@
       "organization": "台灣中油公司竹苗營業",
       "location": "竹北愛心樓(新竹縣竹北市光明11路215巷8號)",
       "rawContent": "作業時間：8:00~17:00。主辦單位：台灣中油公司竹苗營業。地址：竹北愛心樓(新竹縣竹北市光明11路215巷8號)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiQrOazsOenkeaKgOiCoeS7veaciemZkOWFrOWPuCjljZfmipXljYAp44CC5Zyw5Z2A77ya5Y2X5oqV5o2Q6KGA5a6kKOS4reiIiOi3rzYxNuiZnzHmqJMp",
+      "time": "9:00~17:00",
+      "organization": "萬泰科技股份有限公司(南投區)",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：萬泰科技股份有限公司(南投區)。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJroh7rkuK3luILmlL/lupzmtojpmLLlsYAo5Y+w5Lit5biCKeOAguWcsOWdgO+8muS7geWSjOaNkOihgOi7iijmnb7nq7not6/oiIfmmIzlubPot6/lj6Mp",
+      "time": "10:00~18:00",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "仁和捐血車(松竹路與昌平路口)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：臺中市政府消防局(台中市)。地址：仁和捐血車(松竹路與昌平路口)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTg6MzDjgILkuLvovqbllq7kvY3vvJroh7rkuK3luILmlL/lupzmtojpmLLlsYAo5Y+w5Lit5biCKeOAguWcsOWdgO+8muaWsOWFieS4iei2iuaNkOihgOi7iijmg6DlronlgZzou4rloLQt5oOg5L6G6Lev5LqM5q615biC5pS/5YyX5LiD6Lev5Y+jKQ==",
+      "time": "10:30~18:30",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "rawContent": "作業時間：10:30~18:30。主辦單位：臺中市政府消防局(台中市)。地址：新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guaUv+W6nOa2iOmYsuWxgCjlj7DkuK3luIIp44CC5Zyw5Z2A77ya5Lit5riv5o2Q6KGA5a6kKOiHuuS4reW4guilv+Wxr+WNgOiHuueBo+Wkp+mBk+Wbm+autTExNzbomZ8p",
+      "time": "8:00~18:00",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：臺中市政府消防局(台中市)。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guaUv+W6nOa2iOmYsuWxgCjlj7DkuK3luIIp44CC5Zyw5Z2A77ya5LiJ5rCR5o2Q6KGA5a6kKOiHuuS4reW4guilv+WNgOS4ieawkei3r+S4gOautTE3NOiZnzfmqJMp",
+      "time": "8:00~17:00",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "三民捐血室(臺中市西區三民路一段174號7樓)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：臺中市政府消防局(台中市)。地址：三民捐血室(臺中市西區三民路一段174號7樓)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzozMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guaUv+W6nOa2iOmYsuWxgCjopb/lj7DkuK3ljYAp44CC5Zyw5Z2A77ya5rW357ea5o2Q6KGA5a6kKOaip+ajsuWNgOS4reiPr+i3r+S4gOautTEwMDHkuYsx6JmfKQ==",
+      "time": "9:30~17:30",
+      "organization": "臺中市政府消防局(西台中區)",
+      "location": "海線捐血室(梧棲區中華路一段1001之1號)",
+      "rawContent": "作業時間：9:30~17:30。主辦單位：臺中市政府消防局(西台中區)。地址：海線捐血室(梧棲區中華路一段1001之1號)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaJi+W/g+mbnuibi+ezleOAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "手心雞蛋糕",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：手心雞蛋糕。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8muWPsOS4reW4guWkp+mHjOeNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "台中市大里獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：台中市大里獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8mua9reWtkOeZvembsueNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "潭子白雲獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：潭子白雲獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrnjoTlvrflkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCkp",
+      "time": "10:00~18:00",
+      "organization": "玄德同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場))",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：玄德同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場))",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWAq+eQhuWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "倫理國際同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：倫理國際同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-25"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muiZjuWwvuaJtui8quekvuOAguWcsOWdgO+8muiZjuWwvumghuWkqeWurijpm7LmnpfnuKPomY7lsL7pjq7lvqnoiIjot68xMDjomZ8p",
+      "time": "9:00~16:00",
+      "organization": "虎尾扶輪社",
+      "location": "虎尾順天宮(雲林縣虎尾鎮復興路108號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：虎尾扶輪社。地址：虎尾順天宮(雲林縣虎尾鎮復興路108號)",
       "activityDate": "2024-12-25"
     },
     {
@@ -7515,19 +9395,91 @@
   ],
   "2024-12-26": [
     {
-      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MzDjgILkuLvovqbllq7kvY3vvJrlubPoiIjlkIzmv5/jgILlnLDlnYDvvJrkuK3lo6LlnJbmm7jppKgo5Lit5aOi5Y2A5Lit576O6LevNzbomZ8p",
-      "time": "10:00~16:30",
-      "organization": "平興同濟",
-      "location": "中壢圖書館(中壢區中美路76號)",
-      "rawContent": "作業時間：10:00~16:30。主辦單位：平興同濟。地址：中壢圖書館(中壢區中美路76號)",
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlnJPlsbHlpKfpo6/lupfjgILlnLDlnYDvvJrlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6/lm5vmrrUx6Jmf",
+      "time": "10:00~17:00",
+      "organization": "圓山大飯店",
+      "location": "台北市中山區中山北路四段1號",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：圓山大飯店。地址：台北市中山區中山北路四段1號",
       "activityDate": "2024-12-26"
     },
     {
-      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muerueWNl+iBr+WQiOeNheOAguWcsOWdgO+8muerueWNl+aNkOihgOWupCjnq7nljZfpjq7lhYnlvqnot68zNzLomZ8p",
-      "time": "9:00~17:00",
-      "organization": "竹南聯合獅",
-      "location": "竹南捐血室(竹南鎮光復路372號)",
-      "rawContent": "作業時間：9:00~17:00。主辦單位：竹南聯合獅。地址：竹南捐血室(竹南鎮光復路372號)",
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muazleWLmemDqOihjOaUv+Wft+ihjOe9suWjq+ael+WIhue9suOAguWcsOWdgO+8muWPsOWMl+W4guWFp+a5luWNgOW6t+Wvp+i3rzPmrrU1MeiZn+S4reW3tA==",
+      "time": "9:30~16:30",
+      "organization": "法務部行政執行署士林分署",
+      "location": "台北市內湖區康寧路3段51號中巴",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：法務部行政執行署士林分署。地址：台北市內湖區康寧路3段51號中巴",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWuj+WMr+eRnuWFieW7o+WgtOOAguWcsOWdgO+8muWPsOWMl+W4guWFp+a5luWNgOeRnuWFiei3rzMzM+iZnw==",
+      "time": "9:30~16:30",
+      "organization": "宏匯瑞光廣場",
+      "location": "台北市內湖區瑞光路333號",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：宏匯瑞光廣場。地址：台北市內湖區瑞光路333號",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTQ6MzB+MjA6MzDjgILkuLvovqbllq7kvY3vvJrkuK3lnIvnp5HlpKco5aScKeOAguWcsOWdgO+8muWPsOWMl+W4guaWh+WxseWNgOiIiOmahui3r+S4ieautTU26Jmf5paw5aSn5qiT6ZaA5Y+j",
+      "time": "14:30~20:30",
+      "organization": "中國科大(夜)",
+      "location": "台北市文山區興隆路三段56號新大樓門口",
+      "rawContent": "作業時間：14:30~20:30。主辦單位：中國科大(夜)。地址：台北市文山區興隆路三段56號新大樓門口",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muawuOaFtui9iemBi+WFieamri/mlofljJblt6XloLTliqDnm5/lupfjgILlnLDlnYDvvJrmsLjmhbbkuI3li5XnlKIo5a6c6Jit57ij5LqU57WQ6YSJ5YWJ5qau5YyX6LevNzfomZ8p",
+      "time": "9:00~16:00",
+      "organization": "永慶轉運光榮/文化工場加盟店",
+      "location": "永慶不動產(宜蘭縣五結鄉光榮北路77號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：永慶轉運光榮/文化工場加盟店。地址：永慶不動產(宜蘭縣五結鄉光榮北路77號)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mumLkuacqOmtmumFpeOAguWcsOWdgO+8muWunOiYree4o+WunOiYreW4guaTuuWOmOi3rzE2LTfomZ8x5qiTKOmFjeWQiOWunOiYreermSk=",
+      "time": "8:00~17:00",
+      "organization": "鋒木魚酥",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：鋒木魚酥。地址：宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muadseiPr+Wkp+WtuOOAguWcsOWdgO+8muiKseiTruadseiPr+Wkp+WtuOa5lueVlOmkkOW7s+WJjQ==",
+      "time": "9:30~16:30",
+      "organization": "東華大學",
+      "location": "花蓮東華大學湖畔餐廳前",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：東華大學。地址：花蓮東華大學湖畔餐廳前",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiKseiTruiTruiKseeNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "花蓮蓮花獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：花蓮蓮花獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTE6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJroh7TnkIbnp5HmioDlpKflrbjjgILlnLDlnYDvvJrmlrDljJfluILmnb/mqYvljYDmlofljJbot6/kuIDmrrUzMTPomZ/lnJbmm7jppKjliY0=",
+      "time": "11:00~18:00",
+      "organization": "致理科技大學",
+      "location": "新北市板橋區文化路一段313號圖書館前",
+      "rawContent": "作業時間：11:00~18:00。主辦單位：致理科技大學。地址：新北市板橋區文化路一段313號圖書館前",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muael+WPo+Wumum7nuOAguWcsOWdgO+8muaWsOWMl+W4guael+WPo+WNgOW3peWFrei3ryvnsonlr67ot6/lj6Mo5p6X5Y+j5a6a6bueKQ==",
+      "time": "9:30~16:30",
+      "organization": "林口定點",
+      "location": "新北市林口區工六路+粉寮路口(林口定點)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：林口定點。地址：新北市林口區工六路+粉寮路口(林口定點)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrlj7DljJfluILmhJvppqjnjYXlrZDmnIPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "台北市愛馨獅子會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：台北市愛馨獅子會。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
       "activityDate": "2024-12-26"
     },
     {
@@ -7576,6 +9528,118 @@
       "organization": "慈雲獅",
       "location": "蘆竹區公所(台灣桃園市蘆竹區南崁路150號)",
       "rawContent": "作業時間：9:00~16:00。主辦單位：慈雲獅。地址：蘆竹區公所(台灣桃園市蘆竹區南崁路150號)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muWNl+a4r+atpuiBluWuruOAguWcsOWdgO+8muWflOm5vemEieWNl+a4r+adkeWflOiPnOi3r+S4gOW3tzXkuYsxMOiZnw==",
+      "time": "9:30~16:00",
+      "organization": "南港武聖宮",
+      "location": "埔鹽鄉南港村埔菜路一巷5之10號",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：南港武聖宮。地址：埔鹽鄉南港村埔菜路一巷5之10號",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiQrOazsOenkeaKgOiCoeS7veaciemZkOWFrOWPuCjljZfmipXljYAp44CC5Zyw5Z2A77ya5Y2X5oqV5o2Q6KGA5a6kKOS4reiIiOi3rzYxNuiZnzHmqJMp",
+      "time": "9:00~17:00",
+      "organization": "萬泰科技股份有限公司(南投區)",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：萬泰科技股份有限公司(南投區)。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTg6MzDjgILkuLvovqbllq7kvY3vvJroh7rkuK3luILmlL/lupzmtojpmLLlsYAo5Y+w5Lit5biCKeOAguWcsOWdgO+8muaWsOWFieS4iei2iuaNkOihgOi7iijmg6DlronlgZzou4rloLQt5oOg5L6G6Lev5LqM5q615biC5pS/5YyX5LiD6Lev5Y+jKQ==",
+      "time": "10:30~18:30",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "rawContent": "作業時間：10:30~18:30。主辦單位：臺中市政府消防局(台中市)。地址：新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guaUv+W6nOa2iOmYsuWxgCjlj7DkuK3luIIp44CC5Zyw5Z2A77ya5Lit5riv5o2Q6KGA5a6kKOiHuuS4reW4guilv+Wxr+WNgOiHuueBo+Wkp+mBk+Wbm+autTExNzbomZ8p",
+      "time": "8:00~18:00",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：臺中市政府消防局(台中市)。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guaUv+W6nOa2iOmYsuWxgCjlj7DkuK3luIIp44CC5Zyw5Z2A77ya5LiJ5rCR5o2Q6KGA5a6kKOiHuuS4reW4guilv+WNgOS4ieawkei3r+S4gOautTE3NOiZnzfmqJMp",
+      "time": "8:00~17:00",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "三民捐血室(臺中市西區三民路一段174號7樓)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：臺中市政府消防局(台中市)。地址：三民捐血室(臺中市西區三民路一段174號7樓)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzozMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guaUv+W6nOa2iOmYsuWxgCjopb/lj7DkuK3ljYAp44CC5Zyw5Z2A77ya5rW357ea5o2Q6KGA5a6kKOaip+ajsuWNgOS4reiPr+i3r+S4gOautTEwMDHkuYsx6JmfKQ==",
+      "time": "9:30~17:30",
+      "organization": "臺中市政府消防局(西台中區)",
+      "location": "海線捐血室(梧棲區中華路一段1001之1號)",
+      "rawContent": "作業時間：9:30~17:30。主辦單位：臺中市政府消防局(西台中區)。地址：海線捐血室(梧棲區中華路一段1001之1號)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaJi+W/g+mbnuibi+ezleOAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "手心雞蛋糕",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：手心雞蛋糕。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWPsOeBo+WLgei2iuiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWFrOWPuOWJjSjlj7DkuK3luILljZflsa/ljYDnsr7np5HkuK3ot68yMuiZnyk=",
+      "time": "9:00~16:00",
+      "organization": "台灣勁越股份有限公司",
+      "location": "公司前(台中市南屯區精科中路22號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：台灣勁越股份有限公司。地址：公司前(台中市南屯區精科中路22號)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8muWPsOS4reW4guWkp+mHjOeNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "台中市大里獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：台中市大里獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8mua9reWtkOeZvembsueNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "潭子白雲獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：潭子白雲獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrogrLoi7HlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "育英國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：育英國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNTozMOOAguS4u+i+puWWruS9je+8muiNieWxr+Wci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muiNieWxr+aDoOW+t+WurijojYnlsa/pjq7lpKrlubPot68y5q61Mjg36JmfKQ==",
+      "time": "9:00~15:30",
+      "organization": "草屯國際同濟會",
+      "location": "草屯惠德宮(草屯鎮太平路2段287號)",
+      "rawContent": "作業時間：9:00~15:30。主辦單位：草屯國際同濟會。地址：草屯惠德宮(草屯鎮太平路2段287號)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muW9qeiZueWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "彩虹國際同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：彩虹國際同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-26"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muiZjuWwvuS4reWkruaJtui8quekvuOAguWcsOWdgO+8muiZjuWwvumghuWkqeWurijpm7LmnpfnuKPomY4g5bC+6Y6u5b6p6IiI6LevMTA46JmfKQ==",
+      "time": "9:00~16:00",
+      "organization": "虎尾中央扶輪社",
+      "location": "虎尾順天宮(雲林縣虎 尾鎮復興路108號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：虎尾中央扶輪社。地址：虎尾順天宮(雲林縣虎 尾鎮復興路108號)",
       "activityDate": "2024-12-26"
     },
     {
@@ -7701,6 +9765,134 @@
   ],
   "2024-12-27": [
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MzB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlj7DljJfmjZDooYDkuK3lv4PjgILlnLDlnYDvvJrlj7DljJfluILlo6vmnpfljYDlvrfooYzopb/ot680N+iZnyjlpKnmr43lrrbmqILnpo8p",
+      "time": "13:30~17:00",
+      "organization": "台北捐血中心",
+      "location": "台北市士林區德行西路47號(天母家樂福)",
+      "rawContent": "作業時間：13:30~17:00。主辦單位：台北捐血中心。地址：台北市士林區德行西路47號(天母家樂福)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlpKflkIzljYDlpKfmnInph4zjgILlnLDlnYDvvJrlj7DljJfluILlpKflkIzljYDmrbjnto/ooZcyNDPomZ8o5aSn56i75Z+V5YWs5ZySKQ==",
+      "time": "10:00~17:00",
+      "organization": "大同區大有里",
+      "location": "台北市大同區歸綏街243號(大稻埕公園)",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：大同區大有里。地址：台北市大同區歸綏街243號(大稻埕公園)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTQ6MDB+MjA6MDDjgILkuLvovqbllq7kvY3vvJrosqHlnJjms5XkurrmhYjmv5/lgrPmkq3kurrmloflv5fmpa3ln7rph5HmnIPjgILlnLDlnYDvvJrlj7DljJfluILljJfmipXljYDnq4vlvrfot6846Jmf",
+      "time": "14:00~20:00",
+      "organization": "財團法人慈濟傳播人文志業基金會",
+      "location": "台北市北投區立德路8號",
+      "rawContent": "作業時間：14:00~20:00。主辦單位：財團法人慈濟傳播人文志業基金會。地址：台北市北投區立德路8號",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xMjowMOOAguS4u+i+puWWruS9je+8muWPsOeBo+WNiuWwjumrlCjogqEp5pyJ6ZmQ5YWs5Y+444CC5Zyw5Z2A77ya5a6c6Jit5biC5qKF5rSy5LqM6LevOTbomZ8=",
+      "time": "9:00~12:00",
+      "organization": "台灣半導體(股)有限公司",
+      "location": "宜蘭市梅洲二路96號",
+      "rawContent": "作業時間：9:00~12:00。主辦單位：台灣半導體(股)有限公司。地址：宜蘭市梅洲二路96號",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mumLkuacqOmtmumFpeOAguWcsOWdgO+8muWunOiYree4o+WunOiYreW4guaTuuWOmOi3rzE2LTfomZ8x5qiTKOmFjeWQiOWunOiYreermSk=",
+      "time": "8:00~17:00",
+      "organization": "鋒木魚酥",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：鋒木魚酥。地址：宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muadseiPr+Wkp+WtuOOAguWcsOWdgO+8muiKseiTruadseiPr+Wkp+WtuOa5lueVlOmkkOW7s+WJjQ==",
+      "time": "9:30~16:30",
+      "organization": "東華大學",
+      "location": "花蓮東華大學湖畔餐廳前",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：東華大學。地址：花蓮東華大學湖畔餐廳前",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiKseiTruiTruiKseeNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "花蓮蓮花獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：花蓮蓮花獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzowMOOAguS4u+i+puWWruS9je+8muaWsOWMl+W4guWcn+WfjuWNgOW7oOWVhuWNlOmAsuacg+OAguWcsOWdgO+8muaWsOWMl+W4guWcn+WfjuWNgOS4reWxsei3r+iIh+mHkeWuieihl+WPo+Wci+azsOmHkeaOp+WBnOi7iuWgtCjmnI3li5nkuK3lv4PlsI3pnaIp",
+      "time": "9:30~17:00",
+      "organization": "新北市土城區廠商協進會",
+      "location": "新北市土城區中山路與金安街口國泰金控停車場(服務中心對面)",
+      "rawContent": "作業時間：9:30~17:00。主辦單位：新北市土城區廠商協進會。地址：新北市土城區中山路與金安街口國泰金控停車場(服務中心對面)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MzDjgILkuLvovqbllq7kvY3vvJrmlZHlnIvlnJjmlrDljJfluILlnJjli5nmjIflsI7lp5Tlk6HmnIPjgILlnLDlnYDvvJrmlrDljJfluILlnarmnpfljYDlnarmnpfooZcxMDHomZ/lnarmnpfljYDlhazmiYDml4HkuK3lt7Q=",
+      "time": "10:00~16:30",
+      "organization": "救國團新北市團務指導委員會",
+      "location": "新北市坪林區坪林街101號坪林區公所旁中巴",
+      "rawContent": "作業時間：10:00~16:30。主辦單位：救國團新北市團務指導委員會。地址：新北市坪林區坪林街101號坪林區公所旁中巴",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+S9m+WFieacg+S4reiPr+e4veacg+WflOWimOWIhuacg+OAguWcsOWdgO+8muaWsOWMl+W4guadv+api+WNgOmbmeWNgei3r+S4ieautTI36JmfMuaokyjphY3lkIjmnb/mqYvnq5kp",
+      "time": "8:00~17:00",
+      "organization": "國際佛光會中華總會埔墘分會",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：國際佛光會中華總會埔墘分會。地址：新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjozMOOAguS4u+i+puWWruS9je+8muihjOW+t+aFiOWWhOacg+OAguWcsOWdgO+8muaWsOWMl+W4guazsOWxseWNgOaYjuW/l+i3r+S6jOauteaWh+eoi+W7o+WgtOWJjSjms7DlsbHlrprpu54p",
+      "time": "9:00~16:30",
+      "organization": "行德慈善會",
+      "location": "新北市泰山區明志路二段文程廣場前(泰山定點)",
+      "rawContent": "作業時間：9:00~16:30。主辦單位：行德慈善會。地址：新北市泰山區明志路二段文程廣場前(泰山定點)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaWsOWMl+eNheWtkOacg+OAguWcsOWdgO+8muaWsOWMl+W4guaWsOiOiuWNgOS6lOW3pei3rzY26JmfKOaZtuWGoOWkp+aok+W7o+WgtCk=",
+      "time": "9:00~17:00",
+      "organization": "新北獅子會",
+      "location": "新北市新莊區五工路66號(晶冠大樓廣場)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：新北獅子會。地址：新北市新莊區五工路66號(晶冠大樓廣場)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWPsOeBo+W9reWnk+Wul+imque4veacg+OAguWcsOWdgO+8muiHuuWMl+W4guWkp+WuieWNgOW7uuWci+WNl+i3r+S6jOauteWcsOS4i+WBnOi7iuWgtOWFpeWPo+aXgeepuuWcsCjphY3lkIjlpKflronomZ8p",
+      "time": "9:00~17:00",
+      "organization": "台灣彭姓宗親總會",
+      "location": "臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：台灣彭姓宗親總會。地址：臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzozMOOAguS4u+i+puWWruS9je+8muWci+azsOS6uuWjveWxleaxkOatouOAguWcsOWdgO+8muiHuuWMl+W4guS4reato+WNgOWNl+a1t+i3rzHomZ8z5qiTKOmFjeWQiOWNl+a1t+WupCk=",
+      "time": "8:00~17:30",
+      "organization": "國泰人壽展汐止",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "rawContent": "作業時間：8:00~17:30。主辦單位：國泰人壽展汐止。地址：臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlnIvpmpvkvZvlhYnmnIPkuK3oj6/nuL3mnIPlj7DljJfkuK3lsbHnrKzkuozliIbmnIPjgILlnLDlnYDvvJroh7rljJfluILkuK3mraPljYDopYTpmb3ot6/oiIflhazlnJLot6/kuqTlj4nlj6Mo6YWN5ZCI5YWs5ZyS6JmfKQ==",
+      "time": "10:00~18:00",
+      "organization": "國際佛光會中華總會台北中山第二分會",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：國際佛光會中華總會台北中山第二分會。地址：臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJroh7rljJfluILpnZLmuqrnuL3mnIPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "臺北市青溪總會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：臺北市青溪總會。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-27"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTY6MzDjgILkuLvovqbllq7kvY3vvJrmoYPlnJLluILmoYPmupDljJfnp5HnjYXlrZDmnIPjgILlnLDlnYDvvJrmoYPmjbdBMjLogIHooZfmuqrnq5ko6LuK5YGc5Lit5aSu6KW/6Lev5o6l6YCB6Ieo5YGc5Y2AKQ==",
       "time": "10:00~16:30",
       "organization": "桃園市桃源北科獅子會",
@@ -7786,6 +9978,134 @@
       "organization": "桃園志工發展服務協會",
       "location": "楊梅愛買(楊梅區中山北路二段23巷6號)",
       "rawContent": "作業時間：9:30~16:30。主辦單位：桃園志工發展服務協會。地址：楊梅愛買(楊梅區中山北路二段23巷6號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muWSjOe+jum+jeiPr+aFiOaDoOWgguOAguWcsOWdgO+8muWSjOe+jumOrum+jeiPr+aFiOaDoOWggijlvbDljJbnuKPlkoznvo7pjq7opb/nvo7ot68xMTXomZ8p",
+      "time": "9:30~16:00",
+      "organization": "和美龍華慈惠堂",
+      "location": "和美鎮龍華慈惠堂(彰化縣和美鎮西美路115號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：和美龍華慈惠堂。地址：和美鎮龍華慈惠堂(彰化縣和美鎮西美路115號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaDn+S7leWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "惟仕國際同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：惟仕國際同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTg6MzDjgILkuLvovqbllq7kvY3vvJroh7rkuK3luILmlL/lupzmtojpmLLlsYAo5Y+w5Lit5biCKeOAguWcsOWdgO+8muaWsOWFieS4iei2iuaNkOihgOi7iijmg6DlronlgZzou4rloLQt5oOg5L6G6Lev5LqM5q615biC5pS/5YyX5LiD6Lev5Y+jKQ==",
+      "time": "10:30~18:30",
+      "organization": "臺中市政府消防局(台中市)",
+      "location": "新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "rawContent": "作業時間：10:30~18:30。主辦單位：臺中市政府消防局(台中市)。地址：新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzozMOOAguS4u+i+puWWruS9je+8muiHuuS4reW4guaUv+W6nOa2iOmYsuWxgCjopb/lj7DkuK3ljYAp44CC5Zyw5Z2A77ya5rW357ea5o2Q6KGA5a6kKOaip+ajsuWNgOS4reiPr+i3r+S4gOautTEwMDHkuYsx6JmfKQ==",
+      "time": "9:30~17:30",
+      "organization": "臺中市政府消防局(西台中區)",
+      "location": "海線捐血室(梧棲區中華路一段1001之1號)",
+      "rawContent": "作業時間：9:30~17:30。主辦單位：臺中市政府消防局(西台中區)。地址：海線捐血室(梧棲區中華路一段1001之1號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaJi+W/g+mbnuibi+ezleOAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "手心雞蛋糕",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：手心雞蛋糕。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWkp+WSjOWxi+Wci+mam+e+jumjn+mkqOOAguWcsOWdgO+8muWkp+WSjOWxi+W0h+W+t+W6lyjljJflsa/ljYDltIflvrfljYHkuozot680MzHomZ8p",
+      "time": "9:00~16:00",
+      "organization": "大和屋國際美食館",
+      "location": "大和屋崇德店(北屯區崇德十二路431號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：大和屋國際美食館。地址：大和屋崇德店(北屯區崇德十二路431號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8muWPsOS4reW4guWkp+mHjOeNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "台中市大里獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：台中市大里獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muixkOWOn+aWh+atpueNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "豐原文武獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：豐原文武獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTozMOOAguS4u+i+puWWruS9je+8mum5v+iwt+eNheWtkOacg+OAguWcsOWdgO+8mum5v+iwt+mEiei+suacg+iMtualreaWh+WMlumkqCjpub/osLfphInkuK3mraPot6/kuIDmrrUyMzHomZ8p",
+      "time": "9:30~15:30",
+      "organization": "鹿谷獅子會",
+      "location": "鹿谷鄉農會茶業文化館(鹿谷鄉中正路一段231號)",
+      "rawContent": "作業時間：9:30~15:30。主辦單位：鹿谷獅子會。地址：鹿谷鄉農會茶業文化館(鹿谷鄉中正路一段231號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muaFiOaBqeeNheWtkOacg+OAguWcsOWdgO+8mueUsOS4reeBq+i7iuermSjlvbDljJbnuKPnlLDkuK3pjq7kuK3lt57ot68x5q61MeiZnyk=",
+      "time": "9:30~16:00",
+      "organization": "慈恩獅子會",
+      "location": "田中火車站(彰化縣田中鎮中州路1段1號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：慈恩獅子會。地址：田中火車站(彰化縣田中鎮中州路1段1號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muW9sOWMluS4g+aYn+eNheWtkOacg+OAguWcsOWdgO+8muWMl+aWl+WIhuWxgOaXgSjlvbDljJbnuKPljJfmlpfpjq7lhYnlvqnot68yMTXomZ8p",
+      "time": "9:30~16:00",
+      "organization": "彰化七星獅子會",
+      "location": "北斗分局旁(彰化縣北斗鎮光復路215號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：彰化七星獅子會。地址：北斗分局旁(彰化縣北斗鎮光復路215號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTowMOOAguS4u+i+puWWruS9je+8mue0q+WNl+WuruOAguWcsOWdgO+8muerueWxsee0q+WNl+Wurijnq7nlsbHpjq7lpKflhazooZc0MOiZnynmsLTmv4Llu6PloLQoN+aYn+e0muW7geaJgOaWnOS4i+aWuSk=",
+      "time": "9:30~15:00",
+      "organization": "紫南宮",
+      "location": "竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "rawContent": "作業時間：9:30~15:00。主辦單位：紫南宮。地址：竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8mua6quW3numEieWQjOW/g+aFiOWWhOacg+OAguWcsOWdgO+8mua6quW3numEiei+suacgyjlvbDljJbnuKPmuqrlt57phInkuK3lpK7ot68z5q61MzI06JmfKQ==",
+      "time": "9:30~16:00",
+      "organization": "溪州鄉同心慈善會",
+      "location": "溪州鄉農會(彰化縣溪州鄉中央路3段324號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：溪州鄉同心慈善會。地址：溪州鄉農會(彰化縣溪州鄉中央路3段324號)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlvbDljJbnuKPpu4PovYnntIDlv7XmhYjlloTmnIPjgILlnLDlnYDvvJrlk6HmnpfmjZDooYDlrqQo5ZOh5p6X54Gr6LuK56uZ5LiA5qiT5aSn5buz5YWnKQ==",
+      "time": "10:00~18:00",
+      "organization": "彰化縣黃轉紀念慈善會",
+      "location": "員林捐血室(員林火車站一樓大廳內)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：彰化縣黃轉紀念慈善會。地址：員林捐血室(員林火車站一樓大廳內)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrpu47mmI7lnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "黎明國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：黎明國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "activityDate": "2024-12-27"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWvjOWBieeNheWtkOacgyjljZfmipUp44CC5Zyw5Z2A77ya5Y2X5oqV5o2Q6KGA5a6kKOS4reiIiOi3rzYxNuiZnzHmqJMp",
+      "time": "9:00~17:00",
+      "organization": "富偉獅子會(南投)",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：富偉獅子會(南投)。地址：南投捐血室(中興路616號1樓)",
       "activityDate": "2024-12-27"
     },
     {
@@ -7927,6 +10247,166 @@
   ],
   "2024-12-28": [
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjozMOOAguS4u+i+puWWruS9je+8muWjq+ael+WNgOemj+ael+ekvuWNgOOAguWcsOWdgO+8muWPsOWMl+W4guWjq+ael+WNgOS4reWxseWMl+i3rzXmrrU2MjLomZ/liY0o6Kaq6Kaq54mZ6Yar5YmNKQ==",
+      "time": "9:00~16:30",
+      "organization": "士林區福林社區",
+      "location": "台北市士林區中山北路5段622號前(親親牙醫前)",
+      "rawContent": "作業時間：9:00~16:30。主辦單位：士林區福林社區。地址：台北市士林區中山北路5段622號前(親親牙醫前)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muW+kOeri+S/oeitsOWToeacjeWLmeiZleOAguWcsOWdgO+8muWPsOWMl+W4guWjq+ael+WNgOiPr+m9oeihlzHomZ/lhazlnJI=",
+      "time": "9:00~16:00",
+      "organization": "徐立信議員服務處",
+      "location": "台北市士林區華齡街1號公園",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：徐立信議員服務處。地址：台北市士林區華齡街1號公園",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTE6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlronoh7Tli6Tos4foga/lkIjmnIPoqIjluKvkuovli5nmiYDjgILlnLDlnYDvvJrlj7DljJfluILkv6HnvqnljYDmnb7lo73ot68xNuW3t+S/oee+qeWogeengOaXgQ==",
+      "time": "11:00~18:00",
+      "organization": "安致勤資聯合會計師事務所",
+      "location": "台北市信義區松壽路16巷信義威秀旁",
+      "rawContent": "作業時間：11:00~18:00。主辦單位：安致勤資聯合會計師事務所。地址：台北市信義區松壽路16巷信義威秀旁",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MzDjgILkuLvovqbllq7kvY3vvJrkuK3oj6/msJHlnIvlqIHpnIfmhJvlv4PnmbzlsZXljZTmnIPjgILlnLDlnYDvvJrlj7DljJfluILljZfkuqzopb/ot682MuiZn+aNt+mBi+S4reWxseermTbomZ/lh7rlj6M=",
+      "time": "10:00~17:30",
+      "organization": "中華民國威震愛心發展協會",
+      "location": "台北市南京西路62號捷運中山站6號出口",
+      "rawContent": "作業時間：10:00~17:30。主辦單位：中華民國威震愛心發展協會。地址：台北市南京西路62號捷運中山站6號出口",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjozMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEEy5Y2A44CC5Zyw5Z2A77ya5Y+w5YyX5biC5ZyT5bGx6Iqx5Y2a5YWs5ZyS",
+      "time": "9:00~16:30",
+      "organization": "國際獅子會300A2區",
+      "location": "台北市圓山花博公園",
+      "rawContent": "作業時間：9:00~16:30。主辦單位：國際獅子會300A2區。地址：台北市圓山花博公園",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mumLkuacqOmtmumFpeOAguWcsOWdgO+8muWunOiYree4o+WunOiYreW4guaTuuWOmOi3rzE2LTfomZ8x5qiTKOmFjeWQiOWunOiYreermSk=",
+      "time": "8:00~17:00",
+      "organization": "鋒木魚酥",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：鋒木魚酥。地址：宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWunOiYree4o+aFiOaaieeNheWtkOacg+OAguWcsOWdgO+8muWunOiYree4o+e+headsemOruS4reiIiOi3rzPomZ/lrpzomK3nuKPnvoXmnbHpjq7lhazmiYDliY0o6YWN5ZCI6JCs6YCj6JmfKQ==",
+      "time": "9:00~16:00",
+      "organization": "宜蘭縣慈暉獅子會",
+      "location": "宜蘭縣羅東鎮中興路3號宜蘭縣羅東鎮公所前(配合萬連號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：宜蘭縣慈暉獅子會。地址：宜蘭縣羅東鎮中興路3號宜蘭縣羅東鎮公所前(配合萬連號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWunOiYree4o+aFiOaaieeNheWtkOacg+OAguWcsOWdgO+8muWunOiYree4o+e+headsemOruS4reiIiOi3rzPomZ/lrpzomK3nuKPnvoXmnbHpjq7lhazmiYDliY0o6JCs6YCj6Jmf5peBKQ==",
+      "time": "9:00~16:00",
+      "organization": "宜蘭縣慈暉獅子會",
+      "location": "宜蘭縣羅東鎮中興路3號宜蘭縣羅東鎮公所前(萬連號旁)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：宜蘭縣慈暉獅子會。地址：宜蘭縣羅東鎮中興路3號宜蘭縣羅東鎮公所前(萬連號旁)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muiKseiTrue+juS+lueNheWtkOacg+OAguWcsOWdgO+8muiKseiTrumBoOadseeZvuiyqOWSjOW5s+W7o+WgtOWJjSjoirHok67luILlkozlubPot681ODHomZ8p",
+      "time": "9:30~16:30",
+      "organization": "花蓮美侖獅子會",
+      "location": "花蓮遠東百貨和平廣場前(花蓮市和平路581號)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：花蓮美侖獅子會。地址：花蓮遠東百貨和平廣場前(花蓮市和平路581號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiKseiTruiTruiKseeNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "花蓮蓮花獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：花蓮蓮花獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWfuumahuW4gumYsueBveWuo+WwjuWNlOacg+OAguWcsOWdgO+8muWfuumahuW4guS7geS6jOi3ryvmhJvkuozot6/lj6Mo5LqM5L+hKQ==",
+      "time": "9:30~16:30",
+      "organization": "基隆市防災宣導協會",
+      "location": "基隆市仁二路+愛二路口(二信)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：基隆市防災宣導協會。地址：基隆市仁二路+愛二路口(二信)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWPsOWMl+e4o+eNheWtkOacg+OAguWcsOWdgO+8muaWsOWMl+W4guS4iemHjeWNgOS4ieWSjOi3r+Wbm+autTM5Mi0x6JmfKOm6peeVtuWLnuWJjSk=",
+      "time": "9:30~16:30",
+      "organization": "台北縣獅子會",
+      "location": "新北市三重區三和路四段392-1號(麥當勞前)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：台北縣獅子會。地址：新北市三重區三和路四段392-1號(麥當勞前)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muaWsOWMl+W4guawuOWSjOeNheWtkOacg+OAguWcsOWdgO+8muaWsOWMl+W4guawuOWSjOWNgOawuOWSjOWci+WFiei3ryvnq7nmnpfot6/kuqTlj4nlj6PlnIvniLbntIDlv7XppKjlgbTploAo5rC45ZKM5a6a6bueKQ==",
+      "time": "9:30~16:30",
+      "organization": "新北市永和獅子會",
+      "location": "新北市永和區永和國光路+竹林路交叉口國父紀念館側門(永和定點)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：新北市永和獅子會。地址：新北市永和區永和國光路+竹林路交叉口國父紀念館側門(永和定點)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muadv+api+iBr+WQiOeNheWtkOacg+OAguWcsOWdgO+8muaWsOWMl+W4guadv+api+WNgOmbmeWNgei3r+S4ieautTI36JmfMuaokyjphY3lkIjmnb/mqYvnq5kp",
+      "time": "8:00~17:00",
+      "organization": "板橋聯合獅子會",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：板橋聯合獅子會。地址：新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrnpo/nh5/njYXlrZDmnIPjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDkuK3oj6/ot68r5b6p6IiI6Lev5Y+jKOmFjeWQiOaWsOiOiuiZnyk=",
+      "time": "10:00~18:00",
+      "organization": "福營獅子會",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：福營獅子會。地址：新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTE6MDB+MTk6MDDjgILkuLvovqbllq7kvY3vvJrlnIvpmpvkvZvlhYnmnIPkuK3oj6/nuL3mnIPku4HmhJvliIbmnIPjgILlnLDlnYDvvJroh7rljJfluILlpKflronljYBCMeadseWNgOWcsOS4i+ihlznomZ/lh7rlj6Pml4Hlia/otbDpgZMo56ys5Zub5buj5aC05peBKSjphY3lkIjlv6DlrZ3lrqQp",
+      "time": "11:00~19:00",
+      "organization": "國際佛光會中華總會仁愛分會",
+      "location": "臺北市大安區B1東區地下街9號出口旁副走道(第四廣場旁)(配合忠孝室)",
+      "rawContent": "作業時間：11:00~19:00。主辦單位：國際佛光會中華總會仁愛分會。地址：臺北市大安區B1東區地下街9號出口旁副走道(第四廣場旁)(配合忠孝室)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muawkeacieeNheWtkOacg+OAguWcsOWdgO+8muiHuuWMl+W4guWkp+WuieWNgOW7uuWci+WNl+i3r+S6jOauteWcsOS4i+WBnOi7iuWgtOWFpeWPo+aXgeepuuWcsCjphY3lkIjlpKflronomZ8p",
+      "time": "9:00~17:00",
+      "organization": "民有獅子會",
+      "location": "臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：民有獅子會。地址：臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzozMOOAguS4u+i+puWWruS9je+8muWPsOWMl+W4guWci+iPr+eNheWtkOacg+OAguWcsOWdgO+8muiHuuWMl+W4guS4reato+WNgOWNl+a1t+i3rzHomZ8z5qiTKOmFjeWQiOWNl+a1t+WupCk=",
+      "time": "8:00~17:30",
+      "organization": "台北市國華獅子會",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "rawContent": "作業時間：8:00~17:30。主辦單位：台北市國華獅子會。地址：臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlj7DljJfluILkuK3mraPnjYXlrZDmnIPjgILlnLDlnYDvvJroh7rljJfluILkuK3mraPljYDopYTpmb3ot6/oiIflhazlnJLot6/kuqTlj4nlj6Mo6YWN5ZCI5YWs5ZyS6JmfKQ==",
+      "time": "10:00~18:00",
+      "organization": "台北市中正獅子會",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：台北市中正獅子會。地址：臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrlj7DljJfluILkv6HnvqnnjYXlrZDmnIPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "台北市信義獅子會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：台北市信義獅子會。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-28"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muahg+Wckue4o+W+rueskeWNlOacg+OAguWcsOWdgO+8muWFq+W+t+W/oOWLh+WFrOWckuWJjSjlhavlvrfljYDmnbHli4fkuIDot68pKOePvuWgtOWCmeaciTXlj7Dou4op",
       "time": "9:00~17:00",
       "organization": "桃園縣微笑協會",
@@ -7988,6 +10468,118 @@
       "organization": "關西惠群獅子會",
       "location": "關西鎮公所(關西鎮正義路51號)",
       "rawContent": "作業時間：9:00~16:00。主辦單位：關西惠群獅子會。地址：關西鎮公所(關西鎮正義路51號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8mue3o+WSjOWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muS4rea4r+aNkOihgOWupCjoh7rkuK3luILopb/lsa/ljYDoh7rngaPlpKfpgZPlm5vmrrUxMTc26JmfKQ==",
+      "time": "8:00~18:00",
+      "organization": "緣和國際同濟會",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：緣和國際同濟會。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muamleaoueS4i+aJo+S7lOWXsijlvbDljJYp44CC5Zyw5Z2A77ya5b2w5YyW5o2Q6KGA56uZKOW9sOWMluW4guS4reWxsei3r+S4gOautTM0OOiZnyk=",
+      "time": "8:00~17:00",
+      "organization": "榕樹下扣仔嗲(彰化)",
+      "location": "彰化捐血站(彰化市中山路一段348號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：榕樹下扣仔嗲(彰化)。地址：彰化捐血站(彰化市中山路一段348號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muixkOW5tOS6lOmHkeeZvuiyqOWVhuihjOOAguWcsOWdgO+8muWNl+aKleaNkOihgOWupCjkuK3oiIjot682MTbomZ8x5qiTKQ==",
+      "time": "9:00~17:00",
+      "organization": "豐年五金百貨商行",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：豐年五金百貨商行。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muiJr+WFqOmgkOaLjOa3t+WHneWcn+iCoeS7veaciemZkOWFrOWPuCjmnbHlj7DkuK3ljYAp44CC5Zyw5Z2A77ya5aSn6YeM5o2Q6KGA5a6kKOWkp+mHjOWNgOWci+WFiei3r+S6jOautTIzOeiZnzHmqJMp",
+      "time": "9:30~16:30",
+      "organization": "良全預拌混凝土股份有限公司(東台中區)",
+      "location": "大里捐血室(大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：良全預拌混凝土股份有限公司(東台中區)。地址：大里捐血室(大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muWkp+aso+eNheWtkOacg+OAguWcsOWdgO+8muW9sOWMlueBq+i7iuermSjlvbDljJbluILkuInmsJHot68x6JmfKQ==",
+      "time": "9:30~16:00",
+      "organization": "大欣獅子會",
+      "location": "彰化火車站(彰化市三民路1號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：大欣獅子會。地址：彰化火車站(彰化市三民路1號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaJi+W/g+mbnuibi+ezleOAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "手心雞蛋糕",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：手心雞蛋糕。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muixkOWOn+aWh+atpueNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "豐原文武獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：豐原文武獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWQjumHjOeNheWtkOacg+OAguWcsOWdgO+8muWQjumHjOmOruWuieWuruW7o+WgtCjoh7rkuK3luILlkI7ph4zljYDkuInlhYnot680MuiZnyk=",
+      "time": "9:00~16:00",
+      "organization": "后里獅子會",
+      "location": "后里鎮安宮廣場(臺中市后里區三光路42號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：后里獅子會。地址：后里鎮安宮廣場(臺中市后里區三光路42號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWflOW/g+eNheWtkOacg+OAguWcsOWdgO+8muWflOW/g+WcluabuOmkqCjlvbDljJbnuKPln5Tlv4PphInlk6Hpub/ot6/kuozmrrUzMjjomZ8p",
+      "time": "9:00~16:00",
+      "organization": "埔心獅子會",
+      "location": "埔心圖書館(彰化縣埔心鄉員鹿路二段328號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：埔心獅子會。地址：埔心圖書館(彰化縣埔心鄉員鹿路二段328號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzozMOOAguS4u+i+puWWruS9je+8mue3o+mmqOeNheWtkOacg+OAguWcsOWdgO+8mua1t+e3muaNkOihgOWupCjmoqfmo7LljYDkuK3oj6/ot6/kuIDmrrUxMDAx5LmLMeiZnyk=",
+      "time": "9:30~17:30",
+      "organization": "緣馨獅子會",
+      "location": "海線捐血室(梧棲區中華路一段1001之1號)",
+      "rawContent": "作業時間：9:30~17:30。主辦單位：緣馨獅子會。地址：海線捐血室(梧棲區中華路一段1001之1號)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTg6MzDjgILkuLvovqbllq7kvY3vvJrlj7DkuK3luILlrrbnpo/lhaznm4rljZTmnIPjgILlnLDlnYDvvJrmlrDlhYnkuInotormjZDooYDou4oo5oOg5a6J5YGc6LuK5aC0LeaDoOS+hui3r+S6jOauteW4guaUv+WMl+S4g+i3r+WPoyk=",
+      "time": "10:30~18:30",
+      "organization": "台中市家福公益協會",
+      "location": "新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "rawContent": "作業時間：10:30~18:30。主辦單位：台中市家福公益協會。地址：新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlvbDljJbnuKPooaHmlofomZTlv4PmhYjlloTjgILlnLDlnYDvvJrlk6HmnpfmjZDooYDlrqQo5ZOh5p6X54Gr6LuK56uZ5LiA5qiT5aSn5buz5YWnKQ==",
+      "time": "10:00~18:00",
+      "organization": "彰化縣衡文虔心慈善",
+      "location": "員林捐血室(員林火車站一樓大廳內)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：彰化縣衡文虔心慈善。地址：員林捐血室(員林火車站一樓大廳內)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaWsOaZguS7o+WQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "新時代同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：新時代同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-28"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlhKros6rmlofmlZnlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "優質文教國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：優質文教國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
       "activityDate": "2024-12-28"
     },
     {
@@ -8193,6 +10785,142 @@
   ],
   "2024-12-29": [
     {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrlnIvpmpvmibbovKozNDgy5Zyw5Y2A44CC5Zyw5Z2A77ya5Y+w5YyX5biC5L+h576p5Y2A5p2+5aO96LevMTblt7fkv6HnvqnlqIHnp4Dml4E=",
+      "time": "10:00~17:00",
+      "organization": "國際扶輪3482地區",
+      "location": "台北市信義區松壽路16巷信義威秀旁",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：國際扶輪3482地區。地址：台北市信義區松壽路16巷信義威秀旁",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muawuOaFtuWunOiYreWbm+WTgeeJjOe2k+euoeacg+OAguWcsOWdgO+8muWunOiYreW4guS6lOepgOW7nyjlrpzomK3luILnpZ7ovrLot68y5q61MTYy6JmfKQ==",
+      "time": "9:00~16:00",
+      "organization": "永慶宜蘭四品牌經管會",
+      "location": "宜蘭市五穀廟(宜蘭市神農路2段162號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：永慶宜蘭四品牌經管會。地址：宜蘭市五穀廟(宜蘭市神農路2段162號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8mumLkuacqOmtmumFpeOAguWcsOWdgO+8muWunOiYree4o+WunOiYreW4guaTuuWOmOi3rzE2LTfomZ8x5qiTKOmFjeWQiOWunOiYreermSk=",
+      "time": "8:00~17:00",
+      "organization": "鋒木魚酥",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：鋒木魚酥。地址：宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muiKseiTruS6jOS/oeOAguWcsOWdgO+8muiKseiTrumBoOadseeZvuiyqOato+mWgOWJjSjlkozlubPot6/kuIop",
+      "time": "9:00~16:00",
+      "organization": "花蓮二信",
+      "location": "花蓮遠東百貨正門前(和平路上)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：花蓮二信。地址：花蓮遠東百貨正門前(和平路上)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiKseiTruiTruiKseeNheWtkOacg+OAguWcsOWdgO+8muiKseiTrue4o+iKseiTruW4guS4reWxsei3r+S4gOautTE3MOiZnyjphY3lkIjoirHok67nq5kp",
+      "time": "8:30~17:00",
+      "organization": "花蓮蓮花獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：花蓮蓮花獅子會。地址：花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWci+mam+S9m+WFieacg+S4reiPr+e4veacg+WfuumahuS4g+WgteWIhuacg+OAguWcsOWdgO+8muWfuumahuW4guS4g+WgteWNgOmWi+WFg+i3rzky6JmfKOaFtua/n+Wurik=",
+      "time": "9:30~16:30",
+      "organization": "國際佛光會中華總會基隆七堵分會",
+      "location": "基隆市七堵區開元路92號(慶濟宮)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：國際佛光會中華總會基隆七堵分會。地址：基隆市七堵區開元路92號(慶濟宮)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muWfuumahuWQjOa/n+acgyjljJfkuIDljYAp44CC5Zyw5Z2A77ya5Z+66ZqG5biC5oSb5LqM6LevNzjomZ8o5Z+66ZqG5LqM5L+hKeWJjQ==",
+      "time": "9:30~16:30",
+      "organization": "基隆同濟會(北一區)",
+      "location": "基隆市愛二路78號(基隆二信)前",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：基隆同濟會(北一區)。地址：基隆市愛二路78號(基隆二信)前",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muaVkeWci+WcmOaWsOWMl+W4guadv+api+WNgOWcmOWnlOacg+OAguWcsOWdgO+8muaWsOWMl+W4guS4reWSjOWNgOS4reWuieihl+WcluabuOmkqOaXgTgyM+WFrOWckuWFpyjphY3lkIjkuK3lkozomZ8p",
+      "time": "9:00~17:00",
+      "organization": "救國團新北市板橋區團委會",
+      "location": "新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：救國團新北市板橋區團委會。地址：新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muaVkeWci+WcmOaWsOWMl+W4guadv+api+WNgOWcmOWnlOacg+OAguWcsOWdgO+8muaWsOWMl+W4guawuOWSjOWNgOawkeeUn+i3rzQ25be3NTbomZ8=",
+      "time": "9:30~16:30",
+      "organization": "救國團新北市板橋區團委會",
+      "location": "新北市永和區民生路46巷56號",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：救國團新北市板橋區團委會。地址：新北市永和區民生路46巷56號",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrosqHlnJjms5XkurrmlrDljJfluILmi7HljJfmrr/jgILlnLDlnYDvvJrmlrDljJfluILmsZDmraLljYDmsZDokKzot6/kuInmrrU4OOiZnw==",
+      "time": "10:00~17:00",
+      "organization": "財團法人新北市拱北殿",
+      "location": "新北市汐止區汐萬路三段88號",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：財團法人新北市拱北殿。地址：新北市汐止區汐萬路三段88號",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS4reiPr+mWi+W/g+aFiOWWhOWNlOacg+OAguWcsOWdgO+8muaWsOWMl+W4guadv+api+WNgOmbmeWNgei3r+S4ieautTI36JmfMuaokyjphY3lkIjmnb/mqYvnq5kp",
+      "time": "8:00~17:00",
+      "organization": "中華開心慈善協會",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：中華開心慈善協會。地址：新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MzDjgILkuLvovqbllq7kvY3vvJrmlrDljJfluILmloflsbHnjYXlrZDmnIPjgILlnLDlnYDvvJrmlrDljJfluILmlrDlupfljYDkuK3oiIjot68z5q61MeiZnyjmlrDlupflrrbmqILnpo8p",
+      "time": "10:00~17:30",
+      "organization": "新北市文山獅子會",
+      "location": "新北市新店區中興路3段1號(新店家樂福)",
+      "rawContent": "作業時間：10:00~17:30。主辦單位：新北市文山獅子會。地址：新北市新店區中興路3段1號(新店家樂福)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmlrDlkoznjYXlrZDmnIPjgILlnLDlnYDvvJrmlrDljJfluILmlrDojorljYDkuK3oj6/ot68r5b6p6IiI6Lev5Y+jKOmFjeWQiOaWsOiOiuiZnyk=",
+      "time": "10:00~18:00",
+      "organization": "新和獅子會",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：新和獅子會。地址：新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzowMOOAguS4u+i+puWWruS9je+8muWkp+WUkOeNheWtkOacg+OAguWcsOWdgO+8muaWsOWMl+W4guaoueael+WNgOS/neWuieihl+S4gOautTfomZ/mv5/lronlrq4o5qi55p6X5a6a6bueKQ==",
+      "time": "9:30~17:00",
+      "organization": "大唐獅子會",
+      "location": "新北市樹林區保安街一段7號濟安宮(樹林定點)",
+      "rawContent": "作業時間：9:30~17:00。主辦單位：大唐獅子會。地址：新北市樹林區保安街一段7號濟安宮(樹林定點)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muS4lue0gOeNheWtkOacg+OAguWcsOWdgO+8muiHuuWMl+W4guWkp+WuieWNgOW7uuWci+WNl+i3r+S6jOauteWcsOS4i+WBnOi7iuWgtOWFpeWPo+aXgeepuuWcsCjphY3lkIjlpKflronomZ8p",
+      "time": "9:00~17:00",
+      "organization": "世紀獅子會",
+      "location": "臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：世紀獅子會。地址：臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrlnIvpmpvkvZvlhYnmnIPkuK3oj6/nuL3mnIPlj7DljJfkuK3lsbHnrKzkuozliIbmnIPjgILlnLDlnYDvvJroh7rljJfluILkuK3mraPljYDopYTpmb3ot6/oiIflhazlnJLot6/kuqTlj4nlj6Mo6YWN5ZCI5YWs5ZyS6JmfKQ==",
+      "time": "10:00~18:00",
+      "organization": "國際佛光會中華總會台北中山第二分會",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：國際佛光會中華總會台北中山第二分會。地址：臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTM6MDB+MjE6MDDjgILkuLvovqbllq7kvY3vvJrlhbjnr4TnjYXlrZDmnIPjgILlnLDlnYDvvJroh7rljJfluILokKzoj6/ljYDls6jltYvooZc4M+iZn+WzqOW1i+eri+mrlOWBnOi7iuWgtOaXgSjphY3lkIjls6jltYvomZ8p",
+      "time": "13:00~21:00",
+      "organization": "典範獅子會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "rawContent": "作業時間：13:00~21:00。主辦單位：典範獅子會。地址：臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2024-12-29"
+    },
+    {
       "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muahg+WckuW4guiHquWcqOeNheWtkOacg+OAguWcsOWdgO+8muWNl+mWgOaNkOihgOWupCjmoYPlnJLluILmoYPlnJLljYDkuInmsJHot68z5q61MTgy6JmfM+aok+S5izEp",
       "time": "9:30~16:00",
       "organization": "桃園市自在獅子會",
@@ -8230,6 +10958,142 @@
       "organization": "楊梅國際同濟會",
       "location": "楊梅火車站(楊梅區大成路256號)",
       "rawContent": "作業時間：9:00~16:00。主辦單位：楊梅國際同濟會。地址：楊梅火車站(楊梅區大成路256號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muW9sOWMlumdkuW5tOmgmOiilueNheWtkOacg+OAguWcsOWdgO+8muaWsOe1seaEj+mkkOW7syjlkoznvo7pjq7pgZPlkajot683NzjomZ8p",
+      "time": "9:00~16:00",
+      "organization": "彰化青年領袖獅子會",
+      "location": "新統意餐廳(和美鎮道周路778號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：彰化青年領袖獅子會。地址：新統意餐廳(和美鎮道周路778號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muamleaoueS4i+aJo+S7lOWXsijlvbDljJYp44CC5Zyw5Z2A77ya5b2w5YyW5o2Q6KGA56uZKOW9sOWMluW4guS4reWxsei3r+S4gOautTM0OOiZnyk=",
+      "time": "8:00~17:00",
+      "organization": "榕樹下扣仔嗲(彰化)",
+      "location": "彰化捐血站(彰化市中山路一段348號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：榕樹下扣仔嗲(彰化)。地址：彰化捐血站(彰化市中山路一段348號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muWPsOS4reWkquW5s+iBlua/n+WuruOAguWcsOWdgO+8muWPsOS4reWkquW5s+iBlua/n+WuruWJjeW7o+WgtCjlpKrlubPljYDkuIPmmJ/ot685MeiZnyk=",
+      "time": "9:00~16:00",
+      "organization": "台中太平聖濟宮",
+      "location": "台中太平聖濟宮前廣場(太平區七星路91號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：台中太平聖濟宮。地址：台中太平聖濟宮前廣場(太平區七星路91號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrmjbfnq4vlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJrku4HlkozmjZDooYDou4oo5p2+56u56Lev6IiH5piM5bmz6Lev5Y+jKQ==",
+      "time": "10:00~18:00",
+      "organization": "捷立國際同濟會",
+      "location": "仁和捐血車(松竹路與昌平路口)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：捷立國際同濟會。地址：仁和捐血車(松竹路與昌平路口)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muemj+aZuuWCs+W/g+OAguWcsOWdgO+8mumbsuael+aNkOihgOermSjmlpflha3luILmvKLlj6Pot68xODfomZ8p",
+      "time": "8:00~17:00",
+      "organization": "福智傳心",
+      "location": "雲林捐血站(斗六市漢口路187號)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：福智傳心。地址：雲林捐血站(斗六市漢口路187號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xODowMOOAguS4u+i+puWWruS9je+8muixkOWOn+aWh+atpueNheWtkOacg+OAguWcsOWdgO+8muixkOWOn+aNkOihgOWupCjoh7rkuK3luILosZDljp/ljYDljJfpmb3ot68y6JmfKQ==",
+      "time": "9:00~18:00",
+      "organization": "豐原文武獅子會",
+      "location": "豐原捐血室(臺中市豐原區北陽路2號)",
+      "rawContent": "作業時間：9:00~18:00。主辦單位：豐原文武獅子會。地址：豐原捐血室(臺中市豐原區北陽路2號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8muWkp+mHjOW0h+WFieeNheWtkOacg+OAguWcsOWdgO+8muWkp+mHjOaNkOihgOWupCjoh7rkuK3luILlpKfph4zljYDlnIvlhYnot6/kuozmrrUyMznomZ8x5qiTKQ==",
+      "time": "9:30~18:00",
+      "organization": "大里崇光獅子會",
+      "location": "大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：大里崇光獅子會。地址：大里捐血室(臺中市大里區國光路二段239號1樓)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNTowMOOAguS4u+i+puWWruS9je+8mue0q+WNl+WuruOAguWcsOWdgO+8muerueWxsee0q+WNl+Wurijnq7nlsbHpjq7lpKflhazooZc0MOiZnynmsLTmv4Llu6PloLQoN+aYn+e0muW7geaJgOaWnOS4i+aWuSk=",
+      "time": "9:30~15:00",
+      "organization": "紫南宮",
+      "location": "竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "rawContent": "作業時間：9:30~15:00。主辦單位：紫南宮。地址：竹山紫南宮(竹山鎮大公街40號)水濂廣場(7星級廁所斜下方)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjowMOOAguS4u+i+puWWruS9je+8muW9sOWMluW4gumIuumzs+WuruOAguWcsOWdgO+8muW9sOWMlueBq+i7iuermSjlvbDljJbluILkuInmsJHot68x6JmfKQ==",
+      "time": "9:30~16:00",
+      "organization": "彰化市鈺鳳宮",
+      "location": "彰化火車站(彰化市三民路1號)",
+      "rawContent": "作業時間：9:30~16:00。主辦單位：彰化市鈺鳳宮。地址：彰化火車站(彰化市三民路1號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MzB+MTg6MzDjgILkuLvovqbllq7kvY3vvJrlj7DkuK3luILlrrbnpo/lhaznm4rljZTmnIPjgILlnLDlnYDvvJrmlrDlhYnkuInotormjZDooYDou4oo5oOg5a6J5YGc6LuK5aC0LeaDoOS+hui3r+S6jOauteW4guaUv+WMl+S4g+i3r+WPoyk=",
+      "time": "10:30~18:30",
+      "organization": "台中市家福公益協會",
+      "location": "新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "rawContent": "作業時間：10:30~18:30。主辦單位：台中市家福公益協會。地址：新光三越捐血車(惠安停車場-惠來路二段市政北七路口)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrku4HmhJvlnIvpmpvlkIzmv5/mnIPjgILlnLDlnYDvvJroh7rkuK3lhazlnJLmjZDooYDou4oo5Lit6IiI5aCCKOeyvuatpui3rzI5MS0z6JmfKeWwjemdouWBnOi7iuWgtCk=",
+      "time": "10:00~18:00",
+      "organization": "仁愛國際同濟會",
+      "location": "臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：仁愛國際同濟會。地址：臺中公園捐血車(中興堂(精武路291-3號)對面停車場)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWuh+aPmuWQjOa/n+acg+OAguWcsOWdgO+8muS4reato+WFrOWckuaNkOihgOWupCjkuK3lnIvpmYTphqvlvqnlgaXlpKfmqJMo5a245aOr6LevOTHomZ8p5q2j5bCN6Z2iKQ==",
+      "time": "9:00~17:00",
+      "organization": "宇揚同濟會",
+      "location": "中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：宇揚同濟會。地址：中正公園捐血室(中國附醫復健大樓(學士路91號)正對面)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWvjOWBieeNheWtkOacgyjljZfmipUp44CC5Zyw5Z2A77ya5Y2X5oqV5o2Q6KGA5a6kKOS4reiIiOi3rzYxNuiZnzHmqJMp",
+      "time": "9:00~17:00",
+      "organization": "富偉獅子會(南投)",
+      "location": "南投捐血室(中興路616號1樓)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：富偉獅子會(南投)。地址：南投捐血室(中興路616號1樓)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muemj+WuieWurueuoeeQhuWnlOWToeacg+OAguWcsOWdgO+8muWPsOS4reW4guadseWNgOadseiLsemHjOS4ieizouihlzI2OOiZnw==",
+      "time": "9:00~16:00",
+      "organization": "福安宮管理委員會",
+      "location": "台中市東區東英里三賢街268號",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：福安宮管理委員會。地址：台中市東區東英里三賢街268號",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJrnm4rnlJ/mhYjlloTmnIPjgILlnLDlnYDvvJrlk6HmnpfmjZDooYDlrqQo5ZOh5p6X54Gr6LuK56uZ5LiA5qiT5aSn5buz5YWnKQ==",
+      "time": "10:00~18:00",
+      "organization": "益生慈善會",
+      "location": "員林捐血室(員林火車站一樓大廳內)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：益生慈善會。地址：員林捐血室(員林火車站一樓大廳內)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xODowMOOAguS4u+i+puWWruS9je+8muWkqeavjeWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muS4rea4r+aNkOihgOWupCjoh7rkuK3luILopb/lsa/ljYDoh7rngaPlpKfpgZPlm5vmrrUxMTc26JmfKQ==",
+      "time": "8:00~18:00",
+      "organization": "天母國際同濟會",
+      "location": "中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "rawContent": "作業時間：8:00~18:00。主辦單位：天母國際同濟會。地址：中港捐血室(臺中市西屯區臺灣大道四段1176號)",
+      "activityDate": "2024-12-29"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjowMOOAguS4u+i+puWWruS9je+8muiZjuWwvuWci+mam+WQjOa/n+acg+OAguWcsOWdgO+8muiZjuWwvumOrueri+WcluabuOmkqCjpm7LmnpfnuKPomY7lsL7pjq7lhYnmmI7ot682OOiZnyk=",
+      "time": "9:00~16:00",
+      "organization": "虎尾國際同濟會",
+      "location": "虎尾鎮立圖書館(雲林縣虎尾鎮光明路68號)",
+      "rawContent": "作業時間：9:00~16:00。主辦單位：虎尾國際同濟會。地址：虎尾鎮立圖書館(雲林縣虎尾鎮光明路68號)",
       "activityDate": "2024-12-29"
     },
     {
@@ -8449,6 +11313,126 @@
       "location": "竹北愛心樓(新竹縣竹北市光明11路215巷8號)",
       "rawContent": "作業時間：8:00~17:00。主辦單位：台灣中油公司竹苗營業。地址：竹北愛心樓(新竹縣竹北市光明11路215巷8號)",
       "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEU15Y2A5LiA5b+D542F5a2Q5pyD44CC5Zyw5Z2A77ya6auY6ZuE5biC5bKh5bGx5Y2A5aO96I+v6LevNTjomZ8oUzcy5bKh5bGx5o2Q6KGA5a6kKQ==",
+      "time": "9:00~17:00",
+      "organization": "國際獅子會300E5區一心獅子會",
+      "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：國際獅子會300E5區一心獅子會。地址：高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzozMOOAguS4u+i+puWWruS9je+8mueDpOmbnueJueaUu+maiuOAguWcsOWdgO+8mumrmOmbhOW4guS4ieawkeWNgOS5neWmguS4gOi3rzE5OOiZnzHmqJMoRDIx5Lmd5aaC5o2Q6KGA5a6kKQ==",
+      "time": "9:00~17:30",
+      "organization": "烤雞特攻隊",
+      "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "rawContent": "作業時間：9:00~17:30。主辦單位：烤雞特攻隊。地址：高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNjozMOOAguS4u+i+puWWruS9je+8muerueW0juaEm+mEieWQjOW/g+acg+OAguWcsOWdgO+8muerueW0juS4reiPr+mbu+S/oSjlmInnvqnnuKPnq7nltI7phInlnZHku5TlnaoxNjDomZ8p",
+      "time": "9:00~16:30",
+      "organization": "竹崎愛鄉同心會",
+      "location": "竹崎中華電信(嘉義縣竹崎鄉坑仔坪160號)",
+      "rawContent": "作業時間：9:00~16:30。主辦單位：竹崎愛鄉同心會。地址：竹崎中華電信(嘉義縣竹崎鄉坑仔坪160號)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muiHuuWNl+W4guWMl+WNgOWwj+adsei3rzQyM+W3tzEtMuiZnyhEMTXlsI/mnbHmjZDooYDlrqQp",
+      "time": "8:30~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "臺南市北區小東路423巷1-2號(D15小東捐血室)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：良堅建設股份有限公司。地址：臺南市北區小東路423巷1-2號(D15小東捐血室)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muiHuuWNl+W4guaWsOeHn+WNgOS4reato+i3rzIzLTHomZ8o5paw54ef5rCR5rK76K2w5LqL5buz5bCN6Z2i546755KD5bGLKShEMTjmlrDnh5/mjZDooYDlrqQp",
+      "time": "8:30~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "臺南市新營區中正路23-1號(新營民治議事廳對面玻璃屋)(D18新營捐血室)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：良堅建設股份有限公司。地址：臺南市新營區中正路23-1號(新營民治議事廳對面玻璃屋)(D18新營捐血室)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muiHuuWNl+W4guS4reilv+WNgOawuOemj+i3rzHmrrU4NeiZnyhEMTnmsLjnpo/mjZDooYDlrqQp",
+      "time": "8:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "臺南市中西區永福路1段85號(D19永福捐血室)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：良堅建設股份有限公司。地址：臺南市中西區永福路1段85號(D19永福捐血室)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWYiee+qeW4guilv+WNgOWNmuaEm+i3r+S4gOautTQ4OOiZnyhTODHlmInnvqnmjZDooYDnq5kp",
+      "time": "8:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：良堅建設股份有限公司。地址：嘉義市西區博愛路一段488號(S81嘉義捐血站)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzozMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEUy5Y2A5p2x5riv542F5a2Q5pyD44CC5Zyw5Z2A77ya5p2x5riv5paw5Z+66auY5Lit5YmNKOadsea4r+mOruWFieW+qei3r+aWsOWfuumrmOS4reWJjSk=",
+      "time": "9:00~17:30",
+      "organization": "國際獅子會300E2區東港獅子會",
+      "location": "東港新基高中前(東港鎮光復路新基高中前)",
+      "rawContent": "作業時間：9:00~17:30。主辦單位：國際獅子會300E2區東港獅子會。地址：東港新基高中前(東港鎮光復路新基高中前)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xODowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4guW3pueHn+WNgOWNmuaEm+S4iei3rzYzNeiZnyhEMDnlt6bnh5/mjZDooYDlrqQp",
+      "time": "9:30~18:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
+      "rawContent": "作業時間：9:30~18:00。主辦單位：良堅建設股份有限公司。地址：高雄市左營區博愛三路635號(D09左營捐血室)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzozMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4gumzs+WxseWNgOWFiemBoOi3rzIyNuiZnyjmjbfpgYvps7PlsbHmjZDooYDlrqQp",
+      "time": "9:30~17:30",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
+      "rawContent": "作業時間：9:30~17:30。主辦單位：良堅建設股份有限公司。地址：高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4gualoOaik+WNgOmrmOaloOWFrOi3rzE4MzfomZ8oUzcx5qWg5qKT5o2Q6KGA5a6kKQ==",
+      "time": "8:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：良堅建設股份有限公司。地址：高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4guWyoeWxseWNgOWjveiPr+i3rzU46JmfKFM3MuWyoeWxseaNkOihgOWupCk=",
+      "time": "9:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：良堅建設股份有限公司。地址：高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWxj+adsee4o+Wxj+adseW4guW/oOWtnei3rzI5NeiZnyhTNzPlsY/mnbHmjZDooYDnq5kp",
+      "time": "8:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：良堅建設股份有限公司。地址：屏東縣屏東市忠孝路295號(S73屏東捐血站)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzozMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4guWJjemHkeWNgOS4reiPr+S4iei3rzfomZ825qiTKFM3NeWJjemHkeaNkOihgOWupCk=",
+      "time": "9:00~17:30",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
+      "rawContent": "作業時間：9:00~17:30。主辦單位：良堅建設股份有限公司。地址：高雄市前金區中華三路7號6樓(S75前金捐血室)",
+      "activityDate": "2024-12-30"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTc6MDDjgILkuLvovqbllq7kvY3vvJrpq5jpm4TluILlsI/oi7HkuYvlj4vmnIPjgILlnLDlnYDvvJrlpKfpgaDnmb7liY3lu6PloLQo6auY6ZuE5biC6IuT6ZuF5Y2A5LiJ5aSa5Zub6LevMjHomZ8p",
+      "time": "10:00~17:00",
+      "organization": "高雄市小英之友會",
+      "location": "大遠百前廣場(高雄市苓雅區三多四路21號)",
+      "rawContent": "作業時間：10:00~17:00。主辦單位：高雄市小英之友會。地址：大遠百前廣場(高雄市苓雅區三多四路21號)",
+      "activityDate": "2024-12-30"
     }
   ],
   "2024-12-31": [
@@ -8490,6 +11474,110 @@
       "organization": "沂風磁磚有限公司",
       "location": "竹北愛心樓(新竹縣竹北市光明11路215巷8號)",
       "rawContent": "作業時間：8:00~17:00。主辦單位：沂風磁磚有限公司。地址：竹北愛心樓(新竹縣竹北市光明11路215巷8號)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muWci+mam+eNheWtkOacgzMwMEU15Y2A5LiA5b+D542F5a2Q5pyD44CC5Zyw5Z2A77ya6auY6ZuE5biC5bKh5bGx5Y2A5aO96I+v6LevNTjomZ8oUzcy5bKh5bGx5o2Q6KGA5a6kKQ==",
+      "time": "9:00~17:00",
+      "organization": "國際獅子會300E5區一心獅子會",
+      "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：國際獅子會300E5區一心獅子會。地址：高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaMTA6MDB+MTg6MDDjgILkuLvovqbllq7kvY3vvJpKYW15c+a9m+iJh+WgoeWwiOizo+W6l+OAguWcsOWdgO+8muaIkOWkp+acg+mkqCjlj7DljZfluILmnbHljYDlpKflrbjot68y6JmfKQ==",
+      "time": "10:00~18:00",
+      "organization": "Jamys潛艇堡專賣店",
+      "location": "成大會館(台南市東區大學路2號)",
+      "rawContent": "作業時間：10:00~18:00。主辦單位：Jamys潛艇堡專賣店。地址：成大會館(台南市東區大學路2號)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNjozMOOAguS4u+i+puWWruS9je+8muaVkeWci+WcmOWPsOWNl+W4guatuOS7geWNgOWcmOWnlOacg+OAguWcsOWdgO+8muatuOS7geWNgOWFrOaJgCjlj7DljZfluILmrbjku4HljYDkuK3lsbHot6/kuozmrrUy6JmfKQ==",
+      "time": "9:30~16:30",
+      "organization": "救國團台南市歸仁區團委會",
+      "location": "歸仁區公所(台南市歸仁區中山路二段2號)",
+      "rawContent": "作業時間：9:30~16:30。主辦單位：救國團台南市歸仁區團委會。地址：歸仁區公所(台南市歸仁區中山路二段2號)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muiHuuWNl+W4guWMl+WNgOWwj+adsei3rzQyM+W3tzEtMuiZnyhEMTXlsI/mnbHmjZDooYDlrqQp",
+      "time": "8:30~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "臺南市北區小東路423巷1-2號(D15小東捐血室)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：良堅建設股份有限公司。地址：臺南市北區小東路423巷1-2號(D15小東捐血室)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODozMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muiHuuWNl+W4guaWsOeHn+WNgOS4reato+i3rzIzLTHomZ8o5paw54ef5rCR5rK76K2w5LqL5buz5bCN6Z2i546755KD5bGLKShEMTjmlrDnh5/mjZDooYDlrqQp",
+      "time": "8:30~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "臺南市新營區中正路23-1號(新營民治議事廳對面玻璃屋)(D18新營捐血室)",
+      "rawContent": "作業時間：8:30~17:00。主辦單位：良堅建設股份有限公司。地址：臺南市新營區中正路23-1號(新營民治議事廳對面玻璃屋)(D18新營捐血室)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muiHuuWNl+W4guS4reilv+WNgOawuOemj+i3rzHmrrU4NeiZnyhEMTnmsLjnpo/mjZDooYDlrqQp",
+      "time": "8:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "臺南市中西區永福路1段85號(D19永福捐血室)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：良堅建設股份有限公司。地址：臺南市中西區永福路1段85號(D19永福捐血室)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWYiee+qeW4guilv+WNgOWNmuaEm+i3r+S4gOautTQ4OOiZnyhTODHlmInnvqnmjZDooYDnq5kp",
+      "time": "8:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：良堅建設股份有限公司。地址：嘉義市西區博愛路一段488號(S81嘉義捐血站)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTozMH4xNzozMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4gumzs+WxseWNgOS6lOeUsuS6jOi3rzU2My0y6JmfMUYo5LqU55Sy5o2Q6KGA5a6kKQ==",
+      "time": "9:30~17:30",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "rawContent": "作業時間：9:30~17:30。主辦單位：良堅建設股份有限公司。地址：高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzozMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4guS4ieawkeWNgOS5neWmguS4gOi3rzE5OOiZnzHmqJMoRDIx5Lmd5aaC5o2Q6KGA5a6kKQ==",
+      "time": "9:00~17:30",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "rawContent": "作業時間：9:00~17:30。主辦單位：良堅建設股份有限公司。地址：高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4gualoOaik+WNgOmrmOaloOWFrOi3rzE4MzfomZ8oUzcx5qWg5qKT5o2Q6KGA5a6kKQ==",
+      "time": "8:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：良堅建設股份有限公司。地址：高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4guWyoeWxseWNgOWjveiPr+i3rzU46JmfKFM3MuWyoeWxseaNkOihgOWupCk=",
+      "time": "9:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "rawContent": "作業時間：9:00~17:00。主辦單位：良堅建設股份有限公司。地址：高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaODowMH4xNzowMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8muWxj+adsee4o+Wxj+adseW4guW/oOWtnei3rzI5NeiZnyhTNzPlsY/mnbHmjZDooYDnq5kp",
+      "time": "8:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
+      "rawContent": "作業時間：8:00~17:00。主辦單位：良堅建設股份有限公司。地址：屏東縣屏東市忠孝路295號(S73屏東捐血站)",
+      "activityDate": "2024-12-31"
+    },
+    {
+      "id": "5L2c5qWt5pmC6ZaT77yaOTowMH4xNzozMOOAguS4u+i+puWWruS9je+8muiJr+WgheW7uuioreiCoeS7veaciemZkOWFrOWPuOOAguWcsOWdgO+8mumrmOmbhOW4guWJjemHkeWNgOS4reiPr+S4iei3rzfomZ825qiTKFM3NeWJjemHkeaNkOihgOWupCk=",
+      "time": "9:00~17:30",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
+      "rawContent": "作業時間：9:00~17:30。主辦單位：良堅建設股份有限公司。地址：高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2024-12-31"
     }
   ]
