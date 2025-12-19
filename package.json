@@ -2,7 +2,7 @@
   "name": "blood-info",
   "version": "0.1.0",
   "private": true,
-  "type":"module",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -26,7 +26,7 @@
     "googleapis": "^144.0.0",
     "lucide-react": "^0.453.0",
     "mongoose": "^8.7.2",
-    "next": "14.2.15",
+    "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.1",
