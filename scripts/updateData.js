@@ -161,6 +161,10 @@ function mergeData(officialData, pttData) {
     if (!pttData || pttData.length === 0) return officialData;
 
     let matchCount = 0;
+    const noiseWords = [
+        '台北', '臺北', '新北', '基隆', '桃園', '新竹', '苗栗', '台中', '臺中', '彰化', '雲林', '南投', '嘉義', '台南', '臺南', '高雄', '屏東', '宜蘭', '花蓮', '台東', '臺東',
+        '捐血室', '捐血站', '捐血車', '巡迴車', '捷運站', '公園', '出口', '配合'
+    ];
 
     // Iterate official data
     for (const date in officialData) {
@@ -176,15 +180,27 @@ function mergeData(officialData, pttData) {
                 const matchedPtt = pttEventsForDate.find(p => {
                     // Split PTT location info by common delimiters
                     let pLocRaw = p.locationStr.replace(/台/g, '臺');
-                    const pLocs = pLocRaw.split(/[\/、,，]/).map(s => s.trim()).filter(s => s);
+                    const pLocs = pLocRaw.split(/[\/、,，\s]+/).map(s => s.trim()).filter(s => s);
 
                     return pLocs.some(subLoc => {
                         let pLocClean = subLoc.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
-                        // Filter out short numeric tokens or very short strings
+
+                        // Iteratively strip noise from start/end
+                        let prev;
+                        do {
+                            prev = pLocClean;
+                            noiseWords.forEach(w => {
+                                if (pLocClean.startsWith(w)) pLocClean = pLocClean.substring(w.length);
+                                if (pLocClean.endsWith(w)) pLocClean = pLocClean.substring(0, pLocClean.length - w.length);
+                            });
+                        } while (prev !== pLocClean && pLocClean.length > 2);
+
+                        // Filter out empty or too short tokens (unless specific known short ones? "二信" is 2 chars)
+                        // "二信" -> Clean is "二信". Length 2.
                         if (!pLocClean || pLocClean.length < 2 || /^\d+$/.test(pLocClean)) return false;
 
                         // Check inclusion
-                        return eventLoc.includes(pLocClean) || pLocClean.includes(eventLoc);
+                        return eventLoc.includes(pLocClean);
                     });
                 });
 
