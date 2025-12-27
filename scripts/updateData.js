@@ -2,11 +2,11 @@ import fs from 'fs/promises';
 import path from 'path';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-import { exec } from 'child_process';
-import util from 'util';
+// import { exec } from 'child_process';
+// import util from 'util';
 import https from 'https';
 
-const execPromise = util.promisify(exec);
+// const execPromise = util.promisify(exec);
 
 // 新版網站的捐血中心 URL 配置
 const bloodCenters = [
@@ -42,175 +42,222 @@ async function saveLocalData(data, filePath) {
 
 async function fetchPttData() {
     console.log('Fetching PTT data...');
-    try {
-        const response = await axios.get(PTT_URL, {
-            headers: { 'User-Agent': 'Mozilla/5.0' }
-        });
-        const $ = cheerio.load(response.data);
-        const mainContent = $('#main-content');
+    const maxRetries = 3;
+    const retryDelay = 2000;
 
-        // Remove metadata lines
-        mainContent.find('.article-metaline, .article-metaline-right').remove();
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            const response = await axios.get(PTT_URL, {
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+                    'Connection': 'keep-alive',
+                    'Cookie': 'over18=1'
+                },
+                timeout: 15000
+            });
 
-        let pttEvents = [];
-        let lastTextLine = null;
+            const $ = cheerio.load(response.data);
+            const mainContent = $('#main-content');
 
-        // Use contents() to traverse nodes including text and elements
-        const contents = mainContent.contents();
+            if (mainContent.length === 0) {
+                throw new Error('PTT main content not found');
+            }
 
-        contents.each((i, node) => {
-            if (node.type === 'text') {
-                const text = $(node).text();
-                if (text) {
-                    const lines = text.split('\n');
-                    lines.forEach(line => {
-                        const trimmed = line.trim();
-                        if (trimmed) {
-                            // Date pattern: e.g., 12/27(六), 1/3(六)
-                            const dateMatch = trimmed.match(/^(\d{1,2}\/\d{1,2})/);
-                            if (dateMatch) {
-                                let loc = trimmed.substring(dateMatch[0].length).trim();
-                                // Clean up extended date info (ranges, parens)
-                                // e.g. "-12/28", "(六)", "(六-日)"
-                                loc = loc.replace(/^(\s*-\s*\d{1,2}\/\d{1,2})/, '')
-                                    .replace(/^\s*\(.*?\)/, '')
-                                    .replace(/^\s*[-~]\s*/, '') // Remove leading separators
-                                    .trim();
+            // Remove metadata lines
+            mainContent.find('.article-metaline, .article-metaline-right').remove();
 
-                                pttEvents.push({
-                                    matchDate: dateMatch[1],
-                                    rawLine: trimmed,
-                                    locationStr: loc,
-                                    images: [],
-                                });
-                                lastTextLine = pttEvents[pttEvents.length - 1];
+            let pttEvents = [];
+            let lastTextLine = null;
+
+            // Use contents() to traverse nodes including text and elements
+            const contents = mainContent.contents();
+
+            contents.each((i, node) => {
+                if (node.type === 'text') {
+                    const text = $(node).text();
+                    if (text) {
+                        const lines = text.split('\n');
+                        lines.forEach(line => {
+                            const trimmed = line.trim();
+                            if (trimmed) {
+                                // Date pattern: e.g., 12/27(六), 1/3(六)
+                                const dateMatch = trimmed.match(/^(\d{1,2}\/\d{1,2})/);
+                                if (dateMatch) {
+                                    let loc = trimmed.substring(dateMatch[0].length).trim();
+                                    // Clean up extended date info (ranges, parens)
+                                    // e.g. "-12/28", "(六)", "(六-日)"
+                                    loc = loc.replace(/^(\s*-\s*\d{1,2}\/\d{1,2})/, '')
+                                        .replace(/^\s*\(.*?\)/, '')
+                                        .replace(/^\s*[-~]\s*/, '') // Remove leading separators
+                                        .trim();
+
+                                    pttEvents.push({
+                                        matchDate: dateMatch[1],
+                                        rawLine: trimmed,
+                                        locationStr: loc,
+                                        images: [],
+                                    });
+                                    lastTextLine = pttEvents[pttEvents.length - 1];
+                                }
                             }
-                        }
-                    });
-                }
-            } else if (node.type === 'tag' && node.name === 'a') {
-                const href = $(node).attr('href');
-                // Associate image link with the last found event line
-                if (href && lastTextLine && (href.match(/\.(jpg|jpeg|png)$/i) || href.includes('imgur.com'))) {
-                    lastTextLine.images.push(href);
-                }
-            } else if (node.type === 'tag' && node.name === 'span') {
-                // Handle colored text (often used for emphasis in PTT)
-                const text = $(node).text().trim();
-                const dateMatch = text.match(/^(\d{1,2}\/\d{1,2})/);
-                if (dateMatch) {
-                    let loc = text.substring(dateMatch[0].length).trim();
-                    // Clean up extended date info
-                    loc = loc.replace(/^(\s*-\s*\d{1,2}\/\d{1,2})/, '')
-                        .replace(/^\s*\(.*?\)/, '')
-                        .replace(/^\s*[-~]\s*/, '')
-                        .trim();
-
-                    pttEvents.push({
-                        matchDate: dateMatch[1],
-                        rawLine: text,
-                        locationStr: loc,
-                        images: [],
-                    });
-                    lastTextLine = pttEvents[pttEvents.length - 1];
-                }
-
-                // Allow finding links inside span
-                $(node).find('a').each((i, a) => {
-                    const href = $(a).attr('href');
+                        });
+                    }
+                } else if (node.type === 'tag' && node.name === 'a') {
+                    const href = $(node).attr('href');
+                    // Associate image link with the last found event line
                     if (href && lastTextLine && (href.match(/\.(jpg|jpeg|png)$/i) || href.includes('imgur.com'))) {
                         lastTextLine.images.push(href);
                     }
-                });
+                } else if (node.type === 'tag' && node.name === 'span') {
+                    // Handle colored text (often used for emphasis in PTT)
+                    const text = $(node).text().trim();
+                    const dateMatch = text.match(/^(\d{1,2}\/\d{1,2})/);
+                    if (dateMatch) {
+                        let loc = text.substring(dateMatch[0].length).trim();
+                        // Clean up extended date info
+                        loc = loc.replace(/^(\s*-\s*\d{1,2}\/\d{1,2})/, '')
+                            .replace(/^\s*\(.*?\)/, '')
+                            .replace(/^\s*[-~]\s*/, '')
+                            .trim();
+
+                        pttEvents.push({
+                            matchDate: dateMatch[1],
+                            rawLine: text,
+                            locationStr: loc,
+                            images: [],
+                        });
+                        lastTextLine = pttEvents[pttEvents.length - 1];
+                    }
+
+                    // Allow finding links inside span
+                    $(node).find('a').each((i, a) => {
+                        const href = $(a).attr('href');
+                        if (href && lastTextLine && (href.match(/\.(jpg|jpeg|png)$/i) || href.includes('imgur.com'))) {
+                            lastTextLine.images.push(href);
+                        }
+                    });
+                }
+            });
+
+            // Normalize Data
+            const currentYear = new Date().getFullYear(); // e.g. 2024
+            const currentMonth = new Date().getMonth() + 1; // e.g. 12
+
+            pttEvents = pttEvents.map(e => {
+                const [m, d] = e.matchDate.split('/').map(Number);
+
+                let year = currentYear;
+                // Simple logic: if current month is Dec (12), and event is Jan (1) or Feb (2), it's next year
+                if (currentMonth >= 11 && m <= 2) {
+                    year = currentYear + 1;
+                } else if (currentMonth <= 2 && m >= 11) {
+                    year = currentYear - 1; // Unlikely but possible for archives
+                }
+
+                e.date = `${year}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+                return e;
+            });
+
+            console.log(`Fetched ${pttEvents.length} events from PTT`);
+            return pttEvents;
+
+        } catch (e) {
+            console.error(`Attempt ${attempt} failed: ${e.message}`);
+            if (attempt === maxRetries) {
+                console.error('All retry attempts failed. Returning NULL to signal failure.');
+                return null;
             }
-        });
-
-        // Normalize Data
-        const currentYear = new Date().getFullYear(); // e.g. 2024
-        const currentMonth = new Date().getMonth() + 1; // e.g. 12
-
-        pttEvents = pttEvents.map(e => {
-            const [m, d] = e.matchDate.split('/').map(Number);
-
-            let year = currentYear;
-            // Simple logic: if current month is Dec (12), and event is Jan (1) or Feb (2), it's next year
-            if (currentMonth >= 11 && m <= 2) {
-                year = currentYear + 1;
-            } else if (currentMonth <= 2 && m >= 11) {
-                year = currentYear - 1; // Unlikely but possible for archives
-            }
-
-            e.date = `${year}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
-            return e;
-        });
-
-        console.log(`Fetched ${pttEvents.length} events from PTT`);
-        return pttEvents;
-    } catch (e) {
-        console.error('Error fetching PTT data:', e.message);
-        return [];
+            // Wait before retrying
+            await new Promise(resolve => setTimeout(resolve, retryDelay));
+        }
     }
 }
 
-function mergeData(officialData, pttData) {
-    if (!pttData || pttData.length === 0) return officialData;
+function mergeData(officialData, pttData, existingLocalData = null) {
+    // If we have valid new PTT data, proceed with normal matching
+    if (pttData && pttData.length > 0) {
+        let matchCount = 0;
+        const noiseWords = [
+            '台北', '臺北', '新北', '基隆', '桃園', '新竹', '苗栗', '台中', '臺中', '彰化', '雲林', '南投', '嘉義', '台南', '臺南', '高雄', '屏東', '宜蘭', '花蓮', '台東', '臺東',
+            '捐血室', '捐血站', '捐血車', '巡迴車', '捷運站', '公園', '出口', '配合'
+        ];
 
-    let matchCount = 0;
-    const noiseWords = [
-        '台北', '臺北', '新北', '基隆', '桃園', '新竹', '苗栗', '台中', '臺中', '彰化', '雲林', '南投', '嘉義', '台南', '臺南', '高雄', '屏東', '宜蘭', '花蓮', '台東', '臺東',
-        '捐血室', '捐血站', '捐血車', '巡迴車', '捷運站', '公園', '出口', '配合'
-    ];
+        for (const date in officialData) {
+            const events = officialData[date];
+            const pttEventsForDate = pttData.filter(p => p.date === date);
 
-    // Iterate official data
-    for (const date in officialData) {
-        const events = officialData[date];
-        const pttEventsForDate = pttData.filter(p => p.date === date);
+            if (pttEventsForDate.length > 0) {
+                events.forEach(event => {
+                    let eventLoc = event.location || event.center || '';
+                    // Normalize official location
+                    eventLoc = eventLoc.replace(/台/g, '臺').replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
 
-        if (pttEventsForDate.length > 0) {
-            events.forEach(event => {
-                let eventLoc = event.location || event.center || '';
-                // Normalize official location
-                eventLoc = eventLoc.replace(/台/g, '臺').replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+                    const matchedPtt = pttEventsForDate.find(p => {
+                        // Split PTT location info by common delimiters
+                        let pLocRaw = p.locationStr.replace(/台/g, '臺');
+                        const pLocs = pLocRaw.split(/[\/、,，\s]+/).map(s => s.trim()).filter(s => s);
 
-                const matchedPtt = pttEventsForDate.find(p => {
-                    // Split PTT location info by common delimiters
-                    let pLocRaw = p.locationStr.replace(/台/g, '臺');
-                    const pLocs = pLocRaw.split(/[\/、,，\s]+/).map(s => s.trim()).filter(s => s);
+                        return pLocs.some(subLoc => {
+                            let pLocClean = subLoc.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
 
-                    return pLocs.some(subLoc => {
-                        let pLocClean = subLoc.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+                            // Iteratively strip noise from start/end
+                            let prev;
+                            do {
+                                prev = pLocClean;
+                                noiseWords.forEach(w => {
+                                    if (pLocClean.startsWith(w)) pLocClean = pLocClean.substring(w.length);
+                                    if (pLocClean.endsWith(w)) pLocClean = pLocClean.substring(0, pLocClean.length - w.length);
+                                });
+                            } while (prev !== pLocClean && pLocClean.length > 2);
 
-                        // Iteratively strip noise from start/end
-                        let prev;
-                        do {
-                            prev = pLocClean;
-                            noiseWords.forEach(w => {
-                                if (pLocClean.startsWith(w)) pLocClean = pLocClean.substring(w.length);
-                                if (pLocClean.endsWith(w)) pLocClean = pLocClean.substring(0, pLocClean.length - w.length);
-                            });
-                        } while (prev !== pLocClean && pLocClean.length > 2);
+                            // Filter out empty or too short tokens (unless specific known short ones? "二信" is 2 chars)
+                            // "二信" -> Clean is "二信". Length 2.
+                            if (!pLocClean || pLocClean.length < 2 || /^\d+$/.test(pLocClean)) return false;
 
-                        // Filter out empty or too short tokens (unless specific known short ones? "二信" is 2 chars)
-                        // "二信" -> Clean is "二信". Length 2.
-                        if (!pLocClean || pLocClean.length < 2 || /^\d+$/.test(pLocClean)) return false;
-
-                        // Check inclusion
-                        return eventLoc.includes(pLocClean);
+                            // Check inclusion
+                            return eventLoc.includes(pLocClean);
+                        });
                     });
-                });
 
-                if (matchedPtt) {
-                    event.pttData = {
-                        rawLine: matchedPtt.rawLine,
-                        images: matchedPtt.images,
-                        url: PTT_URL
-                    };
-                    matchCount++;
-                }
-            });
+                    if (matchedPtt) {
+                        event.pttData = {
+                            rawLine: matchedPtt.rawLine,
+                            images: matchedPtt.images,
+                            url: PTT_URL
+                        };
+                        matchCount++;
+                    }
+                });
+            }
         }
+        console.log(`Merged PTT data: ${matchCount} matches found.`);
+    } else if (existingLocalData) {
+        // FALLBACK: If PTT fetch failed (pttData is null/empty), try to restore from existing file
+        console.log('⚠️ PTT fetch failed or empty. Attempting to preserve PTT data from existing local file...');
+        let restoredCount = 0;
+
+        for (const date in officialData) {
+            if (existingLocalData[date]) {
+                const existingEvents = existingLocalData[date];
+                officialData[date].forEach(newEvent => {
+                    // Try to find matching event in existing data to restore pttData
+                    // We match by ID first, or fallback to location+organization if ID generation changed (shouldn't change though)
+                    const storedEvent = existingEvents.find(e =>
+                        e.id === newEvent.id ||
+                        (e.organization === newEvent.organization && e.location === newEvent.location)
+                    );
+
+                    if (storedEvent && storedEvent.pttData) {
+                        newEvent.pttData = storedEvent.pttData;
+                        restoredCount++;
+                    }
+                });
+            }
+        }
+        console.log(`✅ Preserved PTT data for ${restoredCount} events from local backup.`);
     }
-    console.log(`Merged PTT data: ${matchCount} matches found.`);
+
     return officialData;
 }
 
@@ -344,14 +391,27 @@ async function processMonth(year, month, pttData) {
     const { startDate, endDate } = getMonthDateRange(year, month);
     console.log(`日期範圍: ${startDate} ~ ${endDate}`);
 
+    const fileName = getMonthFileName(year, month);
+    const filePath = path.join(process.cwd(), 'data', fileName);
+
+    // 1. Try to read existing data for backup
+    let existingData = null;
+    try {
+        const fileContent = await fs.readFile(filePath, 'utf-8');
+        existingData = JSON.parse(fileContent);
+        console.log(`Found existing local file: ${fileName}`);
+    } catch (e) {
+        console.log(`No existing local file found for ${fileName}, creating new. ${e}`);
+    }
+
     const officialData = await crawlData(startDate, endDate);
-    const mergedData = mergeData(officialData, pttData);
+
+    // 2. Pass existingData to mergeData for fallback
+    const mergedData = mergeData(officialData, pttData, existingData);
 
     const totalEvents = Object.values(mergedData).reduce((sum, events) => sum + events.length, 0);
     console.log(`包含 ${Object.keys(mergedData).length} 個日期，共 ${totalEvents} 筆活動`);
 
-    const fileName = getMonthFileName(year, month);
-    const filePath = path.join(process.cwd(), 'data', fileName);
     console.log(`儲存至: ${fileName}`);
     await saveLocalData(mergedData, filePath);
     return totalEvents;
@@ -382,15 +442,6 @@ async function updateData() {
         await processMonth(nextYear, nextMonth, pttData);
 
         // Git operations are now handled by GitHub Actions
-        // console.log('\n提交 Git...');
-        // try {
-        //     await execPromise('git add .');
-        //     await execPromise(`git commit -m "Update data (Current & Next Month): ${new Date().toISOString()}"`);
-        //     await execPromise('git push');
-        // } catch (gitError) {
-        //     console.log('Git commit skipped or failed:', gitError.message);
-        // }
-
         console.log('資料更新完成！');
     } catch (error) {
         console.error('更新失敗:', error);
