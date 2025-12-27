@@ -1,14 +1,16 @@
 // app/page.tsx
 import SearchableDonationList from "@/components/SearchableDonationList";
 
-
 export default async function BloodDonationPage() {
   let data;
   let error = null;
 
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const response = await fetch(`${baseUrl}/api/blood-donations`);
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    // Add no-store to ensure we get fresh data from the API
+    const response = await fetch(`${baseUrl}/api/blood-donations`, {
+      cache: "no-store",
+    });
     const apiData = await response.json();
     data = apiData.data;
 

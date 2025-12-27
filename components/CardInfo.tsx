@@ -1,7 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Clock, Building2, ExternalLink } from "lucide-react";
+import { MapPin, Clock, Building2, ExternalLink, Gift } from "lucide-react";
 import { useState } from "react";
-import ImageUploadModal from "./ImageUploadModal";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 interface DonationEvent {
   id?: string;
@@ -12,7 +18,12 @@ interface DonationEvent {
   customNote?: string;
   date: string;
   center?: string;
-  detailUrl?: string; // 新增詳情頁連結
+  detailUrl?: string; // Still needed for logic potentially, or PTT url fallback
+  pttData?: {
+    rawLine: string;
+    images: string[];
+    url: string;
+  };
 }
 
 interface CardInfoProps {
@@ -42,38 +53,12 @@ const highlightText = (text: string, keyword: string) => {
   );
 };
 
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Loader2, Image as ImageIcon } from "lucide-react";
-
 export default function CardInfo({
   donation,
   searchKeyword,
   className = "",
 }: CardInfoProps) {
-  const [image, setImage] = useState<string | null>(null);
-  const [fetchedImages, setFetchedImages] = useState<string[]>([]);
-  const [isLoadingImages, setIsLoadingImages] = useState(false);
-  const [isImageDialogOpen, setIsImageDialogOpen] = useState(false);
-
-  // 呼叫 API 抓取圖片
-  const fetchEventImages = async () => {
-    if (!donation.detailUrl || fetchedImages.length > 0) return;
-
-    setIsLoadingImages(true);
-    try {
-      const res = await fetch(
-        `/api/event-images?url=${encodeURIComponent(donation.detailUrl)}`
-      );
-      const data = await res.json();
-      if (data.images && data.images.length > 0) {
-        setFetchedImages(data.images);
-      }
-    } catch (error) {
-      console.error("Failed to fetch images", error);
-    } finally {
-      setIsLoadingImages(false);
-    }
-  };
+  const [isPttDialogOpen, setIsPttDialogOpen] = useState(false);
 
   // 根據中心決定顏色標籤
   const getCenterColor = (center?: string) => {
@@ -119,74 +104,85 @@ export default function CardInfo({
               )}
 
               <div className="ml-auto flex items-center gap-2">
-                {/* 官方活動圖片查看器 */}
-                {donation.detailUrl && (
+                {/* PTT Information Dialog */}
+                {donation.pttData && (
                   <Dialog
-                    open={isImageDialogOpen}
-                    onOpenChange={(open) => {
-                      setIsImageDialogOpen(open);
-                      if (open) fetchEventImages();
-                    }}
+                    open={isPttDialogOpen}
+                    onOpenChange={setIsPttDialogOpen}
                   >
                     <DialogTrigger asChild>
                       <button
-                        className="p-1.5 text-gray-400 hover:text-blue-500 hover:bg-blue-50 rounded-full transition-colors"
-                        title="查看活動圖片"
+                        className="p-1.5 text-pink-500 hover:text-pink-600 hover:bg-pink-50 rounded-full transition-colors relative"
+                        title="查看活動詳情與贈品"
                       >
-                        <ImageIcon className="w-5 h-5" />
+                        <Gift className="w-5 h-5" />
+                        <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
+                        </span>
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
-                      <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                        <ImageIcon className="w-5 h-5" />
-                        活動現場圖片
-                      </h3>
+                    <DialogContent className="max-w-md max-h-[90vh] p-0 gap-0 overflow-hidden flex flex-col">
+                      <DialogHeader className="p-4 pb-2 border-b flex-none bg-white z-10">
+                        <DialogTitle className="flex items-center gap-2 text-gray-800">
+                          <span className="bg-pink-100 p-1.5 rounded-full">
+                            <Gift className="w-5 h-5 text-pink-500" />
+                          </span>
+                          活動與贈品詳情
+                        </DialogTitle>
+                      </DialogHeader>
 
-                      {isLoadingImages ? (
-                        <div className="flex flex-col items-center justify-center py-12 text-gray-500">
-                          <Loader2 className="w-8 h-8 animate-spin mb-2" />
-                          <p>正在從捐血中心抓取圖片...</p>
-                        </div>
-                      ) : fetchedImages.length > 0 ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {fetchedImages.map((imgUrl, idx) => (
-                            <div
-                              key={idx}
-                              className="rounded-lg overflow-hidden border border-gray-200"
+                      <div className="overflow-y-auto p-4 flex-grow">
+                        {/* 1. 優先顯示圖片 (Images First) */}
+                        {donation.pttData.images &&
+                        donation.pttData.images.length > 0 ? (
+                          <div className="space-y-4 mb-6">
+                            {donation.pttData.images.map((imgUrl, idx) => (
+                              <div
+                                key={idx}
+                                className="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50"
+                              >
+                                <img
+                                  src={imgUrl}
+                                  alt={`活動圖片 ${idx + 1}`}
+                                  className="w-full h-auto object-contain" // Changed to contain to show full poster
+                                  loading="lazy"
+                                  onError={(e) => {
+                                    const target = e.target as HTMLImageElement;
+                                    target.style.display = "none";
+                                  }}
+                                />
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <div className="text-center py-10 bg-gray-50 rounded-xl mb-6">
+                            <p className="text-gray-400">目前沒有圖片資訊</p>
+                          </div>
+                        )}
+
+                        {/* 2. 文字資訊放在下方 (Secondary Text Info) */}
+                        <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+                          <h4 className="text-sm font-semibold text-slate-700 mb-2 flex items-center justify-between">
+                            原始回報資訊
+                            <a
+                              href={donation.pttData.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="text-blue-500 hover:text-blue-600 text-xs font-normal flex items-center gap-1"
                             >
-                              <img
-                                src={imgUrl}
-                                alt={`Event image ${idx + 1}`}
-                                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
-                                loading="lazy"
-                              />
-                            </div>
-                          ))}
+                              <span>PTT 原文</span>
+                              <ExternalLink className="w-3 h-3" />
+                            </a>
+                          </h4>
+                          <p className="text-slate-600 text-sm whitespace-pre-wrap leading-relaxed">
+                            {donation.pttData.rawLine}
+                          </p>
                         </div>
-                      ) : (
-                        <div className="text-center py-12 text-gray-400 bg-gray-50 rounded-lg border border-dashed border-gray-300">
-                          <p>此活動頁面似乎沒有提供圖片</p>
-                          <a
-                            href={donation.detailUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="text-blue-500 hover:underline mt-2 inline-block text-sm"
-                          >
-                            前往原始網頁查看 ({donation.center})
-                          </a>
-                        </div>
-                      )}
+                      </div>
                     </DialogContent>
                   </Dialog>
                 )}
-
-                <ImageUploadModal
-                  image={image}
-                  setImage={setImage}
-                  donationID={donation.id}
-                  organization={donation.organization}
-                  date={donation.date}
-                />
               </div>
             </div>
           </div>
