@@ -156,18 +156,22 @@ function mergeData(officialData, pttData) {
 
         if (pttEventsForDate.length > 0) {
             events.forEach(event => {
-                const eventLoc = event.location || event.center || '';
+                let eventLoc = event.location || event.center || '';
+                // Normalize official location
+                eventLoc = eventLoc.replace(/台/g, '臺').replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
 
-                // Fuzzy Match
                 const matchedPtt = pttEventsForDate.find(p => {
-                    // Remove punctuation/spaces for comparison
-                    const pLoc = p.locationStr.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
-                    const oLoc = eventLoc.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+                    // Split PTT location info by common delimiters
+                    let pLocRaw = p.locationStr.replace(/台/g, '臺');
+                    const pLocs = pLocRaw.split(/[\/、,，]/).map(s => s.trim()).filter(s => s);
 
-                    if (!pLoc || !oLoc) return false;
+                    return pLocs.some(subLoc => {
+                        const pLocClean = subLoc.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+                        if (!pLocClean || !eventLoc) return false;
 
-                    // Check if one contains the other
-                    return pLoc.includes(oLoc) || oLoc.includes(pLoc);
+                        // Check inclusion
+                        return eventLoc.includes(pLocClean) || pLocClean.includes(eventLoc);
+                    });
                 });
 
                 if (matchedPtt) {
