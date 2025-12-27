@@ -4,6 +4,7 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 import { exec } from 'child_process';
 import util from 'util';
+import https from 'https';
 
 const execPromise = util.promisify(exec);
 
@@ -51,10 +52,32 @@ async function crawlData() {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
         'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
     };
+
+    // 建立自訂的 HTTPS Agent 來處理連線
+    const httpsAgent = new https.Agent({
+        rejectUnauthorized: false, // 允許自簽證書
+        keepAlive: true,
+    });
+
     const donationsByDate = {};
 
     for (const url of urls) {
-        const response = await axios.get(url, { headers });
+        const response = await axios.get(url, {
+            headers,
+            httpsAgent,
+            maxRedirects: 0, // 不自動跟隨重定向，避免錯誤的 http:443 重定向
+            validateStatus: (status) => status >= 200 && status < 400, // 接受 3xx 狀態碼
+        }).catch(async (error) => {
+            // 如果是重定向錯誤，手動處理
+            if (error.response && error.response.status >= 300 && error.response.status < 400) {
+                // 取得正確的 HTTPS URL
+                const redirectUrl = error.response.headers.location;
+                // 修正錯誤的 http:443 重定向為 https
+                const correctedUrl = redirectUrl.replace('http://www.', 'https://www.').replace(':443', '');
+                return axios.get(correctedUrl, { headers, httpsAgent });
+            }
+            throw error;
+        });
         const $ = cheerio.load(response.data);
 
         $('table#ctl00_ContentPlaceHolder1_cale_bloodSpotCalendar tbody tr td').each((_, element) => {
