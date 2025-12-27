@@ -75,10 +75,18 @@ async function fetchPttData() {
                             // Date pattern: e.g., 12/27(六), 1/3(六)
                             const dateMatch = trimmed.match(/^(\d{1,2}\/\d{1,2})/);
                             if (dateMatch) {
+                                let loc = trimmed.substring(dateMatch[0].length).trim();
+                                // Clean up extended date info (ranges, parens)
+                                // e.g. "-12/28", "(六)", "(六-日)"
+                                loc = loc.replace(/^(\s*-\s*\d{1,2}\/\d{1,2})/, '')
+                                    .replace(/^\s*\(.*?\)/, '')
+                                    .replace(/^\s*[-~]\s*/, '') // Remove leading separators
+                                    .trim();
+
                                 pttEvents.push({
                                     matchDate: dateMatch[1],
                                     rawLine: trimmed,
-                                    locationStr: trimmed.substring(dateMatch[0].length).trim(), // Remove date part
+                                    locationStr: loc,
                                     images: [],
                                 });
                                 lastTextLine = pttEvents[pttEvents.length - 1];
@@ -97,10 +105,17 @@ async function fetchPttData() {
                 const text = $(node).text().trim();
                 const dateMatch = text.match(/^(\d{1,2}\/\d{1,2})/);
                 if (dateMatch) {
+                    let loc = text.substring(dateMatch[0].length).trim();
+                    // Clean up extended date info
+                    loc = loc.replace(/^(\s*-\s*\d{1,2}\/\d{1,2})/, '')
+                        .replace(/^\s*\(.*?\)/, '')
+                        .replace(/^\s*[-~]\s*/, '')
+                        .trim();
+
                     pttEvents.push({
                         matchDate: dateMatch[1],
                         rawLine: text,
-                        locationStr: text.substring(dateMatch[0].length).trim(),
+                        locationStr: loc,
                         images: [],
                     });
                     lastTextLine = pttEvents[pttEvents.length - 1];
@@ -123,8 +138,6 @@ async function fetchPttData() {
         pttEvents = pttEvents.map(e => {
             const [m, d] = e.matchDate.split('/').map(Number);
 
-            // Determine year. If event month < current month (with buffer), probably next year.
-            // Example: Post in Dec 2024. Event in Jan (1) -> 2025.
             let year = currentYear;
             if (currentMonth >= 11 && m <= 2) {
                 year = currentYear + 1;
@@ -166,8 +179,9 @@ function mergeData(officialData, pttData) {
                     const pLocs = pLocRaw.split(/[\/、,，]/).map(s => s.trim()).filter(s => s);
 
                     return pLocs.some(subLoc => {
-                        const pLocClean = subLoc.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
-                        if (!pLocClean || !eventLoc) return false;
+                        let pLocClean = subLoc.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+                        // Filter out short numeric tokens or very short strings
+                        if (!pLocClean || pLocClean.length < 2 || /^\d+$/.test(pLocClean)) return false;
 
                         // Check inclusion
                         return eventLoc.includes(pLocClean) || pLocClean.includes(eventLoc);
