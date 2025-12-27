@@ -16,6 +16,8 @@ const bloodCenters = [
     { name: '高雄', baseUrl: 'https://www.ks.blood.org.tw', xsmsid: '0P078610132470612427' },
 ];
 
+const PTT_URL = 'https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html';
+
 // 生成當月的文件名
 function getCurrentMonthFileName() {
     const currentDate = new Date();
@@ -42,6 +44,145 @@ function getCurrentMonthDateRange() {
 // 保存資料到本地文件（日期格式已經是標準格式）
 async function saveLocalData(data, filePath) {
     await fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf-8');
+}
+
+async function fetchPttData() {
+    console.log('Fetching PTT data...');
+    try {
+        const response = await axios.get(PTT_URL, {
+            headers: { 'User-Agent': 'Mozilla/5.0' }
+        });
+        const $ = cheerio.load(response.data);
+        const mainContent = $('#main-content');
+
+        // Remove metadata lines
+        mainContent.find('.article-metaline, .article-metaline-right').remove();
+
+        let pttEvents = [];
+        let lastTextLine = null;
+
+        // Use contents() to traverse nodes including text and elements
+        const contents = mainContent.contents();
+
+        contents.each((i, node) => {
+            if (node.type === 'text') {
+                const text = $(node).text();
+                if (text) {
+                    const lines = text.split('\n');
+                    lines.forEach(line => {
+                        const trimmed = line.trim();
+                        if (trimmed) {
+                            // Date pattern: e.g., 12/27(六), 1/3(六)
+                            const dateMatch = trimmed.match(/^(\d{1,2}\/\d{1,2})/);
+                            if (dateMatch) {
+                                pttEvents.push({
+                                    matchDate: dateMatch[1],
+                                    rawLine: trimmed,
+                                    locationStr: trimmed.substring(dateMatch[0].length).trim(), // Remove date part
+                                    images: [],
+                                });
+                                lastTextLine = pttEvents[pttEvents.length - 1];
+                            }
+                        }
+                    });
+                }
+            } else if (node.type === 'tag' && node.name === 'a') {
+                const href = $(node).attr('href');
+                // Associate image link with the last found event line
+                if (href && lastTextLine && (href.match(/\.(jpg|jpeg|png)$/i) || href.includes('imgur.com'))) {
+                    lastTextLine.images.push(href);
+                }
+            } else if (node.type === 'tag' && node.name === 'span') {
+                // Handle colored text (often used for emphasis in PTT)
+                const text = $(node).text().trim();
+                const dateMatch = text.match(/^(\d{1,2}\/\d{1,2})/);
+                if (dateMatch) {
+                    pttEvents.push({
+                        matchDate: dateMatch[1],
+                        rawLine: text,
+                        locationStr: text.substring(dateMatch[0].length).trim(),
+                        images: [],
+                    });
+                    lastTextLine = pttEvents[pttEvents.length - 1];
+                }
+
+                // Allow finding links inside span
+                $(node).find('a').each((i, a) => {
+                    const href = $(a).attr('href');
+                    if (href && lastTextLine && (href.match(/\.(jpg|jpeg|png)$/i) || href.includes('imgur.com'))) {
+                        lastTextLine.images.push(href);
+                    }
+                });
+            }
+        });
+
+        // Normalize Data
+        const currentYear = new Date().getFullYear(); // e.g. 2024
+        const currentMonth = new Date().getMonth() + 1; // e.g. 12
+
+        pttEvents = pttEvents.map(e => {
+            const [m, d] = e.matchDate.split('/').map(Number);
+
+            // Determine year. If event month < current month (with buffer), probably next year.
+            // Example: Post in Dec 2024. Event in Jan (1) -> 2025.
+            let year = currentYear;
+            if (currentMonth >= 11 && m <= 2) {
+                year = currentYear + 1;
+            } else if (currentMonth <= 2 && m >= 11) {
+                year = currentYear - 1; // Unlikely but possible for archives
+            }
+
+            e.date = `${year}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+            return e;
+        });
+
+        console.log(`Fetched ${pttEvents.length} events from PTT`);
+        return pttEvents;
+    } catch (e) {
+        console.error('Error fetching PTT data:', e.message);
+        return [];
+    }
+}
+
+function mergeData(officialData, pttData) {
+    if (!pttData || pttData.length === 0) return officialData;
+
+    let matchCount = 0;
+
+    // Iterate official data
+    for (const date in officialData) {
+        const events = officialData[date];
+        const pttEventsForDate = pttData.filter(p => p.date === date);
+
+        if (pttEventsForDate.length > 0) {
+            events.forEach(event => {
+                const eventLoc = event.location || event.center || '';
+
+                // Fuzzy Match
+                const matchedPtt = pttEventsForDate.find(p => {
+                    // Remove punctuation/spaces for comparison
+                    const pLoc = p.locationStr.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+                    const oLoc = eventLoc.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+
+                    if (!pLoc || !oLoc) return false;
+
+                    // Check if one contains the other
+                    return pLoc.includes(oLoc) || oLoc.includes(pLoc);
+                });
+
+                if (matchedPtt) {
+                    event.pttData = {
+                        rawLine: matchedPtt.rawLine,
+                        images: matchedPtt.images,
+                        url: PTT_URL
+                    };
+                    matchCount++;
+                }
+            });
+        }
+    }
+    console.log(`Merged PTT data: ${matchCount} matches found.`);
+    return officialData;
 }
 
 // 從新版網站爬取單一中心的資料
@@ -174,7 +315,9 @@ async function crawlData() {
 async function updateData() {
     try {
         console.log('開始爬取資料...');
-        const data = await crawlData();
+        const officialData = await crawlData();
+        const pttData = await fetchPttData();
+        const data = mergeData(officialData, pttData);
 
         const totalEvents = Object.values(data).reduce((sum, events) => sum + events.length, 0);
         console.log(`共爬取 ${Object.keys(data).length} 個日期，${totalEvents} 筆活動`);
@@ -184,10 +327,16 @@ async function updateData() {
         const filePath = path.join(process.cwd(), 'data', fileName);
         await saveLocalData(data, filePath);
 
+        // Optional: Ensure git logic is safe or commented out if not desired locally
+        // For now, keeping it as requested/existing
         console.log('提交 Git...');
-        await execPromise('git add .');
-        await execPromise(`git commit -m "Update data: ${new Date().toISOString()}"`);
-        await execPromise('git push');
+        try {
+            await execPromise('git add .');
+            await execPromise(`git commit -m "Update data: ${new Date().toISOString()}"`);
+            await execPromise('git push');
+        } catch (gitError) {
+            console.log('Git commit skipped or failed:', gitError.message);
+        }
 
         console.log('資料更新完成！');
     } catch (error) {
