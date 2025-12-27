@@ -18,20 +18,14 @@ const bloodCenters = [
 
 const PTT_URL = 'https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html';
 
-// 生成當月的文件名
-function getCurrentMonthFileName() {
-    const currentDate = new Date();
-    const year = currentDate.getFullYear();
-    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-    return `bloodInfo-${year}${month}.json`;
+// 生成指定月份的文件名
+function getMonthFileName(year, month) {
+    const mStr = String(month).padStart(2, '0');
+    return `bloodInfo-${year}${mStr}.json`;
 }
 
-// 取得當月的日期範圍
-function getCurrentMonthDateRange() {
-    const currentDate = new Date();
-    const year = currentDate.getFullYear();
-    const month = currentDate.getMonth() + 1;
-
+// 取得指定月份的日期範圍
+function getMonthDateRange(year, month) {
     const startDate = `${year}/${String(month).padStart(2, '0')}/01`;
 
     // 計算當月最後一天
@@ -139,6 +133,7 @@ async function fetchPttData() {
             const [m, d] = e.matchDate.split('/').map(Number);
 
             let year = currentYear;
+            // Simple logic: if current month is Dec (12), and event is Jan (1) or Feb (2), it's next year
             if (currentMonth >= 11 && m <= 2) {
                 year = currentYear + 1;
             } else if (currentMonth <= 2 && m >= 11) {
@@ -220,13 +215,12 @@ function mergeData(officialData, pttData) {
 }
 
 // 從新版網站爬取單一中心的資料
-async function crawlCenter(center, httpsAgent, headers) {
-    const { startDate, endDate } = getCurrentMonthDateRange();
+async function crawlCenter(center, startDate, endDate, httpsAgent, headers) {
     const donationsByDate = {};
     let page = 1;
     let hasMorePages = true;
 
-    console.log(`  爬取 ${center.name} 捐血中心...`);
+    console.log(`  爬取 ${center.name} 捐血中心 (${startDate} ~ ${endDate})...`);
 
     while (hasMorePages) {
         const url = `${center.baseUrl}/xcevent?xsmsid=${center.xsmsid}&donationdatebegin=${encodeURIComponent(startDate)}&donationdateend=${encodeURIComponent(endDate)}&page=${page}`;
@@ -312,7 +306,7 @@ async function crawlCenter(center, httpsAgent, headers) {
 }
 
 // 爬取所有中心的數據
-async function crawlData() {
+async function crawlData(startDate, endDate) {
     const headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -328,7 +322,7 @@ async function crawlData() {
 
     for (const center of bloodCenters) {
         try {
-            const centerData = await crawlCenter(center, httpsAgent, headers);
+            const centerData = await crawlCenter(center, startDate, endDate, httpsAgent, headers);
 
             // 合併資料
             for (const date in centerData) {
@@ -345,28 +339,53 @@ async function crawlData() {
     return allDonations;
 }
 
+async function processMonth(year, month, pttData) {
+    console.log(`\n=== 處理 ${year} 年 ${month} 月資料 ===`);
+    const { startDate, endDate } = getMonthDateRange(year, month);
+    console.log(`日期範圍: ${startDate} ~ ${endDate}`);
+
+    const officialData = await crawlData(startDate, endDate);
+    const mergedData = mergeData(officialData, pttData);
+
+    const totalEvents = Object.values(mergedData).reduce((sum, events) => sum + events.length, 0);
+    console.log(`包含 ${Object.keys(mergedData).length} 個日期，共 ${totalEvents} 筆活動`);
+
+    const fileName = getMonthFileName(year, month);
+    const filePath = path.join(process.cwd(), 'data', fileName);
+    console.log(`儲存至: ${fileName}`);
+    await saveLocalData(mergedData, filePath);
+    return totalEvents;
+}
+
 // 主邏輯：更新數據
 async function updateData() {
     try {
-        console.log('開始爬取資料...');
-        const officialData = await crawlData();
+        console.log('開始更新資料...');
+
+        // 1. 先取得 PTT 資料 (一次性)
         const pttData = await fetchPttData();
-        const data = mergeData(officialData, pttData);
 
-        const totalEvents = Object.values(data).reduce((sum, events) => sum + events.length, 0);
-        console.log(`共爬取 ${Object.keys(data).length} 個日期，${totalEvents} 筆活動`);
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        const currentMonth = now.getMonth() + 1; // 1-12
 
-        console.log('儲存資料...');
-        const fileName = getCurrentMonthFileName();
-        const filePath = path.join(process.cwd(), 'data', fileName);
-        await saveLocalData(data, filePath);
+        // 2. 處理當前月份
+        await processMonth(currentYear, currentMonth, pttData);
 
-        // Optional: Ensure git logic is safe or commented out if not desired locally
-        // For now, keeping it as requested/existing
-        console.log('提交 Git...');
+        // 3. 處理下一個月份
+        let nextYear = currentYear;
+        let nextMonth = currentMonth + 1;
+        if (nextMonth > 12) {
+            nextMonth = 1;
+            nextYear++;
+        }
+        await processMonth(nextYear, nextMonth, pttData);
+
+        // Optional: Commit
+        console.log('\n提交 Git...');
         try {
             await execPromise('git add .');
-            await execPromise(`git commit -m "Update data: ${new Date().toISOString()}"`);
+            await execPromise(`git commit -m "Update data (Current & Next Month): ${new Date().toISOString()}"`);
             await execPromise('git push');
         } catch (gitError) {
             console.log('Git commit skipped or failed:', gitError.message);
