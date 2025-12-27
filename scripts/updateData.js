@@ -381,15 +381,15 @@ async function updateData() {
         }
         await processMonth(nextYear, nextMonth, pttData);
 
-        // Optional: Commit
-        console.log('\n提交 Git...');
-        try {
-            await execPromise('git add .');
-            await execPromise(`git commit -m "Update data (Current & Next Month): ${new Date().toISOString()}"`);
-            await execPromise('git push');
-        } catch (gitError) {
-            console.log('Git commit skipped or failed:', gitError.message);
-        }
+        // Git operations are now handled by GitHub Actions
+        // console.log('\n提交 Git...');
+        // try {
+        //     await execPromise('git add .');
+        //     await execPromise(`git commit -m "Update data (Current & Next Month): ${new Date().toISOString()}"`);
+        //     await execPromise('git push');
+        // } catch (gitError) {
+        //     console.log('Git commit skipped or failed:', gitError.message);
+        // }
 
         console.log('資料更新完成！');
     } catch (error) {
