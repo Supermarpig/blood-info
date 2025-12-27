@@ -88,6 +88,17 @@ async function crawlCenter(center, httpsAgent, headers) {
                         // 轉換日期格式 2025/12/27 -> 2025-12-27
                         const formattedDate = dateText.replace(/\//g, '-');
 
+                        // 提取詳情頁連結
+                        const linkElement = $(cells[2]).find('a');
+                        let detailUrl = null;
+                        if (linkElement.length > 0) {
+                            const href = linkElement.attr('href');
+                            if (href) {
+                                // 處理相對路徑
+                                detailUrl = href.startsWith('http') ? href : `${center.baseUrl}${href}`;
+                            }
+                        }
+
                         const eventInfo = {
                             id: Buffer.from(`${center.name}-${dateText}-${time}-${organization}`).toString('base64'),
                             time: time,
@@ -96,6 +107,7 @@ async function crawlCenter(center, httpsAgent, headers) {
                             rawContent: `${time} ${organization} ${location}`,
                             activityDate: formattedDate,
                             center: center.name,
+                            detailUrl: detailUrl, // 新增詳情頁連結
                         };
 
                         if (!donationsByDate[formattedDate]) {
