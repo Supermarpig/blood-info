@@ -78,21 +78,6 @@ function getCurrentMonthFileName(): string {
   return `bloodInfo-${year}${month}.json`;
 }
 
-// 檢查當月的 JSON 文件是否存在
-async function findCurrentMonthFile(): Promise<string | null> {
-  const fileName = getCurrentMonthFileName();
-  const filePath = path.join(process.cwd(), "data", fileName);
-
-  try {
-    // 檢查文件是否存在
-    await fs.access(filePath);
-    return filePath; // 文件存在，返回文件路徑
-  } catch (error) {
-    console.error(`File not found: ${filePath} ,${error}`);
-    return null; // 文件不存在
-  }
-}
-
 // 定義函數將中文日期轉換為標準日期格式
 function parseChineseDate(chineseDate: string): string {
   const currentYear = new Date().getFullYear();

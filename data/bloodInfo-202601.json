@@ -3441,7 +3441,10 @@
         "images": [
           "https://i.imgur.com/mkg3wHu.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": [
+          "食品"
+        ]
       }
     },
     {
@@ -4705,7 +4708,9 @@
       "activityDate": "2026-01-17",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
-      "tags": [],
+      "tags": [
+        "禮券"
+      ],
       "pttData": {
         "rawLine": "1/17(六)台南安南同慶宮（首捐禮：王品禮券$500）",
         "images": [
@@ -4713,7 +4718,9 @@
           "https://i.imgur.com/GVHegoB.jpeg"
         ],
         "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
-        "tags": []
+        "tags": [
+          "禮券"
+        ]
       },
       "isPttOnly": true
     }

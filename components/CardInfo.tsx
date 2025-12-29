@@ -172,10 +172,11 @@ export default function CardInfo({
                                 key={idx}
                                 className="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50"
                               >
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                   src={imgUrl}
                                   alt={`活動圖片 ${idx + 1}`}
-                                  className="w-full h-auto object-contain" // Changed to contain to show full poster
+                                  className="w-full h-auto object-contain"
                                   loading="lazy"
                                   onError={(e) => {
                                     const target = e.target as HTMLImageElement;
