@@ -174,10 +174,11 @@ async function fetchPttData() {
     }
 }
 
-function mergeData(officialData, pttData, existingLocalData = null) {
+function mergeData(officialData, pttData, existingLocalData = null, targetYear = null, targetMonth = null) {
     // If we have valid new PTT data, proceed with normal matching
     if (pttData && pttData.length > 0) {
         let matchCount = 0;
+        let preservedCount = 0;
         const noiseWords = [
             '台北', '臺北', '新北', '基隆', '桃園', '新竹', '苗栗', '台中', '臺中', '彰化', '雲林', '南投', '嘉義', '台南', '臺南', '高雄', '屏東', '宜蘭', '花蓮', '台東', '臺東',
             '捐血室', '捐血站', '捐血車', '巡迴車', '捷運站', '公園', '出口', '配合'
@@ -186,14 +187,18 @@ function mergeData(officialData, pttData, existingLocalData = null) {
         for (const date in officialData) {
             const events = officialData[date];
             const pttEventsForDate = pttData.filter(p => p.date === date);
+            const existingEventsForDate = existingLocalData?.[date] || [];
 
-            if (pttEventsForDate.length > 0) {
-                events.forEach(event => {
-                    let eventLoc = event.location || event.center || '';
-                    // Normalize official location
-                    eventLoc = eventLoc.replace(/台/g, '臺').replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+            events.forEach(event => {
+                let eventLoc = event.location || event.center || '';
+                // Normalize official location
+                eventLoc = eventLoc.replace(/台/g, '臺').replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
 
-                    const matchedPtt = pttEventsForDate.find(p => {
+                let matchedPtt = null;
+
+                // 只有當該日期有 PTT 資料時才嘗試匹配
+                if (pttEventsForDate.length > 0) {
+                    matchedPtt = pttEventsForDate.find(p => {
                         // Split PTT location info by common delimiters
                         let pLocRaw = p.locationStr.replace(/台/g, '臺');
                         const pLocs = pLocRaw.split(/[\/、,，\s]+/).map(s => s.trim()).filter(s => s);
@@ -219,19 +224,75 @@ function mergeData(officialData, pttData, existingLocalData = null) {
                             return eventLoc.includes(pLocClean);
                         });
                     });
+                }
 
-                    if (matchedPtt) {
-                        event.pttData = {
-                            rawLine: matchedPtt.rawLine,
-                            images: matchedPtt.images,
-                            url: PTT_URL
-                        };
-                        matchCount++;
+                if (matchedPtt) {
+                    // 新的 PTT 資料匹配成功
+                    event.pttData = {
+                        rawLine: matchedPtt.rawLine,
+                        images: matchedPtt.images,
+                        url: PTT_URL
+                    };
+                    matchCount++;
+                } else if (existingEventsForDate.length > 0) {
+                    // 匹配失敗，嘗試從舊資料保留 pttData
+                    const storedEvent = existingEventsForDate.find(e =>
+                        e.id === event.id ||
+                        (e.organization === event.organization && e.location === event.location)
+                    );
+
+                    if (storedEvent?.pttData) {
+                        event.pttData = storedEvent.pttData;
+                        preservedCount++;
                     }
-                });
-            }
+                }
+            });
         }
-        console.log(`Merged PTT data: ${matchCount} matches found.`);
+        // 新增：將未匹配的 PTT 資料作為獨立記錄加入（只加入符合目標月份的）
+        let unmatchedCount = 0;
+        pttData.forEach(pttEvent => {
+            // 檢查這個 PTT 事件是否有圖片且未被任何官方活動匹配
+            if (pttEvent.images && pttEvent.images.length > 0) {
+                // 過濾：只處理符合目標月份的 PTT 事件
+                if (targetYear && targetMonth) {
+                    const [eventYear, eventMonth] = pttEvent.date.split('-').map(Number);
+                    if (eventYear !== targetYear || eventMonth !== targetMonth) {
+                        return; // 跳過不屬於當前月份的事件
+                    }
+                }
+
+                const dateEvents = officialData[pttEvent.date] || [];
+                const isMatched = dateEvents.some(event => event.pttData?.rawLine === pttEvent.rawLine);
+
+                if (!isMatched) {
+                    // 建立一筆獨立的 PTT 來源記錄
+                    const pttOnlyEvent = {
+                        id: Buffer.from(`ptt-${pttEvent.date}-${pttEvent.rawLine}`).toString('base64'),
+                        time: '',
+                        organization: pttEvent.locationStr || 'PTT 贈品資訊',
+                        location: pttEvent.locationStr,
+                        rawContent: pttEvent.rawLine,
+                        activityDate: pttEvent.date,
+                        center: 'PTT',
+                        detailUrl: PTT_URL,
+                        pttData: {
+                            rawLine: pttEvent.rawLine,
+                            images: pttEvent.images,
+                            url: PTT_URL
+                        },
+                        isPttOnly: true // 標記這是 PTT 獨有的資料
+                    };
+
+                    if (!officialData[pttEvent.date]) {
+                        officialData[pttEvent.date] = [];
+                    }
+                    officialData[pttEvent.date].push(pttOnlyEvent);
+                    unmatchedCount++;
+                }
+            }
+        });
+
+        console.log(`Merged PTT data: ${matchCount} new matches, ${preservedCount} preserved, ${unmatchedCount} PTT-only events added.`);
     } else if (existingLocalData) {
         // FALLBACK: If PTT fetch failed (pttData is null/empty), try to restore from existing file
         console.log('⚠️ PTT fetch failed or empty. Attempting to preserve PTT data from existing local file...');
@@ -407,7 +468,7 @@ async function processMonth(year, month, pttData) {
     const officialData = await crawlData(startDate, endDate);
 
     // 2. Pass existingData to mergeData for fallback
-    const mergedData = mergeData(officialData, pttData, existingData);
+    const mergedData = mergeData(officialData, pttData, existingData, year, month);
 
     const totalEvents = Object.values(mergedData).reduce((sum, events) => sum + events.length, 0);
     console.log(`包含 ${Object.keys(mergedData).length} 個日期，共 ${totalEvents} 筆活動`);

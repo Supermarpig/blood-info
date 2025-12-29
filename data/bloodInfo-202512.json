@@ -4869,6 +4869,24 @@
       "activityDate": "2025-12-11",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P324402270330982308"
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMTEtMTIvMTEo5ZubKei1t++8jOW9sOWMluaNkOihgOermeaNkOihgOmAgeeZveaymeWxr+WqveelluW5tOabhjHku70o6YCB5a6M54K65q2iKQ==",
+      "time": "",
+      "organization": "起，彰化捐血站捐血送白沙屯媽祖年曆1份(送完為止)",
+      "location": "起，彰化捐血站捐血送白沙屯媽祖年曆1份(送完為止)",
+      "rawContent": "12/11(四)起，彰化捐血站捐血送白沙屯媽祖年曆1份(送完為止)",
+      "activityDate": "2025-12-11",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "pttData": {
+        "rawLine": "12/11(四)起，彰化捐血站捐血送白沙屯媽祖年曆1份(送完為止)",
+        "images": [
+          "https://i.imgur.com/0KItbbi.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+      },
+      "isPttOnly": true
     }
   ],
   "2025-12-12": [
@@ -11305,6 +11323,60 @@
       "activityDate": "2025-12-24",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P337480360086263573"
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMjQtMTIvMjTotbfvvIzljZfmtbfjgIHlpKflronmjZDlhajooYAv5YiG6Zui6KGT6YCB6buD6YeR6IOc6IK957eK57e76Z2i6IacKOmAgeWujOeCuuatoik=",
+      "time": "",
+      "organization": "起，南海、大安捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+      "location": "起，南海、大安捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+      "rawContent": "12/24起，南海、大安捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+      "activityDate": "2025-12-24",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "pttData": {
+        "rawLine": "12/24起，南海、大安捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+        "images": [
+          "https://i.imgur.com/VufifUQ.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMjQtMTIvMjTotbfvvIzmlrDojorjgIHmnb/mqYvmjZDlhajooYAv5YiG6Zui6KGT6YCB6buD6YeR6IOc6IK957eK57e76Z2i6IacKOmAgeWujOeCuuatoik=",
+      "time": "",
+      "organization": "起，新莊、板橋捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+      "location": "起，新莊、板橋捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+      "rawContent": "12/24起，新莊、板橋捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+      "activityDate": "2025-12-24",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "pttData": {
+        "rawLine": "12/24起，新莊、板橋捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+        "images": [
+          "https://i.imgur.com/VufifUQ.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMjQtMTIvMjTotbfvvIzln7rpmobmjZDooYDnq5nmjZDlhajooYAv5YiG6Zui6KGT6YCB6buD6YeR6IOc6IK957eK57e76Z2i6IacKOmAgeWujOeCuuatoik=",
+      "time": "",
+      "organization": "起，基隆捐血站捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+      "location": "起，基隆捐血站捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+      "rawContent": "12/24起，基隆捐血站捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+      "activityDate": "2025-12-24",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "pttData": {
+        "rawLine": "12/24起，基隆捐血站捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
+        "images": [
+          "https://i.imgur.com/VufifUQ.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+      },
+      "isPttOnly": true
     }
   ],
   "2025-12-25": [
@@ -12461,7 +12533,14 @@
       "rawContent": "09:00~16:00 桃園辰威獅子會 桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2025-12-27",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P328602620490897714"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P328602620490897714",
+      "pttData": {
+        "rawLine": "12/27(六)桃園/南門捐血室",
+        "images": [
+          "https://i.imgur.com/Hcw1ujB.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjUvMTIvMjctMDk6MzB+MTY6MDAt5b2w5YyW5LiD5pif542F5a2Q5pyD",
@@ -13912,7 +13991,14 @@
       "rawContent": "09:30~16:30 救國團台南市歸仁區團委會 臺南市歸仁區中山路二段2號(歸仁區公所)",
       "activityDate": "2025-12-29",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P345610003658925883"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P345610003658925883",
+      "pttData": {
+        "rawLine": "12/29(一)台南歸仁區公所",
+        "images": [
+          "https://i.imgur.com/sydrEUh.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+      }
     },
     {
       "id": "6auY6ZuELTIwMjUvMTIvMjktMDk6MzB+MTg6MDAt5rC45oW25LiN5YuV55SiIOawuOe+qeaIv+WxiyDmnInlt6LmsI/miL/lsYsg5Y+w5oW25LiN5YuV55SiIOWbm+WTgeeJjOmrmOmbhOWNgOe2k+euoeacgw==",
@@ -13940,6 +14026,42 @@
         ],
         "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
       }
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMjktMTIvMjko5LiAKeWPsOS4reWMl+Wxr+advueruei3r+S6jOaute+8jOaNkOihgOmAgTIwMjbmtojpmLLmnIjmm4Yo6ZmQ6YePKQ==",
+      "time": "",
+      "organization": "台中北屯松竹路二段，捐血送2026消防月曆(限量)",
+      "location": "台中北屯松竹路二段，捐血送2026消防月曆(限量)",
+      "rawContent": "12/29(一)台中北屯松竹路二段，捐血送2026消防月曆(限量)",
+      "activityDate": "2025-12-29",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "pttData": {
+        "rawLine": "12/29(一)台中北屯松竹路二段，捐血送2026消防月曆(限量)",
+        "images": [
+          "https://i.imgur.com/PsEXIT6.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMjktMTIvMjktMTIvMzEo5LiALeS4iSnlj7DkuK3kuK3muK/mjZDooYDlrqQ=",
+      "time": "",
+      "organization": "台中中港捐血室",
+      "location": "台中中港捐血室",
+      "rawContent": "12/29-12/31(一-三)台中中港捐血室",
+      "activityDate": "2025-12-29",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "pttData": {
+        "rawLine": "12/29-12/31(一-三)台中中港捐血室",
+        "images": [
+          "https://i.imgur.com/zNczHYU.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+      },
+      "isPttOnly": true
     }
   ],
   "2025-12-30": [
@@ -14241,16 +14363,6 @@
       }
     },
     {
-      "id": "6auY6ZuELTIwMjUvMTIvMzAtMTA6MDB+MTg6MDAt6Ie65Y2X5biC5Y+w5rGf5paH5YyW5Lit5b+D",
-      "time": "10:00~18:00",
-      "organization": "臺南市台江文化中心",
-      "location": "臺南市安南區安吉路一段207號(台江文化中心)",
-      "rawContent": "10:00~18:00 臺南市台江文化中心 臺南市安南區安吉路一段207號(台江文化中心)",
-      "activityDate": "2025-12-30",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P345610010922984313"
-    },
-    {
       "id": "6auY6ZuELTIwMjUvMTIvMzAtMTA6MDB+MTg6MDAt5ZyL56uL5oiQ5Yqf5aSn5a24",
       "time": "10:00~18:00",
       "organization": "國立成功大學",
@@ -14259,6 +14371,24 @@
       "activityDate": "2025-12-30",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P345610010387005396"
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMzAtMTIvMzAtMTIvMzEo5LqMLeS4iSnlj7DljZfmnbHljYDlpKrlrZDmlofml4XliY0=",
+      "time": "",
+      "organization": "台南東區太子文旅前",
+      "location": "台南東區太子文旅前",
+      "rawContent": "12/30-12/31(二-三)台南東區太子文旅前",
+      "activityDate": "2025-12-30",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "pttData": {
+        "rawLine": "12/30-12/31(二-三)台南東區太子文旅前",
+        "images": [
+          "https://i.imgur.com/0ePcqI5.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+      },
+      "isPttOnly": true
     }
   ],
   "2025-12-31": [
@@ -14281,16 +14411,6 @@
       "activityDate": "2025-12-31",
       "center": "台北",
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0P360352828168143967"
-    },
-    {
-      "id": "5Y+w5YyXLTIwMjUvMTIvMzEtMTM6MDB+MjE6MDAt5rKQ6Jit542F5pyDQSAz",
-      "time": "13:00~21:00",
-      "organization": "沐蘭獅會A 3",
-      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
-      "rawContent": "13:00~21:00 沐蘭獅會A 3 臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
-      "activityDate": "2025-12-31",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0P360352823430627471"
     },
     {
       "id": "5Y+w5YyXLTIwMjUvMTIvMzEtMDk6MzB+MTY6MzAt5bq35a+n6Yar55mC6LKh5ZyY5rOV5Lq65bq35a+n6Yar6Zmi",
@@ -14511,6 +14631,24 @@
       "activityDate": "2025-12-31",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P345610021000732368"
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMzEtMTIvMzEo5LiJKeahg+WckumdkuWflOaWh+iIiOWFrOWckuaNkOihgOS6rQ==",
+      "time": "",
+      "organization": "桃園青埔文興公園捐血亭",
+      "location": "桃園青埔文興公園捐血亭",
+      "rawContent": "12/31(三)桃園青埔文興公園捐血亭",
+      "activityDate": "2025-12-31",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "pttData": {
+        "rawLine": "12/31(三)桃園青埔文興公園捐血亭",
+        "images": [
+          "https://i.imgur.com/FVOnFCt.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+      },
+      "isPttOnly": true
     }
   ]
 }
