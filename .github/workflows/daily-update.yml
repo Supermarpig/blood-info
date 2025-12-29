@@ -49,3 +49,5 @@ jobs:
           branch: chore/data-update-${{ github.run_id }}
           base: main
           delete-branch: true
+          add-paths: |
+            data/*
