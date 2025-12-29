@@ -5,6 +5,7 @@ import * as cheerio from 'cheerio';
 // import { exec } from 'child_process';
 // import util from 'util';
 import https from 'https';
+import { createWorker } from 'tesseract.js';
 
 // const execPromise = util.promisify(exec);
 
@@ -15,6 +16,86 @@ const bloodCenters = [
     { name: '台中', baseUrl: 'https://www.tc.blood.org.tw', xsmsid: '0P078610132470612427' },
     { name: '高雄', baseUrl: 'https://www.ks.blood.org.tw', xsmsid: '0P078610132470612427' },
 ];
+
+// 贈品關鍵字對應 tag
+const GIFT_TAG_MAPPING = {
+    '電影票': ['電影', '威秀', '國賓', '秀泰', 'in89', '美麗華', 'IMAX', '喜滿客', '京站'],
+    '禮券': ['禮券', '禮卷', '商品券', '折價券', '抵用券', '消費券'],
+    '超商': ['全家', '7-11', '711', '萊爾富', 'OK超商', '全聯', '家樂福', '美廉社'],
+    '餐飲': ['咖啡', '星巴克', '路易莎', '麥當勞', '肯德基', '摩斯', '飲料', '便當', '餐券', '早餐'],
+    '生活用品': ['毛巾', '購物袋', '環保袋', '餐具', '保溫杯', '雨傘', '衛生紙'],
+    '食品': ['米', '蛋', '泡麵', '餅乾', '零食', '麵包', '蛋糕'],
+};
+
+// 初始化 OCR worker (延遲載入)
+let ocrWorker = null;
+
+async function getOcrWorker() {
+    if (!ocrWorker) {
+        console.log('初始化 OCR 引擎...');
+        // 使用中文繁體識別
+        ocrWorker = await createWorker('chi_tra');
+        console.log('OCR 引擎初始化完成');
+    }
+    return ocrWorker;
+}
+
+// 從文字中識別贈品 tags
+function extractTagsFromText(text) {
+    const tags = new Set();
+    const lowerText = text.toLowerCase();
+
+    for (const [tag, keywords] of Object.entries(GIFT_TAG_MAPPING)) {
+        for (const keyword of keywords) {
+            if (lowerText.includes(keyword.toLowerCase())) {
+                tags.add(tag);
+                break;
+            }
+        }
+    }
+
+    return Array.from(tags);
+}
+
+// 下載圖片並進行 OCR 識別
+async function ocrImageUrl(imageUrl) {
+    try {
+        // 下載圖片
+        const response = await axios.get(imageUrl, {
+            responseType: 'arraybuffer',
+            timeout: 15000,
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+            },
+        });
+
+        const worker = await getOcrWorker();
+        const { data: { text } } = await worker.recognize(Buffer.from(response.data));
+
+        return text;
+    } catch (error) {
+        console.error(`OCR 識別失敗 (${imageUrl}): ${error.message}`);
+        return '';
+    }
+}
+
+// 對 PTT 事件的文字和圖片進行分析，提取 tags
+async function extractTagsFromEvent(rawLine, images) {
+    const allText = [rawLine]; // 先加入 rawLine 文字進行關鍵字匹配
+
+    // 只處理前 3 張圖片以節省時間
+    const imagesToProcess = (images || []).slice(0, 3);
+
+    for (const imageUrl of imagesToProcess) {
+        const text = await ocrImageUrl(imageUrl);
+        if (text) {
+            allText.push(text);
+        }
+    }
+
+    const combinedText = allText.join(' ');
+    return extractTagsFromText(combinedText);
+}
 
 const PTT_URL = 'https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html';
 
@@ -160,6 +241,27 @@ async function fetchPttData() {
             });
 
             console.log(`Fetched ${pttEvents.length} events from PTT`);
+
+            // OCR 識別圖片，提取贈品 tags
+            const eventsWithImages = pttEvents.filter(e => e.images && e.images.length > 0);
+            console.log(`開始 OCR 識別 ${eventsWithImages.length} 個有圖片的活動...`);
+
+            for (let i = 0; i < eventsWithImages.length; i++) {
+                const event = eventsWithImages[i];
+                console.log(`  [${i + 1}/${eventsWithImages.length}] 處理: ${event.locationStr || event.rawLine.substring(0, 30)}`);
+                event.tags = await extractTagsFromEvent(event.rawLine, event.images);
+                if (event.tags.length > 0) {
+                    console.log(`    → 識別到 tags: ${event.tags.join(', ')}`);
+                }
+            }
+
+            // 終止 OCR worker 釋放資源
+            if (ocrWorker) {
+                await ocrWorker.terminate();
+                ocrWorker = null;
+            }
+
+            console.log('OCR 識別完成');
             return pttEvents;
 
         } catch (e) {
@@ -231,8 +333,10 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                     event.pttData = {
                         rawLine: matchedPtt.rawLine,
                         images: matchedPtt.images,
-                        url: PTT_URL
+                        url: PTT_URL,
+                        tags: matchedPtt.tags || []
                     };
+                    event.tags = matchedPtt.tags || [];
                     matchCount++;
                 } else if (existingEventsForDate.length > 0) {
                     // 匹配失敗，嘗試從舊資料保留 pttData
@@ -275,10 +379,12 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                         activityDate: pttEvent.date,
                         center: 'PTT',
                         detailUrl: PTT_URL,
+                        tags: pttEvent.tags || [],
                         pttData: {
                             rawLine: pttEvent.rawLine,
                             images: pttEvent.images,
-                            url: PTT_URL
+                            url: PTT_URL,
+                            tags: pttEvent.tags || []
                         },
                         isPttOnly: true // 標記這是 PTT 獨有的資料
                     };

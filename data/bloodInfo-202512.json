@@ -4879,12 +4879,14 @@
       "activityDate": "2025-12-11",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
       "pttData": {
         "rawLine": "12/11(四)起，彰化捐血站捐血送白沙屯媽祖年曆1份(送完為止)",
         "images": [
           "https://i.imgur.com/0KItbbi.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
       },
       "isPttOnly": true
     }
@@ -11333,12 +11335,14 @@
       "activityDate": "2025-12-24",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
       "pttData": {
         "rawLine": "12/24起，南海、大安捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
         "images": [
           "https://i.imgur.com/VufifUQ.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
       },
       "isPttOnly": true
     },
@@ -11351,12 +11355,14 @@
       "activityDate": "2025-12-24",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
       "pttData": {
         "rawLine": "12/24起，新莊、板橋捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
         "images": [
           "https://i.imgur.com/VufifUQ.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
       },
       "isPttOnly": true
     },
@@ -11369,12 +11375,14 @@
       "activityDate": "2025-12-24",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
       "pttData": {
         "rawLine": "12/24起，基隆捐血站捐全血/分離術送黃金胜肽緊緻面膜(送完為止)",
         "images": [
           "https://i.imgur.com/VufifUQ.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
       },
       "isPttOnly": true
     }
@@ -13943,8 +13951,10 @@
         "images": [
           "https://i.imgur.com/kmBga3O.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
-      }
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "tags": []
     },
     {
       "id": "6auY6ZuELTIwMjUvMTIvMjktMDk6MDB+MTc6MDAt5LiJ5ZWG576O6YKm5Lq65aO9",
@@ -13960,8 +13970,10 @@
         "images": [
           "https://i.imgur.com/EiI45RA.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
-      }
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "tags": []
     },
     {
       "id": "6auY6ZuELTIwMjUvMTIvMjktMDg6MDB+MTc6MDAt5L2b5YWJ5bGx5a+26I+v5a+65Y+z5piM56ys5LqM5YiG5pyD",
@@ -13997,8 +14009,14 @@
         "images": [
           "https://i.imgur.com/sydrEUh.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
-      }
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": [
+          "餐飲"
+        ]
+      },
+      "tags": [
+        "餐飲"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjUvMTIvMjktMDk6MzB+MTg6MDAt5rC45oW25LiN5YuV55SiIOawuOe+qeaIv+WxiyDmnInlt6LmsI/miL/lsYsg5Y+w5oW25LiN5YuV55SiIOWbm+WTgeeJjOmrmOmbhOWNgOe2k+euoeacgw==",
@@ -14024,8 +14042,14 @@
         "images": [
           "https://i.imgur.com/QA3SU0U.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
-      }
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": [
+          "食品"
+        ]
+      },
+      "tags": [
+        "食品"
+      ]
     },
     {
       "id": "cHR0LTIwMjUtMTItMjktMTIvMjko5LiAKeWPsOS4reWMl+Wxr+advueruei3r+S6jOaute+8jOaNkOihgOmAgTIwMjbmtojpmLLmnIjmm4Yo6ZmQ6YePKQ==",
@@ -14036,12 +14060,14 @@
       "activityDate": "2025-12-29",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
       "pttData": {
         "rawLine": "12/29(一)台中北屯松竹路二段，捐血送2026消防月曆(限量)",
         "images": [
           "https://i.imgur.com/PsEXIT6.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
       },
       "isPttOnly": true
     },
@@ -14054,12 +14080,14 @@
       "activityDate": "2025-12-29",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
       "pttData": {
         "rawLine": "12/29-12/31(一-三)台中中港捐血室",
         "images": [
           "https://i.imgur.com/zNczHYU.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
       },
       "isPttOnly": true
     }
@@ -14359,8 +14387,10 @@
         "images": [
           "https://i.imgur.com/rf4Y39p.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
-      }
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "tags": []
     },
     {
       "id": "6auY6ZuELTIwMjUvMTIvMzAtMTA6MDB+MTg6MDAt5ZyL56uL5oiQ5Yqf5aSn5a24",
@@ -14381,12 +14411,14 @@
       "activityDate": "2025-12-30",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
       "pttData": {
         "rawLine": "12/30-12/31(二-三)台南東區太子文旅前",
         "images": [
           "https://i.imgur.com/0ePcqI5.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
       },
       "isPttOnly": true
     }
@@ -14641,12 +14673,22 @@
       "activityDate": "2025-12-31",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [
+        "禮券",
+        "超商",
+        "食品"
+      ],
       "pttData": {
         "rawLine": "12/31(三)桃園青埔文興公園捐血亭",
         "images": [
           "https://i.imgur.com/FVOnFCt.jpeg"
         ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html"
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": [
+          "禮券",
+          "超商",
+          "食品"
+        ]
       },
       "isPttOnly": true
     }

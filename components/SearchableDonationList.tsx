@@ -2,7 +2,20 @@
 
 import { useState, useMemo } from "react";
 import { Input } from "@/components/ui/input";
-import { ChevronDown, ChevronUp, Search, Calendar } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronUp,
+  Search,
+  Calendar,
+  Film,
+  Ticket,
+  Store,
+  Coffee,
+  Package,
+  UtensilsCrossed,
+  Gift,
+  X,
+} from "lucide-react";
 import { debounce } from "@/utils";
 import CardInfo from "@/components/CardInfo";
 import BackToTopButton from "@/components/BackToTopButton";
@@ -19,12 +32,24 @@ interface DonationEvent {
   date: string;
   center?: string;
   detailUrl?: string;
+  tags?: string[];
   pttData?: {
     rawLine: string;
     images: string[];
     url: string;
+    tags?: string[];
   };
 }
+
+// 贈品 tag 選項
+const GIFT_TAGS = [
+  { id: "電影票", label: "電影票", icon: Film },
+  { id: "禮券", label: "禮券", icon: Ticket },
+  { id: "超商", label: "超商", icon: Store },
+  { id: "餐飲", label: "餐飲", icon: Coffee },
+  { id: "生活用品", label: "生活用品", icon: Package },
+  { id: "食品", label: "食品", icon: UtensilsCrossed },
+];
 
 interface SearchableDonationListProps {
   data: Record<string, DonationEvent[]>;
@@ -35,6 +60,7 @@ export default function SearchableDonationList({
 }: SearchableDonationListProps) {
   const [searchKeyword, setSearchKeyword] = useState<string>("");
   const [selectedCenter, setSelectedCenter] = useState<string>("全部");
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [showPastEvents, setShowPastEvents] = useState<boolean>(false);
 
   const today = new Date().toISOString().split("T")[0];
@@ -75,13 +101,22 @@ export default function SearchableDonationList({
           event.time.includes(searchKeyword)
       );
 
-      if (keywordFilteredEvents.length > 0) {
+      // 3. 篩選贈品 tags
+      const tagFilteredEvents =
+        selectedTags.length === 0
+          ? keywordFilteredEvents
+          : keywordFilteredEvents.filter((event) => {
+              const eventTags = event.tags || event.pttData?.tags || [];
+              return selectedTags.some((tag) => eventTags.includes(tag));
+            });
+
+      if (tagFilteredEvents.length > 0) {
         if (date < today) {
-          _pastEvents[date] = keywordFilteredEvents;
+          _pastEvents[date] = tagFilteredEvents;
         } else if (date === today) {
-          _todayEvents[date] = keywordFilteredEvents;
+          _todayEvents[date] = tagFilteredEvents;
         } else {
-          _upcomingEvents[date] = keywordFilteredEvents;
+          _upcomingEvents[date] = tagFilteredEvents;
         }
       }
     });
@@ -91,7 +126,7 @@ export default function SearchableDonationList({
       upcomingEvents: _upcomingEvents,
       pastEvents: _pastEvents,
     };
-  }, [data, selectedCenter, searchKeyword, today]);
+  }, [data, selectedCenter, searchKeyword, selectedTags, today]);
 
   const renderEventSection = (
     eventsByDate: Record<string, DonationEvent[]>,
@@ -171,6 +206,53 @@ export default function SearchableDonationList({
               )}
               className="pl-9 bg-white border-slate-200 focus:border-primary w-full"
             />
+          </div>
+        </div>
+
+        {/* 贈品 Tag 篩選 */}
+        <div className="mt-4 p-4 bg-gradient-to-r from-rose-50 via-pink-50 to-orange-50 rounded-2xl border border-pink-100">
+          <div className="flex items-center gap-2 mb-3">
+            <Gift className="w-5 h-5 text-pink-500" />
+            <span className="text-sm font-medium text-pink-600">篩選禮物</span>
+            {selectedTags.length > 0 && (
+              <button
+                onClick={() => setSelectedTags([])}
+                className="ml-auto flex items-center gap-1 px-3 py-1 text-xs font-medium text-pink-500 hover:text-pink-700 hover:bg-pink-100 rounded-lg transition-colors"
+              >
+                <X className="w-3 h-3" />
+                清除全部
+              </button>
+            )}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {GIFT_TAGS.map((tag) => {
+              const isSelected = selectedTags.includes(tag.id);
+              const IconComponent = tag.icon;
+              return (
+                <button
+                  key={tag.id}
+                  onClick={() => {
+                    setSelectedTags((prev) =>
+                      isSelected
+                        ? prev.filter((t) => t !== tag.id)
+                        : [...prev, tag.id]
+                    );
+                  }}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
+                    isSelected
+                      ? "bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg shadow-pink-500/25"
+                      : "bg-white text-gray-600 shadow-sm border border-gray-100 hover:shadow-md hover:border-pink-200 hover:text-pink-600"
+                  }`}
+                >
+                  <IconComponent
+                    className={`w-4 h-4 ${
+                      isSelected ? "text-white" : "text-pink-400"
+                    }`}
+                  />
+                  {tag.label}
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>

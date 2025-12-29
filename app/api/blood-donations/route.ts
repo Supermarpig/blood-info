@@ -167,20 +167,58 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
       );
     }
 
-    // 動態尋找當月的 JSON 文件
-    const filePath = await findCurrentMonthFile();
+    // 載入當月和下個月的資料
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth() + 1;
 
-    if (filePath) {
-      // 檢查本地 JSON 檔案
-      const localData = await loadLocalData(filePath);
-      if (localData) {
-        // 快取並返回本地資料
-        MemoryCache.set(localData);
-        return NextResponse.json({
-          success: true,
-          data: localData,
-        });
+    // 計算下個月
+    let nextYear = currentYear;
+    let nextMonth = currentMonth + 1;
+    if (nextMonth > 12) {
+      nextMonth = 1;
+      nextYear++;
+    }
+
+    const currentMonthFile = `bloodInfo-${currentYear}${String(
+      currentMonth
+    ).padStart(2, "0")}.json`;
+    const nextMonthFile = `bloodInfo-${nextYear}${String(nextMonth).padStart(
+      2,
+      "0"
+    )}.json`;
+
+    const currentMonthPath = path.join(process.cwd(), "data", currentMonthFile);
+    const nextMonthPath = path.join(process.cwd(), "data", nextMonthFile);
+
+    let allData: Record<string, DonationEvent[]> = {};
+
+    // 載入當月資料
+    const currentData = await loadLocalData(currentMonthPath);
+    if (currentData) {
+      allData = { ...currentData };
+    }
+
+    // 載入下個月資料
+    const nextData = await loadLocalData(nextMonthPath);
+    if (nextData) {
+      // 合併資料
+      for (const date in nextData) {
+        if (allData[date]) {
+          allData[date] = [...allData[date], ...nextData[date]];
+        } else {
+          allData[date] = nextData[date];
+        }
       }
+    }
+
+    if (Object.keys(allData).length > 0) {
+      // 快取並返回資料
+      MemoryCache.set(allData);
+      return NextResponse.json({
+        success: true,
+        data: allData,
+      });
     }
 
     // 若無文件或本地檔案不可讀，開始爬取資料

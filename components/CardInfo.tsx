@@ -60,6 +60,14 @@ export default function CardInfo({
 }: CardInfoProps) {
   const [isPttDialogOpen, setIsPttDialogOpen] = useState(false);
 
+  // 中心顯示名稱對應
+  const centerDisplayNames: Record<string, string> = {
+    台北: "北區",
+    新竹: "桃竹苗",
+    台中: "中區",
+    高雄: "南區",
+  };
+
   // 根據中心決定顏色標籤
   const getCenterColor = (center?: string) => {
     switch (center) {
@@ -99,7 +107,7 @@ export default function CardInfo({
                     donation.center
                   )}`}
                 >
-                  {donation.center}
+                  {centerDisplayNames[donation.center] || donation.center}
                 </span>
               )}
 
@@ -122,9 +130,31 @@ export default function CardInfo({
                         </span>
                       </button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-md max-h-[90vh] p-0 gap-0 overflow-hidden flex flex-col">
-                      <DialogHeader className="p-4 pb-2 border-b flex-none bg-white z-10">
-                        <DialogTitle className="flex items-center gap-2 text-gray-800">
+                    <DialogContent className="w-[calc(100%-2rem)] max-w-md max-h-[80vh] p-0 gap-0 overflow-hidden flex flex-col rounded-xl">
+                      {/* 關閉按鈕 */}
+                      <button
+                        onClick={() => setIsPttDialogOpen(false)}
+                        className="absolute right-3 top-3 z-20 p-1.5 rounded-full bg-white/90 hover:bg-gray-100 transition-colors shadow-sm border border-gray-200"
+                        aria-label="關閉"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <line x1="18" y1="6" x2="6" y2="18"></line>
+                          <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                      </button>
+
+                      <DialogHeader className="p-4 pb-2 border-b flex-none bg-white">
+                        <DialogTitle className="flex items-center gap-2 text-gray-800 pr-8">
                           <span className="bg-pink-100 p-1.5 rounded-full">
                             <Gift className="w-5 h-5 text-pink-500" />
                           </span>
@@ -162,20 +192,20 @@ export default function CardInfo({
                         )}
 
                         {/* 2. 文字資訊放在下方 (Secondary Text Info) */}
-                        <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-                          <h4 className="text-sm font-semibold text-slate-700 mb-2 flex items-center justify-between">
-                            原始回報資訊
+                        <div className="bg-slate-50 rounded-lg p-2 px-3 border border-slate-100 text-xs">
+                          <div className="flex items-center justify-between">
+                            <span className="text-slate-500">原始回報</span>
                             <a
                               href={donation.pttData.url}
                               target="_blank"
                               rel="noreferrer"
-                              className="text-blue-500 hover:text-blue-600 text-xs font-normal flex items-center gap-1"
+                              className="text-blue-500 hover:text-blue-600 flex items-center gap-1"
                             >
                               <span>PTT 原文</span>
                               <ExternalLink className="w-3 h-3" />
                             </a>
-                          </h4>
-                          <p className="text-slate-600 text-sm whitespace-pre-wrap leading-relaxed">
+                          </div>
+                          <p className="text-slate-600 text-xs mt-1">
                             {donation.pttData.rawLine}
                           </p>
                         </div>
