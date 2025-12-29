@@ -40,6 +40,18 @@ export default function SearchableDonationList({
   const today = new Date().toISOString().split("T")[0];
 
   // 整理所有可用的中心列表
+  // 捐血中心管轄區域對應
+  // 北區: 台北、新北、基隆、花蓮、宜蘭
+  // 桃竹苗: 桃園、新竹、苗栗
+  // 中區: 台中、彰化、南投
+  // 南區: 高雄、屏東、台南、嘉義
+  const centerDisplayNames: Record<string, string> = {
+    全部: "全部",
+    台北: "北區",
+    新竹: "桃竹苗",
+    台中: "中區",
+    高雄: "南區",
+  };
   const centers = ["全部", "台北", "新竹", "台中", "高雄"];
 
   // 使用 useMemo 優化資料處理
@@ -142,7 +154,7 @@ export default function SearchableDonationList({
                   value={center}
                   className="data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm"
                 >
-                  {center}
+                  {centerDisplayNames[center]}
                 </TabsTrigger>
               ))}
             </TabsList>
