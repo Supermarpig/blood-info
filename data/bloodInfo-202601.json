@@ -423,6 +423,26 @@
         "tags": []
       },
       "tags": []
+    },
+    {
+      "id": "cHR0LTIwMjYtMDEtMDEtMS8xKOWbmynmoYPlnJLol53mlofnibnljYDmjZDooYDkuq0=",
+      "time": "",
+      "organization": "桃園藝文特區捐血亭",
+      "location": "桃園藝文特區捐血亭",
+      "rawContent": "1/1(四)桃園藝文特區捐血亭",
+      "activityDate": "2026-01-01",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "1/1(四)桃園藝文特區捐血亭",
+        "images": [
+          "https://i.imgur.com/IevMA8r.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "isPttOnly": true
     }
   ],
   "2026-01-02": [
@@ -1408,6 +1428,26 @@
       "activityDate": "2026-01-03",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P345610020086319971"
+    },
+    {
+      "id": "cHR0LTIwMjYtMDEtMDMtMS8zKOWFrSnlj7DkuK3lhazlnJLmjZDooYDou4o=",
+      "time": "",
+      "organization": "台中公園捐血車",
+      "location": "台中公園捐血車",
+      "rawContent": "1/3(六)台中公園捐血車",
+      "activityDate": "2026-01-03",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "1/3(六)台中公園捐血車",
+        "images": [
+          "https://i.imgur.com/Y5mBrBK.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "isPttOnly": true
     }
   ],
   "2026-01-04": [

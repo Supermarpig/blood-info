@@ -13953,8 +13953,7 @@
         ],
         "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
         "tags": []
-      },
-      "tags": []
+      }
     },
     {
       "id": "6auY6ZuELTIwMjUvMTIvMjktMDk6MDB+MTc6MDAt5LiJ5ZWG576O6YKm5Lq65aO9",
@@ -13972,8 +13971,7 @@
         ],
         "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
         "tags": []
-      },
-      "tags": []
+      }
     },
     {
       "id": "6auY6ZuELTIwMjUvMTIvMjktMDg6MDB+MTc6MDAt5L2b5YWJ5bGx5a+26I+v5a+65Y+z5piM56ys5LqM5YiG5pyD",
@@ -14013,10 +14011,7 @@
         "tags": [
           "餐飲"
         ]
-      },
-      "tags": [
-        "餐飲"
-      ]
+      }
     },
     {
       "id": "6auY6ZuELTIwMjUvMTIvMjktMDk6MzB+MTg6MDAt5rC45oW25LiN5YuV55SiIOawuOe+qeaIv+WxiyDmnInlt6LmsI/miL/lsYsg5Y+w5oW25LiN5YuV55SiIOWbm+WTgeeJjOmrmOmbhOWNgOe2k+euoeacgw==",
@@ -14046,50 +14041,7 @@
         "tags": [
           "食品"
         ]
-      },
-      "tags": [
-        "食品"
-      ]
-    },
-    {
-      "id": "cHR0LTIwMjUtMTItMjktMTIvMjko5LiAKeWPsOS4reWMl+Wxr+advueruei3r+S6jOaute+8jOaNkOihgOmAgTIwMjbmtojpmLLmnIjmm4Yo6ZmQ6YePKQ==",
-      "time": "",
-      "organization": "台中北屯松竹路二段，捐血送2026消防月曆(限量)",
-      "location": "台中北屯松竹路二段，捐血送2026消防月曆(限量)",
-      "rawContent": "12/29(一)台中北屯松竹路二段，捐血送2026消防月曆(限量)",
-      "activityDate": "2025-12-29",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "12/29(一)台中北屯松竹路二段，捐血送2026消防月曆(限量)",
-        "images": [
-          "https://i.imgur.com/PsEXIT6.jpeg"
-        ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
-        "tags": []
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjUtMTItMjktMTIvMjktMTIvMzEo5LiALeS4iSnlj7DkuK3kuK3muK/mjZDooYDlrqQ=",
-      "time": "",
-      "organization": "台中中港捐血室",
-      "location": "台中中港捐血室",
-      "rawContent": "12/29-12/31(一-三)台中中港捐血室",
-      "activityDate": "2025-12-29",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "12/29-12/31(一-三)台中中港捐血室",
-        "images": [
-          "https://i.imgur.com/zNczHYU.jpeg"
-        ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
-        "tags": []
-      },
-      "isPttOnly": true
+      }
     }
   ],
   "2025-12-30": [
@@ -14403,6 +14355,50 @@
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P345610010387005396"
     },
     {
+      "id": "cHR0LTIwMjUtMTItMzAtMTIvMzAtMTIvMzEo5LqMLeS4iSnlj7DkuK3kuK3muK/mjZDooYDlrqQ=",
+      "time": "",
+      "organization": "台中中港捐血室",
+      "location": "台中中港捐血室",
+      "rawContent": "12/30-12/31(二-三)台中中港捐血室",
+      "activityDate": "2025-12-30",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "12/30-12/31(二-三)台中中港捐血室",
+        "images": [
+          "https://i.imgur.com/zNczHYU.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMzAtMTIvMzAtMTIvMzEo5LqMLeS4iSnlvbDljJbmjZDooYDnq5k=",
+      "time": "",
+      "organization": "彰化捐血站",
+      "location": "彰化捐血站",
+      "rawContent": "12/30-12/31(二-三)彰化捐血站",
+      "activityDate": "2025-12-30",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "12/30-12/31(二-三)彰化捐血站",
+        "images": [
+          "https://i.imgur.com/jU6jGZ7.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": [
+          "食品"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
       "id": "cHR0LTIwMjUtMTItMzAtMTIvMzAtMTIvMzEo5LqMLeS4iSnlj7DljZfmnbHljYDlpKrlrZDmlofml4XliY0=",
       "time": "",
       "organization": "台南東區太子文旅前",
@@ -14421,9 +14417,59 @@
         "tags": []
       },
       "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMzAtMTIvMzAtMTIvMzEo5LqMLeS4iSnlj7DljZfmsLjnpo/mjZDooYDlrqTvvIzmjZDooYDpgIEyMDI26buD6Zi/55Gq5qGM5puG",
+      "time": "",
+      "organization": "台南永福捐血室，捐血送2026黃阿瑪桌曆",
+      "location": "台南永福捐血室，捐血送2026黃阿瑪桌曆",
+      "rawContent": "12/30-12/31(二-三)台南永福捐血室，捐血送2026黃阿瑪桌曆",
+      "activityDate": "2025-12-30",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "12/30-12/31(二-三)台南永福捐血室，捐血送2026黃阿瑪桌曆",
+        "images": [
+          "https://i.imgur.com/YgtfG1Q.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjUtMTItMzAtMTIvMzAo5LqMKemrmOmbhOWyoeWxseaNkOihgOWupA==",
+      "time": "",
+      "organization": "高雄岡山捐血室",
+      "location": "高雄岡山捐血室",
+      "rawContent": "12/30(二)高雄岡山捐血室",
+      "activityDate": "2025-12-30",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "12/30(二)高雄岡山捐血室",
+        "images": [
+          "https://i.imgur.com/tDUG1v3.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "isPttOnly": true
     }
   ],
   "2025-12-31": [
+    {
+      "id": "5Y+w5YyXLTIwMjUvMTIvMzEtMTA6MDB+MTg6MDAt5paw5YyX5ZyY5aeU5pyD",
+      "time": "10:00~18:00",
+      "organization": "新北團委會",
+      "location": "新北市板橋區中山路一段50巷36號2樓之4(捷運府中站2號出口)",
+      "rawContent": "10:00~18:00 新北團委會 新北市板橋區中山路一段50巷36號2樓之4(捷運府中站2號出口)",
+      "activityDate": "2025-12-31",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0P364303147104236265"
+    },
     {
       "id": "5Y+w5YyXLTIwMjUvMTIvMzEtMDg6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A6Iqx6JOu6b6N5ZCf542F5a2Q5pyD",
       "time": "08:30~17:00",
