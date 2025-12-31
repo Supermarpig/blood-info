@@ -35,17 +35,7 @@
           "https://i.imgur.com/FhZDksF.jpeg",
           "https://i.imgur.com/GkAHzXt.jpeg",
           "https://i.imgur.com/SwLbIIP.png",
-          "https://i.imgur.com/cMoXtOd.jpeg",
-          "https://i.imgur.com/GVHegoB.jpeg",
-          "https://i.imgur.com/VFdliGt.jpeg",
-          "https://i.imgur.com/6tv2d0u.jpeg",
-          "https://i.imgur.com/HvbnTRP.jpeg",
-          "https://i.imgur.com/hxvB65u.jpeg",
-          "https://i.imgur.com/kt0t1AH.jpeg",
-          "https://i.imgur.com/Hf1Rw6E.jpeg",
-          "https://i.imgur.com/y3E2TEx.jpeg",
-          "https://i.imgur.com/GuaYlNr.png",
-          "https://i.imgur.com/NPEPQIB.png"
+          "https://i.imgur.com/cMoXtOd.jpeg"
         ],
         "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
         "tags": [
@@ -353,17 +343,11 @@
       "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0P360556303587538628",
       "pttData": {
         "rawLine": "1/1(四)台中神岡武安宮",
-        "images": [
-          "https://i.imgur.com/GLbq1YZ.jpeg"
-        ],
+        "images": [],
         "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
-        "tags": [
-          "食品"
-        ]
+        "tags": []
       },
-      "tags": [
-        "食品"
-      ]
+      "tags": []
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDEvMDEtMDk6MDB+MTc6MDAt5L2P5ZWG5LiN5YuV55Si5Lit6IiI5paw5p2R5bqX",
@@ -988,6 +972,16 @@
       "activityDate": "2026-01-03",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534138027828228"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDEvMDMtMDk6MDB+MTY6MDAt5bmz5Y2X5ZCM5r+f5pyD",
+      "time": "09:00~16:00",
+      "organization": "平南同濟會",
+      "location": "桃園市平鎮區坤慶路1號(平鎮家樂福)",
+      "rawContent": "09:00~16:00 平南同濟會 桃園市平鎮區坤慶路1號(平鎮家樂福)",
+      "activityDate": "2026-01-03",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534137849070273"
     },
     {
       "id": "5paw56u5LTIwMjYvMDEvMDMtMDk6MzB+MTY6MzAt5qGD5ZyS5biC5oiQ5Yqf542F5a2Q5pyD",
@@ -1732,16 +1726,6 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534140385424228"
     },
     {
-      "id": "5paw56u5LTIwMjYvMDEvMDQtMDk6MDB+MTY6MDAt5qGD5ZyS5biC5LuB5ZKM542F5a2Q5pyD",
-      "time": "09:00~16:00",
-      "organization": "桃園市仁和獅子會",
-      "location": "桃園市中壢區中北路二段468號(中壢大全聯)",
-      "rawContent": "09:00~16:00 桃園市仁和獅子會 桃園市中壢區中北路二段468號(中壢大全聯)",
-      "activityDate": "2026-01-04",
-      "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534132111464787"
-    },
-    {
       "id": "5Y+w5LitLTIwMjYvMDEvMDQtMDk6MDB+MTc6MDAt55uK55Sf5oWI5ZaE5pyD",
       "time": "09:00~17:00",
       "organization": "益生慈善會",
@@ -1939,7 +1923,22 @@
       "rawContent": "09:00~17:00 台南市雲林同鄉會 臺南市永康區永華路與永平路口(永康探索教育公園)",
       "activityDate": "2026-01-04",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P345610045523347952"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P345610045523347952",
+      "pttData": {
+        "rawLine": "1/4(日)台南永康探索公園",
+        "images": [
+          "https://i.imgur.com/jxzBwf0.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": [
+          "禮券",
+          "食品"
+        ]
+      },
+      "tags": [
+        "禮券",
+        "食品"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDEvMDQtMDg6MDB+MTc6MDAt5Y+w5Y2X5biC6Zuy5p6X5ZCM6YSJ5pyD",
@@ -2369,8 +2368,8 @@
       "id": "5paw56u5LTIwMjYvMDEvMDYtMTA6MDB+MTY6MDAt5paw56u55o2Q6KGA5Lit5b+D",
       "time": "10:00~16:00",
       "organization": "新竹捐血中心",
-      "location": "桃園市平鎮區坤慶路1號(平鎮家樂福)",
-      "rawContent": "10:00~16:00 新竹捐血中心 桃園市平鎮區坤慶路1號(平鎮家樂福)",
+      "location": "桃園市中壢區中美路76號(中壢圖書館)",
+      "rawContent": "10:00~16:00 新竹捐血中心 桃園市中壢區中美路76號(中壢圖書館)",
       "activityDate": "2026-01-06",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534147658483768"
@@ -2379,8 +2378,8 @@
       "id": "5paw56u5LTIwMjYvMDEvMDYtMTA6MDB+MTY6MDAt5paw56u55o2Q6KGA5Lit5b+D",
       "time": "10:00~16:00",
       "organization": "新竹捐血中心",
-      "location": "桃園市平鎮區坤慶路1號(平鎮家樂福)",
-      "rawContent": "10:00~16:00 新竹捐血中心 桃園市平鎮區坤慶路1號(平鎮家樂福)",
+      "location": "桃園市中壢區中華路一段450號(內壢家樂福)",
+      "rawContent": "10:00~16:00 新竹捐血中心 桃園市中壢區中華路一段450號(內壢家樂福)",
       "activityDate": "2026-01-06",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534147014514731"
@@ -2419,8 +2418,8 @@
       "id": "5paw56u5LTIwMjYvMDEvMDYtMTA6MDB+MTY6MDAt5paw56u55o2Q6KGA5Lit5b+D",
       "time": "10:00~16:00",
       "organization": "新竹捐血中心",
-      "location": "桃園市平鎮區坤慶路1號(平鎮家樂福)",
-      "rawContent": "10:00~16:00 新竹捐血中心 桃園市平鎮區坤慶路1號(平鎮家樂福)",
+      "location": "桃園市中壢區中豐路289號(A22桃捷老街溪站_中壢區中央西路接送臨停區)",
+      "rawContent": "10:00~16:00 新竹捐血中心 桃園市中壢區中豐路289號(A22桃捷老街溪站_中壢區中央西路接送臨停區)",
       "activityDate": "2026-01-06",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534142386999245"
@@ -2433,7 +2432,20 @@
       "rawContent": "09:30~16:30 福智佛教基金會中埔教室 嘉義縣中埔鄉中埔村128號(中埔鄉公所)",
       "activityDate": "2026-01-06",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P351597169739765839"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P351597169739765839",
+      "pttData": {
+        "rawLine": "1/6(二)嘉義中埔鄉公所",
+        "images": [
+          "https://i.imgur.com/J7N4QLd.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": [
+          "食品"
+        ]
+      },
+      "tags": [
+        "食品"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDEvMDYtMTA6MDB+MTg6MDAt5rC45bq35Y2A5p2x5qmL56S+5Y2A5beh6L+0",
@@ -2538,16 +2550,6 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534150194837703"
     },
     {
-      "id": "5paw56u5LTIwMjYvMDEvMDctMTA6MDB+MTY6MDAt5paw56u55o2Q6KGA5Lit5b+D",
-      "time": "10:00~16:00",
-      "organization": "新竹捐血中心",
-      "location": "桃園市中壢區中華路二段501號(中原家樂福)",
-      "rawContent": "10:00~16:00 新竹捐血中心 桃園市中壢區中華路二段501號(中原家樂福)",
-      "activityDate": "2026-01-07",
-      "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534144287473271"
-    },
-    {
       "id": "6auY6ZuELTIwMjYvMDEvMDctMDk6MDB+MTc6MDAt6auY6ZuE5biC5rC45oiQ5oWI5ZaE5pyD",
       "time": "09:00~17:00",
       "organization": "高雄市永成慈善會",
@@ -2590,11 +2592,11 @@
   ],
   "2026-01-08": [
     {
-      "id": "5paw56u5LTIwMjYvMDEvMDgtMTA6MDB+MTY6MzAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
-      "time": "10:00~16:30",
+      "id": "5paw56u5LTIwMjYvMDEvMDgtMTI6MzB+MTY6MzAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "12:30~16:30",
       "organization": "台灣中油公司竹苗營業",
       "location": "新竹市東區忠孝路300號(大全聯忠孝店)",
-      "rawContent": "10:00~16:30 台灣中油公司竹苗營業 新竹市東區忠孝路300號(大全聯忠孝店)",
+      "rawContent": "12:30~16:30 台灣中油公司竹苗營業 新竹市東區忠孝路300號(大全聯忠孝店)",
       "activityDate": "2026-01-08",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534157367896243"
@@ -2938,6 +2940,52 @@
         ],
         "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
         "tags": []
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDEtMDktMS85KOS6lCnln7rpmobkuK3lsbHlvrflkozph4zmsJHmtLvli5XkuK3lv4M=",
+      "time": "",
+      "organization": "基隆中山德和里民活動中心",
+      "location": "基隆中山德和里民活動中心",
+      "rawContent": "1/9(五)基隆中山德和里民活動中心",
+      "activityDate": "2026-01-09",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "1/9(五)基隆中山德和里民活動中心",
+        "images": [
+          "https://i.imgur.com/OelbTOb.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDEtMDktMS85KOS6lCnlj7DljZfku4HlvrfniZvnqKDku5Tkv53oj6/lrq4=",
+      "time": "",
+      "organization": "台南仁德牛稠仔保華宮",
+      "location": "台南仁德牛稠仔保華宮",
+      "rawContent": "1/9(五)台南仁德牛稠仔保華宮",
+      "activityDate": "2026-01-09",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [
+        "禮券",
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "1/9(五)台南仁德牛稠仔保華宮",
+        "images": [
+          "https://i.imgur.com/kAsW2pi.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": [
+          "禮券",
+          "食品"
+        ]
       },
       "isPttOnly": true
     }
@@ -3596,6 +3644,26 @@
         "tags": []
       },
       "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDEtMTEtMS8xMSjml6Up6Iqx6JOu6YeN5oW25biC5aC05peB5pel5Ye65aSn6YGT5q61",
+      "time": "",
+      "organization": "花蓮重慶市場旁日出大道段",
+      "location": "花蓮重慶市場旁日出大道段",
+      "rawContent": "1/11(日)花蓮重慶市場旁日出大道段",
+      "activityDate": "2026-01-11",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "1/11(日)花蓮重慶市場旁日出大道段",
+        "images": [
+          "https://i.imgur.com/ITcR6AH.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "isPttOnly": true
     }
   ],
   "2026-01-12": [
@@ -4204,6 +4272,35 @@
       "activityDate": "2026-01-15",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P358556780151396069"
+    },
+    {
+      "id": "cHR0LTIwMjYtMDEtMTUtMS8xNS0xLzE35ZubLeWFrSnjgIExLzIyLTEvMjQo5ZubLeWFrSnmvo7muZbppqzlhazmjZDooYDnq5k=",
+      "time": "",
+      "organization": "四-六)、1/22-1/24(四-六)澎湖馬公捐血站",
+      "location": "四-六)、1/22-1/24(四-六)澎湖馬公捐血站",
+      "rawContent": "1/15-1/17四-六)、1/22-1/24(四-六)澎湖馬公捐血站",
+      "activityDate": "2026-01-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "1/15-1/17四-六)、1/22-1/24(四-六)澎湖馬公捐血站",
+        "images": [
+          "https://i.imgur.com/BdQtWJ4.jpeg",
+          "https://i.imgur.com/VFdliGt.jpeg",
+          "https://i.imgur.com/6tv2d0u.jpeg",
+          "https://i.imgur.com/HvbnTRP.jpeg",
+          "https://i.imgur.com/hxvB65u.jpeg",
+          "https://i.imgur.com/kt0t1AH.jpeg",
+          "https://i.imgur.com/Hf1Rw6E.jpeg",
+          "https://i.imgur.com/y3E2TEx.jpeg",
+          "https://i.imgur.com/GuaYlNr.png",
+          "https://i.imgur.com/NPEPQIB.png"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "isPttOnly": true
     }
   ],
   "2026-01-16": [
@@ -5222,6 +5319,76 @@
       "activityDate": "2026-01-19",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534185858985438"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMTktMDk6MzB+MTY6MzAt5rC05LiK6YSJ5beh6L+05a6a6bue5o2Q6KGA6LuK",
+      "time": "09:30~16:30",
+      "organization": "水上鄉巡迴定點捐血車",
+      "location": "嘉義縣水上鄉正義路182號(水上國小)",
+      "rawContent": "09:30~16:30 水上鄉巡迴定點捐血車 嘉義縣水上鄉正義路182號(水上國小)",
+      "activityDate": "2026-01-19",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628278670129270"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMTktMDk6MDB+MTc6MDAt55Sy5LiA6aOv5YyF5bKh5bGx5bqX",
+      "time": "09:00~17:00",
+      "organization": "甲一飯包岡山店",
+      "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "rawContent": "09:00~17:00 甲一飯包岡山店 高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "activityDate": "2026-01-19",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628278036240253"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMTktMDk6MDB+MTY6MzAt56S+5ZyY5rOV5Lq65Lit6I+v5LuB6YGT6Zec5oe35Y2U5pyD6auY6ZuE5LuB5q2m5Y2A5pyN5YuZ6JmV",
+      "time": "09:00~16:30",
+      "organization": "社團法人中華仁道關懷協會高雄仁武區服務處",
+      "location": "屏東縣枋寮鄉儲運路18號(枋寮車站)",
+      "rawContent": "09:00~16:30 社團法人中華仁道關懷協會高雄仁武區服務處 屏東縣枋寮鄉儲運路18號(枋寮車站)",
+      "activityDate": "2026-01-19",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628277492371125"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMTktMDk6MzB+MTY6MzAt5rCR6ZuE5beh6L+0",
+      "time": "09:30~16:30",
+      "organization": "民雄巡迴",
+      "location": "嘉義縣民雄鄉中樂村文化路7號(民雄鄉公所)",
+      "rawContent": "09:30~16:30 民雄巡迴 嘉義縣民雄鄉中樂村文化路7號(民雄鄉公所)",
+      "activityDate": "2026-01-19",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628273942503794"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMTktMDk6MDB+MTY6MzAt6Ie65Y2X5biC5pS/5bqc5raI6Ziy5bGA56ys5LqM5pWR54G95pWR6K235aSn6ZqK",
+      "time": "09:00~16:30",
+      "organization": "臺南市政府消防局第二救災救護大隊",
+      "location": "臺南市下營區中山路一段1號(下營上帝廟)",
+      "rawContent": "09:00~16:30 臺南市政府消防局第二救災救護大隊 臺南市下營區中山路一段1號(下營上帝廟)",
+      "activityDate": "2026-01-19",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628273308634767"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMTktMDk6MDB+MTc6MDAt5bGP5p2x57ij5pS/5bqc5raI6Ziy5bGA56ys5LqM5aSn6ZqK6b6N5rOJ5YiG6ZqK",
+      "time": "09:00~17:00",
+      "organization": "屏東縣政府消防局第二大隊龍泉分隊",
+      "location": "屏東縣內埔鄉中勝路308號(龍泉消防隊)",
+      "rawContent": "09:00~17:00 屏東縣政府消防局第二大隊龍泉分隊 屏東縣內埔鄉中勝路308號(龍泉消防隊)",
+      "activityDate": "2026-01-19",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628272129886612"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMTktMDk6MDB+MTc6MzAt6auY6ZuE5biC5q2j5b+g5paH5pWZ5Y2U5pyD",
+      "time": "09:00~17:30",
+      "organization": "高雄市正忠文教協會",
+      "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "rawContent": "09:00~17:30 高雄市正忠文教協會 高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "activityDate": "2026-01-19",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628267857392108"
     }
   ],
   "2026-01-20": [
@@ -5286,6 +5453,91 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534192487975941"
     },
     {
+      "id": "6auY6ZuELTIwMjYvMDEvMjAtMDk6MDB+MTc6MDAt55Sy5LiA6aOv5YyF5bKh5bGx5bqX",
+      "time": "09:00~17:00",
+      "organization": "甲一飯包岡山店",
+      "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "rawContent": "09:00~17:00 甲一飯包岡山店 高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "activityDate": "2026-01-20",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628317175521853"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjAtMDk6MDB+MTc6MzAt6auY6ZuE5biC5q2j5b+g5paH5pWZ5Y2U5pyD",
+      "time": "09:00~17:30",
+      "organization": "高雄市正忠文教協會",
+      "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "rawContent": "09:00~17:30 高雄市正忠文教協會 高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "activityDate": "2026-01-20",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628312802136349"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjAtMTA6MDB+MTg6MDAt6Ie65Y2X5biC5Y+w5rGf5paH5YyW5Lit5b+D",
+      "time": "10:00~18:00",
+      "organization": "臺南市台江文化中心",
+      "location": "臺南市安南區安吉路一段207號(台江文化中心)",
+      "rawContent": "10:00~18:00 臺南市台江文化中心 臺南市安南區安吉路一段207號(台江文化中心)",
+      "activityDate": "2026-01-20",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628279749977225"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjAtMTA6MzB+MTc6MDAt5bCP5riv6Yar6Zmi",
+      "time": "10:30~17:00",
+      "organization": "小港醫院",
+      "location": "高雄市小港區山明路482號(小港醫院大門口)",
+      "rawContent": "10:30~17:00 小港醫院 高雄市小港區山明路482號(小港醫院大門口)",
+      "activityDate": "2026-01-20",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628279383846252"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjAtMDk6MDB+MTc6MDAt5Y2a5pqY5rG96LuK5pyJ6ZmQ5YWs5Y+4",
+      "time": "09:00~17:00",
+      "organization": "博暘汽車有限公司",
+      "location": "高雄市仁武區中正路80號(高雄市仁武區公所)",
+      "rawContent": "09:00~17:00 博暘汽車有限公司 高雄市仁武區中正路80號(高雄市仁武區公所)",
+      "activityDate": "2026-01-20",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628279204098208",
+      "pttData": {
+        "rawLine": "1/20(二)高雄仁武區公所",
+        "images": [
+          "https://i.imgur.com/Y9qLOr5.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": [
+          "禮券",
+          "餐飲"
+        ]
+      },
+      "tags": [
+        "禮券",
+        "餐飲"
+      ]
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjAtMTA6MDB+MTY6MzAt5a2455Sy5oWI5r+f5a6u",
+      "time": "10:00~16:30",
+      "organization": "學甲慈濟宮",
+      "location": "臺南市學甲區濟生路170號(學甲慈濟宮)",
+      "rawContent": "10:00~16:30 學甲慈濟宮 臺南市學甲區濟生路170號(學甲慈濟宮)",
+      "activityDate": "2026-01-20",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628274477482711"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjAtMDk6MDB+MTc6MzAt6LKh5ZyY5rOV5Lq66LuN5Yud5paH5pWZ5Z+66YeR5pyD",
+      "time": "09:00~17:30",
+      "organization": "財團法人軍勝文教基金會",
+      "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
+      "rawContent": "09:00~17:30 財團法人軍勝文教基金會 高雄市前金區中華三路7號6樓(S75前金捐血室)",
+      "activityDate": "2026-01-20",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628274011351749"
+    },
+    {
       "id": "cHR0LTIwMjYtMDEtMjAtMS8yMCjlha0p6Zuy5p6X5o2Q6KGA56uZ",
       "time": "",
       "organization": "雲林捐血站",
@@ -5304,32 +5556,6 @@
         ],
         "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
         "tags": [
-          "餐飲"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDEtMjAtMS8yMCjkuowp6auY6ZuE5LuB5q2m5Y2A5YWs5omA",
-      "time": "",
-      "organization": "高雄仁武區公所",
-      "location": "高雄仁武區公所",
-      "rawContent": "1/20(二)高雄仁武區公所",
-      "activityDate": "2026-01-20",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
-      "tags": [
-        "禮券",
-        "餐飲"
-      ],
-      "pttData": {
-        "rawLine": "1/20(二)高雄仁武區公所",
-        "images": [
-          "https://i.imgur.com/Y9qLOr5.jpeg"
-        ],
-        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
-        "tags": [
-          "禮券",
           "餐飲"
         ]
       },
@@ -5396,6 +5622,56 @@
       "activityDate": "2026-01-21",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534193666723996"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjEtMTA6MDB+MTg6MDAt6Ie65Y2X5biC5Y+w5rGf5paH5YyW5Lit5b+D",
+      "time": "10:00~18:00",
+      "organization": "臺南市台江文化中心",
+      "location": "臺南市安南區安吉路一段207號(台江文化中心)",
+      "rawContent": "10:00~18:00 臺南市台江文化中心 臺南市安南區安吉路一段207號(台江文化中心)",
+      "activityDate": "2026-01-21",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628312347015376"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjEtMDk6MzB+MTY6MDAt6Yec5rGf5rW35LqL5bel56iL5pyJ6ZmQ5YWs5Y+4",
+      "time": "09:30~16:00",
+      "organization": "釜江海事工程有限公司",
+      "location": "配合六龜固定點(六龜高中光復路212號)",
+      "rawContent": "09:30~16:00 釜江海事工程有限公司 配合六龜固定點(六龜高中光復路212號)",
+      "activityDate": "2026-01-21",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628285655230766"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjEtMDk6MDB+MTc6MDAt5aWH576O6Yar55mC6LKh5ZyY5rOV5Lq65rC45bq35aWH576O6Yar6Zmi",
+      "time": "09:00~17:00",
+      "organization": "奇美醫療財團法人永康奇美醫院",
+      "location": "臺南市永康區中華路901號(永康奇美醫院)",
+      "rawContent": "09:00~17:00 奇美醫療財團法人永康奇美醫院 臺南市永康區中華路901號(永康奇美醫院)",
+      "activityDate": "2026-01-21",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628285299109783"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjEtMDk6MzB+MTc6MDAt5a6P5qyj5bel5bug6LKg6LKs5Lq66JiH5p6d55Sf",
+      "time": "09:30~17:00",
+      "organization": "宏欣工廠負責人蘇枝生",
+      "location": "高雄市路竹區國昌路76號(高雄市路竹區公所)",
+      "rawContent": "09:30~17:00 宏欣工廠負責人蘇枝生 高雄市路竹區國昌路76號(高雄市路竹區公所)",
+      "activityDate": "2026-01-21",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628280927724270"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjEtMDk6MzB+MTg6MDAt5oSb5ZyL6LaF5biC",
+      "time": "09:30~18:00",
+      "organization": "愛國超市",
+      "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
+      "rawContent": "09:30~18:00 愛國超市 高雄市左營區博愛三路635號(D09左營捐血室)",
+      "activityDate": "2026-01-21",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628280562693207"
     }
   ],
   "2026-01-22": [
@@ -5468,6 +5744,106 @@
       "activityDate": "2026-01-22",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534190295813409"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjItMDk6MzB+MTg6MDAt5oSb5ZyL6LaF5biC",
+      "time": "09:30~18:00",
+      "organization": "愛國超市",
+      "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
+      "rawContent": "09:30~18:00 愛國超市 高雄市左營區博愛三路635號(D09左營捐血室)",
+      "activityDate": "2026-01-22",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628318619400880"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjItMDg6MDB+MTY6MDAt5ZCI5oiR5oSP5Ya35YeN",
+      "time": "08:00~16:00",
+      "organization": "合我意冷凍",
+      "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
+      "rawContent": "08:00~16:00 合我意冷凍 臺東縣臺東市四維路三段198號(S76台東捐血站)",
+      "activityDate": "2026-01-22",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628287656705783"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjItMDk6MzB+MTY6MzAt5py05a2Q5biC5beh6L+05a6a6bue",
+      "time": "09:30~16:30",
+      "organization": "朴子市巡迴定點",
+      "location": "嘉義縣朴子市四維路一段551號(朴子市公所)",
+      "rawContent": "09:30~16:30 朴子市巡迴定點 嘉義縣朴子市四維路一段551號(朴子市公所)",
+      "activityDate": "2026-01-22",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628287191684710"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjItMDk6MzB+MTc6MzAt5oSb5ZyL6LaF5biC",
+      "time": "09:30~17:30",
+      "organization": "愛國超市",
+      "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "rawContent": "09:30~17:30 愛國超市 高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "activityDate": "2026-01-22",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628287012836766"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjItMDk6MDB+MTc6MDAt6Yar55mC6LKh5ZyY5rOV5Lq65ZiJ576p6ZW35bqa57SA5b+16Yar6Zmi",
+      "time": "09:00~17:00",
+      "organization": "醫療財團法人嘉義長庚紀念醫院",
+      "location": "嘉義縣朴子市嘉朴路西段6號(嘉義長庚紀念醫院)",
+      "rawContent": "09:00~17:00 醫療財團法人嘉義長庚紀念醫院 嘉義縣朴子市嘉朴路西段6號(嘉義長庚紀念醫院)",
+      "activityDate": "2026-01-22",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628286834088711"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjItMDk6MzB+MTc6MDAt6bq76LGG55+z5a625Lit5aSp5a+25q6/",
+      "time": "09:30~17:00",
+      "organization": "麻豆石家中天寶殿",
+      "location": "臺南市麻豆區興國路6號(麻豆分局)",
+      "rawContent": "09:30~17:00 麻豆石家中天寶殿 臺南市麻豆區興國路6號(麻豆分局)",
+      "activityDate": "2026-01-22",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628286478957738"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjItMDk6MzB+MTY6MDAt576p5aSn6Yar6Zmi",
+      "time": "09:30~16:00",
+      "organization": "義大醫院",
+      "location": "高雄市燕巢區義大路1號(義大醫療財團法人義大醫院)",
+      "rawContent": "09:30~16:00 義大醫院 高雄市燕巢區義大路1號(義大醫療財團法人義大醫院)",
+      "activityDate": "2026-01-22",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628282829299207"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjItMDk6MzB+MTc6MDAt5YSE5Y2H5bel5qWt",
+      "time": "09:30~17:00",
+      "organization": "億升工業",
+      "location": "屏東縣麟洛鄉中山路158號(屏東縣麟洛鄉公所)",
+      "rawContent": "09:30~17:00 億升工業 屏東縣麟洛鄉中山路158號(屏東縣麟洛鄉公所)",
+      "activityDate": "2026-01-22",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628282384320279"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjItMDk6MzB+MTc6MzAt5oSb5ZyL6LaF5biC",
+      "time": "09:30~17:30",
+      "organization": "愛國超市",
+      "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
+      "rawContent": "09:30~17:30 愛國超市 高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
+      "activityDate": "2026-01-22",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628281740441252"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjItMDk6MDB+MTI6MDAt5ZyL56iF5bGA5paw5YyW56i95b615omA",
+      "time": "09:00~12:00",
+      "organization": "國稅局新化稽徵所",
+      "location": "臺南市新化區中正路588號(新化稽徵所)",
+      "rawContent": "09:00~12:00 國稅局新化稽徵所 臺南市新化區中正路588號(新化稽徵所)",
+      "activityDate": "2026-01-22",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628281106572224"
     },
     {
       "id": "cHR0LTIwMjYtMDEtMjItMS8yMijlm5sp6Zuy5p6X5Y+w6KW/5LqU5qKd5riv5a6J6KW/56aP5buj5aC0",
@@ -5607,6 +5983,76 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534191473651454"
     },
     {
+      "id": "6auY6ZuELTIwMjYvMDEvMjMtMDk6MzB+MTc6MzAt5oSb5ZyL6LaF5biC",
+      "time": "09:30~17:30",
+      "organization": "愛國超市",
+      "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "rawContent": "09:30~17:30 愛國超市 高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "activityDate": "2026-01-23",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628319897258835"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjMtMDk6MzB+MTg6MDAt5oSb5ZyL6LaF5biC",
+      "time": "09:30~18:00",
+      "organization": "愛國超市",
+      "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
+      "rawContent": "09:30~18:00 愛國超市 高雄市左營區博愛三路635號(D09左營捐血室)",
+      "activityDate": "2026-01-23",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628318253379807"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjMtMDg6MDB+MTY6MDAt5ZCI5oiR5oSP5Ya35YeN",
+      "time": "08:00~16:00",
+      "organization": "合我意冷凍",
+      "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
+      "rawContent": "08:00~16:00 合我意冷凍 臺東縣臺東市四維路三段198號(S76台東捐血站)",
+      "activityDate": "2026-01-23",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628314160732348"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjMtMTA6MDB+MTg6MDAt6Ie65Y2X5biC5Y+w5rGf5paH5YyW5Lit5b+D",
+      "time": "10:00~18:00",
+      "organization": "臺南市台江文化中心",
+      "location": "臺南市安南區安吉路一段207號(台江文化中心)",
+      "rawContent": "10:00~18:00 臺南市台江文化中心 臺南市安南區安吉路一段207號(台江文化中心)",
+      "activityDate": "2026-01-23",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628313981984394"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjMtMDk6MzB+MTc6MzAt5oSb5ZyL6LaF5biC",
+      "time": "09:30~17:30",
+      "organization": "愛國超市",
+      "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
+      "rawContent": "09:30~17:30 愛國超市 高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
+      "activityDate": "2026-01-23",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628313525863311"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjMtMTA6MDB+MTY6MzAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5paw5biC5YiG5pyD",
+      "time": "10:00~16:30",
+      "organization": "國際佛光會中華總會新市分會",
+      "location": "臺南市新市區復興路1之1號(新市農會)",
+      "rawContent": "10:00~16:30 國際佛光會中華總會新市分會 臺南市新市區復興路1之1號(新市農會)",
+      "activityDate": "2026-01-23",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628298735553738"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjMtMTE6MDB+MTc6MDAt6ZW36IiI5p2Q5paZ5aSn55m85bug",
+      "time": "11:00~17:00",
+      "organization": "長興材料大發廠",
+      "location": "高雄市大寮區裕民街30號(廠區內依指示停放)",
+      "rawContent": "11:00~17:00 長興材料大發廠 高雄市大寮區裕民街30號(廠區內依指示停放)",
+      "activityDate": "2026-01-23",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628293463168224"
+    },
+    {
       "id": "cHR0LTIwMjYtMDEtMjMtMS8yMyjkupQp5Y+w5YyX5Lit5bGx5p2+5rGf6Lev",
       "time": "",
       "organization": "台北中山松江路",
@@ -5729,6 +6175,216 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534200004226094"
     },
     {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDg6MDB+MTc6MDAt5ZCM5r+f5pyD6auY5bGP5Y2AKEEp",
+      "time": "08:00~17:00",
+      "organization": "同濟會高屏區(A)",
+      "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
+      "rawContent": "08:00~17:00 同濟會高屏區(A) 屏東縣屏東市忠孝路295號(S73屏東捐血站)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628308900097295"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MDB+MTc6MzAt6bOz5p6X6KeA6Z+z5oWI5oSb",
+      "time": "09:00~17:30",
+      "organization": "鳳林觀音慈愛",
+      "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "rawContent": "09:00~17:30 鳳林觀音慈愛 高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628307721249240"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MDB+MTc6MzAt6bOz5p6X6KeA6Z+z5oWI5oSb",
+      "time": "09:00~17:30",
+      "organization": "鳳林觀音慈愛",
+      "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
+      "rawContent": "09:00~17:30 鳳林觀音慈愛 高雄市前金區中華三路7號6樓(S75前金捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628307366118278"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MzB+MTg6MDAt5ZyL6Zqb5om26LyqMzUxMOWcsOWNgOmrmOmbhOaXqeWuieaJtui8quekvg==",
+      "time": "09:30~18:00",
+      "organization": "國際扶輪3510地區高雄早安扶輪社",
+      "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
+      "rawContent": "09:30~18:00 國際扶輪3510地區高雄早安扶輪社 高雄市左營區博愛三路635號(D09左營捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628306543491296"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDmjZDooYDlp5Tlk6HmnIM=",
+      "time": "09:00~17:00",
+      "organization": "國際獅子會300E2區捐血委員會",
+      "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "rawContent": "09:00~17:00 國際獅子會300E2區捐血委員會 高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628306187360223"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MDB+MTc6MzAt5ZCM5r+f5pyD6auY5bGP5Y2AQg==",
+      "time": "09:00~17:30",
+      "organization": "同濟會高屏區B",
+      "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "rawContent": "09:00~17:30 同濟會高屏區B 高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628302638602781"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDg6MDB+MTc6MDAt6bOz5p6X6KeA6Z+z5oWI5oSb",
+      "time": "08:00~17:00",
+      "organization": "鳳林觀音慈愛",
+      "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
+      "rawContent": "08:00~17:00 鳳林觀音慈愛 高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628302093733764"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDmjZDooYDlp5Tlk6HmnIM=",
+      "time": "09:00~17:00",
+      "organization": "國際獅子會300E2區捐血委員會",
+      "location": "高雄市鳳山區文殿街2號(赤山文衡殿)",
+      "rawContent": "09:00~17:00 國際獅子會300E2區捐血委員會 高雄市鳳山區文殿街2號(赤山文衡殿)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628301815985719"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MDB+MTc6MzAt6bOz5p6X6KeA6Z+z5oWI5oSb",
+      "time": "09:00~17:30",
+      "organization": "鳳林觀音慈愛",
+      "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
+      "rawContent": "09:00~17:30 鳳林觀音慈愛 高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628301459854737"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDg6MzB+MTc6MDAt6YSt5YWJ5bOw6K2w5ZOh5pyN5YuZ6JmV",
+      "time": "08:30~17:00",
+      "organization": "鄭光峰議員服務處",
+      "location": "高雄市小港區漢民路352號(高雄市小港區中山國中)",
+      "rawContent": "08:30~17:00 鄭光峰議員服務處 高雄市小港區漢民路352號(高雄市小港區中山國中)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628301271007782"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MDB+MTc6MDAt5ZiJ576p57ij5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "09:00~17:00",
+      "organization": "嘉義縣國際同濟會",
+      "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
+      "rawContent": "09:00~17:00 嘉義縣國際同濟會 嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628299914301782"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDg6MzB+MTc6MDAt6Ie65Y2X5biC54ef6bOz5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "08:30~17:00",
+      "organization": "臺南市營鳳國際同濟會",
+      "location": "臺南市新營區中正路23-1號(新營民治議事廳對面玻璃屋D18新營捐血室)",
+      "rawContent": "08:30~17:00 臺南市營鳳國際同濟會 臺南市新營區中正路23-1號(新營民治議事廳對面玻璃屋D18新營捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628299558280710"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDg6MzB+MTc6MDAt57i955CG5aSn6aSQ5buz",
+      "time": "08:30~17:00",
+      "organization": "總理大餐廳",
+      "location": "臺南市北區北安路一段183號(D20北安捐血室)",
+      "rawContent": "08:30~17:00 總理大餐廳 臺南市北區北安路一段183號(D20北安捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628298379432765"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDg6MDB+MTc6MDAt5ZiJ5aSn6JuL5ZOB",
+      "time": "08:00~17:00",
+      "organization": "嘉大蛋品",
+      "location": "臺南市中西區永福路1段85號(D19永福捐血室)",
+      "rawContent": "08:00~17:00 嘉大蛋品 臺南市中西區永福路1段85號(D19永福捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628295464643241"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDg6MzB+MTc6MDAt56aP5pm65L2b5pWZ5Z+66YeR5pyD5Y+w5Y2X5p6X5qOu5pWZ5a6k",
+      "time": "08:30~17:00",
+      "organization": "福智佛教基金會台南林森教室",
+      "location": "臺南市北區東興路2段47號(D22東興捐血室)",
+      "rawContent": "08:30~17:00 福智佛教基金會台南林森教室 臺南市北區東興路2段47號(D22東興捐血室)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628295008512278"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MDB+MTc6MDAt5Y+w54Gj6Zmz5aGX5aK75oSb5b+D5oWI5ZaE5pyD",
+      "time": "09:00~17:00",
+      "organization": "台灣陳塗墻愛心慈善會",
+      "location": "臺南市東區林森路1段311號(龍山社區活動中心)",
+      "rawContent": "09:00~17:00 台灣陳塗墻愛心慈善會 臺南市東區林森路1段311號(龍山社區活動中心)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628294820764223"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDg6MzB+MTc6MDAt5Y+w5Y2X5biC5rC45bq35Y2A5buj6K235a6u",
+      "time": "08:30~17:00",
+      "organization": "台南市永康區廣護宮",
+      "location": "臺南市永康區大灣路286號(大灣廣護宮)",
+      "rawContent": "08:30~17:00 台南市永康區廣護宮 臺南市永康區大灣路286號(大灣廣護宮)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628294641916279"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDg6MDB+MTc6MDAt5ZiJ576p57ij5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "08:00~17:00",
+      "organization": "嘉義縣國際同濟會",
+      "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
+      "rawContent": "08:00~17:00 嘉義縣國際同濟會 嘉義市西區博愛路一段488號(S81嘉義捐血站)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628294286895206"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MDB+MTc6MDAt57i955CG5aSn6aSQ5buz",
+      "time": "09:00~17:00",
+      "organization": "總理大餐廳",
+      "location": "臺南市北區台南公園-台南轉運站對面(D14中山捐血車)",
+      "rawContent": "09:00~17:00 總理大餐廳 臺南市北區台南公園-台南轉運站對面(D14中山捐血車)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628293007047251"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDg6MDB+MTY6MDAt5ZyL6Zqb5ZCM5r+f5pyD6Iqx5p2x5Y2A",
+      "time": "08:00~16:00",
+      "organization": "國際同濟會花東區",
+      "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
+      "rawContent": "08:00~16:00 國際同濟會花東區 臺東縣臺東市四維路三段198號(S76台東捐血站)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628290736138765"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjQtMDk6MDB+MTc6MDAt6auY6YKR54Sh5qW16b6N6bOz5a6u566h55CG5aeU5ZOh5pyD",
+      "time": "09:00~17:00",
+      "organization": "高邑無極龍鳳宮管理委員會",
+      "location": "高雄市大寮區鳳林二路930號(大寮高邑無極龍鳳宮)",
+      "rawContent": "09:00~17:00 高邑無極龍鳳宮管理委員會 高雄市大寮區鳳林二路930號(大寮高邑無極龍鳳宮)",
+      "activityDate": "2026-01-24",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628290192259737"
+    },
+    {
       "id": "cHR0LTIwMjYtMDEtMjQtMS8yNCjlha0p5b2w5YyW6bm/5riv6auU6IKy5aC0",
       "time": "",
       "organization": "彰化鹿港體育場",
@@ -5815,6 +6471,226 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534201282064049"
     },
     {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDg6MzB+MTc6MDAt6Ie65Y2X5biC54ef6bOz5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "08:30~17:00",
+      "organization": "臺南市營鳳國際同濟會",
+      "location": "臺南市新營區中正路23-1號(新營民治議事廳對面玻璃屋D18新營捐血室)",
+      "rawContent": "08:30~17:00 臺南市營鳳國際同濟會 臺南市新營區中正路23-1號(新營民治議事廳對面玻璃屋D18新營捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628319432127852"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDg6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq65q2j5b6356S+5pyD56aP5Yip5oWI5ZaE5Z+66YeR5pyDKOWxj+adseWIhumZoik=",
+      "time": "08:00~17:00",
+      "organization": "財團法人正德社會福利慈善基金會(屏東分院)",
+      "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
+      "rawContent": "08:00~17:00 財團法人正德社會福利慈善基金會(屏東分院) 屏東縣屏東市忠孝路295號(S73屏東捐血站)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628317530652835"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MzAt5ZCM5r+f5pyD6auY5bGP5Y2AQg==",
+      "time": "09:00~17:30",
+      "organization": "同濟會高屏區B",
+      "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
+      "rawContent": "09:00~17:30 同濟會高屏區B 高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628316996773808"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDg6MDB+MTc6MDAt6Imv5aCF5bu66Kit6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "08:00~17:00",
+      "organization": "良堅建設股份有限公司",
+      "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
+      "rawContent": "08:00~17:00 良堅建設股份有限公司 高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628316352804880"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDg6MDB+MTY6MDAt5pWR5ZyL5ZyY5Y+w5p2x57ij5ZyY5aeU5pyD",
+      "time": "08:00~16:00",
+      "organization": "救國團台東縣團委會",
+      "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
+      "rawContent": "08:00~16:00 救國團台東縣團委會 臺東縣臺東市四維路三段198號(S76台東捐血站)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628315718925753"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDmjZDooYDlp5Tlk6HmnIM=",
+      "time": "09:00~17:00",
+      "organization": "國際獅子會300E2區捐血委員會",
+      "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "rawContent": "09:00~17:00 國際獅子會300E2區捐血委員會 高雄市岡山區壽華路58號(S72岡山捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628314704611366"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MzAt5ZCM5r+f5pyD6auY5bGP5Y2AQg==",
+      "time": "09:00~17:30",
+      "organization": "同濟會高屏區B",
+      "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
+      "rawContent": "09:00~17:30 同濟會高屏區B 高雄市前金區中華三路7號6樓(S75前金捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628312268167321"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MzB+MTg6MDAt5ZCM5r+f5pyD6auY5bGP5Y2AQg==",
+      "time": "09:30~18:00",
+      "organization": "同濟會高屏區B",
+      "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
+      "rawContent": "09:30~18:00 同濟會高屏區B 高雄市左營區博愛三路635號(D09左營捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628311624299394"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MzAt5oWI5q+N5a6u5oWI5ZaE5aeU5ZOh5pyD",
+      "time": "09:00~17:30",
+      "organization": "慈母宮慈善委員會",
+      "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "rawContent": "09:00~17:30 慈母宮慈善委員會 高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628311080310277"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MzAt5ZCM5r+f5pyD6auY5bGP5Y2AQg==",
+      "time": "09:00~17:30",
+      "organization": "同濟會高屏區B",
+      "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "rawContent": "09:00~17:30 同濟會高屏區B 高雄市三民區九如一路198號1樓(D21九如捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628310076006889"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq65Lmd6I+v5bGx5Zyw6JeP5bq1",
+      "time": "09:00~17:00",
+      "organization": "財團法人九華山地藏庵",
+      "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
+      "rawContent": "09:00~17:00 財團法人九華山地藏庵 嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628309723714277"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDg6MzB+MTc6MDAt5Lqe5p2x5L+d5YWo6IKh5Lu95pyJ6ZmQ5YWs5Y+45Y+w5Y2X5YiG5YWs5Y+4",
+      "time": "08:30~17:00",
+      "organization": "亞東保全股份有限公司台南分公司",
+      "location": "臺南市北區東興路2段47號(D22東興捐血室)",
+      "rawContent": "08:30~17:00 亞東保全股份有限公司台南分公司 臺南市北區東興路2段47號(D22東興捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628309267693295"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MDAt6IyD5q2m5aCC",
+      "time": "09:00~17:00",
+      "organization": "范武堂",
+      "location": "臺南市北區大興街1號(大興公園)",
+      "rawContent": "09:00~17:00 范武堂 臺南市北區大興街1號(大興公園)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628308544966222"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDg6MzB+MTc6MDAt6IyD5q2m5aCC",
+      "time": "08:30~17:00",
+      "organization": "范武堂",
+      "location": "臺南市北區北安路一段183號(D20北安捐血室)",
+      "rawContent": "08:30~17:00 范武堂 臺南市北區北安路一段183號(D20北安捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628308188845240"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MDAt5Lit6I+v5a2a5L2R5bid5ZCb6Zuy56uv5Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "中華孚佑帝君雲端協會",
+      "location": "高雄市鳳山區和興街189號(財團法人鳳山鎮南宮仙公廟)",
+      "rawContent": "09:00~17:00 中華孚佑帝君雲端協會 高雄市鳳山區和興街189號(財團法人鳳山鎮南宮仙公廟)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628305539177708"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MDAt546J5oWI5a6u",
+      "time": "09:00~17:00",
+      "organization": "玉慈宮",
+      "location": "高雄市三民區河北二路與中華路交叉口(高董當鋪)",
+      "rawContent": "09:00~17:00 玉慈宮 高雄市三民區河北二路與中華路交叉口(高董當鋪)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628305173056736"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDg6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq65Lmd6I+v5bGx5Zyw6JeP5bq1",
+      "time": "08:00~17:00",
+      "organization": "財團法人九華山地藏庵",
+      "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
+      "rawContent": "08:00~17:00 財團法人九華山地藏庵 嘉義市西區博愛路一段488號(S81嘉義捐血站)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628304995208781"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq65Lmd6I+v5bGx5Zyw6JeP5bq1",
+      "time": "09:00~17:00",
+      "organization": "財團法人九華山地藏庵",
+      "location": "嘉義市東區民權路255號(九華山地藏庵)",
+      "rawContent": "09:00~17:00 財團法人九華山地藏庵 嘉義市東區民權路255號(九華山地藏庵)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628304450329754"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MDAt6IyD5q2m5aCC",
+      "time": "09:00~17:00",
+      "organization": "范武堂",
+      "location": "臺南市北區台南公園-台南轉運站對面(D14中山捐血車)",
+      "rawContent": "09:00~17:00 范武堂 臺南市北區台南公園-台南轉運站對面(D14中山捐血車)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628303816450736"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTY6MDAt56S+5ZyY5rOV5Lq66auY6ZuE5biC56aP57ej6IGa5Y2B5pa55ZaE6KGM5Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "社團法人高雄市福緣聚十方善行協會",
+      "location": "高雄市新興區七賢一路393號(七賢國小)",
+      "rawContent": "09:00~16:00 社團法人高雄市福緣聚十方善行協會 高雄市新興區七賢一路393號(七賢國小)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628303272571719"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDg6MDB+MTc6MDAt5ZaE5b+D5Lq65aOr6Zmz6IKy57SU",
+      "time": "08:00~17:00",
+      "organization": "善心人士陳育純",
+      "location": "臺南市中西區永福路1段85號(D19永福捐血室)",
+      "rawContent": "08:00~17:00 善心人士陳育純 臺南市中西區永福路1段85號(D19永福捐血室)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628300801562222"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTXljYAu",
+      "time": "09:30~17:00",
+      "organization": "國際獅子會300E5區.",
+      "location": "高雄市苓雅區三多四路21號(大遠百前廣場)",
+      "rawContent": "09:30~17:00 國際獅子會300E5區. 高雄市苓雅區三多四路21號(大遠百前廣場)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628300445441249"
+    },
+    {
       "id": "cHR0LTIwMjYtMDEtMjUtMS8yNSjml6Up5Y+w5Lit5paw5YWJ5LiJ6LaK5o2Q6KGA6LuK",
       "time": "",
       "organization": "台中新光三越捐血車",
@@ -5828,6 +6704,26 @@
         "rawLine": "1/25(日)台中新光三越捐血車",
         "images": [
           "https://i.imgur.com/kY403wR.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": []
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDEtMjUtMS8yNSjml6Up6Iqx6JOu546J5rqq5Zyw5Y2A6L6y5pyD5o6o5buj5pWZ6IKy5Lit5b+D",
+      "time": "",
+      "organization": "花蓮玉溪地區農會推廣教育中心",
+      "location": "花蓮玉溪地區農會推廣教育中心",
+      "rawContent": "1/25(日)花蓮玉溪地區農會推廣教育中心",
+      "activityDate": "2026-01-25",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "1/25(日)花蓮玉溪地區農會推廣教育中心",
+        "images": [
+          "https://i.imgur.com/Dfpl1ju.jpeg"
         ],
         "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
         "tags": []
