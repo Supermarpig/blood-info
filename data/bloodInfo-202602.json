@@ -1,0 +1,29 @@
+{
+  "2026-02-01": [
+    {
+      "id": "cHR0LTIwMjYtMDItMDEtMi8xKOaXpSnoirHok67pgaDnmb7mmJ/lt7TlhYvlu6PloLQ=",
+      "time": "",
+      "organization": "花蓮遠百星巴克廣場",
+      "location": "花蓮遠百星巴克廣場",
+      "rawContent": "2/1(日)花蓮遠百星巴克廣場",
+      "activityDate": "2026-02-01",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [
+        "餐飲"
+      ],
+      "pttData": {
+        "rawLine": "2/1(日)花蓮遠百星巴克廣場",
+        "images": [
+          "https://i.imgur.com/M7KnB7o.jpeg",
+          "https://i.imgur.com/GVHegoB.jpeg"
+        ],
+        "url": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+        "tags": [
+          "餐飲"
+        ]
+      },
+      "isPttOnly": true
+    }
+  ]
+}
