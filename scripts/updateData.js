@@ -19,7 +19,7 @@ const bloodCenters = [
 
 // 贈品關鍵字對應 tag
 const GIFT_TAG_MAPPING = {
-    '電影票': ['電影', '威秀', '國賓', '秀泰', 'in89', '美麗華', 'IMAX', '喜滿客', '京站', '影城'],
+    '電影票': ['電影', '威秀', '國賓', '秀泰', 'in89', '美麗華', 'IMAX', '喜滿客', '京站', '影城', '松壽路'],
     '禮券': ['禮券', '禮卷', '商品券', '折價券', '抵用券', '消費券'],
     '超商': ['全家', '7-11', '711', '萊爾富', 'OK超商', '全聯', '家樂福', '美廉社'],
     '餐飲': ['咖啡', '星巴克', '路易莎', '麥當勞', '肯德基', '摩斯', '飲料', '便當', '餐券', '早餐'],
@@ -306,6 +306,9 @@ async function fetchPttData() {
             // Use contents() to traverse nodes including text and elements
             const contents = mainContent.contents();
 
+            // 追蹤多日期事件群組（用於後續補充地點和圖片）
+            let pendingMultiDateEvents = [];
+
             contents.each((i, node) => {
                 if (node.type === 'text') {
                     const text = $(node).text();
@@ -314,24 +317,73 @@ async function fetchPttData() {
                         lines.forEach(line => {
                             const trimmed = line.trim();
                             if (trimmed) {
-                                // Date pattern: e.g., 12/27(六), 1/3(六)
-                                const dateMatch = trimmed.match(/^(\d{1,2}\/\d{1,2})/);
-                                if (dateMatch) {
-                                    let loc = trimmed.substring(dateMatch[0].length).trim();
-                                    // Clean up extended date info (ranges, parens)
-                                    // e.g. "-12/28", "(六)", "(六-日)"
-                                    loc = loc.replace(/^(\s*-\s*\d{1,2}\/\d{1,2})/, '')
-                                        .replace(/^\s*\(.*?\)/, '')
-                                        .replace(/^\s*[-~]\s*/, '') // Remove leading separators
+                                // 檢查純文字中的 imgur 圖片連結
+                                const imgurMatch = trimmed.match(/https?:\/\/i\.imgur\.com\/[a-zA-Z0-9]+\.(jpg|jpeg|png|gif)/i);
+                                if (imgurMatch) {
+                                    // 圖片關聯到所有待處理的多日期事件
+                                    if (pendingMultiDateEvents.length > 0) {
+                                        pendingMultiDateEvents.forEach(e => e.images.push(imgurMatch[0]));
+                                    } else if (lastTextLine) {
+                                        lastTextLine.images.push(imgurMatch[0]);
+                                    }
+                                    return; // 這行是圖片連結，不需要當作日期處理
+                                }
+
+                                // 檢查是否包含多個日期（如 1/9(五)、1/25(日)、2/14(六)...）
+                                const allDates = trimmed.match(/\d{1,2}\/\d{1,2}/g);
+
+                                if (allDates && allDates.length > 0) {
+                                    // 檢查這行是否只有日期，沒有地點（多日期格式）
+                                    // 去掉所有日期、星期、分隔符後看是否還有內容
+                                    let remaining = trimmed
+                                        .replace(/\d{1,2}\/\d{1,2}/g, '')  // 移除日期
+                                        .replace(/\([一二三四五六日]\)/g, '')  // 移除星期
+                                        .replace(/[、,，\s\-~]/g, '')  // 移除分隔符
                                         .trim();
 
-                                    pttEvents.push({
-                                        matchDate: dateMatch[1],
-                                        rawLine: trimmed,
-                                        locationStr: loc,
-                                        images: [],
+                                    const isMultiDateOnly = allDates.length > 1 && remaining.length < 3;
+
+                                    if (isMultiDateOnly) {
+                                        // 多日期格式：為每個日期創建事件，地點待補充
+                                        // 注意：不清除之前的待處理事件，這樣連續多日期行會累加
+                                        allDates.forEach(dateStr => {
+                                            const event = {
+                                                matchDate: dateStr,
+                                                rawLine: trimmed,
+                                                locationStr: '', // 地點待補充
+                                                images: [],
+                                            };
+                                            pttEvents.push(event);
+                                            pendingMultiDateEvents.push(event);
+                                        });
+                                        lastTextLine = pendingMultiDateEvents[pendingMultiDateEvents.length - 1];
+                                    } else {
+                                        // 單日期+地點格式（原有邏輯）
+                                        const dateMatch = trimmed.match(/^(\d{1,2}\/\d{1,2})/);
+                                        if (dateMatch) {
+                                            let loc = trimmed.substring(dateMatch[0].length).trim();
+                                            loc = loc.replace(/^(\s*-\s*\d{1,2}\/\d{1,2})/, '')
+                                                .replace(/^\s*\(.*?\)/, '')
+                                                .replace(/^\s*[-~]\s*/, '')
+                                                .trim();
+
+                                            const event = {
+                                                matchDate: dateMatch[1],
+                                                rawLine: trimmed,
+                                                locationStr: loc,
+                                                images: [],
+                                            };
+                                            pttEvents.push(event);
+                                            lastTextLine = event;
+                                            pendingMultiDateEvents = []; // 清除待處理事件
+                                        }
+                                    }
+                                } else if (pendingMultiDateEvents.length > 0 && trimmed.length > 2) {
+                                    // 非日期行：補充到待處理的多日期事件作為地點
+                                    pendingMultiDateEvents.forEach(e => {
+                                        e.locationStr = trimmed;
+                                        e.rawLine = e.rawLine + ' ' + trimmed; // 合併完整資訊
                                     });
-                                    lastTextLine = pttEvents[pttEvents.length - 1];
                                 }
                             }
                         });
@@ -339,8 +391,12 @@ async function fetchPttData() {
                 } else if (node.type === 'tag' && node.name === 'a') {
                     const href = $(node).attr('href');
                     // Associate image link with the last found event line
-                    if (href && lastTextLine && (href.match(/\.(jpg|jpeg|png)$/i) || href.includes('imgur.com'))) {
-                        lastTextLine.images.push(href);
+                    if (href && (href.match(/\.(jpg|jpeg|png)$/i) || href.includes('imgur.com'))) {
+                        if (pendingMultiDateEvents.length > 0) {
+                            pendingMultiDateEvents.forEach(e => e.images.push(href));
+                        } else if (lastTextLine) {
+                            lastTextLine.images.push(href);
+                        }
                     }
                 } else if (node.type === 'tag' && node.name === 'span') {
                     // Handle colored text (often used for emphasis in PTT)
@@ -348,26 +404,31 @@ async function fetchPttData() {
                     const dateMatch = text.match(/^(\d{1,2}\/\d{1,2})/);
                     if (dateMatch) {
                         let loc = text.substring(dateMatch[0].length).trim();
-                        // Clean up extended date info
                         loc = loc.replace(/^(\s*-\s*\d{1,2}\/\d{1,2})/, '')
                             .replace(/^\s*\(.*?\)/, '')
                             .replace(/^\s*[-~]\s*/, '')
                             .trim();
 
-                        pttEvents.push({
+                        const event = {
                             matchDate: dateMatch[1],
                             rawLine: text,
                             locationStr: loc,
                             images: [],
-                        });
-                        lastTextLine = pttEvents[pttEvents.length - 1];
+                        };
+                        pttEvents.push(event);
+                        lastTextLine = event;
+                        pendingMultiDateEvents = []; // 清除待處理事件
                     }
 
                     // Allow finding links inside span
                     $(node).find('a').each((i, a) => {
                         const href = $(a).attr('href');
-                        if (href && lastTextLine && (href.match(/\.(jpg|jpeg|png)$/i) || href.includes('imgur.com'))) {
-                            lastTextLine.images.push(href);
+                        if (href && (href.match(/\.(jpg|jpeg|png)$/i) || href.includes('imgur.com'))) {
+                            if (pendingMultiDateEvents.length > 0) {
+                                pendingMultiDateEvents.forEach(e => e.images.push(href));
+                            } else if (lastTextLine) {
+                                lastTextLine.images.push(href);
+                            }
                         }
                     });
                 }
@@ -424,6 +485,16 @@ async function fetchPttData() {
             }
 
             console.log('OCR 識別完成');
+
+            // 對沒有圖片的事件，也從 rawLine 提取 tags
+            const eventsWithoutTags = pttEvents.filter(e => !e.tags || e.tags.length === 0);
+            eventsWithoutTags.forEach(event => {
+                event.tags = extractTagsFromText(event.rawLine);
+                if (event.tags.length > 0) {
+                    console.log(`  從 rawLine 識別到 tags: ${event.rawLine.substring(0, 30)}... → ${event.tags.join(', ')}`);
+                }
+            });
+
             return pttEvents;
 
         } catch (e) {
@@ -517,8 +588,10 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
         // 新增：將未匹配的 PTT 資料作為獨立記錄加入（只加入符合目標月份的）
         let unmatchedCount = 0;
         pttData.forEach(pttEvent => {
-            // 檢查這個 PTT 事件是否有圖片且未被任何官方活動匹配
-            if (pttEvent.images && pttEvent.images.length > 0) {
+            // 檢查這個 PTT 事件是否有圖片或贈品 tags，且未被任何官方活動匹配
+            const hasImages = pttEvent.images && pttEvent.images.length > 0;
+            const hasTags = pttEvent.tags && pttEvent.tags.length > 0;
+            if (hasImages || hasTags) {
                 // 過濾：只處理符合目標月份的 PTT 事件
                 if (targetYear && targetMonth) {
                     const [eventYear, eventMonth] = pttEvent.date.split('-').map(Number);
