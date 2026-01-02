@@ -97,6 +97,158 @@ async function extractTagsFromEvent(rawLine, images) {
     return extractTagsFromText(combinedText);
 }
 
+// ==================== PTT OCR 快取 ====================
+// 從現有 JSON 資料中載入已有的 tags（避免重複 OCR）
+const pttOcrCache = new Map();
+
+// 從現有資料檔載入已有的 pttData.tags
+async function loadPttTagsFromExistingData() {
+    const dataDir = path.join(process.cwd(), 'data');
+    try {
+        const files = await fs.readdir(dataDir);
+        const jsonFiles = files.filter(f => f.startsWith('bloodInfo-') && f.endsWith('.json'));
+
+        for (const file of jsonFiles) {
+            const content = await fs.readFile(path.join(dataDir, file), 'utf-8');
+            const data = JSON.parse(content);
+
+            for (const date in data) {
+                for (const event of data[date]) {
+                    // 如果有 pttData 且有 tags，就快取起來
+                    if (event.pttData?.rawLine && event.pttData?.tags) {
+                        pttOcrCache.set(event.pttData.rawLine, event.pttData.tags);
+                    }
+                }
+            }
+        }
+        console.log(`從現有資料載入 ${pttOcrCache.size} 筆 PTT tags 快取`);
+    } catch (error) {
+        console.log('載入現有 PTT tags 快取失敗:', error.message);
+    }
+}
+
+// ==================================================
+
+
+// ==================== Geocoding ====================
+// Geocoding 快取（避免重複請求同一地址）
+const geocodeCache = new Map();
+const GEOCODE_CACHE_FILE = path.join(process.cwd(), 'data', 'geocode-cache.json');
+
+// 載入快取
+async function loadGeocodeCache() {
+    try {
+        const content = await fs.readFile(GEOCODE_CACHE_FILE, 'utf-8');
+        const data = JSON.parse(content);
+        Object.entries(data).forEach(([key, value]) => geocodeCache.set(key, value));
+        console.log(`載入 ${geocodeCache.size} 筆 Geocoding 快取`);
+    } catch {
+        console.log('Geocoding 快取檔不存在，將建立新的');
+    }
+}
+
+// 儲存快取
+async function saveGeocodeCache() {
+    const data = Object.fromEntries(geocodeCache);
+    await fs.writeFile(GEOCODE_CACHE_FILE, JSON.stringify(data, null, 2), 'utf-8');
+    console.log(`儲存 ${geocodeCache.size} 筆 Geocoding 快取`);
+}
+
+// 延遲函數（符合 Nominatim 1 秒 1 次的限制）
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// 將地址轉換為經緯度
+async function geocodeAddress(address) {
+    // 檢查快取
+    if (geocodeCache.has(address)) {
+        return geocodeCache.get(address);
+    }
+
+    try {
+        // 簡化地址：移除括號內容和樓層資訊，只保留主要地址
+        let cleanAddress = address
+            .replace(/\(.*?\)/g, '')  // 移除括號內容
+            .replace(/\d+樓.*$/, '')  // 移除樓層資訊
+            .replace(/[^\u4e00-\u9fa5\d號路街巷弄段區鄉鎮市縣]*/g, '') // 只保留地址相關字
+            .trim();
+
+        // 確保包含「台灣」提高查詢準確度
+        if (!cleanAddress.includes('台灣')) {
+            cleanAddress = '台灣 ' + cleanAddress;
+        }
+
+        const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(cleanAddress)}&countrycodes=tw&limit=1`;
+
+        const response = await axios.get(url, {
+            headers: {
+                'User-Agent': 'BloodDonationInfoApp/1.0 (education project)',
+            },
+            timeout: 10000,
+        });
+
+        if (response.data && response.data.length > 0) {
+            const result = {
+                lat: parseFloat(response.data[0].lat),
+                lng: parseFloat(response.data[0].lon),
+            };
+            geocodeCache.set(address, result);
+            return result;
+        }
+
+        // 找不到結果，快取為 null 避免重複查詢
+        geocodeCache.set(address, null);
+        return null;
+    } catch (error) {
+        console.error(`Geocoding 失敗 (${address}): ${error.message}`);
+        return null;
+    }
+}
+
+// 批量處理活動的 Geocoding
+async function geocodeEvents(data) {
+    const addresses = new Set();
+
+    // 收集所有獨特的地址
+    for (const date in data) {
+        for (const event of data[date]) {
+            if (event.location && !geocodeCache.has(event.location)) {
+                addresses.add(event.location);
+            }
+        }
+    }
+
+    const addressList = Array.from(addresses);
+    console.log(`\n開始 Geocoding ${addressList.length} 個新地址...`);
+
+    for (let i = 0; i < addressList.length; i++) {
+        const address = addressList[i];
+        console.log(`  [${i + 1}/${addressList.length}] ${address.substring(0, 30)}...`);
+        await geocodeAddress(address);
+        // 符合 Nominatim 使用政策：1 秒 1 次請求
+        if (i < addressList.length - 1) {
+            await delay(1100);
+        }
+    }
+
+    // 將快取的經緯度寫入活動資料
+    for (const date in data) {
+        for (const event of data[date]) {
+            if (event.location) {
+                const coords = geocodeCache.get(event.location);
+                if (coords) {
+                    event.coordinates = coords;
+                }
+            }
+        }
+    }
+
+    console.log('Geocoding 完成');
+}
+
+// ==================================================
+
 const PTT_URL = 'https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html';
 
 // 生成指定月份的文件名
@@ -242,14 +394,24 @@ async function fetchPttData() {
 
             console.log(`Fetched ${pttEvents.length} events from PTT`);
 
-            // OCR 識別圖片，提取贈品 tags
+            // OCR 識別圖片，提取贈品 tags（先檢查快取）
             const eventsWithImages = pttEvents.filter(e => e.images && e.images.length > 0);
-            console.log(`開始 OCR 識別 ${eventsWithImages.length} 個有圖片的活動...`);
+            const eventsNeedingOcr = eventsWithImages.filter(e => !pttOcrCache.has(e.rawLine));
+            const eventsWithCachedTags = eventsWithImages.filter(e => pttOcrCache.has(e.rawLine));
 
-            for (let i = 0; i < eventsWithImages.length; i++) {
-                const event = eventsWithImages[i];
-                console.log(`  [${i + 1}/${eventsWithImages.length}] 處理: ${event.locationStr || event.rawLine.substring(0, 30)}`);
+            // 套用快取的 tags
+            eventsWithCachedTags.forEach(event => {
+                event.tags = pttOcrCache.get(event.rawLine) || [];
+            });
+            console.log(`快取命中 ${eventsWithCachedTags.length} 個活動，需新 OCR ${eventsNeedingOcr.length} 個活動...`);
+
+            // 只對沒有快取的進行 OCR
+            for (let i = 0; i < eventsNeedingOcr.length; i++) {
+                const event = eventsNeedingOcr[i];
+                console.log(`  [${i + 1}/${eventsNeedingOcr.length}] OCR: ${event.locationStr || event.rawLine.substring(0, 30)}`);
                 event.tags = await extractTagsFromEvent(event.rawLine, event.images);
+                // 存入快取
+                pttOcrCache.set(event.rawLine, event.tags);
                 if (event.tags.length > 0) {
                     console.log(`    → 識別到 tags: ${event.tags.join(', ')}`);
                 }
@@ -576,6 +738,9 @@ async function processMonth(year, month, pttData) {
     // 2. Pass existingData to mergeData for fallback
     const mergedData = mergeData(officialData, pttData, existingData, year, month);
 
+    // 3. Geocoding: 將地址轉換為經緯度
+    await geocodeEvents(mergedData);
+
     const totalEvents = Object.values(mergedData).reduce((sum, events) => sum + events.length, 0);
     console.log(`包含 ${Object.keys(mergedData).length} 個日期，共 ${totalEvents} 筆活動`);
 
@@ -588,6 +753,10 @@ async function processMonth(year, month, pttData) {
 async function updateData() {
     try {
         console.log('開始更新資料...');
+
+        // 0. 載入快取
+        await loadGeocodeCache();
+        await loadPttTagsFromExistingData();
 
         // 1. 先取得 PTT 資料 (一次性)
         const pttData = await fetchPttData();
@@ -608,10 +777,15 @@ async function updateData() {
         }
         await processMonth(nextYear, nextMonth, pttData);
 
+        // 4. 儲存 Geocoding 快取
+        await saveGeocodeCache();
+
         // Git operations are now handled by GitHub Actions
         console.log('資料更新完成！');
     } catch (error) {
         console.error('更新失敗:', error);
+        // 即使更新失敗也要儲存快取
+        await saveGeocodeCache();
     }
 }
 

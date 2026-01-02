@@ -15,12 +15,15 @@ import {
   UtensilsCrossed,
   Gift,
   X,
+  MapPin,
 } from "lucide-react";
 import { debounce } from "@/utils";
 import CardInfo from "@/components/CardInfo";
 import BackToTopButton from "@/components/BackToTopButton";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
+import { useNearbyLocations } from "@/hooks/useNearbyLocations";
+import NearbyLocationsModal from "@/components/NearbyLocationsModal";
 
 interface DonationEvent {
   id?: string;
@@ -29,10 +32,14 @@ interface DonationEvent {
   location: string;
   rawContent: string;
   customNote?: string;
-  date: string;
+  activityDate: string;
   center?: string;
   detailUrl?: string;
   tags?: string[];
+  coordinates?: {
+    lat: number;
+    lng: number;
+  };
   pttData?: {
     rawLine: string;
     images: string[];
@@ -62,6 +69,15 @@ export default function SearchableDonationList({
   const [selectedCenter, setSelectedCenter] = useState<string>("全部");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [showPastEvents, setShowPastEvents] = useState<boolean>(false);
+  const [isNearbyModalOpen, setIsNearbyModalOpen] = useState<boolean>(false);
+
+  const {
+    isLoading: isNearbyLoading,
+    error: nearbyError,
+    nearbyLocations,
+    findNearbyLocations,
+    clearResults,
+  } = useNearbyLocations();
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -127,6 +143,24 @@ export default function SearchableDonationList({
       pastEvents: _pastEvents,
     };
   }, [data, selectedCenter, searchKeyword, selectedTags, today]);
+
+  // 取得所有當前和未來的活動事件（用於找附近功能）
+  const allCurrentEvents = useMemo(() => {
+    const events: DonationEvent[] = [];
+    Object.values(todayEvents).forEach((arr) => events.push(...arr));
+    Object.values(upcomingEvents).forEach((arr) => events.push(...arr));
+    return events;
+  }, [todayEvents, upcomingEvents]);
+
+  const handleFindNearby = async () => {
+    setIsNearbyModalOpen(true);
+    await findNearbyLocations(allCurrentEvents);
+  };
+
+  const handleCloseNearbyModal = () => {
+    setIsNearbyModalOpen(false);
+    clearResults();
+  };
 
   const renderEventSection = (
     eventsByDate: Record<string, DonationEvent[]>,
@@ -195,17 +229,30 @@ export default function SearchableDonationList({
             </TabsList>
           </Tabs>
 
-          <div className="relative w-full md:w-72">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-            <Input
-              placeholder="搜尋機構、地點..."
-              onChange={debounce(
-                (e: React.ChangeEvent<HTMLInputElement>) =>
-                  setSearchKeyword(e.target.value),
-                300
-              )}
-              className="pl-9 bg-white border-slate-200 focus:border-primary w-full"
-            />
+          {/* 搜尋框 + 找附近按鈕 */}
+          <div className="flex items-center gap-2 w-full md:w-auto">
+            <div className="relative flex-1 md:w-64">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <Input
+                placeholder="搜尋機構、地點..."
+                onChange={debounce(
+                  (e: React.ChangeEvent<HTMLInputElement>) =>
+                    setSearchKeyword(e.target.value),
+                  300
+                )}
+                className="pl-9 bg-white border-slate-200 focus:border-primary w-full"
+              />
+            </div>
+
+            {/* 找附近按鈕 */}
+            <Button
+              variant="outline"
+              onClick={handleFindNearby}
+              className="flex-shrink-0 gap-1.5 text-red-600 border-red-200 hover:bg-red-50 hover:border-red-300 px-3"
+            >
+              <MapPin className="w-4 h-4" />
+              <span className="hidden sm:inline">找附近</span>
+            </Button>
           </div>
         </div>
 
@@ -308,6 +355,15 @@ export default function SearchableDonationList({
       </div>
 
       <BackToTopButton />
+
+      {/* 附近捐血點 Modal */}
+      <NearbyLocationsModal
+        isOpen={isNearbyModalOpen}
+        onClose={handleCloseNearbyModal}
+        isLoading={isNearbyLoading}
+        error={nearbyError}
+        locations={nearbyLocations}
+      />
     </div>
   );
 }

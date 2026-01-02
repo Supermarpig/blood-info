@@ -16,13 +16,19 @@ interface DonationEvent {
   location: string;
   rawContent: string;
   customNote?: string;
-  date: string;
+  activityDate: string;
   center?: string;
-  detailUrl?: string; // Still needed for logic potentially, or PTT url fallback
+  detailUrl?: string;
+  tags?: string[];
+  coordinates?: {
+    lat: number;
+    lng: number;
+  };
   pttData?: {
     rawLine: string;
     images: string[];
     url: string;
+    tags?: string[];
   };
 }
 
