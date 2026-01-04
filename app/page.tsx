@@ -88,14 +88,18 @@ export default async function BloodDonationPage() {
 
   // 生成 JSON-LD
   // 1. WebSite Schema
+  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  if (!siteUrl) {
+    throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
+  }
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "台灣捐血活動查詢",
-    url: "https://blood-info.vercel.app/",
+    url: `${siteUrl}/`,
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://blood-info.vercel.app/?q={search_term_string}",
+      target: `${siteUrl}/?q={search_term_string}`,
       "query-input": "required name=search_term_string",
     },
   };

@@ -13,8 +13,14 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+if (!baseUrl) {
+  throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://blood-info.vercel.app"),
+  metadataBase: new URL(baseUrl),
   title: {
     default: "台灣捐血活動查詢 | 快速尋找附近的捐血點與贈品資訊",
     template: "%s | 台灣捐血活動查詢",
@@ -37,7 +43,7 @@ export const metadata: Metadata = {
     title: "台灣捐血活動查詢 | 快速尋找附近的捐血點與贈品資訊",
     description:
       "彙整全台灣最新捐血活動、地點、時間與贈品資訊。提供地圖模式與條件篩選，讓您輕鬆找到最適合的捐血站，一起熱血救人！",
-    url: "https://blood-info.vercel.app/",
+    url: baseUrl,
     siteName: "台灣捐血活動查詢",
     locale: "zh_TW",
     type: "website",

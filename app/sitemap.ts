@@ -1,7 +1,10 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://blood-info.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  if (!baseUrl) {
+    throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
+  }
 
   return [
     {
