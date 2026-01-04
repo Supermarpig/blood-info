@@ -3810,7 +3810,10 @@
       "coordinates": {
         "lat": 25.0354793,
         "lng": 121.5663914
-      }
+      },
+      "tags": [
+        "電影票"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDEvMDktMTM6MDB+MjE6MDAt55yf5ZaE576O542F5pyDQSAx",

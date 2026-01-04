@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import {
   ChevronDown,
@@ -70,6 +70,8 @@ export default function SearchableDonationList({
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [showPastEvents, setShowPastEvents] = useState<boolean>(false);
   const [isNearbyModalOpen, setIsNearbyModalOpen] = useState<boolean>(false);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   const {
     isLoading: isNearbyLoading,
@@ -83,6 +85,18 @@ export default function SearchableDonationList({
   const today = new Date().toLocaleDateString("en-CA", {
     timeZone: "Asia/Taipei",
   });
+
+  // 動態計算搜尋列高度
+  useEffect(() => {
+    const updateHeight = () => {
+      if (headerRef.current) {
+        setHeaderHeight(headerRef.current.offsetHeight);
+      }
+    };
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
 
   // 整理所有可用的中心列表
   // 捐血中心管轄區域對應
@@ -186,7 +200,10 @@ export default function SearchableDonationList({
         <div className="space-y-6">
           {dates.map((date) => (
             <div key={date} className="relative">
-              <div className="sticky top-0 z-10 py-2 -mx-4 px-4 bg-gray-50/95 backdrop-blur-sm border-b border-gray-100 mb-2">
+              <div
+                className="sticky z-10 py-2 -mx-4 px-4 bg-gray-50/95 backdrop-blur-sm border-b border-gray-100 mb-2"
+                style={{ top: headerHeight }}
+              >
                 <h3 className="text-sm font-bold text-gray-500 flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
                   {date}
@@ -212,7 +229,10 @@ export default function SearchableDonationList({
   return (
     <div className="max-w-7xl mx-auto">
       {/* 頂部搜尋與篩選區 */}
-      <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-md pb-4 pt-2 mb-6 border-b border-gray-100">
+      <div
+        ref={headerRef}
+        className="sticky top-0 z-20 bg-white/80 backdrop-blur-md pb-4 pt-2 mb-6 border-b border-gray-100"
+      >
         <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
           <Tabs
             value={selectedCenter}
