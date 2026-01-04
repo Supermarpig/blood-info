@@ -14,12 +14,32 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "台灣捐血活動整理小網站",
-  description: "一點點資訊整理",
+  metadataBase: new URL("https://blood-info.vercel.app"),
+  title: {
+    default: "台灣捐血活動查詢 | 快速尋找附近的捐血點與贈品資訊",
+    template: "%s | 台灣捐血活動查詢",
+  },
+  description:
+    "彙整全台灣最新捐血活動、地點、時間與贈品資訊。提供地圖模式與條件篩選，讓您輕鬆找到最適合的捐血站，一起熱血救人！",
+  keywords: [
+    "捐血",
+    "捐血活動",
+    "捐血贈品",
+    "捐血地點",
+    "捐血車",
+    "捐血中心",
+    "台灣捐血",
+    "公益",
+    "志工",
+    "血液基金會",
+  ],
   openGraph: {
-    title: "台灣捐血活動整理小網站",
-    description: "活動資訊整理，讓更多人了解哪裡捐血資訊",
+    title: "台灣捐血活動查詢 | 快速尋找附近的捐血點與贈品資訊",
+    description:
+      "彙整全台灣最新捐血活動、地點、時間與贈品資訊。提供地圖模式與條件篩選，讓您輕鬆找到最適合的捐血站，一起熱血救人！",
     url: "https://blood-info.vercel.app/",
+    siteName: "台灣捐血活動查詢",
+    locale: "zh_TW",
     type: "website",
     images: [
       {
@@ -30,6 +50,24 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "台灣捐血活動查詢 | 快速尋找附近的捐血點與贈品資訊",
+    description:
+      "彙整全台灣最新捐血活動、地點、時間與贈品資訊。提供地圖模式與條件篩選，讓您輕鬆找到最適合的捐血站，一起熱血救人！",
+    images: ["/imgs/og-img.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -38,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="zh-TW">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

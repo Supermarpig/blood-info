@@ -2,8 +2,63 @@
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 
+interface DonationEvent {
+  id?: string;
+  time: string;
+  organization: string;
+  location: string;
+  rawContent: string;
+  customNote?: string;
+  activityDate: string;
+  center?: string;
+  detailUrl?: string;
+  tags?: string[];
+  coordinates?: {
+    lat: number;
+    lng: number;
+  };
+  pttData?: {
+    rawLine: string;
+    images: string[];
+    url: string;
+    tags?: string[];
+  };
+}
+
+// 簡單的時間解析，預設格式 "09:00~17:00" 或 "09:00-17:00"
+function parseTime(
+  dateStr: string,
+  timeStr: string
+): { startDate: string; endDate: string } {
+  // 移除所有空格
+  const cleanTime = timeStr.replace(/\s/g, "");
+  // 嘗試分割
+  const parts = cleanTime.split(/[~-]/);
+
+  let startH = "09:00";
+  let endH = "17:00";
+
+  if (parts.length >= 1) {
+    const match = parts[0].match(/(\d{1,2}:\d{2})/);
+    if (match) startH = match[1];
+  }
+  if (parts.length >= 2) {
+    const match = parts[1].match(/(\d{1,2}:\d{2})/);
+    if (match) endH = match[1];
+  }
+
+  // 補零
+  if (startH.length === 4) startH = "0" + startH;
+  if (endH.length === 4) endH = "0" + endH;
+
+  return {
+    startDate: `${dateStr}T${startH}:00+08:00`,
+    endDate: `${dateStr}T${endH}:00+08:00`,
+  };
+}
+
 export default async function BloodDonationPage() {
-  let data;
+  let data: Record<string, DonationEvent[]> = {};
   let error = null;
 
   try {
@@ -13,14 +68,14 @@ export default async function BloodDonationPage() {
       cache: "no-store",
     });
     const apiData = await response.json();
-    data = apiData.data;
-
-    if (!apiData.success) {
+    if (apiData.success && apiData.data) {
+      data = apiData.data;
+    } else {
       error = apiData.error || "發生錯誤";
     }
   } catch (err) {
-    error = "無法獲取捐血活動資料😍😍😍";
     console.error(err);
+    error = "無法獲取捐血活動資料😍😍😍";
   }
 
   if (error) {
@@ -31,8 +86,92 @@ export default async function BloodDonationPage() {
     );
   }
 
+  // 生成 JSON-LD
+  // 1. WebSite Schema
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "台灣捐血活動查詢",
+    url: "https://blood-info.vercel.app/",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://blood-info.vercel.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  // 2. Event Schema (取今日與未來日期，限制數量以免 payload 太大)
+  const today = new Date().toLocaleDateString("en-CA", {
+    timeZone: "Asia/Taipei",
+  });
+
+  // 取得未來 7 天的日期 key
+  const upcomingDates = Object.keys(data)
+    .filter((date) => date >= today)
+    .sort()
+    .slice(0, 14); // 取兩週
+
+  const upcomingEvents: DonationEvent[] = [];
+  upcomingDates.forEach((date) => {
+    if (data[date]) {
+      upcomingEvents.push(...data[date]);
+    }
+  });
+
+  // 限制總 event 數量 (例如最多 20 個，優先顯示近期的)
+  const displayEvents = upcomingEvents.slice(0, 20);
+
+  const eventsJsonLd = displayEvents.map((event) => {
+    const { startDate, endDate } = parseTime(event.activityDate, event.time);
+    return {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name: `捐血活動 - ${event.organization}`,
+      startDate,
+      endDate,
+      eventStatus: "https://schema.org/EventScheduled",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: {
+        "@type": "Place",
+        name: event.location,
+        address: {
+          "@type": "PostalAddress",
+          addressRegion: event.center || "台灣", // 使用 center 作為地區，如 "台北"
+          addressCountry: "TW",
+          streetAddress: event.location,
+        },
+      },
+      image: event.pttData?.images?.[0] || undefined,
+      description: `地點：${event.location}。時間：${event.time}。${
+        event.pttData?.rawLine || event.customNote || ""
+      }`,
+      organizer: {
+        "@type": "Organization",
+        name: event.organization,
+      },
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "TWD",
+        availability: "https://schema.org/InStock",
+        description: "免費捐血",
+      },
+    };
+  });
+
   return (
     <div className="container mx-auto p-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+      {eventsJsonLd.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLd) }}
+        />
+      )}
+
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">捐血活動列表</h1>
         <AddDonationEventModal />
