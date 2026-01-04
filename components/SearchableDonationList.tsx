@@ -79,7 +79,10 @@ export default function SearchableDonationList({
     clearResults,
   } = useNearbyLocations();
 
-  const today = new Date().toISOString().split("T")[0];
+  // 使用台灣時區來判斷今日日期
+  const today = new Date().toLocaleDateString("en-CA", {
+    timeZone: "Asia/Taipei",
+  });
 
   // 整理所有可用的中心列表
   // 捐血中心管轄區域對應
