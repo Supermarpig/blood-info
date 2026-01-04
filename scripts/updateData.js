@@ -566,10 +566,11 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                     event.pttData = {
                         rawLine: matchedPtt.rawLine,
                         images: matchedPtt.images,
-                        url: PTT_URL,
-                        tags: matchedPtt.tags || []
                     };
-                    event.tags = matchedPtt.tags || [];
+                    // 合併 tags 並去重
+                    const existingTags = event.tags || [];
+                    const pttTags = matchedPtt.tags || [];
+                    event.tags = Array.from(new Set([...existingTags, ...pttTags]));
                     matchCount++;
                 } else if (existingEventsForDate.length > 0) {
                     // 匹配失敗，嘗試從舊資料保留 pttData
@@ -601,9 +602,13 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                 }
 
                 const dateEvents = officialData[pttEvent.date] || [];
-                const isMatched = dateEvents.some(event => event.pttData?.rawLine === pttEvent.rawLine);
+                // 檢查是否已經存在相同 rawLine 的 PTT 資料
+                const isAlreadyAdded = dateEvents.some(event =>
+                    event.pttData?.rawLine === pttEvent.rawLine ||
+                    (event.isPttOnly && event.rawContent === pttEvent.rawLine)
+                );
 
-                if (!isMatched) {
+                if (!isAlreadyAdded) {
                     // 建立一筆獨立的 PTT 來源記錄
                     const pttOnlyEvent = {
                         id: Buffer.from(`ptt-${pttEvent.date}-${pttEvent.rawLine}`).toString('base64'),
@@ -618,8 +623,6 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                         pttData: {
                             rawLine: pttEvent.rawLine,
                             images: pttEvent.images,
-                            url: PTT_URL,
-                            tags: pttEvent.tags || []
                         },
                         isPttOnly: true // 標記這是 PTT 獨有的資料
                     };
@@ -773,12 +776,17 @@ async function crawlData(startDate, endDate) {
         try {
             const centerData = await crawlCenter(center, startDate, endDate, httpsAgent, headers);
 
-            // 合併資料
+            // 合併資料並去重
             for (const date in centerData) {
                 if (!allDonations[date]) {
                     allDonations[date] = [];
                 }
-                allDonations[date].push(...centerData[date]);
+                centerData[date].forEach(newEvent => {
+                    // 根據 ID 檢查是否重複
+                    if (!allDonations[date].some(e => e.id === newEvent.id)) {
+                        allDonations[date].push(newEvent);
+                    }
+                });
             }
         } catch (error) {
             console.error(`${center.name} 爬取失敗:`, error.message);
@@ -786,6 +794,25 @@ async function crawlData(startDate, endDate) {
     }
 
     return allDonations;
+}
+
+// 清理資料中冗餘的欄位
+function cleanDataForSaving(data) {
+    const cleaned = {};
+    for (const date in data) {
+        cleaned[date] = data[date].map(event => {
+            // 移除 rawContent (前端未顯示)
+            const rest = { ...event };
+            delete rest.rawContent;
+            // 移除 pttData 中與頂層重複的欄位
+            if (rest.pttData) {
+                delete rest.pttData.tags;
+                delete rest.pttData.url;
+            }
+            return rest;
+        });
+    }
+    return cleaned;
 }
 
 async function processMonth(year, month, pttData) {
@@ -818,7 +845,8 @@ async function processMonth(year, month, pttData) {
     console.log(`包含 ${Object.keys(mergedData).length} 個日期，共 ${totalEvents} 筆活動`);
 
     console.log(`儲存至: ${fileName}`);
-    await saveLocalData(mergedData, filePath);
+    const cleanedData = cleanDataForSaving(mergedData);
+    await saveLocalData(cleanedData, filePath);
     return totalEvents;
 }
 
