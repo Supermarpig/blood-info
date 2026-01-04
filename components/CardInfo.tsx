@@ -30,6 +30,11 @@ interface DonationEvent {
     url: string;
     tags?: string[];
   };
+  reportData?: {
+    images: string[];
+    issueUrl: string;
+  };
+  isUserReport?: boolean;
 }
 
 interface CardInfoProps {
@@ -85,6 +90,8 @@ export default function CardInfo({
         return "bg-orange-100 text-orange-700 border-orange-200";
       case "高雄":
         return "bg-rose-100 text-rose-700 border-rose-200";
+      case "使用者回報":
+        return "bg-emerald-100 text-emerald-700 border-emerald-200";
       default:
         return "bg-gray-100 text-gray-700 border-gray-200";
     }
@@ -118,21 +125,41 @@ export default function CardInfo({
               )}
 
               <div className="ml-auto flex items-center gap-2">
-                {/* PTT Information Dialog */}
-                {donation.pttData && (
+                {/* PTT 或使用者回報 Dialog */}
+                {(donation.pttData || donation.reportData) && (
                   <Dialog
                     open={isPttDialogOpen}
                     onOpenChange={setIsPttDialogOpen}
                   >
                     <DialogTrigger asChild>
                       <button
-                        className="p-1.5 text-pink-500 hover:text-pink-600 hover:bg-pink-50 rounded-full transition-colors relative"
-                        title="查看活動詳情與贈品"
+                        className={`p-1.5 ${
+                          donation.isUserReport
+                            ? "text-emerald-500 hover:text-emerald-600 hover:bg-emerald-50"
+                            : "text-pink-500 hover:text-pink-600 hover:bg-pink-50"
+                        } rounded-full transition-colors relative`}
+                        title={
+                          donation.isUserReport
+                            ? "查看使用者回報詳情"
+                            : "查看活動詳情與贈品"
+                        }
                       >
                         <Gift className="w-5 h-5" />
                         <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-                          <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
+                          <span
+                            className={`animate-ping absolute inline-flex h-full w-full rounded-full ${
+                              donation.isUserReport
+                                ? "bg-emerald-400"
+                                : "bg-pink-400"
+                            } opacity-75`}
+                          ></span>
+                          <span
+                            className={`relative inline-flex rounded-full h-3 w-3 ${
+                              donation.isUserReport
+                                ? "bg-emerald-500"
+                                : "bg-pink-500"
+                            }`}
+                          ></span>
                         </span>
                       </button>
                     </DialogTrigger>
@@ -161,61 +188,104 @@ export default function CardInfo({
 
                       <DialogHeader className="p-4 pb-2 border-b flex-none bg-white">
                         <DialogTitle className="flex items-center gap-2 text-gray-800 pr-8">
-                          <span className="bg-pink-100 p-1.5 rounded-full">
-                            <Gift className="w-5 h-5 text-pink-500" />
+                          <span
+                            className={`${
+                              donation.isUserReport
+                                ? "bg-emerald-100"
+                                : "bg-pink-100"
+                            } p-1.5 rounded-full`}
+                          >
+                            <Gift
+                              className={`w-5 h-5 ${
+                                donation.isUserReport
+                                  ? "text-emerald-500"
+                                  : "text-pink-500"
+                              }`}
+                            />
                           </span>
-                          活動與贈品詳情
+                          {donation.isUserReport
+                            ? "使用者回報詳情"
+                            : "活動與贈品詳情"}
                         </DialogTitle>
                       </DialogHeader>
 
                       <div className="overflow-y-auto p-4 flex-grow">
-                        {/* 1. 優先顯示圖片 (Images First) */}
-                        {donation.pttData.images &&
-                        donation.pttData.images.length > 0 ? (
-                          <div className="space-y-4 mb-6">
-                            {donation.pttData.images.map((imgUrl, idx) => (
-                              <div
-                                key={idx}
-                                className="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50"
+                        {/* 圖片區域 - 支援 pttData 和 reportData */}
+                        {(() => {
+                          const images =
+                            donation.pttData?.images ||
+                            donation.reportData?.images ||
+                            [];
+                          return images.length > 0 ? (
+                            <div className="space-y-4 mb-6">
+                              {images.map((imgUrl, idx) => (
+                                <div
+                                  key={idx}
+                                  className="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50"
+                                >
+                                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                                  <img
+                                    src={imgUrl}
+                                    alt={`活動圖片 ${idx + 1}`}
+                                    className="w-full h-auto object-contain"
+                                    loading="lazy"
+                                    onError={(e) => {
+                                      const target =
+                                        e.target as HTMLImageElement;
+                                      target.style.display = "none";
+                                    }}
+                                  />
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <div className="text-center py-10 bg-gray-50 rounded-xl mb-6">
+                              <p className="text-gray-400">目前沒有圖片資訊</p>
+                            </div>
+                          );
+                        })()}
+
+                        {/* 來源資訊 - 根據類型顯示不同內容 */}
+                        {donation.pttData && (
+                          <div className="bg-slate-50 rounded-lg p-2 px-3 border border-slate-100 text-xs">
+                            <div className="flex items-center justify-between">
+                              <span className="text-slate-500">原始回報</span>
+                              <a
+                                href={donation.pttData.url}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-blue-500 hover:text-blue-600 flex items-center gap-1"
                               >
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                  src={imgUrl}
-                                  alt={`活動圖片 ${idx + 1}`}
-                                  className="w-full h-auto object-contain"
-                                  loading="lazy"
-                                  onError={(e) => {
-                                    const target = e.target as HTMLImageElement;
-                                    target.style.display = "none";
-                                  }}
-                                />
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          <div className="text-center py-10 bg-gray-50 rounded-xl mb-6">
-                            <p className="text-gray-400">目前沒有圖片資訊</p>
+                                <span>PTT 原文</span>
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                            </div>
+                            <p className="text-slate-600 text-xs mt-1">
+                              {donation.pttData.rawLine}
+                            </p>
                           </div>
                         )}
-
-                        {/* 2. 文字資訊放在下方 (Secondary Text Info) */}
-                        <div className="bg-slate-50 rounded-lg p-2 px-3 border border-slate-100 text-xs">
-                          <div className="flex items-center justify-between">
-                            <span className="text-slate-500">原始回報</span>
-                            <a
-                              href={donation.pttData.url}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="text-blue-500 hover:text-blue-600 flex items-center gap-1"
-                            >
-                              <span>PTT 原文</span>
-                              <ExternalLink className="w-3 h-3" />
-                            </a>
+                        {donation.reportData && (
+                          <div className="bg-emerald-50 rounded-lg p-2 px-3 border border-emerald-100 text-xs">
+                            <div className="flex items-center justify-between">
+                              <span className="text-emerald-600">
+                                📍 使用者回報
+                              </span>
+                              <a
+                                href={donation.reportData.issueUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
+                              >
+                                <span>查看 Issue</span>
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                            </div>
+                            <p className="text-emerald-700 text-xs mt-1">
+                              感謝您的回報！此資訊由熱心使用者提供。
+                            </p>
                           </div>
-                          <p className="text-slate-600 text-xs mt-1">
-                            {donation.pttData.rawLine}
-                          </p>
-                        </div>
+                        )}
                       </div>
                     </DialogContent>
                   </Dialog>

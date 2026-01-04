@@ -1,5 +1,6 @@
 // app/page.tsx
 import SearchableDonationList from "@/components/SearchableDonationList";
+import AddDonationEventModal from "@/components/AddDonationEventModal";
 
 export default async function BloodDonationPage() {
   let data;
@@ -34,6 +35,7 @@ export default async function BloodDonationPage() {
     <div className="container mx-auto p-8">
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-2xl font-bold">捐血活動列表</h1>
+        <AddDonationEventModal />
       </div>
 
       <SearchableDonationList data={data} />
