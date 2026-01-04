@@ -105,9 +105,9 @@ export default function CardInfo({
         <div className="flex flex-col h-full">
           {/* 頭部：時間與中心標籤 */}
           <div className="flex items-stretch border-b border-gray-100">
-            <div className="flex-none bg-slate-50 px-4 py-3 flex items-center justify-center border-r border-gray-100 min-w-[100px]">
-              <div className="flex flex-col items-center">
-                <Clock className="w-4 h-4 text-slate-400 mb-1" />
+            <div className="flex-none bg-slate-50 px-4 py-3 flex items-center justify-center border-r border-gray-100">
+              <div className="flex items-center gap-1.5">
+                <Clock className="w-4 h-4 text-slate-400 flex-shrink-0" />
                 <span className="font-bold text-slate-700 whitespace-nowrap">
                   {highlightText(donation.time, searchKeyword)}
                 </span>
