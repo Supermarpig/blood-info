@@ -2003,15 +2003,6 @@
   ],
   "2026-01-05": [
     {
-      "id": "5Y+w5YyXLTIwMjYvMDEvMDUtMTA6MDB+MTc6MDAt6Ie654Gj5aSn5a24",
-      "time": "10:00~17:00",
-      "organization": "臺灣大學",
-      "location": "臺北市大安區羅斯福路四段1號(椰林大道與小椰林道交叉口)",
-      "activityDate": "2026-01-05",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0P360352869564110666"
-    },
-    {
       "id": "5Y+w5YyXLTIwMjYvMDEvMDUtMTE6MDB+MTg6MDAt6Ie65YyX5qau5rCR57i96Yar6Zmi",
       "time": "11:00~18:00",
       "organization": "臺北榮民總醫院",
@@ -6678,6 +6669,15 @@
     }
   ],
   "2026-01-24": [
+    {
+      "id": "5paw56u5LTIwMjYvMDEvMjQtMDg6MDB+MTY6MDAt6I+v6aao542F5a2Q5pyD",
+      "time": "08:00~16:00",
+      "organization": "華馨獅子會",
+      "location": "苗栗縣苗栗市為公路282號(苗栗捐血站)",
+      "activityDate": "2026-01-24",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q005407323744151623"
+    },
     {
       "id": "5paw56u5LTIwMjYvMDEvMjQtMDk6MzB+MTY6MzAt5ZyL6Zqb5ZCM5r+f5pyD5Y+w54Gj57i95pyD5qGD5ZyS57ij5pyD",
       "time": "09:30~16:30",
