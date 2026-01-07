@@ -3220,8 +3220,8 @@
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q002525371467500244"
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDEvMDktMDk6MzB+MTY6MzAt5Z+66ZqG5biC6K2w5ZOh6Zmz5a6c5pyN5YuZ6JmV",
-      "time": "09:30~16:30",
+      "id": "5Y+w5YyXLTIwMjYvMDEvMDktMDk6MzB+MTY6MDAt5Z+66ZqG5biC6K2w5ZOh6Zmz5a6c5pyN5YuZ6JmV",
+      "time": "09:30~16:00",
       "organization": "基隆市議員陳宜服務處",
       "location": "基隆市中山區復興路206號",
       "activityDate": "2026-01-09",
@@ -4168,8 +4168,8 @@
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q002525401985226314"
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDEvMTEtMTA6MDB+MTc6MDAt5pif5a645ZCM5r+f5pyDKOWMl+S6jOWNgCk=",
-      "time": "10:00~17:00",
+      "id": "5Y+w5YyXLTIwMjYvMDEvMTEtMDk6MzB+MTY6MzAt5pif5a645ZCM5r+f5pyDKOWMl+S6jOWNgCk=",
+      "time": "09:30~16:30",
       "organization": "星宸同濟會(北二區)",
       "location": "新北市三峽區中山路11號郵局前",
       "activityDate": "2026-01-11",
@@ -4328,7 +4328,7 @@
       "id": "5paw56u5LTIwMjYvMDEvMTEtMDk6MDB+MTY6MDAt6I+v6Iqv5ZyL6Zqb5ZCM5r+f5pyD",
       "time": "09:00~16:00",
       "organization": "華芯國際同濟會",
-      "location": "苗栗縣竹南鎮光復路374號(竹南捐血室)",
+      "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
       "activityDate": "2026-01-11",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534162260846397"
@@ -4675,6 +4675,15 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534179423705827"
     },
     {
+      "id": "5paw56u5LTIwMjYvMDEvMTItMTE6MDB+MTc6MDAt5paw56u55o2Q6KGA5Lit5b+D",
+      "time": "11:00~17:00",
+      "organization": "新竹捐血中心",
+      "location": "桃園市桃園區中山路939號(桃園愛買店)",
+      "activityDate": "2026-01-12",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534178255957883"
+    },
+    {
       "id": "5paw56u5LTIwMjYvMDEvMTItMDk6MDB+MTY6MDAt56u55p2x5aSn5ZCM542F5a2Q5pyD",
       "time": "09:00~16:00",
       "organization": "竹東大同獅子會",
@@ -4821,10 +4830,10 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534171880401827"
     },
     {
-      "id": "5paw56u5LTIwMjYvMDEvMTMtMTA6MDB+MTY6MDAt5paw56u55o2Q6KGA5Lit5b+D",
-      "time": "10:00~16:00",
+      "id": "5paw56u5LTIwMjYvMDEvMTMtMTE6MDB+MTc6MDAt5paw56u55o2Q6KGA5Lit5b+D",
+      "time": "11:00~17:00",
       "organization": "新竹捐血中心",
-      "location": "桃園市平鎮區坤慶路1號(平鎮家樂福)",
+      "location": "桃園市桃園區中山路939號(愛買桃園店)",
       "activityDate": "2026-01-13",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534170602653872"
@@ -5172,7 +5181,7 @@
       "id": "5paw56u5LTIwMjYvMDEvMTYtMTA6MDB+MTY6MDAt5paw56u55o2Q6KGA5Lit5b+D",
       "time": "10:00~16:00",
       "organization": "新竹捐血中心",
-      "location": "桃園市中壢區中美路76號(中壢圖書館)",
+      "location": "桃園市中壢區中華路一段450號(內壢家樂福)",
       "activityDate": "2026-01-16",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534189232118312"
@@ -6152,7 +6161,7 @@
       "id": "5paw56u5LTIwMjYvMDEvMjAtMTA6MDB+MTY6MDAt5paw56u55o2Q6KGA5Lit5b+D",
       "time": "10:00~16:00",
       "organization": "新竹捐血中心",
-      "location": "桃園市平鎮區坤慶路1號(平鎮家樂福)",
+      "location": "苗栗縣頭份市自強路230號(頭份大全聯)",
       "activityDate": "2026-01-20",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0P353534197115580438"
