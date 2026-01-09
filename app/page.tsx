@@ -104,7 +104,22 @@ export default async function BloodDonationPage() {
     },
   };
 
-  // 2. Event Schema (取今日與未來日期，限制數量以免 payload 太大)
+  // 2. Organization Schema - 提升品牌識別與信任度
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "台灣捐血活動查詢",
+    url: siteUrl,
+    logo: `${siteUrl}/icon.png`,
+    description: "彙整全台灣最新捐血活動、地點、時間與贈品資訊的公益資訊平台。",
+    areaServed: {
+      "@type": "Country",
+      name: "Taiwan",
+    },
+    knowsLanguage: "zh-TW",
+  };
+
+  // 3. Event Schema (取今日與未來日期，限制數量以免 payload 太大)
   const today = new Date().toLocaleDateString("en-CA", {
     timeZone: "Asia/Taipei",
   });
@@ -168,6 +183,10 @@ export default async function BloodDonationPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
       {eventsJsonLd.length > 0 && (
         <script
