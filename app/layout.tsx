@@ -21,6 +21,9 @@ if (!baseUrl) {
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
+  verification: {
+    google: "ytS-Ix7BNYWixGg1JlgYTQIZLNjHvtcsHm9E1QdBUHc",
+  },
   title: {
     default: "台灣捐血活動查詢 | 快速尋找附近的捐血點與贈品資訊",
     template: "%s | 台灣捐血活動查詢",
