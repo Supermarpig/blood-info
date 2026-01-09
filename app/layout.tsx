@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${baseUrl}/imgs/og-img.jpg`,
+        url: `${baseUrl}/imgs/og-img.webp`,
         width: 1200,
         height: 630,
         alt: "台灣捐血資訊整理小網站的封面圖片",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "台灣捐血活動查詢 | 快速尋找附近的捐血點與贈品資訊",
     description:
       "彙整全台灣最新捐血活動、地點、時間與贈品資訊。提供地圖模式與條件篩選，讓您輕鬆找到最適合的捐血站，一起熱血救人！",
-    images: [`${baseUrl}/imgs/og-img.jpg`],
+    images: [`${baseUrl}/imgs/og-img.webp`],
   },
   robots: {
     index: true,

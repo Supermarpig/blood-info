@@ -104,7 +104,22 @@ export default async function BloodDonationPage() {
     },
   };
 
+  // BreadcrumbList Schema for homepage
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "首頁",
+        item: siteUrl,
+      },
+    ],
+  };
+
   // 2. Organization Schema - 提升品牌識別與信任度
+
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -187,6 +202,10 @@ export default async function BloodDonationPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {eventsJsonLd.length > 0 && (
         <script

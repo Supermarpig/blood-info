@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import { getGiftBySlug, getAllGiftSlugs, GiftConfig } from "@/lib/giftConfig";
@@ -184,6 +186,15 @@ export default async function GiftPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* Breadcrumb */}
+      <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+        <Link href="/" className="hover:text-gray-700 transition-colors">
+          首頁
+        </Link>
+        <ChevronRight className="w-4 h-4" />
+        <span className="text-gray-900 font-medium">捐血送{gift.name}</span>
+      </nav>
 
       {/* Page header */}
       <div className="flex justify-between items-center mb-6">
