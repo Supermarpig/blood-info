@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllRegionSlugs } from "@/lib/regionConfig";
+import { getAllGiftSlugs } from "@/lib/giftConfig";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -8,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   const regionSlugs = getAllRegionSlugs();
+  const giftSlugs = getAllGiftSlugs();
 
   // Generate sitemap entries for all region pages
   const regionPages: MetadataRoute.Sitemap = regionSlugs.map((slug) => ({
@@ -15,6 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "daily",
     priority: 0.8,
+  }));
+
+  // Generate sitemap entries for all gift pages
+  const giftPages: MetadataRoute.Sitemap = giftSlugs.map((slug) => ({
+    url: `${baseUrl}/gift/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: 0.7,
   }));
 
   return [
@@ -25,7 +35,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1,
     },
+    // FAQ page
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
     // Region pages
     ...regionPages,
+    // Gift pages
+    ...giftPages,
   ];
 }

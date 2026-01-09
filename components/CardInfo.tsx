@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Building2, ExternalLink, Gift } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 import {
   Dialog,
   DialogContent,
@@ -8,6 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { getGiftByTagId } from "@/lib/giftConfig";
 
 interface DonationEvent {
   id?: string;
@@ -226,7 +228,9 @@ export default function CardInfo({
                                   {/* eslint-disable-next-line @next/next/no-img-element */}
                                   <img
                                     src={imgUrl}
-                                    alt={`活動圖片 ${idx + 1}`}
+                                    alt={`捐血活動：${
+                                      donation.organization
+                                    } - 圖片 ${idx + 1}`}
                                     className="w-full h-auto object-contain"
                                     loading="lazy"
                                     onError={(e) => {
@@ -330,6 +334,27 @@ export default function CardInfo({
                 {donation.customNote}
               </div>
             )}
+
+            {/* 贈品 Tags 連結 */}
+            {(() => {
+              const eventTags = donation.tags || donation.pttData?.tags || [];
+              const giftLinks = eventTags
+                .map((tag) => getGiftByTagId(tag))
+                .filter(Boolean);
+              return giftLinks.length > 0 ? (
+                <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-gray-100">
+                  {giftLinks.map((gift) => (
+                    <Link
+                      key={gift!.slug}
+                      href={`/gift/${gift!.slug}`}
+                      className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full hover:bg-pink-100 transition-colors"
+                    >
+                      {gift!.name}
+                    </Link>
+                  ))}
+                </div>
+              ) : null;
+            })()}
           </div>
         </div>
       </CardContent>

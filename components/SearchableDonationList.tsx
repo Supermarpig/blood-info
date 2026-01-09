@@ -366,6 +366,68 @@ export default function SearchableDonationList({
         </div>
       </div>
 
+      {/* 相關連結區塊 - Internal Linking for SEO */}
+      <div className="mt-12 pt-8 border-t border-gray-200">
+        <h2 className="text-lg font-semibold text-gray-800 mb-4">探索更多</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* 地區快速導航 */}
+          <div>
+            <h3 className="text-sm font-medium text-gray-600 mb-2">
+              按地區瀏覽
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {REGIONS.map((region) => (
+                <Link
+                  key={region.slug}
+                  href={`/region/${region.slug}`}
+                  className="text-sm px-3 py-1.5 bg-gray-100 text-gray-600 rounded-lg hover:bg-red-50 hover:text-red-600 transition-colors"
+                >
+                  {region.displayName}
+                </Link>
+              ))}
+            </div>
+          </div>
+          {/* 贈品分類 */}
+          <div>
+            <h3 className="text-sm font-medium text-gray-600 mb-2">
+              按贈品瀏覽
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {GIFT_TAGS.map((tag) => (
+                <Link
+                  key={tag.id}
+                  href={`/gift/${
+                    tag.id === "電影票"
+                      ? "movie-ticket"
+                      : tag.id === "禮券"
+                      ? "voucher"
+                      : tag.id === "超商"
+                      ? "convenience-store"
+                      : tag.id === "餐飲"
+                      ? "food-beverage"
+                      : tag.id === "生活用品"
+                      ? "daily-necessities"
+                      : "food"
+                  }`}
+                  className="text-sm px-3 py-1.5 bg-pink-50 text-pink-600 rounded-lg hover:bg-pink-100 transition-colors"
+                >
+                  {tag.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* FAQ 連結 */}
+        <div className="mt-4">
+          <Link
+            href="/faq"
+            className="text-sm text-gray-500 hover:text-red-500 transition-colors"
+          >
+            捐血常見問題 (FAQ) →
+          </Link>
+        </div>
+      </div>
+
       <BackToTopButton />
 
       {/* 附近捐血點 Modal */}
