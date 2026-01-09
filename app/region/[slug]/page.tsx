@@ -1,14 +1,12 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import SearchableDonationList from "@/components/SearchableDonationList";
-import RegionNavigation from "@/components/RegionNavigation";
+import AddDonationEventModal from "@/components/AddDonationEventModal";
 import {
   getRegionBySlug,
   getAllRegionSlugs,
   RegionConfig,
 } from "@/lib/regionConfig";
-import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
 
 interface DonationEvent {
   id?: string;
@@ -90,19 +88,7 @@ function filterEventsByRegion(
 
   Object.entries(data).forEach(([date, events]) => {
     const matchedEvents = events.filter((event) => {
-      // First check center filter
-      if (region.centerFilter && event.center !== region.centerFilter) {
-        return false;
-      }
-
-      // If locationKeywords is specified, also filter by location
-      if (region.locationKeywords && region.locationKeywords.length > 0) {
-        return region.locationKeywords.some((keyword) =>
-          event.location.includes(keyword)
-        );
-      }
-
-      return true;
+      return event.center === region.centerFilter;
     });
 
     if (matchedEvents.length > 0) {
@@ -128,7 +114,7 @@ function generateJsonLd(region: RegionConfig, eventCount: number) {
     numberOfItems: eventCount,
     mainEntity: {
       "@type": "ItemList",
-      name: `${region.name}捐血活動列表`,
+      name: `${region.displayName}捐血活動列表`,
       numberOfItems: eventCount,
     },
     breadcrumb: {
@@ -143,7 +129,7 @@ function generateJsonLd(region: RegionConfig, eventCount: number) {
         {
           "@type": "ListItem",
           position: 2,
-          name: `${region.name}捐血活動`,
+          name: `${region.displayName}捐血活動`,
           item: `${baseUrl}/region/${region.slug}`,
         },
       ],
@@ -202,28 +188,17 @@ export default async function RegionPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Breadcrumb navigation */}
-      <div className="mb-4">
-        <Link
-          href="/"
-          className="inline-flex items-center text-sm text-gray-500 hover:text-gray-700 transition-colors"
-        >
-          <ChevronLeft className="w-4 h-4 mr-1" />
-          返回全部活動
-        </Link>
-      </div>
-
       {/* Page header */}
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold mb-2">{region.name}捐血活動</h1>
-        <p className="text-gray-600 text-sm">{region.description}</p>
+      <div className="flex justify-between items-center mb-6">
+        <div>
+          <h1 className="text-2xl font-bold">{region.displayName}捐血活動</h1>
+          <p className="text-gray-600 text-sm mt-1">{region.description}</p>
+        </div>
+        <AddDonationEventModal />
       </div>
 
-      {/* Region navigation */}
-      <RegionNavigation currentSlug={slug} />
-
-      {/* Event list */}
-      <SearchableDonationList data={data} />
+      {/* Event list with region navigation */}
+      <SearchableDonationList data={data} currentRegionSlug={slug} />
     </div>
   );
 }

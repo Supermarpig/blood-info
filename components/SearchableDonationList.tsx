@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
+import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import {
   ChevronDown,
@@ -20,10 +21,10 @@ import {
 import { debounce } from "@/utils";
 import CardInfo from "@/components/CardInfo";
 import BackToTopButton from "@/components/BackToTopButton";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { useNearbyLocations } from "@/hooks/useNearbyLocations";
 import NearbyLocationsModal from "@/components/NearbyLocationsModal";
+import { REGIONS } from "@/lib/regionConfig";
 
 interface DonationEvent {
   id?: string;
@@ -60,13 +61,15 @@ const GIFT_TAGS = [
 
 interface SearchableDonationListProps {
   data: Record<string, DonationEvent[]>;
+  /** 當前選中的地區 slug，undefined 表示全部 */
+  currentRegionSlug?: string;
 }
 
 export default function SearchableDonationList({
   data,
+  currentRegionSlug,
 }: SearchableDonationListProps) {
   const [searchKeyword, setSearchKeyword] = useState<string>("");
-  const [selectedCenter, setSelectedCenter] = useState<string>("全部");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [showPastEvents, setShowPastEvents] = useState<boolean>(false);
   const [isNearbyModalOpen, setIsNearbyModalOpen] = useState<boolean>(false);
@@ -98,21 +101,6 @@ export default function SearchableDonationList({
     return () => window.removeEventListener("resize", updateHeight);
   }, []);
 
-  // 整理所有可用的中心列表
-  // 捐血中心管轄區域對應
-  // 北區: 台北、新北、基隆、花蓮、宜蘭
-  // 桃竹苗: 桃園、新竹、苗栗
-  // 中區: 台中、彰化、南投
-  // 南區: 高雄、屏東、台南、嘉義
-  const centerDisplayNames: Record<string, string> = {
-    全部: "全部",
-    台北: "北區",
-    新竹: "桃竹苗",
-    台中: "中區",
-    高雄: "南區",
-  };
-  const centers = ["全部", "台北", "新竹", "台中", "高雄"];
-
   // 使用 useMemo 優化資料處理
   const { todayEvents, upcomingEvents, pastEvents } = useMemo(() => {
     const _pastEvents: Record<string, DonationEvent[]> = {};
@@ -120,21 +108,15 @@ export default function SearchableDonationList({
     const _upcomingEvents: Record<string, DonationEvent[]> = {};
 
     Object.entries(data).forEach(([date, events]) => {
-      // 1. 先篩選中心
-      const centerFilteredEvents =
-        selectedCenter === "全部"
-          ? events
-          : events.filter((e) => e.center === selectedCenter);
-
-      // 2. 再篩選關鍵字
-      const keywordFilteredEvents = centerFilteredEvents.filter(
+      // 1. 篩選關鍵字
+      const keywordFilteredEvents = events.filter(
         (event) =>
           event.organization.includes(searchKeyword) ||
           event.location.includes(searchKeyword) ||
           event.time.includes(searchKeyword)
       );
 
-      // 3. 篩選贈品 tags
+      // 2. 篩選贈品 tags
       const tagFilteredEvents =
         selectedTags.length === 0
           ? keywordFilteredEvents
@@ -159,7 +141,7 @@ export default function SearchableDonationList({
       upcomingEvents: _upcomingEvents,
       pastEvents: _pastEvents,
     };
-  }, [data, selectedCenter, searchKeyword, selectedTags, today]);
+  }, [data, searchKeyword, selectedTags, today]);
 
   // 取得所有當前和未來的活動事件（用於找附近功能）
   const allCurrentEvents = useMemo(() => {
@@ -233,50 +215,57 @@ export default function SearchableDonationList({
         ref={headerRef}
         className="sticky top-0 z-20 bg-white/80 backdrop-blur-md pb-4 pt-2 mb-6 border-b border-gray-100"
       >
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-          <Tabs
-            value={selectedCenter}
-            onValueChange={setSelectedCenter}
-            className="w-full md:w-auto"
+        {/* 地區導航 - 使用 Link 進行路由導航 */}
+        <div className="flex gap-2 mb-4 overflow-x-auto scrollbar-hide -mx-1 px-1 pb-1">
+          <Link
+            href="/"
+            className={`flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+              !currentRegionSlug
+                ? "bg-red-500 text-white shadow-sm"
+                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+            }`}
           >
-            <TabsList className="w-full md:w-auto grid grid-cols-5 md:flex bg-slate-100 p-1">
-              {centers.map((center) => (
-                <TabsTrigger
-                  key={center}
-                  value={center}
-                  className="data-[state=active]:bg-white data-[state=active]:text-primary data-[state=active]:shadow-sm"
-                >
-                  {centerDisplayNames[center]}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </Tabs>
-
-          {/* 搜尋框 + 找附近按鈕 */}
-          <div className="flex items-center gap-2 w-full md:w-auto">
-            <div className="relative flex-1 md:w-64">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-              <Input
-                placeholder="搜尋機構、地點..."
-                onChange={debounce(
-                  (e: React.ChangeEvent<HTMLInputElement>) =>
-                    setSearchKeyword(e.target.value),
-                  300
-                )}
-                className="pl-9 bg-white border-slate-200 focus:border-primary w-full"
-              />
-            </div>
-
-            {/* 找附近按鈕 */}
-            <Button
-              variant="outline"
-              onClick={handleFindNearby}
-              className="flex-shrink-0 gap-1.5 text-red-600 border-red-200 hover:bg-red-50 hover:border-red-300 px-3"
+            全部
+          </Link>
+          {REGIONS.map((region) => (
+            <Link
+              key={region.slug}
+              href={`/region/${region.slug}`}
+              className={`flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                currentRegionSlug === region.slug
+                  ? "bg-red-500 text-white shadow-sm"
+                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+              }`}
             >
-              <MapPin className="w-4 h-4" />
-              <span className="hidden sm:inline">找附近</span>
-            </Button>
+              {region.displayName}
+            </Link>
+          ))}
+        </div>
+
+        {/* 搜尋框 + 找附近按鈕 */}
+        <div className="flex items-center gap-2">
+          <div className="relative flex-1 md:max-w-md">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+            <Input
+              placeholder="搜尋機構、地點..."
+              onChange={debounce(
+                (e: React.ChangeEvent<HTMLInputElement>) =>
+                  setSearchKeyword(e.target.value),
+                300
+              )}
+              className="pl-9 bg-white border-slate-200 focus:border-primary w-full"
+            />
           </div>
+
+          {/* 找附近按鈕 */}
+          <Button
+            variant="outline"
+            onClick={handleFindNearby}
+            className="flex-shrink-0 gap-1.5 text-red-600 border-red-200 hover:bg-red-50 hover:border-red-300 px-3"
+          >
+            <MapPin className="w-4 h-4" />
+            <span className="hidden sm:inline">找附近</span>
+          </Button>
         </div>
 
         {/* 贈品 Tag 篩選 - 單行水平滾動 */}

@@ -1,7 +1,6 @@
 // app/page.tsx
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
-import RegionNavigation from "@/components/RegionNavigation";
 
 interface DonationEvent {
   id?: string;
@@ -200,9 +199,6 @@ export default async function BloodDonationPage() {
         <h1 className="text-2xl font-bold">捐血活動列表</h1>
         <AddDonationEventModal />
       </div>
-
-      {/* Region navigation for SEO internal linking */}
-      <RegionNavigation />
 
       <SearchableDonationList data={data} />
     </div>
