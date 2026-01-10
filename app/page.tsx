@@ -215,7 +215,11 @@ export default async function BloodDonationPage() {
       )}
 
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">捐血活動列表</h1>
+        <div className="flex items-center gap-2">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="捐血活動查詢" className="w-8 h-8 rounded" />
+          <h1 className="text-xl font-bold text-gray-800">捐血活動查詢</h1>
+        </div>
         <AddDonationEventModal />
       </div>
 

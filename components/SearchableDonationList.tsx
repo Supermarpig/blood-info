@@ -3,28 +3,17 @@
 import { useState, useMemo, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import {
-  ChevronDown,
-  ChevronUp,
-  Search,
-  Calendar,
-  Film,
-  Ticket,
-  Store,
-  Coffee,
-  Package,
-  UtensilsCrossed,
-  Gift,
-  X,
-  MapPin,
-} from "lucide-react";
+import { ChevronDown, ChevronUp, Search, Calendar } from "lucide-react";
 import { debounce } from "@/utils";
 import CardInfo from "@/components/CardInfo";
 import BackToTopButton from "@/components/BackToTopButton";
 import { Button } from "@/components/ui/button";
 import { useNearbyLocations } from "@/hooks/useNearbyLocations";
 import NearbyLocationsModal from "@/components/NearbyLocationsModal";
+import HeroSection from "@/components/HeroSection";
+import FilterPanel from "@/components/FilterPanel";
 import { REGIONS } from "@/lib/regionConfig";
+import { GIFTS } from "@/lib/giftConfig";
 
 interface DonationEvent {
   id?: string;
@@ -48,16 +37,6 @@ interface DonationEvent {
     tags?: string[];
   };
 }
-
-// 贈品 tag 選項
-const GIFT_TAGS = [
-  { id: "電影票", label: "電影票", icon: Film },
-  { id: "禮券", label: "禮券", icon: Ticket },
-  { id: "超商", label: "超商", icon: Store },
-  { id: "餐飲", label: "餐飲", icon: Coffee },
-  { id: "生活用品", label: "生活用品", icon: Package },
-  { id: "食品", label: "食品", icon: UtensilsCrossed },
-];
 
 interface SearchableDonationListProps {
   data: Record<string, DonationEvent[]>;
@@ -208,122 +187,65 @@ export default function SearchableDonationList({
     );
   };
 
+  // 計算統計數據（供 HeroSection 使用）
+  const todayCount = useMemo(() => {
+    return Object.values(todayEvents).reduce((acc, arr) => acc + arr.length, 0);
+  }, [todayEvents]);
+
+  const upcomingCount = useMemo(() => {
+    return Object.values(upcomingEvents).reduce(
+      (acc, arr) => acc + arr.length,
+      0
+    );
+  }, [upcomingEvents]);
+
+  // 取得「今日」有的贈品類型（使用篩選後的資料）
+  const todayGiftTags = useMemo(() => {
+    const allTags = new Set<string>();
+    Object.values(todayEvents).forEach((events) => {
+      events.forEach((event) => {
+        const tags = event.tags || event.pttData?.tags || [];
+        tags.forEach((tag) => allTags.add(tag));
+      });
+    });
+    return Array.from(allTags);
+  }, [todayEvents]);
+
   return (
     <div className="max-w-7xl mx-auto">
-      {/* 頂部搜尋與篩選區 */}
+      {/* Hero Section - 快速行動區 */}
+      <HeroSection
+        todayCount={todayCount}
+        upcomingCount={upcomingCount}
+        todayGiftTags={todayGiftTags}
+        onFindNearby={handleFindNearby}
+      />
+
+      {/* 搜尋與篩選區 */}
       <div
         ref={headerRef}
-        className="sticky top-0 z-20 bg-white/80 backdrop-blur-md pb-4 pt-2 mb-6 border-b border-gray-100"
+        className="sticky top-0 z-20 bg-white/95 backdrop-blur-md py-3 mb-4 -mx-2 px-2"
       >
-        {/* 地區導航 - 使用 Link 進行路由導航 */}
-        <div className="flex gap-2 mb-4 overflow-x-auto scrollbar-hide -mx-1 px-1 pb-1">
-          <Link
-            href="/"
-            className={`flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-              !currentRegionSlug
-                ? "bg-red-500 text-white shadow-sm"
-                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-            }`}
-          >
-            全部
-          </Link>
-          {REGIONS.map((region) => (
-            <Link
-              key={region.slug}
-              href={`/region/${region.slug}`}
-              className={`flex-shrink-0 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                currentRegionSlug === region.slug
-                  ? "bg-red-500 text-white shadow-sm"
-                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-              }`}
-            >
-              {region.displayName}
-            </Link>
-          ))}
+        {/* 搜尋框 */}
+        <div className="relative mb-3">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+          <Input
+            placeholder="搜尋機構、地點..."
+            onChange={debounce(
+              (e: React.ChangeEvent<HTMLInputElement>) =>
+                setSearchKeyword(e.target.value),
+              300
+            )}
+            className="pl-9 bg-white border-slate-200 focus:border-primary w-full"
+          />
         </div>
 
-        {/* 搜尋框 + 找附近按鈕 */}
-        <div className="flex items-center gap-2">
-          <div className="relative flex-1 md:max-w-md">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-            <Input
-              placeholder="搜尋機構、地點..."
-              onChange={debounce(
-                (e: React.ChangeEvent<HTMLInputElement>) =>
-                  setSearchKeyword(e.target.value),
-                300
-              )}
-              className="pl-9 bg-white border-slate-200 focus:border-primary w-full"
-            />
-          </div>
-
-          {/* 找附近按鈕 */}
-          <Button
-            variant="outline"
-            onClick={handleFindNearby}
-            className="flex-shrink-0 gap-1.5 text-red-600 border-red-200 hover:bg-red-50 hover:border-red-300 px-3"
-          >
-            <MapPin className="w-4 h-4" />
-            <span className="hidden sm:inline">找附近</span>
-          </Button>
-
-          {/* 月曆按鈕 */}
-          <Link href="/calendar">
-            <Button
-              variant="outline"
-              className="flex-shrink-0 gap-1.5 text-blue-600 border-blue-200 hover:bg-blue-50 hover:border-blue-300 px-3"
-            >
-              <Calendar className="w-4 h-4" />
-              <span className="hidden sm:inline">月曆</span>
-            </Button>
-          </Link>
-        </div>
-
-        {/* 贈品 Tag 篩選 - 單行水平滾動 */}
-        <div className="mt-3 flex items-center gap-2">
-          <div className="flex-shrink-0 flex items-center gap-1.5 text-pink-500">
-            <Gift className="w-4 h-4" />
-          </div>
-
-          <div className="flex-1 overflow-x-auto scrollbar-hide -mx-1 px-1">
-            <div className="flex items-center gap-1.5">
-              {GIFT_TAGS.map((tag) => {
-                const isSelected = selectedTags.includes(tag.id);
-                const IconComponent = tag.icon;
-                return (
-                  <button
-                    key={tag.id}
-                    onClick={() => {
-                      setSelectedTags((prev) =>
-                        isSelected
-                          ? prev.filter((t) => t !== tag.id)
-                          : [...prev, tag.id]
-                      );
-                    }}
-                    className={`flex-shrink-0 flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
-                      isSelected
-                        ? "bg-pink-500 text-white shadow-sm"
-                        : "bg-pink-50 text-pink-600 hover:bg-pink-100"
-                    }`}
-                  >
-                    <IconComponent className="w-3 h-3" />
-                    {tag.label}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {selectedTags.length > 0 && (
-            <button
-              onClick={() => setSelectedTags([])}
-              className="flex-shrink-0 p-1 text-gray-400 hover:text-pink-500 hover:bg-pink-50 rounded-full transition-colors"
-              title="清除篩選"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          )}
-        </div>
+        {/* 篩選面板 */}
+        <FilterPanel
+          currentRegionSlug={currentRegionSlug}
+          selectedTags={selectedTags}
+          onTagChange={setSelectedTags}
+        />
       </div>
 
       {/* 主要內容區 */}
@@ -404,25 +326,13 @@ export default function SearchableDonationList({
               按贈品瀏覽
             </h3>
             <div className="flex flex-wrap gap-2">
-              {GIFT_TAGS.map((tag) => (
+              {GIFTS.map((gift) => (
                 <Link
-                  key={tag.id}
-                  href={`/gift/${
-                    tag.id === "電影票"
-                      ? "movie-ticket"
-                      : tag.id === "禮券"
-                      ? "voucher"
-                      : tag.id === "超商"
-                      ? "convenience-store"
-                      : tag.id === "餐飲"
-                      ? "food-beverage"
-                      : tag.id === "生活用品"
-                      ? "daily-necessities"
-                      : "food"
-                  }`}
+                  key={gift.slug}
+                  href={`/gift/${gift.slug}`}
                   className="text-sm px-3 py-1.5 bg-pink-50 text-pink-600 rounded-lg hover:bg-pink-100 transition-colors"
                 >
-                  {tag.label}
+                  {gift.name}
                 </Link>
               ))}
             </div>
