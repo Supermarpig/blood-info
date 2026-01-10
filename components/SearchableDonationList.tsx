@@ -266,6 +266,17 @@ export default function SearchableDonationList({
             <MapPin className="w-4 h-4" />
             <span className="hidden sm:inline">找附近</span>
           </Button>
+
+          {/* 月曆按鈕 */}
+          <Link href="/calendar">
+            <Button
+              variant="outline"
+              className="flex-shrink-0 gap-1.5 text-blue-600 border-blue-200 hover:bg-blue-50 hover:border-blue-300 px-3"
+            >
+              <Calendar className="w-4 h-4" />
+              <span className="hidden sm:inline">月曆</span>
+            </Button>
+          </Link>
         </div>
 
         {/* 贈品 Tag 篩選 - 單行水平滾動 */}
@@ -418,7 +429,13 @@ export default function SearchableDonationList({
           </div>
         </div>
         {/* FAQ 連結 */}
-        <div className="mt-4">
+        <div className="mt-4 flex items-center gap-4">
+          <Link
+            href="/calendar"
+            className="text-sm text-gray-500 hover:text-red-500 transition-colors"
+          >
+            月曆模式 →
+          </Link>
           <Link
             href="/faq"
             className="text-sm text-gray-500 hover:text-red-500 transition-colors"
