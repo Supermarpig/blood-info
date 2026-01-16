@@ -8606,15 +8606,6 @@
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628311080310277"
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq65Lmd6I+v5bGx5Zyw6JeP5bq1",
-      "time": "09:00~17:00",
-      "organization": "財團法人九華山地藏庵",
-      "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
-      "activityDate": "2026-01-25",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628309723714277"
-    },
-    {
       "id": "6auY6ZuELTIwMjYvMDEvMjUtMDg6MzB+MTc6MDAt5Lqe5p2x5L+d5YWo6IKh5Lu95pyJ6ZmQ5YWs5Y+45Y+w5Y2X5YiG5YWs5Y+4",
       "time": "08:30~17:00",
       "organization": "亞東保全股份有限公司台南分公司",
@@ -8667,6 +8658,15 @@
       "activityDate": "2026-01-25",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628304995208781"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq65Lmd6I+v5bGx5Zyw6JeP5bq1",
+      "time": "09:00~17:00",
+      "organization": "財團法人九華山地藏庵",
+      "location": "嘉義市東區民權路255號(九華山地藏庵)",
+      "activityDate": "2026-01-25",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0P364628304450329754"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDEvMjUtMDk6MDB+MTY6MDAt56S+5ZyY5rOV5Lq66auY6ZuE5biC56aP57ej6IGa5Y2B5pa55ZaE6KGM5Y2U5pyD",
