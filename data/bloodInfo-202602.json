@@ -1020,8 +1020,8 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q024738419106841228"
     },
     {
-      "id": "5paw56u5LTIwMjYvMDIvMDQtMTE6MDB+MTc6MDAt5paw56u55o2Q6KGA5Lit5b+D",
-      "time": "11:00~17:00",
+      "id": "5paw56u5LTIwMjYvMDIvMDQtMTA6MzB+MTc6MDAt5paw56u55o2Q6KGA5Lit5b+D",
+      "time": "10:30~17:00",
       "organization": "新竹捐血中心",
       "location": "新竹市東區中央路229號(巨城廣場)",
       "activityDate": "2026-02-04",
@@ -1175,8 +1175,8 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q024738411929568200"
     },
     {
-      "id": "5paw56u5LTIwMjYvMDIvMDUtMTE6MDB+MTc6MDAt5paw56u55o2Q6KGA5Lit5b+D",
-      "time": "11:00~17:00",
+      "id": "5paw56u5LTIwMjYvMDIvMDUtMTA6MzB+MTc6MDAt5paw56u55o2Q6KGA5Lit5b+D",
+      "time": "10:30~17:00",
       "organization": "新竹捐血中心",
       "location": "新竹市東區中央路229號(巨城廣場)",
       "activityDate": "2026-02-05",
@@ -1256,15 +1256,6 @@
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q014625906656607427"
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDIvMDUtMTA6MDB+MTg6MDAt6Ie65Y2X5biC5Y+w5rGf5paH5YyW5Lit5b+D",
-      "time": "10:00~18:00",
-      "organization": "臺南市台江文化中心",
-      "location": "臺南市安南區安吉路一段207號(台江文化中心)",
-      "activityDate": "2026-02-05",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q014625906190586454"
-    },
-    {
       "id": "6auY6ZuELTIwMjYvMDIvMDUtMTA6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5r2u5bee5LqM5YiG5pyD",
       "time": "10:00~17:00",
       "organization": "國際佛光會中華總會潮州二分會",
@@ -1290,15 +1281,6 @@
       "activityDate": "2026-02-05",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q014625895012738400"
-    },
-    {
-      "id": "6auY6ZuELTIwMjYvMDIvMDUtMTA6MDB+MTg6MDAt5Y+w5Y2X5paH5YyW5Lit5b+D",
-      "time": "10:00~18:00",
-      "organization": "台南文化中心",
-      "location": "臺南市東區中華東路與崇明路口(台南文化中心)",
-      "activityDate": "2026-02-05",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q014625890384222913"
     }
   ],
   "2026-02-06": [
@@ -1678,8 +1660,8 @@
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q014625917188746984"
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDIvMDctMDk6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTXljYAu",
-      "time": "09:30~17:00",
+      "id": "6auY6ZuELTIwMjYvMDIvMDctMTA6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTXljYAu",
+      "time": "10:00~17:00",
       "organization": "國際獅子會300E5區.",
       "location": "高雄市苓雅區三多四路21號(大遠百前廣場)",
       "activityDate": "2026-02-07",
@@ -2222,15 +2204,6 @@
       "activityDate": "2026-02-10",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q024738431437384370"
-    },
-    {
-      "id": "5paw56u5LTIwMjYvMDIvMTAtMTA6MDB+MTY6MDAt5paw56u55o2Q6KGA5Lit5b+D",
-      "time": "10:00~16:00",
-      "organization": "新竹捐血中心",
-      "location": "桃園市平鎮區坤慶路1號(平鎮家樂福)",
-      "activityDate": "2026-02-10",
-      "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q024738430614667398"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDIvMTAtMDk6MDB+MTc6MzAt5oSb5ZyL6LaF5biC",
