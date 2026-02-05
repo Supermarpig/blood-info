@@ -3079,8 +3079,8 @@
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q014625911802938083"
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDIvMDctMDk6MDB+MTc6MDAt5buj56a+55Sf5oqA6aOf5ZOB6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
-      "time": "09:00~17:00",
+      "id": "6auY6ZuELTIwMjYvMDIvMDctMDk6MzB+MTc6MDAt5buj56a+55Sf5oqA6aOf5ZOB6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:30~17:00",
       "organization": "廣禾生技食品股份有限公司",
       "location": "高雄市三民區大順二路470號(高雄銀行灣內分行)",
       "activityDate": "2026-02-07",
@@ -3879,7 +3879,7 @@
       "id": "5paw56u5LTIwMjYvMDIvMTAtMDk6MDB+MTY6MDAt5paw56u55o2Q6KGA5Lit5b+D5b+X5bel6ZqK",
       "time": "09:00~16:00",
       "organization": "新竹捐血中心志工隊",
-      "location": "苗栗縣頭份市自強路230號(頭份大全聯)",
+      "location": "苗栗縣竹南鎮龍安街69號(竹南后厝龍鳳宮)",
       "activityDate": "2026-02-10",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q035344985027466641"
@@ -4249,13 +4249,17 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q024738442780666972"
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDIvMTItMDk6MzB+MTY6MzAt5py05a2Q5biC5beh6L+05a6a6bue",
+      "id": "6auY6ZuELTIwMjYvMDIvMTItMDk6MzB+MTY6MzAt5py05a2Q6Yar6Zmi",
       "time": "09:30~16:30",
-      "organization": "朴子市巡迴定點",
-      "location": "嘉義縣朴子市四維路一段551號(朴子市公所)",
+      "organization": "朴子醫院",
+      "location": "嘉義縣朴子市42之50號(朴子醫院)",
       "activityDate": "2026-02-12",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q021409788654488670"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q021409788654488670",
+      "coordinates": {
+        "lat": 23.4644334,
+        "lng": 120.2346338
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDIvMTItMTA6MDB+MTc6MDAt5a+M5L2P6YCa5LiN5YuV55Si",
