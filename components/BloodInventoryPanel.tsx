@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { AlertTriangle, ArrowRight } from "lucide-react";
 import { REGIONS } from "@/lib/regionConfig";
 import Link from "next/link";
@@ -141,6 +142,7 @@ function BloodDrop({
 }
 
 export default function BloodInventoryPanel() {
+  const pathname = usePathname();
   const [inventory, setInventory] = useState<BloodInventory | null>(null);
   const [activeCenter, setActiveCenter] = useState(0);
 
@@ -153,7 +155,7 @@ export default function BloodInventoryPanel() {
       .catch(() => {});
   }, []);
 
-  if (!inventory) return null;
+  if (!inventory || pathname !== "/") return null;
 
   const urgentCount = inventory.centers.reduce(
     (sum, c) =>
