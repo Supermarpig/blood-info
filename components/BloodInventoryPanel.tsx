@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, ArrowRight } from "lucide-react";
 import { REGIONS } from "@/lib/regionConfig";
+import Link from "next/link";
 
 interface BloodInventoryCenter {
   name: string;
@@ -29,19 +30,32 @@ function BloodDrop({
   type,
   status,
   delay = 0,
+  regionSlug,
 }: {
   type: string;
   status: StatusKey;
   delay?: number;
+  regionSlug?: string;
 }) {
   const config = STATUS_CONFIG[status] || STATUS_CONFIG.unknown;
   const fillY = 100 - config.fill;
   const isUrgent = status === "urgent";
+  const isClickable = status !== "normal" && regionSlug;
 
-  return (
-    <div className="flex flex-col items-center gap-1">
+  const content = (
+    <div
+      className={`flex flex-col items-center gap-1 ${
+        isClickable ? "cursor-pointer group" : ""
+      }`}
+    >
       <div
-        className={`relative ${isUrgent ? "animate-heartbeat" : ""}`}
+        className={`relative ${
+          isUrgent
+            ? "animate-heartbeat"
+            : isClickable
+            ? "transition-transform duration-200 group-hover:scale-110"
+            : ""
+        }`}
         style={{ animationDelay: `${delay}ms` }}
       >
         <svg width="44" height="58" viewBox="0 0 44 58" fill="none">
@@ -50,14 +64,12 @@ function BloodDrop({
               <path d="M22 2C22 2 4 22 4 35C4 45.5 12.1 54 22 54C31.9 54 40 45.5 40 35C40 22 22 2 22 2Z" />
             </clipPath>
           </defs>
-          {/* 背景 */}
           <path
             d="M22 2C22 2 4 22 4 35C4 45.5 12.1 54 22 54C31.9 54 40 45.5 40 35C40 22 22 2 22 2Z"
             fill="#f3f4f6"
             stroke="#e5e7eb"
             strokeWidth="1.5"
           />
-          {/* 水位填充 */}
           <g clipPath={`url(#drop-${type}-${delay})`}>
             <rect
               x="0"
@@ -74,7 +86,6 @@ function BloodDrop({
                 repeatCount="indefinite"
               />
             </rect>
-            {/* 波浪效果 */}
             <ellipse
               cx="22"
               cy={fillY + "%"}
@@ -97,13 +108,12 @@ function BloodDrop({
               />
             </ellipse>
           </g>
-          {/* 高光 */}
           <ellipse cx="15" cy="24" rx="4" ry="6" fill="white" opacity="0.3" />
         </svg>
       </div>
       <span className="text-sm font-bold text-gray-700">{type}</span>
       <span
-        className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${
+        className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full transition-colors ${
           status === "urgent"
             ? "bg-red-100 text-red-600"
             : status === "low"
@@ -115,8 +125,19 @@ function BloodDrop({
       >
         {config.label}
       </span>
+      {isClickable && (
+        <span className="flex items-center gap-0.5 text-[9px] text-gray-400 group-hover:text-red-500 transition-colors">
+          去捐血 <ArrowRight className="w-2.5 h-2.5" />
+        </span>
+      )}
     </div>
   );
+
+  if (isClickable) {
+    return <Link href={`/region/${regionSlug}#today-events`}>{content}</Link>;
+  }
+
+  return content;
 }
 
 export default function BloodInventoryPanel() {
@@ -141,6 +162,7 @@ export default function BloodInventoryPanel() {
   );
 
   const center = inventory.centers[activeCenter];
+  const activeRegion = REGIONS.find((r) => r.centerFilter === center.name);
 
   return (
     <div className="rounded-2xl border border-gray-200/60 bg-white overflow-hidden shadow-sm">
@@ -192,6 +214,7 @@ export default function BloodInventoryPanel() {
               type={t}
               status={(center.bloodTypes[t] as StatusKey) || "unknown"}
               delay={i * 80}
+              regionSlug={activeRegion?.slug}
             />
           ))}
         </div>
