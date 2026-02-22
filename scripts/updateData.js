@@ -850,6 +850,60 @@ async function processMonth(year, month, pttData) {
     return totalEvents;
 }
 
+// ==================== 血液庫存爬取 ====================
+const BLOOD_INVENTORY_URL = 'https://www.blood.org.tw';
+const BLOOD_INVENTORY_FILE = path.join(process.cwd(), 'data', 'bloodInventory.json');
+
+const STATUS_MAP = {
+    '急缺': 'urgent',
+    '偏低': 'low',
+    '正常': 'normal',
+};
+
+async function fetchBloodInventory() {
+    console.log('\n=== 爬取血液庫存資料 ===');
+    try {
+        const response = await axios.get(BLOOD_INVENTORY_URL, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+            },
+            timeout: 15000,
+        });
+
+        const $ = cheerio.load(response.data);
+        const section = $('section.IndexInventory');
+
+        const updatedAt = section.find('.date').text().replace('最新更新時間：', '').trim();
+
+        const centers = [];
+        section.find('.InventoryList > li').each((_, li) => {
+            const item = $(li).find('.item');
+            const name = item.find('.titleBar a').text().replace('捐血中心', '').trim();
+
+            const bloodTypes = {};
+            item.find('ul > li').each((__, typeLi) => {
+                const type = $(typeLi).find('.text').text().trim();
+                const altText = $(typeLi).find('.icon img').attr('alt') || '';
+                bloodTypes[type] = STATUS_MAP[altText] || 'unknown';
+            });
+
+            if (name) {
+                centers.push({ name, bloodTypes });
+            }
+        });
+
+        const inventory = { updatedAt, centers };
+        await fs.writeFile(BLOOD_INVENTORY_FILE, JSON.stringify(inventory, null, 2), 'utf-8');
+        console.log(`血液庫存資料已儲存，包含 ${centers.length} 個捐血中心`);
+        return inventory;
+    } catch (error) {
+        console.error('血液庫存爬取失敗:', error.message);
+        return null;
+    }
+}
+
+// ==================================================
+
 // 主邏輯：更新數據
 async function updateData() {
     try {
@@ -878,7 +932,10 @@ async function updateData() {
         }
         await processMonth(nextYear, nextMonth, pttData);
 
-        // 4. 儲存 Geocoding 快取
+        // 4. 爬取血液庫存資料
+        await fetchBloodInventory();
+
+        // 5. 儲存 Geocoding 快取
         await saveGeocodeCache();
 
         // Git operations are now handled by GitHub Actions

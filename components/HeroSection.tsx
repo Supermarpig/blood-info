@@ -3,6 +3,7 @@
 import { MapPin, Calendar, Sparkles, TrendingUp, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import BloodInventoryPanel from "@/components/BloodInventoryPanel";
 
 interface HeroSectionProps {
   todayCount: number;
@@ -63,6 +64,9 @@ export default function HeroSection({
           </p>
         </div>
       )}
+
+      {/* 血液庫存儀表板 */}
+      <BloodInventoryPanel />
 
       {/* 主要行動按鈕 */}
       <div className="flex gap-3 pt-1">

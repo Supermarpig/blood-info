@@ -55,9 +55,22 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+  		keyframes: {
+  			heartbeat: {
+  				'0%, 100%': { transform: 'scale(1)' },
+  				'4%': { transform: 'scale(1.15)' },
+  				'8%': { transform: 'scale(1)' },
+  				'12%': { transform: 'scale(1.1)' },
+  				'16%': { transform: 'scale(1)' },
+  			},
+  		},
+  		animation: {
+  			heartbeat: 'heartbeat 4s ease-in-out infinite',
+  		},
   	}
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
