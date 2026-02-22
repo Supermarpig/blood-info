@@ -1,6 +1,7 @@
 // app/page.tsx
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
+import HealthFloatingButton from "@/components/HealthFloatingButton";
 
 interface DonationEvent {
   id?: string;
@@ -224,6 +225,7 @@ export default async function BloodDonationPage() {
       </div>
 
       <SearchableDonationList data={data} />
+      <HealthFloatingButton />
     </div>
   );
 }
