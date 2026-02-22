@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AlertTriangle, ArrowRight } from "lucide-react";
 import { REGIONS } from "@/lib/regionConfig";
-import Link from "next/link";
 
 interface BloodInventoryCenter {
   name: string;
@@ -135,7 +134,7 @@ function BloodDrop({
   );
 
   if (isClickable) {
-    return <Link href={`/region/${regionSlug}#today-events`}>{content}</Link>;
+    return <a href="#today-events">{content}</a>;
   }
 
   return content;
