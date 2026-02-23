@@ -579,6 +579,26 @@
       "activityDate": "2026-02-01",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q008622520547919677"
+    },
+    {
+      "id": "cHR0LTIwMjYtMDItMDEtMi8xKOaXpSnoirHok67pgaDnmb7mmJ/lt7TlhYvlu6PloLQ=",
+      "time": "",
+      "organization": "花蓮遠百星巴克廣場",
+      "location": "花蓮遠百星巴克廣場",
+      "activityDate": "2026-02-01",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [
+        "餐飲"
+      ],
+      "pttData": {
+        "rawLine": "2/1(日)花蓮遠百星巴克廣場",
+        "images": [
+          "https://i.imgur.com/M7KnB7o.jpeg",
+          "https://i.imgur.com/GVHegoB.jpeg"
+        ]
+      },
+      "isPttOnly": true
     }
   ],
   "2026-02-02": [
@@ -5792,6 +5812,25 @@
         "lat": 24.2582951,
         "lng": 120.648755
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDItMTQtMS85KOS6lCnjgIExLzI1KOaXpSnjgIEyLzE0KOWFrSnjgIEzLzEzKOS6lCnjgIE0LzMo5LqUKeOAgTUvMSjkupQp44CBNS8zMCjlha0p44CBNi8xMijkupQp44CBIOWPsOWMl+advuWjvei3rzE25be35oSb6L+q6YGU5peB",
+      "time": "",
+      "organization": "台北松壽路16巷愛迪達旁",
+      "location": "台北松壽路16巷愛迪達旁",
+      "activityDate": "2026-02-14",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html",
+      "tags": [
+        "電影票"
+      ],
+      "pttData": {
+        "rawLine": "1/9(五)、1/25(日)、2/14(六)、3/13(五)、4/3(五)、5/1(五)、5/30(六)、6/12(五)、 台北松壽路16巷愛迪達旁",
+        "images": [
+          "https://i.imgur.com/SQL9Y7F.jpeg"
+        ]
+      },
+      "isPttOnly": true
     }
   ],
   "2026-02-15": [
