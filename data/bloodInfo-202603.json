@@ -538,6 +538,109 @@
   ],
   "2026-03-02": [
     {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMDg6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A6Iqx6JOu6b6N5ZCf542F5a2Q5pyD",
+      "time": "08:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344159729650841"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMTA6MDB+MTc6MDAt6Ie654Gj5aSn5a24",
+      "time": "10:00~17:00",
+      "organization": "臺灣大學",
+      "location": "臺北市大安區羅斯福路四段1號",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344154457276338"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMDg6MDB+MTc6MzAt5Y+w5YyX5biC6YeR56uZ542F5a2Q5pyDQTI=",
+      "time": "08:00~17:30",
+      "organization": "台北市金站獅子會A2",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344149184781814"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMTE6MDB+MTg6MDAt6Ie65YyX5qau5rCR57i96Yar6Zmi",
+      "time": "11:00~18:00",
+      "organization": "臺北榮民總醫院",
+      "location": "臺北市北投區石牌路二段201號(一門診)",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344148906934879"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMDk6MDB+MTc6MDAt5LqM5YWr54mn6Zuy6b2L",
+      "time": "09:00~17:00",
+      "organization": "二八牧雲齋",
+      "location": "新北市樹林區中山路一段276號6樓(配合樹林室)",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344148540813897"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMTE6MDB+MTk6MDAt5Y+w5paw5paw5YWJ6YeR5o6n",
+      "time": "11:00~19:00",
+      "organization": "台新新光金控",
+      "location": "臺北市中正區忠孝西路一段66號面對新光摩天大樓左側腹地(配合新光站前號)",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344147827186824"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMDk6MzB+MTY6MzAt5Y+w5paw5paw5YWJ6YeR5o6n",
+      "time": "09:30~16:30",
+      "organization": "台新新光金控",
+      "location": "新北市鶯歌區建國路66號",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344147283217897"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMDk6MzB+MTY6MzAt5YWn5pS/6YOo6K2m5pS/572y6K2m5a+f5buj5pKt6Zu76Ie6",
+      "time": "09:30~16:30",
+      "organization": "內政部警政署警察廣播電臺",
+      "location": "臺北市中正區廣州街17號",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344143634449356"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMTA6MDB+MTg6MDAt56S+5ZyY5rOV5Lq65Lit6I+v6LOA6IGW5a6u5oSb5b+D5Y2U5pyD",
+      "time": "10:00~18:00",
+      "organization": "社團法人中華賀聖宮愛心協會",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344143278428383",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMDg6MDB+MTc6MDAt5p2/5qmL6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "板橋郵局",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344142199570338"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDItMDk6MzB+MTY6MzAt5Luw5b636ZuG5ZyY",
+      "time": "09:30~16:30",
+      "organization": "仰德集團",
+      "location": "臺北市士林區中山北路6段88號",
+      "activityDate": "2026-03-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344136649338870"
+    },
+    {
       "id": "5paw56u5LTIwMjYvMDMvMDItMDk6MzB+MTY6MzAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45qGD5ZyS6YO15bGA",
       "time": "09:30~16:30",
       "organization": "中華郵政股份有限公司桃園郵局",
@@ -701,6 +804,132 @@
     }
   ],
   "2026-03-03": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMDg6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A6Iqx6JOu6b6N5ZCf542F5a2Q5pyD",
+      "time": "08:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344158715347354"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMTA6MDB+MTc6MDAt5bir56+E5aSn5a24",
+      "time": "10:00~17:00",
+      "organization": "師範大學",
+      "location": "臺北市大安區和平東路一段162號(車停日光大道)",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344158171478327"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMDg6MDB+MTc6MDAt5p2/5qmL6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "板橋郵局",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344156714872337"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMTE6MDB+MTk6MDAt5Y+w5paw5paw5YWJ6YeR5o6n",
+      "time": "11:00~19:00",
+      "organization": "台新新光金控",
+      "location": "臺北市中正區忠孝西路一段66號面對新光摩天大樓左側腹地(配合新光站前號)",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344156279993300"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMTA6MDB+MTc6MDAt6Ie65aSnRU1CQeagoeWPi+WfuumHkeacgyjlj7DljJcp",
+      "time": "10:00~17:00",
+      "organization": "臺大EMBA校友基金會(台北)",
+      "location": "臺北市大同區市民大道一段209號",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344155635024382"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMTA6MDB+MTc6MDAt6Ie654Gj5aSn5a24",
+      "time": "10:00~17:00",
+      "organization": "臺灣大學",
+      "location": "臺北市大安區羅斯福路四段1號",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344153809983813"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMDk6MDB+MTY6MDAt576F5p2x5Y2a5oSb6Yar6Zmi",
+      "time": "09:00~16:00",
+      "organization": "羅東博愛醫院",
+      "location": "宜蘭縣羅東鎮南昌街83號(急診室旁停車場\t)",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344153443852840"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMTA6MDB+MTc6MzAtKOiKsSnlnIvou43oirHok67phqvpmaI=",
+      "time": "10:00~17:30",
+      "organization": "(花)國軍花蓮醫院",
+      "location": "花蓮國軍醫院門診大樓前",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344153077731868"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMDk6MDB+MTc6MDAt5LqM5YWr54mn6Zuy6b2L",
+      "time": "09:00~17:00",
+      "organization": "二八牧雲齋",
+      "location": "新北市樹林區中山路一段276號6樓(配合樹林室)",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344152620135868"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMTA6MDB+MTg6MDAt6I+p5o+Q5ZCM5r+f5pyDKOWMl+S4gOWNgCk=",
+      "time": "10:00~18:00",
+      "organization": "菩提同濟會(北一區)",
+      "location": "新北市新莊區中華路+復興路口新莊號旁",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344152264004896"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMDg6MDB+MTc6MzAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65YyX6YO15bGA",
+      "time": "08:00~17:30",
+      "organization": "中華郵政股份有限公司臺北郵局",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344151541387813"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMTM6MDB+MjE6MDAt5paw5Luf56an542F5pyDQSAz",
+      "time": "13:00~21:00",
+      "organization": "新仟禧獅會A 3",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344151086256841"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMTA6MDB+MTY6MDAt5Y+w5paw5paw5YWJ6YeR5o6n",
+      "time": "10:00~16:00",
+      "organization": "台新新光金控",
+      "location": "臺北市內湖區舊宗路二段207號",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344150907408896"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMDk6MzB+MTY6MzAt6LKh5ZyY5rOV5Lq65paw5YyX5biC56u55p6X5bGx6KeA6Z+z5a+6",
+      "time": "09:30~16:30",
+      "organization": "財團法人新北市竹林山觀音寺",
+      "location": "新北市林口區竹林路325號",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344150363539869"
+    },
     {
       "id": "5paw56u5LTIwMjYvMDMvMDMtMDg6MzB+MTY6MzAt5paw56u557ij56eR5oqA542F5a2Q5pyD",
       "time": "08:30~16:30",
@@ -905,6 +1134,105 @@
     }
   ],
   "2026-03-04": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMTE6MDB+MTg6MDAt5ZyL56uL6Zm95piO5Lqk6YCa5aSn5a246Zm95piO5qCh5Y2A",
+      "time": "11:00~18:00",
+      "organization": "國立陽明交通大學陽明校區",
+      "location": "臺北市北投區立農街二段155號(博雅中心廣場)",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344167791033967"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMTA6MDB+MTY6MDAt5L2b5YWJ5aSn5a24",
+      "time": "10:00~16:00",
+      "organization": "佛光大學",
+      "location": "宜蘭縣礁溪鄉林美村林尾路160號",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344167335902984"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMDk6MDB+MTc6MDAt5LqM5YWr54mn6Zuy6b2L",
+      "time": "09:00~17:00",
+      "organization": "二八牧雲齋",
+      "location": "新北市樹林區中山路一段276號6樓(配合樹林室)",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344167157154949"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMTM6MDB+MjE6MDAt6Zuy5pmv542F5pyDQSAz",
+      "time": "13:00~21:00",
+      "organization": "雲景獅會A 3",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344166978206995"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMDk6MzB+MTY6MzAt6LKh5ZyY5rOV5Lq66JCs5rW36Iiq6YGL56S+5pyD56aP5Yip5oWI5ZaE5LqL5qWt5Z+66YeR5pyD",
+      "time": "09:30~16:30",
+      "organization": "財團法人萬海航運社會福利慈善事業基金會",
+      "location": "臺北市內湖區新湖一路361號",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344165790458840"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMDk6MDB+MTc6MDAt56S+5ZyY5rOV5Lq66Ie654Gj6Jav5bGx5oWI5ZaE5pyD",
+      "time": "09:00~17:00",
+      "organization": "社團法人臺灣薯山慈善會",
+      "location": "臺北市松山區復興北路69號5樓(配合長春室)",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344164156589812"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMDg6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A6Iqx6JOu6b6N5ZCf542F5a2Q5pyD",
+      "time": "08:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344163608396408"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMDg6MDB+MTc6MzAt5ZyL6Zqb542F5a2Q5pyDMzAwQTLljYDlj7DljJfluILku4HmhJvnjYXlrZDmnIM=",
+      "time": "08:00~17:30",
+      "organization": "國際獅子會300A2區台北市仁愛獅子會",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344162429548453"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMTA6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5aSn5ZCM56ys5LqM5YiG5pyD",
+      "time": "10:00~17:00",
+      "organization": "國際佛光會中華總會大同第二分會",
+      "location": "臺北市內湖區民權東路6段99號行政中心前",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344161241790408"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMDg6MDB+MTc6MDAt5p2/5qmL6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "板橋郵局",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344160606811471"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDQtMDk6MzB+MTY6MzAt5paw5YyX5biC5YyX5aSn542F5a2Q5pyDQiAy",
+      "time": "09:30~16:30",
+      "organization": "新北市北大獅子會B 2",
+      "location": "新北市土城區中興路7號(家崎大樓前廣場)",
+      "activityDate": "2026-03-04",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344159349226371"
+    },
     {
       "id": "5paw56u5LTIwMjYvMDMvMDQtMDk6MDB+MTY6MzAt5qGD5ZyS5biC5Lit5bGx542F5a2Q5pyD",
       "time": "09:00~16:30",
@@ -1124,6 +1452,145 @@
   ],
   "2026-03-05": [
     {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMTA6MDB+MTc6MDAt5bir5aSn5YiG6YOo5YWs6aSo5qCh5Y2A",
+      "time": "10:00~17:00",
+      "organization": "師大分部公館校區",
+      "location": "臺北市文山區汀洲路四段88號(車停中正堂)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344176787619479"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMDg6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A6Iqx6JOu6b6N5ZCf542F5a2Q5pyD",
+      "time": "08:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344176222598407"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMTA6MDB+MTg6MDAt5p2/5qmL5rS75Yqb5b+X5bel",
+      "time": "10:00~18:00",
+      "organization": "板橋活力志工",
+      "location": "新北市板橋區中山路一段50巷36號2樓之4(配合府中室)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344175509861425"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMTA6MDB+MTc6MDAt5bir56+E5aSn5a24",
+      "time": "10:00~17:00",
+      "organization": "師範大學",
+      "location": "臺北市大安區和平東路一段162號(車停日光大道)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344175143740452"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMTA6MDB+MTc6MDAt55+z54mM542F5pyDQSAx",
+      "time": "10:00~17:00",
+      "organization": "石牌獅會A 1",
+      "location": "臺北市中山區南京西路3-5號(屈臣氏前靠捷運中山站3號出口)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344174965992407"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMTE6MDB+MTg6MDAt5ZyL56uL6Zm95piO5Lqk6YCa5aSn5a246Zm95piO5qCh5Y2A",
+      "time": "11:00~18:00",
+      "organization": "國立陽明交通大學陽明校區",
+      "location": "臺北市北投區立農街二段155號第一教學大樓前",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344171415224966"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMDk6MDB+MTY6MDAt6Iqx6JOu6YO15bGA",
+      "time": "09:00~16:00",
+      "organization": "花蓮郵局",
+      "location": "花蓮國安郵局前(花蓮縣花蓮市中山路408號)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344171050103983"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMDk6MDB+MTc6MDAt5LqM5YWr54mn6Zuy6b2L",
+      "time": "09:00~17:00",
+      "organization": "二八牧雲齋",
+      "location": "新北市樹林區中山路一段276號6樓(配合樹林室)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344170871355938"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMDk6MzB+MTY6MzAt5reh5rC06YO15bGA",
+      "time": "09:30~16:30",
+      "organization": "淡水郵局",
+      "location": "新北市淡水區中正路298號(淡水藝術工坊)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344169693508984"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMDk6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq66JCs5rW36Iiq6YGL56S+5pyD56aP5Yip5oWI5ZaE5LqL5qWt5Z+66YeR5pyD",
+      "time": "09:00~17:00",
+      "organization": "財團法人萬海航運社會福利慈善事業基金會",
+      "location": "臺北市松山區復興北路69號5樓(配合長春室)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344169058639966"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMTA6MDB+MTg6MDAt5aSn6I+v5Zq05a+6",
+      "time": "10:00~18:00",
+      "organization": "大華嚴寺",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344168870881911",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMDg6MDB+MTc6MzAt6LKh5ZyY5rOV5Lq66JCs5rW36Iiq6YGL56S+5pyD56aP5Yip5oWI5ZaE5LqL5qWt5Z+66YeR5pyD",
+      "time": "08:00~17:30",
+      "organization": "財團法人萬海航運社會福利慈善事業基金會",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344168414750939"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMTE6MDB+MTk6MDAt6LKh5ZyY5rOV5Lq66JCs5rW36Iiq6YGL56S+5pyD56aP5Yip5oWI5ZaE5LqL5qWt5Z+66YeR5pyD",
+      "time": "11:00~19:00",
+      "organization": "財團法人萬海航運社會福利慈善事業基金會",
+      "location": "臺北市大安區B1東區地下街9號出口旁副走道(第四廣場旁配合忠孝室)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344164786144453"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMTM6MDB+MjE6MDAt6LKh5ZyY5rOV5Lq66JCs5rW36Iiq6YGL56S+5pyD56aP5Yip5oWI5ZaE5LqL5qWt5Z+66YeR5pyD",
+      "time": "13:00~21:00",
+      "organization": "財團法人萬海航運社會福利慈善事業基金會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344164320013470"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDUtMDg6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq66JCs5rW36Iiq6YGL56S+5pyD56aP5Yip5oWI5ZaE5LqL5qWt5Z+66YeR5pyD",
+      "time": "08:00~17:00",
+      "organization": "財團法人萬海航運社會福利慈善事業基金會",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-03-05",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344163142265425"
+    },
+    {
       "id": "5paw56u5LTIwMjYvMDMvMDUtMDk6MDB+MTc6MDAt56u55Y2X542F5a2Q5pyD",
       "time": "09:00~17:00",
       "organization": "竹南獅子會",
@@ -1332,6 +1799,149 @@
     }
   ],
   "2026-03-06": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMDg6MDB+MTc6MDAt5p2/5qmL6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "板橋郵局",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344189867042441"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMTM6MDB+MjE6MDAt5Y+w5YyX5biC5puZ6Iux542F5a2Q5pyDQSAz",
+      "time": "13:00~21:00",
+      "organization": "台北市曙英獅子會A 3",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344189402911478"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMTA6MDB+MTc6MDAt56CU5o+a56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "10:00~17:00",
+      "organization": "研揚科技股份有限公司",
+      "location": "新北市新店區寶橋路235巷129號對面",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344188689194496"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMDk6MDB+MTc6MDAt5LqM5YWr54mn6Zuy6b2L",
+      "time": "09:00~17:00",
+      "organization": "二八牧雲齋",
+      "location": "新北市樹林區中山路一段276號6樓(配合樹林室)",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344186852153937"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMDk6MzB+MTY6MzAt5p2x5rmW542F5a2Q5pyDQSAz",
+      "time": "09:30~16:30",
+      "organization": "東湖獅子會A 3",
+      "location": "臺北市內湖區東湖路115號(東湖國小前)",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344185674305982"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMDg6MDB+MTc6MzAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65YyX6YO15bGA",
+      "time": "08:00~17:30",
+      "organization": "中華郵政股份有限公司臺北郵局",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344184595557937"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMDk6MzB+MTY6MzAt5Lit5bGx5Y2A5Lit5ZCJ6YeM",
+      "time": "09:30~16:30",
+      "organization": "中山區中吉里",
+      "location": "臺北市長春路137巷口",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344184130426965",
+      "coordinates": {
+        "lat": 25.05791,
+        "lng": 121.53114
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMDk6MzB+MTY6MzAt56CU5o+a56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:30~16:30",
+      "organization": "研揚科技股份有限公司",
+      "location": "新北市新店區寶高路28號",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344183951678910"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMDg6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A6Iqx6JOu6b6N5ZCf542F5a2Q5pyD",
+      "time": "08:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344181124638441"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMDk6MzB+MTY6MzAt6Ie654Gj6YqA6KGM6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:30~16:30",
+      "organization": "臺灣銀行股份有限公司",
+      "location": "臺北市中正區重慶南路一段120號",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344180580769423"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMDk6MzB+MTY6MzAt5Y+w54Gj6Ku+5Z+65Lqe6YCa5L+h6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:30~16:30",
+      "organization": "台灣諾基亞通信股份有限公司",
+      "location": "臺北市松山區民生東路三段116號",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344178045215479"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMTA6MDB+MTg6MDAt6JmO6ZaA56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "10:00~18:00",
+      "organization": "虎門科技股份有限公司",
+      "location": "新北市板橋區中山路一段50巷36號2樓之4(配合府中室)",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344177866467424"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMTA6MDB+MTY6MDAt5Y+w5YyX5paH6I+v5p2x5pa56YWS5bqX",
+      "time": "10:00~16:00",
+      "organization": "台北文華東方酒店",
+      "location": "臺北市松山區興安街慶城街口",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344172772820965"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMTA6MDB+MTg6MDAt6aaZ5riv5ZWG5aSp5ZyT5paH5YyW6Kuu6Kmi6aGn5ZWP5pyJ6ZmQ5YWs5Y+45Y+w54Gj5YiG5YWs5Y+4",
+      "time": "10:00~18:00",
+      "organization": "香港商天圓文化諮詢顧問有限公司台灣分公司",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344172594072910",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDYtMDk6MzB+MTY6MzAt5Y+w54Gj5aSn6LuK6ZqKLeiKseiTruWIhuWFrOWPuA==",
+      "time": "09:30~16:30",
+      "organization": "台灣大車隊-花蓮分公司",
+      "location": "花蓮縣吉安鄉建國路一段287巷10號(台灣大車隊花蓮分公司前廣場)",
+      "activityDate": "2026-03-06",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344172138951938"
+    },
     {
       "id": "5paw56u5LTIwMjYvMDMvMDYtMDk6MDB+MTY6MDAt5qGD5ZyS5biC5Y2a5oSb542F",
       "time": "09:00~16:00",
@@ -1546,6 +2156,194 @@
   ],
   "2026-03-07": [
     {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MzB+MTY6MzAt6Iqx6JOu5biC5amm5aWz5pyD",
+      "time": "09:30~16:30",
+      "organization": "花蓮市婦女會",
+      "location": "花蓮市明禮國小附設幼兒園前(花蓮市中正路596號)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344201934041035"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MDB+MTc6MDAt6JiG5rSy56aP5a6J5a6u",
+      "time": "09:00~17:00",
+      "organization": "蘆洲福安宮",
+      "location": "新北市蘆洲區民權路70號(蘆洲福安宮旁)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344199932476008"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq65q2j5b6356S+5pyD56aP5Yip5oWI5ZaE5Z+66YeR5pyD",
+      "time": "09:00~17:00",
+      "organization": "財團法人正德社會福利慈善基金會",
+      "location": "臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344199576355036"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MDB+MTc6MDAt6aCt5YmN542F5pyDQiAx",
+      "time": "09:00~17:00",
+      "organization": "頭前獅會B 1",
+      "location": "新北市新莊區化成路231號(頭前國小前)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344198854628954"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDg6MDB+MTc6MDAt5paw5p2/542F5a2Q5pyDQiAy",
+      "time": "08:00~17:00",
+      "organization": "新板獅子會B 2",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344198398507081"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MDB+MTc6MDAt5Lit5ZKM542F5pyDQiAy",
+      "time": "09:00~17:00",
+      "organization": "中和獅會B 2",
+      "location": "新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344197219759936"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDg6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A6Iqx6JOu6b6N5ZCf542F5a2Q5pyD",
+      "time": "08:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344196661566512"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDg6MDB+MTc6MzAt5Y+w5YyX5biC5p2x5YyX542F5a2Q5pyDQTI=",
+      "time": "08:00~17:30",
+      "organization": "台北市東北獅子會A2",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344195483718577"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MDB+MTY6MDAt5a6c6Jit57ij5paH56eA5oSb5b+D5Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "宜蘭縣文秀愛心協會",
+      "location": "宜蘭縣羅東鎮中興路3號宜蘭縣羅東鎮公所前(配合萬連號)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344195027687594"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MzB+MTY6MzAt5paw5YyX5biC5Lit5ZKM5Y2A5beh5a6I6ZqK576p5bel6Zec5oe35pyN5YuZ5Y2U5pyD",
+      "time": "09:30~16:30",
+      "organization": "新北市中和區巡守隊義工關懷服務協會",
+      "location": "新北市中和區圓通路160號",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344194849839540"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMTA6MDB+MTg6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Lit5bGx56ys5LqU5YiG5pyD",
+      "time": "10:00~18:00",
+      "organization": "國際佛光會中華總會中山第五分會",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344193660081595"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMTA6MDB+MTg6MDAt56aP54ef542F5pyDQiAx",
+      "time": "10:00~18:00",
+      "organization": "福營獅會B 1",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344193582233440",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMTA6MDB+MTc6MDAt56S+5ZyY5rOV5Lq65ZyL6Zqb5om26LyqMzQ4MuWcsOWNgA==",
+      "time": "10:00~17:00",
+      "organization": "社團法人國際扶輪3482地區",
+      "location": "臺北市信義區松壽路16巷",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344190755193081",
+      "coordinates": {
+        "lat": 25.0354793,
+        "lng": 121.5663914
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMTE6MDB+MTg6MDAt6YKR5b635om26Lyq56S+",
+      "time": "11:00~18:00",
+      "organization": "邑德扶輪社",
+      "location": "臺北市內湖區敬業三路20號美麗華對面",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344190111224053"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MzB+MTY6MDAt5Z+66ZqG5biC56ys5LqM5L+h55So5ZCI5L2c56S+",
+      "time": "09:30~16:00",
+      "organization": "基隆市第二信用合作社",
+      "location": "基隆市仁愛區愛二路78號",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344187675870909"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MzB+MTc6MDAt5Lit6I+v5r+f5L2b56aq5L+u5Y2U5pyD",
+      "time": "09:30~17:00",
+      "organization": "中華濟佛禪修協會",
+      "location": "臺北市北投區承德路七段378號北投立農公園旁",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344186497022954"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MDB+MTc6MDAt56S+5ZyY5rOV5Lq66Ie654Gj6Jav5bGx5oWI5ZaE5pyD",
+      "time": "09:00~17:00",
+      "organization": "社團法人臺灣薯山慈善會",
+      "location": "臺北市松山區復興北路69號5樓(配合長春室)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344186031901982"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDg6MDB+MTc6MDAt5Z+66ZqG5biC56ys5LqM5L+h55So5ZCI5L2c56S+",
+      "time": "08:00~17:00",
+      "organization": "基隆市第二信用合作社",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344182947364423"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMDk6MzB+MTY6MzAt6JiG5rSy5Lit6Lev6YeM",
+      "time": "09:30~16:30",
+      "organization": "蘆洲中路里",
+      "location": "新北市蘆洲區蘆洲區正和街81號",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344182303485495"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDctMTA6MDB+MTc6MDAt5b6Q56uL5L+h6K2w5ZOh5pyN5YuZ6JmV",
+      "time": "10:00~17:00",
+      "organization": "徐立信議員服務處",
+      "location": "臺北市士林區延平北路六段81號",
+      "activityDate": "2026-03-07",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344181769516478"
+    },
+    {
       "id": "5paw56u5LTIwMjYvMDMvMDctMDk6MDB+MTY6MDAt5b6p6IiI5ZCM5r+f5pyD",
       "time": "09:00~16:00",
       "organization": "復興同濟會",
@@ -1751,18 +2549,229 @@
       "activityDate": "2026-03-07",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680368609665835"
-    },
-    {
-      "id": "6auY6ZuELTIwMjYvMDMvMDctMDk6MDB+MTc6MDAt5YCJ5L2R5a+m5qWt6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
-      "time": "09:00~17:00",
-      "organization": "倉佑實業股份有限公司",
-      "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
-      "activityDate": "2026-03-07",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680363337271322"
     }
   ],
   "2026-03-08": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MDB+MTY6MDAt5a6c6Jit57ij5paH56eA5oSb5b+D5Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "宜蘭縣文秀愛心協會",
+      "location": "宜蘭縣羅東鎮中興路3號宜蘭縣羅東鎮公所前(萬連號旁)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344218728575006"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDg6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A6Iqx6JOu6b6N5ZCf542F5a2Q5pyD",
+      "time": "08:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344218362444023"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MDB+MTc6MDAt5pWR5ZyL5ZyY5paw5YyX5biC5p2/5qmL5Y2A5ZyY5aeU5pyD",
+      "time": "09:00~17:00",
+      "organization": "救國團新北市板橋區團委會",
+      "location": "新北市樹林區中山路一段276號6樓(配合樹林室)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344217549727051"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDg6MDB+MTc6MDAt5pWR5ZyL5ZyY5paw5YyX5biC5ZyY5YuZ5oyH5bCO5aeU5ZOh5pyD",
+      "time": "08:00~17:00",
+      "organization": "救國團新北市團務指導委員會",
+      "location": "臺北市北投區立德路123號(配合關渡室)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344217183696079"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MzB+MTY6MzAt5pWR5ZyL5ZyY5paw5YyX5biC5p2/5qmL5Y2A5ZyY5aeU5pyD",
+      "time": "09:30~16:30",
+      "organization": "救國團新北市板橋區團委會",
+      "location": "新北市樹林區保安街一段7號(濟安宮對面)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344216905848024"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMTA6MDB+MTg6MDAt5ZCJ57+U542F5pyDQTI=",
+      "time": "10:00~18:00",
+      "organization": "吉翔獅會A2",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344216361979006"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MDB+MTc6MDAt5pWR5ZyL5ZyY5paw5YyX5biC5ZyY5YuZ5oyH5bCO5aeU5ZOh5pyD",
+      "time": "09:00~17:00",
+      "organization": "救國團新北市團務指導委員會",
+      "location": "新北市三重區重新路四段12號7樓之2(配合三重室)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344212811102565"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MzB+MTY6MzAt5LiJ5bO95ZCM5r+f5pyDKOWMl+S6jOWNgCk=",
+      "time": "09:30~16:30",
+      "organization": "三峽同濟會(北二區)",
+      "location": "新北市三峽區中華路愛國路停車場旁(三峽祥耀停車場)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344212455081592"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDg6MDB+MTc6MzAt5ZyL6Zqb542F5a2Q5pyDMzAwQS0y5Y2A5Y+w5YyX5biC6I+B5b2p542F5a2Q5pyD",
+      "time": "08:00~17:30",
+      "organization": "國際獅子會300A-2區台北市菁彩獅子會",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344211098485593"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMTM6MDB+MjE6MDAt55m+5ZCI542F5a2Q5pyDQSAz",
+      "time": "13:00~21:00",
+      "organization": "百合獅子會A 3",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344209741889593"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MDB+MTc6MDAt56S+5ZyY5rOV5Lq65Lit6I+v5rCR5ZyL5aSp5bGx5YWr5Y2m5a+u6YGT5b635Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "社團法人中華民國天山八卦寮道德協會",
+      "location": "臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344209386768511"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "09:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "新北市汐止區新台五路一段207號11樓B室(配合汐止室)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344208563031549"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMTA6MDB+MTg6MDAt5YWJ5qau542F5pyDQiAx",
+      "time": "10:00~18:00",
+      "organization": "光榮獅會B 1",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344208107910566",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDg6MDB+MTc6MDAt56S+5ZyY5rOV5Lq65Y+w54Gj54ef6aSK5pqo5YGl5bq36aOy6aOf5L+D6YCy5Y2U5pyD",
+      "time": "08:00~17:00",
+      "organization": "社團法人台灣營養暨健康飲食促進協會",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344207928162511"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MzB+MTY6MzAt5Y+w5YyX5biC5paw5Y+w5YyX542F5a2Q5pyDQTI=",
+      "time": "09:30~16:30",
+      "organization": "台北市新台北獅子會A2",
+      "location": "臺北市松山區南京東路5段188號",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344205736090079"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MDB+MTc6MDAt5paw5YyX5biC6JiG5rSy5b6M5YKZ5oay5YW16I235p2+5Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "新北市蘆洲後備憲兵荷松協會",
+      "location": "新北市蘆洲區長安街311號成功國小",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344205658242034"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMTA6MDB+MTc6MDAt5ZyL6Zqb5om26LyqMzUyMeWcsOWNgOWPsOWMl+W4guiPr+m9oeaJtui8quekvg==",
+      "time": "10:00~17:00",
+      "organization": "國際扶輪3521地區台北市華齡扶輪社",
+      "location": "臺北市萬華區桂林街1號(家樂福林店)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344205192121052"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMTA6MDB+MTc6MDAt6I+v5rGf542F5pyDQiAy",
+      "time": "10:00~17:00",
+      "organization": "華江獅會B 2",
+      "location": "新北市板橋區中山路一段遠百中山店",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344204479494080"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MzB+MTc6MDAt6LKh5ZyY5rOV5Lq65Lit6I+v5rCR5ZyL5pel6JOu5q2j5a6X5Z+66YeR5pyD",
+      "time": "09:30~17:00",
+      "organization": "財團法人中華民國日蓮正宗基金會",
+      "location": "臺北市松山區八德路三段30號",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344204013373007"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344203291646035"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MDB+MTc6MDAt5qiC5Y+w5ZCM5r+f5pyDKOWMl+S6jOWNgCk=",
+      "time": "09:00~17:00",
+      "organization": "樂台同濟會(北二區)",
+      "location": "新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344202656777007"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MzB+MTY6MzAt5ZyL6Zqb542F5a2Q5pyDMzAwQiAx5Y2A5paw5YyX5biC5paw6I6K542F5a2Q5pyDKOiKseiTrik=",
+      "time": "09:30~16:30",
+      "organization": "國際獅子會300B 1區新北市新莊獅子會(花蓮)",
+      "location": "花蓮遠東百貨和平廣場前(花蓮市和平路581號)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344202012898080"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMTA6MDB+MTg6MDAt5pWR5ZyL5ZyY5paw5YyX5biC5LiJ5bO95Y2A5ZyY5aeU5pyD",
+      "time": "10:00~18:00",
+      "organization": "救國團新北市三峽區團委會",
+      "location": "新北市土城區裕民路171巷裕民廣場內(配合土城號)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344201478920053"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MDB+MTY6MzAt5paw5YyX5biC5Lit5ZKM57Sz5aOr5Y2U5pyD",
+      "time": "09:00~16:30",
+      "organization": "新北市中和紳士協會",
+      "location": "新北市中和區莒光路131號(全家便利商店門口)",
+      "activityDate": "2026-03-08",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344200920637548"
+    },
     {
       "id": "5paw56u5LTIwMjYvMDMvMDgtMDg6MDB+MTY6MzAt5paw56u557ay6Lev542F5a2Q5pyD",
       "time": "08:00~16:30",
@@ -2036,6 +3045,100 @@
     }
   ],
   "2026-03-09": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDktMDg6MDB+MTc6MzAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65YyX6YO15bGA",
+      "time": "08:00~17:30",
+      "organization": "中華郵政股份有限公司臺北郵局",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-09",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344219806323051"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDktMDk6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "09:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "新北市汐止區新台五路一段207號11樓B室(配合汐止室)",
+      "activityDate": "2026-03-09",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344219440292078"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDktMTE6MDB+MTg6MDAt6Ie65YyX5qau5rCR57i96Yar6Zmi",
+      "time": "11:00~18:00",
+      "organization": "臺北榮民總醫院",
+      "location": "臺北市北投區石牌路二段201號(一門診)",
+      "activityDate": "2026-03-09",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344219085171005"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDktMDk6MzB+MTY6MzAt6bav5q2M5ZCM5r+f5pyDKOWMl+S6jOWNgCk=",
+      "time": "09:30~16:30",
+      "organization": "鶯歌同濟會(北二區)",
+      "location": "新北市鶯歌區中山路150號(圖書館)",
+      "activityDate": "2026-03-09",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344215991534537"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDktMDg6MDB+MTc6MDAt5L2b5YWJ5Y2X6ZuF5YiG5pyD",
+      "time": "08:00~17:00",
+      "organization": "佛光南雅分會",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-03-09",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344215357655519"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDktMTA6MDB+MTc6MDAt5a+M6YKm5bu65YyX5aSn5qiT",
+      "time": "10:00~17:00",
+      "organization": "富邦建北大樓",
+      "location": "臺北市中山區建國北路二段236號",
+      "activityDate": "2026-03-09",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344214713786582"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDktMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-03-09",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344214178807564"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDktMTM6MDB+MjE6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSAz5Y2A5Y+w5YyX5biC6I+v5L+h542F5a2Q5pyDQTM=",
+      "time": "13:00~21:00",
+      "organization": "國際獅子會300A 3區台北市華信獅子會A3",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-03-09",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344213534838547"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDktMTA6MDB+MTg6MDAt56S+5ZyY5rOV5Lq65Lit6I+v6LOA6IGW5a6u5oSb5b+D5Y2U5pyD",
+      "time": "10:00~18:00",
+      "organization": "社團法人中華賀聖宮愛心協會",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-03-09",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344210629040023",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDktMDg6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A6Iqx6JOu6b6N5ZCf542F5a2Q5pyD",
+      "time": "08:30~17:00",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-03-09",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344210263919050"
+    },
     {
       "id": "5paw56u5LTIwMjYvMDMvMDktMDk6MDB+MTY6MDAt5qGD5ZyS5ZyL6Zqb5qmf5aC0",
       "time": "09:00~16:00",
@@ -2734,15 +3837,6 @@
       "activityDate": "2026-03-12",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680414917692588"
-    },
-    {
-      "id": "6auY6ZuELTIwMjYvMDMvMTItMDk6MDB+MTc6MDAt5YCJ5L2R5a+m5qWt6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
-      "time": "09:00~17:00",
-      "organization": "倉佑實業股份有限公司",
-      "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
-      "activityDate": "2026-03-12",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680414373713551"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMTItMDk6MzB+MTc6MDAt6auY6ZuE6Yar5a245aSn5a24",
