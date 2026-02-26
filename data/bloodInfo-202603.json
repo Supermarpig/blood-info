@@ -1,6 +1,15 @@
 {
   "2026-03-01": [
     {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDEtMTA6MDB+MTc6MDAt54Ok6Zue54m55pS76ZqK",
+      "time": "10:00~17:00",
+      "organization": "烤雞特攻隊",
+      "location": "花蓮遠東百貨建林廣場(花蓮市和平路581號-星巴克門)",
+      "activityDate": "2026-03-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q057373137108593205"
+    },
+    {
       "id": "5Y+w5YyXLTIwMjYvMDMvMDEtMDk6MDB+MTY6MDAt5a6c6Jit6JiH5r6z5riv5ZCM5r+f5pyD",
       "time": "09:00~16:00",
       "organization": "宜蘭蘇澳港同濟會",
@@ -179,15 +188,6 @@
       "activityDate": "2026-03-01",
       "center": "台北",
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q044393434061281277"
-    },
-    {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMDEtMDk6MzB+MTY6MzAt6Iqx6JOu5biC5ZyL6IGv5a6I5pyb55u45Yqp6ZqK",
-      "time": "09:30~16:30",
-      "organization": "花蓮市國聯守望相助隊",
-      "location": "花蓮明禮國小附設幼兒園前(花蓮市中正路596號)",
-      "activityDate": "2026-03-01",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q044393433882433222"
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDMvMDEtMDk6MDB+MTY6MDAt6Jit6Zm95ZyL6Zqb5ZCM5r+f5pyD",
@@ -3913,8 +3913,8 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419516081708932"
     },
     {
-      "id": "5paw56u5LTIwMjYvMDMvMTMtMDk6MDB+MTY6MDAt5qGD5ZyS5biC6IGv6YKm542F5a2Q5pyD",
-      "time": "09:00~16:00",
+      "id": "5paw56u5LTIwMjYvMDMvMTMtMDk6MzB+MTY6MDAt5qGD5ZyS5biC6IGv6YKm542F5a2Q5pyD",
+      "time": "09:30~16:00",
       "organization": "桃園市聯邦獅子會",
       "location": "桃園市中壢區中華路一段450號(內壢家樂福)",
       "activityDate": "2026-03-13",
@@ -3983,6 +3983,15 @@
       "activityDate": "2026-03-13",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419510996696457"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDMvMTMtMDk6MzB+MTY6MzAt5qGD5ZyS5biC6IGv6YKm542F5a2Q5pyD",
+      "time": "09:30~16:30",
+      "organization": "桃園市聯邦獅子會",
+      "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
+      "activityDate": "2026-03-13",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419510530565474"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMTMtMDk6MzB+MTc6MzAt6auY6ZuE6YO15bGA",
