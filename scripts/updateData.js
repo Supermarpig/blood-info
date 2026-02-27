@@ -27,18 +27,7 @@ const GIFT_TAG_MAPPING = {
     '食品': ['米', '蛋', '泡麵', '餅乾', '零食', '麵包', '蛋糕'],
 };
 
-// 初始化 OCR worker (延遲載入)
-let ocrWorker = null;
-
-async function getOcrWorker() {
-    if (!ocrWorker) {
-        console.log('初始化 OCR 引擎...');
-        // 使用中文繁體識別
-        ocrWorker = await createWorker('chi_tra');
-        console.log('OCR 引擎初始化完成');
-    }
-    return ocrWorker;
-}
+const OCR_CONCURRENCY = 4;
 
 // 從文字中識別贈品 tags
 function extractTagsFromText(text) {
@@ -73,8 +62,8 @@ function isValidImageBuffer(buffer) {
     return false;
 }
 
-// 下載圖片並進行 OCR 識別
-async function ocrImageUrl(imageUrl) {
+// 下載圖片並進行 OCR 識別（接收指定的 worker）
+async function ocrImageUrl(worker, imageUrl) {
     try {
         const response = await axios.get(imageUrl, {
             responseType: 'arraybuffer',
@@ -91,9 +80,7 @@ async function ocrImageUrl(imageUrl) {
             return '';
         }
 
-        const worker = await getOcrWorker();
         const { data: { text } } = await worker.recognize(buffer);
-
         return text;
     } catch (error) {
         console.error(`OCR 識別失敗 (${imageUrl}): ${error.message}`);
@@ -101,22 +88,19 @@ async function ocrImageUrl(imageUrl) {
     }
 }
 
-// 對 PTT 事件的文字和圖片進行分析，提取 tags
-async function extractTagsFromEvent(rawLine, images) {
-    const allText = [rawLine]; // 先加入 rawLine 文字進行關鍵字匹配
-
-    // 只處理前 3 張圖片以節省時間
+// 對 PTT 事件的文字和圖片進行分析，提取 tags（接收指定的 worker）
+async function extractTagsFromEvent(worker, rawLine, images) {
+    const allText = [rawLine];
     const imagesToProcess = (images || []).slice(0, 3);
 
     for (const imageUrl of imagesToProcess) {
-        const text = await ocrImageUrl(imageUrl);
+        const text = await ocrImageUrl(worker, imageUrl);
         if (text) {
             allText.push(text);
         }
     }
 
-    const combinedText = allText.join(' ');
-    return extractTagsFromText(combinedText);
+    return extractTagsFromText(allText.join(' '));
 }
 
 // ==================== PTT OCR 快取 ====================
@@ -477,8 +461,9 @@ async function fetchPttData() {
 
             console.log(`Fetched ${pttEvents.length} events from PTT`);
 
-            // OCR 識別圖片，提取贈品 tags（先檢查快取）
-            const eventsWithImages = pttEvents.filter(e => e.images && e.images.length > 0);
+            // OCR 識別圖片，提取贈品 tags（跳過過期活動 + 檢查快取）
+            const today = new Date().toISOString().slice(0, 10);
+            const eventsWithImages = pttEvents.filter(e => e.images && e.images.length > 0 && e.date >= today);
             const eventsNeedingOcr = eventsWithImages.filter(e => !pttOcrCache.has(e.rawLine));
             const eventsWithCachedTags = eventsWithImages.filter(e => pttOcrCache.has(e.rawLine));
 
@@ -488,22 +473,31 @@ async function fetchPttData() {
             });
             console.log(`快取命中 ${eventsWithCachedTags.length} 個活動，需新 OCR ${eventsNeedingOcr.length} 個活動...`);
 
-            // 只對沒有快取的進行 OCR
-            for (let i = 0; i < eventsNeedingOcr.length; i++) {
-                const event = eventsNeedingOcr[i];
-                console.log(`  [${i + 1}/${eventsNeedingOcr.length}] OCR: ${event.locationStr || event.rawLine.substring(0, 30)}`);
-                event.tags = await extractTagsFromEvent(event.rawLine, event.images);
-                // 存入快取
-                pttOcrCache.set(event.rawLine, event.tags);
-                if (event.tags.length > 0) {
-                    console.log(`    → 識別到 tags: ${event.tags.join(', ')}`);
-                }
-            }
+            // 並行 OCR：使用 worker pool
+            if (eventsNeedingOcr.length > 0) {
+                const workerCount = Math.min(OCR_CONCURRENCY, eventsNeedingOcr.length);
+                console.log(`初始化 ${workerCount} 個 OCR 引擎...`);
+                const workers = await Promise.all(
+                    Array.from({ length: workerCount }, () => createWorker('chi_tra'))
+                );
+                console.log('OCR 引擎初始化完成');
 
-            // 終止 OCR worker 釋放資源
-            if (ocrWorker) {
-                await ocrWorker.terminate();
-                ocrWorker = null;
+                let nextIdx = 0;
+                const runWorker = async (worker) => {
+                    while (nextIdx < eventsNeedingOcr.length) {
+                        const idx = nextIdx++;
+                        const event = eventsNeedingOcr[idx];
+                        console.log(`  [${idx + 1}/${eventsNeedingOcr.length}] OCR: ${event.locationStr || event.rawLine.substring(0, 30)}`);
+                        event.tags = await extractTagsFromEvent(worker, event.rawLine, event.images);
+                        pttOcrCache.set(event.rawLine, event.tags);
+                        if (event.tags.length > 0) {
+                            console.log(`    → 識別到 tags: ${event.tags.join(', ')}`);
+                        }
+                    }
+                };
+
+                await Promise.all(workers.map(w => runWorker(w)));
+                await Promise.all(workers.map(w => w.terminate()));
             }
 
             console.log('OCR 識別完成');
@@ -792,26 +786,27 @@ async function crawlData(startDate, endDate) {
         keepAlive: true,
     });
 
+    const results = await Promise.all(
+        bloodCenters.map(center =>
+            crawlCenter(center, startDate, endDate, httpsAgent, headers)
+                .catch(error => {
+                    console.error(`${center.name} 爬取失敗:`, error.message);
+                    return {};
+                })
+        )
+    );
+
     const allDonations = {};
-
-    for (const center of bloodCenters) {
-        try {
-            const centerData = await crawlCenter(center, startDate, endDate, httpsAgent, headers);
-
-            // 合併資料並去重
-            for (const date in centerData) {
-                if (!allDonations[date]) {
-                    allDonations[date] = [];
-                }
-                centerData[date].forEach(newEvent => {
-                    // 根據 ID 檢查是否重複
-                    if (!allDonations[date].some(e => e.id === newEvent.id)) {
-                        allDonations[date].push(newEvent);
-                    }
-                });
+    for (const centerData of results) {
+        for (const date in centerData) {
+            if (!allDonations[date]) {
+                allDonations[date] = [];
             }
-        } catch (error) {
-            console.error(`${center.name} 爬取失敗:`, error.message);
+            centerData[date].forEach(newEvent => {
+                if (!allDonations[date].some(e => e.id === newEvent.id)) {
+                    allDonations[date].push(newEvent);
+                }
+            });
         }
     }
 
