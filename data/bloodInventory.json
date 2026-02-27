@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026年02月26日 07時31分",
+  "updatedAt": "2026年02月27日 07時31分",
   "centers": [
     {
       "name": "台北",
@@ -7,7 +7,7 @@
         "A": "low",
         "B": "low",
         "O": "urgent",
-        "AB": "normal"
+        "AB": "low"
       }
     },
     {

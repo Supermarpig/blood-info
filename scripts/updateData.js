@@ -57,10 +57,25 @@ function extractTagsFromText(text) {
     return Array.from(tags);
 }
 
+// 檢查 buffer 是否為 Leptonica 支援的圖片格式 (JPEG, PNG, GIF, BMP, TIFF)
+function isValidImageBuffer(buffer) {
+    if (!buffer || buffer.length < 4) return false;
+    // JPEG: FF D8 FF
+    if (buffer[0] === 0xFF && buffer[1] === 0xD8 && buffer[2] === 0xFF) return true;
+    // PNG: 89 50 4E 47
+    if (buffer[0] === 0x89 && buffer[1] === 0x50 && buffer[2] === 0x4E && buffer[3] === 0x47) return true;
+    // GIF: 47 49 46 38
+    if (buffer[0] === 0x47 && buffer[1] === 0x49 && buffer[2] === 0x46 && buffer[3] === 0x38) return true;
+    // BMP: 42 4D
+    if (buffer[0] === 0x42 && buffer[1] === 0x4D) return true;
+    // TIFF: 49 49 or 4D 4D
+    if ((buffer[0] === 0x49 && buffer[1] === 0x49) || (buffer[0] === 0x4D && buffer[1] === 0x4D)) return true;
+    return false;
+}
+
 // 下載圖片並進行 OCR 識別
 async function ocrImageUrl(imageUrl) {
     try {
-        // 下載圖片
         const response = await axios.get(imageUrl, {
             responseType: 'arraybuffer',
             timeout: 15000,
@@ -69,8 +84,15 @@ async function ocrImageUrl(imageUrl) {
             },
         });
 
+        const buffer = Buffer.from(response.data);
+
+        if (!isValidImageBuffer(buffer)) {
+            console.warn(`跳過不支援的圖片格式 (${imageUrl}), 前 4 bytes: ${buffer.slice(0, 4).toString('hex')}`);
+            return '';
+        }
+
         const worker = await getOcrWorker();
-        const { data: { text } } = await worker.recognize(Buffer.from(response.data));
+        const { data: { text } } = await worker.recognize(buffer);
 
         return text;
     } catch (error) {
