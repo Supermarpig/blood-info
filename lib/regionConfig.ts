@@ -25,6 +25,8 @@ export const REGIONS: RegionConfig[] = [
     keywords: [
       "台北捐血",
       "新北捐血",
+      "新北捐血活動查詢",
+      "台北捐血活動",
       "基隆捐血",
       "宜蘭捐血",
       "花蓮捐血",
