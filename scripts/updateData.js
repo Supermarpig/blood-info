@@ -852,7 +852,18 @@ async function processMonth(year, month, pttData) {
 
     const officialData = await crawlData(startDate, endDate);
 
-    // 2. Pass existingData to mergeData for fallback
+    // 2. Preserve past dates from existingData that the official site no longer returns
+    //    (official site only shows upcoming events, so past events disappear from crawl results)
+    if (existingData) {
+        const today = new Date().toISOString().slice(0, 10);
+        for (const date in existingData) {
+            if (date < today && !officialData[date]) {
+                officialData[date] = existingData[date];
+            }
+        }
+    }
+
+    // 3. Pass existingData to mergeData for fallback
     const mergedData = mergeData(officialData, pttData, existingData, year, month);
 
     // 3. Geocoding: 將地址轉換為經緯度
