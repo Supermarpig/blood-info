@@ -958,6 +958,15 @@
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344153077731868"
     },
     {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMTA6MDB+MTg6MDAt5LqM5YWr54mn6Zuy6b2L",
+      "time": "10:00~18:00",
+      "organization": "二八牧雲齋",
+      "location": "臺中市北屯區昌平路二段與松竹路口松竹福德廟旁(仁和捐血車)",
+      "activityDate": "2026-03-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344152620135868"
+    },
+    {
       "id": "5Y+w5YyXLTIwMjYvMDMvMDMtMTA6MDB+MTg6MDAt6I+p5o+Q5ZCM5r+f5pyDKOWMl+S4gOWNgCk=",
       "time": "10:00~18:00",
       "organization": "菩提同濟會(北一區)",
@@ -1154,15 +1163,6 @@
       "activityDate": "2026-03-03",
       "center": "台中",
       "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q057592961046353574"
-    },
-    {
-      "id": "5Y+w5LitLTIwMjYvMDMvMDMtMTA6MDB+MTg6MDAt5LqM5YWr54mn6Zuy6b2L",
-      "time": "10:00~18:00",
-      "organization": "二八牧雲齋",
-      "location": "臺中市北屯區昌平路二段與松竹路口松竹福德廟旁(仁和捐血車)",
-      "activityDate": "2026-03-03",
-      "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q056344152620135868"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMDMtMTE6MDB+MTc6MDAt576O5ZKM56eR5oqA5aSn5a24",
@@ -3388,7 +3388,7 @@
       "id": "5Y+w5YyXLTIwMjYvMDMvMDgtMDk6MzB+MTY6MzAt5Y+w5YyX5biC5paw5Y+w5YyX542F5a2Q5pyDQTI=",
       "time": "09:30~16:30",
       "organization": "台北市新台北獅子會A2",
-      "location": "臺北市松山區南京東路5段188號",
+      "location": "臺北市松山區南京東路5段285號前",
       "activityDate": "2026-03-08",
       "center": "台北",
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q056344205736090079"
@@ -4173,15 +4173,6 @@
       "activityDate": "2026-03-09",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680390940118977"
-    },
-    {
-      "id": "6auY6ZuELTIwMjYvMDMvMDktMDk6MzB+MTc6MDAt5buj56a+55Sf5oqA6aOf5ZOB6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
-      "time": "09:30~17:00",
-      "organization": "廣禾生技食品股份有限公司",
-      "location": "高雄市三民區民族一路463號(大樂DOLLARS)",
-      "activityDate": "2026-03-09",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680390484087904"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMDktMDk6MzB+MTg6MDAt5aSn5aSn5pW45L2N5Z+66YeR5pyD",
