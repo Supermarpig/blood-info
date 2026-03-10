@@ -4737,15 +4737,6 @@
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680404743158921"
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDMvMTAtMDk6MzB+MTc6MzAt6auY6ZuE6YO15bGA",
-      "time": "09:30~17:30",
-      "organization": "高雄郵局",
-      "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
-      "activityDate": "2026-03-10",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680404564300976"
-    },
-    {
       "id": "6auY6ZuELTIwMjYvMDMvMTAtMTA6MDB+MTc6MDAt5ZyL56uL6auY6ZuE5bir56+E5aSn5a24KOWSjOW5s+agoeWNgCk=",
       "time": "10:00~17:00",
       "organization": "國立高雄師範大學(和平校區)",
@@ -5209,15 +5200,6 @@
       "activityDate": "2026-03-11",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680413739844534"
-    },
-    {
-      "id": "6auY6ZuELTIwMjYvMDMvMTEtMDk6MzB+MTc6MzAt6auY6ZuE6YO15bGA",
-      "time": "09:30~17:30",
-      "organization": "高雄郵局",
-      "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
-      "activityDate": "2026-03-11",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680413195965506"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMTEtMDk6MDB+MTc6MzAt5aSn5aSn5pW45L2N5Z+66YeR5pyD",
@@ -6158,15 +6140,6 @@
       "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q065386900463027000"
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDMvMTMtMDk6MzB+MTc6MzAt6auY6ZuE6YO15bGA",
-      "time": "09:30~17:30",
-      "organization": "高雄郵局",
-      "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
-      "activityDate": "2026-03-13",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680429800641532"
-    },
-    {
       "id": "6auY6ZuELTIwMjYvMDMvMTMtMTA6MzB+MTc6MDAt6auY6ZuE5aSn5a24",
       "time": "10:30~17:00",
       "organization": "高雄大學",
@@ -6201,6 +6174,15 @@
       "activityDate": "2026-03-13",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680424617005063"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDMvMTMtMDk6MzB+MTc6MzAt6auY6ZuE6YO15bGA",
+      "time": "09:30~17:30",
+      "organization": "高雄郵局",
+      "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "activityDate": "2026-03-13",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q042680424072126046"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMTMtMDg6MDB+MTc6MDAt6JCs5rOw56eR5oqA5YWs5Y+4",
@@ -7315,6 +7297,15 @@
       "activityDate": "2026-03-15",
       "center": "台中",
       "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q065386911440288539"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDMvMTUtMDk6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDmjZDooYDlp5Tlk6HmnIM=",
+      "time": "09:00~17:00",
+      "organization": "國際獅子會300E2區捐血委員會",
+      "location": "高雄市三民區民族一路463號(大樂DOLLARS)(高雄市三民區民族一路463號(大樂DOLLARS))",
+      "activityDate": "2026-03-15",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q069365187968970954"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMTUtMDg6MDB+MTY6MDAt5L2b5YWJ5pyD5pel5YWJ56ys5LqM5YiG5pyD",
