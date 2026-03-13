@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026年03月12日 07時31分",
+  "updatedAt": "2026年03月13日 07時31分",
   "centers": [
     {
       "name": "台北",
@@ -16,7 +16,7 @@
         "A": "normal",
         "B": "normal",
         "O": "low",
-        "AB": "normal"
+        "AB": "low"
       }
     },
     {
@@ -34,7 +34,7 @@
         "A": "normal",
         "B": "normal",
         "O": "low",
-        "AB": "normal"
+        "AB": "low"
       }
     }
   ]
