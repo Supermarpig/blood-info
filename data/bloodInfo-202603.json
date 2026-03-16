@@ -7593,33 +7593,6 @@
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q065396796682193258"
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMTYtMDk6MDB+MTc6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
-      "time": "09:00~17:00",
-      "organization": "大大數位慈善基金會",
-      "location": "臺北市松山區復興北路69號5樓(配合長春室)",
-      "activityDate": "2026-03-16",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q054419528157717527"
-    },
-    {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMTYtMDg6MDB+MTc6MzAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
-      "time": "08:00~17:30",
-      "organization": "大大數位慈善基金會",
-      "location": "臺北市中正區南海路1號3樓(配合南海室)",
-      "activityDate": "2026-03-16",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q054419525242928003"
-    },
-    {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMTYtMDg6MDB+MTc6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
-      "time": "08:00~17:00",
-      "organization": "大大數位慈善基金會",
-      "location": "臺北市北投區立德路123號(配合關渡室)",
-      "activityDate": "2026-03-16",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q054419520970434599"
-    },
-    {
       "id": "5paw56u5LTIwMjYvMDMvMTYtMDk6MDB+MTc6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
       "time": "09:00~17:00",
       "organization": "大大數位慈善基金會",
@@ -7663,6 +7636,15 @@
       "activityDate": "2026-03-16",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419525608059085"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDMvMTYtMDg6MDB+MTc6MzAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
+      "time": "08:00~17:30",
+      "organization": "大大數位慈善基金會",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-16",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419525242928003"
     },
     {
       "id": "5paw56u5LTIwMjYvMDMvMTYtMDk6MzB+MTY6MzAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
