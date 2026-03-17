@@ -10,6 +10,7 @@ export interface GiftConfig {
   title: string;
   description: string;
   keywords: string[];
+  intro: string; // 頁面靜態介紹段落，用於 SEO
 }
 
 export const GIFTS: GiftConfig[] = [
@@ -21,6 +22,8 @@ export const GIFTS: GiftConfig[] = [
     description:
       "全台捐血送電影票活動一覽。查詢今日哪裡捐血有電影票、威秀影城、國賓影城等贈品資訊。",
     keywords: ["捐血送電影票", "捐血電影票", "威秀捐血", "捐血贈品電影票"],
+    intro:
+      "本頁整理全台捐血送電影票的活動資訊，包含威秀影城、國賓影城等電影票贈品。想捐血又想看電影？查詢今日哪裡捐血有電影票，把握每一場優惠活動！",
   },
   {
     slug: "voucher",
@@ -30,6 +33,8 @@ export const GIFTS: GiftConfig[] = [
     description:
       "全台捐血送禮券活動一覽。查詢今日哪裡捐血有禮券、百貨禮券、商品券等贈品資訊。",
     keywords: ["捐血送禮券", "捐血禮券", "捐血贈品禮券", "禮券捐血"],
+    intro:
+      "本頁整理全台捐血送禮券的活動資訊，涵蓋百貨禮券、商品券等多種禮券贈品。查詢今日哪裡捐血有禮券，一邊做公益一邊領好禮！",
   },
   {
     slug: "convenience-store",
@@ -39,6 +44,8 @@ export const GIFTS: GiftConfig[] = [
     description:
       "全台捐血送超商禮券活動一覽。查詢今日哪裡捐血有 7-11、全家、萊爾富等超商禮券。",
     keywords: ["捐血送超商", "捐血7-11", "捐血全家", "超商禮券捐血"],
+    intro:
+      "本頁整理全台捐血送超商禮券的活動資訊，包含 7-11、全家、萊爾富等超商禮券贈品。超商禮券是最實用的捐血贈品之一，查詢今日哪裡捐血有超商禮券！",
   },
   {
     slug: "food-beverage",
@@ -48,6 +55,8 @@ export const GIFTS: GiftConfig[] = [
     description:
       "全台捐血送餐飲券活動一覽。查詢今日哪裡捐血有飲料、咖啡、餐廳優惠券等贈品。",
     keywords: ["捐血送飲料", "捐血送咖啡", "餐飲券捐血", "捐血餐飲優惠"],
+    intro:
+      "本頁整理全台捐血送餐飲券的活動資訊，包含飲料券、咖啡券、餐廳優惠券等多種餐飲贈品。查詢今日哪裡捐血有餐飲優惠，捐血後直接享用！",
   },
   {
     slug: "daily-necessities",
@@ -57,6 +66,8 @@ export const GIFTS: GiftConfig[] = [
     description:
       "全台捐血送生活用品活動一覽。查詢今日哪裡捐血有衛生紙、洗衣精等日用品贈品。",
     keywords: ["捐血送生活用品", "捐血贈品", "捐血日用品", "生活用品捐血"],
+    intro:
+      "本頁整理全台捐血送生活用品的活動資訊，包含衛生紙、洗衣精、沐浴乳等實用日用品贈品。查詢今日哪裡捐血有生活用品，做好事也能補充家中日常所需！",
   },
   {
     slug: "food",
@@ -66,6 +77,8 @@ export const GIFTS: GiftConfig[] = [
     description:
       "全台捐血送食品活動一覽。查詢今日哪裡捐血有泡麵、餅乾、零食等食品贈品。",
     keywords: ["捐血送食品", "捐血送零食", "捐血食品", "食品捐血"],
+    intro:
+      "本頁整理全台捐血送食品的活動資訊，包含泡麵、餅乾、零食、飲品等各式食品贈品。查詢今日哪裡捐血有食品贈品，做公益同時帶點好吃的回家！",
   },
 ];
 

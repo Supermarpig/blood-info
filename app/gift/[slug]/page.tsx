@@ -151,7 +151,7 @@ export default async function GiftPage({ params }: PageProps) {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
     const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      cache: "no-store",
+      next: { revalidate: 3600 },
     });
     const apiData = await response.json();
     if (apiData.success && apiData.data) {
@@ -197,13 +197,14 @@ export default async function GiftPage({ params }: PageProps) {
       </nav>
 
       {/* Page header */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-2">
         <div>
           <h1 className="text-2xl font-bold">捐血送{gift.name}活動</h1>
           <p className="text-gray-600 text-sm mt-1">{gift.description}</p>
         </div>
         <AddDonationEventModal />
       </div>
+      <p className="text-sm text-gray-500 mb-6">{gift.intro}</p>
 
       {/* Event list */}
       <SearchableDonationList data={data} />

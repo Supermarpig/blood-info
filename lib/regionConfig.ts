@@ -10,6 +10,7 @@ export interface RegionConfig {
   title: string;
   description: string;
   keywords: string[];
+  intro: string; // 頁面靜態介紹段落，用於 SEO
   // Filter by center field (exact match)
   centerFilter: string;
 }
@@ -20,8 +21,7 @@ export const REGIONS: RegionConfig[] = [
     name: "台北",
     displayName: "北區",
     title: "北區捐血活動 | 台北、新北、基隆、宜蘭、花蓮捐血地點查詢",
-    description:
-      "台北捐血中心轄區最新捐血活動。包含台北市、新北市、基隆市、宜蘭縣、花蓮縣捐血車與捐血室資訊。",
+    description: "台北捐血中心轄區最新捐血活動。包含台北市、新北市、基隆市、宜蘭縣、花蓮縣捐血車與捐血室資訊。",
     keywords: [
       "台北捐血",
       "新北捐血",
@@ -33,6 +33,8 @@ export const REGIONS: RegionConfig[] = [
       "北區捐血",
     ],
     centerFilter: "台北",
+    intro:
+      "本頁即時整理台北捐血中心轄區的捐血活動，涵蓋台北市、新北市、基隆市、宜蘭縣及花蓮縣。查詢今天哪裡有捐血車、捐血站開放時間與當期捐血贈品，快速找到附近北區捐血地點。",
   },
   {
     slug: "hsinchu",
@@ -43,6 +45,8 @@ export const REGIONS: RegionConfig[] = [
       "新竹捐血中心轄區最新捐血活動。包含桃園市、新竹市、新竹縣、苗栗縣捐血車與捐血室資訊。",
     keywords: ["新竹捐血", "桃園捐血", "苗栗捐血", "桃竹苗捐血", "新竹捐血車"],
     centerFilter: "新竹",
+    intro:
+      "本頁即時整理新竹捐血中心轄區的捐血活動，涵蓋桃園市、新竹市、新竹縣及苗栗縣。查詢今天哪裡有捐血車、捐血站開放時間與當期捐血贈品，快速找到附近桃竹苗捐血地點。",
   },
   {
     slug: "central",
@@ -53,6 +57,8 @@ export const REGIONS: RegionConfig[] = [
       "台中捐血中心轄區最新捐血活動。包含台中市、彰化縣、南投縣捐血車與捐血室資訊。",
     keywords: ["台中捐血", "彰化捐血", "南投捐血", "中區捐血", "台中捐血車"],
     centerFilter: "台中",
+    intro:
+      "本頁即時整理台中捐血中心轄區的捐血活動，涵蓋台中市、彰化縣及南投縣。查詢今天哪裡有捐血車、捐血站開放時間與當期捐血贈品，快速找到附近中區捐血地點。",
   },
   {
     slug: "south",
@@ -63,6 +69,8 @@ export const REGIONS: RegionConfig[] = [
       "高雄捐血中心轄區最新捐血活動。包含高雄市、台南市、嘉義縣市、屏東縣捐血車與捐血室資訊。",
     keywords: ["高雄捐血", "台南捐血", "嘉義捐血", "屏東捐血", "南區捐血"],
     centerFilter: "高雄",
+    intro:
+      "本頁即時整理高雄捐血中心轄區的捐血活動，涵蓋高雄市、台南市、嘉義縣市及屏東縣。查詢今天哪裡有捐血車、捐血站開放時間與當期捐血贈品，快速找到附近南區捐血地點。",
   },
 ];
 

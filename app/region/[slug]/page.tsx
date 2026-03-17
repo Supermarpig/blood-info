@@ -154,7 +154,7 @@ export default async function RegionPage({ params }: PageProps) {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
     const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      cache: "no-store",
+      next: { revalidate: 3600 },
     });
     const apiData = await response.json();
     if (apiData.success && apiData.data) {
@@ -202,13 +202,14 @@ export default async function RegionPage({ params }: PageProps) {
       </nav>
 
       {/* Page header */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-2">
         <div>
           <h1 className="text-2xl font-bold">{region.displayName}捐血活動</h1>
           <p className="text-gray-600 text-sm mt-1">{region.description}</p>
         </div>
         <AddDonationEventModal />
       </div>
+      <p className="text-sm text-gray-500 mb-6">{region.intro}</p>
 
       {/* Event list with region navigation */}
       <SearchableDonationList data={data} currentRegionSlug={slug} />
