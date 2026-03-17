@@ -8057,13 +8057,13 @@
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q072570626695309480"
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMTctMDg6MDB+MTc6MzAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
+      "id": "5paw56u5LTIwMjYvMDMvMTctMDg6MDB+MTc6MzAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
       "time": "08:00~17:30",
       "organization": "大大數位慈善基金會",
       "location": "臺北市中正區南海路1號3樓(配合南海室)",
       "activityDate": "2026-03-17",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q054419537509524002"
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419537509524002"
     },
     {
       "id": "5paw56u5LTIwMjYvMDMvMTctMDk6MDB+MTY6MDAt5qGD5ZyS5biC5Y+M5rqQ542F5a2Q5pyD",
@@ -9874,15 +9874,6 @@
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q072570693542528557"
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMjEtMTA6MDB+MTc6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
-      "time": "10:00~17:00",
-      "organization": "大大數位慈善基金會",
-      "location": "臺北市信義區市府路1號(市政府前廣場)",
-      "activityDate": "2026-03-21",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q054419541922139596"
-    },
-    {
       "id": "5paw56u5LTIwMjYvMDMvMjEtMDg6MzB+MTY6MzAt5paw56u557ij56u55YyX5biC6Z2S5rqq5Y2U5pyD",
       "time": "08:30~16:30",
       "organization": "新竹縣竹北市青溪協會",
@@ -9899,6 +9890,15 @@
       "activityDate": "2026-03-21",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419546839492127"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDMvMjEtMDk6MzB+MTY6MzAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
+      "time": "09:30~16:30",
+      "organization": "大大數位慈善基金會",
+      "location": "桃園市中壢區後寮1路188號(龍岡捐血室)",
+      "activityDate": "2026-03-21",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419546294523000"
     },
     {
       "id": "5paw56u5LTIwMjYvMDMvMjEtMDk6MDB+MTc6MDAt5qGD5ZyS5biC5Y2X5bSB5aWz542F5pyD",
@@ -10522,15 +10522,6 @@
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q072570715439789187"
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMjItMDk6MDB+MTc6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
-      "time": "09:00~17:00",
-      "organization": "大大數位慈善基金會",
-      "location": "新北市樹林區中山路一段276號6樓(配合樹林室)",
-      "activityDate": "2026-03-22",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q054419548296198126"
-    },
-    {
       "id": "5paw56u5LTIwMjYvMDMvMjItMDg6MDB+MTY6MzAt5paw56u557ay6Lev542F5a2Q5pyD",
       "time": "08:00~16:30",
       "organization": "新竹網路獅子會",
@@ -10538,6 +10529,15 @@
       "activityDate": "2026-03-22",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419554646330685"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDMvMjItMDk6MDB+MTc6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
+      "time": "09:00~17:00",
+      "organization": "大大數位慈善基金會",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-03-22",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419549374946171"
     },
     {
       "id": "5paw56u5LTIwMjYvMDMvMjItMTA6MDB+MTc6MDAt5qGD5ZyS5biC6aaW5bit542F5a2Q5pyD",
@@ -10556,6 +10556,15 @@
       "activityDate": "2026-03-22",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419548651219109"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDMvMjItMDk6MzB+MTY6MzAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
+      "time": "09:30~16:30",
+      "organization": "大大數位慈善基金會",
+      "location": "桃園市中壢區後寮1路188號(龍岡捐血室)",
+      "activityDate": "2026-03-22",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419548296198126"
     },
     {
       "id": "5paw56u5LTIwMjYvMDMvMjItMDk6MDB+MTY6MDAt5qGD5ZyS5biC5Z2q5b63542F5a2Q5pyD",
@@ -11053,15 +11062,6 @@
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q072570736327940617"
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMjMtMDg6MDB+MTc6MzAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
-      "time": "08:00~17:30",
-      "organization": "大大數位慈善基金會",
-      "location": "臺北市中正區南海路1號3樓(配合南海室)",
-      "activityDate": "2026-03-23",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q054419555469057667"
-    },
-    {
       "id": "5paw56u5LTIwMjYvMDMvMjMtMDk6MDB+MTY6MDAt6IuX5qCX57ij5LiJ576p6YSJ5b6M5YKZ5oay5YW16I235p2+5Y2U5pyD",
       "time": "09:00~16:00",
       "organization": "苗栗縣三義鄉後備憲兵荷松協會",
@@ -11078,6 +11078,15 @@
       "activityDate": "2026-03-23",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419555825188630"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDMvMjMtMDk6MDB+MTc6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
+      "time": "09:00~17:00",
+      "organization": "大大數位慈善基金會",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-03-23",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419555469057667"
     },
     {
       "id": "5paw56u5LTIwMjYvMDMvMjMtMTA6MDB+MTY6MDAt6Z2S5Z+U5om26Lyq56S+",
@@ -11781,8 +11790,8 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419556712349179"
     },
     {
-      "id": "5paw56u5LTIwMjYvMDMvMjctMDk6MDB+MTc6MDAt6JCs5rOw56eR5oqA5YWs5Y+4",
-      "time": "09:00~17:00",
+      "id": "5paw56u5LTIwMjYvMDMvMjctMDk6MDB+MTY6MDAt6JCs5rOw56eR5oqA5YWs5Y+4",
+      "time": "09:00~16:00",
       "organization": "萬泰科技公司",
       "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
       "activityDate": "2026-03-27",
