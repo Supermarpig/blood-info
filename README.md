@@ -2,7 +2,7 @@
 
 > 今天哪裡有捐血車？全台捐血活動即時查詢，包含捐血站地點、開放時間與贈品資訊。
 
-**線上網站：[blood-info.vercel.app](https://blood-info.vercel.app)**
+**線上網站：[bloodtw.com](https://bloodtw.com)**
 
 ---
 
