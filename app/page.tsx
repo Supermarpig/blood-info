@@ -215,7 +215,7 @@ export default async function BloodDonationPage() {
         />
       )}
 
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center mb-2">
         <div className="flex items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logo.svg" alt="捐血活動查詢" className="w-8 h-8 rounded" />
@@ -223,6 +223,9 @@ export default async function BloodDonationPage() {
         </div>
         <AddDonationEventModal />
       </div>
+      <p className="text-sm text-gray-500 mb-6">
+        今天哪裡有捐血車？即時查詢全台捐血活動地點、捐血站開放時間與捐血贈品資訊。支援台北、新北、台中、台南、高雄等各縣市，快速找到附近捐血地點！
+      </p>
 
       <SearchableDonationList data={data} />
       <HealthFloatingButton />
