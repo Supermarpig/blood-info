@@ -75,6 +75,23 @@ export default function HeroSection({
           <Heart className="w-28 h-28 text-white" />
         </div>
 
+        {/* Floating blood drops */}
+        {[
+          { w: 14, h: 18, left: 24, delay: "0s" },
+          { w: 10, h: 13, left: 68, delay: "1.4s" },
+          { w: 18, h: 22, left: 130, delay: "2.7s" },
+        ].map((drop, i) => (
+          <div
+            key={i}
+            className="absolute bottom-3 pointer-events-none animate-float-drop"
+            style={{ left: drop.left, animationDelay: drop.delay, width: drop.w, height: drop.h }}
+          >
+            <svg viewBox="0 0 100 120" className="w-full h-full fill-white opacity-80">
+              <path d="M50 8 C50 8, 14 58, 14 78 C14 99 30 112 50 112 C70 112 86 99 86 78 C86 58 50 8 50 8 Z" />
+            </svg>
+          </div>
+        ))}
+
         <p className="text-red-200 text-xs font-medium uppercase tracking-widest mb-2">
           全台捐血資訊即時查詢
         </p>
@@ -159,7 +176,7 @@ export default function HeroSection({
         <Button
           onClick={onFindNearby}
           size="lg"
-          className="flex-1 bg-gradient-to-r from-rose-500 to-red-500 hover:from-rose-600 hover:to-red-600 text-white shadow-lg shadow-red-200/50 font-semibold h-12 text-base rounded-xl"
+          className="shimmer-btn flex-1 bg-gradient-to-r from-rose-500 to-red-500 hover:from-rose-600 hover:to-red-600 text-white shadow-lg shadow-red-200/50 font-semibold h-12 text-base rounded-xl"
         >
           <MapPin className="w-5 h-5 mr-2" />
           找附近捐血點

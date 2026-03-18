@@ -31,6 +31,56 @@ body {
   animation: fadeInUp 0.35s ease-out both;
 }
 
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.2;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-90px) scale(0.7);
+    opacity: 0;
+  }
+}
+
+.animate-float-drop {
+  animation: floatUp 4s ease-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-120%) skewX(-20deg);
+  }
+  25% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(220%) skewX(-20deg);
+  }
+}
+
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 45%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  animation: shimmer 5s ease-in-out infinite;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
