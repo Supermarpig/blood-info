@@ -1,20 +1,22 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { MapPin, Calendar, Sparkles, TrendingUp, Gift, Heart } from "lucide-react";
+import { MapPin, Calendar, Sparkles, TrendingUp, Gift, Heart, Film, Tag, Store, Coffee, Package, UtensilsCrossed } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+const GIFT_ICONS: Record<string, LucideIcon> = {
+  "movie-ticket": Film,
+  "voucher": Tag,
+  "convenience-store": Store,
+  "food-beverage": Coffee,
+  "daily-necessities": Package,
+  "food": UtensilsCrossed,
+};
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import BloodInventoryPanel from "@/components/BloodInventoryPanel";
 import { GIFTS } from "@/lib/giftConfig";
 
-const GIFT_EMOJI: Record<string, string> = {
-  "movie-ticket": "🎬",
-  voucher: "🎟️",
-  "convenience-store": "🏪",
-  "food-beverage": "🧋",
-  "daily-necessities": "🧴",
-  food: "🍜",
-};
 
 interface HeroSectionProps {
   todayCount: number;
@@ -32,9 +34,9 @@ function GiftPills() {
         <Link
           key={g.slug}
           href={`/gift/${g.slug}`}
-          className="inline-flex items-center gap-1 bg-white/15 hover:bg-white/25 text-white text-xs font-medium px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/20 transition-all duration-200"
+          className="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 text-white text-xs font-medium px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/20 transition-all duration-200"
         >
-          <span>{GIFT_EMOJI[g.slug]}</span>
+          {(() => { const Icon = GIFT_ICONS[g.slug]; return Icon ? <Icon className="w-3 h-3" /> : null; })()}
           {g.name}
         </Link>
       ))}
@@ -104,16 +106,30 @@ export default function HeroSection({
 
         {/* Floating blood drops */}
         {[
-          { w: 14, h: 18, left: 24, delay: "0s" },
-          { w: 10, h: 13, left: 68, delay: "1.4s" },
-          { w: 18, h: 22, left: 130, delay: "2.7s" },
+          { w: 12, h: 15, left: "5%",  bottom: 18, delay: "0s",    dur: "4s"   },
+          { w:  8, h: 10, left: "13%", bottom: 22, delay: "0.8s",  dur: "5.5s" },
+          { w: 18, h: 22, left: "22%", bottom: 16, delay: "1.6s",  dur: "3.8s" },
+          { w: 10, h: 13, left: "34%", bottom: 20, delay: "2.4s",  dur: "4.8s" },
+          { w: 14, h: 18, left: "46%", bottom: 16, delay: "0.4s",  dur: "5.2s" },
+          { w:  8, h: 10, left: "57%", bottom: 22, delay: "1.2s",  dur: "3.5s" },
+          { w: 16, h: 20, left: "67%", bottom: 14, delay: "2.0s",  dur: "4.4s" },
+          { w: 10, h: 13, left: "76%", bottom: 20, delay: "3.0s",  dur: "5.0s" },
+          { w:  7, h:  9, left: "85%", bottom: 24, delay: "1.8s",  dur: "4.2s" },
+          { w: 13, h: 16, left: "93%", bottom: 16, delay: "0.6s",  dur: "3.6s" },
         ].map((drop, i) => (
           <div
             key={i}
-            className="absolute bottom-3 pointer-events-none animate-float-drop"
-            style={{ left: drop.left, animationDelay: drop.delay, width: drop.w, height: drop.h }}
+            className="absolute pointer-events-none animate-float-drop"
+            style={{
+              left: drop.left,
+              bottom: drop.bottom,
+              width: drop.w,
+              height: drop.h,
+              animationDelay: drop.delay,
+              animationDuration: drop.dur,
+            }}
           >
-            <svg viewBox="0 0 100 120" className="w-full h-full fill-white opacity-80">
+            <svg viewBox="0 0 100 120" className="w-full h-full fill-white opacity-70">
               <path d="M50 8 C50 8, 14 58, 14 78 C14 99 30 112 50 112 C70 112 86 99 86 78 C86 58 50 8 50 8 Z" />
             </svg>
           </div>

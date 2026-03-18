@@ -2,14 +2,6 @@ import Link from "next/link";
 import { REGIONS } from "@/lib/regionConfig";
 import { GIFTS } from "@/lib/giftConfig";
 
-const GIFT_EMOJI: Record<string, string> = {
-  "movie-ticket": "🎬",
-  voucher: "🎟️",
-  "convenience-store": "🏪",
-  "food-beverage": "🧋",
-  "daily-necessities": "🧴",
-  food: "🍜",
-};
 
 const REGION_CITIES: Record<string, string> = {
   north: "台北・新北・基隆",
@@ -56,9 +48,6 @@ export default function InternalLinks() {
               href={`/gift/${g.slug}`}
               className="flex items-center gap-2 bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-amber-200 hover:bg-amber-50/50 transition-colors"
             >
-              <span className="text-base leading-none">
-                {GIFT_EMOJI[g.slug]}
-              </span>
               <span className="text-xs font-medium text-gray-700">
                 捐血送{g.name}
               </span>
