@@ -235,8 +235,25 @@ export default async function BloodDonationPage() {
 
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center gap-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="捐血活動查詢" className="w-8 h-8 rounded" />
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="dropGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#dc2626" />
+                <stop offset="100%" stopColor="#be185d" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M16 3 C16 3, 5 14.5, 5 20.5 C5 26.5 9.9 30 16 30 C22.1 30 27 26.5 27 20.5 C27 14.5 16 3 16 3 Z"
+              fill="url(#dropGrad)"
+            />
+            <path
+              d="M11 22 C11 22 10 19 12 17"
+              stroke="white"
+              strokeWidth="1.8"
+              strokeLinecap="round"
+              opacity="0.6"
+            />
+          </svg>
           <h1 className="text-xl font-bold text-gray-800">捐血活動查詢</h1>
         </div>
         <AddDonationEventModal />
