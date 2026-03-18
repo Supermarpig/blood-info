@@ -92,12 +92,13 @@ export default function HeroSection({
 
       {/* 統計卡片組 */}
       <div className="grid grid-cols-2 gap-3">
-        <div
-          className="group relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-4 border border-emerald-100/50 hover:shadow-md transition-shadow duration-300 animate-fade-in-up"
+        <a
+          href="#today-events"
+          className="group relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-4 border border-emerald-100/50 hover:shadow-md hover:border-emerald-300/60 hover:from-emerald-100 hover:to-teal-100 transition-all duration-200 animate-fade-in-up cursor-pointer"
           style={{ animationDelay: "80ms" }}
         >
           <div className="absolute top-3 right-3">
-            <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center group-hover:bg-emerald-200 transition-colors duration-200">
               <Sparkles className="w-4 h-4 text-emerald-600" />
             </div>
           </div>
@@ -106,14 +107,18 @@ export default function HeroSection({
             <AnimatedNumber value={todayCount} />
             <span className="text-sm font-normal text-gray-500 ml-1">場</span>
           </p>
-        </div>
+          <p className="text-[11px] text-emerald-500 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            查看今日活動 →
+          </p>
+        </a>
 
-        <div
-          className="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 border border-blue-100/50 hover:shadow-md transition-shadow duration-300 animate-fade-in-up"
+        <a
+          href="#upcoming-events"
+          className="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 border border-blue-100/50 hover:shadow-md hover:border-blue-300/60 hover:from-blue-100 hover:to-indigo-100 transition-all duration-200 animate-fade-in-up cursor-pointer"
           style={{ animationDelay: "140ms" }}
         >
           <div className="absolute top-3 right-3">
-            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-200">
               <TrendingUp className="w-4 h-4 text-blue-600" />
             </div>
           </div>
@@ -122,7 +127,10 @@ export default function HeroSection({
             <AnimatedNumber value={upcomingCount} />
             <span className="text-sm font-normal text-gray-500 ml-1">場</span>
           </p>
-        </div>
+          <p className="text-[11px] text-blue-500 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            查看即將活動 →
+          </p>
+        </a>
       </div>
 
       {/* 今日贈品提示 */}
