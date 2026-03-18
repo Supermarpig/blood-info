@@ -14,7 +14,6 @@ import HeroSection from "@/components/HeroSection";
 import FilterPanel from "@/components/FilterPanel";
 import { REGIONS } from "@/lib/regionConfig";
 import { GIFTS } from "@/lib/giftConfig";
-import { motion } from "framer-motion";
 
 interface DonationEvent {
   id?: string;
@@ -164,7 +163,7 @@ export default function SearchableDonationList({
     if (dates.length === 0) return null;
 
     return (
-      <div className="mb-8">
+      <div className="mb-8 animate-fade-in-up">
         <div className="flex items-center gap-2 mb-4">
           {icon}
           <h2 className="text-xl font-bold text-gray-800">{title}</h2>
@@ -187,20 +186,17 @@ export default function SearchableDonationList({
               </div>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {eventsByDate[date].map((donation, index) => (
-                  <motion.div
+                  <div
                     key={`${donation.id}-${index}`}
-                    initial={{ opacity: 0, y: 24 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-40px" }}
-                    transition={{ delay: Math.min(index * 0.06, 0.3), duration: 0.4 }}
-                    className="h-full"
+                    className="h-full animate-fade-in-up"
+                    style={{ animationDelay: `${Math.min(index * 50, 250)}ms` }}
                   >
                     <CardInfo
                       donation={donation}
                       searchKeyword={searchKeyword}
                       className="h-full"
                     />
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
