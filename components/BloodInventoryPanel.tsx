@@ -30,23 +30,27 @@ function BloodDrop({
   type,
   status,
   delay = 0,
-  regionSlug,
+  onSelect,
+  isSelected,
 }: {
   type: string;
   status: StatusKey;
   delay?: number;
-  regionSlug?: string;
+  onSelect?: () => void;
+  isSelected?: boolean;
 }) {
   const config = STATUS_CONFIG[status] || STATUS_CONFIG.unknown;
   const fillY = 100 - config.fill;
   const isUrgent = status === "urgent";
-  const isClickable = status !== "normal" && regionSlug;
+  const isLow = status === "low";
+  const isClickable = !!onSelect;
 
   const content = (
     <div
+      onClick={onSelect}
       className={`flex flex-col items-center gap-1 ${
         isClickable ? "cursor-pointer group" : ""
-      }`}
+      } ${isSelected ? "opacity-100" : isClickable && !isSelected ? "opacity-70 hover:opacity-100" : ""} transition-opacity duration-200`}
     >
       <div
         className={`relative ${
@@ -125,22 +129,29 @@ function BloodDrop({
       >
         {config.label}
       </span>
-      {isClickable && (
+      {isClickable && (isUrgent || isLow) && (
         <span className="flex items-center gap-0.5 text-[9px] text-gray-400 group-hover:text-red-500 transition-colors">
           去捐血 <ArrowRight className="w-2.5 h-2.5" />
+        </span>
+      )}
+      {isClickable && !isUrgent && !isLow && (
+        <span className="flex items-center gap-0.5 text-[9px] text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
+          查看 <ArrowRight className="w-2.5 h-2.5" />
         </span>
       )}
     </div>
   );
 
-  if (isClickable) {
-    return <a href="#today-events">{content}</a>;
-  }
-
   return content;
 }
 
-export default function BloodInventoryPanel() {
+export default function BloodInventoryPanel({
+  onCenterSelect,
+  selectedCenter,
+}: {
+  onCenterSelect?: (center: string) => void;
+  selectedCenter?: string | null;
+}) {
   const pathname = usePathname();
   const [inventory, setInventory] = useState<BloodInventory | null>(null);
   const [activeCenter, setActiveCenter] = useState(0);
@@ -163,7 +174,6 @@ export default function BloodInventoryPanel() {
   );
 
   const center = inventory.centers[activeCenter];
-  const activeRegion = REGIONS.find((r) => r.centerFilter === center.name);
 
   return (
     <div className="rounded-2xl border border-gray-200/60 bg-white overflow-hidden shadow-sm">
@@ -215,7 +225,8 @@ export default function BloodInventoryPanel() {
               type={t}
               status={(center.bloodTypes[t] as StatusKey) || "unknown"}
               delay={i * 80}
-              regionSlug={activeRegion?.slug}
+              onSelect={onCenterSelect ? () => onCenterSelect(center.name) : undefined}
+              isSelected={selectedCenter === center.name}
             />
           ))}
         </div>

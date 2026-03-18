@@ -14,6 +14,7 @@ import HeroSection from "@/components/HeroSection";
 import FilterPanel from "@/components/FilterPanel";
 import { REGIONS } from "@/lib/regionConfig";
 import { GIFTS } from "@/lib/giftConfig";
+import { motion } from "framer-motion";
 
 interface DonationEvent {
   id?: string;
@@ -50,6 +51,7 @@ export default function SearchableDonationList({
 }: SearchableDonationListProps) {
   const [searchKeyword, setSearchKeyword] = useState<string>("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedCenter, setSelectedCenter] = useState<string | null>(null);
   const [showPastEvents, setShowPastEvents] = useState<boolean>(false);
   const [isNearbyModalOpen, setIsNearbyModalOpen] = useState<boolean>(false);
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -95,11 +97,17 @@ export default function SearchableDonationList({
           event.time.includes(searchKeyword)
       );
 
-      // 2. 篩選贈品 tags
+      // 2. 篩選地區（center）
+      const centerFilteredEvents =
+        selectedCenter
+          ? keywordFilteredEvents.filter((event) => event.center === selectedCenter)
+          : keywordFilteredEvents;
+
+      // 3. 篩選贈品 tags
       const tagFilteredEvents =
         selectedTags.length === 0
-          ? keywordFilteredEvents
-          : keywordFilteredEvents.filter((event) => {
+          ? centerFilteredEvents
+          : centerFilteredEvents.filter((event) => {
               const eventTags = event.tags || event.pttData?.tags || [];
               return selectedTags.some((tag) => eventTags.includes(tag));
             });
@@ -120,7 +128,7 @@ export default function SearchableDonationList({
       upcomingEvents: _upcomingEvents,
       pastEvents: _pastEvents,
     };
-  }, [data, searchKeyword, selectedTags, today]);
+  }, [data, searchKeyword, selectedTags, selectedCenter, today]);
 
   // 取得所有當前和未來的活動事件（用於找附近功能）
   const allCurrentEvents = useMemo(() => {
@@ -129,6 +137,13 @@ export default function SearchableDonationList({
     Object.values(upcomingEvents).forEach((arr) => events.push(...arr));
     return events;
   }, [todayEvents, upcomingEvents]);
+
+  const handleCenterSelect = (centerName: string) => {
+    setSelectedCenter((prev) => (prev === centerName ? null : centerName));
+    setTimeout(() => {
+      document.getElementById("today-events")?.scrollIntoView({ behavior: "smooth" });
+    }, 50);
+  };
 
   const handleFindNearby = async () => {
     setIsNearbyModalOpen(true);
@@ -172,12 +187,20 @@ export default function SearchableDonationList({
               </div>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {eventsByDate[date].map((donation, index) => (
-                  <CardInfo
+                  <motion.div
                     key={`${donation.id}-${index}`}
-                    donation={donation}
-                    searchKeyword={searchKeyword}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ delay: Math.min(index * 0.06, 0.3), duration: 0.4 }}
                     className="h-full"
-                  />
+                  >
+                    <CardInfo
+                      donation={donation}
+                      searchKeyword={searchKeyword}
+                      className="h-full"
+                    />
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -219,6 +242,8 @@ export default function SearchableDonationList({
         upcomingCount={upcomingCount}
         todayGiftTags={todayGiftTags}
         onFindNearby={handleFindNearby}
+        onCenterSelect={handleCenterSelect}
+        selectedCenter={selectedCenter}
       />
 
       {/* 搜尋與篩選區 */}
@@ -245,6 +270,8 @@ export default function SearchableDonationList({
           currentRegionSlug={currentRegionSlug}
           selectedTags={selectedTags}
           onTagChange={setSelectedTags}
+          selectedCenter={selectedCenter}
+          onCenterChange={setSelectedCenter}
         />
       </div>
       <div id="today-events" className="scroll-mt-44" />

@@ -22,6 +22,8 @@ interface FilterPanelProps {
   currentRegionSlug?: string;
   selectedTags: string[];
   onTagChange: (tags: string[]) => void;
+  selectedCenter?: string | null;
+  onCenterChange?: (center: string | null) => void;
 }
 
 const GIFT_TAGS = [
@@ -37,10 +39,12 @@ export default function FilterPanel({
   currentRegionSlug,
   selectedTags,
   onTagChange,
+  selectedCenter,
+  onCenterChange,
 }: FilterPanelProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const activeFiltersCount = (currentRegionSlug ? 1 : 0) + selectedTags.length;
+  const activeFiltersCount = (currentRegionSlug || selectedCenter ? 1 : 0) + selectedTags.length;
 
   const toggleTag = (tagId: string) => {
     if (selectedTags.includes(tagId)) {
@@ -111,33 +115,70 @@ export default function FilterPanel({
               <span className="text-sm font-semibold text-gray-700">地區</span>
             </div>
             <div className="flex flex-wrap gap-2">
-              <Link
-                href="/"
-                className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
-                  !currentRegionSlug
-                    ? "bg-gray-900 text-white shadow-sm"
-                    : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300"
-                }`}
-              >
-                {!currentRegionSlug && <Check className="w-3.5 h-3.5" />}
-                全部
-              </Link>
-              {REGIONS.map((region) => (
-                <Link
-                  key={region.slug}
-                  href={`/region/${region.slug}`}
-                  className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
-                    currentRegionSlug === region.slug
-                      ? "bg-gray-900 text-white shadow-sm"
-                      : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300"
-                  }`}
-                >
-                  {currentRegionSlug === region.slug && (
-                    <Check className="w-3.5 h-3.5" />
-                  )}
-                  {region.displayName}
-                </Link>
-              ))}
+              {onCenterChange ? (
+                // In-page 模式：用 state 控制
+                <>
+                  <button
+                    onClick={() => onCenterChange(null)}
+                    className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
+                      !selectedCenter
+                        ? "bg-gray-900 text-white shadow-sm"
+                        : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300"
+                    }`}
+                  >
+                    {!selectedCenter && <Check className="w-3.5 h-3.5" />}
+                    全部
+                  </button>
+                  {REGIONS.map((region) => {
+                    const isActive = selectedCenter === region.centerFilter;
+                    return (
+                      <button
+                        key={region.slug}
+                        onClick={() => onCenterChange(isActive ? null : region.centerFilter)}
+                        className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
+                          isActive
+                            ? "bg-gray-900 text-white shadow-sm"
+                            : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300"
+                        }`}
+                      >
+                        {isActive && <Check className="w-3.5 h-3.5" />}
+                        {region.displayName}
+                      </button>
+                    );
+                  })}
+                </>
+              ) : (
+                // URL 模式：跳頁（region 子頁用）
+                <>
+                  <Link
+                    href="/"
+                    className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
+                      !currentRegionSlug
+                        ? "bg-gray-900 text-white shadow-sm"
+                        : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300"
+                    }`}
+                  >
+                    {!currentRegionSlug && <Check className="w-3.5 h-3.5" />}
+                    全部
+                  </Link>
+                  {REGIONS.map((region) => (
+                    <Link
+                      key={region.slug}
+                      href={`/region/${region.slug}`}
+                      className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
+                        currentRegionSlug === region.slug
+                          ? "bg-gray-900 text-white shadow-sm"
+                          : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300"
+                      }`}
+                    >
+                      {currentRegionSlug === region.slug && (
+                        <Check className="w-3.5 h-3.5" />
+                      )}
+                      {region.displayName}
+                    </Link>
+                  ))}
+                </>
+              )}
             </div>
           </div>
 
