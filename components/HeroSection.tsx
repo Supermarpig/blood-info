@@ -23,7 +23,7 @@ interface HeroSectionProps {
   upcomingCount: number;
   todayGiftTags: string[];
   onFindNearby: () => void;
-  onCenterSelect?: (center: string) => void;
+  onCenterSelect?: (center: string, withScroll?: boolean) => void;
   selectedCenter?: string | null;
 }
 

@@ -149,7 +149,7 @@ export default function BloodInventoryPanel({
   onCenterSelect,
   selectedCenter,
 }: {
-  onCenterSelect?: (center: string) => void;
+  onCenterSelect?: (center: string, withScroll?: boolean) => void;
   selectedCenter?: string | null;
 }) {
   const pathname = usePathname();
@@ -201,7 +201,7 @@ export default function BloodInventoryPanel({
             return (
               <button
                 key={c.name}
-                onClick={() => setActiveCenter(idx)}
+                onClick={() => { setActiveCenter(idx); onCenterSelect?.(c.name, false); }}
                 className={`flex-1 text-xs font-semibold py-2 rounded-lg transition-all duration-200 relative ${
                   activeCenter === idx
                     ? "bg-white text-gray-800 shadow-sm"

@@ -137,11 +137,13 @@ export default function SearchableDonationList({
     return events;
   }, [todayEvents, upcomingEvents]);
 
-  const handleCenterSelect = (centerName: string) => {
+  const handleCenterSelect = (centerName: string, withScroll = true) => {
     setSelectedCenter((prev) => (prev === centerName ? null : centerName));
-    setTimeout(() => {
-      document.getElementById("today-events")?.scrollIntoView({ behavior: "smooth" });
-    }, 50);
+    if (withScroll) {
+      setTimeout(() => {
+        document.getElementById("today-events")?.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    }
   };
 
   const handleFindNearby = async () => {
