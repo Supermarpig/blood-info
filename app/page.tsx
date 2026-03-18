@@ -2,6 +2,8 @@
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import HealthFloatingButton from "@/components/HealthFloatingButton";
+import FaqSection from "@/components/FaqSection";
+import { FAQ_DATA } from "@/data/faq";
 
 interface DonationEvent {
   id?: string;
@@ -135,6 +137,17 @@ export default async function BloodDonationPage() {
     knowsLanguage: "zh-TW",
   };
 
+  // FAQPage Schema
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ_DATA.map(({ question, answer }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
+  };
+
   // 3. Event Schema (取今日與未來日期，限制數量以免 payload 太大)
   const today = new Date().toLocaleDateString("en-CA", {
     timeZone: "Asia/Taipei",
@@ -208,6 +221,10 @@ export default async function BloodDonationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {eventsJsonLd.length > 0 && (
         <script
           type="application/ld+json"
@@ -228,6 +245,7 @@ export default async function BloodDonationPage() {
       </p>
 
       <SearchableDonationList data={data} />
+      <FaqSection />
       <HealthFloatingButton />
     </div>
   );
