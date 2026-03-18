@@ -3,6 +3,7 @@ import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import HealthFloatingButton from "@/components/HealthFloatingButton";
 import FaqSection from "@/components/FaqSection";
+import InternalLinks from "@/components/InternalLinks";
 import { FAQ_DATA } from "@/data/faq";
 
 interface DonationEvent {
@@ -245,6 +246,7 @@ export default async function BloodDonationPage() {
       </p>
 
       <SearchableDonationList data={data} />
+      <InternalLinks />
       <FaqSection />
       <HealthFloatingButton />
     </div>
