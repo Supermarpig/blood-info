@@ -8882,24 +8882,6 @@
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q072570660029913064"
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMTktMDg6MDB+MTc6MzAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
-      "time": "08:00~17:30",
-      "organization": "大大數位慈善基金會",
-      "location": "臺北市中正區南海路1號3樓(配合南海室)",
-      "activityDate": "2026-03-19",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q054419536129189542"
-    },
-    {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMTktMDg6MDB+MTc6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
-      "time": "08:00~17:00",
-      "organization": "大大數位慈善基金會",
-      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
-      "activityDate": "2026-03-19",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q054419535307362560"
-    },
-    {
       "id": "5paw56u5LTIwMjYvMDMvMTktMDk6MDB+MTc6MDAt5qGD5ZyS5biC5oWI5paH542F5a2Q5pyD",
       "time": "09:00~17:00",
       "organization": "桃園市慈文獅子會",
@@ -8909,6 +8891,15 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419536585210515"
     },
     {
+      "id": "5paw56u5LTIwMjYvMDMvMTktMDg6MDB+MTc6MzAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
+      "time": "08:00~17:30",
+      "organization": "大大數位慈善基金會",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-19",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419536129189542"
+    },
+    {
       "id": "5paw56u5LTIwMjYvMDMvMTktMDk6MDB+MTY6MDAt5qGD5ZyS5biC55qH5a62542F5a2Q5pyD",
       "time": "09:00~16:00",
       "organization": "桃園市皇家獅子會",
@@ -8916,6 +8907,15 @@
       "activityDate": "2026-03-19",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419535941331597"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDMvMTktMDg6MDB+MTc6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
+      "time": "08:00~17:00",
+      "organization": "大大數位慈善基金會",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-03-19",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419535307362560"
     },
     {
       "id": "5paw56u5LTIwMjYvMDMvMTktMDk6MDB+MTY6MDAt5aSn5rmW542F5a2Q5pyD",
@@ -10329,6 +10329,15 @@
     }
   ],
   "2026-03-22": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDMvMjItMDg6MDB+MTc6MzAt54+N5oSb542F5a2Q5pyD",
+      "time": "08:00~17:30",
+      "organization": "珍愛獅子會",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-03-22",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q077564287423710911"
+    },
     {
       "id": "5Y+w5YyXLTIwMjYvMDMvMjItMDk6MzB+MTY6MzAt5Y+w5YyX5biC5YWn5rmW57Sz5aOr5Y2U5pyD",
       "time": "09:30~16:30",
