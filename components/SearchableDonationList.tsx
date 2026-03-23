@@ -2,8 +2,7 @@
 
 import { useState, useMemo, useRef, useEffect } from "react";
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { ChevronDown, ChevronUp, Search, Calendar } from "lucide-react";
+import { ChevronDown, ChevronUp, Calendar } from "lucide-react";
 import { debounce } from "@/utils";
 import CardInfo from "@/components/CardInfo";
 import BackToTopButton from "@/components/BackToTopButton";
@@ -249,20 +248,6 @@ export default function SearchableDonationList({
         ref={headerRef}
         className="sticky top-0 z-20 bg-white/95 backdrop-blur-md py-3 mb-4 -mx-2 px-2"
       >
-        {/* 搜尋框 */}
-        <div className="relative mb-3">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-          <Input
-            placeholder="搜尋機構、地點..."
-            onChange={debounce(
-              (e: React.ChangeEvent<HTMLInputElement>) =>
-                setSearchKeyword(e.target.value),
-              300
-            )}
-            className="pl-9 bg-white border-slate-200 focus:border-primary w-full"
-          />
-        </div>
-
         {/* 篩選面板 */}
         <FilterPanel
           currentRegionSlug={currentRegionSlug}
@@ -270,6 +255,11 @@ export default function SearchableDonationList({
           onTagChange={setSelectedTags}
           selectedCenter={selectedCenter}
           onCenterChange={setSelectedCenter}
+          onSearchChange={debounce(
+            (e: React.ChangeEvent<HTMLInputElement>) =>
+              setSearchKeyword(e.target.value),
+            300
+          )}
         />
       </div>
       <div id="today-events" className="scroll-mt-44" />

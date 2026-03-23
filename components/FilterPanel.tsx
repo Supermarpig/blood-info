@@ -15,6 +15,7 @@ import {
   UtensilsCrossed,
   MapPin,
   Check,
+  Search,
 } from "lucide-react";
 import { REGIONS } from "@/lib/regionConfig";
 
@@ -24,6 +25,7 @@ interface FilterPanelProps {
   onTagChange: (tags: string[]) => void;
   selectedCenter?: string | null;
   onCenterChange?: (center: string | null) => void;
+  onSearchChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const GIFT_TAGS = [
@@ -41,6 +43,7 @@ export default function FilterPanel({
   onTagChange,
   selectedCenter,
   onCenterChange,
+  onSearchChange,
 }: FilterPanelProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -56,16 +59,14 @@ export default function FilterPanel({
 
   return (
     <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
-      {/* 收合狀態的 Header */}
-      <button
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="w-full flex items-center justify-between p-3 hover:bg-gray-50/50 transition-colors"
-      >
-        <div className="flex items-center gap-2.5">
+      {/* Header 行：左側標題 + 中間搜尋 + 右側展開 */}
+      <div className="flex items-center gap-2 p-3">
+        {/* 左：篩選條件標題 */}
+        <div className="flex items-center gap-2 shrink-0">
           <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
             <SlidersHorizontal className="w-4 h-4 text-gray-600" />
           </div>
-          <span className="font-medium text-gray-700">篩選條件</span>
+          <span className="font-medium text-gray-700 text-sm">篩選條件</span>
           {activeFiltersCount > 0 && (
             <span className="bg-rose-500 text-white text-xs font-medium px-2 py-0.5 rounded-full">
               {activeFiltersCount}
@@ -73,37 +74,31 @@ export default function FilterPanel({
           )}
         </div>
 
-        <div className="flex items-center gap-2">
-          {/* 已選擇的 pills（收合時顯示） */}
-          {!isExpanded && selectedTags.length > 0 && (
-            <div className="flex gap-1.5 max-w-[180px] overflow-hidden">
-              {selectedTags.slice(0, 2).map((tagId) => {
-                const tag = GIFT_TAGS.find((t) => t.id === tagId);
-                return (
-                  <span
-                    key={tagId}
-                    className="text-xs bg-rose-50 text-rose-600 px-2 py-1 rounded-md whitespace-nowrap font-medium"
-                  >
-                    {tag?.label || tagId}
-                  </span>
-                );
-              })}
-              {selectedTags.length > 2 && (
-                <span className="text-xs text-gray-400 font-medium">
-                  +{selectedTags.length - 2}
-                </span>
-              )}
-            </div>
-          )}
-          <div className="w-6 h-6 flex items-center justify-center">
-            {isExpanded ? (
-              <ChevronUp className="w-4 h-4 text-gray-400" />
-            ) : (
-              <ChevronDown className="w-4 h-4 text-gray-400" />
-            )}
+        {/* 中：搜尋框（彈性寬度） */}
+        {onSearchChange && (
+          <div className="relative flex-1" onClick={(e) => e.stopPropagation()}>
+            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-gray-400 pointer-events-none" />
+            <input
+              type="text"
+              placeholder="搜尋機構、地點..."
+              onChange={onSearchChange}
+              className="w-full pl-8 pr-3 py-1.5 text-sm bg-gray-100 rounded-lg text-gray-700 placeholder:text-gray-400 focus:outline-none focus:bg-white focus:ring-1 focus:ring-gray-300 transition-all"
+            />
           </div>
-        </div>
-      </button>
+        )}
+
+        {/* 右：展開/收合按鈕 */}
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="shrink-0 w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors"
+        >
+          {isExpanded ? (
+            <ChevronUp className="w-4 h-4 text-gray-400" />
+          ) : (
+            <ChevronDown className="w-4 h-4 text-gray-400" />
+          )}
+        </button>
+      </div>
 
       {/* 展開的內容 */}
       {isExpanded && (

@@ -114,7 +114,7 @@ export default function CalendarClient() {
         </Link>
       </div>
 
-      <p className="text-gray-600 mb-6">點擊日期查看該日附近的捐血活動地點</p>
+      <p className="text-gray-600 mb-6">點擊日期查看該日附近的捐血活動</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* 月曆 */}
