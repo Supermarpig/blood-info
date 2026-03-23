@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { AlertTriangle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { REGIONS } from "@/lib/regionConfig";
 
 interface BloodInventoryCenter {
@@ -184,11 +184,11 @@ export default function BloodInventoryPanel({
     <div className="rounded-2xl border border-gray-200/60 bg-white overflow-hidden shadow-sm">
       {/* 頂部警示橫幅 */}
       {urgentCount > 0 && (
-        <div className="bg-gradient-to-r from-red-500 to-rose-600 px-4 py-2 flex items-center gap-2">
-          <AlertTriangle className="w-3.5 h-3.5 text-white/90 shrink-0 animate-heartbeat" />
-          <p className="text-[11px] font-medium text-white/95">
+        <div className="bg-gray-50 border-b border-gray-100 px-4 py-2.5 flex items-center gap-2">
+          <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse shrink-0" />
+          <p className="text-[11px] font-medium text-gray-600">
             全台{" "}
-            <span className="font-extrabold text-white">
+            <span className="font-extrabold text-red-600">
               {urgentBloodTypes.map((t) => `${t} 型`).join("、")}
             </span>{" "}
             急缺，急需您的支援！

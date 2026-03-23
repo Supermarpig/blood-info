@@ -50,6 +50,7 @@ body {
 
 .animate-float-drop {
   animation: floatUp 4s ease-out infinite;
+  animation-fill-mode: backwards;
 }
 
 @keyframes shimmer {
