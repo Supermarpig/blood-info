@@ -255,7 +255,44 @@ async function geocodeEvents(data) {
 
 // ==================================================
 
-const PTT_URL = 'https://www.ptt.cc/bbs/Lifeismoney/M.1735838860.A.6F3.html';
+const PTT_SEARCH_URL = 'https://www.ptt.cc/bbs/Lifeismoney/search?q=%E6%8D%90%E8%A1%80%E8%B4%88%E5%93%81';
+const PTT_BASE_URL = 'https://www.ptt.cc';
+const PTT_FALLBACK_URL = 'https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html';
+
+async function fetchLatestPttUrl() {
+    try {
+        const response = await axios.get(PTT_SEARCH_URL, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Cookie': 'over18=1',
+            },
+            timeout: 15000,
+        });
+
+        const $ = cheerio.load(response.data);
+        const links = [];
+
+        $('.r-ent .title a').each((_, el) => {
+            const href = $(el).attr('href');
+            const title = $(el).text().trim();
+            if (href && title.includes('捐血')) {
+                links.push(PTT_BASE_URL + href);
+            }
+        });
+
+        if (links.length > 0) {
+            console.log(`自動偵測到最新 PTT 文章: ${links[0]}`);
+            return links[0];
+        }
+
+        console.warn('找不到符合的 PTT 文章，使用 fallback URL');
+        return PTT_FALLBACK_URL;
+    } catch (error) {
+        console.error(`自動偵測 PTT URL 失敗: ${error.message}，使用 fallback URL`);
+        return PTT_FALLBACK_URL;
+    }
+}
 
 // 生成指定月份的文件名
 function getMonthFileName(year, month) {
@@ -281,12 +318,13 @@ async function saveLocalData(data, filePath) {
 
 async function fetchPttData() {
     console.log('Fetching PTT data...');
+    const pttUrl = await fetchLatestPttUrl();
     const maxRetries = 3;
     const retryDelay = 2000;
 
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
         try {
-            const response = await axios.get(PTT_URL, {
+            const response = await axios.get(pttUrl, {
                 headers: {
                     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
@@ -511,7 +549,7 @@ async function fetchPttData() {
                 }
             });
 
-            return pttEvents;
+            return { events: pttEvents, url: pttUrl };
 
         } catch (e) {
             console.error(`Attempt ${attempt} failed: ${e.message}`);
@@ -525,7 +563,7 @@ async function fetchPttData() {
     }
 }
 
-function mergeData(officialData, pttData, existingLocalData = null, targetYear = null, targetMonth = null) {
+function mergeData(officialData, pttData, existingLocalData = null, targetYear = null, targetMonth = null, pttUrl = PTT_FALLBACK_URL) {
     // If we have valid new PTT data, proceed with normal matching
     if (pttData && pttData.length > 0) {
         let matchCount = 0;
@@ -634,7 +672,7 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                         rawContent: pttEvent.rawLine,
                         activityDate: pttEvent.date,
                         center: 'PTT',
-                        detailUrl: PTT_URL,
+                        detailUrl: pttUrl,
                         tags: pttEvent.tags || [],
                         pttData: {
                             rawLine: pttEvent.rawLine,
@@ -832,7 +870,7 @@ function cleanDataForSaving(data) {
     return cleaned;
 }
 
-async function processMonth(year, month, pttData) {
+async function processMonth(year, month, pttData, pttUrl) {
     console.log(`\n=== 處理 ${year} 年 ${month} 月資料 ===`);
     const { startDate, endDate } = getMonthDateRange(year, month);
     console.log(`日期範圍: ${startDate} ~ ${endDate}`);
@@ -864,7 +902,7 @@ async function processMonth(year, month, pttData) {
     }
 
     // 3. Pass existingData to mergeData for fallback
-    const mergedData = mergeData(officialData, pttData, existingData, year, month);
+    const mergedData = mergeData(officialData, pttData, existingData, year, month, pttUrl);
 
     // 3. Geocoding: 將地址轉換為經緯度
     await geocodeEvents(mergedData);
@@ -942,14 +980,16 @@ async function updateData() {
         await loadPttTagsFromExistingData();
 
         // 1. 先取得 PTT 資料 (一次性)
-        const pttData = await fetchPttData();
+        const pttResult = await fetchPttData();
+        const pttData = pttResult?.events ?? null;
+        const pttUrl = pttResult?.url ?? PTT_FALLBACK_URL;
 
         const now = new Date();
         const currentYear = now.getFullYear();
         const currentMonth = now.getMonth() + 1; // 1-12
 
         // 2. 處理當前月份
-        await processMonth(currentYear, currentMonth, pttData);
+        await processMonth(currentYear, currentMonth, pttData, pttUrl);
 
         // 3. 處理下一個月份
         let nextYear = currentYear;
@@ -958,7 +998,7 @@ async function updateData() {
             nextMonth = 1;
             nextYear++;
         }
-        await processMonth(nextYear, nextMonth, pttData);
+        await processMonth(nextYear, nextMonth, pttData, pttUrl);
 
         // 4. 爬取血液庫存資料
         await fetchBloodInventory();
