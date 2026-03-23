@@ -167,11 +167,16 @@ export default function BloodInventoryPanel({
 
   if (!inventory || pathname !== "/") return null;
 
-  const urgentCount = inventory.centers.reduce(
-    (sum, c) =>
-      sum + Object.values(c.bloodTypes).filter((s) => s === "urgent").length,
-    0
+  const urgentBloodTypes = Array.from(
+    new Set(
+      inventory.centers.flatMap((c) =>
+        Object.entries(c.bloodTypes)
+          .filter(([, s]) => s === "urgent")
+          .map(([type]) => type)
+      )
+    )
   );
+  const urgentCount = urgentBloodTypes.length;
 
   const center = inventory.centers[activeCenter];
 
@@ -182,9 +187,11 @@ export default function BloodInventoryPanel({
         <div className="bg-gradient-to-r from-red-500 to-rose-600 px-4 py-2 flex items-center gap-2">
           <AlertTriangle className="w-3.5 h-3.5 text-white/90 shrink-0 animate-heartbeat" />
           <p className="text-[11px] font-medium text-white/95">
-            全台有{" "}
-            <span className="font-extrabold text-white">{urgentCount}</span>{" "}
-            項血型急缺，急需您的支援！
+            全台{" "}
+            <span className="font-extrabold text-white">
+              {urgentBloodTypes.map((t) => `${t} 型`).join("、")}
+            </span>{" "}
+            急缺，急需您的支援！
           </p>
         </div>
       )}
