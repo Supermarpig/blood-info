@@ -627,15 +627,23 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                     event.tags = Array.from(new Set([...existingTags, ...pttTags]));
                     matchCount++;
                 } else if (existingEventsForDate.length > 0) {
-                    // 匹配失敗，嘗試從舊資料保留 pttData
+                    // 匹配失敗，嘗試從舊資料保留 pttData / tags / location
                     const storedEvent = existingEventsForDate.find(e =>
                         e.id === event.id ||
-                        (e.organization === event.organization && e.location === event.location)
+                        (e.organization === event.organization && e.location?.startsWith(event.location))
                     );
 
                     if (storedEvent?.pttData) {
                         event.pttData = storedEvent.pttData;
                         preservedCount++;
+                    }
+                    if (storedEvent?.tags?.length) {
+                        const existingTags = event.tags || [];
+                        event.tags = Array.from(new Set([...existingTags, ...storedEvent.tags]));
+                    }
+                    // 若舊 location 有額外備註（如括號標記），優先保留
+                    if (storedEvent?.location?.startsWith(event.location) && storedEvent.location !== event.location) {
+                        event.location = storedEvent.location;
                     }
                 }
             });

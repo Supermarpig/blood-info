@@ -10518,10 +10518,20 @@
       "id": "5Y+w5YyXLTIwMjYvMDMvMjItMTE6MDB+MTg6MDAt56S+5ZyY5rOV5Lq65Y+w54Gj5rW35rSL5oCn6LKn6KGA5Y2U5pyD",
       "time": "11:00~18:00",
       "organization": "社團法人台灣海洋性貧血協會",
-      "location": "臺北市信義區松壽路16巷",
+      "location": "臺北市信義區松壽路16巷(信義威秀)",
       "activityDate": "2026-03-22",
       "center": "台北",
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q072570725074658104",
+      "pttData": {
+        "rawLine": "3/22(日)台北信義威秀",
+        "images": [
+          "https://i.imgur.com/BzAkUiU.png"
+        ]
+      },
+      "tags": [
+        "禮券",
+        "電影票"
+      ],
       "coordinates": {
         "lat": 25.0354793,
         "lng": 121.5663914
