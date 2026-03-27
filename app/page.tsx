@@ -178,6 +178,7 @@ export default async function BloodDonationPage() {
       name: `捐血活動 - ${event.organization}`,
       startDate,
       endDate,
+      dateModified: new Date().toISOString(),
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       location: {

@@ -107,36 +107,51 @@ function filterEventsByRegion(
 function generateJsonLd(region: RegionConfig, eventCount: number) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  return {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: region.title,
-    description: region.description,
-    url: `${baseUrl}/region/${region.slug}`,
-    numberOfItems: eventCount,
-    mainEntity: {
-      "@type": "ItemList",
-      name: `${region.displayName}捐血活動列表`,
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: region.title,
+      description: region.description,
+      url: `${baseUrl}/region/${region.slug}`,
+      dateModified: new Date().toISOString(),
       numberOfItems: eventCount,
+      mainEntity: {
+        "@type": "ItemList",
+        name: `${region.displayName}捐血活動列表`,
+        numberOfItems: eventCount,
+      },
+      breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "首頁",
+            item: baseUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: `${region.displayName}捐血活動`,
+            item: `${baseUrl}/region/${region.slug}`,
+          },
+        ],
+      },
     },
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "首頁",
-          item: baseUrl,
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: region.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
         },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: `${region.displayName}捐血活動`,
-          item: `${baseUrl}/region/${region.slug}`,
-        },
-      ],
+      })),
     },
-  };
+  ];
 }
 
 export default async function RegionPage({ params }: PageProps) {
@@ -213,6 +228,33 @@ export default async function RegionPage({ params }: PageProps) {
 
       {/* Event list with region navigation */}
       <SearchableDonationList data={data} currentRegionSlug={slug} />
+
+      {/* Region FAQ */}
+      <section className="mt-10">
+        <h2 className="text-lg font-bold text-gray-800 mb-4">
+          {region.displayName}捐血常見問題
+        </h2>
+        <div className="space-y-3">
+          {region.faqs.map((faq, i) => (
+            <details
+              key={i}
+              className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-red-200 transition-colors"
+            >
+              <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
+                <span className="font-medium text-gray-900 pr-4 text-sm">
+                  {faq.question}
+                </span>
+                <ChevronRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition-transform flex-shrink-0" />
+              </summary>
+              <div className="px-4 pb-4 pt-0">
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

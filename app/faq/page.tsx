@@ -1,7 +1,35 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ChevronRight, HelpCircle } from "lucide-react";
+import { ChevronRight, HelpCircle, ListOrdered } from "lucide-react";
 import { FAQ_DATA } from "@/data/faq";
+
+const HOW_TO_STEPS = [
+  {
+    name: "確認捐血資格",
+    text: "年齡 17–65 歲、體重男女均需 50 公斤以上，近期健康狀況良好，無感冒、發燒等症狀。",
+  },
+  {
+    name: "攜帶有效證件",
+    text: "帶身分證（或健保卡）前往捐血中心或捐血車。第一次捐血必須攜帶身分證。",
+  },
+  {
+    name: "填寫健康問卷",
+    text: "抵達後填寫捐血前健康問卷，誠實回答近期健康狀況、用藥記錄與生活習慣。",
+  },
+  {
+    name: "接受初步檢查",
+    text: "醫護人員量血壓、測血色素（Hb），確認數值符合捐血標準（血色素男性 13.5 g/dL、女性 12.5 g/dL 以上）。",
+  },
+  {
+    name: "進行捐血",
+    text: "全血捐血約 8–10 分鐘，捐血量為 250 mL 或 500 mL。過程中放鬆、保持平穩呼吸。",
+  },
+  {
+    name: "休息補充水分",
+    text: "捐血後在休息區休息至少 15 分鐘，補充提供的點心與飲料，確認無不適後再離開。",
+  },
+];
+
 
 export const metadata: Metadata = {
   title: "捐血常見問題 FAQ | 台灣捐血活動查詢",
@@ -33,6 +61,25 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
+function generateHowToJsonLd() {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "捐血流程：第一次捐血怎麼做？",
+    description:
+      "詳細說明捐血的完整步驟，從確認資格、攜帶證件、填寫問卷，到捐血後休息，一次了解。",
+    totalTime: "PT30M",
+    step: HOW_TO_STEPS.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      url: `${baseUrl}/faq#how-to-step-${i + 1}`,
+    })),
+  };
+}
 
 /**
  * Generate FAQ Schema for Google Rich Results
@@ -72,13 +119,18 @@ function generateFaqJsonLd() {
 }
 
 export default function FAQPage() {
-  const jsonLd = generateFaqJsonLd();
+  const faqJsonLd = generateFaqJsonLd();
+  const howToJsonLd = generateHowToJsonLd();
 
   return (
     <div className="container mx-auto p-8 max-w-4xl">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
 
       {/* Breadcrumb */}
@@ -96,9 +148,36 @@ export default function FAQPage() {
           <div className="bg-red-100 p-2 rounded-full">
             <HelpCircle className="w-6 h-6 text-red-500" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900">捐血常見問題</h1>
+          <h1 className="text-2xl font-bold text-gray-900">捐血流程與常見問題</h1>
         </div>
-        <p className="text-gray-600">關於捐血的各種疑問，這裡都有解答。</p>
+        <p className="text-gray-600">捐血步驟說明與常見疑問解答，第一次捐血也能輕鬆上手。</p>
+      </div>
+
+      {/* HowTo: 捐血流程 */}
+      <div className="mb-10">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="bg-red-100 p-2 rounded-full">
+            <ListOrdered className="w-6 h-6 text-red-500" />
+          </div>
+          <h2 className="text-xl font-bold text-gray-900">捐血流程</h2>
+        </div>
+        <ol className="space-y-3">
+          {HOW_TO_STEPS.map((step, i) => (
+            <li
+              key={i}
+              id={`how-to-step-${i + 1}`}
+              className="flex gap-4 bg-white border border-gray-200 rounded-xl p-4"
+            >
+              <span className="flex-shrink-0 w-8 h-8 rounded-full bg-red-500 text-white text-sm font-bold flex items-center justify-center">
+                {i + 1}
+              </span>
+              <div>
+                <p className="font-semibold text-gray-900 mb-0.5">{step.name}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{step.text}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
 
       {/* FAQ List */}

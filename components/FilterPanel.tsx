@@ -141,7 +141,7 @@ export default function FilterPanel({
                     return (
                       <button
                         key={region.slug}
-                        onClick={() => onCenterChange(isActive && !activeRegionSlug ? null : region.centerFilter)}
+                        onClick={() => onCenterChange(selectedCenter === region.centerFilter ? null : region.centerFilter)}
                         className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
                           isActive
                             ? "bg-gray-900 text-white shadow-sm"

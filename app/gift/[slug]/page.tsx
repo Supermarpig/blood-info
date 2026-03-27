@@ -110,6 +110,7 @@ function generateJsonLd(gift: GiftConfig, eventCount: number) {
     name: gift.title,
     description: gift.description,
     url: `${baseUrl}/gift/${gift.slug}`,
+    dateModified: new Date().toISOString(),
     numberOfItems: eventCount,
     mainEntity: {
       "@type": "ItemList",
