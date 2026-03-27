@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { REGIONS } from "@/lib/regionConfig";
 import { GIFTS } from "@/lib/giftConfig";
+import { CITIES } from "@/lib/cityConfig";
 
 
 const REGION_CITIES: Record<string, string> = {
@@ -30,6 +31,26 @@ export default function InternalLinks() {
               </span>
               <span className="text-xs text-gray-400 mt-0.5">
                 {REGION_CITIES[r.slug]}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* 縣市 */}
+      <div>
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2.5">
+          各縣市捐血活動
+        </h2>
+        <div className="grid grid-cols-3 gap-2">
+          {CITIES.map((c) => (
+            <Link
+              key={c.slug}
+              href={`/city/${c.slug}`}
+              className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
+            >
+              <span className="text-xs font-medium text-gray-700">
+                {c.displayName}
               </span>
             </Link>
           ))}

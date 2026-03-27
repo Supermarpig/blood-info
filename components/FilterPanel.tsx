@@ -18,9 +18,11 @@ import {
   Search,
 } from "lucide-react";
 import { REGIONS } from "@/lib/regionConfig";
+import { CITIES } from "@/lib/cityConfig";
 
 interface FilterPanelProps {
   currentRegionSlug?: string;
+  currentCitySlug?: string;
   selectedTags: string[];
   onTagChange: (tags: string[]) => void;
   selectedCenter?: string | null;
@@ -39,6 +41,7 @@ const GIFT_TAGS = [
 
 export default function FilterPanel({
   currentRegionSlug,
+  currentCitySlug,
   selectedTags,
   onTagChange,
   selectedCenter,
@@ -46,6 +49,13 @@ export default function FilterPanel({
   onSearchChange,
 }: FilterPanelProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  // 若在城市頁，推算所屬地區 slug 用於 highlight
+  const activeRegionSlug =
+    currentRegionSlug ??
+    (currentCitySlug
+      ? CITIES.find((c) => c.slug === currentCitySlug)?.regionSlug
+      : undefined);
 
   const activeFiltersCount = (currentRegionSlug || selectedCenter ? 1 : 0) + selectedTags.length;
 
@@ -116,20 +126,22 @@ export default function FilterPanel({
                   <button
                     onClick={() => onCenterChange(null)}
                     className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
-                      !selectedCenter
+                      !selectedCenter && !activeRegionSlug
                         ? "bg-gray-900 text-white shadow-sm"
                         : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300"
                     }`}
                   >
-                    {!selectedCenter && <Check className="w-3.5 h-3.5" />}
+                    {!selectedCenter && !activeRegionSlug && <Check className="w-3.5 h-3.5" />}
                     全部
                   </button>
                   {REGIONS.map((region) => {
-                    const isActive = selectedCenter === region.centerFilter;
+                    const isActive =
+                      selectedCenter === region.centerFilter ||
+                      (!selectedCenter && activeRegionSlug === region.slug);
                     return (
                       <button
                         key={region.slug}
-                        onClick={() => onCenterChange(isActive ? null : region.centerFilter)}
+                        onClick={() => onCenterChange(isActive && !activeRegionSlug ? null : region.centerFilter)}
                         className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
                           isActive
                             ? "bg-gray-900 text-white shadow-sm"
@@ -148,12 +160,12 @@ export default function FilterPanel({
                   <Link
                     href="/"
                     className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
-                      !currentRegionSlug
+                      !activeRegionSlug
                         ? "bg-gray-900 text-white shadow-sm"
                         : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300"
                     }`}
                   >
-                    {!currentRegionSlug && <Check className="w-3.5 h-3.5" />}
+                    {!activeRegionSlug && <Check className="w-3.5 h-3.5" />}
                     全部
                   </Link>
                   {REGIONS.map((region) => (
@@ -161,12 +173,12 @@ export default function FilterPanel({
                       key={region.slug}
                       href={`/region/${region.slug}`}
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
-                        currentRegionSlug === region.slug
+                        activeRegionSlug === region.slug
                           ? "bg-gray-900 text-white shadow-sm"
                           : "bg-white text-gray-600 border border-gray-200 hover:border-gray-300"
                       }`}
                     >
-                      {currentRegionSlug === region.slug && (
+                      {activeRegionSlug === region.slug && (
                         <Check className="w-3.5 h-3.5" />
                       )}
                       {region.displayName}
@@ -174,6 +186,30 @@ export default function FilterPanel({
                   ))}
                 </>
               )}
+            </div>
+          </div>
+
+          {/* 縣市連結 */}
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <MapPin className="w-4 h-4 text-gray-400" />
+              <span className="text-sm font-semibold text-gray-700">縣市</span>
+              <span className="text-xs text-gray-400">（查看各縣市專頁）</span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {CITIES.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/city/${city.slug}`}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                    currentCitySlug === city.slug
+                      ? "bg-gray-900 text-white shadow-sm"
+                      : "bg-white text-gray-600 border border-gray-200 hover:border-red-300 hover:bg-red-50"
+                  }`}
+                >
+                  {city.displayName}
+                </Link>
+              ))}
             </div>
           </div>
 

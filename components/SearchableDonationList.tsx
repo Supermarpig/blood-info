@@ -41,11 +41,14 @@ interface SearchableDonationListProps {
   data: Record<string, DonationEvent[]>;
   /** 當前選中的地區 slug，undefined 表示全部 */
   currentRegionSlug?: string;
+  /** 當前選中的城市 slug */
+  currentCitySlug?: string;
 }
 
 export default function SearchableDonationList({
   data,
   currentRegionSlug,
+  currentCitySlug,
 }: SearchableDonationListProps) {
   const [searchKeyword, setSearchKeyword] = useState<string>("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -251,6 +254,7 @@ export default function SearchableDonationList({
         {/* 篩選面板 */}
         <FilterPanel
           currentRegionSlug={currentRegionSlug}
+          currentCitySlug={currentCitySlug}
           selectedTags={selectedTags}
           onTagChange={setSelectedTags}
           selectedCenter={selectedCenter}
