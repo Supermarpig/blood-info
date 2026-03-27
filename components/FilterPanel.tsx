@@ -57,6 +57,9 @@ export default function FilterPanel({
       ? CITIES.find((c) => c.slug === currentCitySlug)?.regionSlug
       : undefined);
 
+  // 地區頁或城市頁上地區按鈕必須跳頁，否則 selectedCenter 和 server-side 過濾會衝突造成無結果
+  const regionUseLinks = !!currentCitySlug || !!currentRegionSlug;
+
   const activeFiltersCount = (currentRegionSlug || selectedCenter ? 1 : 0) + selectedTags.length;
 
   const toggleTag = (tagId: string) => {
@@ -120,8 +123,8 @@ export default function FilterPanel({
               <span className="text-sm font-semibold text-gray-700">地區</span>
             </div>
             <div className="flex flex-wrap gap-2">
-              {onCenterChange ? (
-                // In-page 模式：用 state 控制
+              {onCenterChange && !regionUseLinks ? (
+                // In-page 模式：用 state 控制（首頁、地區頁）
                 <>
                   <button
                     onClick={() => onCenterChange(null)}
@@ -155,7 +158,7 @@ export default function FilterPanel({
                   })}
                 </>
               ) : (
-                // URL 模式：跳頁（region 子頁用）
+                // URL 模式：跳頁（城市頁、地區子頁）
                 <>
                   <Link
                     href="/"
