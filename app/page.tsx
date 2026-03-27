@@ -190,13 +190,21 @@ export default async function BloodDonationPage() {
           streetAddress: event.location,
         },
       },
-      image: event.pttData?.images?.[0] || undefined,
+      image:
+        event.pttData?.images?.[0] ||
+        `${siteUrl}/imgs/og-img.jpg`,
       description: `地點：${event.location}。時間：${event.time}。${
         event.pttData?.rawLine || event.customNote || ""
       }`,
       organizer: {
         "@type": "Organization",
         name: event.organization,
+        url: "https://www.blood.org.tw",
+      },
+      performer: {
+        "@type": "Organization",
+        name: event.organization,
+        url: "https://www.blood.org.tw",
       },
       offers: {
         "@type": "Offer",
@@ -204,6 +212,8 @@ export default async function BloodDonationPage() {
         priceCurrency: "TWD",
         availability: "https://schema.org/InStock",
         description: "免費捐血",
+        validFrom: startDate,
+        url: siteUrl,
       },
     };
   });
