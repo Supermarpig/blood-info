@@ -167,16 +167,29 @@ export default function BloodInventoryPanel({
 
   if (!inventory || pathname !== "/") return null;
 
-  const urgentBloodTypes = Array.from(
-    new Set(
-      inventory.centers.flatMap((c) =>
-        Object.entries(c.bloodTypes)
-          .filter(([, s]) => s === "urgent")
-          .map(([type]) => type)
-      )
-    )
-  );
-  const urgentCount = urgentBloodTypes.length;
+  // 計算每種血型在哪些中心急缺
+  const urgentByType = new Map<string, string[]>();
+  inventory.centers.forEach((c) => {
+    Object.entries(c.bloodTypes)
+      .filter(([, s]) => s === "urgent")
+      .forEach(([type]) => {
+        if (!urgentByType.has(type)) urgentByType.set(type, []);
+        urgentByType.get(type)!.push(c.name);
+      });
+  });
+  const totalCenters = inventory.centers.length;
+  const urgentCount = urgentByType.size;
+
+  // 產生精確文案："全台 O 型急缺" 或 "中區 O 型急缺"
+  const urgentAlerts = Array.from(urgentByType.entries()).map(([type, centers]) => {
+    const prefix =
+      centers.length === totalCenters
+        ? "全台"
+        : centers
+            .map((c) => REGIONS.find((r) => r.centerFilter === c)?.displayName ?? c)
+            .join("、");
+    return `${prefix} ${type} 型急缺`;
+  });
 
   const center = inventory.centers[activeCenter];
 
@@ -187,11 +200,10 @@ export default function BloodInventoryPanel({
         <div className="bg-gray-50 border-b border-gray-100 px-4 py-2.5 flex items-center gap-2">
           <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse shrink-0" />
           <p className="text-[11px] font-medium text-gray-600">
-            全台{" "}
             <span className="font-extrabold text-red-600">
-              {urgentBloodTypes.map((t) => `${t} 型`).join("、")}
-            </span>{" "}
-            急缺，急需您的支援！
+              {urgentAlerts.join("、")}
+            </span>
+            ，急需您的支援！
           </p>
         </div>
       )}
