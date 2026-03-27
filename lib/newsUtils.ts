@@ -16,6 +16,7 @@ export interface NewsArticle {
   slug: string;
   title: string;
   date: string;
+  author?: string;
   summary: string;
   imageUrl: string;
   imageAlt: string;

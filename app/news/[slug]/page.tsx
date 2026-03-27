@@ -46,6 +46,8 @@ export default async function NewsArticlePage({ params }: PageProps) {
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
+  const author = article.author ?? "血荒資訊編輯部";
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
@@ -55,6 +57,10 @@ export default async function NewsArticlePage({ params }: PageProps) {
     dateModified: article.date,
     image: article.imageUrl,
     url: `${baseUrl}/news/${article.slug}`,
+    author: {
+      "@type": "Organization",
+      name: author,
+    },
     publisher: {
       "@type": "Organization",
       name: "台灣捐血活動查詢",
@@ -83,7 +89,11 @@ export default async function NewsArticlePage({ params }: PageProps) {
       </nav>
 
       {/* Header */}
-      <p className="text-xs text-gray-400 mb-2">{article.date}</p>
+      <div className="flex items-center gap-3 text-xs text-gray-400 mb-2">
+        <span>{article.date}</span>
+        <span>·</span>
+        <span>{author}</span>
+      </div>
       <h1 className="text-2xl font-bold text-gray-900 mb-3">{article.title}</h1>
       <p className="text-gray-500 text-sm mb-6">{article.summary}</p>
 
