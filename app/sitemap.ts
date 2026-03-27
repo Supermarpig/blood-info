@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllRegionSlugs } from "@/lib/regionConfig";
 import { getAllGiftSlugs } from "@/lib/giftConfig";
 import { getAllCitySlugs } from "@/lib/cityConfig";
+import { getAllNewsSlugs } from "@/lib/newsUtils";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -12,8 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const regionSlugs = getAllRegionSlugs();
   const giftSlugs = getAllGiftSlugs();
   const citySlugs = getAllCitySlugs();
+  const newsSlugs = getAllNewsSlugs();
 
-  // Generate sitemap entries for all region pages
   const regionPages: MetadataRoute.Sitemap = regionSlugs.map((slug) => ({
     url: `${baseUrl}/region/${slug}`,
     lastModified: new Date(),
@@ -21,7 +22,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // Generate sitemap entries for all gift pages
   const giftPages: MetadataRoute.Sitemap = giftSlugs.map((slug) => ({
     url: `${baseUrl}/gift/${slug}`,
     lastModified: new Date(),
@@ -29,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Generate sitemap entries for all city pages
   const cityPages: MetadataRoute.Sitemap = citySlugs.map((slug) => ({
     url: `${baseUrl}/city/${slug}`,
     lastModified: new Date(),
@@ -37,33 +36,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  const newsPages: MetadataRoute.Sitemap = newsSlugs.map((slug) => ({
+    url: `${baseUrl}/news/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "never",
+    priority: 0.6,
+  }));
+
   return [
-    // Homepage
     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
-    // FAQ page
     {
       url: `${baseUrl}/faq`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.6,
     },
-    // Calendar page
     {
       url: `${baseUrl}/calendar`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.7,
     },
-    // Region pages
+    {
+      url: `${baseUrl}/news`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
     ...regionPages,
-    // City pages
     ...cityPages,
-    // Gift pages
     ...giftPages,
+    ...newsPages,
   ];
 }
