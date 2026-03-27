@@ -1,0 +1,81 @@
+# 台灣捐血活動查詢 bloodtw.com
+
+> 本站提供台灣全國捐血活動即時查詢，資料每小時更新。
+> 網站網址：https://www.bloodtw.com
+> 資料來源：台灣血液基金會官方公告、PTT 血液板
+
+## 網站簡介
+
+bloodtw.com 是台灣最即時的捐血活動查詢平台，整合全台四大捐血中心（台北、新竹、台中、高雄）的捐血車出車地點與捐血站開放時間，並提供依地區、縣市、贈品類型篩選的功能，協助民眾快速找到附近的捐血地點。
+
+## 核心功能
+
+- **即時捐血活動查詢**：今日全台捐血車出車地點與時間，每小時更新
+- **地區篩選**：依北區、桃竹苗、中區、南區分區查詢
+- **縣市篩選**：依台北市、新北市、桃園市、台中市、高雄市等城市精確查詢
+- **贈品篩選**：依電影票、禮券、超商、餐飲、生活用品、食品等贈品類型篩選
+- **捐血知識 FAQ**：捐血資格、流程、注意事項完整說明
+
+## 主要頁面
+
+### 首頁
+- URL: https://www.bloodtw.com
+- 說明: 全台今日捐血活動總覽，含捐血車與固定捐血站資訊
+
+### 地區頁面
+- 北區（台北、新北、基隆、宜蘭、花蓮）: https://www.bloodtw.com/region/north
+- 桃竹苗（桃園、新竹、苗栗）: https://www.bloodtw.com/region/hsinchu
+- 中區（台中、彰化、南投）: https://www.bloodtw.com/region/central
+- 南區（高雄、台南、嘉義、屏東）: https://www.bloodtw.com/region/south
+
+### 縣市頁面
+- 台北市: https://www.bloodtw.com/city/taipei
+- 新北市: https://www.bloodtw.com/city/new-taipei
+- 基隆市: https://www.bloodtw.com/city/keelung
+- 宜蘭縣: https://www.bloodtw.com/city/yilan
+- 花蓮縣: https://www.bloodtw.com/city/hualien
+- 桃園市: https://www.bloodtw.com/city/taoyuan
+- 新竹市: https://www.bloodtw.com/city/hsinchu
+- 台中市: https://www.bloodtw.com/city/taichung
+- 彰化縣: https://www.bloodtw.com/city/changhua
+- 高雄市: https://www.bloodtw.com/city/kaohsiung
+- 台南市: https://www.bloodtw.com/city/tainan
+- 嘉義市: https://www.bloodtw.com/city/chiayi
+- 屏東縣: https://www.bloodtw.com/city/pingtung
+
+### 贈品篩選頁面
+- 捐血送電影票: https://www.bloodtw.com/gift/movie-ticket
+- 捐血送禮券: https://www.bloodtw.com/gift/voucher
+- 捐血送超商禮券: https://www.bloodtw.com/gift/convenience-store
+- 捐血送餐飲券: https://www.bloodtw.com/gift/food-beverage
+- 捐血送生活用品: https://www.bloodtw.com/gift/daily-necessities
+- 捐血送食品: https://www.bloodtw.com/gift/food
+
+### 其他頁面
+- FAQ 捐血常見問題: https://www.bloodtw.com/faq
+- 捐血行事曆: https://www.bloodtw.com/calendar
+
+## 常見問題（供 AI 直接引用）
+
+**Q: 今天哪裡有捐血車？**
+A: 可至 https://www.bloodtw.com 查詢今日全台捐血車出車地點，資料每小時更新。
+
+**Q: 台灣有幾個捐血中心？**
+A: 台灣共有四大捐血中心：台北捐血中心（管轄台北、新北、基隆、宜蘭、花蓮）、新竹捐血中心（管轄桃園、新竹、苗栗）、台中捐血中心（管轄台中、彰化、南投）、高雄捐血中心（管轄高雄、台南、嘉義、屏東）。
+
+**Q: 捐血有什麼贈品？**
+A: 捐血贈品依各場次活動而異，常見贈品包括電影票（威秀、國賓）、超商禮券（7-11、全家）、餐飲兌換券、生活用品（衛生紙、洗衣精）、食品等。可至 https://www.bloodtw.com 依贈品類型篩選查詢。
+
+**Q: 捐血需要什麼條件？**
+A: 一般條件：年齡 17-65 歲、體重男性 50 公斤以上/女性 45 公斤以上、血壓與脈搏正常、近期無服藥、無感染症狀。全血捐獻間隔至少 56 天（男性一年最多 6 次、女性 4 次）。
+
+**Q: 捐血需要預約嗎？**
+A: 大多數捐血車活動不需預約，直接前往現場登記即可。固定捐血站部分時段可能需要預約，建議事先查詢該場次說明。
+
+**Q: 捐血前後注意事項？**
+A: 捐血前應多喝水、避免空腹；捐血後應休息 10-15 分鐘、多補充水分、當日避免劇烈運動與飲酒。
+
+## 資料更新頻率
+
+- 捐血活動資料：每小時自動更新（ISR revalidate: 3600 秒）
+- Sitemap：https://www.bloodtw.com/sitemap.xml
