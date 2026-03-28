@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllRegionSlugs } from "@/lib/regionConfig";
 import { getAllGiftSlugs } from "@/lib/giftConfig";
 import { getAllCitySlugs } from "@/lib/cityConfig";
-import { getAllNewsSlugs } from "@/lib/newsUtils";
+import { getAllNews } from "@/lib/newsUtils";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const regionSlugs = getAllRegionSlugs();
   const giftSlugs = getAllGiftSlugs();
   const citySlugs = getAllCitySlugs();
-  const newsSlugs = getAllNewsSlugs();
+  const newsArticles = getAllNews();
 
   const regionPages: MetadataRoute.Sitemap = regionSlugs.map((slug) => ({
     url: `${baseUrl}/region/${slug}`,
@@ -36,11 +36,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  const newsPages: MetadataRoute.Sitemap = newsSlugs.map((slug) => ({
-    url: `${baseUrl}/news/${slug}`,
-    lastModified: new Date(),
+  const newsPages: MetadataRoute.Sitemap = newsArticles.map((article) => ({
+    url: `${baseUrl}/news/${article.slug}`,
+    lastModified: new Date(article.date),
     changeFrequency: "never",
-    priority: 0.6,
+    priority: 0.8,
   }));
 
   return [
