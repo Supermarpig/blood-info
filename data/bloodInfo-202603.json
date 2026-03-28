@@ -12641,8 +12641,7 @@
         "images": [
           "https://i.imgur.com/Q1z1Pdw.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDMvMjctMDk6MzB+MTY6MzAt5paw5YyX5biC5Zyf5Z+O5Y2A5bug5ZWG5Y2U6YCy5pyD",
@@ -13075,8 +13074,7 @@
         "images": [
           "https://i.imgur.com/Qj60cJi.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMjctMDg6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDmjZDooYDlp5Tlk6HmnIPkuLvluK3pu4PpupfomK0=",
@@ -13100,8 +13098,7 @@
         "images": [
           "https://i.imgur.com/Qj60cJi.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMjctMDg6MDB+MTY6MDAt5Y+w5p2x57ij6ZCY6Yy255y86Y+h5qWt6IG35qWt5bel5pyD",
@@ -13134,304 +13131,7 @@
         "images": [
           "https://i.imgur.com/Qj60cJi.jpeg"
         ]
-      },
-      "tags": []
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp5Y+w5YyX5ZCE5oyH5a6a5o2Q6KGA6bue",
-      "time": "",
-      "organization": "台北各指定捐血點",
-      "location": "台北各指定捐血點",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "3/27(五)台北各指定捐血點",
-        "images": [
-          "https://i.imgur.com/dE6B7g3.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp5Y+w5YyX5bCP5beo6JuLNOiZn+WHuuWPow==",
-      "time": "",
-      "organization": "台北小巨蛋4號出口",
-      "location": "台北小巨蛋4號出口",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "3/27(五)台北小巨蛋4號出口",
-        "images": []
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQpLTMvMjko5pelKeaWsOWMl+WQhOaMh+WumuaNkOihgOm7ng==",
-      "time": "",
-      "organization": "3/29(日)新北各指定捐血點",
-      "location": "3/29(日)新北各指定捐血點",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "3/27(五)-3/29(日)新北各指定捐血點",
-        "images": [
-          "https://i.imgur.com/PL07arQ.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp5paw5YyX5paw6I6K5YyW5oiQ6Lev",
-      "time": "",
-      "organization": "新北新莊化成路",
-      "location": "新北新莊化成路",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "3/27(五)新北新莊化成路",
-        "images": [
-          "https://i.imgur.com/dYgjpb6.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 25.0625546,
-        "lng": 121.464789
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp5paw5YyX5Zyf5Z+O5LiJ5rCR6Lev",
-      "time": "",
-      "organization": "新北土城三民路",
-      "location": "新北土城三民路",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "餐飲",
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "3/27(五)新北土城三民路",
-        "images": [
-          "https://i.imgur.com/i1ABwjp.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQpLTMvMjgo5YWtKeaWsOerueWQhOaMh+WumuaNkOihgOm7ng==",
-      "time": "",
-      "organization": "3/28(六)新竹各指定捐血點",
-      "location": "3/28(六)新竹各指定捐血點",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "3/27(五)-3/28(六)新竹各指定捐血點",
-        "images": [
-          "https://i.imgur.com/60iLUN5.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp5Y+w5Lit5YyX5bGv5Zub5by154qB5LiJ5a6Y5aCC",
-      "time": "",
-      "organization": "台中北屯四張犁三官堂",
-      "location": "台中北屯四張犁三官堂",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "3/27(五)台中北屯四張犁三官堂",
-        "images": [
-          "https://i.imgur.com/lHVTQxN.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp5b2w5YyW5ZKM576O6b6N6I+v5oWI5oOg5aCC",
-      "time": "",
-      "organization": "彰化和美龍華慈惠堂",
-      "location": "彰化和美龍華慈惠堂",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券"
-      ],
-      "pttData": {
-        "rawLine": "3/27(五)彰化和美龍華慈惠堂",
-        "images": [
-          "https://i.imgur.com/KXNx0yC.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp5Y2X5oqV54ef55uk5ZyL5bCP",
-      "time": "",
-      "organization": "南投營盤國小",
-      "location": "南投營盤國小",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "3/27(五)南投營盤國小",
-        "images": [
-          "https://i.imgur.com/Mw40aQb.jpeg",
-          "https://i.imgur.com/yGEbbhu.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 23.9444449,
-        "lng": 120.6755032
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp5Y+w5Y2X54ef55uk5ZyL5bCP",
-      "time": "",
-      "organization": "台南營盤國小",
-      "location": "台南營盤國小",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "3/27(五)台南營盤國小",
-        "images": [
-          "https://i.imgur.com/hVuCTDy.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 23.9444449,
-        "lng": 120.6755032
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp5Y+w5Y2X5rC45bq35p2w5aOr6Zu75rGg",
-      "time": "",
-      "organization": "台南永康杰士電池",
-      "location": "台南永康杰士電池",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "3/27(五)台南永康杰士電池",
-        "images": [
-          "https://i.imgur.com/Sa3b8MT.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 23.0550329,
-        "lng": 120.2713468
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp6auY6ZuE54eV5bei5rGO5q2m6Zu75qmf",
-      "time": "",
-      "organization": "高雄燕巢汎武電機",
-      "location": "高雄燕巢汎武電機",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "3/27(五)高雄燕巢汎武電機",
-        "images": [
-          "https://i.imgur.com/RbPgkdW.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp6auY6ZuE5aSn5a+u5oSb5ZyL6LaF5biC",
-      "time": "",
-      "organization": "高雄大寮愛國超市",
-      "location": "高雄大寮愛國超市",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "3/27(五)高雄大寮愛國超市",
-        "images": [
-          "https://i.imgur.com/vNXPGmR.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 22.613732,
-        "lng": 120.3896126
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNyjkupQp6auY6ZuE5piO6I+v5aSn5qiT",
-      "time": "",
-      "organization": "高雄明華大樓",
-      "location": "高雄明華大樓",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "3/27(五)高雄明華大樓",
-        "images": [
-          "https://i.imgur.com/DdVzbbv.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 22.5637345,
-        "lng": 120.3726316
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDMtMjctMy8yNy0zLzI4KOS6lC3lha0p5r6O5rmW6aas5YWs5o2Q6KGA56uZ",
-      "time": "",
-      "organization": "澎湖馬公捐血站",
-      "location": "澎湖馬公捐血站",
-      "activityDate": "2026-03-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "pttData": {
-        "rawLine": "3/27-3/28(五-六)澎湖馬公捐血站",
-        "images": [
-          "https://i.imgur.com/lnWAAMa.jpeg",
-          "https://i.imgur.com/w7rIJLT.jpeg",
-          "https://i.imgur.com/Vu7OFHA.png"
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-03-28": [
@@ -13660,15 +13360,6 @@
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q079371303331295648"
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDMvMjgtMTA6MDB+MTg6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
-      "time": "10:00~18:00",
-      "organization": "大大數位慈善基金會",
-      "location": "新北市板橋區中山路一段50巷36號2樓之4(配合府中室)",
-      "activityDate": "2026-03-28",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q054419564154156754"
-    },
-    {
       "id": "5paw56u5LTIwMjYvMDMvMjgtMDk6MzB+MTY6MzAt5qGD5ZyS5biC5p2x5pa5576O542F5a2Q5pyD",
       "time": "09:30~16:30",
       "organization": "桃園市東方美獅子會",
@@ -13712,6 +13403,15 @@
       "activityDate": "2026-03-28",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419568714814196"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDMvMjgtMTA6MDB+MTg6MDAt5aSn5aSn5pW45L2N5oWI5ZaE5Z+66YeR5pyD",
+      "time": "10:00~18:00",
+      "organization": "大大數位慈善基金會",
+      "location": "新北市板橋區中山路一段50巷36號2樓之4(配合府中室)",
+      "activityDate": "2026-03-28",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419564154156754"
     },
     {
       "id": "5paw56u5LTIwMjYvMDMvMjgtMDk6MDB+MTc6MDAt5qGD5ZyS57ij5b6u56yR5Y2U5pyD",
@@ -14250,6 +13950,23 @@
       "isPttOnly": true
     },
     {
+      "id": "cHR0LTIwMjYtMDMtMjgtMy8yOCjlha0pLTMvMjko5pelKeaWsOWMl+WQhOaMh+WumuaNkOihgOm7ng==",
+      "time": "",
+      "organization": "3/29(日)新北各指定捐血點",
+      "location": "3/29(日)新北各指定捐血點",
+      "activityDate": "2026-03-28",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "3/28(六)-3/29(日)新北各指定捐血點",
+        "images": [
+          "https://i.imgur.com/PL07arQ.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
       "id": "cHR0LTIwMjYtMDMtMjgtMy8yOCjlha0p5paw5YyX5paw5bqX5Y2A5YWs5omA5o236YGL56uZMuiZn+WHuuWPow==",
       "time": "",
       "organization": "新北新店區公所捷運站2號出口",
@@ -14270,6 +13987,23 @@
       "isPttOnly": true
     },
     {
+      "id": "cHR0LTIwMjYtMDMtMjgtMy8yOCjlha0p5paw5YyX5LiJ6YeN6YeN5paw6Lev5Zub5q61",
+      "time": "",
+      "organization": "新北三重重新路四段",
+      "location": "新北三重重新路四段",
+      "activityDate": "2026-03-28",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "3/28(六)新北三重重新路四段",
+        "images": [
+          "https://i.imgur.com/pXYEqUR.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
       "id": "cHR0LTIwMjYtMDMtMjgtMy8yOCjlha0p5paw5YyX5paw5Z+U5o236YGL56uZNOiZn+WHuuWPow==",
       "time": "",
       "organization": "新北新埔捷運站4號出口",
@@ -14282,6 +14016,63 @@
         "rawLine": "3/28(六)新北新埔捷運站4號出口",
         "images": [
           "https://i.imgur.com/y8dEUfO.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDMtMjgtMy8yOCjlha0p5paw5YyX5pel5pyI5YWJ5buj5aC0L+Wcn+Wfjumdkumbsui3r+Wutuaoguemjw==",
+      "time": "",
+      "organization": "新北日月光廣場/土城青雲路家樂福",
+      "location": "新北日月光廣場/土城青雲路家樂福",
+      "activityDate": "2026-03-28",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "pttData": {
+        "rawLine": "3/28(六)新北日月光廣場/土城青雲路家樂福",
+        "images": [
+          "https://i.imgur.com/LxEbmn7.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDMtMjgtMy8yOCjlha0p5paw5YyX5Lit5ZKM56eA5bGx5ZyL5bCP",
+      "time": "",
+      "organization": "新北中和秀山國小",
+      "location": "新北中和秀山國小",
+      "activityDate": "2026-03-28",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "3/28(六)新北中和秀山國小",
+        "images": [
+          "https://i.imgur.com/cvndqnr.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.995207,
+        "lng": 121.5211288
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDMtMjgtMy8yOCjlha0p5paw56u55ZCE5oyH5a6a5o2Q6KGA6bue",
+      "time": "",
+      "organization": "新竹各指定捐血點",
+      "location": "新竹各指定捐血點",
+      "activityDate": "2026-03-28",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "3/28(六)新竹各指定捐血點",
+        "images": [
+          "https://i.imgur.com/60iLUN5.jpeg"
         ]
       },
       "isPttOnly": true
@@ -14477,6 +14268,27 @@
       }
     },
     {
+      "id": "cHR0LTIwMjYtMDMtMjgtMy8yOCjlha0p6auY6ZuE5b2M6ZmA6bm95riv5LqM6Lev",
+      "time": "",
+      "organization": "高雄彌陀鹽港二路",
+      "location": "高雄彌陀鹽港二路",
+      "activityDate": "2026-03-28",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "3/28(六)高雄彌陀鹽港二路",
+        "images": [
+          "https://i.imgur.com/ZEKzc6L.png"
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.787555,
+        "lng": 120.243019
+      }
+    },
+    {
       "id": "cHR0LTIwMjYtMDMtMjgtMy8yOCjlha0p5a6c6Jit5ZyL5rCR6YGL5YuV5Lit5b+D5bCN6Z2i",
       "time": "",
       "organization": "宜蘭國民運動中心對面",
@@ -14549,6 +14361,27 @@
         "rawLine": "3/28(六)花蓮遠百建林廣場星巴克門",
         "images": [
           "https://i.imgur.com/eKqhwtN.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDMtMjgtMy8yOCjlha0p5r6O5rmW6aas5YWs5o2Q6KGA56uZ",
+      "time": "",
+      "organization": "澎湖馬公捐血站",
+      "location": "澎湖馬公捐血站",
+      "activityDate": "2026-03-28",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "pttData": {
+        "rawLine": "3/28(六)澎湖馬公捐血站",
+        "images": [
+          "https://i.imgur.com/lnWAAMa.jpeg",
+          "https://i.imgur.com/w7rIJLT.jpeg",
+          "https://i.imgur.com/Vu7OFHA.png"
         ]
       },
       "isPttOnly": true
@@ -14952,7 +14785,16 @@
       "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
       "activityDate": "2026-03-29",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q063666138155049042"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q063666138155049042",
+      "pttData": {
+        "rawLine": "3/29(日)高雄鳳山捐血室",
+        "images": [
+          "https://i.imgur.com/TolLAa3.jpeg"
+        ]
+      },
+      "tags": [
+        "餐飲"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMjktMDk6MDB+MTc6MzAt6Km55pyD6ZW355m96KGj5ZyY6ZqK5pqo5YWo5ZaE5Y+L",
@@ -14961,7 +14803,14 @@
       "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
       "activityDate": "2026-03-29",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q063666137977291997"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q063666137977291997",
+      "pttData": {
+        "rawLine": "3/29(日)高雄九如捐血室",
+        "images": [
+          "https://i.imgur.com/D7CqUqy.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMjktMDk6MDB+MTc6MDAt5Y+z5piM6ZW36ICB5pWZ5pyD",
@@ -15024,7 +14873,14 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-03-29",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q063666133427423555"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q063666133427423555",
+      "pttData": {
+        "rawLine": "3/29(日)高雄左營捐血室",
+        "images": [
+          "https://i.imgur.com/G1h4TfV.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMjktMDg6MzB+MTc6MDAt5aSn5bir5YWE5omL5bel6JuL5o2y",
@@ -15122,7 +14978,16 @@
       "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
       "activityDate": "2026-03-29",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q063666120703231456"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q063666120703231456",
+      "pttData": {
+        "rawLine": "3/29(日)高雄鳳山捐血室",
+        "images": [
+          "https://i.imgur.com/TolLAa3.jpeg"
+        ]
+      },
+      "tags": [
+        "餐飲"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMjktMDk6MDB+MTc6MDAt5rCR6ZuE5ZCM5b+D5pyD",
@@ -15453,6 +15318,142 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419562428016295"
     },
     {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDg6MDB+MTc6MDAt5b2w5YyW6YO15bGA57i95bGA",
+      "time": "08:00~17:00",
+      "organization": "彰化郵局總局",
+      "location": "彰化縣彰化市中山路一段348號(彰化捐血站)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546550435184046"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDk6MDB+MTc6MDAt5b2w5YyW6YO15bGA57i95bGA",
+      "time": "09:00~17:00",
+      "organization": "彰化郵局總局",
+      "location": "彰化縣員林市民權街55號員林火車站一樓大廳內(員林捐血室)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546549891215019"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDk6MDB+MTI6MDAt6Ieq6L6mLeWPsOS4reWcsOaWueazlemZoijlj7DkuK3lj7jms5XlpKflu4gp",
+      "time": "09:00~12:00",
+      "organization": "自辦-台中地方法院(台中司法大廈)",
+      "location": "臺中市西區自由路一段91號(台中司法大廈前)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546549613467064"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMTA6MDB+MTg6MDAt5LqM5YWr54mn6Zuy6b2L",
+      "time": "10:00~18:00",
+      "organization": "二八牧雲齋",
+      "location": "臺中市北屯區昌平路二段與松竹路口松竹福德廟旁(仁和捐血車)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546548078588047"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMTA6MzB+MTg6MzAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65Lit6YO15bGAKOiHuuS4reW4gik=",
+      "time": "10:30~18:30",
+      "organization": "中華郵政股份有限公司臺中郵局(臺中市)",
+      "location": "臺中市西屯區惠來路二段市政北七路口惠安停車場(新光三越捐血車)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546544985941588"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDg6MDB+MTg6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65Lit6YO15bGAKOiHuuS4reW4gik=",
+      "time": "08:00~18:00",
+      "organization": "中華郵政股份有限公司臺中郵局(臺中市)",
+      "location": "臺中市西屯區臺灣大道四段1176號(中港捐血室)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546544529820505"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDk6MzB+MTU6MDAt57Sr5Y2X5a6u",
+      "time": "09:30~15:00",
+      "organization": "紫南宮",
+      "location": "南投縣竹山鎮大公街40號(紫南宮水濂廣場)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546543706193533"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMTA6MDB+MTg6MDAt546E5b635ZCM5r+f5pyD",
+      "time": "10:00~18:00",
+      "organization": "玄德同濟會",
+      "location": "臺中市北區精武路291-3號對面停車場(臺中公園捐血車)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546543341072551"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDg6MDB+MTc6MDAt6Im+55Gq5ZyL6Zqb6LK/5piT5pyJ6ZmQ5YWs5Y+4",
+      "time": "08:00~17:00",
+      "organization": "艾瑪國際貿易有限公司",
+      "location": "臺中市西區三民路一段174號7樓(三民捐血室)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546538434619010"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDk6MzB+MTY6MDAt5pWR5ZyL5ZyY5paw56S+5Y2A5ZyY5aeU5pyD",
+      "time": "09:30~16:00",
+      "organization": "救國團新社區團委會",
+      "location": "臺中市新社區興社街二段28之1號(臺中市新社區公所)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546537890730092"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDk6MDB+MTc6MzAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65Lit6YO15bGAKOadseWPsOS4reWNgCk=",
+      "time": "09:00~17:30",
+      "organization": "中華郵政股份有限公司臺中郵局(東台中區)",
+      "location": "臺中市豐原區北陽路2號(豐原捐血室)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546537356861075"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDk6MDB+MTc6MDAt57Sr6aWM5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "09:00~17:00",
+      "organization": "紫饌國際同濟會",
+      "location": "臺中市北區學士路91號中國附醫復健大樓正對面(中正公園捐血室)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546532528345588"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDg6MDB+MTY6MDAt6LKh5ZyY5rOV5Lq6MTjihIPmlofljJbln7rph5HmnIM=",
+      "time": "08:00~16:00",
+      "organization": "財團法人18℃文化基金會",
+      "location": "南投縣埔里鎮北環路222號(埔里捐血站)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546532162224506",
+      "pttData": {
+        "rawLine": "3/30(一)南投埔里捐血站",
+        "images": [
+          "https://i.imgur.com/muPnV7n.jpeg",
+          "https://i.imgur.com/yGEbbhu.jpeg"
+        ]
+      },
+      "tags": [
+        "超商"
+      ]
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzAtMDk6MzB+MTg6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65Lit6YO15bGAKOadseWPsOS4reWNgCk=",
+      "time": "09:30~18:00",
+      "organization": "中華郵政股份有限公司臺中郵局(東台中區)",
+      "location": "臺中市大里區國光路二段239號1樓(大里捐血室)",
+      "activityDate": "2026-03-30",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546532083476551"
+    },
+    {
       "id": "6auY6ZuELTIwMjYvMDMvMzAtMDk6MzB+MTg6MDAt5L2b5YWJ5pyD5Lit6I+v57i95pyD6bOl5p2+56ys5LiA5YiG5pyD",
       "time": "09:30~18:00",
       "organization": "佛光會中華總會鳥松第一分會",
@@ -15689,6 +15690,132 @@
       "activityDate": "2026-03-31",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q054419574785712295"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDg6MDB+MTc6MDAt5b2w5YyW6YO15bGA57i95bGA",
+      "time": "08:00~17:00",
+      "organization": "彰化郵局總局",
+      "location": "彰化縣彰化市中山路一段348號(彰化捐血站)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546569312870659"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDk6MDB+MTc6MDAt5b2w5YyW6YO15bGA57i95bGA",
+      "time": "09:00~17:00",
+      "organization": "彰化郵局總局",
+      "location": "彰化縣員林市民權街55號員林火車站一樓大廳內(員林捐血室)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546563140485145"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDk6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Y2X5oqV6YO15bGA",
+      "time": "09:00~17:00",
+      "organization": "中華郵政股份有限公司南投郵局",
+      "location": "南投縣南投市中興路616號1樓(南投捐血室)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546558878991622"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDg6MDB+MTg6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65Lit6YO15bGAKOiHuuS4reW4gik=",
+      "time": "08:00~18:00",
+      "organization": "中華郵政股份有限公司臺中郵局(臺中市)",
+      "location": "臺中市西屯區臺灣大道四段1176號(中港捐血室)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546557699143677"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMTA6MDB+MTg6MDAt5LqM5YWr54mn6Zuy6b2L",
+      "time": "10:00~18:00",
+      "organization": "二八牧雲齋",
+      "location": "臺中市北屯區昌平路二段與松竹路口松竹福德廟旁(仁和捐血車)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546557065274650"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDk6MzB+MTY6MDAt5paw5YWJ5Lq65aO95r2t5a2Q5pS26LK76JmV",
+      "time": "09:30~16:00",
+      "organization": "新光人壽潭子收費處",
+      "location": "臺中市潭子區復興路二段89號(潭水亭觀音媽廟)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546556886426505"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMTA6MDB+MTc6MDAt5LiJ5ZWG576O6YKm5Lq65aO95Lit5Y2A6YOo",
+      "time": "10:00~17:00",
+      "organization": "三商美邦人壽中區部",
+      "location": "臺中市南屯區文心路一段211號)(文心大樓公司門口)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546556420395532"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDk6MDB+MTc6MDAt5LiW5LqL5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "09:00~17:00",
+      "organization": "世事國際同濟會",
+      "location": "臺中市北區學士路91號中國附醫復健大樓正對面(中正公園捐血室)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546556242547587"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDk6MzB+MTg6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65Lit6YO15bGAKOadseWPsOS4reWNgCk=",
+      "time": "09:30~18:00",
+      "organization": "中華郵政股份有限公司臺中郵局(東台中區)",
+      "location": "臺中市大里區國光路二段239號1樓(大里捐血室)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546555708678550"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65Lit6YO15bGAKOiHuuS4reW4gik=",
+      "time": "08:00~17:00",
+      "organization": "中華郵政股份有限公司臺中郵局(臺中市)",
+      "location": "臺中市西區三民路一段174號7樓(三民捐血室)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546553961637191"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDk6MzB+MTU6MDAt57Sr5Y2X5a6u",
+      "time": "09:30~15:00",
+      "organization": "紫南宮",
+      "location": "南投縣竹山鎮大公街40號(紫南宮水濂廣場)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546552793789046"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMTA6MzB+MTg6MzAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65Lit6YO15bGAKOiHuuS4reW4gik=",
+      "time": "10:30~18:30",
+      "organization": "中華郵政股份有限公司臺中郵局(臺中市)",
+      "location": "臺中市西屯區惠來路二段市政北七路口惠安停車場(新光三越捐血車)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546552327758163"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDk6MzB+MTY6MDAt5qiC5rS76KWq5LmL6YSJ5Y2a54mp6aSo",
+      "time": "09:30~16:00",
+      "organization": "樂活襪之鄉博物館",
+      "location": "彰化縣社頭鄉社石路559號(社頭樂活襪子博物館)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546551514932091"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDMvMzEtMDk6MDB+MTc6MzAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65Lit6YO15bGAKOadseWPsOS4reWNgCk=",
+      "time": "09:00~17:30",
+      "organization": "中華郵政股份有限公司臺中郵局(東台中區)",
+      "location": "臺中市豐原區北陽路2號(豐原捐血室)",
+      "activityDate": "2026-03-31",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546550970063064"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDMvMzEtMDk6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDmjZDooYDlp5Tlk6HmnIM=",
