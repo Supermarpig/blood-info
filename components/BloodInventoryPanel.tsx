@@ -149,7 +149,7 @@ export default function BloodInventoryPanel({
   onCenterSelect,
   selectedCenter,
 }: {
-  onCenterSelect?: (center: string, withScroll?: boolean) => void;
+  onCenterSelect?: (center: string, withScroll?: boolean, toggle?: boolean) => void;
   selectedCenter?: string | null;
 }) {
   const pathname = usePathname();
@@ -244,7 +244,7 @@ export default function BloodInventoryPanel({
               type={t}
               status={(center.bloodTypes[t] as StatusKey) || "unknown"}
               delay={i * 80}
-              onSelect={onCenterSelect ? () => onCenterSelect(center.name) : undefined}
+              onSelect={onCenterSelect ? () => onCenterSelect(center.name, true, false) : undefined}
               isSelected={selectedCenter === center.name}
             />
           ))}

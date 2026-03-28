@@ -139,8 +139,8 @@ export default function SearchableDonationList({
     return events;
   }, [todayEvents, upcomingEvents]);
 
-  const handleCenterSelect = (centerName: string, withScroll = true) => {
-    setSelectedCenter((prev) => (prev === centerName ? null : centerName));
+  const handleCenterSelect = (centerName: string, withScroll = true, toggle = true) => {
+    setSelectedCenter((prev) => (toggle && prev === centerName ? null : centerName));
     if (withScroll) {
       setTimeout(() => {
         document.getElementById("today-events")?.scrollIntoView({ behavior: "smooth" });
