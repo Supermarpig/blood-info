@@ -74,7 +74,14 @@
       "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
       "activityDate": "2026-04-01",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387451297761018"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387451297761018",
+      "pttData": {
+        "rawLine": "4/1-4/4(三-六)新竹西大捐血室/竹北愛心樓",
+        "images": [
+          "https://i.imgur.com/b2w3yW5.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMDEtMDk6MDB+MTc6MDAt6aOf5pmC5Ym15paw6aSQ6aOy",
@@ -83,7 +90,14 @@
       "location": "新竹市北區文雅街6號(西大捐血室)",
       "activityDate": "2026-04-01",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387450653882091"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387450653882091",
+      "pttData": {
+        "rawLine": "4/1-4/4(三-六)新竹西大捐血室/竹北愛心樓",
+        "images": [
+          "https://i.imgur.com/b2w3yW5.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMDEtMDk6MDB+MTc6MzAt6aOf5pmC5Ym15paw6aSQ6aOy",
@@ -92,7 +106,14 @@
       "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
       "activityDate": "2026-04-01",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387445381408577"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387445381408577",
+      "pttData": {
+        "rawLine": "4/1-4/4(三-六)桃園中壢捐血室",
+        "images": [
+          "https://i.imgur.com/b2w3yW5.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMDEtMTA6MDB+MTY6MzAt5qGD5ZyS5biC5rG96LuK5YWs5pyD",
@@ -101,7 +122,14 @@
       "location": "桃園市中壢區中華路一段450號(內壢家樂福)",
       "activityDate": "2026-04-01",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387440029913064"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387440029913064",
+      "pttData": {
+        "rawLine": "4/1-4/4(三-六)桃園中壢捐血室",
+        "images": [
+          "https://i.imgur.com/b2w3yW5.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMDEtMDk6MzB+MTU6MzAt5Y2X5oqV57ij5bGx5Z+O5ZyL6Zqb542F5a2Q5pyD",
@@ -246,6 +274,23 @@
       "activityDate": "2026-04-01",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q070636693283470818"
+    },
+    {
+      "id": "cHR0LTIwMjYtMDQtMDEtNC8xLTQvNCjkuIkt5YWtKeWPsOWMl+W/oOWtnS/plbfmmKXmjZDooYDlrqQ=",
+      "time": "",
+      "organization": "台北忠孝/長春捐血室",
+      "location": "台北忠孝/長春捐血室",
+      "activityDate": "2026-04-01",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "4/1-4/4(三-六)台北忠孝/長春捐血室",
+        "images": [
+          "https://i.imgur.com/2GEYnhG.jpeg"
+        ]
+      },
+      "isPttOnly": true
     },
     {
       "id": "cHR0LTIwMjYtMDQtMDEtNC8xKOS4iSnmoYPlnJLpvpzlsbHmlofljJbkuIDot6/vvIjpnIAzLzI35YmN5aCx5ZCN77ya",
