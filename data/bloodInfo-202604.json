@@ -74,7 +74,14 @@
       "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
       "activityDate": "2026-04-01",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387451297761018"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387451297761018",
+      "pttData": {
+        "rawLine": "4/1-4/4(三-六)新竹西大捐血室/竹北愛心樓",
+        "images": [
+          "https://i.imgur.com/b2w3yW5.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMDEtMDk6MDB+MTc6MDAt6aOf5pmC5Ym15paw6aSQ6aOy",
@@ -83,7 +90,14 @@
       "location": "新竹市北區文雅街6號(西大捐血室)",
       "activityDate": "2026-04-01",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387450653882091"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387450653882091",
+      "pttData": {
+        "rawLine": "4/1-4/4(三-六)新竹西大捐血室/竹北愛心樓",
+        "images": [
+          "https://i.imgur.com/b2w3yW5.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMDEtMDk6MDB+MTc6MzAt6aOf5pmC5Ym15paw6aSQ6aOy",
@@ -92,7 +106,14 @@
       "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
       "activityDate": "2026-04-01",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387445381408577"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387445381408577",
+      "pttData": {
+        "rawLine": "4/1-4/4(三-六)桃園中壢捐血室",
+        "images": [
+          "https://i.imgur.com/b2w3yW5.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMDEtMTA6MDB+MTY6MzAt5qGD5ZyS5biC5rG96LuK5YWs5pyD",
@@ -101,7 +122,14 @@
       "location": "桃園市中壢區中華路一段450號(內壢家樂福)",
       "activityDate": "2026-04-01",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387440029913064"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q082387440029913064",
+      "pttData": {
+        "rawLine": "4/1-4/4(三-六)桃園中壢捐血室",
+        "images": [
+          "https://i.imgur.com/b2w3yW5.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMDEtMDk6MzB+MTU6MzAt5Y2X5oqV57ij5bGx5Z+O5ZyL6Zqb542F5a2Q5pyD",
@@ -203,15 +231,6 @@
       "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546560135597621"
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDQvMDEtMTA6MDB+MTg6MDAt5aSq5a2Q5bu66Kit6ZaL55m86IKh5Lu95pyJ6ZmQ5YWs5Y+4ICjlpKrlrZDmlofml4UpKOWOn+aIkOWkp+acg+mkqCk=",
-      "time": "10:00~18:00",
-      "organization": "太子建設開發股份有限公司 (太子文旅)(原成大會館)",
-      "location": "臺南南市東區大學路2號(成大太子文旅)",
-      "activityDate": "2026-04-01",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q070636699555865331"
-    },
-    {
       "id": "6auY6ZuELTIwMjYvMDQvMDEtMDk6MzB+MTc6MzAt5Y2X5bGx5Lq65aO95L+d6Zqq6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
       "time": "09:30~17:30",
       "organization": "南山人壽保險股份有限公司",
@@ -246,6 +265,23 @@
       "activityDate": "2026-04-01",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q070636693283470818"
+    },
+    {
+      "id": "cHR0LTIwMjYtMDQtMDEtNC8xLTQvNCjkuIkt5YWtKeWPsOWMl+W/oOWtnS/plbfmmKXmjZDooYDlrqQ=",
+      "time": "",
+      "organization": "台北忠孝/長春捐血室",
+      "location": "台北忠孝/長春捐血室",
+      "activityDate": "2026-04-01",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "4/1-4/4(三-六)台北忠孝/長春捐血室",
+        "images": [
+          "https://i.imgur.com/2GEYnhG.jpeg"
+        ]
+      },
+      "isPttOnly": true
     },
     {
       "id": "cHR0LTIwMjYtMDQtMDEtNC8xKOS4iSnmoYPlnJLpvpzlsbHmlofljJbkuIDot6/vvIjpnIAzLzI35YmN5aCx5ZCN77ya",
@@ -510,15 +546,6 @@
       "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q086546562036061658"
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDQvMDItMDk6MzB+MTc6MDAt6bq76LGG5beh6L+0",
-      "time": "09:30~17:00",
-      "organization": "麻豆巡迴",
-      "location": "臺南市麻豆區興國路6號(麻豆分局)",
-      "activityDate": "2026-04-02",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q070636707363793999"
-    },
-    {
       "id": "6auY6ZuELTIwMjYvMDQvMDItMDg6MDB+MTc6MDAt54Sh5qW156Wl6b6N5a6u",
       "time": "08:00~17:00",
       "organization": "無極祥龍宮",
@@ -535,15 +562,6 @@
       "activityDate": "2026-04-02",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q070636705640076817"
-    },
-    {
-      "id": "6auY6ZuELTIwMjYvMDQvMDItMTA6MDB+MTg6MDAt6Ie65Y2X5biC5Y+w5rGf5paH5YyW5Lit5b+D",
-      "time": "10:00~18:00",
-      "organization": "臺南市台江文化中心",
-      "location": "臺南市安南區安吉路一段207號(台江文化中心)",
-      "activityDate": "2026-04-02",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q070636705005107890"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMDItMDk6MzB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5YWn5Z+U5YiG5pyD",
