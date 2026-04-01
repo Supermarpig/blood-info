@@ -1,0 +1,116 @@
+{
+  "2026-05-16": [
+    {
+      "id": "cHR0LTIwMjYtMDUtMTYtNS8xNijlha0p5Y+w5Lit6KW/5bGv5Y+w54Gj5aSn6YGT5Zub5q61",
+      "time": "",
+      "organization": "台中西屯台灣大道四段",
+      "location": "台中西屯台灣大道四段",
+      "activityDate": "2026-05-16",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "餐飲"
+      ],
+      "pttData": {
+        "rawLine": "5/16(六)台中西屯台灣大道四段",
+        "images": [
+          "https://i.imgur.com/b5iWXG4.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.1826382,
+        "lng": 120.5936403
+      }
+    }
+  ],
+  "2026-05-26": [
+    {
+      "id": "cHR0LTIwMjYtMDUtMjYtNS8yNijkuowp44CBOC8yNijkuIkp44CBMTEvMjYo5ZubKeW9sOWMluaYrei8neWvpualrQ==",
+      "time": "",
+      "organization": "、8/26(三)、11/26(四)彰化昭輝實業",
+      "location": "、8/26(三)、11/26(四)彰化昭輝實業",
+      "activityDate": "2026-05-26",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/26(二)、8/26(三)、11/26(四)彰化昭輝實業",
+        "images": [
+          "https://i.imgur.com/05zw8g3.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    }
+  ],
+  "2026-05-02": [
+    {
+      "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnpm7Lmnpfmlpflha3mjZDooYDnq5k=",
+      "time": "",
+      "organization": "雲林斗六捐血站",
+      "location": "雲林斗六捐血站",
+      "activityDate": "2026-05-02",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/2(六)雲林斗六捐血站",
+        "images": [
+          "https://i.imgur.com/Sx0zzdK.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnlj7DljZfpurvosYbliIblsYA=",
+      "time": "",
+      "organization": "台南麻豆分局",
+      "location": "台南麻豆分局",
+      "activityDate": "2026-05-02",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/2(六)台南麻豆分局",
+        "images": [
+          "https://i.imgur.com/siPtJgZ.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 23.1827133,
+        "lng": 120.2477043
+      }
+    }
+  ],
+  "2026-05-21": [
+    {
+      "id": "cHR0LTIwMjYtMDUtMjEtNS8yMSjlm5sp6auY6ZuE6Lev56u55Y2A5YWs5omA",
+      "time": "",
+      "organization": "高雄路竹區公所",
+      "location": "高雄路竹區公所",
+      "activityDate": "2026-05-21",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券",
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/21(四)高雄路竹區公所",
+        "images": [
+          "https://i.imgur.com/xdWI21n.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 23.0839951,
+        "lng": 120.5877209
+      }
+    }
+  ]
+}
