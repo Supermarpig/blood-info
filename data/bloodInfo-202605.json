@@ -1,4 +1,30 @@
 {
+  "2026-05-03": [
+    {
+      "id": "cHR0LTIwMjYtMDUtMDMtNS8zKOaXpSnlj7DkuK3mspnpub/npo/lvrfot68=",
+      "time": "",
+      "organization": "台中沙鹿福德路",
+      "location": "台中沙鹿福德路",
+      "activityDate": "2026-05-03",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券",
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/3(日)台中沙鹿福德路",
+        "images": [
+          "https://i.imgur.com/P8QEj1H.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.2489668,
+        "lng": 120.566331
+      }
+    }
+  ],
   "2026-05-16": [
     {
       "id": "cHR0LTIwMjYtMDUtMTYtNS8xNijlha0p5Y+w5Lit6KW/5bGv5Y+w54Gj5aSn6YGT5Zub5q61",
