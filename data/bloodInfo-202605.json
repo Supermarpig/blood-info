@@ -111,6 +111,27 @@
         "lat": 23.1827133,
         "lng": 120.2477043
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDItNS8yLTUvMyjlha0t5pelKeWxj+adseaNkOihgOermQ==",
+      "time": "",
+      "organization": "屏東捐血站",
+      "location": "屏東捐血站",
+      "activityDate": "2026-05-02",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/2-5/3(六-日)屏東捐血站",
+        "images": [
+          "https://i.imgur.com/AmkrbvF.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.6887611,
+        "lng": 120.4891787
+      }
     }
   ],
   "2026-05-21": [
