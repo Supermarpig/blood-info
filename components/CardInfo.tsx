@@ -1,6 +1,8 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Building2, ExternalLink, Gift } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import {
   Dialog,
@@ -74,6 +76,17 @@ export default function CardInfo({
   className = "",
 }: CardInfoProps) {
   const [isPttDialogOpen, setIsPttDialogOpen] = useState(false);
+  const [showShareHint, setShowShareHint] = useState(false);
+  const hoverTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  const handleMouseEnter = () => {
+    hoverTimer.current = setTimeout(() => setShowShareHint(true), 1200);
+  };
+
+  const handleMouseLeave = () => {
+    clearTimeout(hoverTimer.current);
+    setShowShareHint(false);
+  };
 
   const eventTags = donation.tags || donation.pttData?.tags || [];
   const giftLinks = eventTags.map((tag) => getGiftByTagId(tag)).filter(Boolean);
@@ -121,6 +134,8 @@ export default function CardInfo({
   return (
     <Card
       className={`overflow-hidden transition-all duration-200 hover:shadow-md border-gray-200 flex flex-col ${className}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <CardContent className="p-0 flex-grow flex flex-col">
         <div className="flex flex-col h-full">
@@ -322,6 +337,7 @@ export default function CardInfo({
                   location={donation.location}
                   giftNames={giftLinks.map((g) => g!.name)}
                   shareUrl={shareUrl}
+                  showHint={showShareHint}
                 />
               </div>
             </div>

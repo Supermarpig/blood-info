@@ -17,6 +17,7 @@ interface ShareModalProps {
   location: string;
   giftNames: string[];
   shareUrl: string;
+  showHint?: boolean;
 }
 
 export default function ShareModal({
@@ -26,6 +27,7 @@ export default function ShareModal({
   location,
   giftNames,
   shareUrl,
+  showHint = false,
 }: ShareModalProps) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -78,10 +80,13 @@ export default function ShareModal({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <button
-          className="p-1.5 text-gray-400 hover:text-blue-500 hover:bg-blue-50 rounded-full transition-colors"
           title="分享這個活動"
+          className="relative p-1.5 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 active:bg-slate-200 transition-colors"
         >
-          <Share2 className="w-5 h-5" />
+          {showHint && (
+            <span className="absolute inset-0 rounded-full animate-ping bg-slate-400 opacity-30" />
+          )}
+          <Share2 className="relative w-4 h-4" />
         </button>
       </DialogTrigger>
 
