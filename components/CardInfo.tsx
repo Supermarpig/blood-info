@@ -10,6 +10,8 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { getGiftByTagId } from "@/lib/giftConfig";
+import { CITIES } from "@/lib/cityConfig";
+import ShareModal from "@/components/ShareModal";
 
 interface DonationEvent {
   id?: string;
@@ -72,6 +74,23 @@ export default function CardInfo({
   className = "",
 }: CardInfoProps) {
   const [isPttDialogOpen, setIsPttDialogOpen] = useState(false);
+
+  const eventTags = donation.tags || donation.pttData?.tags || [];
+  const giftLinks = eventTags.map((tag) => getGiftByTagId(tag)).filter(Boolean);
+
+  const matchedCity = CITIES.find(
+    (c) =>
+      c.centerFilter === donation.center &&
+      c.locationKeywords.some((kw) => donation.location.includes(kw))
+  );
+  const toBase64Url = (b64: string) =>
+    b64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
+
+  const shareUrl = donation.id
+    ? `https://www.bloodtw.com/activity/${toBase64Url(donation.id)}`
+    : matchedCity
+    ? `https://www.bloodtw.com/city/${matchedCity.slug}`
+    : "https://www.bloodtw.com";
 
   // 中心顯示名稱對應
   const centerDisplayNames: Record<string, string> = {
@@ -294,6 +313,16 @@ export default function CardInfo({
                     </DialogContent>
                   </Dialog>
                 )}
+
+                {/* 分享按鈕 */}
+                <ShareModal
+                  organization={donation.organization}
+                  activityDate={donation.activityDate}
+                  time={donation.time}
+                  location={donation.location}
+                  giftNames={giftLinks.map((g) => g!.name)}
+                  shareUrl={shareUrl}
+                />
               </div>
             </div>
           </div>
@@ -336,25 +365,19 @@ export default function CardInfo({
             )}
 
             {/* 贈品 Tags 連結 */}
-            {(() => {
-              const eventTags = donation.tags || donation.pttData?.tags || [];
-              const giftLinks = eventTags
-                .map((tag) => getGiftByTagId(tag))
-                .filter(Boolean);
-              return giftLinks.length > 0 ? (
-                <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-gray-100">
-                  {giftLinks.map((gift) => (
-                    <Link
-                      key={gift!.slug}
-                      href={`/gift/${gift!.slug}`}
-                      className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full hover:bg-pink-100 transition-colors"
-                    >
-                      {gift!.name}
-                    </Link>
-                  ))}
-                </div>
-              ) : null;
-            })()}
+            {giftLinks.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-gray-100">
+                {giftLinks.map((gift) => (
+                  <Link
+                    key={gift!.slug}
+                    href={`/gift/${gift!.slug}`}
+                    className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full hover:bg-pink-100 transition-colors"
+                  >
+                    {gift!.name}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </CardContent>
