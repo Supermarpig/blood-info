@@ -62,7 +62,7 @@ function isValidImageBuffer(buffer) {
     return false;
 }
 
-// 下載圖片並進行 OCR 識別（接收指定的 worker）
+// 下載圖片並進行 OCR 識別（接收指定的 worker），回傳 { text, confidence }
 async function ocrImageUrl(worker, imageUrl) {
     try {
         const response = await axios.get(imageUrl, {
@@ -77,30 +77,36 @@ async function ocrImageUrl(worker, imageUrl) {
 
         if (!isValidImageBuffer(buffer)) {
             console.warn(`跳過不支援的圖片格式 (${imageUrl}), 前 4 bytes: ${buffer.slice(0, 4).toString('hex')}`);
-            return '';
+            return { text: '', confidence: 0 };
         }
 
-        const { data: { text } } = await worker.recognize(buffer);
-        return text;
+        const { data: { text, confidence } } = await worker.recognize(buffer);
+        return { text: text || '', confidence: Math.round(confidence) };
     } catch (error) {
         console.error(`OCR 識別失敗 (${imageUrl}): ${error.message}`);
-        return '';
+        return { text: '', confidence: 0 };
     }
 }
 
-// 對 PTT 事件的文字和圖片進行分析，提取 tags（接收指定的 worker）
+// 對 PTT 事件的文字和圖片進行分析，提取 tags 與 OCR 結果（接收指定的 worker）
+// 回傳 { tags, ocrTexts }
 async function extractTagsFromEvent(worker, rawLine, images) {
     const allText = [rawLine];
+    const ocrTexts = [];
     const imagesToProcess = (images || []).slice(0, 3);
 
     for (const imageUrl of imagesToProcess) {
-        const text = await ocrImageUrl(worker, imageUrl);
+        const { text, confidence } = await ocrImageUrl(worker, imageUrl);
         if (text) {
             allText.push(text);
+            ocrTexts.push({ url: imageUrl, text, confidence });
         }
     }
 
-    return extractTagsFromText(allText.join(' '));
+    return {
+        tags: extractTagsFromText(allText.join(' ')),
+        ocrTexts,
+    };
 }
 
 // ==================== PTT OCR 快取 ====================
@@ -526,10 +532,16 @@ async function fetchPttData() {
                         const idx = nextIdx++;
                         const event = eventsNeedingOcr[idx];
                         console.log(`  [${idx + 1}/${eventsNeedingOcr.length}] OCR: ${event.locationStr || event.rawLine.substring(0, 30)}`);
-                        event.tags = await extractTagsFromEvent(worker, event.rawLine, event.images);
+                        const ocrResult = await extractTagsFromEvent(worker, event.rawLine, event.images);
+                        event.tags = ocrResult.tags;
+                        event.ocrTexts = ocrResult.ocrTexts;
                         pttOcrCache.set(event.rawLine, event.tags);
                         if (event.tags.length > 0) {
                             console.log(`    → 識別到 tags: ${event.tags.join(', ')}`);
+                        }
+                        if (event.ocrTexts.length > 0) {
+                            const avgConf = Math.round(event.ocrTexts.reduce((s, o) => s + o.confidence, 0) / event.ocrTexts.length);
+                            console.log(`    → OCR 平均信心度: ${avgConf}%`);
                         }
                     }
                 };
@@ -564,14 +576,44 @@ async function fetchPttData() {
 }
 
 function mergeData(officialData, pttData, existingLocalData = null, targetYear = null, targetMonth = null, pttUrl = PTT_FALLBACK_URL) {
+    const noiseWords = [
+        '台北', '臺北', '新北', '基隆', '桃園', '新竹', '苗栗', '台中', '臺中', '彰化', '雲林', '南投', '嘉義', '台南', '臺南', '高雄', '屏東', '宜蘭', '花蓮', '台東', '臺東',
+        '捐血室', '捐血站', '捐血車', '巡迴車', '捷運站', '公園', '出口', '配合'
+    ];
+
+    function isLocationMatch(pttLocationStr, eventLoc, eventLocNoAdmin, eventOrg) {
+        let pLocRaw = pttLocationStr.replace(/台/g, '臺');
+        const pLocs = pLocRaw.split(/[\/、,，\s]+/).map(s => s.trim()).filter(s => s);
+
+        return pLocs.some(subLoc => {
+            let pLocClean = subLoc
+                .replace(/[（(][^）)]*[）)]/g, '')
+                .replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+
+            let prev;
+            do {
+                prev = pLocClean;
+                noiseWords.forEach(w => {
+                    if (pLocClean.startsWith(w)) pLocClean = pLocClean.substring(w.length);
+                    if (pLocClean.endsWith(w)) pLocClean = pLocClean.substring(0, pLocClean.length - w.length);
+                });
+            } while (prev !== pLocClean && pLocClean.length > 2);
+
+            if (!pLocClean || pLocClean.length < 2 || /^\d+$/.test(pLocClean)) return false;
+
+            const pLocNoAdmin = pLocClean.replace(/[市縣區鄉鎮]/g, '');
+
+            return eventLoc.includes(pLocClean) ||
+                   eventLocNoAdmin.includes(pLocClean) ||
+                   eventOrg.includes(pLocClean) ||
+                   (pLocNoAdmin !== pLocClean && eventLocNoAdmin.includes(pLocNoAdmin));
+        });
+    }
+
     // If we have valid new PTT data, proceed with normal matching
     if (pttData && pttData.length > 0) {
         let matchCount = 0;
         let preservedCount = 0;
-        const noiseWords = [
-            '台北', '臺北', '新北', '基隆', '桃園', '新竹', '苗栗', '台中', '臺中', '彰化', '雲林', '南投', '嘉義', '台南', '臺南', '高雄', '屏東', '宜蘭', '花蓮', '台東', '臺東',
-            '捐血室', '捐血站', '捐血車', '巡迴車', '捷運站', '公園', '出口', '配合'
-        ];
 
         for (const date in officialData) {
             const events = officialData[date];
@@ -580,54 +622,30 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
 
             events.forEach(event => {
                 let eventLoc = event.location || event.center || '';
-                // Normalize official location
                 eventLoc = eventLoc.replace(/台/g, '臺').replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+                let eventOrg = (event.organization || '').replace(/台/g, '臺').replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+                const eventLocNoAdmin = eventLoc.replace(/[市縣區鄉鎮]/g, '');
 
                 let matchedPtt = null;
 
-                // 只有當該日期有 PTT 資料時才嘗試匹配
                 if (pttEventsForDate.length > 0) {
-                    matchedPtt = pttEventsForDate.find(p => {
-                        // Split PTT location info by common delimiters
-                        let pLocRaw = p.locationStr.replace(/台/g, '臺');
-                        const pLocs = pLocRaw.split(/[\/、,，\s]+/).map(s => s.trim()).filter(s => s);
-
-                        return pLocs.some(subLoc => {
-                            let pLocClean = subLoc.replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
-
-                            // Iteratively strip noise from start/end
-                            let prev;
-                            do {
-                                prev = pLocClean;
-                                noiseWords.forEach(w => {
-                                    if (pLocClean.startsWith(w)) pLocClean = pLocClean.substring(w.length);
-                                    if (pLocClean.endsWith(w)) pLocClean = pLocClean.substring(0, pLocClean.length - w.length);
-                                });
-                            } while (prev !== pLocClean && pLocClean.length > 2);
-
-                            // Filter out empty or too short tokens (unless specific known short ones? "二信" is 2 chars)
-                            // "二信" -> Clean is "二信". Length 2.
-                            if (!pLocClean || pLocClean.length < 2 || /^\d+$/.test(pLocClean)) return false;
-
-                            // Check inclusion
-                            return eventLoc.includes(pLocClean);
-                        });
-                    });
+                    matchedPtt = pttEventsForDate.find(p =>
+                        isLocationMatch(p.locationStr, eventLoc, eventLocNoAdmin, eventOrg)
+                    );
                 }
 
                 if (matchedPtt) {
-                    // 新的 PTT 資料匹配成功
                     event.pttData = {
                         rawLine: matchedPtt.rawLine,
                         images: matchedPtt.images,
+                        ...(matchedPtt.ocrTexts?.length ? { ocrTexts: matchedPtt.ocrTexts } : {}),
                     };
-                    // 合併 tags 並去重
                     const existingTags = event.tags || [];
                     const pttTags = matchedPtt.tags || [];
                     event.tags = Array.from(new Set([...existingTags, ...pttTags]));
                     matchCount++;
                 } else if (existingEventsForDate.length > 0) {
-                    // 匹配失敗，嘗試從舊資料保留 pttData / tags / location
+                    // 嘗試從舊資料保留 pttData / tags / location
                     const storedEvent = existingEventsForDate.find(e =>
                         e.id === event.id ||
                         (e.organization === event.organization && e.location?.startsWith(event.location))
@@ -636,12 +654,25 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                     if (storedEvent?.pttData) {
                         event.pttData = storedEvent.pttData;
                         preservedCount++;
+                    } else {
+                        // 也從舊的 isPttOnly 事件中搜尋匹配的 PTT 資料
+                        const pttOnlyMatch = existingEventsForDate.find(e =>
+                            e.isPttOnly && e.pttData &&
+                            isLocationMatch(e.location || '', eventLoc, eventLocNoAdmin, eventOrg)
+                        );
+                        if (pttOnlyMatch) {
+                            event.pttData = pttOnlyMatch.pttData;
+                            if (pttOnlyMatch.tags?.length) {
+                                event.tags = Array.from(new Set([...(event.tags || []), ...pttOnlyMatch.tags]));
+                            }
+                            preservedCount++;
+                        }
                     }
-                    if (storedEvent?.tags?.length) {
+
+                    if (storedEvent?.tags?.length && !event.tags?.length) {
                         const existingTags = event.tags || [];
                         event.tags = Array.from(new Set([...existingTags, ...storedEvent.tags]));
                     }
-                    // 若舊 location 有額外備註（如括號標記），優先保留
                     if (storedEvent?.location?.startsWith(event.location) && storedEvent.location !== event.location) {
                         event.location = storedEvent.location;
                     }
@@ -685,6 +716,7 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                         pttData: {
                             rawLine: pttEvent.rawLine,
                             images: pttEvent.images,
+                            ...(pttEvent.ocrTexts?.length ? { ocrTexts: pttEvent.ocrTexts } : {}),
                         },
                         isPttOnly: true // 標記這是 PTT 獨有的資料
                     };
