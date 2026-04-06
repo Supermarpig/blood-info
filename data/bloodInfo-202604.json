@@ -1060,108 +1060,6 @@
       "activityDate": "2026-04-03",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q070636702635187403"
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDMtNC8zLTQvNijkupQt5LiAKeW9sOWMluWQhOaMh+WumuaNkOihgOWWrg==",
-      "time": "",
-      "organization": "彰化各指定捐血單",
-      "location": "彰化各指定捐血單",
-      "activityDate": "2026-04-03",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/3-4/6(五-一)彰化各指定捐血單",
-        "images": [
-          "https://i.imgur.com/4EojeRQ.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDMtNC8zLTQvNijkupQt5LiAKembsuael+aNkOihgOermQ==",
-      "time": "",
-      "organization": "雲林捐血站",
-      "location": "雲林捐血站",
-      "activityDate": "2026-04-03",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/3-4/6(五-一)雲林捐血站",
-        "images": [
-          "https://i.imgur.com/4EojeRQ.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDMtNC8zLTQvNCjkupQt5YWtKeWPsOWNl+awuOemj+aNkOihgOWupA==",
-      "time": "",
-      "organization": "台南永福捐血室",
-      "location": "台南永福捐血室",
-      "activityDate": "2026-04-03",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/3-4/4(五-六)台南永福捐血室",
-        "images": [
-          "https://i.imgur.com/RnhFClD.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDMtNC8zLTQvNCjkupQt5YWtKeWPsOWNl+adseiIiC/ljJflrokv5rC456aP5o2Q6KGA5a6k",
-      "time": "",
-      "organization": "台南東興/北安/永福捐血室",
-      "location": "台南東興/北安/永福捐血室",
-      "activityDate": "2026-04-03",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/3-4/4(五-六)台南東興/北安/永福捐血室",
-        "images": [
-          "https://i.imgur.com/uEaIr2Y.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDMtNC8zLTQvMTUo5LqULeS4iSnoirHok67mjZDooYDnq5k=",
-      "time": "",
-      "organization": "花蓮捐血站",
-      "location": "花蓮捐血站",
-      "activityDate": "2026-04-03",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/3-4/15(五-三)花蓮捐血站",
-        "images": [
-          "https://i.imgur.com/rBQnc6g.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDMtNC8zLTQvNijkupQt5LiAKeiKseiTrumBoOeZvuWSjOW5s+W7o+WgtA==",
-      "time": "",
-      "organization": "花蓮遠百和平廣場",
-      "location": "花蓮遠百和平廣場",
-      "activityDate": "2026-04-03",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/3-4/6(五-一)花蓮遠百和平廣場",
-        "images": [
-          "https://i.imgur.com/Wug7UE0.jpeg"
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-04-04": [
@@ -1281,8 +1179,7 @@
         "images": [
           "https://i.imgur.com/2GEYnhG.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMDQtMTA6MDB+MTc6MDAt5pmv5paw542F5a2Q5pyDQSAz",
@@ -1306,8 +1203,7 @@
         "images": [
           "https://i.imgur.com/b2w3yW5.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMDQtMDg6MDB+MTc6MDAt6aOf5pmC5Ym15paw6aSQ6aOy",
@@ -1356,8 +1252,7 @@
         "images": [
           "https://i.imgur.com/b2w3yW5.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMDQtMDk6MDB+MTY6MDAt56S+5ZyY5rOV5Lq66Z2c5a+n5YWs55uK5Y2U5pyD",
@@ -1372,8 +1267,7 @@
         "images": [
           "https://i.imgur.com/b6RwiUi.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMDQtMDk6MDB+MTY6MDAt5ZCr576e6I2J5Y2U5pyD",
@@ -1422,8 +1316,7 @@
         "images": [
           "https://i.imgur.com/b2w3yW5.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMDQtMDk6MzB+MTY6MDAt5aSn6ZuF542F5a2Q5pyD",
@@ -1465,8 +1358,7 @@
         "images": [
           "https://i.imgur.com/S5YCbgU.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMDQtMDk6MDB+MTY6MDAt6KW/6J6656aP6IiI5a6u",
@@ -1535,8 +1427,7 @@
         "images": [
           "https://i.imgur.com/YLzxDrw.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMDQtMDk6MzB+MTg6MDAt6Ie65Lit57ij5YGl5rCR542F5a2Q5pyDKOadseWPsOS4reWNgCk=",
@@ -1578,8 +1469,7 @@
         "images": [
           "https://i.imgur.com/ou0mPI9.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMDQtMDk6MDB+MTc6MzAt6Imv5aCF5bu66Kit6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -1612,8 +1502,7 @@
         "images": [
           "https://i.imgur.com/bwew4BR.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMDQtMDk6MzB+MTg6MDAt5L2b5YWJ5Y2X5bGP5LiA5YiG5pyD",
@@ -1637,8 +1526,7 @@
         "images": [
           "https://i.imgur.com/0zPfIbD.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMDQtMDk6MDB+MTc6MDAt5ZiJ576p5biC55Sf5ZG957ea5Y2U5pyD5oCl5pWR6ZqK",
@@ -1653,8 +1541,7 @@
         "images": [
           "https://i.imgur.com/TpshfXg.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMDQtMDg6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTHljYDoh7rljZfluILpub3msLTnjYXlrZDmnIM=",
@@ -1669,8 +1556,7 @@
         "images": [
           "https://i.imgur.com/rya3VZX.jpeg"
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMDQtMDg6MDB+MTc6MDAt5ZiJ576p5biC55Sf5ZG957ea5Y2U5pyD5oCl5pWR6ZqK",
@@ -1680,152 +1566,6 @@
       "activityDate": "2026-04-04",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q070636710087995988"
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDQtNC80KOWFrSnlj7DljJfkuK3lsbHmjbfpgYvnq5kz6Jmf5Ye65Y+j",
-      "time": "",
-      "organization": "台北中山捷運站3號出口",
-      "location": "台北中山捷運站3號出口",
-      "activityDate": "2026-04-04",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/4(六)台北中山捷運站3號出口",
-        "images": [
-          "https://i.imgur.com/teYkUSX.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDQtNC80KOWFrSnmlrDljJfomIbmtLLnjonmuIXmtLvli5XkuK3lv4M=",
-      "time": "",
-      "organization": "新北蘆洲玉清活動中心",
-      "location": "新北蘆洲玉清活動中心",
-      "activityDate": "2026-04-04",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/4(六)新北蘆洲玉清活動中心",
-        "images": [
-          "https://i.imgur.com/ZBe4DS6.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 25.0845198,
-        "lng": 121.4815601
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDQtNC80LTQvNijlha0t5LiAKeWPsOS4reWQhOaMh+WumuaNkOihgOm7ng==",
-      "time": "",
-      "organization": "台中各指定捐血點",
-      "location": "台中各指定捐血點",
-      "activityDate": "2026-04-04",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/4-4/6(六-一)台中各指定捐血點",
-        "images": [
-          "https://i.imgur.com/4EojeRQ.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDQtNC80KOWFrSnlj7DkuK3lpKfogprno7rmuqrmm7jpmaI=",
-      "time": "",
-      "organization": "台中大肚磺溪書院",
-      "location": "台中大肚磺溪書院",
-      "activityDate": "2026-04-04",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/4(六)台中大肚磺溪書院",
-        "images": [
-          "https://i.imgur.com/ZY96ODg.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 24.1500945,
-        "lng": 120.5393805
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDQtNC80KOWFrSnlvbDljJbnt5ropb83LTEx56a+6aCG6ZaA5biC",
-      "time": "",
-      "organization": "彰化線西7-11禾順門市",
-      "location": "彰化線西7-11禾順門市",
-      "activityDate": "2026-04-04",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "pttData": {
-        "rawLine": "4/4(六)彰化線西7-11禾順門市",
-        "images": [
-          "https://i.imgur.com/2aejFvC.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDQtNC80LTQvNSjlha0t5pelKemrmOmbhOWyoeWxseaNkOihgOWupA==",
-      "time": "",
-      "organization": "高雄岡山捐血室",
-      "location": "高雄岡山捐血室",
-      "activityDate": "2026-04-04",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/4-4/5(六-日)高雄岡山捐血室",
-        "images": [
-          "https://i.imgur.com/qB14cY0.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDQtNC80LTQvNijlha0t5LiAKeWunOiYreaNkOihgOermQ==",
-      "time": "",
-      "organization": "宜蘭捐血站",
-      "location": "宜蘭捐血站",
-      "activityDate": "2026-04-04",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/4-4/6(六-一)宜蘭捐血站",
-        "images": [
-          "https://i.imgur.com/n3Ju7Cs.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDQtNC80KOWFrSnlrpzomK3mjK/lnLDppIXoiJY=",
-      "time": "",
-      "organization": "宜蘭振地餅舖",
-      "location": "宜蘭振地餅舖",
-      "activityDate": "2026-04-04",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/4(六)宜蘭振地餅舖",
-        "images": [
-          "https://i.imgur.com/5UmJfuJ.jpeg"
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-04-05": [
@@ -2093,65 +1833,6 @@
       "activityDate": "2026-04-05",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q070636723522348932"
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDUtNC81LTQvNijml6Ut5LiAKeWPsOS4reS4reato+aNkOihgOWupA==",
-      "time": "",
-      "organization": "台中中正捐血室",
-      "location": "台中中正捐血室",
-      "activityDate": "2026-04-05",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券"
-      ],
-      "pttData": {
-        "rawLine": "4/5-4/6(日-一)台中中正捐血室",
-        "images": [
-          "https://i.imgur.com/wmlipSd.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 25.0328014,
-        "lng": 121.5172884
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDUtNC81KOaXpSnlmInnvqnmjZDooYDnq5k=",
-      "time": "",
-      "organization": "嘉義捐血站",
-      "location": "嘉義捐血站",
-      "activityDate": "2026-04-05",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "4/5(日)嘉義捐血站",
-        "images": [
-          "https://i.imgur.com/2f2e4Nm.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDQtMDUtNC81KOaXpSnpq5jpm4TkuZ3lpoLmjZDooYDlrqQ=",
-      "time": "",
-      "organization": "高雄九如捐血室",
-      "location": "高雄九如捐血室",
-      "activityDate": "2026-04-05",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "pttData": {
-        "rawLine": "4/5(日)高雄九如捐血室",
-        "images": [
-          "https://i.imgur.com/sZQs0mq.jpeg"
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-04-06": [
@@ -2243,7 +1924,16 @@
       "location": "新北市樹林區千歲街2號(樹林鎮南宮千歲廟廣場)",
       "activityDate": "2026-04-06",
       "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q092516586394186367"
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q092516586394186367",
+      "pttData": {
+        "rawLine": "4/6(一)新北樹林鎮南宮",
+        "images": [
+          "https://i.imgur.com/7mdpyRb.jpeg",
+          "https://i.imgur.com/BWaGFJj.png",
+          "https://i.imgur.com/6U9L1Bp.png"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMDYtMDg6MDB+MTc6MDAt5o235a6J54m5IOa6kOiqoOi7iuihjC/pm7vli5Xou4og5rqQ6IiI6LuK6KGML+WDkeiIiOmpl+i7iuW7oA==",
@@ -2346,7 +2036,16 @@
       "location": "臺中市北區學士路91號中國附醫復健大樓正對面(中正公園捐血室)",
       "activityDate": "2026-04-06",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q092351193088668870"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q092351193088668870",
+      "pttData": {
+        "rawLine": "4/6(一)台中中正捐血室",
+        "images": [
+          "https://i.imgur.com/wmlipSd.jpeg"
+        ]
+      },
+      "tags": [
+        "禮券"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMDYtMDk6MzB+MTU6MDAt57Sr5Y2X5a6u",
@@ -2391,7 +2090,16 @@
       "location": "雲林縣口湖鄉中正路一段187號(全聯福利中心雲林口湖店)",
       "activityDate": "2026-04-06",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q092351186459588367"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q092351186459588367",
+      "pttData": {
+        "rawLine": "4/6(一)台中中正捐血室",
+        "images": [
+          "https://i.imgur.com/wmlipSd.jpeg"
+        ]
+      },
+      "tags": [
+        "禮券"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMDYtMDk6MzB+MTY6MDAt5b2w5YyW57ij6Iis6Iul5oWI5ZaE5pyD",
@@ -2487,6 +2195,27 @@
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q076546183074761153"
     },
     {
+      "id": "cHR0LTIwMjYtMDQtMDYtNC82KOS4gCnlj7DljJflpKflkIzoj6/pmbDooZc=",
+      "time": "",
+      "organization": "台北大同華陰街",
+      "location": "台北大同華陰街",
+      "activityDate": "2026-04-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "4/6(一)台北大同華陰街",
+        "images": [
+          "https://i.imgur.com/XJAr0aE.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 25.0497801,
+        "lng": 121.5172886
+      }
+    },
+    {
       "id": "cHR0LTIwMjYtMDQtMDYtNC82KOS4gCnmlrDljJfkuK3lkozkuK3lsbHot6/kuInmrrU=",
       "time": "",
       "organization": "新北中和中山路三段",
@@ -2510,6 +2239,76 @@
         "lat": 24.9732048,
         "lng": 121.3963962
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDQtMDYtNC82KOS4gCnmlrDljJfmqLnmnpfmv5/lronlrq7lsI3pnaIv5p2/5qmL5aSn6KeA5raI6Ziy5YiG6ZqK",
+      "time": "",
+      "organization": "新北樹林濟安宮對面/板橋大觀消防分隊",
+      "location": "新北樹林濟安宮對面/板橋大觀消防分隊",
+      "activityDate": "2026-04-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "pttData": {
+        "rawLine": "4/6(一)新北樹林濟安宮對面/板橋大觀消防分隊",
+        "images": [
+          "https://i.imgur.com/pdZpq2W.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDQtMDYtNC82KOS4gCnlj7DkuK3lkITmjIflrprmjZDooYDpu54=",
+      "time": "",
+      "organization": "台中各指定捐血點",
+      "location": "台中各指定捐血點",
+      "activityDate": "2026-04-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "4/6(一)台中各指定捐血點",
+        "images": [
+          "https://i.imgur.com/4EojeRQ.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDQtMDYtNC82KOS4gCnlvbDljJblkITmjIflrprmjZDooYDpu54=",
+      "time": "",
+      "organization": "彰化各指定捐血點",
+      "location": "彰化各指定捐血點",
+      "activityDate": "2026-04-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "4/6(一)彰化各指定捐血點",
+        "images": [
+          "https://i.imgur.com/4EojeRQ.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDQtMDYtNC82KOS4gCnpm7LmnpfmjZDooYDnq5k=",
+      "time": "",
+      "organization": "雲林捐血站",
+      "location": "雲林捐血站",
+      "activityDate": "2026-04-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "4/6(一)雲林捐血站",
+        "images": [
+          "https://i.imgur.com/4EojeRQ.jpeg"
+        ]
+      },
+      "isPttOnly": true
     },
     {
       "id": "cHR0LTIwMjYtMDQtMDYtNC82KOS4gCnpm7Lmnpflj6PmuZblhajoga8=",
@@ -2555,6 +2354,59 @@
         "lat": 23.1690487,
         "lng": 120.1779545
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDQtMDYtNC82KOS4gCnlrpzomK3mjZDooYDnq5k=",
+      "time": "",
+      "organization": "宜蘭捐血站",
+      "location": "宜蘭捐血站",
+      "activityDate": "2026-04-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "pttData": {
+        "rawLine": "4/6(一)宜蘭捐血站",
+        "images": [
+          "https://i.imgur.com/n3Ju7Cs.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDQtMDYtNC82LTQvMTUo5LiALeS4iSnoirHok67mjZDooYDnq5k=",
+      "time": "",
+      "organization": "花蓮捐血站",
+      "location": "花蓮捐血站",
+      "activityDate": "2026-04-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "4/6-4/15(一-三)花蓮捐血站",
+        "images": [
+          "https://i.imgur.com/rBQnc6g.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDQtMDYtNC82KOS4gCnoirHok67pgaDnmb7lkozlubPlu6PloLQ=",
+      "time": "",
+      "organization": "花蓮遠百和平廣場",
+      "location": "花蓮遠百和平廣場",
+      "activityDate": "2026-04-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "4/6(一)花蓮遠百和平廣場",
+        "images": [
+          "https://i.imgur.com/Wug7UE0.jpeg"
+        ]
+      },
+      "isPttOnly": true
     }
   ],
   "2026-04-07": [
@@ -5029,6 +4881,13 @@
       "activityDate": "2026-04-12",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q076546255658596717",
+      "pttData": {
+        "rawLine": "4/12(日)台南仁德運動公園",
+        "images": [
+          "https://i.imgur.com/LyUcD8F.jpeg"
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 22.9684607,
         "lng": 120.2569728
