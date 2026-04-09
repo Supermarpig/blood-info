@@ -138,7 +138,7 @@ export default function HeroSection({
         <p className="text-red-200 text-xs font-medium uppercase tracking-widest mb-2">
           全台捐血資訊即時查詢
         </p>
-        <h2 className="text-2xl font-extrabold text-white leading-snug">你的 300cc</h2>
+        <h2 className="text-2xl font-extrabold text-white leading-snug">你的 250cc</h2>
         <p className="text-xl font-bold text-pink-200 mb-4">是別人的全部</p>
 
         <GiftPills />
