@@ -158,6 +158,21 @@ export default async function NewsArticlePage({ params }: PageProps) {
           </ul>
         </div>
       )}
+
+      {/* Author Bio */}
+      <div className="mt-10 pt-6 border-t border-gray-100">
+        <div className="flex items-start gap-3">
+          <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+            <span className="text-red-600 text-sm font-bold">編</span>
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-gray-900">{author}</p>
+            <p className="text-xs text-gray-500 mt-1">
+              關注台灣捐血資訊的志願編輯團隊，文章資料來源為台灣血液基金會官方資料與衛福部公告，致力提供正確、即時的捐血衛教內容。
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
