@@ -627,6 +627,38 @@
       "isPttOnly": true
     }
   ],
+  "2026-05-10": [
+    {
+      "id": "cHR0LTIwMjYtMDUtMTAtNS8xMCjml6Up6Zuy5p6X6KW/6J665YiG5bGA",
+      "time": "",
+      "organization": "雲林西螺分局",
+      "location": "雲林西螺分局",
+      "activityDate": "2026-05-10",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/10(日)雲林西螺分局",
+        "images": [
+          "https://i.imgur.com/TsMxcH8.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/TsMxcH8.jpeg",
+            "text": "點\nS 朱 血 抽 好 禮 的 活動 又 來 了 ,\n歡迎 各 位 親朋 好 友 一 起 來 挽 袖 捐 熱血 !\n日 期 :115 年 5 月 10 日 (星期 日 )\n09:00-16:00 摸 彩\n捐血 請 攜帶 身分 證 靖 戊 雇 闖 好 柏\n地 點 1\n西 螺 分 局 各 中 生, 閏 有 關 陳\n西 螺 派 出 所 前 廣場 | 4 了\n(2\n聯合 主 辦 : 弦 蒂 西 螺 分 局 義 警 中 隊\n雲 林 縣 健身 探 協會\n西 螺 後 憲\n承辦 單位 : 西 螺 義 警 分 隊 西 螺 派 出 所\n和 禮 外 衛生 紙 、 白 米 、 眉 油 、 牙 膏 、 洗 碗 精 、 係 鮮 腊 、\n贈 呈 介 人\n",
+            "confidence": 67
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 23.8006906,
+        "lng": 120.4613448
+      }
+    }
+  ],
   "2026-05-09": [
     {
       "id": "cHR0LTIwMjYtMDUtMDktNS85KOWFrSnpq5jpm4Tlh7nlrZDlupXlvrflronlrq4=",
@@ -749,6 +781,38 @@
       "coordinates": {
         "lat": 22.67661,
         "lng": 120.34195
+      }
+    }
+  ],
+  "2026-05-14": [
+    {
+      "id": "cHR0LTIwMjYtMDUtMTQtNS8xNCjlm5sp5a6c6Jit5p2x5ba95buf",
+      "time": "",
+      "organization": "宜蘭東嶽廟",
+      "location": "宜蘭東嶽廟",
+      "activityDate": "2026-05-14",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "電影票"
+      ],
+      "pttData": {
+        "rawLine": "5/14(四)宜蘭東嶽廟",
+        "images": [
+          "https://i.imgur.com/5KaevCH.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/5KaevCH.jpeg",
+            "text": "濕\n人 劑 說 必\n「 讓\n人\n全\n計生 歸 , 人 廬 全 才 二 三 呈 全\n會 員 仙 和 二 人\n有 看\n忌 人 你 下 則 8 了 入 六 加 和 1 全\n1 「 2 計 一 ~ 人 語族 -\n放 H 日 戰 說 上 和\n7 人 上 / 上 2 ! 前 跌 宣 和 腑 200 廬\n二 依 全 AS\n2\n多 人 愉\nAN\n7\n/ 人\n楣 箇 250ce 箇 捐血 500cc | 謝 修 甲 護理 6 件 套裝\n1 一 一 一 負 陰 澤 誤\n新 月 電影 票 1 張 仙 聞 月 雷 影 責 2 咕 生 二 ? ss\nat 導 ! 和 新 月 電影 永 所 時\n中 國 說 生 時 世 //// 旬 9e\n修 甲 護理 61 攻 】 看 裝 ] 盒 修 甲 護理 6 件 套裝 ] E 4 全 用! / /\n找 二 財 2 負 祁 子 空氣 凈化 紫外 線 殺 菌 機 /\n和 鞭 晤 歷 有 限 有 吝 子 福仁 濕 伍 飄 外 組 生計 機 ] 公 ~ 全\n去 時 人 有 有 [ 他所 和 化 對 外 線 殺 肯 屁 | 「 線 遙 遇 機 1 台 5 DIGITAL Cinemox\n~ 還 一 罰 二 十 新 月 豪 華 2 城\n2 7 9 丰 田 瘩 珮 < 誕 在 壯 1 合 嘉 = 上 昂 2\n字 | 人 十 護理 6 件 套裝 1 盒 新 月 豪華 影 城 電影 村\n主 辦 單 位 : 宣 蘭 東 獄 廟\n",
+            "confidence": 35
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.7532994,
+        "lng": 121.7523761
       }
     }
   ]
