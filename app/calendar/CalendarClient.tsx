@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { CalendarDays, MapPin, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useNearbyLocations } from "@/hooks/useNearbyLocations";
 import NearbyLocationsModal from "@/components/NearbyLocationsModal";
 import Link from "next/link";
@@ -80,7 +81,7 @@ export default function CalendarClient() {
   const [isNearbyModalOpen, setIsNearbyModalOpen] = useState(false);
   const [isDataLoading, setIsDataLoading] = useState(true);
   const [activeTagFilter, setActiveTagFilter] = useState<string | null>(null);
-  const [expandedEventId, setExpandedEventId] = useState<string | null>(null);
+  const [giftLightbox, setGiftLightbox] = useState<{ imageUrl: string; organization: string } | null>(null);
 
   const {
     isLoading: isNearbyLoading,
@@ -166,7 +167,6 @@ export default function CalendarClient() {
 
   const handleDateSelect = (date: Date | undefined) => {
     setSelectedDate(date);
-    setExpandedEventId(null);
   };
 
   const handleFindNearby = async () => {
@@ -318,7 +318,6 @@ export default function CalendarClient() {
                       const isFiltered =
                         activeTagFilter && tags.includes(activeTagFilter);
                       const eventKey = event.id || index.toString();
-                      const isExpanded = expandedEventId === eventKey;
                       const hasImage =
                         event.pttData?.images &&
                         event.pttData.images.length > 0;
@@ -349,13 +348,14 @@ export default function CalendarClient() {
                             {hasImage && (
                               <button
                                 onClick={() =>
-                                  setExpandedEventId(
-                                    isExpanded ? null : eventKey
-                                  )
+                                  setGiftLightbox({
+                                    imageUrl: event.pttData!.images[0],
+                                    organization: event.organization,
+                                  })
                                 }
-                                className="flex-shrink-0 text-xs text-gray-400 hover:text-orange-500 transition-colors"
+                                className="flex-shrink-0 text-xs text-gray-400 hover:text-orange-500 transition-colors whitespace-nowrap"
                               >
-                                {isExpanded ? "收起" : "看贈品"}
+                                看贈品
                               </button>
                             )}
                           </div>
@@ -373,19 +373,6 @@ export default function CalendarClient() {
                                   {tag}
                                 </span>
                               ))}
-                            </div>
-                          )}
-
-                          {isExpanded && hasImage && (
-                            <div className="mt-3">
-                              <Image
-                                src={event.pttData!.images[0]}
-                                alt={`${event.organization} 贈品`}
-                                width={400}
-                                height={300}
-                                className="rounded-lg w-full object-contain max-h-48"
-                                unoptimized
-                              />
                             </div>
                           )}
                         </div>
@@ -416,6 +403,30 @@ export default function CalendarClient() {
           )}
         </div>
       </div>
+
+      {/* 贈品圖片 Lightbox */}
+      <Dialog open={!!giftLightbox} onOpenChange={(open) => !open && setGiftLightbox(null)}>
+        <DialogContent className="max-w-lg p-0 overflow-hidden rounded-2xl">
+          <DialogHeader className="px-5 pt-5 pb-3">
+            <DialogTitle className="text-base text-gray-800 flex items-center gap-2">
+              <Gift className="w-4 h-4 text-orange-400" />
+              {giftLightbox?.organization} 贈品
+            </DialogTitle>
+          </DialogHeader>
+          {giftLightbox && (
+            <div className="px-5 pb-5">
+              <Image
+                src={giftLightbox.imageUrl}
+                alt={`${giftLightbox.organization} 贈品`}
+                width={600}
+                height={500}
+                className="w-full rounded-xl object-contain max-h-[70vh]"
+                unoptimized
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       {/* 附近捐血點 Modal */}
       <NearbyLocationsModal
