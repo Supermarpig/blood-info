@@ -31,19 +31,19 @@
   "sources": [
     {
       "text": "台灣血液基金會——血液品質管理",
-      "url": "https://www.blood.org.tw/Internet/main/index.aspx"
+      "url": "https://www.blood.org.tw/"
     },
     {
       "text": "衛生福利部食品藥物管理署——血液製劑管理法規",
-      "url": "https://www.fda.gov.tw/TC/site.aspx?sid=3855"
+      "url": "https://db.lawbank.com.tw/FLAW/FLAWDAT01.aspx?lsid=FL033631"
     },
     {
       "text": "World Health Organization — Blood safety and availability",
       "url": "https://www.who.int/news-room/fact-sheets/detail/blood-safety-and-availability"
     },
     {
-      "text": "Stainsby D, et al. — Transfusion Medicine Reviews: NAT screening in blood safety",
-      "url": "https://www.transfusionmedicinereviews.com"
+      "text": "Interorganizational Task Force — Transfusion：捐血者輸血傳染病之核酸增幅檢測報告",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10685998/"
     }
   ]
 }
