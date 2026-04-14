@@ -253,6 +253,36 @@
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620141167612934"
     },
     {
+      "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnlvbDljJbngavou4rnq5k=",
+      "time": "",
+      "organization": "彰化火車站",
+      "location": "彰化火車站",
+      "activityDate": "2026-05-02",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券"
+      ],
+      "pttData": {
+        "rawLine": "5/2(六)彰化火車站",
+        "images": [
+          "https://i.imgur.com/TUcTtPX.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/TUcTtPX.jpeg",
+            "text": "一 一 Y yo\n< 沁 有 做\nre 二 你)\n交 同 / / 了\n人 < )\n\\ 和 何人 22\n交\n一\nSt 一\n和 _/\n募集 各 種 血型 ~ 敬 請 熱血 朋友 們 攜帶 身分 證件 ~ 捐血 救 人\n時 間 : 115/5/2( 週 六 )09:30-16:00\n地 點 : 彰化 火車 站 (彰化 市 三 民 路 1 號 )\n主 辦 : 財團 法 人 正德 社會 福利 慈善 基金 會\n協 辦 : 新 豪 億 科技 有 限 公司 、 友 誌 金 屬 股 份 有 限 公司\n大 豐 製 藥 股份 有 限 公司 、 羊 境 交 通 器 材 有 限 公司\n穩 富 國 際 科 技 有 限 公 司 、 正 德 彰 化 分 會 、 正 德 彰 化 長 理會\n陳建宏 、 謝 美 鳳 、 陳 又 筠 、 徐 健 瑜 、 石 乃 文 、 容 居士 、 鄒 維 東\n捐 250cc : 麵條 、 和 燃油 、 牛 奶 、 豆 奶 、 紫 雲 說 、 液 體 維 它 命 、 全 聯 袖 券 2 張\n摔 50occ : 麵條 、 牙 油 、 和 牛奶 、 豆 奶 、 紫 雲 謂 、 自 行 車 手套 、 液 體 維 它 命\n( 金 聯 禮券 4 張 、 葉 黃 素 ) 或 碳纖 維 羽 球拍 乙 支 ,2 選 1\n結緣 品 數 量 有 限 , 送 完 為 止\n",
+            "confidence": 72
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.0815711,
+        "lng": 120.5383884
+      }
+    },
+    {
       "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnpm7Lmnpfmlpflha3mjZDooYDnq5k=",
       "time": "",
       "organization": "雲林斗六捐血站",
@@ -273,6 +303,32 @@
             "url": "https://i.imgur.com/Sx0zzdK.jpeg",
             "text": "AN 、%\n中 和 MN\n人\n| >\n€ 、 第 @ 屆 EMBA\n人 哲生 廬 )\n| | 二\n加 時 隊 、\n一 點 人 語\n宮下 畫\n人 N@ 了 只 品 到 量\n選 人\n己 老 過 三 明治 了 喝 ( 肉 邊 蛋黃 / 立 訂 / 花 生 ) 金 半 開 崔 時 手包 說 說 k\ne 多 之 售 i ~\nsmsaas aa 卅 masawmaa\n兒 換 禮品\n“- 品 胃 統 有 限 | 說 完全\n倫 和 de 加 kk\n吏 銜 倆 六 上\nLo 了 0 bm 了 左上 各\nse 以 2 2 人 全 還\n: 一 謂 巧 輻 2 了 像\n記 到 襄 |\n主 了 < 到\nee\nLN\n一 mm\n",
             "confidence": 25
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnlj7DljZfoh7rngaPnpYDlhbjmrablu58=",
+      "time": "",
+      "organization": "台南臺灣祀典武廟",
+      "location": "台南臺灣祀典武廟",
+      "activityDate": "2026-05-02",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "餐飲"
+      ],
+      "pttData": {
+        "rawLine": "5/2(六)台南臺灣祀典武廟",
+        "images": [
+          "https://i.imgur.com/pfv2PHm.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/pfv2PHm.jpeg",
+            "text": "加 8\n人 注 經 7 “文\n表 六 2 S 入 - 汪 ff 衝 : 4 4 3\n同 夫 生 一 3 計 / 科 共 , 放 喇\n和 人大 0 二 時 =|\n4 和 :7 人 禾 \"下 全 生 人 語 六 2\n全 了 只 讓\n控 請 8 中 圖 eg 和 了 人\n信 1 疝 放 說 生生 計 計 一時 加 六\n旬 灶 悶 ) 員 8 ii 汪 較 還 本 :\n【 和 喲 人 AiCA y 光 刀 避 2 六\n和 了 Shi Ar 點\n人 六 2 」 二 同\n人 1 放 人 同\n/ 水 二 \" 人 X RSS r\n他 、 2 較 生\n吃\n4 時 入 7 ss\n生 和 we / 了 生 和 且\n)、- Ni 二 中 1 條 后 ] 行\n光 2 系 『 相 誤信 - ) |\n人 太 只 和 A\n朮 W 下 了 (se ~ /\n1 人 蝦 人 儿 7 1 入 一 還 和民 :::\nCC fi 了 : 捐血 250cc 送 好 禮\n人 出 隊 銜 議 / 漲 同 放 注 旦 已 克 咽 啡 飲料 分 享 卷 ( 乙 張 )\n! 說 全 點 臺南 府城 嚴 選 幸福 麵 線 ( 乙 袋 )\n| ] th 台 灣 祀 典 武 廟 丙午 年 文 創 商 品 (隨機)\n9 放 影 上 -\n祁 上 還 也 克 飲 料 券\n2 / 2 li fat 轉 時 生 大 228\n1 全 /\n沁 財 # 【 到 記\n鼎 靶 芷 22 難 人\n2 少 一 nm 7 》 LI 2\n下放 人 個 較 對 讓 加 碼 送 現 拐 活 龍 之 隻 合計 限量 前 50 名\n人 放 2、 襄 閱 晤 晤 圖 代 主 辦 唱 位 隨機 現 撈 不 得 挑選\n巴克 吃 天 飲料 分 享 卷 (之 張 )\nPS 8 全, 間 括 、 說 一\n品 tn 且 ! 玫 滲 嚎 品 洛 祀 回 IEV 大 肉 語 廬 2 時 向 , 中 各 人 估 和\n只 2 2 點 2 外\n只 水 沙 ss 讓\n一 2 IN\n生計 | 全 , 凍 號\n了 半 , mm\n臨 廁 季 政府 勞 察 局 第 時 分 局 民權 派 出 所 政 准 / 宣 導 es\n有 捐 出 熱血 調 免 費 昌 經 測 汪 疆 天 面相 選\n上 朋 公 陪 家 長 來 消 出 熱血 精美 積 林 禮物 恤 份 人\n旺季 擠 出 熱血 活動 現場 有 同! 味 現 烤 香 腸 且 4 體驗 貼 , 早 味 彈 珠 澡 滬 EE\n鹿 留 祀 典 】 全 世 在 臺南 教育 關懷 協會 國 際 地 產 事業\n己 辦 單位 : 伍 台 南 市 吳 》 親 會 圖 台 灣 少 林 達摩 禪 武 會 岡山 三 源 命相 地 理 館\n隊 痢 機 電工 業 有 限 嘉信 有 達 威 起 重 有 生 國 島\n多 有 和 吧\n",
+            "confidence": 31
           }
         ]
       },
@@ -656,6 +712,34 @@
       "coordinates": {
         "lat": 23.8006906,
         "lng": 120.4613448
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMTAtNS8xMCjml6Up6auY6ZuE6bm95Z+V5paH5q2m6IGW5q6/",
+      "time": "",
+      "organization": "高雄鹽埕文武聖殿",
+      "location": "高雄鹽埕文武聖殿",
+      "activityDate": "2026-05-10",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/10(日)高雄鹽埕文武聖殿",
+        "images": [
+          "https://i.imgur.com/lFs0wzJ.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/lFs0wzJ.jpeg",
+            "text": "劍 冰 放 胡說 禾 好 際\n補 最 後 受理 抽 號 時 間 會 視 現場 情況 調整\n5 0Q009:00.17:00\n) ge 切 ee 入 百 品 崗\n文 武 聖\n此 si 議 ( 堅 埕 區 宮野 路 170 號 )\n捐血 送 : 加\n250cc 全 聯 好 禮 2 張\n500cc 或 首次 捐血 者 有 ~ 5 張\n人 文 武 聖 殿 邀請 您 當 熱血 英雄 as\n",
+            "confidence": 58
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.6295474,
+        "lng": 120.2807283
       }
     }
   ],
