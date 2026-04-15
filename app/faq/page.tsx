@@ -59,6 +59,14 @@ export const metadata: Metadata = {
     siteName: "台灣捐血活動查詢",
     locale: "zh_TW",
     type: "website",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/imgs/og-img.webp`,
+        width: 1200,
+        height: 630,
+        alt: "捐血常見問題 FAQ",
+      },
+    ],
   },
 };
 

@@ -63,6 +63,20 @@ export async function generateMetadata({
       siteName: "台灣捐血活動查詢",
       locale: "zh_TW",
       type: "website",
+      images: [
+        {
+          url: `${baseUrl}/imgs/og-img.webp`,
+          width: 1200,
+          height: 630,
+          alt: city.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: city.title,
+      description: city.description,
+      images: [`${baseUrl}/imgs/og-img.webp`],
     },
   };
 }

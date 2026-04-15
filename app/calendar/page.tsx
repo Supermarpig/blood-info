@@ -27,6 +27,14 @@ export const metadata: Metadata = {
     siteName: "台灣捐血活動查詢",
     locale: "zh_TW",
     type: "website",
+    images: [
+      {
+        url: `${baseUrl}/imgs/og-img.webp`,
+        width: 1200,
+        height: 630,
+        alt: "捐血活動月曆",
+      },
+    ],
   },
 };
 

@@ -12,6 +12,23 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/news`,
   },
+  openGraph: {
+    title: "捐血最新消息 | 台灣捐血活動查詢",
+    description:
+      "台灣捐血最新新聞與公告：血庫庫存動態、捐血活動特別主題、捐血政策更新等，掌握最新捐血資訊。",
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}/news`,
+    siteName: "台灣捐血活動查詢",
+    locale: "zh_TW",
+    type: "website",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/imgs/og-img.webp`,
+        width: 1200,
+        height: 630,
+        alt: "捐血最新消息",
+      },
+    ],
+  },
 };
 
 export default function NewsPage() {
