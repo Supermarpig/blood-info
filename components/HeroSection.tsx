@@ -1,45 +1,94 @@
 "use client";
 
 import { useRef, useEffect, useState } from "react";
-import { MapPin, Calendar, Sparkles, TrendingUp, Gift, Heart, Film, Tag, Store, Coffee, Package, UtensilsCrossed } from "lucide-react";
+import {
+  MapPin,
+  Calendar,
+  Sparkles,
+  TrendingUp,
+  Gift,
+  Heart,
+  Film,
+  Tag,
+  Store,
+  Coffee,
+  Package,
+  UtensilsCrossed,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const GIFT_ICONS: Record<string, LucideIcon> = {
   "movie-ticket": Film,
-  "voucher": Tag,
+  voucher: Tag,
   "convenience-store": Store,
   "food-beverage": Coffee,
   "daily-necessities": Package,
-  "food": UtensilsCrossed,
+  food: UtensilsCrossed,
 };
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import BloodInventoryPanel from "@/components/BloodInventoryPanel";
 import { GIFTS } from "@/lib/giftConfig";
 
-
 interface HeroSectionProps {
   todayCount: number;
   upcomingCount: number;
   todayGiftTags: string[];
   onFindNearby: () => void;
-  onCenterSelect?: (center: string, withScroll?: boolean, toggle?: boolean) => void;
+  onCenterSelect?: (
+    center: string,
+    withScroll?: boolean,
+    toggle?: boolean,
+  ) => void;
   selectedCenter?: string | null;
 }
+
+// 星星位置與動畫延遲設定
+const SPARKLES = [
+  { top: "-10px", left: "30%", delay: "0s", fontSize: "12px" },
+  { top: "50%", left: "-12px", delay: "0.55s", fontSize: "10px" },
+  { top: "-8px", left: "72%", delay: "1.1s", fontSize: "8px" },
+  { top: "110%", left: "20%", delay: "0.3s", fontSize: "10px" },
+  { top: "35%", left: "108%", delay: "0.85s", fontSize: "8px" },
+  { top: "100%", left: "65%", delay: "1.4s", fontSize: "12px" },
+];
 
 function GiftPills() {
   return (
     <div className="flex flex-wrap gap-1.5">
-      {GIFTS.map((g) => (
-        <Link
-          key={g.slug}
-          href={`/gift/${g.slug}`}
-          className="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 text-white text-xs font-medium px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/20 transition-all duration-200"
-        >
-          {(() => { const Icon = GIFT_ICONS[g.slug]; return Icon ? <Icon className="w-3 h-3" /> : null; })()}
-          {g.name}
-        </Link>
-      ))}
+      {GIFTS.map((g) => {
+        const Icon = GIFT_ICONS[g.slug];
+        const isMovie = g.slug === "movie-ticket";
+        return (
+          <div
+            key={g.slug}
+            className={isMovie ? "relative inline-block" : undefined}
+          >
+            <Link
+              href={`/gift/${g.slug}`}
+              className="inline-flex items-center gap-1.5 bg-white/15 hover:bg-white/25 text-white text-xs font-medium px-3 py-1.5 rounded-full backdrop-blur-sm border border-white/20 transition-all duration-200"
+            >
+              {Icon ? <Icon className="w-3 h-3" /> : null}
+              {g.name}
+            </Link>
+            {isMovie &&
+              SPARKLES.map((s, i) => (
+                <i
+                  key={i}
+                  className="sparkle-dot"
+                  style={{
+                    top: s.top,
+                    left: s.left,
+                    fontSize: s.fontSize,
+                    animationDelay: s.delay,
+                  }}
+                >
+                  ✦
+                </i>
+              ))}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -71,7 +120,7 @@ function AnimatedNumber({ value }: { value: number }) {
           }, 40);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -97,7 +146,10 @@ export default function HeroSection({
       >
         <div className="absolute right-0 top-0 w-36 h-36 opacity-10 pointer-events-none">
           <svg viewBox="0 0 100 100" className="w-full h-full">
-            <path d="M50 10 C50 10, 18 42, 18 62 C18 81 32 92 50 92 C68 92 82 81 82 62 C82 42 50 10 50 10 Z" fill="white" />
+            <path
+              d="M50 10 C50 10, 18 42, 18 62 C18 81 32 92 50 92 C68 92 82 81 82 62 C82 42 50 10 50 10 Z"
+              fill="white"
+            />
           </svg>
         </div>
         <div className="absolute -right-4 -bottom-4 opacity-5 pointer-events-none">
@@ -106,16 +158,16 @@ export default function HeroSection({
 
         {/* Floating blood drops */}
         {[
-          { w: 12, h: 15, left: "5%",  bottom: 18, delay: "0s",    dur: "4s"   },
-          { w:  8, h: 10, left: "13%", bottom: 22, delay: "0.8s",  dur: "5.5s" },
-          { w: 18, h: 22, left: "22%", bottom: 16, delay: "1.6s",  dur: "3.8s" },
-          { w: 10, h: 13, left: "34%", bottom: 20, delay: "2.4s",  dur: "4.8s" },
-          { w: 14, h: 18, left: "46%", bottom: 16, delay: "0.4s",  dur: "5.2s" },
-          { w:  8, h: 10, left: "57%", bottom: 22, delay: "1.2s",  dur: "3.5s" },
-          { w: 16, h: 20, left: "67%", bottom: 14, delay: "2.0s",  dur: "4.4s" },
-          { w: 10, h: 13, left: "76%", bottom: 20, delay: "3.0s",  dur: "5.0s" },
-          { w:  7, h:  9, left: "85%", bottom: 24, delay: "1.8s",  dur: "4.2s" },
-          { w: 13, h: 16, left: "93%", bottom: 16, delay: "0.6s",  dur: "3.6s" },
+          { w: 12, h: 15, left: "5%", bottom: 18, delay: "0s", dur: "4s" },
+          { w: 8, h: 10, left: "13%", bottom: 22, delay: "0.8s", dur: "5.5s" },
+          { w: 18, h: 22, left: "22%", bottom: 16, delay: "1.6s", dur: "3.8s" },
+          { w: 10, h: 13, left: "34%", bottom: 20, delay: "2.4s", dur: "4.8s" },
+          { w: 14, h: 18, left: "46%", bottom: 16, delay: "0.4s", dur: "5.2s" },
+          { w: 8, h: 10, left: "57%", bottom: 22, delay: "1.2s", dur: "3.5s" },
+          { w: 16, h: 20, left: "67%", bottom: 14, delay: "2.0s", dur: "4.4s" },
+          { w: 10, h: 13, left: "76%", bottom: 20, delay: "3.0s", dur: "5.0s" },
+          { w: 7, h: 9, left: "85%", bottom: 24, delay: "1.8s", dur: "4.2s" },
+          { w: 13, h: 16, left: "93%", bottom: 16, delay: "0.6s", dur: "3.6s" },
         ].map((drop, i) => (
           <div
             key={i}
@@ -129,7 +181,10 @@ export default function HeroSection({
               animationDuration: drop.dur,
             }}
           >
-            <svg viewBox="0 0 100 120" className="w-full h-full fill-white opacity-70">
+            <svg
+              viewBox="0 0 100 120"
+              className="w-full h-full fill-white opacity-70"
+            >
               <path d="M50 8 C50 8, 14 58, 14 78 C14 99 30 112 50 112 C70 112 86 99 86 78 C86 58 50 8 50 8 Z" />
             </svg>
           </div>
@@ -138,7 +193,9 @@ export default function HeroSection({
         <p className="text-red-200 text-xs font-medium uppercase tracking-widest mb-2">
           全台捐血資訊即時查詢
         </p>
-        <h2 className="text-2xl font-extrabold text-white leading-snug">你的 250cc</h2>
+        <h2 className="text-2xl font-extrabold text-white leading-snug">
+          你的 250cc
+        </h2>
         <p className="text-xl font-bold text-pink-200 mb-4">是別人的全部</p>
 
         <GiftPills />
@@ -156,7 +213,9 @@ export default function HeroSection({
               <Sparkles className="w-4 h-4 text-emerald-600" />
             </div>
           </div>
-          <p className="text-xs font-medium text-emerald-600/80 mb-1">今日活動</p>
+          <p className="text-xs font-medium text-emerald-600/80 mb-1">
+            今日活動
+          </p>
           <p className="text-3xl font-bold text-gray-900 tracking-tight">
             <AnimatedNumber value={todayCount} />
             <span className="text-sm font-normal text-gray-500 ml-1">場</span>
@@ -203,7 +262,10 @@ export default function HeroSection({
       )}
 
       {/* 血液庫存儀表板 */}
-      <BloodInventoryPanel onCenterSelect={onCenterSelect} selectedCenter={selectedCenter} />
+      <BloodInventoryPanel
+        onCenterSelect={onCenterSelect}
+        selectedCenter={selectedCenter}
+      />
 
       {/* 主要行動按鈕 */}
       <div
