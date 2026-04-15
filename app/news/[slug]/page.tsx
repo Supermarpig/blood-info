@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
-import { getNewsBySlug, getAllNewsSlugs } from "@/lib/newsUtils";
+import { getNewsBySlug, getAllNewsSlugs, getAllNews } from "@/lib/newsUtils";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -58,6 +58,10 @@ export default async function NewsArticlePage({ params }: PageProps) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   const author = article.author ?? "血荒資訊編輯部";
+
+  const relatedArticles = getAllNews()
+    .filter((a) => a.slug !== article.slug)
+    .slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -198,6 +202,41 @@ export default async function NewsArticlePage({ params }: PageProps) {
           </div>
         </div>
       </div>
+
+      {/* Related Articles */}
+      {relatedArticles.length > 0 && (
+        <div className="mt-10 pt-6 border-t border-gray-100">
+          <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-4">
+            延伸閱讀
+          </h2>
+          <div className="flex flex-col gap-3">
+            {relatedArticles.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/news/${a.slug}`}
+                className="group flex gap-3 rounded-xl border border-gray-100 p-3 hover:border-red-200 hover:bg-red-50 transition-colors"
+              >
+                <div className="relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
+                  <Image
+                    src={a.imageUrl}
+                    alt={a.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="64px"
+                  />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs text-gray-400 mb-0.5">{a.date}</p>
+                  <p className="text-sm font-medium text-gray-900 group-hover:text-red-600 transition-colors line-clamp-2">
+                    {a.title}
+                  </p>
+                </div>
+                <ChevronRight className="w-4 h-4 text-gray-300 flex-shrink-0 self-center" />
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* CTA */}
       <div className="mt-10 bg-gradient-to-r from-red-50 to-pink-50 rounded-2xl p-8 text-center">
