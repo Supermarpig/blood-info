@@ -1,6 +1,11 @@
 // app/activity-review/page.tsx
+import { Metadata } from "next";
 import ImageApprovalList from "@/components/ImageApprovalList";
 import { getAllBloodImgInfo } from "@/services/bloodService";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default async function ActivityReviewPage() {
   const bloodImgInfos = await getAllBloodImgInfo();

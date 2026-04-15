@@ -46,6 +46,9 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: baseUrl,
+    types: {
+      "application/rss+xml": `${baseUrl}/feed.xml`,
+    },
   },
   openGraph: {
     title: "今日捐血活動查詢 | 附近捐血站、捐血地點與贈品資訊",

@@ -21,9 +21,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
+  const keywords = article.sections.map((s) => s.heading);
+
   return {
     title: article.title,
     description: article.summary,
+    keywords,
     alternates: {
       canonical: `${baseUrl}/news/${slug}`,
     },
@@ -34,6 +37,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: [{ url: article.imageUrl, alt: article.imageAlt }],
       type: "article",
       publishedTime: article.date,
+      authors: [article.author ?? "血荒資訊編輯部"],
+      tags: keywords,
     },
     twitter: {
       card: "summary_large_image",
@@ -74,11 +79,25 @@ export default async function NewsArticlePage({ params }: PageProps) {
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "首頁", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "最新消息", item: `${baseUrl}/news` },
+      { "@type": "ListItem", position: 3, name: article.title, item: `${baseUrl}/news/${article.slug}` },
+    ],
+  };
+
   return (
     <div className="container mx-auto p-8 max-w-2xl">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Breadcrumb */}
@@ -177,6 +196,31 @@ export default async function NewsArticlePage({ params }: PageProps) {
               關注台灣捐血資訊的志願編輯團隊，文章資料來源為台灣血液基金會官方資料與衛福部公告，致力提供正確、即時的捐血衛教內容。
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="mt-10 bg-gradient-to-r from-red-50 to-pink-50 rounded-2xl p-8 text-center">
+        <h2 className="text-lg font-bold text-gray-900 mb-2">
+          準備好捐血了嗎？
+        </h2>
+        <p className="text-gray-600 text-sm mb-4">
+          查詢今日全台捐血活動地點、開放時間與贈品資訊。
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center gap-2 bg-red-500 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-red-600 transition-colors"
+          >
+            查詢今日捐血活動
+            <ChevronRight className="w-4 h-4" />
+          </Link>
+          <Link
+            href="/news"
+            className="inline-flex items-center justify-center gap-2 border border-gray-200 text-gray-700 px-5 py-2.5 rounded-full text-sm font-medium hover:border-red-300 hover:text-red-600 transition-colors"
+          >
+            更多捐血資訊
+          </Link>
         </div>
       </div>
     </div>

@@ -33,9 +33,41 @@ export const metadata: Metadata = {
 
 export default function NewsPage() {
   const articles = getAllNews();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "首頁", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "最新消息", item: `${baseUrl}/news` },
+    ],
+  };
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "台灣捐血最新消息",
+    url: `${baseUrl}/news`,
+    numberOfItems: articles.length,
+    itemListElement: articles.map((article, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: article.title,
+      url: `${baseUrl}/news/${article.slug}`,
+    })),
+  };
 
   return (
     <div className="container mx-auto p-8 max-w-3xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+      />
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
         <Link href="/" className="hover:text-gray-700 transition-colors">
