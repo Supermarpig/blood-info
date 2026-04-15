@@ -26,6 +26,21 @@ export const metadata: Metadata = {
     siteName: "台灣捐血活動查詢",
     locale: "zh_TW",
     type: "website",
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/imgs/og-img.webp`,
+        width: 1200,
+        height: 630,
+        alt: "2026 捐血贈品查詢",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "2026 捐血贈品查詢 | 今年捐血有什麼贈品？",
+    description:
+      "2026 年台灣捐血贈品完整整理：電影票、超商禮券、餐飲券、生活用品、食品等。",
+    images: [`${process.env.NEXT_PUBLIC_BASE_URL}/imgs/og-img.webp`],
   },
 };
 

@@ -66,6 +66,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "台灣捐血活動查詢",
       locale: "zh_TW",
       type: "article",
+      images: [
+        {
+          url: `${baseUrl}/imgs/og-img.webp`,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${baseUrl}/imgs/og-img.webp`],
     },
   };
 }
