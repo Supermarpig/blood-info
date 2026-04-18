@@ -2,8 +2,8 @@ name: Daily Blood Donation Data Update
 
 on:
   schedule:
-    # Run at 23:30 UTC everyday (07:30 AM Taiwan Time)
-    - cron: "30 23 * * *"
+    # Run at 23:40 UTC everyday (07:40 AM Taiwan Time, after blood center updates at 07:31)
+    - cron: "40 23 * * *"
   workflow_dispatch: # Allow manual trigger
 
 jobs:
