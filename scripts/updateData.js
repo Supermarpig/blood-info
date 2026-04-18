@@ -912,7 +912,19 @@ function cleanDataForSaving(data) {
 
 async function processMonth(year, month, pttData, pttUrl) {
     console.log(`\n=== 處理 ${year} 年 ${month} 月資料 ===`);
-    const { startDate, endDate } = getMonthDateRange(year, month);
+    let { startDate, endDate } = getMonthDateRange(year, month);
+
+    // 官方網站現在只回傳「起始日期」當天的資料，不返回整個月份範圍
+    // 因此對當月爬取改從「今天」開始，確保能拿到今天的活動資料
+    // 過去的資料由 existingData 保存機制（date <= today）維持
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    const currentMonth = now.getMonth() + 1;
+    if (year === currentYear && month === currentMonth) {
+        const todayStr = `${currentYear}/${String(currentMonth).padStart(2, '0')}/${String(now.getDate()).padStart(2, '0')}`;
+        startDate = todayStr;
+    }
+
     console.log(`日期範圍: ${startDate} ~ ${endDate}`);
 
     const fileName = getMonthFileName(year, month);
@@ -935,7 +947,7 @@ async function processMonth(year, month, pttData, pttUrl) {
     if (existingData) {
         const today = new Date().toISOString().slice(0, 10);
         for (const date in existingData) {
-            if (date < today && !officialData[date]) {
+            if (date <= today && !officialData[date]) {
                 officialData[date] = existingData[date];
             }
         }
