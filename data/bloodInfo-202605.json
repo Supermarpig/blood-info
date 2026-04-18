@@ -1,4 +1,105 @@
 {
+  "2026-05-01": [
+    {
+      "id": "5paw56u5LTIwMjYvMDUvMDEtMDk6MDB+MTY6MDAt5bmz6Y6u5Y2A5b6M5YKZ5oay5YW16I235p2+5Y2U",
+      "time": "09:00~16:00",
+      "organization": "平鎮區後備憲兵荷松協",
+      "location": "桃園市平鎮區坤慶路1號(平鎮家樂福)",
+      "activityDate": "2026-05-01",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346079188097555"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDUvMDEtMDk6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5paw56u556ys5LiJ5YiG5pyD",
+      "time": "09:00~17:00",
+      "organization": "國際佛光會新竹第三分會",
+      "location": "新竹市北區文雅街6號(西大捐血室\t)",
+      "activityDate": "2026-05-01",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346075094450096"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDUvMDEtMDk6MzB+MTY6MzAt6Z2S5Z+U54m55Y2A542F5a2Q5pyD",
+      "time": "09:30~16:30",
+      "organization": "青埔特區獅子會",
+      "location": "桃園市中壢區青昇路123號(華泰名品城青昇路入口處_青園國民小學對面)",
+      "activityDate": "2026-05-01",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346074816602041"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDUvMDEtMDk6MDB+MTY6MDAt5LiW55WM5peX6KKN542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "世界旗袍獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-05-01",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346074450581069"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDUvMDEtMDk6MDB+MTY6MDAt5qGD5ZyS5biC6Zaw576F5aSp5a2Q5Yqf5b635pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市閰羅天子功德會",
+      "location": "桃園市觀音區大觀路一段579號(觀音草漯保障宮)",
+      "activityDate": "2026-05-01",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346070366845500"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDUvMDEtMDg6MDB+MTY6MDAt5L2b5YWJ5pyD5pel5YWJ56ys5LqM5YiG5pyD",
+      "time": "08:00~16:00",
+      "organization": "佛光會日光第二分會",
+      "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
+      "activityDate": "2026-05-01",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620140988864889"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDUvMDEtMDk6MDB+MTY6MzAt5LuB5aO95a6u566h55CG5aeU5ZOh5pyD",
+      "time": "09:00~16:30",
+      "organization": "仁壽宮管理委員會",
+      "location": "臺南市歸仁區文化街二段16號(歸仁仁壽宮)",
+      "activityDate": "2026-05-01",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620139800016834"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDUvMDEtMDg6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Y+z5piM56ys5Zub5YiG5pyD",
+      "time": "08:00~17:00",
+      "organization": "國際佛光會中華總會右昌第四分會",
+      "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
+      "activityDate": "2026-05-01",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620139344985852"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDUvMDEtMDk6MzB+MTg6MDAt5L2b5YWJ6byT5bGx5YiG5pyD",
+      "time": "09:30~18:00",
+      "organization": "佛光鼓山分會",
+      "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
+      "activityDate": "2026-05-01",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620134616479365"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDUvMDEtMDk6MzB+MTc6MzAt5aSn6auY6ZuE6Z6L6aGe5pyN5YuZ5qWt6IG35qWt5bel5pyD",
+      "time": "09:30~17:30",
+      "organization": "大高雄鞋類服務業職業工會",
+      "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
+      "activityDate": "2026-05-01",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620134172591348"
+    },
+    {
+      "id": "6auY6ZuELTIwMjYvMDUvMDEtMTA6MzB+MTg6MDAt5YSE6YCy5a+i5YW3",
+      "time": "10:30~18:00",
+      "organization": "億進寢具",
+      "location": "臺南市安平區永華路二段465號(億進寢具生活館台南永華展示中心)",
+      "activityDate": "2026-05-01",
+      "center": "高雄",
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620133538622311"
+    }
+  ],
   "2026-05-02": [
     {
       "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnlj7DljJfkuK3mraPntIDlv7XloILlpKflrZ3ploDlsI3pnaI=",

@@ -7670,7 +7670,11 @@
           }
         ]
       },
-      "isPttOnly": true
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.9687653,
+        "lng": 120.1883477
+      }
     },
     {
       "id": "cHR0LTIwMjYtMDQtMTgtNC8xOCjlha0p5Y+w5Y2X5YyX5a6J5o2Q6KGA5a6k44CBNC8xOSjml6Up5Y+w5Y2X5a6J5Y2X5Y+w5rGf5paH5YyW5Lit5b+D",
