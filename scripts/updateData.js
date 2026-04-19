@@ -942,12 +942,12 @@ async function processMonth(year, month, pttData, pttUrl) {
 
     const officialData = await crawlData(startDate, endDate);
 
-    // 2. Preserve past dates from existingData that the official site no longer returns
-    //    (official site only shows upcoming events, so past events disappear from crawl results)
+    // 2. Preserve all dates from existingData that the official site didn't return.
+    //    The official site only returns data for the exact startDate, so future dates
+    //    are never returned by the crawl and must be preserved from the existing file.
     if (existingData) {
-        const today = new Date().toISOString().slice(0, 10);
         for (const date in existingData) {
-            if (date <= today && !officialData[date]) {
+            if (!officialData[date]) {
                 officialData[date] = existingData[date];
             }
         }
