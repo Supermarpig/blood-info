@@ -81,6 +81,15 @@ export default async function NewsArticlePage({ params }: PageProps) {
       name: "台灣捐血活動查詢",
       url: baseUrl,
     },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".article-summary", "h2"],
+    },
+    isBasedOn: {
+      "@type": "WebSite",
+      name: "台灣血液基金會",
+      url: "https://www.blood.org.tw",
+    },
   };
 
   const breadcrumbJsonLd = {
