@@ -910,22 +910,19 @@ function cleanDataForSaving(data) {
     return cleaned;
 }
 
+// 將 "YYYY/MM/DD" 或 "YYYY-MM-DD" 轉成 Date 物件
+function parseDateStr(s) {
+    return new Date(s.replace(/\//g, '-'));
+}
+
+// 將 Date 轉成官網需要的 "YYYY/MM/DD" 格式
+function formatDateForCrawl(d) {
+    return `${d.getFullYear()}/${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`;
+}
+
 async function processMonth(year, month, pttData, pttUrl) {
     console.log(`\n=== 處理 ${year} 年 ${month} 月資料 ===`);
-    let { startDate, endDate } = getMonthDateRange(year, month);
-
-    // 官方網站現在只回傳「起始日期」當天的資料，不返回整個月份範圍
-    // 因此對當月爬取改從「今天」開始，確保能拿到今天的活動資料
-    // 過去的資料由 existingData 保存機制（date <= today）維持
-    const now = new Date();
-    const currentYear = now.getFullYear();
-    const currentMonth = now.getMonth() + 1;
-    if (year === currentYear && month === currentMonth) {
-        const todayStr = `${currentYear}/${String(currentMonth).padStart(2, '0')}/${String(now.getDate()).padStart(2, '0')}`;
-        startDate = todayStr;
-    }
-
-    console.log(`日期範圍: ${startDate} ~ ${endDate}`);
+    const { startDate, endDate } = getMonthDateRange(year, month);
 
     const fileName = getMonthFileName(year, month);
     const filePath = path.join(process.cwd(), 'data', fileName);
@@ -940,11 +937,29 @@ async function processMonth(year, month, pttData, pttUrl) {
         console.log(`No existing local file found for ${fileName}, creating new. ${e}`);
     }
 
-    const officialData = await crawlData(startDate, endDate);
+    // 2. 官網每次只回傳 startDate 當天的資料，因此逐日爬取
+    //    已在 existingData 且非今天的過去日期跳過，避免無謂請求
+    const todayStr = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
+    const start = parseDateStr(startDate);
+    const end = parseDateStr(endDate);
+    const officialData = {};
 
-    // 2. Preserve all dates from existingData that the official site didn't return.
-    //    The official site only returns data for the exact startDate, so future dates
-    //    are never returned by the crawl and must be preserved from the existing file.
+    for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+        const isoDate = d.toISOString().slice(0, 10); // "YYYY-MM-DD"
+        // 過去日期且 existingData 已有資料 → 直接沿用，不重新爬取
+        if (isoDate < todayStr && existingData?.[isoDate]) {
+            officialData[isoDate] = existingData[isoDate];
+            continue;
+        }
+        const crawlDate = formatDateForCrawl(new Date(d));
+        console.log(`  爬取日期: ${crawlDate}`);
+        const dayData = await crawlData(crawlDate, crawlDate);
+        for (const date in dayData) {
+            officialData[date] = dayData[date];
+        }
+    }
+
+    // 3. Preserve any extra dates from existingData (e.g. isPttOnly events on past dates)
     if (existingData) {
         for (const date in existingData) {
             if (!officialData[date]) {
@@ -953,10 +968,10 @@ async function processMonth(year, month, pttData, pttUrl) {
         }
     }
 
-    // 3. Pass existingData to mergeData for fallback
+    // 4. Pass existingData to mergeData for fallback
     const mergedData = mergeData(officialData, pttData, existingData, year, month, pttUrl);
 
-    // 3. Geocoding: 將地址轉換為經緯度
+    // 5. Geocoding: 將地址轉換為經緯度
     await geocodeEvents(mergedData);
 
     const totalEvents = Object.values(mergedData).reduce((sum, events) => sum + events.length, 0);
