@@ -75,7 +75,7 @@ export default function FilterPanel({
       {/* Header 行：左側標題 + 中間搜尋 + 右側展開 */}
       <div className="flex items-center gap-2 p-3">
         {/* 左：篩選條件標題 */}
-        <div className="flex items-center gap-2 shrink-0">
+        <div className="flex items-center gap-2 shrink-0 cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
           <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
             <SlidersHorizontal className="w-4 h-4 text-gray-600" />
           </div>
