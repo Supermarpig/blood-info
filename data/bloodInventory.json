@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026年04月19日 07時31分",
+  "updatedAt": "2026年04月20日 07時35分",
   "centers": [
     {
       "name": "台北",
@@ -15,8 +15,8 @@
       "bloodTypes": {
         "A": "normal",
         "B": "normal",
-        "O": "low",
-        "AB": "low"
+        "O": "normal",
+        "AB": "normal"
       }
     },
     {
@@ -24,7 +24,7 @@
       "bloodTypes": {
         "A": "low",
         "B": "normal",
-        "O": "urgent",
+        "O": "low",
         "AB": "normal"
       }
     },
@@ -33,7 +33,7 @@
       "bloodTypes": {
         "A": "normal",
         "B": "normal",
-        "O": "low",
+        "O": "normal",
         "AB": "normal"
       }
     }
