@@ -1,0 +1,49 @@
+{
+  "slug": "2026-04-20-why-o-type-universal-donor",
+  "title": "O型血為什麼是萬能供血者？ABO血型的關鍵秘密",
+  "date": "2026-04-20",
+  "author": "血荒資訊編輯部",
+  "summary": "O型血被稱為「萬能供血者」，背後涉及ABO血型抗原與抗體的免疫機制，了解原理有助於認識捐血的重要性。",
+  "imageUrl": "https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?w=800&auto=format&fit=crop",
+  "imageAlt": "血袋與血型檢測示意圖",
+  "sections": [
+    {
+      "id": "section-1",
+      "heading": "什麼是ABO血型系統？",
+      "content": "ABO血型系統是人類最重要的紅血球抗原分類系統，由奧地利科學家卡爾·蘭德施泰納（Karl Landsteiner）於1901年發現，並因此獲得1930年諾貝爾生理學或醫學獎。血型的決定關鍵在於紅血球表面的「抗原」——A型血的紅血球帶有A抗原，B型帶有B抗原，AB型兩者皆有，O型則兩者皆無。與此同時，血清中也含有對應的抗體：A型血清含抗B抗體，B型含抗A抗體，O型兩者皆有，AB型則兩者皆無。當輸血時，若受血者血清中的抗體遇到供血者紅血球上對應的抗原，就會發生凝集反應，引發嚴重甚至致命的溶血輸血反應。因此，輸血前必須嚴格配對血型，以確保安全。"
+    },
+    {
+      "id": "section-2",
+      "heading": "O型血為何成為「萬能供血者」？",
+      "content": "O型血之所以被稱為萬能供血者，核心原因在於O型紅血球表面**不帶有A或B抗原**。當O型血輸入A型、B型或AB型受血者體內時，受血者血清中的抗A或抗B抗體找不到對應的靶標，因此不會引發凝集反應，理論上能被各血型接受。這個特性在緊急醫療情境中極為重要——當傷患需要立即輸血，卻來不及進行完整血型鑑定時，O型紅血球往往是搶救生命的第一選擇。台灣各醫院急診室與手術室皆備有O型紅血球庫存，供緊急未知血型輸血使用。想了解您附近哪裡可以捐獻O型血，可前往 www.bloodtw.com 查詢鄰近捐血站資訊，您的一袋血可能在緊急時刻救人一命。"
+    },
+    {
+      "id": "section-3",
+      "heading": "「萬能供血者」的限制與誤解",
+      "content": "儘管O型紅血球在緊急輸血中具有廣泛相容性，「萬能供血者」這個稱號仍有其限制，不應被過度解讀。首先，O型全血（包含血漿）中含有抗A及抗B抗體，若大量輸注，這些抗體可能攻擊受血者自身的紅血球，尤其對A型或B型受血者造成潛在溶血風險。因此現代醫學在大量輸血時，仍會盡量使用同型血，O型紅血球的萬能特性主要適用於分離後的「濃縮紅血球」製品，而非全血。其次，血型系統不只有ABO一種，還包括Rh因子（俗稱正負血型）、Kell、Duffy等超過30種系統。O型Rh陰性（O-）才是真正意義上最廣泛的萬能供血者，但台灣Rh陰性比例不到0.3%，十分稀少，屬於珍貴的「熊貓血」。"
+    },
+    {
+      "id": "section-4",
+      "heading": "O型血捐血者肩負的社會責任",
+      "content": "正因O型血在緊急輸血中不可或缺，O型捐血者對血庫的貢獻特別關鍵。台灣血液基金會的統計顯示，O型為台灣最常見血型，約佔人口的44%，但由於用量大（急診、手術備血優先使用），血庫中O型血的庫存壓力往往比其他血型更高。每逢連假、颱風、疫情等導致捐血人潮減少的時期，O型血往往率先告急。醫學上，全血捐獻後紅血球的保存期限約為42天，血小板更只有5天，因此血庫需要持續不斷補充。O型血友若身體狀況符合捐血資格（年齡17至65歲、體重男性50公斤以上、女性45公斤以上、血色素達標），定期捐血是對社會最直接的貢獻之一。捐一次全血約450毫升，人體通常在8至12週內即可完全恢復，對健康成人而言安全無虞。"
+    }
+  ],
+  "sources": [
+    {
+      "text": "台灣血液基金會 - 血液知識",
+      "url": "https://www.blood.org.tw/Internet/main/docDetail.aspx?uid=6435&pid=6379"
+    },
+    {
+      "text": "衛生福利部 - 捐血須知",
+      "url": "https://www.mohw.gov.tw/cp-16-70676-1.html"
+    },
+    {
+      "text": "Dean L. Blood Groups and Red Cell Antigens. NCBI Bookshelf, National Library of Medicine.",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK2267/"
+    },
+    {
+      "text": "Landsteiner K. Zur Kenntnis der antifermentativen, lytischen und agglutinierenden Wirkungen des Blutserums und der Lymphe. Zentralblatt für Bakteriologie. 1900.",
+      "url": "https://www.nobelprize.org/prizes/medicine/1930/landsteiner/biographical/"
+    }
+  ]
+}

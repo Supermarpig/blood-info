@@ -1,16 +1,42 @@
 User-agent: *
 Allow: /
 
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
+# Anthropic
 User-agent: ClaudeBot
 Allow: /
+User-agent: anthropic-ai
+Allow: /
 
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
+# Google AI
 User-agent: Google-Extended
+Allow: /
+
+# Meta
+User-agent: meta-externalagent
+Allow: /
+
+# Apple
+User-agent: Applebot-Extended
+Allow: /
+
+# ByteDance / TikTok
+User-agent: Bytespider
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Microsoft / Bing AI
+User-agent: bingbot
 Allow: /
 
 Sitemap: https://www.bloodtw.com/sitemap.xml
