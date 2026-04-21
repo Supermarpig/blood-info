@@ -30,10 +30,16 @@ export interface NearbyLocation {
   distance: number; // 公里
 }
 
+export interface UserLocation {
+  lat: number;
+  lng: number;
+}
+
 interface UseNearbyLocationsReturn {
   isLoading: boolean;
   error: string | null;
   nearbyLocations: NearbyLocation[];
+  userLocation: UserLocation | null;
   findNearbyLocations: (events: DonationEvent[]) => Promise<void>;
   clearResults: () => void;
 }
@@ -106,6 +112,7 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [nearbyLocations, setNearbyLocations] = useState<NearbyLocation[]>([]);
+  const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
 
   const findNearbyLocations = useCallback(async (events: DonationEvent[]) => {
     setIsLoading(true);
@@ -117,6 +124,7 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
       const position = await getUserLocation();
       const userLat = position.coords.latitude;
       const userLng = position.coords.longitude;
+      setUserLocation({ lat: userLat, lng: userLng });
 
       // 2. 篩選有經緯度資料的事件
       const eventsWithCoords = events.filter(
@@ -141,11 +149,18 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
         })
       );
 
-      // 4. 排序並取前三個
       locationsWithDistance.sort((a, b) => a.distance - b.distance);
-      const top3 = locationsWithDistance.slice(0, 3);
 
-      setNearbyLocations(top3);
+      // deduplicate by coordinates — same physical spot = same pin
+      const seen = new Set<string>();
+      const unique = locationsWithDistance.filter(({ event }) => {
+        const key = `${event.coordinates!.lat.toFixed(5)},${event.coordinates!.lng.toFixed(5)}`;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+
+      setNearbyLocations(unique.slice(0, 5));
     } catch (err) {
       setError(err instanceof Error ? err.message : "發生未知錯誤");
     } finally {
@@ -155,6 +170,7 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
 
   const clearResults = useCallback(() => {
     setNearbyLocations([]);
+    setUserLocation(null);
     setError(null);
   }, []);
 
@@ -162,6 +178,7 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
     isLoading,
     error,
     nearbyLocations,
+    userLocation,
     findNearbyLocations,
     clearResults,
   };

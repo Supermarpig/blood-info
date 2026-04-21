@@ -102,6 +102,12 @@ body {
   }
 }
 
+/* ── Nearby map section ── */
+@keyframes nearbyDashFlow {
+  /* 9 + 11 = 20 — one full dash+gap cycle */
+  to { stroke-dashoffset: -20; }
+}
+
 .shimmer-btn {
   position: relative;
   overflow: hidden;

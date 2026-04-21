@@ -8,8 +8,8 @@ import CardInfo from "@/components/CardInfo";
 import BackToTopButton from "@/components/BackToTopButton";
 import { Button } from "@/components/ui/button";
 import { useNearbyLocations } from "@/hooks/useNearbyLocations";
-import NearbyLocationsModal from "@/components/NearbyLocationsModal";
 import HeroSection from "@/components/HeroSection";
+import NearbyMapSection from "@/components/NearbyMapSection";
 import FilterPanel from "@/components/FilterPanel";
 import { REGIONS } from "@/lib/regionConfig";
 import { GIFTS } from "@/lib/giftConfig";
@@ -54,7 +54,6 @@ export default function SearchableDonationList({
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedCenter, setSelectedCenter] = useState<string | null>(null);
   const [showPastEvents, setShowPastEvents] = useState<boolean>(false);
-  const [isNearbyModalOpen, setIsNearbyModalOpen] = useState<boolean>(false);
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerRef = useRef<HTMLDivElement>(null);
 
@@ -62,8 +61,8 @@ export default function SearchableDonationList({
     isLoading: isNearbyLoading,
     error: nearbyError,
     nearbyLocations,
+    userLocation,
     findNearbyLocations,
-    clearResults,
   } = useNearbyLocations();
 
   // 使用台灣時區來判斷今日日期
@@ -149,14 +148,10 @@ export default function SearchableDonationList({
   };
 
   const handleFindNearby = async () => {
-    setIsNearbyModalOpen(true);
+    document.getElementById("nearby-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
     await findNearbyLocations(allCurrentEvents);
   };
 
-  const handleCloseNearbyModal = () => {
-    setIsNearbyModalOpen(false);
-    clearResults();
-  };
 
   const renderEventSection = (
     eventsByDate: Record<string, DonationEvent[]>,
@@ -244,6 +239,15 @@ export default function SearchableDonationList({
         onFindNearby={handleFindNearby}
         onCenterSelect={handleCenterSelect}
         selectedCenter={selectedCenter}
+      />
+
+      {/* ── 離你最近的捐血點 ── */}
+      <NearbyMapSection
+        nearbyLocations={nearbyLocations}
+        userLocation={userLocation}
+        isLoading={isNearbyLoading}
+        error={nearbyError}
+        onRetry={handleFindNearby}
       />
 
       {/* 搜尋與篩選區 */}
@@ -377,14 +381,6 @@ export default function SearchableDonationList({
 
       <BackToTopButton />
 
-      {/* 附近捐血點 Modal */}
-      <NearbyLocationsModal
-        isOpen={isNearbyModalOpen}
-        onClose={handleCloseNearbyModal}
-        isLoading={isNearbyLoading}
-        error={nearbyError}
-        locations={nearbyLocations}
-      />
     </div>
   );
 }
