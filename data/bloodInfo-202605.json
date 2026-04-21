@@ -655,10 +655,27 @@
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5aSn5qi55b6M5YKZ6LuN5Lq6",
       "time": "09:00~17:00",
       "organization": "大樹後備軍人",
-      "location": "高雄市大樹區大樹路71號(大樹保安宮)",
+      "location": "高雄市大樹區中正一路249號(大樹國小)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620169318832904"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620169318832904",
+      "pttData": {
+        "rawLine": "5/3(日)高雄大樹國小",
+        "images": [
+          "https://i.imgur.com/E9kiBLo.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/E9kiBLo.jpeg",
+            "text": "115 年 5 月 3 日 (星期 日 )\n訊 ” 早 上 09:00 - 下 午 17:00\n說 高 雄 市 大 樹 區 後 備 軍人 輔導 中 心 辦理 爸\n\n品 為 重要 提醒 : 捐 血 請 帶 身分 證件 | 區: 林\n@@ 上 餚 並 有 健 檢 活動 , 有 需要 者 請 拉 帶 健保 上 全 褒\n說 區 大 樹 鄉親 作 伙 捲 起 袖子 , 毗 晤 二\n8 上 水 熱血 健 檢 做 公益 ! < 三 于 3\n捐血 250 CC 贈品 捐血 500 CC 贈品\n1. 全 聯 禮券 $100 元 玫 ?| | 1. 全 聯 禮券 5200 元 于\n2. 白 米 1 公 斤 1 包 。 司 || 2. 白 米 1 公斤 2 包 鼎 呵\n3. 衛 生 紙 1 串 12 小 包 3. 衛 生 紙 2 串 24 小 包\n4. 濕 紙巾 1 包 內 8 小 包 |「| 4. 濕 紙巾 2 包 內 16 小 包\n5. 維 盛 發 元 禮盒 1 盒 5. 維 盛 發 凍 禮 盒 2 份 。\n> 自 食 」 合 八 唔\n家 人 帶 小 朋友 現場 手 作\n(棉花 糖 / 糖 霜 餅乾 @) 人 廬 全\n倪 色 多 全 胃 間 宮\n達意 !! 家 人 捐血 成 功 。 大 樹 國 小\n送 小 朋友 (棉花 糖 ) 一 桶 , (高 雄 市 大 樹 區 中 正路 249 號 )\n送 完全 為 止 囉 。 講\n現場 在 地 美 食 (好 吃 ) @p 仿\n全 | 現 做 ( 豆 食 昭 廬 鏈 ) @\n有 5\n臉 人 迪 一 此 孕 《\n明了 補\n",
+            "confidence": 67
+          }
+        ]
+      },
+      "tags": [
+        "禮券",
+        "食品"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MzB+MTc6MDAt5bGP5p2x57ij5r2u5bee6Y6u5rC055Si6aSK5q6W5Y2U5pyD",
@@ -842,37 +859,6 @@
       "coordinates": {
         "lat": 24.2489668,
         "lng": 120.566331
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDUtMDMtNS8zKOaXpSnpq5jpm4TlpKfmqLnlnIvlsI8=",
-      "time": "",
-      "organization": "高雄大樹國小",
-      "location": "高雄大樹國小",
-      "activityDate": "2026-05-03",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "5/3(日)高雄大樹國小",
-        "images": [
-          "https://i.imgur.com/E9kiBLo.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/E9kiBLo.jpeg",
-            "text": "115 年 5 月 3 日 (星期 日 )\n訊 ” 早 上 09:00 - 下 午 17:00\n說 高 雄 市 大 樹 區 後 備 軍人 輔導 中 心 辦理 爸\n\n品 為 重要 提醒 : 捐 血 請 帶 身分 證件 | 區: 林\n@@ 上 餚 並 有 健 檢 活動 , 有 需要 者 請 拉 帶 健保 上 全 褒\n說 區 大 樹 鄉親 作 伙 捲 起 袖子 , 毗 晤 二\n8 上 水 熱血 健 檢 做 公益 ! < 三 于 3\n捐血 250 CC 贈品 捐血 500 CC 贈品\n1. 全 聯 禮券 $100 元 玫 ?| | 1. 全 聯 禮券 5200 元 于\n2. 白 米 1 公 斤 1 包 。 司 || 2. 白 米 1 公斤 2 包 鼎 呵\n3. 衛 生 紙 1 串 12 小 包 3. 衛 生 紙 2 串 24 小 包\n4. 濕 紙巾 1 包 內 8 小 包 |「| 4. 濕 紙巾 2 包 內 16 小 包\n5. 維 盛 發 元 禮盒 1 盒 5. 維 盛 發 凍 禮 盒 2 份 。\n> 自 食 」 合 八 唔\n家 人 帶 小 朋友 現場 手 作\n(棉花 糖 / 糖 霜 餅乾 @) 人 廬 全\n倪 色 多 全 胃 間 宮\n達意 !! 家 人 捐血 成 功 。 大 樹 國 小\n送 小 朋友 (棉花 糖 ) 一 桶 , (高 雄 市 大 樹 區 中 正路 249 號 )\n送 完全 為 止 囉 。 講\n現場 在 地 美 食 (好 吃 ) @p 仿\n全 | 現 做 ( 豆 食 昭 廬 鏈 ) @\n有 5\n臉 人 迪 一 此 孕 《\n明了 補\n",
-            "confidence": 67
-          }
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 22.6884316,
-        "lng": 120.4344421
       }
     },
     {
