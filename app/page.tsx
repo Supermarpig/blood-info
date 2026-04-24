@@ -1,4 +1,5 @@
 // app/page.tsx
+import Link from "next/link";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import HealthFloatingButton from "@/components/HealthFloatingButton";
@@ -265,13 +266,29 @@ export default async function BloodDonationPage() {
               opacity="0.6"
             />
           </svg>
-          <h1 className="text-xl font-bold text-gray-800">捐血活動查詢</h1>
+          <h1 className="text-xl font-bold text-gray-800">
+            捐血活動查詢｜今天哪裡有捐血車
+          </h1>
         </div>
         <AddDonationEventModal />
       </div>
       <p className="text-sm text-gray-500 mb-6">
         今天哪裡有捐血車？即時查詢全台捐血活動地點、捐血站開放時間與捐血贈品資訊。支援台北、新北、台中、台南、高雄等各縣市，快速找到附近捐血地點！
       </p>
+
+      <section className="mb-8 rounded-lg border border-gray-100 bg-gray-50/60 p-5">
+        <h2 className="text-lg font-semibold text-gray-800 mb-2">
+          今天哪裡有捐血車？一頁搞懂捐血活動查詢方式
+        </h2>
+        <p className="text-sm text-gray-700 leading-relaxed mb-2">
+          本站整合台灣血液基金會公告的每日捐血活動資料，讓你快速知道「今天哪裡有捐血車、哪裡有捐血活動」。資料涵蓋台北、新北、台中、台南、高雄、桃園、新竹、苗栗、彰化、嘉義、屏東、基隆、宜蘭、花蓮等全台縣市，每小時更新最新捐血車出車地點與捐血站開放時間。
+        </p>
+        <p className="text-sm text-gray-700 leading-relaxed">
+          你可以透過上方搜尋欄輸入地區或地點關鍵字、或點選縣市篩選當日活動；也可以從
+          <Link href="/gift/movie-ticket" className="text-red-600 hover:underline mx-1">捐血贈品查詢</Link>
+          頁面直接篩選電影票、超商禮券、生活用品等贈品活動，找到最適合自己的捐血行程。所有資料都來自官方公開資訊並標註活動時間與主辦單位，點進活動即可查看完整地址、地圖與贈品細節。
+        </p>
+      </section>
 
       <SearchableDonationList data={data} />
       <InternalLinks />
