@@ -247,7 +247,7 @@ export default async function BloodDonationPage() {
 
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center gap-2">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
             <defs>
               <linearGradient id="dropGrad" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stopColor="#dc2626" />
@@ -266,10 +266,10 @@ export default async function BloodDonationPage() {
               opacity="0.6"
             />
           </svg>
-          <h1 className="text-xl font-bold text-gray-800">
-            捐血活動查詢｜今天哪裡有捐血車
-          </h1>
+          <span className="font-bold text-gray-800 text-base tracking-tight">捐血活動查詢</span>
+          <span className="hidden sm:inline text-xs text-gray-400 font-normal">今天哪裡有捐血車</span>
         </div>
+        <h1 className="sr-only">捐血活動查詢｜今天哪裡有捐血車</h1>
         <AddDonationEventModal />
       </div>
       <SearchableDonationList data={data} />

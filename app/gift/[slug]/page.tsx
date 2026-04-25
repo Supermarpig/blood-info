@@ -222,7 +222,7 @@ export default async function GiftPage({ params }: PageProps) {
       <p className="text-sm text-gray-500 mb-6">{gift.intro}</p>
 
       {/* Event list */}
-      <SearchableDonationList data={data} />
+      <SearchableDonationList data={data} staticFilterLabel={gift.name} />
     </div>
   );
 }

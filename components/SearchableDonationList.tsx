@@ -43,12 +43,15 @@ interface SearchableDonationListProps {
   currentRegionSlug?: string;
   /** 當前選中的城市 slug */
   currentCitySlug?: string;
+  /** 靜態 filter 標籤（如贈品頁的贈品名稱），會固定顯示在卡片標題前 */
+  staticFilterLabel?: string;
 }
 
 export default function SearchableDonationList({
   data,
   currentRegionSlug,
   currentCitySlug,
+  staticFilterLabel,
 }: SearchableDonationListProps) {
   const [searchKeyword, setSearchKeyword] = useState<string>("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -219,6 +222,7 @@ export default function SearchableDonationList({
 
   const filterLabel = useMemo(() => {
     const parts: string[] = [];
+    if (staticFilterLabel) parts.push(staticFilterLabel);
     if (selectedCenter) {
       const region = REGIONS.find((r) => r.centerFilter === selectedCenter);
       if (region) parts.push(region.displayName);
@@ -227,7 +231,7 @@ export default function SearchableDonationList({
       parts.push(selectedTags.join("、"));
     }
     return parts.join("");
-  }, [selectedCenter, selectedTags]);
+  }, [staticFilterLabel, selectedCenter, selectedTags]);
 
   // 取得「今日」有的贈品類型（使用篩選後的資料）
   const todayGiftTags = useMemo(() => {
