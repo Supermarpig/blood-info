@@ -216,7 +216,12 @@ export default function HeroSection({
             </div>
           </div>
           <p className="text-xs font-medium text-emerald-600/80 mb-1">
-            {filterLabel ? `${filterLabel}今日活動` : "今日活動"}
+            {filterLabel ? (
+              <>
+                <span className="animate-breathe text-sm font-extrabold text-amber-500">{filterLabel}</span>
+                {" "}今日活動
+              </>
+            ) : "今日活動"}
           </p>
           <p className="text-3xl font-bold text-gray-900 tracking-tight">
             <AnimatedNumber value={todayCount} />
@@ -238,7 +243,12 @@ export default function HeroSection({
             </div>
           </div>
           <p className="text-xs font-medium text-blue-600/80 mb-1">
-            {filterLabel ? `${filterLabel}未來活動` : "即將開始"}
+            {filterLabel ? (
+              <>
+                <span className="animate-breathe text-sm font-extrabold text-amber-500">{filterLabel}</span>
+                {" "}未來活動
+              </>
+            ) : "即將開始"}
           </p>
           <p className="text-3xl font-bold text-gray-900 tracking-tight">
             <AnimatedNumber value={upcomingCount} />

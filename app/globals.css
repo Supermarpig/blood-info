@@ -102,6 +102,16 @@ body {
   }
 }
 
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.08); }
+}
+
+.animate-breathe {
+  animation: breathe 2s ease-in-out infinite;
+  display: inline-block;
+}
+
 /* ── Nearby map section ── */
 @keyframes nearbyDashFlow {
   /* 9 + 11 = 20 — one full dash+gap cycle */
