@@ -1,6 +1,6 @@
 "use client";
 
-import { useId } from "react";
+import { useId, useState } from "react";
 import dynamic from "next/dynamic";
 import { Loader2, Navigation2, ExternalLink } from "lucide-react";
 import { NearbyLocation, UserLocation } from "@/hooks/useNearbyLocations";
@@ -38,6 +38,7 @@ interface Props {
 export default function NearbyMapSection({ nearbyLocations, userLocation, isLoading, error, onRetry }: Props) {
   const uid = useId().replace(/[^a-zA-Z0-9]/g, "") || "nms";
   const hasResults = nearbyLocations.length > 0;
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   return (
     <section id="nearby-section" className="mb-6 scroll-mt-4">
@@ -57,11 +58,13 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
       </div>
 
       {/* ── Map area ── */}
-      <div className="relative rounded-2xl overflow-hidden border border-[#d9d9d5]" style={{ height: 380 }}>
+      <div className="relative rounded-2xl border border-[#d9d9d5]" style={{ height: 380 }}>
 
+        {/* Map content in its own clipped div */}
+        <div className="absolute inset-0 rounded-2xl overflow-hidden">
         {userLocation ? (
           /* Real Leaflet map — AnimatedLines rendered inside via createPortal */
-          <LeafletMap user={userLocation} locations={nearbyLocations} />
+          <LeafletMap user={userLocation} locations={nearbyLocations} selectedIndex={selectedIndex} />
         ) : (
           /* SVG demo animation before location is known */
           <div className="w-full h-full" style={{ background: "linear-gradient(180deg, #eef5ea 0%, #e3ede0 100%)" }}>
@@ -154,41 +157,51 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
             </div>
           </div>
         )}
+        </div>{/* end map clip div */}
+
+        {/* Floating result cards — bottom of map */}
+        {hasResults && (
+          <div className="absolute bottom-2 left-2 right-2 z-[500] flex gap-2 overflow-x-auto pb-0.5 snap-x snap-mandatory scrollbar-none">
+            {nearbyLocations.map((loc, i) => {
+              const isSelected = selectedIndex === i;
+              return (
+                <div
+                  key={i}
+                  onClick={() => setSelectedIndex(isSelected ? null : i)}
+                  className={`snap-start flex-shrink-0 w-52 flex items-center gap-2.5 bg-white/95 backdrop-blur-sm rounded-xl p-3 border shadow-md transition-all cursor-pointer ${
+                    isSelected ? "border-orange-400 shadow-orange-200" : "border-[#ececea] hover:shadow-lg"
+                  }`}
+                >
+                  <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
+                    style={{ background: isSelected ? "#f97316" : "#e11d2a" }}>
+                    {i + 1}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-semibold text-[#171717] truncate">{loc.event.organization}</p>
+                    <p className="text-[11px] text-[#7a7a7a] truncate mt-0.5">{loc.event.location}</p>
+                  </div>
+                  <div className="flex-shrink-0 text-right">
+                    <p className="text-xs font-bold" style={{ color: isSelected ? "#f97316" : "#e11d2a" }}>{fmt(loc.distance)}</p>
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.event.location)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <ExternalLink className="w-3 h-3 text-[#7a7a7a] mt-0.5 ml-auto" />
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
 
       {/* error */}
       {error && (
         <div className="mt-2 px-4 py-2.5 rounded-xl text-sm text-red-700 bg-red-50 border border-red-100">
           {error}
-        </div>
-      )}
-
-      {/* results list */}
-      {hasResults && (
-        <div className="mt-3 space-y-2">
-          {nearbyLocations.map((loc, i) => (
-            <a
-              key={i}
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.event.location)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 bg-white rounded-xl p-3 border border-[#ececea] hover:border-[#d9d9d5] hover:shadow-sm transition-all"
-            >
-              <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-                style={{ background: "#e11d2a" }}>
-                {i + 1}
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-[#171717] truncate">{loc.event.organization}</p>
-                <p className="text-xs text-[#7a7a7a] truncate mt-0.5">{loc.event.location}</p>
-                <p className="text-xs text-[#7a7a7a] mt-0.5">{loc.event.time}</p>
-              </div>
-              <div className="text-right flex-shrink-0 flex flex-col items-end gap-1">
-                <p className="text-sm font-bold text-[#e11d2a]">{fmt(loc.distance)}</p>
-                <ExternalLink className="w-3 h-3 text-[#7a7a7a]" />
-              </div>
-            </a>
-          ))}
         </div>
       )}
     </section>

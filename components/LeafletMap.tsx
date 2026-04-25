@@ -47,6 +47,22 @@ function fmt(km: number) {
   return km < 1 ? `${Math.round(km * 1000)}m` : `${km.toFixed(1)}km`;
 }
 
+/* ── fit both user + selected pin into view ── */
+function FitSelected({ user, locations, selectedIndex }: { user: UserLocation; locations: NearbyLocation[]; selectedIndex: number | null }) {
+  const map = useMap();
+  useEffect(() => {
+    if (selectedIndex === null) return;
+    const loc = locations[selectedIndex];
+    if (!loc?.event.coordinates) return;
+    const bounds = L.latLngBounds(
+      [user.lat, user.lng],
+      [loc.event.coordinates.lat, loc.event.coordinates.lng],
+    );
+    map.flyToBounds(bounds, { padding: [60, 60], maxZoom: 15, duration: 0.8 });
+  }, [map, user, locations, selectedIndex]);
+  return null;
+}
+
 /* ── auto-fit to show all pins ── */
 function BoundsUpdater({ user, locations }: { user: UserLocation; locations: NearbyLocation[] }) {
   const map = useMap();
@@ -73,9 +89,11 @@ interface PathItem {
   d: string;
   delay: string;
   dur: string;
+  locationIndex: number;
+  goesLeft: boolean;
 }
 
-function AnimatedLines({ user, locations }: { user: UserLocation; locations: NearbyLocation[] }) {
+function AnimatedLines({ user, locations, selectedIndex }: { user: UserLocation; locations: NearbyLocation[]; selectedIndex: number | null }) {
   const map = useMap();
   const [frame, setFrame] = useState<{ w: number; h: number; paths: PathItem[] } | null>(null);
 
@@ -85,22 +103,26 @@ function AnimatedLines({ user, locations }: { user: UserLocation; locations: Nea
     const c = toXY(user.lat, user.lng);
 
     const paths: PathItem[] = locations
-      .filter((l) => l.event.coordinates)
       .slice(0, 5)
-      .filter((l) => {
-        // only draw lines to pins currently visible in the viewport
-        const p = toXY(l.event.coordinates!.lat, l.event.coordinates!.lng);
-        return p.x >= 0 && p.x <= size.x && p.y >= 0 && p.y <= size.y;
+      .map((l, i) => ({ l, i }))
+      .filter(({ l, i }) => {
+        if (!l.event.coordinates) return false;
+        // always include the selected one even if off-screen
+        if (i === selectedIndex) return true;
+        const p = toXY(l.event.coordinates.lat, l.event.coordinates.lng);
+        return p.x >= -80 && p.x <= size.x + 80 && p.y >= -80 && p.y <= size.y + 80;
       })
-      .map((l, i) => {
+      .map(({ l, i }) => {
         const p = toXY(l.event.coordinates!.lat, l.event.coordinates!.lng);
         const mx = (c.x + p.x) / 2;
         const my = (c.y + p.y) / 2 - 50;
         return {
           id: `al-${i}`,
+          locationIndex: i,
           d: `M ${c.x.toFixed(1)} ${c.y.toFixed(1)} Q ${mx.toFixed(1)} ${my.toFixed(1)} ${p.x.toFixed(1)} ${p.y.toFixed(1)}`,
           delay: `${(i * 0.42).toFixed(2)}s`,
           dur: `${(2.0 + i * 0.35).toFixed(1)}s`,
+          goesLeft: p.x < c.x,
         };
       });
 
@@ -137,27 +159,70 @@ function AnimatedLines({ user, locations }: { user: UserLocation; locations: Nea
         ))}
       </defs>
 
-      {frame.paths.map((p) => (
-        <g key={p.id}>
-          {/* glow halo */}
-          <path d={p.d} fill="none" stroke="#e11d2a" strokeWidth="10" strokeOpacity="0.12" filter={`url(#gf-${p.id})`} />
-          {/* dashed arc */}
-          <path
-            id={p.id}
-            d={p.d}
-            fill="none"
-            stroke="#e11d2a"
-            strokeWidth="2"
-            strokeDasharray="6 10"
-            strokeOpacity="0.5"
-            strokeLinecap="round"
-            style={{
-              animation: "nearbyDashFlow 1.8s linear infinite",
-              animationDelay: p.delay,
-            }}
-          />
-        </g>
-      ))}
+      {frame.paths.map((p) => {
+        const isSelected = selectedIndex === p.locationIndex;
+        return isSelected ? (
+          <g key={p.id}>
+            {/* glow */}
+            <path d={p.d} fill="none" stroke="#f97316" strokeWidth="8" strokeOpacity="0.18" strokeLinecap="round" />
+            {/* solid line */}
+            <path d={p.d} fill="none" stroke="#f97316" strokeWidth="2.5" strokeOpacity="0.85" strokeLinecap="round" />
+            {/* stick person carrying blood drop */}
+            <g>
+              <animateMotion dur="2.2s" repeatCount="indefinite" path={p.d} />
+              <g transform={p.goesLeft ? "scale(-1,1)" : undefined}>
+
+              {/* blood drop — big */}
+              <path d="M 2,-28 C 6,-22 8,-14 5,-9 Q 2,-6 -1,-9 C -4,-14 -2,-22 2,-28 Z"
+                fill="#e11d2a" stroke="white" strokeWidth="1.2" />
+              <ellipse cx="0.5" cy="-22" rx="1.4" ry="2.5" fill="white" opacity="0.4" transform="rotate(-20 0.5 -22)" />
+
+              {/* arm raised */}
+              <line x1="1.5" y1="-5" x2="2" y2="-8" stroke="#1f2937" strokeWidth="1.2" strokeLinecap="round" />
+
+              {/* head — small */}
+              <circle cx="3.5" cy="-8" r="2.5" fill="#fcd34d" stroke="#1f2937" strokeWidth="0.9" />
+              <circle cx="4.6" cy="-8.4" r="0.55" fill="#1f2937" />
+
+              {/* body */}
+              <line x1="1.5" y1="-5" x2="0" y2="-0.5" stroke="#1f2937" strokeWidth="1.5" strokeLinecap="round" />
+
+              {/* back arm */}
+              <line x1="1.5" y1="-4" x2="-1" y2="-2" stroke="#1f2937" strokeWidth="1.2" strokeLinecap="round">
+                <animateTransform attributeName="transform" type="rotate"
+                  values="-28,1.5,-4; 18,1.5,-4; -28,1.5,-4" dur="0.4s" repeatCount="indefinite" />
+              </line>
+
+              {/* front leg */}
+              <line x1="0" y1="-0.5" x2="3" y2="5" stroke="#1f2937" strokeWidth="1.3" strokeLinecap="round">
+                <animateTransform attributeName="transform" type="rotate"
+                  values="28,0,-0.5; -18,0,-0.5; 28,0,-0.5" dur="0.4s" repeatCount="indefinite" />
+              </line>
+
+              {/* back leg */}
+              <line x1="0" y1="-0.5" x2="-2.5" y2="5" stroke="#1f2937" strokeWidth="1.3" strokeLinecap="round">
+                <animateTransform attributeName="transform" type="rotate"
+                  values="-18,0,-0.5; 28,0,-0.5; -18,0,-0.5" dur="0.4s" repeatCount="indefinite" />
+              </line>
+              </g>
+            </g>
+          </g>
+        ) : (
+          <g key={p.id}>
+            <path d={p.d} fill="none" stroke="#e11d2a" strokeWidth="10" strokeOpacity="0.10" filter={`url(#gf-${p.id})`} />
+            <path
+              d={p.d}
+              fill="none"
+              stroke="#e11d2a"
+              strokeWidth="2"
+              strokeDasharray="6 10"
+              strokeOpacity="0.45"
+              strokeLinecap="round"
+              style={{ animation: "nearbyDashFlow 1.8s linear infinite", animationDelay: p.delay }}
+            />
+          </g>
+        );
+      })}
     </svg>,
     map.getContainer()
   );
@@ -166,9 +231,10 @@ function AnimatedLines({ user, locations }: { user: UserLocation; locations: Nea
 interface Props {
   user: UserLocation;
   locations: NearbyLocation[];
+  selectedIndex: number | null;
 }
 
-export default function LeafletMap({ user, locations }: Props) {
+export default function LeafletMap({ user, locations, selectedIndex }: Props) {
   return (
     <MapContainer
       center={[user.lat, user.lng]}
@@ -181,7 +247,8 @@ export default function LeafletMap({ user, locations }: Props) {
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
       <BoundsUpdater user={user} locations={locations} />
-      <AnimatedLines user={user} locations={locations} />
+      <FitSelected user={user} locations={locations} selectedIndex={selectedIndex} />
+      <AnimatedLines user={user} locations={locations} selectedIndex={selectedIndex} />
 
       {/* user pin */}
       <Marker position={[user.lat, user.lng]} icon={userIcon}>
