@@ -1,6 +1,162 @@
 {
   "2026-05-01": [
     {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDk6MDB+MTc6MDAt5paw5YyX5biC5ZaE57ej5oWI5ZaE5pyD",
+      "time": "09:00~17:00",
+      "organization": "新北市善緣慈善會",
+      "location": "新北市新店區民權路95號6樓之2(配合新店室)",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395146267789146"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMTA6MDB+MTc6MDAt5rC45qiC5om26Lyq56S+",
+      "time": "10:00~17:00",
+      "organization": "永樂扶輪社",
+      "location": "臺北市北投區七星街2號新北投捷運站",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395145623800119"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDk6MzB+MTY6MzAtKOiKsSnkvZvlhYnmnIPmtITngL7liIbmnIM=",
+      "time": "09:30~16:30",
+      "organization": "(花)佛光會洄瀾分會",
+      "location": "花蓮遠東百貨和平廣場前(花蓮市和平路581號)",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395141539264650"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDk6MzB+MTc6MDAt5paw5YyX5biC5oWI5pm05oSb5b+D6Zec5oe35Y2U5pyD",
+      "time": "09:30~17:00",
+      "organization": "新北市慈晴愛心關懷協會",
+      "location": "新北市新莊區民安西路137號",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395140351316605"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMTM6MDB+MjE6MDAt5Y+w5YyX5biC5puZ6Iux542F5a2Q5pyDQSAz",
+      "time": "13:00~21:00",
+      "organization": "台北市曙英獅子會A 3",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395139717447688"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDk6MzB+MTY6MzAt6Ie65YyX6Ieq5L6G5rC05LqL5qWt6JmV5LyB5qWt5bel5pyD",
+      "time": "09:30~16:30",
+      "organization": "臺北自來水事業處企業工會",
+      "location": "臺北市中正區思源街1號(人行出入口旁空地 )",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395139538699633"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDk6MzB+MTY6MzAt6Kyd5rSq6bqX54+g5pmv6KeA6Iqx6Jed56S+",
+      "time": "09:30~16:30",
+      "organization": "謝洪麗珠景觀花藝社",
+      "location": "新北市新莊區富國路176巷(福營行政中心旁)",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395139172578650",
+      "coordinates": {
+        "lat": 25.0241727,
+        "lng": 121.4241409
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDg6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5a6c6Jit56ys5Zub5YiG5pyD",
+      "time": "08:00~17:00",
+      "organization": "國際佛光會宜蘭第四分會",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395138994720606"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMTA6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Z+66ZqG5LuB5oSb56ys5LiJ5YiG5pyD",
+      "time": "10:00~17:00",
+      "organization": "國際佛光會中華總會基隆仁愛第三分會",
+      "location": "基隆市仁愛區愛二路78號基隆二信",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395138459841688"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMTA6MDB+MTg6MDAt5p+z5ry+55Sf5rS756m66ZaT576O5a245pyJ6ZmQ5YWs5Y+4",
+      "time": "10:00~18:00",
+      "organization": "柳漾生活空間美學有限公司",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395137815972651",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDk6MzB+MTc6MDAt5paw5YyX5biC5LiJ6YeN5Y2A5YGl6Lqr6auU5pON5Y2U5pyD",
+      "time": "09:30~17:00",
+      "organization": "新北市三重區健身體操協會",
+      "location": "新北市三重區自強路1段158號市立圖書館",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395135089931191"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDg6MzB+MTc6MDAtOTnpmrvnvoo=",
+      "time": "08:30~17:00",
+      "organization": "99隻羊",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395134800183147"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDk6MzB+MTY6MzAt5rC45oW25LiN5YuV55Si5qi55p6X",
+      "time": "09:30~16:30",
+      "organization": "永慶不動產樹林",
+      "location": "新北市樹林區保安街一段7號(濟安宮對面 )",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395134444052164"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDg6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Z+66ZqG5LuB5oSb56ys5LiJ5YiG5pyD",
+      "time": "08:00~17:00",
+      "organization": "國際佛光會中華總會基隆仁愛第三分會",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395133622336192"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMTE6MDB+MTg6MDAt6YSt6auY6Lyd56S+5pyD56aP5Yip5oWI5ZaE5LqL5qWt5Z+66YeR5pyD",
+      "time": "11:00~18:00",
+      "organization": "鄭高輝社會福利慈善事業基金會",
+      "location": "臺北市信義區松壽路16巷",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395133266205119",
+      "coordinates": {
+        "lat": 25.0354793,
+        "lng": 121.5663914
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDEtMDk6MDB+MTY6MDAt5ZyL5rOw5Lq65aO95bGV6Jit6Zm9",
+      "time": "09:00~16:00",
+      "organization": "國泰人壽展蘭陽",
+      "location": "宜蘭縣羅東鎮純精路一段96號(羅東文化工場)",
+      "activityDate": "2026-05-01",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395132187457165"
+    },
+    {
       "id": "5paw56u5LTIwMjYvMDUvMDEtMDk6MDB+MTY6MDAt5bmz6Y6u5Y2A5b6M5YKZ5oay5YW16I235p2+5Y2U",
       "time": "09:00~16:00",
       "organization": "平鎮區後備憲兵荷松協",
@@ -44,6 +200,114 @@
       "activityDate": "2026-05-01",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346070366845500"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MDB+MTc6MzAt6JGr6JiG5aKp5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "09:00~17:30",
+      "organization": "葫蘆墩國際同濟會",
+      "location": "臺中市豐原區北陽路2號(豐原捐血室)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385999619408636"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MzB+MTU6MzAt5a+M5YGJ542F5a2Q5pyDKOWNl+aKlSk=",
+      "time": "09:30~15:30",
+      "organization": "富偉獅子會(南投)",
+      "location": "南投縣竹山鎮枋坪巷1號(竹山克明宮)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385999254387664"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyDKOWNl+aKlSk=",
+      "time": "09:00~17:00",
+      "organization": "富偉獅子會(南投)",
+      "location": "南投縣南投市中興路616號1樓(南投捐血室)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385994981993140"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MDB+MTY6MDAt5p6X5YWn5ZyY5aeU5pyD",
+      "time": "09:00~16:00",
+      "organization": "林內團委會",
+      "location": "雲林縣林內鄉中正路373號(7-11新林內門市)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385994526872177"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDg6MDB+MTY6MDAt5oWI5b+D5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "08:00~16:00",
+      "organization": "慈心國際同濟會",
+      "location": "南投縣埔里鎮北環路222號(埔里捐血站)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385994347024123"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MzB+MTY6MDAt6bm/5riv5b6M5oay",
+      "time": "09:30~16:00",
+      "organization": "鹿港後憲",
+      "location": "彰化縣鹿港鎮民權路168號(鹿港鎮公所)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385988531650682"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MzB+MTY6MDAt5ZyL6Zqb5L2b5YWJ5pyD56eA5rC05YiG5pyD",
+      "time": "09:30~16:00",
+      "organization": "國際佛光會秀水分會",
+      "location": "彰化縣秀水鄉中山路328號(秀水鄉農會)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385987906781664"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MzB+MTY6MDAt5aSn6ZuF5rC46IiI5a6u",
+      "time": "09:30~16:00",
+      "organization": "大雅永興宮",
+      "location": "臺中市大雅區中清東路218號(台灣楓康超市大雅店前)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385987362802637"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MDB+MTc6MDAt5b2w5YyW57ij6buD6L2J57SA5b+15oWI5ZaE5pyD",
+      "time": "09:00~17:00",
+      "organization": "彰化縣黃轉紀念慈善會",
+      "location": "彰化縣員林市民權街55號員林火車站一樓大廳內(員林捐血室)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385983803145195"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MDB+MTc6MDAt5Y+w54Gj55yB5LuB5YWJ5oSb5b+D5Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "台灣省仁光愛心協會",
+      "location": "臺中市北區學士路91號中國附醫復健大樓正對面(中正公園捐血室)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385983279276178"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDg6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyD",
+      "time": "08:00~17:00",
+      "organization": "富偉獅子會",
+      "location": "彰化縣彰化市中山路一段348號(彰化捐血站)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385982634397141"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDEtMTA6MDB+MTg6MDAt5aW95bm456aP5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "10:00~18:00",
+      "organization": "好幸福國際同濟會",
+      "location": "臺中市北區精武路291-3號對面停車場(臺中公園捐血車)",
+      "activityDate": "2026-05-01",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385982090428123"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDEtMDg6MDB+MTY6MDAt5L2b5YWJ5pyD5pel5YWJ56ys5LqM5YiG5pyD",
@@ -115,6 +379,214 @@
     }
   ],
   "2026-05-02": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5Lit6I+v5o2Q6KGA5Lq65Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "中華捐血人協會",
+      "location": "新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395159981981145"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMTA6MDB+MTc6MDAt56S+5ZyY5rOV5Lq65paw5YyX5biC6YCj5b+D5oWI5ZaE5pyD",
+      "time": "10:00~17:00",
+      "organization": "社團法人新北市連心慈善會",
+      "location": "新北市板橋區三民路家樂福",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395159347002118"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMTA6MDB+MTg6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5paw6I6K56ys5Zub5YiG5pyD",
+      "time": "10:00~18:00",
+      "organization": "國際佛光會中華總會新莊第四分會",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395158703133190",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDg6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5pqW5pqW5YiG5pyD",
+      "time": "08:00~17:00",
+      "organization": "國際佛光會中華總會暖暖分會",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395158169254163"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5paw5YyX5biC5ZaE57ej5oWI5ZaE5pyD",
+      "time": "09:00~17:00",
+      "organization": "新北市善緣慈善會",
+      "location": "新北市新店區民權路95號6樓之2(配合新店室)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395155332213704"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MzB+MTY6MzAt5paw5YyX5biC5paw5bqX6Zuy5p6X5ZCM6YSJ5pyD",
+      "time": "09:30~16:30",
+      "organization": "新北市新店雲林同鄉會",
+      "location": "新北市新店區中興路三段新店裕隆城",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395154619597622",
+      "coordinates": {
+        "lat": 24.9781107,
+        "lng": 121.5467767
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMTM6MDB+MjE6MDAt5Y+w5YyX5biC6YeR56uZ542F5a2Q5pyDQTI=",
+      "time": "13:00~21:00",
+      "organization": "台北市金站獅子會A2",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395154254465659"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MzB+MTY6MzAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5LqU6IKh56ys5LiA5YiG5pyD",
+      "time": "09:30~16:30",
+      "organization": "國際佛光會中華總會五股第一分會",
+      "location": "新北市泰山區明志路二段文程廣場",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395153431749677"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5Y+w5YyX5o2Q6KGA5Lit5b+D5b+X5bel6ZqK",
+      "time": "09:00~17:00",
+      "organization": "台北捐血中心志工隊",
+      "location": "臺北市松山區復興北路69號5樓(配合長春室)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395153075618604"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDg6MDB+MTc6MDAt5L2b5YWJ5pyD5a6c6Jit56ys5LiA5YiG5pyD",
+      "time": "08:00~17:00",
+      "organization": "佛光會宜蘭第一分會",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395150604608217"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDg6MDB+MTc6MzAt5Y+w5YyX5biC6YeR56uZ542F5a2Q5pyDQTI=",
+      "time": "08:00~17:30",
+      "organization": "台北市金站獅子會A2",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395150426850263"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MzB+MTY6MzAt5rGQ56eR5ZyL6Zqb6Z2S5bm05ZWG5pyD",
+      "time": "09:30~16:30",
+      "organization": "汐科國際青年商會",
+      "location": "新北市汐止區信義路1號汐止火車站",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395150060729290",
+      "pttData": {
+        "rawLine": "5/2(六)彰化火車站",
+        "images": [
+          "https://i.imgur.com/TUcTtPX.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/TUcTtPX.jpeg",
+            "text": "一 一 Y yo\n< 沁 有 做\nre 二 你)\n交 同 / / 了\n人 < )\n\\ 和 何人 22\n交\n一\nSt 一\n和 _/\n募集 各 種 血型 ~ 敬 請 熱血 朋友 們 攜帶 身分 證件 ~ 捐血 救 人\n時 間 : 115/5/2( 週 六 )09:30-16:00\n地 點 : 彰化 火車 站 (彰化 市 三 民 路 1 號 )\n主 辦 : 財團 法 人 正德 社會 福利 慈善 基金 會\n協 辦 : 新 豪 億 科技 有 限 公司 、 友 誌 金 屬 股 份 有 限 公司\n大 豐 製 藥 股份 有 限 公司 、 羊 境 交 通 器 材 有 限 公司\n穩 富 國 際 科 技 有 限 公 司 、 正 德 彰 化 分 會 、 正 德 彰 化 長 理會\n陳建宏 、 謝 美 鳳 、 陳 又 筠 、 徐 健 瑜 、 石 乃 文 、 容 居士 、 鄒 維 東\n捐 250cc : 麵條 、 和 燃油 、 牛 奶 、 豆 奶 、 紫 雲 說 、 液 體 維 它 命 、 全 聯 袖 券 2 張\n摔 50occ : 麵條 、 牙 油 、 和 牛奶 、 豆 奶 、 紫 雲 謂 、 自 行 車 手套 、 液 體 維 它 命\n( 金 聯 禮券 4 張 、 葉 黃 素 ) 或 碳纖 維 羽 球拍 乙 支 ,2 選 1\n結緣 品 數 量 有 限 , 送 完 為 止\n",
+            "confidence": 72
+          }
+        ]
+      },
+      "tags": [
+        "禮券"
+      ]
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MDB+MTY6MDAt5buj5r+f5a6u",
+      "time": "09:00~16:00",
+      "organization": "廣濟宮",
+      "location": "廣濟宮(宜蘭縣員山鄉蘭城路31巷22號)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395147980406118",
+      "coordinates": {
+        "lat": 22.5770104,
+        "lng": 120.2954183
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDg6MzB+MTc6MDAtOTnpmrvnvoo=",
+      "time": "08:30~17:00",
+      "organization": "99隻羊",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395147524385146"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMTA6MzB+MTc6MDAt6Iqx6JOu5o2Q6KGA56uZ",
+      "time": "10:30~17:00",
+      "organization": "花蓮捐血站",
+      "location": "花蓮遠東百貨和平廣場前(花蓮市和平路581號)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395146801658164"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5a+M5ZOB5bu66Kit6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:00~17:00",
+      "organization": "富品建設股份有限公司",
+      "location": "臺北市中正區愛國東路106號",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395146346537191"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMTA6MDB+MTg6MDAt5YW456+E542F5a2Q5pyDQSAz",
+      "time": "10:00~18:00",
+      "organization": "典範獅子會A 3",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395143896860659"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MzB+MTY6MzAt5paw5YyX5biC5Lit5ZKM5Y2A5b6M5YKZ5oay5YW16I235p2+5Y2U5pyD",
+      "time": "09:30~16:30",
+      "organization": "新北市中和區後備憲兵荷松協會",
+      "location": "新北市中和區中山路三段122號中和環球",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395142618012605"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MzB+MTY6MzAt5ZyL6Zqb5L2b5YWJ5pyD5Z+66ZqG5LiD5aC156ys5LqM5YiG5pyD",
+      "time": "09:30~16:30",
+      "organization": "國際佛光會基隆七堵第二分會",
+      "location": "基隆市七堵區開元路92號",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395142252991622"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDItMTA6MDB+MTc6MDAt5reh5rC05rW35rSL6YO95b+D5LqM5pyf",
+      "time": "10:00~17:00",
+      "organization": "淡水海洋都心二期",
+      "location": "新北市淡水區新市三路二段217號",
+      "activityDate": "2026-05-02",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395141074143687"
+    },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDItMDk6MzB+MTY6MzAt5qGD5ZyS6auY5LmL6ZC15om26Lyq56S+",
       "time": "09:30~16:30",
@@ -204,6 +676,189 @@
       "activityDate": "2026-05-02",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346081189562572"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MDB+MTU6MDAt5riv5rSy5pWZ6IKy5Z+66YeR5pyD",
+      "time": "09:00~15:00",
+      "organization": "港洲教育基金會",
+      "location": "臺中市沙鹿區中正路3號(沙鹿國小校門口捐血車)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385998606194149"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5b2w5YyW57ij6buD6L2J57SA5b+15oWI5ZaE5pyD",
+      "time": "09:00~17:00",
+      "organization": "彰化縣黃轉紀念慈善會",
+      "location": "彰化縣員林市民權街55號員林火車站一樓大廳內(員林捐血室)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385997427346194",
+      "pttData": {
+        "rawLine": "5/2(六)彰化火車站",
+        "images": [
+          "https://i.imgur.com/TUcTtPX.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/TUcTtPX.jpeg",
+            "text": "一 一 Y yo\n< 沁 有 做\nre 二 你)\n交 同 / / 了\n人 < )\n\\ 和 何人 22\n交\n一\nSt 一\n和 _/\n募集 各 種 血型 ~ 敬 請 熱血 朋友 們 攜帶 身分 證件 ~ 捐血 救 人\n時 間 : 115/5/2( 週 六 )09:30-16:00\n地 點 : 彰化 火車 站 (彰化 市 三 民 路 1 號 )\n主 辦 : 財團 法 人 正德 社會 福利 慈善 基金 會\n協 辦 : 新 豪 億 科技 有 限 公司 、 友 誌 金 屬 股 份 有 限 公司\n大 豐 製 藥 股份 有 限 公司 、 羊 境 交 通 器 材 有 限 公司\n穩 富 國 際 科 技 有 限 公 司 、 正 德 彰 化 分 會 、 正 德 彰 化 長 理會\n陳建宏 、 謝 美 鳳 、 陳 又 筠 、 徐 健 瑜 、 石 乃 文 、 容 居士 、 鄒 維 東\n捐 250cc : 麵條 、 和 燃油 、 牛 奶 、 豆 奶 、 紫 雲 說 、 液 體 維 它 命 、 全 聯 袖 券 2 張\n摔 50occ : 麵條 、 牙 油 、 和 牛奶 、 豆 奶 、 紫 雲 謂 、 自 行 車 手套 、 液 體 維 它 命\n( 金 聯 禮券 4 張 、 葉 黃 素 ) 或 碳纖 維 羽 球拍 乙 支 ,2 選 1\n結緣 品 數 量 有 限 , 送 完 為 止\n",
+            "confidence": 72
+          }
+        ]
+      },
+      "tags": [
+        "禮券"
+      ]
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MzB+MTc6MzAt5qKn5qOy5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "09:30~17:30",
+      "organization": "梧棲國際同濟會",
+      "location": "臺中市梧棲區中華路一段1001之1號(海線捐血室)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385997061215122"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5Y+w5Lit5biC6KGb6YGT5YSy6JOE5LqS5Yqp56S+",
+      "time": "09:00~17:00",
+      "organization": "台中市衛道儲蓄互助社",
+      "location": "臺中市北區學士路91號中國附醫復健大樓正對面(中正公園捐血室)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385996983468177"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDg6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyD",
+      "time": "08:00~17:00",
+      "organization": "富偉獅子會",
+      "location": "彰化縣彰化市中山路一段348號(彰化捐血站)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385996348599140"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDg6MDB+MTc6MDAt5ZyL56uL6Zuy5p6X56eR5oqA5aSn5a24566h55CG5a246ZmiRU1CQeesrOWFq+WxhumgmOiiluePrSjpm7Lmnpcp",
+      "time": "08:00~17:00",
+      "organization": "國立雲林科技大學管理學院EMBA第八屆領袖班(雲林)",
+      "location": "雲林縣斗六市漢口路187號(雲林捐血站)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385995704620122",
+      "pttData": {
+        "rawLine": "5/2(六)雲林斗六捐血站",
+        "images": [
+          "https://i.imgur.com/Sx0zzdK.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/Sx0zzdK.jpeg",
+            "text": "AN 、%\n中 和 MN\n人\n| >\n€ 、 第 @ 屆 EMBA\n人 哲生 廬 )\n| | 二\n加 時 隊 、\n一 點 人 語\n宮下 畫\n人 N@ 了 只 品 到 量\n選 人\n己 老 過 三 明治 了 喝 ( 肉 邊 蛋黃 / 立 訂 / 花 生 ) 金 半 開 崔 時 手包 說 說 k\ne 多 之 售 i ~\nsmsaas aa 卅 masawmaa\n兒 換 禮品\n“- 品 胃 統 有 限 | 說 完全\n倫 和 de 加 kk\n吏 銜 倆 六 上\nLo 了 0 bm 了 左上 各\nse 以 2 2 人 全 還\n: 一 謂 巧 輻 2 了 像\n記 到 襄 |\n主 了 < 到\nee\nLN\n一 mm\n",
+            "confidence": 25
+          }
+        ]
+      },
+      "tags": [
+        "食品"
+      ]
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMTA6MDB+MTc6MDAt6Ie65Lit5biC5b6M5YKZ5oay5YW16I235p2+5Y2U5pyD5Y2X5bGv5Y2A5YiG5pyD",
+      "time": "10:00~17:00",
+      "organization": "臺中市後備憲兵荷松協會南屯區分會",
+      "location": "臺中市南屯區文心路一段515號(水安宮)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385995160741195"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MDB+MTY6MDAt5L2b5YWJ5pyD6KW/6J665YiG5pyD",
+      "time": "09:00~16:00",
+      "organization": "佛光會西螺分會",
+      "location": "雲林縣西螺鎮延平路180號(西螺福興宮前)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385993978689653"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMTA6MzB+MTg6MzAt5Lit576O5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "10:30~18:30",
+      "organization": "中美國際同濟會",
+      "location": "臺中市西屯區惠來路二段市政北七路口惠安停車場(新光三越捐血車)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385992799831608"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyDKOWNl+aKlSk=",
+      "time": "09:00~17:00",
+      "organization": "富偉獅子會(南投)",
+      "location": "南投縣南投市中興路616號1樓(南投捐血室)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385992333700635"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MzB+MTY6MDAt5ZyL6Zqb5L2b5YWJ5pyD5aaZ5rOV5YiG5pyD",
+      "time": "09:30~16:00",
+      "organization": "國際佛光會妙法分會",
+      "location": "臺中市大甲區大安港路2號(大甲體育場北側)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385991611983663"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MzB+MTY6MDAt5L2b5pWZ5q2j5b635oWI5ZaE5pyD",
+      "time": "09:30~16:00",
+      "organization": "佛教正德慈善會",
+      "location": "彰化縣彰化市三民路1號(彰化火車站)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385991255852681",
+      "pttData": {
+        "rawLine": "5/2(六)彰化火車站",
+        "images": [
+          "https://i.imgur.com/TUcTtPX.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/TUcTtPX.jpeg",
+            "text": "一 一 Y yo\n< 沁 有 做\nre 二 你)\n交 同 / / 了\n人 < )\n\\ 和 何人 22\n交\n一\nSt 一\n和 _/\n募集 各 種 血型 ~ 敬 請 熱血 朋友 們 攜帶 身分 證件 ~ 捐血 救 人\n時 間 : 115/5/2( 週 六 )09:30-16:00\n地 點 : 彰化 火車 站 (彰化 市 三 民 路 1 號 )\n主 辦 : 財團 法 人 正德 社會 福利 慈善 基金 會\n協 辦 : 新 豪 億 科技 有 限 公司 、 友 誌 金 屬 股 份 有 限 公司\n大 豐 製 藥 股份 有 限 公司 、 羊 境 交 通 器 材 有 限 公司\n穩 富 國 際 科 技 有 限 公 司 、 正 德 彰 化 分 會 、 正 德 彰 化 長 理會\n陳建宏 、 謝 美 鳳 、 陳 又 筠 、 徐 健 瑜 、 石 乃 文 、 容 居士 、 鄒 維 東\n捐 250cc : 麵條 、 和 燃油 、 牛 奶 、 豆 奶 、 紫 雲 說 、 液 體 維 它 命 、 全 聯 袖 券 2 張\n摔 50occ : 麵條 、 牙 油 、 和 牛奶 、 豆 奶 、 紫 雲 謂 、 自 行 車 手套 、 液 體 維 它 命\n( 金 聯 禮券 4 張 、 葉 黃 素 ) 或 碳纖 維 羽 球拍 乙 支 ,2 選 1\n結緣 品 數 量 有 限 , 送 完 為 止\n",
+            "confidence": 72
+          }
+        ]
+      },
+      "tags": [
+        "禮券"
+      ]
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MDB+MTc6MzAt6LGQ5Y6f5oWI6b6N5a+6",
+      "time": "09:00~17:30",
+      "organization": "豐原慈龍寺",
+      "location": "臺中市豐原區北陽路2號(豐原捐血室)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385991076004636"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MzB+MTg6MDAt5Y+w54Gj55yB5ZCM5b+D5oWI5ZaE5pyDKOadseWPsOS4reWNgCk=",
+      "time": "09:30~18:00",
+      "organization": "台灣省同心慈善會(東台中區)",
+      "location": "臺中市大里區國光路二段239號1樓(大里捐血室)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385990898256681"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MzB+MTY6MDAt5b2w5YyW57ij5bm456aP5aeQ5aa55pyD",
+      "time": "09:30~16:00",
+      "organization": "彰化縣幸福姐妹會",
+      "location": "彰化縣和美鎮信義路241號(林庚壬鎮長服務處)",
+      "activityDate": "2026-05-02",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385990432135618"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt6auY6ZuE5biC546J5peo6aCG5aSp5oWI5ZaE5pyD",
@@ -482,62 +1137,6 @@
       "isPttOnly": true
     },
     {
-      "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnlvbDljJbngavou4rnq5k=",
-      "time": "",
-      "organization": "彰化火車站",
-      "location": "彰化火車站",
-      "activityDate": "2026-05-02",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券"
-      ],
-      "pttData": {
-        "rawLine": "5/2(六)彰化火車站",
-        "images": [
-          "https://i.imgur.com/TUcTtPX.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/TUcTtPX.jpeg",
-            "text": "一 一 Y yo\n< 沁 有 做\nre 二 你)\n交 同 / / 了\n人 < )\n\\ 和 何人 22\n交\n一\nSt 一\n和 _/\n募集 各 種 血型 ~ 敬 請 熱血 朋友 們 攜帶 身分 證件 ~ 捐血 救 人\n時 間 : 115/5/2( 週 六 )09:30-16:00\n地 點 : 彰化 火車 站 (彰化 市 三 民 路 1 號 )\n主 辦 : 財團 法 人 正德 社會 福利 慈善 基金 會\n協 辦 : 新 豪 億 科技 有 限 公司 、 友 誌 金 屬 股 份 有 限 公司\n大 豐 製 藥 股份 有 限 公司 、 羊 境 交 通 器 材 有 限 公司\n穩 富 國 際 科 技 有 限 公 司 、 正 德 彰 化 分 會 、 正 德 彰 化 長 理會\n陳建宏 、 謝 美 鳳 、 陳 又 筠 、 徐 健 瑜 、 石 乃 文 、 容 居士 、 鄒 維 東\n捐 250cc : 麵條 、 和 燃油 、 牛 奶 、 豆 奶 、 紫 雲 說 、 液 體 維 它 命 、 全 聯 袖 券 2 張\n摔 50occ : 麵條 、 牙 油 、 和 牛奶 、 豆 奶 、 紫 雲 謂 、 自 行 車 手套 、 液 體 維 它 命\n( 金 聯 禮券 4 張 、 葉 黃 素 ) 或 碳纖 維 羽 球拍 乙 支 ,2 選 1\n結緣 品 數 量 有 限 , 送 完 為 止\n",
-            "confidence": 72
-          }
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 24.0815711,
-        "lng": 120.5383884
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnpm7Lmnpfmlpflha3mjZDooYDnq5k=",
-      "time": "",
-      "organization": "雲林斗六捐血站",
-      "location": "雲林斗六捐血站",
-      "activityDate": "2026-05-02",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "5/2(六)雲林斗六捐血站",
-        "images": [
-          "https://i.imgur.com/Sx0zzdK.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/Sx0zzdK.jpeg",
-            "text": "AN 、%\n中 和 MN\n人\n| >\n€ 、 第 @ 屆 EMBA\n人 哲生 廬 )\n| | 二\n加 時 隊 、\n一 點 人 語\n宮下 畫\n人 N@ 了 只 品 到 量\n選 人\n己 老 過 三 明治 了 喝 ( 肉 邊 蛋黃 / 立 訂 / 花 生 ) 金 半 開 崔 時 手包 說 說 k\ne 多 之 售 i ~\nsmsaas aa 卅 masawmaa\n兒 換 禮品\n“- 品 胃 統 有 限 | 說 完全\n倫 和 de 加 kk\n吏 銜 倆 六 上\nLo 了 0 bm 了 左上 各\nse 以 2 2 人 全 還\n: 一 謂 巧 輻 2 了 像\n記 到 襄 |\n主 了 < 到\nee\nLN\n一 mm\n",
-            "confidence": 25
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
       "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnlj7DljZfoh7rngaPnpYDlhbjmrablu58=",
       "time": "",
       "organization": "台南臺灣祀典武廟",
@@ -593,6 +1192,207 @@
     }
   ],
   "2026-05-03": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5rGQ5q2i5o2Q6KGA5Lq65Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "汐止捐血人協會",
+      "location": "新北市汐止區新台五路一段207號11樓B室(配合汐止室)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395169056415703"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMTM6MDB+MjE6MDAt5b+r5qiC542F5a2Q5pyDQSAz",
+      "time": "13:00~21:00",
+      "organization": "快樂獅子會A 3",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395168878667758"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDg6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Z+66ZqG5Lit5q2j56ys5LiA5YiG5pyD",
+      "time": "08:00~17:00",
+      "organization": "國際佛光會中華總會基隆中正第一分會",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395168412546775"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MzB+MTY6MzAt5p2x6I+v5aSn5a24566h55CG5a246Zmi56Kp5aOr5Zyo6IG35bCI54+t6K6A5pu45pyD",
+      "time": "09:30~16:30",
+      "organization": "東華大學管理學院碩士在職專班讀書會",
+      "location": "花蓮遠東百貨和平廣場前(花蓮市和平路581號)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395167799819703"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDg6MDB+MTc6MzAt54OP5omY6YKm542F5pyDQSAz",
+      "time": "08:00~17:30",
+      "organization": "烏托邦獅會A 3",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395167333798721"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMTA6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSAz5Y2A5ZCI5b+D542F5a2Q5pyD",
+      "time": "10:00~17:00",
+      "organization": "國際獅子會300A 3區合心獅子會",
+      "location": "新北市永和區永利路47號(永利廣場)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395167155940776"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMTA6MDB+MTg6MDAt6I+p5o+Q5ZCM5r+f5pyDKOWMl+S4gOWNgCk=",
+      "time": "10:00~18:00",
+      "organization": "菩提同濟會(北一區)",
+      "location": "新北市新莊區中華路+復興路口新莊號旁",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395165963879234"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5paw5YyX5biC5ZaE57ej5oWI5ZaE5pyD",
+      "time": "09:00~17:00",
+      "organization": "新北市善緣慈善會",
+      "location": "新北市新店區民權路95號6樓之2(配合新店室)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395165507757261"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD6JiG5rSy56ys5LiA5YiG5pyD",
+      "time": "09:00~17:00",
+      "organization": "國際佛光會中華總會蘆洲第一分會",
+      "location": "新北市蘆洲區民族路7號(鷺江國小旁道路)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395164784021289"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5paw5YyX5biC5pWR5ZyL5ZyY5Lit5ZKM5Y2A5ZyY5aeU5pyD",
+      "time": "09:00~17:00",
+      "organization": "新北市救國團中和區團委會",
+      "location": "新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395164328900216"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MzB+MTc6MDAt5LiJ6Zm9542F5a2Q5pyDQiAx",
+      "time": "09:30~17:00",
+      "organization": "三陽獅子會B 1",
+      "location": "新北市三重區忠孝路二段228公園",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395163606173234"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMTA6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Z+66ZqG5Lit5q2j56ys5LiA5YiG5pyD",
+      "time": "10:00~17:00",
+      "organization": "國際佛光會中華總會基隆中正第一分會",
+      "location": "基隆市仁愛區愛二路78號(基隆二信)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395163140152262"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MDB+MTY6MDAt56uL5aCD6KiY5biz5Y+K5aCx56iF5Luj55CG5Lq65LqL5YuZ5omA",
+      "time": "09:00~16:00",
+      "organization": "立堃記帳及報稅代理人事務所",
+      "location": "宜蘭縣羅東鎮純精路一段96號(羅東文化工場)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395162427325289",
+      "pttData": {
+        "rawLine": "5/3(日)宜蘭羅東文化工場",
+        "images": [
+          "https://i.imgur.com/SKSXGpw.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/SKSXGpw.jpeg",
+            "text": "站 了 廢品 捐血 一 袋 , 救 人 - 鄧 惕 生\n| \"多 畫\nas 宙 喀 傳 3》\ne) 溫暖 傳 返 。\n芒 師 擴 4 咸 軋 活動\n115 年 5 月 3 日 」 羅 東 文 化 工場 09:00-16:00\nez 2\n擊 加 品 捐 和 也 感恩 神\n250cc:\n9 熙 全 聯 禮 卷 100 元 :\n放 魚 喜 互惠 禮 卷 200 元\n38emss$ 諾 貝爾 餐 爹 1 份\n軸 福 同 飯店 SPA 卷 1 份\n@@ 雙 園 肉鬆 1 份 @\n(9 元 心 舍 光 明燈 手電 筒 1 份 。 |\n2 2)\n2 [ 捐 500cc 為 2 份 )  [w2 全\n*# 數 量 有 限 送 完 為 止\nMAIN 0ORGANIZER\n、 主辦 單 位 : 加入 客人 全 全 人\n計 CO0-ORGANIZERS/SPONSORS 區\n盒 贊助 協辦 單位 :, 仿 , 捷 說 不 動產 有 限 公司 ~ 海 @ 和 wa 、 綢 盒\n(全 全 內 回 、( 讓 元 心 仿 、 章 放 秀 珠 、 洲 智宇 :\n【 汪 客人\n人 還\n",
+            "confidence": 48
+          }
+        ]
+      },
+      "tags": []
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDg6MzB+MTc6MDAtOTnpmrvnvoo=",
+      "time": "08:30~17:00",
+      "organization": "99隻羊",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395162061204217"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5paw5YyX5biC5p2/5qmL5Y2A6Zuy5p6X5ZCM6YSJ5pyD",
+      "time": "09:00~17:00",
+      "organization": "新北市板橋區雲林同鄉會",
+      "location": "新北市板橋區府中路69號麥當勞對面廣場",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395161883456262"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDg6MDB+MTc6MDAt5L2b5YWJ5pyD5a6c6Jit56ys5LiA5YiG5pyD",
+      "time": "08:00~17:00",
+      "organization": "佛光會宜蘭第一分會",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395160879132775"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5Y+w5YyX5biC5bCq5YWs542F5a2Q5pyDQTI=",
+      "time": "09:00~17:00",
+      "organization": "台北市尪公獅子會A2",
+      "location": "臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395156976192721"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MzB+MTY6MzAt5Y+w5YyX5biC6Zuy5p6X5ZCM6YSJ57i95pyD",
+      "time": "09:30~16:30",
+      "organization": "台北市雲林同鄉總會",
+      "location": "臺北市文山區景美街31號(集應廟)",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395156511061758",
+      "pttData": {
+        "rawLine": "5/3(日)台北文山景美街",
+        "images": [
+          "https://i.imgur.com/IOLHAmx.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/IOLHAmx.jpeg",
+            "text": "禮券\n集 中 2\n蔡 集 印 。、\n捐 250cc 送 200 元 全 聯 禮券\n捐 500cc 送 500 元 全 聯 禮券\n(禮券 + 美 味 雞 排 兌 換 券 + 專業 日 本 豬 胡 圓 梳\n+ 高 博士 優惠 券 與 精美 禮品 提 袋 ) 為 和\n主 辦 單位 : 台 北市 雲 林 同 鄉 總 會\n承辦 單位 : 文 山 分 會 、 大 同 分 會 、 二 崙 分 會 、\n青年 分 會 、 土 庫 分 會\n協辦 單位 : 景 美 集 應 廟\n贊助 單位 : 陳 義雄 前 理事 長 、 洪 宗 錄 前 理事 長 、\n陳 麗 芳 常 務 理 事 、DK 高 博士 呼吸 空氣 鞋\n品 人 人 福 、 太 家 有 太 可 、 呈 還\n",
+            "confidence": 77
+          }
+        ]
+      },
+      "tags": [
+        "禮券"
+      ]
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MzB+MTc6MDAtSVZJUEHlnIvpmpvolKzpo5/nlKLmpa3mjqjlu6PljZTmnIM=",
+      "time": "09:30~17:00",
+      "organization": "IVIPA國際蔬食產業推廣協會",
+      "location": "臺北市玉門街1號圓山花博",
+      "activityDate": "2026-05-03",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q114395151248577245"
+    },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDMtMDg6MzB+MTY6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
       "time": "08:30~16:00",
@@ -669,6 +1469,149 @@
       "activityDate": "2026-05-03",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346087530804040"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD55Sw5Lit5YiG5pyD",
+      "time": "09:00~17:00",
+      "organization": "國際佛光會田中分會",
+      "location": "彰化縣員林市民權街55號員林火車站一樓大廳內(員林捐血室)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386009428811121"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MzB+MTY6MDAt5Y+w5Lit5LqU56aP542F5a2Q5pyD",
+      "time": "09:30~16:00",
+      "organization": "台中五福獅子會",
+      "location": "臺中市東勢區第五橫街1號(東勢國小前)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386009063790149"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDg6MDB+MTg6MDAt5Y+w5Lit5biC576O5aW95Y+w54Gj5bCP6I2J5o6o5buj5Y2U5pyDKOWPsOS4reW4gik=",
+      "time": "08:00~18:00",
+      "organization": "台中市美好台灣小草推廣協會(台中市)",
+      "location": "臺中市西屯區臺灣大道四段1176號(中港捐血室)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386008884942194"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MDB+MTU6MzAt6LKh5ZyY5rOV5Lq65YWD5q+N5rSe56S+5pyD56aP5Yip5oWI5ZaE5Z+66YeR5pyDKOWNl+aKleWNgCk=",
+      "time": "09:00~15:30",
+      "organization": "財團法人元母洞社會福利慈善基金會(南投區)",
+      "location": "南投縣草屯鎮中正路571-1號(草屯鎮立游泳池)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386008240063176"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt6Ie65Lit5biC5YWJ54Wn6Jed5paH55m85bGV5Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "臺中市光照藝文發展協會",
+      "location": "臺中市北區學士路91號中國附醫復健大樓正對面(中正公園捐血室)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386006413033607"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MDB+MTY6MDAt6Ie65Lit5biC5pWm552m5YWs55uK5Y2U6YCy5pyD",
+      "time": "09:00~16:00",
+      "organization": "臺中市敦睦公益協進會",
+      "location": "臺中市沙鹿區福德路1號(沙鹿成都享樂餐廳前停車場 )",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386006058902634",
+      "pttData": {
+        "rawLine": "5/3(日)台中沙鹿福德路",
+        "images": [
+          "https://i.imgur.com/P8QEj1H.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/P8QEj1H.jpeg",
+            "text": "上 只\n2 人 全 三\n特 別 邀 請\n115 年 05 月 03 日 (星期 日 )\n09 : 00 一 16 : 00 惠 明 樂 團 表 演\n沙 鹿 成 都 享樂 餐廳 前 停車 場 。 農 特 產品 試 吃 免費 品 嚐\n(台 中 市 沙 鹿 區 福 德 路 1 號 2 二 一 一 一\n捐血 250CC : 活力 餐 包 組 合 禮 *1+ 農 會 禮券 200 元\n捐血 500CC : 花 生 油 組 合 禮 *1+ 農 會 禮券 400 元\n『500CC 加 贈 神 農 雞 蛋 一 箱 (2s0 及 , 數 量 有 限 送 完 為 止 』\n農 會 農 特 產品 組 合 禮\n活力 餐 包 組 合 裡 髓 Mimms\n(價 值 超 過 六 百 元 ) 2 Pa\n0\n2 計\n【 和 生\n說 世光\n| ee\n上 加 生!\n則 的 生 500CC 加 贈 雞 蛋\n9 人\n菩 多 共 誠 花生 油 組 合 禮\n*# (價 值 超 過 一 千 二 百 元 )\n照片 僅 供 參考 以 現場 為 主 . 贈 品 數 量 有 限 送 完 為 止\n主 辦 單位 : 臺中 市 敦睦 公益 協 進 會 、 沙 訊 區 農 會\n協辦 單位 : 沙 鹿 成 都 享樂 川菜 餐廳 、 台 灣 佳 光 有 線 電視 、 沙 鹿 區 公所 、 惠 明言 人 福利 基金 會\n",
+            "confidence": 78
+          }
+        ]
+      },
+      "tags": [
+        "禮券",
+        "食品"
+      ]
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMTA6MDB+MTg6MDAt6IKy6IGW5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "10:00~18:00",
+      "organization": "育聖國際同濟會",
+      "location": "臺中市北區精武路291-3號對面停車場(臺中公園捐血車)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386005879154680"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MDB+MTc6MzAt6Zmz5pWP5p2R5a625peP",
+      "time": "09:00~17:30",
+      "organization": "陳敏村家族",
+      "location": "臺中市豐原區北陽路2號(豐原捐血室)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386005335285652"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MzB+MTg6MDAt6Jaq5rOw5bmz5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "09:30~18:00",
+      "organization": "薪泰平國際同濟會",
+      "location": "臺中市大里區國光路二段239號1樓(大里捐血室)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386004791306635"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMTA6MzB+MTg6MzAt5a+M6LK05ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "10:30~18:30",
+      "organization": "富貴國際同濟會",
+      "location": "臺中市西屯區惠來路二段市政北七路口惠安停車場(新光三越捐血車)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386003512558680"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MzB+MTY6MDAt5b2w57ij6I6K5aeT5a6X6Kaq5pyD",
+      "time": "09:30~16:00",
+      "organization": "彰縣莊姓宗親會",
+      "location": "彰化縣二林鎮斗苑路四段626號(二林鎮圖書館)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386001785417111"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDg6MDB+MTc6MDAt5paX5YWt5paw6IiI5a6uKOWqveelluW7nyk=",
+      "time": "08:00~17:00",
+      "organization": "斗六新興宮(媽祖廟)",
+      "location": "雲林縣斗六市漢口路187號(雲林捐血站)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386001320396148"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MzB+MTY6MDAt5r2t5a2QMSsxPTnmjZDooYDpgYvli5Xli7XpgLLmnIM=",
+      "time": "09:30~16:00",
+      "organization": "潭子1+1=9捐血運動勵進會",
+      "location": "臺中市潭子區勝利路138號(潭子運動公園)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386000607669176"
+    },
+    {
+      "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyDKOWNl+aKlSk=",
+      "time": "09:00~17:00",
+      "organization": "富偉獅子會(南投)",
+      "location": "南投縣南投市中興路616號1樓(南投捐血室)",
+      "activityDate": "2026-05-03",
+      "center": "台中",
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386000141548193"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MzAt6Imv5aCF5bu66Kit6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -859,67 +1802,6 @@
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620151400994436"
     },
     {
-      "id": "cHR0LTIwMjYtMDUtMDMtNS8zKOaXpSnlj7DljJfmloflsbHmma/nvo7ooZc=",
-      "time": "",
-      "organization": "台北文山景美街",
-      "location": "台北文山景美街",
-      "activityDate": "2026-05-03",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券"
-      ],
-      "pttData": {
-        "rawLine": "5/3(日)台北文山景美街",
-        "images": [
-          "https://i.imgur.com/IOLHAmx.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/IOLHAmx.jpeg",
-            "text": "禮券\n集 中 2\n蔡 集 印 。、\n捐 250cc 送 200 元 全 聯 禮券\n捐 500cc 送 500 元 全 聯 禮券\n(禮券 + 美 味 雞 排 兌 換 券 + 專業 日 本 豬 胡 圓 梳\n+ 高 博士 優惠 券 與 精美 禮品 提 袋 ) 為 和\n主 辦 單位 : 台 北市 雲 林 同 鄉 總 會\n承辦 單位 : 文 山 分 會 、 大 同 分 會 、 二 崙 分 會 、\n青年 分 會 、 土 庫 分 會\n協辦 單位 : 景 美 集 應 廟\n贊助 單位 : 陳 義雄 前 理事 長 、 洪 宗 錄 前 理事 長 、\n陳 麗 芳 常 務 理 事 、DK 高 博士 呼吸 空氣 鞋\n品 人 人 福 、 太 家 有 太 可 、 呈 還\n",
-            "confidence": 77
-          }
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 24.9939043,
-        "lng": 121.5416409
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDUtMDMtNS8zKOaXpSnlj7DkuK3mspnpub/npo/lvrfot68=",
-      "time": "",
-      "organization": "台中沙鹿福德路",
-      "location": "台中沙鹿福德路",
-      "activityDate": "2026-05-03",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "5/3(日)台中沙鹿福德路",
-        "images": [
-          "https://i.imgur.com/P8QEj1H.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/P8QEj1H.jpeg",
-            "text": "上 只\n2 人 全 三\n特 別 邀 請\n115 年 05 月 03 日 (星期 日 )\n09 : 00 一 16 : 00 惠 明 樂 團 表 演\n沙 鹿 成 都 享樂 餐廳 前 停車 場 。 農 特 產品 試 吃 免費 品 嚐\n(台 中 市 沙 鹿 區 福 德 路 1 號 2 二 一 一 一\n捐血 250CC : 活力 餐 包 組 合 禮 *1+ 農 會 禮券 200 元\n捐血 500CC : 花 生 油 組 合 禮 *1+ 農 會 禮券 400 元\n『500CC 加 贈 神 農 雞 蛋 一 箱 (2s0 及 , 數 量 有 限 送 完 為 止 』\n農 會 農 特 產品 組 合 禮\n活力 餐 包 組 合 裡 髓 Mimms\n(價 值 超 過 六 百 元 ) 2 Pa\n0\n2 計\n【 和 生\n說 世光\n| ee\n上 加 生!\n則 的 生 500CC 加 贈 雞 蛋\n9 人\n菩 多 共 誠 花生 油 組 合 禮\n*# (價 值 超 過 一 千 二 百 元 )\n照片 僅 供 參考 以 現場 為 主 . 贈 品 數 量 有 限 送 完 為 止\n主 辦 單位 : 臺中 市 敦睦 公益 協 進 會 、 沙 訊 區 農 會\n協辦 單位 : 沙 鹿 成 都 享樂 川菜 餐廳 、 台 灣 佳 光 有 線 電視 、 沙 鹿 區 公所 、 惠 明言 人 福利 基金 會\n",
-            "confidence": 78
-          }
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 24.2489668,
-        "lng": 120.566331
-      }
-    },
-    {
       "id": "cHR0LTIwMjYtMDUtMDMtNS8zKOaXpSnlsY/mnbHmva7lt57njYXlrZDlhazlnJI=",
       "time": "",
       "organization": "屏東潮州獅子公園",
@@ -947,34 +1829,6 @@
       "coordinates": {
         "lat": 22.5468026,
         "lng": 120.5389706
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDUtMDMtNS8zKOaXpSnlrpzomK3nvoXmnbHmlofljJblt6XloLQ=",
-      "time": "",
-      "organization": "宜蘭羅東文化工場",
-      "location": "宜蘭羅東文化工場",
-      "activityDate": "2026-05-03",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "5/3(日)宜蘭羅東文化工場",
-        "images": [
-          "https://i.imgur.com/SKSXGpw.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/SKSXGpw.jpeg",
-            "text": "站 了 廢品 捐血 一 袋 , 救 人 - 鄧 惕 生\n| \"多 畫\nas 宙 喀 傳 3》\ne) 溫暖 傳 返 。\n芒 師 擴 4 咸 軋 活動\n115 年 5 月 3 日 」 羅 東 文 化 工場 09:00-16:00\nez 2\n擊 加 品 捐 和 也 感恩 神\n250cc:\n9 熙 全 聯 禮 卷 100 元 :\n放 魚 喜 互惠 禮 卷 200 元\n38emss$ 諾 貝爾 餐 爹 1 份\n軸 福 同 飯店 SPA 卷 1 份\n@@ 雙 園 肉鬆 1 份 @\n(9 元 心 舍 光 明燈 手電 筒 1 份 。 |\n2 2)\n2 [ 捐 500cc 為 2 份 )  [w2 全\n*# 數 量 有 限 送 完 為 止\nMAIN 0ORGANIZER\n、 主辦 單 位 : 加入 客人 全 全 人\n計 CO0-ORGANIZERS/SPONSORS 區\n盒 贊助 協辦 單位 :, 仿 , 捷 說 不 動產 有 限 公司 ~ 海 @ 和 wa 、 綢 盒\n(全 全 內 回 、( 讓 元 心 仿 、 章 放 秀 珠 、 洲 智宇 :\n【 汪 客人\n人 還\n",
-            "confidence": 48
-          }
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 24.6715126,
-        "lng": 121.7647496
       }
     }
   ],
@@ -1097,15 +1951,6 @@
       "activityDate": "2026-05-05",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346090075258084"
-    },
-    {
-      "id": "6auY6ZuELTIwMjYvMDUvMDUtMDk6MzB+MTY6MzAt5Lit5Z+U5beh6L+0",
-      "time": "09:30~16:30",
-      "organization": "中埔巡迴",
-      "location": "嘉義縣中埔鄉中埔村128號(中埔鄉公所)",
-      "activityDate": "2026-05-05",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534679366747244"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDUtMDk6MDB+MTc6MDAt6auY6Yar6ZmE6Kit5Lit5ZKM57SA5b+16Yar6Zmi",
@@ -3754,6 +4599,63 @@
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346134017689748"
     },
     {
+      "id": "cHR0LTIwMjYtMDUtMjEtNS8yMSjlm5sp5paw5YyX5paw5bqX55+96LC35ZyS5Y2A5LqM5pyf",
+      "time": "",
+      "organization": "新北新店矽谷園區二期",
+      "location": "新北新店矽谷園區二期",
+      "activityDate": "2026-05-21",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/21(四)新北新店矽谷園區二期",
+        "images": [
+          "https://i.imgur.com/HkSB4uX.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/HkSB4uX.jpeg",
+            "text": "違和 人 全 人際 年 引\n史 用 店 區 劑 人 習 遇 出 I 呈 7 品 對\n2026 年\n05 月 21 日\n凍 呈 理惠 加 弄 表 星期 四\n5 點: 矽谷 園區 二 期 gas 轉\n捐血 送 好 禮 ! 下 gl\n好 農 葉酸 蛋 or 技嘉 麻布 袋 、 神 腦 傳 輸 充電 線 、 順 天 本 草 三 去 飲 、\n訊 連 剪輯 軟體 、 全 家 贊助 食品 、 青 花 驕 肉 品 兌換 券 還\n了 做 了 4 太\n條 2\nss. 陛 讓 說 上\n人 說 | 主 ,,\nmk\nee\n1 旻 點 : 本 本 全 > 對 8 芝 廚\n",
+            "confidence": 53
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMjEtNS8yMSjlm5sp5paw5YyX5paw5bqX5oqA5ZiJ56eR5oqA",
+      "time": "",
+      "organization": "新北新店技嘉科技",
+      "location": "新北新店技嘉科技",
+      "activityDate": "2026-05-21",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "餐飲",
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/21(四)新北新店技嘉科技",
+        "images": [
+          "https://i.imgur.com/tqHFIdy.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/tqHFIdy.jpeg",
+            "text": "章 上 [ 廿 1 出 [ 享 了 桶 全 起 人 汪 重\n() 衝 介 二 放下 詢 百 也 其 活動\n2026 年\n05 月 21 日\n“星期 四\n號 三 記 30-16-\nams#: 技 嘉 科 技 , woaea\n捐血 送 好 禮 ! 了 蘭 拉 上 加\n好 農 葉酸 蛋 or 技嘉 麻布 袋 、 神 腦 傳 輸 充電 線 、 順 天 本 草 三 去 飲 、\n訊 連 剪輯 軟體 、 祁 門 咖啡 卷 、 青 花 驕 肉 品 兌換 券 加 加\nM na 中 開 色 作 了\n二 各 品 生 ki 多 I 1\n計 ! 也 悅\n人 說, 人 | 飲 全 aa aa\n號 力 和 盜 2024 加 相 片 大 師 2024\n主 辦 單 位 : GIGABYTE [所 技 座 教 育 基金 會 ee |i aa mg PERFECT 隊 8 員\nAnime lo sea 加 了 還 加 全 生 二 人\n",
+            "confidence": 51
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.9786451,
+        "lng": 121.5434365
+      }
+    },
+    {
       "id": "cHR0LTIwMjYtMDUtMjEtNS8yMSjlm5sp6auY6ZuE6Lev56u55Y2A5YWs5omA",
       "time": "",
       "organization": "高雄路竹區公所",
@@ -4043,6 +4945,34 @@
       "activityDate": "2026-05-24",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346140632355764"
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMjQtNS8yNCjml6Up5paw5YyX6YeR5bGx6YeR5YyF6YeM5oWI6K235a6u",
+      "time": "",
+      "organization": "新北金山金包里慈護宮",
+      "location": "新北金山金包里慈護宮",
+      "activityDate": "2026-05-24",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/24(日)新北金山金包里慈護宮",
+        "images": [
+          "https://i.imgur.com/UZ6v1tm.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/UZ6v1tm.jpeg",
+            "text": "人 和 還\n| 評 詩 EE\n一 上\n慈 護 宮 熱 血 捐 愛 心\n人 1 約 ‧\nAA\n還\n| 和 瞧 人 負 者 |\n噴 辣 ) 鋪 1\n全\nAN 多 9 人 說 】 |\n捐血 日 期 : 115 年 05 月 24 日 (星期 日)\n捐血 時 間 : 09:30-16:30 呈\n捐血 地 點 : 金 包 里 慈 護 宮 廟 前 廣場 大\n[主辦 單位 : 財 團 法 人 新 北市 金 包 里 慈 護 宮\n若 記 捐 血 成 功 者 贈送 精美 好 禮 史 和\n圖 捐血 250CC 贈 送 : 建 廟 乎 安 燈 1 童 价 , 例 盒 (\n圖 捐血 500CC 贈 送 : 建 廟 平 安 燈 1 閨 ( 外 加 好 禮 三 選 一 )\n| 還 (限量 文 創 帽 * 媽 祖 小 神 衣 、 建 膺 平安 燈 ) 三 選 一 9\n捐血 時 請 記得 攜帶 身分 證 。, 謝 謝 您 !\n",
+            "confidence": 65
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 25.2207372,
+        "lng": 121.6402736
+      }
     },
     {
       "id": "cHR0LTIwMjYtMDUtMjQtNS8yNCjml6Up5Y+w5Y2X6JiH5Y6d6ZW36IiI5a6u",
