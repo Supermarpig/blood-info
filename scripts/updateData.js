@@ -143,6 +143,22 @@ async function loadPttTagsFromExistingData() {
 
 
 // ==================== Geocoding ====================
+// 固定捐血室靜態座標表（不依賴 Nominatim，維護成本為零）
+const BLOOD_ROOMS_FILE = path.join(process.cwd(), 'data', 'blood-rooms.json');
+let bloodRoomsStatic = {};
+try {
+    bloodRoomsStatic = JSON.parse(require('fs').readFileSync(BLOOD_ROOMS_FILE, 'utf-8'));
+    console.log(`載入 ${Object.keys(bloodRoomsStatic).length} 筆固定捐血室座標`);
+} catch {
+    console.log('blood-rooms.json 不存在，跳過靜態表');
+}
+
+// 從地址括號中提取捐血室名稱，用來查靜態表
+function extractRoomName(location) {
+    const match = location && location.match(/\(([^)]*捐血[^)]*)\)/);
+    return match ? match[1].trim() : null;
+}
+
 // Geocoding 快取（避免重複請求同一地址）
 const geocodeCache = new Map();
 const GEOCODE_CACHE_FILE = path.join(process.cwd(), 'data', 'geocode-cache.json');
@@ -220,11 +236,32 @@ async function geocodeAddress(address) {
 
 // 批量處理活動的 Geocoding
 async function geocodeEvents(data) {
-    const addresses = new Set();
-
-    // 收集所有獨特的地址
+    // 第一步：先用靜態表填入固定捐血室座標
+    let staticHits = 0;
     for (const date in data) {
         for (const event of data[date]) {
+            if (!event.location) continue;
+            const roomName = extractRoomName(event.location);
+            if (roomName && bloodRoomsStatic[roomName]) {
+                event.coordinates = bloodRoomsStatic[roomName];
+                staticHits++;
+                continue;
+            }
+            // 也試試完整 location 字串直接對靜態表（沒有括號的情況）
+            if (bloodRoomsStatic[event.location]) {
+                event.coordinates = bloodRoomsStatic[event.location];
+                staticHits++;
+            }
+        }
+    }
+    console.log(`靜態表命中 ${staticHits} 筆`);
+
+    // 第二步：剩下沒座標的才走 Nominatim
+    const addresses = new Set();
+    for (const date in data) {
+        for (const event of data[date]) {
+            if (event.coordinates) continue; // 靜態表已處理
+            // 只跑從未查過的地址（null 表示之前查失敗，不重試）
             if (event.location && !geocodeCache.has(event.location)) {
                 addresses.add(event.location);
             }
@@ -244,14 +281,13 @@ async function geocodeEvents(data) {
         }
     }
 
-    // 將快取的經緯度寫入活動資料
+    // 將 Nominatim 快取結果寫入尚未有座標的事件
     for (const date in data) {
         for (const event of data[date]) {
-            if (event.location) {
-                const coords = geocodeCache.get(event.location);
-                if (coords) {
-                    event.coordinates = coords;
-                }
+            if (event.coordinates || !event.location) continue;
+            const coords = geocodeCache.get(event.location);
+            if (coords) {
+                event.coordinates = coords;
             }
         }
     }

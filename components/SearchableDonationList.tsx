@@ -217,6 +217,18 @@ export default function SearchableDonationList({
     );
   }, [upcomingEvents]);
 
+  const filterLabel = useMemo(() => {
+    const parts: string[] = [];
+    if (selectedCenter) {
+      const region = REGIONS.find((r) => r.centerFilter === selectedCenter);
+      if (region) parts.push(region.displayName);
+    }
+    if (selectedTags.length > 0) {
+      parts.push(selectedTags.join("、"));
+    }
+    return parts.join("");
+  }, [selectedCenter, selectedTags]);
+
   // 取得「今日」有的贈品類型（使用篩選後的資料）
   const todayGiftTags = useMemo(() => {
     const allTags = new Set<string>();
@@ -239,6 +251,7 @@ export default function SearchableDonationList({
         onFindNearby={handleFindNearby}
         onCenterSelect={handleCenterSelect}
         selectedCenter={selectedCenter}
+        filterLabel={filterLabel}
       />
 
       {/* ── 離你最近的捐血點 ── */}

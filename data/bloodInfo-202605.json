@@ -172,7 +172,11 @@
       "location": "新竹市北區文雅街6號(西大捐血室\t)",
       "activityDate": "2026-05-01",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346075094450096"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346075094450096",
+      "coordinates": {
+        "lat": 24.803,
+        "lng": 120.967
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDEtMDk6MzB+MTY6MzAt6Z2S5Z+U54m55Y2A542F5a2Q5pyD",
@@ -190,7 +194,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-01",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346074450581069"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346074450581069",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDEtMDk6MDB+MTY6MDAt5qGD5ZyS5biC6Zaw576F5aSp5a2Q5Yqf5b635pyD",
@@ -208,7 +216,11 @@
       "location": "臺中市豐原區北陽路2號(豐原捐血室)",
       "activityDate": "2026-05-01",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385999619408636"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385999619408636",
+      "coordinates": {
+        "lat": 24.25,
+        "lng": 120.719
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MzB+MTU6MzAt5a+M5YGJ542F5a2Q5pyDKOWNl+aKlSk=",
@@ -226,7 +238,11 @@
       "location": "南投縣南投市中興路616號1樓(南投捐血室)",
       "activityDate": "2026-05-01",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385994981993140"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385994981993140",
+      "coordinates": {
+        "lat": 23.912,
+        "lng": 120.685
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MDB+MTY6MDAt5p6X5YWn5ZyY5aeU5pyD",
@@ -244,7 +260,11 @@
       "location": "南投縣埔里鎮北環路222號(埔里捐血站)",
       "activityDate": "2026-05-01",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385994347024123"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385994347024123",
+      "coordinates": {
+        "lat": 23.96,
+        "lng": 120.972
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MzB+MTY6MDAt6bm/5riv5b6M5oay",
@@ -280,7 +300,11 @@
       "location": "彰化縣員林市民權街55號員林火車站一樓大廳內(員林捐血室)",
       "activityDate": "2026-05-01",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385983803145195"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385983803145195",
+      "coordinates": {
+        "lat": 23.954,
+        "lng": 120.572
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDk6MDB+MTc6MDAt5Y+w54Gj55yB5LuB5YWJ5oSb5b+D5Y2U5pyD",
@@ -289,7 +313,11 @@
       "location": "臺中市北區學士路91號中國附醫復健大樓正對面(中正公園捐血室)",
       "activityDate": "2026-05-01",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385983279276178"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385983279276178",
+      "coordinates": {
+        "lat": 24.156503,
+        "lng": 120.68153
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDEtMDg6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyD",
@@ -298,7 +326,11 @@
       "location": "彰化縣彰化市中山路一段348號(彰化捐血站)",
       "activityDate": "2026-05-01",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385982634397141"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385982634397141",
+      "coordinates": {
+        "lat": 24.060616,
+        "lng": 120.535305
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDEtMTA6MDB+MTg6MDAt5aW95bm456aP5ZyL6Zqb5ZCM5r+f5pyD",
@@ -307,7 +339,11 @@
       "location": "臺中市北區精武路291-3號對面停車場(臺中公園捐血車)",
       "activityDate": "2026-05-01",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385982090428123"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385982090428123",
+      "coordinates": {
+        "lat": 24.146458,
+        "lng": 120.685482
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDEtMDg6MDB+MTY6MDAt5L2b5YWJ5pyD5pel5YWJ56ys5LqM5YiG5pyD",
@@ -316,7 +352,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-01",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620140988864889"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620140988864889",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDEtMDk6MDB+MTY6MzAt5LuB5aO95a6u566h55CG5aeU5ZOh5pyD",
@@ -334,7 +374,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-01",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620139344985852"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620139344985852",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDEtMDk6MzB+MTg6MDAt5L2b5YWJ6byT5bGx5YiG5pyD",
@@ -343,7 +387,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-01",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620134616479365"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620134616479365",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDEtMDk6MzB+MTc6MzAt5aSn6auY6ZuE6Z6L6aGe5pyN5YuZ5qWt6IG35qWt5bel5pyD",
@@ -352,7 +400,11 @@
       "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
       "activityDate": "2026-05-01",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620134172591348"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620134172591348",
+      "coordinates": {
+        "lat": 22.605,
+        "lng": 120.362
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDEtMTA6MzB+MTg6MDAt5YSE6YCy5a+i5YW3",
@@ -621,7 +673,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-02",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346086817177068"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346086817177068",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDItMDk6MzB+MTY6MzAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Lit5aOi56ys5LiA5YiG5pyD",
@@ -630,7 +686,11 @@
       "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
       "activityDate": "2026-05-02",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346086273208041"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346086273208041",
+      "coordinates": {
+        "lat": 24.954575,
+        "lng": 121.224196
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDItMDk6MDB+MTY6MDAt5qGD5ZyS5biC5Z2q5b63542F5a2Q5pyD",
@@ -657,7 +717,11 @@
       "location": "桃園市中壢區後寮1路188號(龍岡捐血室)",
       "activityDate": "2026-05-02",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346082268310527"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346082268310527",
+      "coordinates": {
+        "lat": 24.939032,
+        "lng": 121.246432
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDItMDk6MzB+MTY6MDAt5qGD5ZyS5biC5oiQ5Yqf542F5a2Q5pyD",
@@ -666,7 +730,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-02",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346081545693554"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346081545693554",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDItMTE6MDB+MTc6MDAt56S+5ZyY5rOV5Lq65paw56u55biC5bSH5b635pyD",
@@ -684,7 +752,11 @@
       "location": "臺中市沙鹿區中正路3號(沙鹿國小校門口捐血車)",
       "activityDate": "2026-05-02",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385998606194149"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385998606194149",
+      "coordinates": {
+        "lat": 24.231,
+        "lng": 120.575
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5b2w5YyW57ij6buD6L2J57SA5b+15oWI5ZaE5pyD",
@@ -709,7 +781,11 @@
       },
       "tags": [
         "禮券"
-      ]
+      ],
+      "coordinates": {
+        "lat": 23.954,
+        "lng": 120.572
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MzB+MTc6MzAt5qKn5qOy5ZyL6Zqb5ZCM5r+f5pyD",
@@ -718,7 +794,11 @@
       "location": "臺中市梧棲區中華路一段1001之1號(海線捐血室)",
       "activityDate": "2026-05-02",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385997061215122"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385997061215122",
+      "coordinates": {
+        "lat": 24.266,
+        "lng": 120.524
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5Y+w5Lit5biC6KGb6YGT5YSy6JOE5LqS5Yqp56S+",
@@ -727,7 +807,11 @@
       "location": "臺中市北區學士路91號中國附醫復健大樓正對面(中正公園捐血室)",
       "activityDate": "2026-05-02",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385996983468177"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385996983468177",
+      "coordinates": {
+        "lat": 24.156503,
+        "lng": 120.68153
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDg6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyD",
@@ -736,7 +820,11 @@
       "location": "彰化縣彰化市中山路一段348號(彰化捐血站)",
       "activityDate": "2026-05-02",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385996348599140"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385996348599140",
+      "coordinates": {
+        "lat": 24.060616,
+        "lng": 120.535305
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDg6MDB+MTc6MDAt5ZyL56uL6Zuy5p6X56eR5oqA5aSn5a24566h55CG5a246ZmiRU1CQeesrOWFq+WxhumgmOiiluePrSjpm7Lmnpcp",
@@ -761,7 +849,11 @@
       },
       "tags": [
         "食品"
-      ]
+      ],
+      "coordinates": {
+        "lat": 23.703293,
+        "lng": 120.545393
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMTA6MDB+MTc6MDAt6Ie65Lit5biC5b6M5YKZ5oay5YW16I235p2+5Y2U5pyD5Y2X5bGv5Y2A5YiG5pyD",
@@ -788,7 +880,11 @@
       "location": "臺中市西屯區惠來路二段市政北七路口惠安停車場(新光三越捐血車)",
       "activityDate": "2026-05-02",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385992799831608"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385992799831608",
+      "coordinates": {
+        "lat": 24.164056,
+        "lng": 120.642237
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyDKOWNl+aKlSk=",
@@ -797,7 +893,11 @@
       "location": "南投縣南投市中興路616號1樓(南投捐血室)",
       "activityDate": "2026-05-02",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385992333700635"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385992333700635",
+      "coordinates": {
+        "lat": 23.912,
+        "lng": 120.685
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MzB+MTY6MDAt5ZyL6Zqb5L2b5YWJ5pyD5aaZ5rOV5YiG5pyD",
@@ -840,7 +940,11 @@
       "location": "臺中市豐原區北陽路2號(豐原捐血室)",
       "activityDate": "2026-05-02",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385991076004636"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385991076004636",
+      "coordinates": {
+        "lat": 24.25,
+        "lng": 120.719
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MzB+MTg6MDAt5Y+w54Gj55yB5ZCM5b+D5oWI5ZaE5pyDKOadseWPsOS4reWNgCk=",
@@ -849,7 +953,11 @@
       "location": "臺中市大里區國光路二段239號1樓(大里捐血室)",
       "activityDate": "2026-05-02",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385990898256681"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114385990898256681",
+      "coordinates": {
+        "lat": 24.108765,
+        "lng": 120.690427
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MzB+MTY6MDAt5b2w5YyW57ij5bm456aP5aeQ5aa55pyD",
@@ -876,7 +984,11 @@
       "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620159143398446"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620159143398446",
+      "coordinates": {
+        "lat": 22.605,
+        "lng": 120.362
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MDB+MTc6MzAt6Imv5aCF5bu66Kit6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -885,7 +997,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620155694630905"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620155694630905",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDg6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTXljYDmrKPmrKPnjYXlrZDmnIM=",
@@ -894,7 +1010,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620155415883950"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620155415883950",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MDB+MTc6MzAt5L2b5YWJ5pyD6bOz5bGx56ys5LqU5YiG5pyD",
@@ -903,7 +1023,11 @@
       "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620155059752977"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620155059752977",
+      "coordinates": {
+        "lat": 22.627,
+        "lng": 120.358
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MDB+MTc6MzAt6I+v5Lq65a2d6YGT5o6o5buj5Y2U5pyD",
@@ -926,7 +1050,11 @@
           }
         ]
       },
-      "tags": []
+      "tags": [],
+      "coordinates": {
+        "lat": 22.656,
+        "lng": 120.316
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDg6MzB+MTc6MDAt5b635bOw6KGM57On6aOf5pyJ6ZmQ5YWs5Y+4",
@@ -935,7 +1063,11 @@
       "location": "臺南市北區北安路一段183號(D20北安捐血室)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620154247035905"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620154247035905",
+      "coordinates": {
+        "lat": 22.999,
+        "lng": 120.211
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MzB+MTg6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDps7PlhIDnjYXlrZDmnIM=",
@@ -944,7 +1076,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620150787277464"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620150787277464",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDg6MDB+MTY6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Y+w5p2x6I+p5o+Q56ys5LiA5YiG5pyD",
@@ -953,7 +1089,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620150322146491"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620150322146491",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5pu+5paH6LKo6YGL6Zec5L+C5LyB5qWt",
@@ -987,7 +1127,11 @@
       "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620148796792447"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620148796792447",
+      "coordinates": {
+        "lat": 22.688827,
+        "lng": 120.489176
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDg6MDB+MTc6MDAt56aP5pm65L2b5pWZ5Z+66YeR5pyD5Y+w5Y2X5YiG6IuR",
@@ -996,7 +1140,11 @@
       "location": "臺南市中西區永福路1段85號(D19永福捐血室)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620148330671464"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620148330671464",
+      "coordinates": {
+        "lat": 22.983718,
+        "lng": 120.200032
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDg6MzB+MTc6MDAt6Ie65Y2X5biC5LqU5pa95oWI5ZaE5pyD5pqo5oOg6aiw5a626Zu7",
@@ -1005,7 +1153,11 @@
       "location": "臺南市北區東興路2段47號(D22東興捐血室)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620147617944492"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620147617944492",
+      "coordinates": {
+        "lat": 22.996,
+        "lng": 120.213
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5rC45bq35L+d55Sf5a6u",
@@ -1023,7 +1175,11 @@
       "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620145895227410"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620145895227410",
+      "coordinates": {
+        "lat": 23.47,
+        "lng": 120.44
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt6auY6ZuE5biC546J5peo546E5b635aCC6KGM6YGT5pyD",
@@ -1032,7 +1188,11 @@
       "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620145250348393"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620145250348393",
+      "coordinates": {
+        "lat": 22.796,
+        "lng": 120.297
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5rW35YWJ5LyB5qWt6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -1082,7 +1242,11 @@
       "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
       "activityDate": "2026-05-02",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620141167612934"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620141167612934",
+      "coordinates": {
+        "lat": 23.476,
+        "lng": 120.444
+      }
     },
     {
       "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnlj7DljJfkuK3mraPntIDlv7XloILlpKflrZ3ploDlsI3pnaI=",
@@ -1409,7 +1573,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-03",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346098718652095"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346098718652095",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5qGD5ZyS5Y2A5a+25bGx6YeM6YeM6L6m5YWs5a6k",
@@ -1427,7 +1595,11 @@
       "location": "新竹市北區文雅街6號(西大捐血室\t)",
       "activityDate": "2026-05-03",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346094080047509"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346094080047509",
+      "coordinates": {
+        "lat": 24.803,
+        "lng": 120.967
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDMtMDk6MDB+MTY6MDAt6IuX5qCX6Z2S5ZWG",
@@ -1436,7 +1608,11 @@
       "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
       "activityDate": "2026-05-03",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346093802299554"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346093802299554",
+      "coordinates": {
+        "lat": 24.682,
+        "lng": 120.878
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5qGD5ZyS5biC5piO5b+D56aq6Zec5oe35Y2U5pyD",
@@ -1459,7 +1635,11 @@
           }
         ]
       },
-      "tags": []
+      "tags": [],
+      "coordinates": {
+        "lat": 24.993,
+        "lng": 121.291
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDMtMDk6MzB+MTY6MDAt5paH5YyW5ZCM5r+f5pyD",
@@ -1477,7 +1657,11 @@
       "location": "彰化縣員林市民權街55號員林火車站一樓大廳內(員林捐血室)",
       "activityDate": "2026-05-03",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386009428811121"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386009428811121",
+      "coordinates": {
+        "lat": 23.954,
+        "lng": 120.572
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MzB+MTY6MDAt5Y+w5Lit5LqU56aP542F5a2Q5pyD",
@@ -1495,7 +1679,11 @@
       "location": "臺中市西屯區臺灣大道四段1176號(中港捐血室)",
       "activityDate": "2026-05-03",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386008884942194"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386008884942194",
+      "coordinates": {
+        "lat": 24.1629,
+        "lng": 120.6376
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MDB+MTU6MzAt6LKh5ZyY5rOV5Lq65YWD5q+N5rSe56S+5pyD56aP5Yip5oWI5ZaE5Z+66YeR5pyDKOWNl+aKleWNgCk=",
@@ -1513,7 +1701,11 @@
       "location": "臺中市北區學士路91號中國附醫復健大樓正對面(中正公園捐血室)",
       "activityDate": "2026-05-03",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386006413033607"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386006413033607",
+      "coordinates": {
+        "lat": 24.156503,
+        "lng": 120.68153
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MDB+MTY6MDAt6Ie65Lit5biC5pWm552m5YWs55uK5Y2U6YCy5pyD",
@@ -1548,7 +1740,11 @@
       "location": "臺中市北區精武路291-3號對面停車場(臺中公園捐血車)",
       "activityDate": "2026-05-03",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386005879154680"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386005879154680",
+      "coordinates": {
+        "lat": 24.146458,
+        "lng": 120.685482
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MDB+MTc6MzAt6Zmz5pWP5p2R5a625peP",
@@ -1557,7 +1753,11 @@
       "location": "臺中市豐原區北陽路2號(豐原捐血室)",
       "activityDate": "2026-05-03",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386005335285652"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386005335285652",
+      "coordinates": {
+        "lat": 24.25,
+        "lng": 120.719
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MzB+MTg6MDAt6Jaq5rOw5bmz5ZyL6Zqb5ZCM5r+f5pyD",
@@ -1566,7 +1766,11 @@
       "location": "臺中市大里區國光路二段239號1樓(大里捐血室)",
       "activityDate": "2026-05-03",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386004791306635"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386004791306635",
+      "coordinates": {
+        "lat": 24.108765,
+        "lng": 120.690427
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDMtMTA6MzB+MTg6MzAt5a+M6LK05ZyL6Zqb5ZCM5r+f5pyD",
@@ -1575,7 +1779,11 @@
       "location": "臺中市西屯區惠來路二段市政北七路口惠安停車場(新光三越捐血車)",
       "activityDate": "2026-05-03",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386003512558680"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386003512558680",
+      "coordinates": {
+        "lat": 24.164056,
+        "lng": 120.642237
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MzB+MTY6MDAt5b2w57ij6I6K5aeT5a6X6Kaq5pyD",
@@ -1593,7 +1801,11 @@
       "location": "雲林縣斗六市漢口路187號(雲林捐血站)",
       "activityDate": "2026-05-03",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386001320396148"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386001320396148",
+      "coordinates": {
+        "lat": 23.703293,
+        "lng": 120.545393
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MzB+MTY6MDAt5r2t5a2QMSsxPTnmjZDooYDpgYvli5Xli7XpgLLmnIM=",
@@ -1611,7 +1823,11 @@
       "location": "南投縣南投市中興路616號1樓(南投捐血室)",
       "activityDate": "2026-05-03",
       "center": "台中",
-      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386000141548193"
+      "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q114386000141548193",
+      "coordinates": {
+        "lat": 23.912,
+        "lng": 120.685
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MzAt6Imv5aCF5bu66Kit6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -1620,7 +1836,11 @@
       "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620169852701921"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620169852701921",
+      "coordinates": {
+        "lat": 22.627,
+        "lng": 120.358
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5aSn5qi55b6M5YKZ6LuN5Lq6",
@@ -1673,7 +1893,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620164046448480"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620164046448480",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MzB+MTg6MDAt5ZaE6K236Zec5oSb5Y2U5pyD",
@@ -1682,7 +1906,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620160496680959"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620160496680959",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MzAt5ZyL5rOw5Lq65aO95L+d6Zqq6IKh5Lu95pyJ6ZmQ5YWs5Y+45bCI5oub6bOz6IiI6YCa6KiK6JmV",
@@ -1691,7 +1919,11 @@
       "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620159774953976"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620159774953976",
+      "coordinates": {
+        "lat": 22.605,
+        "lng": 120.362
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDg6MDB+MTc6MDAt5bGP5p2x546J55qH5a6u",
@@ -1700,7 +1932,11 @@
       "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620158595105922"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620158595105922",
+      "coordinates": {
+        "lat": 22.688827,
+        "lng": 120.489176
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDg6MzB+MTc6MDAt5b635bOw6KGM57On6aOf5pyJ6ZmQ5YWs5Y+4",
@@ -1709,7 +1945,11 @@
       "location": "臺南市北區北安路一段183號(D20北安捐血室)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620158139084959"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620158139084959",
+      "coordinates": {
+        "lat": 22.999,
+        "lng": 120.211
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDg6MzB+MTc6MDAt6Ie65Y2X5biC5LqU5pa95oWI5ZaE5pyD5pqo5oOg6aiw5a626Zu7",
@@ -1718,7 +1958,11 @@
       "location": "臺南市北區東興路2段47號(D22東興捐血室)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620157951236904"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620157951236904",
+      "coordinates": {
+        "lat": 22.996,
+        "lng": 120.213
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5Y+w5Y2X5biC5LuB5oWI5pyD",
@@ -1745,7 +1989,11 @@
       "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620156138509922"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620156138509922",
+      "coordinates": {
+        "lat": 23.47,
+        "lng": 120.44
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDg6MDB+MTc6MDAt56aP5pm65L2b5pWZ5Z+66YeR5pyD5Y+w5Y2X5YiG6IuR",
@@ -1754,7 +2002,11 @@
       "location": "臺南市中西區永福路1段85號(D19永福捐血室)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620153867590435"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620153867590435",
+      "coordinates": {
+        "lat": 22.983718,
+        "lng": 120.200032
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5ZaE5b+D5Lq65aOr5p6X5piO5bGx5YWI55Sf",
@@ -1763,7 +2015,11 @@
       "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620153401579463"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620153401579463",
+      "coordinates": {
+        "lat": 22.796,
+        "lng": 120.297
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5Y+w5Y2X5biC57i95bel5pyD",
@@ -1772,7 +2028,11 @@
       "location": "臺南市北區台南公園-台南轉運站對面(D14中山捐血車)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620152689742481"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620152689742481",
+      "coordinates": {
+        "lat": 22.997,
+        "lng": 120.204
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt6aCG5qyj6YCa6YGL5pyJ6ZmQ5YWs5Y+4",
@@ -1790,7 +2050,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620151966025419"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620151966025419",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDg6MDB+MTc6MDAt5rGf5qau5b635oSb5b+D5ZyY6ZqK5ZyY6ZqK5b+D5oSb5b+D5oOF",
@@ -1799,7 +2063,11 @@
       "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
       "activityDate": "2026-05-03",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620151400994436"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620151400994436",
+      "coordinates": {
+        "lat": 23.476,
+        "lng": 120.444
+      }
     },
     {
       "id": "cHR0LTIwMjYtMDUtMDMtNS8zKOaXpSnlsY/mnbHmva7lt57njYXlrZDlhazlnJI=",
@@ -1849,7 +2117,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-04",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346094269894553"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346094269894553",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDQtMDk6MDB+MTc6MzAt6auY6ZuE5biC5b635pKt5pyD",
@@ -1858,7 +2130,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-04",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534676465262217"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534676465262217",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDQtMDk6MzB+MTc6MDAt6KGM6aGY5oWI5ZaE5pyD",
@@ -1876,7 +2152,11 @@
       "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
       "activityDate": "2026-05-04",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534666820393299"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534666820393299",
+      "coordinates": {
+        "lat": 22.656,
+        "lng": 120.316
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDQtMDk6MzB+MTc6MDAt5pWR5ZyL5ZyY5Y+w5Y2X5biC5q245LuB5Y2A5ZyY5aeU5pyD",
@@ -1903,7 +2183,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-04",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534661192787703"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534661192787703",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     }
   ],
   "2026-05-05": [
@@ -1932,7 +2216,11 @@
       "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
       "activityDate": "2026-05-05",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346095347642508"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346095347642508",
+      "coordinates": {
+        "lat": 24.682,
+        "lng": 120.878
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDUtMDk6MzB+MTY6MDAt5qGD5ZyS5biC5a625b+X5ZyL6Zqb5ZCM5r+f5pyD",
@@ -1986,7 +2274,11 @@
       "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
       "activityDate": "2026-05-05",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534673815404775"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534673815404775",
+      "coordinates": {
+        "lat": 22.656,
+        "lng": 120.316
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDUtMDk6MDB+MTc6MzAt6LKh5ZyY5rOV5Lq66LuN5Yud5paH5pWZ5Z+66YeR5pyD",
@@ -1995,7 +2287,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-05",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534673459483703"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534673459483703",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDUtMDk6MzB+MTY6MzAt5aSn5LuB56eR5oqA5aSn5a24",
@@ -2066,7 +2362,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-06",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346096526580553"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346096526580553",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDYtMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
@@ -2111,7 +2411,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-06",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534685451958729"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534685451958729",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDYtMTA6MDB+MTg6MDAt5bSR5bGx56eR5oqA5aSn5a24",
@@ -2138,7 +2442,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-06",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534680623342243"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534680623342243",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDYtMDk6MzB+MTc6MDAt5ZyL5rOw5Lq65aO96bq75L2z6YCa6KiK6JmV",
@@ -2160,7 +2468,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-06",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534680189463216"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534680189463216",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDYtMDk6MDB+MTc6MDAt6auY6ZuE5biC6KSS5b+g576p5rCR5buf",
@@ -2189,7 +2501,11 @@
       "location": "新竹市北區文雅街6號(西大捐血室\t)",
       "activityDate": "2026-05-07",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346108349217525"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346108349217525",
+      "coordinates": {
+        "lat": 24.803,
+        "lng": 120.967
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDctMDk6MDB+MTY6MDAt6IuR6KOh5ZyY5aeU5pyD",
@@ -2225,7 +2541,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-07",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534687718554729"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534687718554729",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDctMDk6MDB+MTc6MzAt5ZyL5rOw5Lq65aO96auY57+U6YCa6KiK6JmV",
@@ -2234,7 +2554,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-07",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534687352423756"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534687352423756",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDctMDk6MDB+MTc6MDAt5ZiJ576p57ij576p5oSb5oWI5ZaE5pyD",
@@ -2275,7 +2599,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-07",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534683624817260"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534683624817260",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDctMDg6MDB+MTY6MDAt5piG6Imv6KO95p2Q5bug",
@@ -2284,7 +2612,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-07",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534682080948233"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534682080948233",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDctMDk6MzB+MTc6MDAt5ZKM5rOw55Si54mp5L+d6Zqq6IKh5Lu95pyJ6ZmQ5YWs5Y+46auY6ZuE5YiG5YWs5Y+4",
@@ -2304,7 +2636,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-08",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346109606813625"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346109606813625",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDgtMDk6MDB+MTY6MDAt5L2b5YWJ5pyD6IuX5qCX56ys5Zub5YiG5pyD",
@@ -2313,7 +2649,11 @@
       "location": "苗栗縣苗栗市為公路282號(苗栗捐血站)",
       "activityDate": "2026-05-08",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346109062934597"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346109062934597",
+      "coordinates": {
+        "lat": 24.571246,
+        "lng": 120.829697
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDgtMDk6MDB+MTY6MDAt5Lit5aOi5Y2A6Z2S5rqq5Y2U5pyD",
@@ -2357,7 +2697,11 @@
       "tags": [
         "禮券",
         "超商"
-      ]
+      ],
+      "coordinates": {
+        "lat": 24.993,
+        "lng": 121.291
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDgtMTA6MDB+MTY6MzAt5o+a5piH5rG96LuK6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -2420,7 +2764,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-08",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534699175150728"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534699175150728",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDgtMDk6MzB+MTc6MDAt5bem54ef5Y2A6Ieq5Yqp6YeM6L6m5YWs5a6k",
@@ -2465,7 +2813,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-08",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534694803665215"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534694803665215",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDgtMDg6MDB+MTY6MDAt5piG6Imv6KO95p2Q5bug",
@@ -2474,7 +2826,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-08",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534694347544232"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534694347544232",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDgtMDk6MDB+MTc6MzAt5ZyL5rOw5Lq65aO96auY57+U6YCa6KiK6JmV",
@@ -2483,7 +2839,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-08",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534690253908773"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534690253908773",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDgtMDk6MzB+MTc6MDAt5bGP5p2x57ij6b6N54eI5oWI5ZaE5pyD",
@@ -2570,7 +2930,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-09",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346117979772165"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346117979772165",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDktMDg6MDB+MTY6MDAt5paw56u557ij56u55YyX5biC6YCA5LyN6LuN5Lq65amm5aWz5pyD",
@@ -2631,7 +2995,11 @@
       },
       "tags": [
         "生活用品"
-      ]
+      ],
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDktMTE6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5paw56u55pWZ5bir5YiG5pyD",
@@ -2649,7 +3017,11 @@
       "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
       "activityDate": "2026-05-09",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346111063419624"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346111063419624",
+      "coordinates": {
+        "lat": 24.682,
+        "lng": 120.878
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDktMDk6MDB+MTY6MDAt6LKh5ZyY5rOV5Lq65Lit5aOi5LuB5rW35a6u",
@@ -2689,7 +3061,11 @@
       "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534719418432331"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534719418432331",
+      "coordinates": {
+        "lat": 22.656,
+        "lng": 120.316
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MDB+MTc6MzAt6b6N5paH5riF5rC056WW5bir54K65ZaE5pyN5YuZ5ZyY6ZqK",
@@ -2698,7 +3074,11 @@
       "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534709874563313"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534709874563313",
+      "coordinates": {
+        "lat": 22.605,
+        "lng": 120.362
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MDB+MTc6MzAt5L2b5YWJ5YWt5bqm5YiG5pyD",
@@ -2707,7 +3087,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534709230684386"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534709230684386",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MDB+MTc6MDAt5oW25ZyW6YeR5bGs6ZaL55m86IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -2716,7 +3100,11 @@
       "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534708696715369"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534708696715369",
+      "coordinates": {
+        "lat": 22.796,
+        "lng": 120.297
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MDB+MTc6MDAt6auY6ZuE5biC5Ye55a2Q5bqV5b635a6J5a6u",
@@ -2754,7 +3142,11 @@
       "location": "臺南市新營區中正路23-1號(新營民治議事廳對面玻璃屋D18新營捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534707983088386"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534707983088386",
+      "coordinates": {
+        "lat": 23.313,
+        "lng": 120.315
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MDB+MTc6MDAt5YCJ5L2R5a+m5qWt6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -2763,7 +3155,11 @@
       "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534707517967314"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534707517967314",
+      "coordinates": {
+        "lat": 23.47,
+        "lng": 120.44
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDg6MDB+MTY6MDAt5L2b5YWJ5pyD5YWJ5piO56ys5LiA5YiG5pyD",
@@ -2772,7 +3168,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534704502078890"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534704502078890",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDg6MDB+MTc6MDAt56S+5ZyY5rOV5Lq65Lit6I+v5LiJ5riF5Yqf5b635pyD",
@@ -2781,7 +3181,11 @@
       "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534704146947827"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534704146947827",
+      "coordinates": {
+        "lat": 22.688827,
+        "lng": 120.489176
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDmjZDooYDlp5Tlk6HmnIM=",
@@ -2799,7 +3203,11 @@
       "location": "臺南市北區北安路一段183號(D20北安捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534703323220845"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534703323220845",
+      "coordinates": {
+        "lat": 22.999,
+        "lng": 120.211
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDg6MDB+MTc6MDAt5YCJ5L2R5a+m5qWt6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -2808,7 +3216,11 @@
       "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534702789351827"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534702789351827",
+      "coordinates": {
+        "lat": 23.476,
+        "lng": 120.444
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MzB+MTc6MzAt5bCa5ZCI5ZiJ6aOf5ZOB5pyJ6ZmQ5YWs5Y+4KOWwj+S7geazieixhua8vynlj7DljZfljYA=",
@@ -2826,7 +3238,11 @@
       "location": "臺南市北區東興路2段47號(D22東興捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534696704230232"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534696704230232",
+      "coordinates": {
+        "lat": 22.996,
+        "lng": 120.213
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDg6MDB+MTY6MzAt5bCH6LuN5b+r5qiC5o2Q6KGA6IGv5ZCI5ZyY6ZqK",
@@ -2857,7 +3273,11 @@
       "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534695160361214"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534695160361214",
+      "coordinates": {
+        "lat": 22.627,
+        "lng": 120.358
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MDB+MTc6MDAt6Ie65Y2X5biC6KW/5ouJ6ZuF5ZyL6Zqb5ZCM5r+f5pyD",
@@ -2866,7 +3286,11 @@
       "location": "臺南市北區台南公園-台南轉運站對面(D14中山捐血車)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534691611503873"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534691611503873",
+      "coordinates": {
+        "lat": 22.997,
+        "lng": 120.204
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDg6MDB+MTc6MDAt5Y+w5Y2X5biC5bCP5ZCD5qWt6IG35qWt5bel5pyD",
@@ -2875,7 +3299,11 @@
       "location": "臺南市中西區永福路1段85號(D19永福捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534691076624845"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534691076624845",
+      "coordinates": {
+        "lat": 22.983718,
+        "lng": 120.200032
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MzB+MTg6MDAt5qWg5qKT5aSp5ZCO5a6u",
@@ -2884,7 +3312,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-09",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534690898877701"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534690898877701",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "cHR0LTIwMjYtMDUtMDktNS85KOWFrSnlj7DmnbHmjZDooYDnq5k=",
@@ -2908,7 +3340,11 @@
           }
         ]
       },
-      "isPttOnly": true
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     }
   ],
   "2026-05-10": [
@@ -2937,7 +3373,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-10",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346118692499137"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346118692499137",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTAtMDk6MDB+MTY6MDAt6IuX5qCX546J6LGQ542F5a2Q5pyD",
@@ -2973,7 +3413,11 @@
       "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534719049097871"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534719049097871",
+      "coordinates": {
+        "lat": 22.656,
+        "lng": 120.316
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDg6MDB+MTc6MDAt5Liy5Lqm54eS5rW35a6J5bqX",
@@ -2982,7 +3426,11 @@
       "location": "臺南市中西區永福路1段85號(D19永福捐血室)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534718860149826"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534718860149826",
+      "coordinates": {
+        "lat": 22.983718,
+        "lng": 120.200032
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDk6MzB+MTg6MDAt5ZCM5r+f5pyD6auY5bGP5Y2AQg==",
@@ -2991,7 +3439,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534718405128843"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534718405128843",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDg6MDB+MTc6MDAt5Y+w54Gj6Im+5aSa576O6IKh5Lu95pyJ6ZmQ5YWs5Y+46auY6ZuE56a+5piM5pWZ6IKy5Lit5b+D",
@@ -3000,7 +3452,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534717682391871"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534717682391871",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDg6MzB+MTc6MDAt5b635bOw6KGM57On6aOf5pyJ6ZmQ5YWs5Y+4",
@@ -3009,7 +3465,11 @@
       "location": "臺南市北區北安路一段183號(D20北安捐血室)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534717226270899"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534717226270899",
+      "coordinates": {
+        "lat": 22.999,
+        "lng": 120.211
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDg6MzB+MTc6MDAt5aSn5pm65bGx546E56m65rOV5a+6",
@@ -3018,7 +3478,11 @@
       "location": "臺南市北區東興路2段47號(D22東興捐血室)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534716969674899"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534716969674899",
+      "coordinates": {
+        "lat": 22.996,
+        "lng": 120.213
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDg6MzB+MTc6MDAt6Ie65Y2X5biC54ef6bOz5ZyL6Zqb5ZCM5r+f5pyD",
@@ -3027,7 +3491,11 @@
       "location": "臺南市新營區中正路23-1號(新營民治議事廳對面玻璃屋D18新營捐血室)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534716403543826"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534716403543826",
+      "coordinates": {
+        "lat": 23.313,
+        "lng": 120.315
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45ZiJ576p6YO15bGA",
@@ -3036,7 +3504,11 @@
       "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534716048422844"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534716048422844",
+      "coordinates": {
+        "lat": 23.476,
+        "lng": 120.444
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDk6MDB+MTc6MDAt5paH5q2m6IGW5q6/",
@@ -3063,7 +3535,11 @@
       "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534713598764302"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534713598764302",
+      "coordinates": {
+        "lat": 22.605,
+        "lng": 120.362
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDg6MDB+MTY6MDAt6YeR55uK54+g5a+26YqA5qiT",
@@ -3072,7 +3548,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534713132633330"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534713132633330",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDg6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDmjZDooYDlp5Tlk6HmnIPkuLvluK3pu4PpupfomK0=",
@@ -3081,7 +3561,11 @@
       "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534712954885385"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534712954885385",
+      "coordinates": {
+        "lat": 22.688827,
+        "lng": 120.489176
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDk6MDB+MTc6MDAt6auY6ZuE5biC6IyE6JCj5oWI5ZaE5pyD",
@@ -3099,7 +3583,11 @@
       "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534711775038330"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534711775038330",
+      "coordinates": {
+        "lat": 23.47,
+        "lng": 120.44
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDk6MDB+MTc6MDAt5Y+w5Y2X5biC5L+d55Sf5oWI5ZaE5pyD",
@@ -3126,7 +3614,11 @@
       "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
       "activityDate": "2026-05-10",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534710053311368"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534710053311368",
+      "coordinates": {
+        "lat": 22.796,
+        "lng": 120.297
+      }
     },
     {
       "id": "cHR0LTIwMjYtMDUtMTAtNS8xMCjml6Up5Y+w5Lit5o2Q6KGA5Lit5b+D",
@@ -3294,7 +3786,11 @@
       "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
       "activityDate": "2026-05-11",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319477521493497"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319477521493497",
+      "coordinates": {
+        "lat": 22.627,
+        "lng": 120.358
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTEtMDk6MzB+MTc6MDAt5rOb5Lqe5bel56iL5bu66Kit6IKh5Lu95pyJ6ZmQ5YWs5Y+45aSn5p6X6JKy5pa95bel5omA",
@@ -3330,7 +3826,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-11",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319475264898498"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319475264898498",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTEtMDk6MDB+MTc6MzAt5ZaE6K236Zec5oSb5Y2U5pyD",
@@ -3339,7 +3839,11 @@
       "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
       "activityDate": "2026-05-11",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319472893988901"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319472893988901",
+      "coordinates": {
+        "lat": 22.656,
+        "lng": 120.316
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTEtMDk6MzB+MTg6MDAt5riv6YO95ruZ6LOH5pys5pyJ6ZmQ5YWs5Y+4",
@@ -3348,7 +3852,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-11",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319472258009984"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319472258009984",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTEtMDk6MDB+MTY6MzAt6Ie65Y2X5biC5ZaE5a+26KGM5ZaE5pyD",
@@ -3366,7 +3874,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-11",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319471070251939"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319471070251939",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTEtMDk6MDB+MTc6MDAt6IuT6ZuF5a6J54C+5a6u",
@@ -3413,7 +3925,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-12",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319488343110479"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319488343110479",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTItMTA6MzB+MTc6MDAt5Lit6I+v57aT6LK/5aSn5qiT",
@@ -3440,7 +3956,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-12",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319477165362425"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319477165362425",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTItMTA6MDB+MTg6MDAt5ZyL56uL5oiQ5Yqf5aSn5a24",
@@ -3478,7 +3998,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-13",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319486517170000"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319486517170000",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTMtMDg6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD6auY6ZuE56ys5Zub552j5bCO5Y2A5a+26I+v5a+65qWg5qKT5YiG5pyD",
@@ -3487,7 +4011,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-13",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319485338322055"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319485338322055",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTMtMTA6MDB+MTg6MDAt5ZyL56uL5oiQ5Yqf5aSn5a24",
@@ -3523,7 +4051,11 @@
       "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
       "activityDate": "2026-05-13",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319480600816569"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319480600816569",
+      "coordinates": {
+        "lat": 22.627,
+        "lng": 120.358
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTMtMDk6MDB+MTc6MzAt5ZyL5rOw5Lq65aO95YWG5Z+66YCa6KiK6JmV",
@@ -3532,7 +4064,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-13",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319480245795596"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319480245795596",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTMtMTA6MDB+MTc6MDAt5ZyL56uL5ZiJ576p5aSn5a24KOiYrea9reagoeWNgCk=",
@@ -3589,7 +4125,11 @@
       "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
       "activityDate": "2026-05-14",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346126866459678"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346126866459678",
+      "coordinates": {
+        "lat": 24.954575,
+        "lng": 121.224196
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTQtMDk6MDB+MTY6MDAt5L2w6YGU57+h5Yip542F5a2Q5pyD",
@@ -3598,7 +4138,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-14",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346126400337695"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346126400337695",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTQtMDk6MDB+MTY6MDAt6YCa6ZyE542F",
@@ -3616,7 +4160,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-14",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319499697402082"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319499697402082",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTQtMDg6MDB+MTc6MDAt5oSb5ZyL6LaF5biC",
@@ -3625,7 +4173,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-14",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319498418654037"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319498418654037",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTQtMDk6MDB+MTc6MzAt5ZyL5rOw5Lq65aO95YWG5Z+66YCa6KiK6JmV",
@@ -3634,7 +4186,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-14",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319498052523054"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319498052523054",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTQtMDg6MzB+MTc6MDAt6JCs5rOw56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -3643,7 +4199,11 @@
       "location": "澎湖縣馬公市中山路62號(S74馬公捐血站)",
       "activityDate": "2026-05-14",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319497874776009"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319497874776009",
+      "coordinates": {
+        "lat": 23.566,
+        "lng": 119.567
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTQtMDk6MDB+MTc6MDAt6auY6ZuE5qau5rCR57i96Yar6Zmi",
@@ -3670,7 +4230,11 @@
       "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
       "activityDate": "2026-05-14",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319493780149540"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319493780149540",
+      "coordinates": {
+        "lat": 22.627,
+        "lng": 120.358
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTQtMDk6MzB+MTg6MDAt5oSb5ZyL6LaF5biC",
@@ -3679,7 +4243,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-14",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319493146260513"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319493146260513",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTQtMTA6MDB+MTg6MDAt5ZyL56uL5oiQ5Yqf5aSn5a24",
@@ -3697,7 +4265,11 @@
       "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
       "activityDate": "2026-05-14",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319487330807082"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319487330807082",
+      "coordinates": {
+        "lat": 23.476,
+        "lng": 120.444
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTQtMDk6MzB+MTc6MDAt5aSn5Yqb55m854ef6YCg5pyJ6ZmQ5YWs5Y+4",
@@ -3724,7 +4296,11 @@
       "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
       "activityDate": "2026-05-14",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319482068412568"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319482068412568",
+      "coordinates": {
+        "lat": 23.47,
+        "lng": 120.44
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTQtMDk6MzB+MTc6MDAt5pWR5ZyL5ZyY5Y+w5Y2X5biC5q245LuB5Y2A5ZyY5aeU5pyD",
@@ -3783,7 +4359,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-15",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346127678185640"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346127678185640",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTUtMTA6MDB+MTY6MzAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
@@ -3828,7 +4408,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-15",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319496226583595"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319496226583595",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTUtMDg6MDB+MTc6MDAt5oSb5ZyL6LaF5biC",
@@ -3837,7 +4421,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-15",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319495782614567"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319495782614567",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTUtMDg6MzB+MTc6MDAt6JCs5rOw56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -3846,7 +4434,11 @@
       "location": "澎湖縣馬公市中山路62號(S74馬公捐血站)",
       "activityDate": "2026-05-15",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319495147735540"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319495147735540",
+      "coordinates": {
+        "lat": 23.566,
+        "lng": 119.567
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTUtMDk6MzB+MTc6MDAt5L2R5a+M5bu66Kit5pyJ6ZmQ5YWs5Y+4",
@@ -3864,7 +4456,11 @@
       "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
       "activityDate": "2026-05-15",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319491954008071"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319491954008071",
+      "coordinates": {
+        "lat": 22.627,
+        "lng": 120.358
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTUtMDg6MDB+MTY6MDAt5Y+w5p2x5o2Q6KGA56uZ5b+X5bel5pyN5YuZ6ZqK",
@@ -3873,7 +4469,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-15",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319491598977008"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319491598977008",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTUtMDg6MDB+MTc6MDAt5bGP5p2x57ij6aOf5ZOB5rWB6YCa5ZWG5qWt5ZCM5qWt5YWs5pyD",
@@ -3882,7 +4482,11 @@
       "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
       "activityDate": "2026-05-15",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319490875250026"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319490875250026",
+      "coordinates": {
+        "lat": 22.688827,
+        "lng": 120.489176
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTUtMDk6MzB+MTg6MDAt5oSb5ZyL6LaF5biC",
@@ -3891,7 +4495,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-15",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319490410129054"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319490410129054",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     }
   ],
   "2026-05-16": [
@@ -3920,7 +4528,11 @@
       "location": "桃園市桃園區同德六街77號(桃園區同德六街捐血亭)",
       "activityDate": "2026-05-16",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346129936781649"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346129936781649",
+      "coordinates": {
+        "lat": 24.993,
+        "lng": 121.291
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTYtMTA6MDB+MTc6MDAt5paw56u55paw6Z+7542F5a2Q5pyD",
@@ -3929,7 +4541,11 @@
       "location": "新竹市北區文雅街6號(西大捐血室\t)",
       "activityDate": "2026-05-16",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346129570650667"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346129570650667",
+      "coordinates": {
+        "lat": 24.803,
+        "lng": 120.967
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTYtMDk6MDB+MTY6MDAt5qGD5ZyS5biC5bmz6Y6u5Y2A5LiJ5a6J56S+5Y2A55m85bGV5Y2U5pyD",
@@ -3956,7 +4572,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-16",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346124763397136"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346124763397136",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTYtMDk6MzB+MTY6MzAt5qGD5ZyS5biC5oiQ5Yqf542F5a2Q5pyD",
@@ -3965,7 +4585,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-16",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346124208276153"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346124208276153",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTYtMDg6MDB+MTY6MDAt6I+v6aao542F",
@@ -3974,7 +4598,11 @@
       "location": "苗栗縣苗栗市為公路282號(苗栗捐血站)",
       "activityDate": "2026-05-16",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346123129428108"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346123129428108",
+      "coordinates": {
+        "lat": 24.571246,
+        "lng": 120.829697
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDg6MzB+MTc6MDAt6JCs5rOw56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -3983,7 +4611,11 @@
       "location": "澎湖縣馬公市中山路62號(S74馬公捐血站)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319509940784584"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319509940784584",
+      "coordinates": {
+        "lat": 23.566,
+        "lng": 119.567
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDg6MzB+MTc6MDAt5Y+v5oiQ56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -3992,7 +4624,11 @@
       "location": "臺南市北區北安路一段183號(D20北安捐血室)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319509306815566"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319509306815566",
+      "coordinates": {
+        "lat": 22.999,
+        "lng": 120.211
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDk6MDB+MTc6MDAt5Y+v5oiQ56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -4001,7 +4637,11 @@
       "location": "臺南市北區台南公園-台南轉運站對面(D14中山捐血車)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319508227068512"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319508227068512",
+      "coordinates": {
+        "lat": 22.997,
+        "lng": 120.204
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDg6MzB+MTc6MDAt5Y+w5Y2X5biC5rC45bq35Y2A5buj6K235a6u",
@@ -4019,7 +4659,11 @@
       "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319507049210567"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319507049210567",
+      "coordinates": {
+        "lat": 23.47,
+        "lng": 120.44
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDk6MDB+MTc6MzAt5ZCI5b635oWI5ZaE5pyD",
@@ -4028,7 +4672,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319506481027052"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319506481027052",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDg6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq65q2j5b6356S+5pyD56aP5Yip5oWI5ZaE5Z+66YeR5pyDKOWxj+adseWIhumZoik=",
@@ -4037,7 +4685,11 @@
       "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319506025996070"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319506025996070",
+      "coordinates": {
+        "lat": 22.688827,
+        "lng": 120.489176
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDk6MDB+MTc6MzAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDmjZDooYDlp5Tlk6HmnIM=",
@@ -4046,7 +4698,11 @@
       "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319505212279007"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319505212279007",
+      "coordinates": {
+        "lat": 22.656,
+        "lng": 120.316
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDk6MzB+MTc6MDAt6auY6ZuE5biC5paw55Sf5Luj6Yu86ZC15Lqk5rWB5Y2U5pyD",
@@ -4055,7 +4711,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319504678390070"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319504678390070",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDk6MDB+MTc6MDAt6Ie65Y2X5biC5pS/5bqc6K2m5a+f5bGA5ZaE5YyW5YiG5bGA",
@@ -4073,7 +4733,11 @@
       "location": "臺南市中西區永福路1段85號(D19永福捐血室)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319502777825053"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319502777825053",
+      "coordinates": {
+        "lat": 22.983718,
+        "lng": 120.200032
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDg6MDB+MTc6MDAt5ZiJ576p5biC5bCP6Iux5LmL5Y+L5pyD",
@@ -4082,7 +4746,11 @@
       "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319502311704071"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319502311704071",
+      "coordinates": {
+        "lat": 23.476,
+        "lng": 120.444
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDg6MDB+MTY6MDAt6Lqr5b+D6Zqc56SZ6ICF5L+d6K235Y2U5pyD",
@@ -4091,7 +4759,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319501753411566"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319501753411566",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDg6MDB+MTc6MDAt5ZCI5b635oWI5ZaE5pyD",
@@ -4100,7 +4772,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319500119532538"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319500119532538",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDk6MDB+MTc6MDAt55m957Gz5oWI5ZaE5YiX6LuK",
@@ -4109,7 +4785,11 @@
       "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319496860462512"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319496860462512",
+      "coordinates": {
+        "lat": 22.796,
+        "lng": 120.297
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTYtMDg6MzB+MTc6MDAt5ZyL5rOw5Lq65aO95L+d6Zqq6IKh5Lu95pyJ6ZmQ5YWs5Y+45rC45bq36YCa6KiK6JmV",
@@ -4118,7 +4798,11 @@
       "location": "臺南市北區東興路2段47號(D22東興捐血室)",
       "activityDate": "2026-05-16",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319491132856026"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319491132856026",
+      "coordinates": {
+        "lat": 22.996,
+        "lng": 120.213
+      }
     },
     {
       "id": "cHR0LTIwMjYtMDUtMTYtNS8xNijlha0p5Y+w5Lit6KW/5bGv5Y+w54Gj5aSn6YGT5Zub5q61",
@@ -4213,7 +4897,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-17",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346136665862153"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346136665862153",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTctMDg6MzB+MTY6MzAt56S+5ZyY5rOV5Lq65paw56u557ij5Lit6I+v54Wn6aGn6ICF6Zec5oe35Y2U5pyD",
@@ -4231,7 +4919,11 @@
       "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
       "activityDate": "2026-05-17",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346135020993135"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346135020993135",
+      "coordinates": {
+        "lat": 24.954575,
+        "lng": 121.224196
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTctMDk6MDB+MTc6MDAt5qGD5ZyS5biC5Y2a5oSb5L+D6YCy5Y2U5pyD",
@@ -4249,7 +4941,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-17",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346131393387649"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346131393387649",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTctMDk6MDB+MTY6MDAt6IuX5qCX57ij6YCA5LyN6LuN5Lq65Y2U5pyD",
@@ -4258,7 +4954,11 @@
       "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
       "activityDate": "2026-05-17",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346130758408612"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346130758408612",
+      "coordinates": {
+        "lat": 24.682,
+        "lng": 120.878
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDg6MzB+MTc6MDAt6Imv5aCF5bu66Kit6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -4267,7 +4967,11 @@
       "location": "臺南市北區北安路一段183號(D20北安捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319519561340124"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319519561340124",
+      "coordinates": {
+        "lat": 22.999,
+        "lng": 120.211
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDk6MDB+MTc6MzAt6auY6ZuE5biC6YWS6aGe5ZWG5qWt5ZCM5qWt5YWs5pyD",
@@ -4276,7 +4980,11 @@
       "location": "高雄市鳳山區五甲二路563-2號1F(五甲捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319519105228141"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319519105228141",
+      "coordinates": {
+        "lat": 22.605,
+        "lng": 120.362
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDk6MDB+MTc6MzAt6ZaL5YWD5a6u",
@@ -4285,7 +4993,11 @@
       "location": "高雄市三民區九如一路198號1樓(D21九如捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319518382592179"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319518382592179",
+      "coordinates": {
+        "lat": 22.656,
+        "lng": 120.316
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDg6MDB+MTY6MDAt6Ie65p2x6Ziy54G95a6j5bCO576p5raI5YiG6ZqK",
@@ -4294,7 +5006,11 @@
       "location": "臺東縣臺東市四維路三段198號(S76台東捐血站)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319517378288682"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319517378288682",
+      "coordinates": {
+        "lat": 22.756,
+        "lng": 121.147
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDk6MDB+MTc6MzAt6auY6ZuE5biC56mN5b635oWI5ZaE5pyD",
@@ -4303,7 +5019,11 @@
       "location": "高雄市前金區中華三路7號6樓(S75前金捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319516734309664"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319516734309664",
+      "coordinates": {
+        "lat": 22.633,
+        "lng": 120.302
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDg6MDB+MTc6MDAt6KeA5LiW6Z+z5oWI5b+D5pyD",
@@ -4312,7 +5032,11 @@
       "location": "高雄市楠梓區高楠公路1837號(S71楠梓捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319516290430637"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319516290430637",
+      "coordinates": {
+        "lat": 22.735,
+        "lng": 120.341
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDk6MDB+MTc6MzAt5Y2X6Kqg56aP5b635aCC",
@@ -4321,7 +5045,11 @@
       "location": "高雄市鳳山區光遠路226號(捷運鳳山捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319515656551610"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319515656551610",
+      "coordinates": {
+        "lat": 22.627,
+        "lng": 120.358
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDk6MzB+MTg6MDAt5L2b5YWJ5pyD5Lit6I+v57i95pyD6bOl5p2+56ys5LiA5YiG5pyD",
@@ -4330,7 +5058,11 @@
       "location": "高雄市左營區博愛三路635號(D09左營捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319515011682682"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319515011682682",
+      "coordinates": {
+        "lat": 22.68923,
+        "lng": 120.29904
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDk6MDB+MTc6MDAt5pyd6IiI5a6u5rip6Zm15buf",
@@ -4366,7 +5098,11 @@
       "location": "臺南市中西區永福路1段85號(D19永福捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319513299855610"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319513299855610",
+      "coordinates": {
+        "lat": 22.983718,
+        "lng": 120.200032
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDk6MzB+MTc6MDAt6auY6ZuE5biC5piO54eI5oWI5ZaE5pyD",
@@ -4393,7 +5129,11 @@
       "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319510749197179"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319510749197179",
+      "coordinates": {
+        "lat": 22.688827,
+        "lng": 120.489176
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDg6MDB+MTc6MDAt5Y+v5oiQ56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -4402,7 +5142,11 @@
       "location": "嘉義市西區博愛路一段488號(S81嘉義捐血站)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319507748623152"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319507748623152",
+      "coordinates": {
+        "lat": 23.476,
+        "lng": 120.444
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDg6MzB+MTc6MDAt5o+a5qyK5oSb5b+D5Y2U5pyD",
@@ -4411,7 +5155,11 @@
       "location": "臺南市北區東興路2段47號(D22東興捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319507204744024"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319507204744024",
+      "coordinates": {
+        "lat": 22.996,
+        "lng": 120.213
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDk6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Y+w5Y2X5Y2X5Y2A56ys5Zub5YiG5pyD",
@@ -4420,7 +5168,11 @@
       "location": "臺南市北區台南公園-台南轉運站對面(D14中山捐血車)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319506669875007"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319506669875007",
+      "coordinates": {
+        "lat": 22.997,
+        "lng": 120.204
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDk6MDB+MTc6MDAt5byY6ZaL5ZaE5b635Z+66YeR5pyD",
@@ -4438,7 +5190,11 @@
       "location": "嘉義市東區垂楊路132號1樓(D17垂楊捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319502576138538"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319502576138538",
+      "coordinates": {
+        "lat": 23.47,
+        "lng": 120.44
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTctMDk6MDB+MTc6MDAt5Y+w54Gj6Im+5aSa576O6IKh5Lu95pyJ6ZmQ5YWs5Y+46auY6ZuE5qmL6aCt5a+M55ub5pWZ6IKy5Lit5b+D",
@@ -4447,7 +5203,11 @@
       "location": "高雄市岡山區壽華路58號(S72岡山捐血室)",
       "activityDate": "2026-05-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319501397380583"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319501397380583",
+      "coordinates": {
+        "lat": 22.796,
+        "lng": 120.297
+      }
     },
     {
       "id": "cHR0LTIwMjYtMDUtMTctNS8xNyjml6Up6auY6ZuE5YmN6Y6u57Gs5LuU5YWn6Lev5Lit5buf5Y2D56eL5bqc",
@@ -4531,7 +5291,11 @@
       "location": "苗栗縣苗栗市為公路282號(苗栗捐血站)",
       "activityDate": "2026-05-20",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346138922467252"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346138922467252",
+      "coordinates": {
+        "lat": 24.571246,
+        "lng": 120.829697
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjAtMDk6MDB+MTY6MDAt5qGD5ZyS54Cn5pif542F5a2Q5pyD",
@@ -4540,7 +5304,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-20",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346138566346279"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346138566346279",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjAtMDk6MDB+MTI6MzAt5qGD5ZyS5biC5Y2X5bSB5aWz542F5pyD",
@@ -4569,7 +5337,11 @@
       "location": "苗栗縣苗栗市為公路282號(苗栗捐血站)",
       "activityDate": "2026-05-21",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346139745194224"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346139745194224",
+      "coordinates": {
+        "lat": 24.571246,
+        "lng": 120.829697
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjEtMTE6MDB+MTg6MDAt5b635bee54mb5o6S56u55YyX5bqX",
@@ -4596,7 +5368,11 @@
       "location": "新竹市北區文雅街6號(西大捐血室\t)",
       "activityDate": "2026-05-21",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346134017689748"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346134017689748",
+      "coordinates": {
+        "lat": 24.803,
+        "lng": 120.967
+      }
     },
     {
       "id": "cHR0LTIwMjYtMDUtMjEtNS8yMSjlm5sp5paw5YyX5paw5bqX55+96LC35ZyS5Y2A5LqM5pyf",
@@ -4695,7 +5471,11 @@
       "location": "新竹市北區文雅街6號(西大捐血室\t)",
       "activityDate": "2026-05-22",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346146730306710"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346146730306710",
+      "coordinates": {
+        "lat": 24.803,
+        "lng": 120.967
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjItMTE6MDB+MTg6MDAt5b635bee54mb5o6S56u55YyX5bqX",
@@ -4731,7 +5511,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-22",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346135295437793"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346135295437793",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjItMDk6MDB+MTY6MDAt6b6c5bGx5Y2A6Zm45YWJ6YeM6L6m5YWs6JmV",
@@ -4769,7 +5553,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-23",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346147552023782"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346147552023782",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjMtMDk6MDB+MTc6MDAt6I+v5Y2X55Si54mp5L+d6Zqq6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -4778,7 +5566,11 @@
       "location": "新竹市北區文雅街6號(西大捐血室\t)",
       "activityDate": "2026-05-23",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346147197902710"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346147197902710",
+      "coordinates": {
+        "lat": 24.803,
+        "lng": 120.967
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjMtMDk6MDB+MTY6MDAt5aSn5qGD5ZyS5ZyL6Zqb5YKR5Lq65pyD",
@@ -4823,7 +5615,11 @@
       "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
       "activityDate": "2026-05-23",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346142280548278"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346142280548278",
+      "coordinates": {
+        "lat": 24.954575,
+        "lng": 121.224196
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjMtMDk6MDB+MTY6MDAt6IuX5qCX57ij5LiJ576p6YSJ5b6M5YKZ5oay5YW16I235p2+5Y2U5pyD",
@@ -4899,7 +5695,11 @@
       "location": "桃園市中壢區領航南路一段218號(中壢區文德路文興公園捐血亭)",
       "activityDate": "2026-05-24",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346149919628782"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346149919628782",
+      "coordinates": {
+        "lat": 24.971,
+        "lng": 121.227
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjQtMDk6MDB+MTY6MDAt5bmz5Y2X5ZCM5r+f5pyD",
@@ -4917,7 +5717,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-24",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346145360961250"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346145360961250",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjQtMDk6MzB+MTY6MzAt5qGD5ZyS5biC5b+g576p542F5a2Q5pyD",
@@ -4926,7 +5730,11 @@
       "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
       "activityDate": "2026-05-24",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346144726092223"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346144726092223",
+      "coordinates": {
+        "lat": 24.954575,
+        "lng": 121.224196
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjQtMDk6MzB+MTY6MDAt5Lit5aOi5Y2A6I+v5Yub56S+5Y2A55m85bGV5Y2U",
@@ -5014,7 +5822,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-26",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346156549719295"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346156549719295",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjYtMDk6MDB+MTY6MDAt5qGD5ZyS5biC5LqU56aP542F5a2Q5pyD",
@@ -5076,7 +5888,11 @@
       "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
       "activityDate": "2026-05-27",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346156183688222"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346156183688222",
+      "coordinates": {
+        "lat": 24.99294,
+        "lng": 121.305774
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjctMDk6MDB+MTY6MDAt5L2b5YWJ5pyD6b6N5r2t56ys5LiA5YiG5pyD",
@@ -5143,7 +5959,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-29",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346158084162249"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346158084162249",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMjktMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
@@ -5172,7 +5992,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-30",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346156258022780"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346156258022780",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMzAtMDk6MDB+MTY6MDAt6IuX5qCX5ZyY5aeU5pyD",
@@ -5181,7 +6005,11 @@
       "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
       "activityDate": "2026-05-30",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346155179274735"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346155179274735",
+      "coordinates": {
+        "lat": 24.682,
+        "lng": 120.878
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMzAtMTA6MDB+MTY6MzAt5qGD5ZyS5biC6Ieq5by3542F5a2Q5pyD",
@@ -5235,7 +6063,11 @@
       "location": "桃園市中壢區後寮1路188號(龍岡捐血室)",
       "activityDate": "2026-05-30",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346150441768249"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346150441768249",
+      "coordinates": {
+        "lat": 24.939032,
+        "lng": 121.246432
+      }
     },
     {
       "id": "cHR0LTIwMjYtMDUtMzAtNS8zMCjlha0p5Y+w5Lit5aSn6YeM5oWI5ZaE6Lev",
@@ -5305,7 +6137,11 @@
       "location": "新竹市北區文雅街6號(西大捐血室\t)",
       "activityDate": "2026-05-31",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346168615728889"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346168615728889",
+      "coordinates": {
+        "lat": 24.803,
+        "lng": 120.967
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMzEtMDk6MDB+MTY6MDAt6ZW356Wl5ZCM5r+f",
@@ -5323,7 +6159,11 @@
       "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
       "activityDate": "2026-05-31",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346167436970834"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346167436970834",
+      "coordinates": {
+        "lat": 24.682,
+        "lng": 120.878
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMzEtMDk6MDB+MTY6MDAt5qGD5ZyS5biC55m+5ZCI542F5a2Q5pyD",
@@ -5332,7 +6172,11 @@
       "location": "桃園市桃園區文康街61號(桃園捐血站)",
       "activityDate": "2026-05-31",
       "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346167071849852"
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346167071849852",
+      "coordinates": {
+        "lat": 24.993912,
+        "lng": 121.303762
+      }
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMzEtMDg6MzB+MTY6MDAt5paw56u557ij5a6k5YWn6Kit6KiI6KOd5L+u5ZWG5qWt5ZCM5qWt5YWs5pyD",

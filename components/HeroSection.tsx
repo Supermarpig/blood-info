@@ -41,6 +41,7 @@ interface HeroSectionProps {
     toggle?: boolean,
   ) => void;
   selectedCenter?: string | null;
+  filterLabel?: string;
 }
 
 // 星星位置與動畫延遲設定
@@ -136,6 +137,7 @@ export default function HeroSection({
   onFindNearby,
   onCenterSelect,
   selectedCenter,
+  filterLabel,
 }: HeroSectionProps) {
   return (
     <div className="mb-6 space-y-4">
@@ -214,7 +216,7 @@ export default function HeroSection({
             </div>
           </div>
           <p className="text-xs font-medium text-emerald-600/80 mb-1">
-            今日活動
+            {filterLabel ? `${filterLabel}今日活動` : "今日活動"}
           </p>
           <p className="text-3xl font-bold text-gray-900 tracking-tight">
             <AnimatedNumber value={todayCount} />
@@ -235,7 +237,9 @@ export default function HeroSection({
               <TrendingUp className="w-4 h-4 text-blue-600" />
             </div>
           </div>
-          <p className="text-xs font-medium text-blue-600/80 mb-1">即將開始</p>
+          <p className="text-xs font-medium text-blue-600/80 mb-1">
+            {filterLabel ? `${filterLabel}未來活動` : "即將開始"}
+          </p>
           <p className="text-3xl font-bold text-gray-900 tracking-tight">
             <AnimatedNumber value={upcomingCount} />
             <span className="text-sm font-normal text-gray-500 ml-1">場</span>
