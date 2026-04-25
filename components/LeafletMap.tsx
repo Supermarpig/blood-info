@@ -172,13 +172,13 @@ function AnimatedLines({ user, locations, selectedIndex }: { user: UserLocation;
               <animateMotion dur="2.2s" repeatCount="indefinite" path={p.d} />
               <g transform={p.goesLeft ? "scale(-1,1)" : undefined}>
 
-              {/* blood drop — big */}
-              <path d="M 2,-28 C 6,-22 8,-14 5,-9 Q 2,-6 -1,-9 C -4,-14 -2,-22 2,-28 Z"
-                fill="#e11d2a" stroke="white" strokeWidth="1.2" />
-              <ellipse cx="0.5" cy="-22" rx="1.4" ry="2.5" fill="white" opacity="0.4" transform="rotate(-20 0.5 -22)" />
+              {/* blood drop — fat, logo style */}
+              <path d="M 0,-27 C 0,-27 -11,-17 -11,-11 C -11,-5 -5.5,-2 0,-2 C 5.5,-2 11,-5 11,-11 C 11,-17 0,-27 0,-27 Z"
+                fill="#e11d2a" stroke="white" strokeWidth="1.4" />
+              <ellipse cx="-3.5" cy="-20" rx="2" ry="3.5" fill="white" opacity="0.4" transform="rotate(-20 -3.5 -20)" />
 
               {/* arm raised */}
-              <line x1="1.5" y1="-5" x2="2" y2="-8" stroke="#1f2937" strokeWidth="1.2" strokeLinecap="round" />
+              <line x1="1.5" y1="-5" x2="0" y2="-3" stroke="#1f2937" strokeWidth="1.2" strokeLinecap="round" />
 
               {/* head — small */}
               <circle cx="3.5" cy="-8" r="2.5" fill="#fcd34d" stroke="#1f2937" strokeWidth="0.9" />
