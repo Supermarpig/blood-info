@@ -153,10 +153,41 @@ try {
     console.log('blood-rooms.json 不存在，跳過靜態表');
 }
 
-// 從地址括號中提取捐血室名稱，用來查靜態表
-function extractRoomName(location) {
-    const match = location && location.match(/\(([^)]*捐血[^)]*)\)/);
-    return match ? match[1].trim() : null;
+// 從靜態表查詢座標，嘗試多種比對策略
+function findCoordinatesFromStatic(location, staticTable) {
+    if (!location) return null;
+
+    // 1. 完整字串直接比對
+    if (staticTable[location]) return staticTable[location];
+
+    // 2. 抓所有括號內容，嘗試各種比對
+    const bracketRe = /[（(]([^）)]+)[）)]/g;
+    let m;
+    while ((m = bracketRe.exec(location)) !== null) {
+        const content = m[1].trim();
+
+        // 直接比對括號內容
+        if (staticTable[content]) return staticTable[content];
+
+        // 移除「配合」前綴後比對
+        const hint = content.replace(/^配合/, '').trim();
+        if (!hint || hint.length < 2) continue;
+
+        // 嘗試加上常見捐血地點後綴
+        for (const suffix of ['捐血室', '捐血站', '捐血車', '捐血亭', '']) {
+            if (staticTable[hint + suffix]) return staticTable[hint + suffix];
+        }
+
+        // 模糊比對：hint 包含在某個靜態表 key 中（或反過來，排除空字串誤配）
+        const fuzzyKey = Object.keys(staticTable).find(k => {
+            if (k.includes(hint)) return true;
+            const stripped = k.replace(/捐血[室站車亭]$/, '');
+            return stripped.length >= 2 && hint.includes(stripped);
+        });
+        if (fuzzyKey) return staticTable[fuzzyKey];
+    }
+
+    return null;
 }
 
 // Geocoding 快取（避免重複請求同一地址）
@@ -199,7 +230,7 @@ async function geocodeAddress(address) {
         let cleanAddress = address
             .replace(/\(.*?\)/g, '')  // 移除括號內容
             .replace(/\d+樓.*$/, '')  // 移除樓層資訊
-            .replace(/[^\u4e00-\u9fa5\d號路街巷弄段區鄉鎮市縣]*/g, '') // 只保留地址相關字
+            .replace(/[^\u4e00-\u9fa5\d號路街巷弄段區鄉鎮市縣]+/g, '') // 只保留地址相關字
             .trim();
 
         // 確保包含「台灣」提高查詢準確度
@@ -236,20 +267,14 @@ async function geocodeAddress(address) {
 
 // 批量處理活動的 Geocoding
 async function geocodeEvents(data) {
-    // 第一步：先用靜態表填入固定捐血室座標
+    // 第一步：先用靜態表填入固定捐血室座標（含括號模糊比對）
     let staticHits = 0;
     for (const date in data) {
         for (const event of data[date]) {
             if (!event.location) continue;
-            const roomName = extractRoomName(event.location);
-            if (roomName && bloodRoomsStatic[roomName]) {
-                event.coordinates = bloodRoomsStatic[roomName];
-                staticHits++;
-                continue;
-            }
-            // 也試試完整 location 字串直接對靜態表（沒有括號的情況）
-            if (bloodRoomsStatic[event.location]) {
-                event.coordinates = bloodRoomsStatic[event.location];
+            const coords = findCoordinatesFromStatic(event.location, bloodRoomsStatic);
+            if (coords) {
+                event.coordinates = coords;
                 staticHits++;
             }
         }

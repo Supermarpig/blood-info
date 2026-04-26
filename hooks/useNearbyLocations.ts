@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 const LOCATION_CACHE_KEY = "nearby_user_location";
 const LOCATION_CACHE_TTL = 10 * 60 * 1000; // 10 minutes
@@ -75,7 +75,7 @@ interface UseNearbyLocationsReturn {
   error: string | null;
   nearbyLocations: NearbyLocation[];
   userLocation: UserLocation | null;
-  findNearbyLocations: (events: DonationEvent[], skipStaticRooms?: boolean, roomNameFilter?: string[]) => Promise<void>;
+  findNearbyLocations: (events: DonationEvent[], skipStaticRooms?: boolean, centerFilter?: string) => Promise<void>;
   clearResults: () => void;
 }
 
@@ -147,12 +147,14 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [nearbyLocations, setNearbyLocations] = useState<NearbyLocation[]>([]);
-  const [userLocation, setUserLocation] = useState<UserLocation | null>(() => {
-    if (typeof window === "undefined") return null;
-    return getStoredLocation();
-  });
+  // 初始值固定 null，避免 SSR/Client 不一致造成 hydration mismatch
+  const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
+  useEffect(() => {
+    const stored = getStoredLocation();
+    if (stored) setUserLocation(stored);
+  }, []);
 
-  const findNearbyLocations = useCallback(async (events: DonationEvent[], skipStaticRooms = false, roomNameFilter?: string[]) => {
+  const findNearbyLocations = useCallback(async (events: DonationEvent[], skipStaticRooms = false, centerFilter?: string) => {
     setIsLoading(true);
     setError(null);
     setNearbyLocations([]);
@@ -165,13 +167,13 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
       if (cached) {
         userLat = cached.lat;
         userLng = cached.lng;
-        setUserLocation(cached);
+        setUserLocation(prev => (prev?.lat === userLat && prev?.lng === userLng ? prev : { lat: userLat, lng: userLng }));
       } else {
         const position = await getUserLocation();
         userLat = position.coords.latitude;
         userLng = position.coords.longitude;
         const loc = { lat: userLat, lng: userLng };
-        setUserLocation(loc);
+        setUserLocation(prev => (prev?.lat === userLat && prev?.lng === userLng ? prev : loc));
         saveLocation(loc);
       }
 
@@ -187,12 +189,10 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
         if (res.ok) {
           const json = await res.json();
           const today = new Date().toISOString().split("T")[0];
-          let rooms = json.rooms as { name: string; lat: number; lng: number; hours?: string }[];
-          // 有 roomNameFilter 時只保留名稱符合的捐血室，避免跨地區污染
-          if (roomNameFilter && roomNameFilter.length > 0) {
-            rooms = rooms.filter((r) =>
-              roomNameFilter.some((kw) => r.name.includes(kw))
-            );
+          let rooms = json.rooms as { name: string; lat: number; lng: number; hours?: string; center?: string }[];
+          // filter by center field to avoid showing wrong-region rooms
+          if (centerFilter) {
+            rooms = rooms.filter((r) => r.center === centerFilter);
           }
           staticRooms = rooms.map((r) => ({
             location: r.name,

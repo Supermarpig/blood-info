@@ -6,19 +6,19 @@ export async function GET() {
   try {
     const filePath = path.join(process.cwd(), "data", "blood-rooms.json");
     const content = await fs.readFile(filePath, "utf-8");
-    const rooms: Record<string, { lat: number; lng: number; hours?: string }> =
+    const rooms: Record<string, { lat: number; lng: number; hours?: string; center?: string }> =
       JSON.parse(content);
 
     // Deduplicate by coordinates — keep the shortest (cleanest) name per location
     const coordMap = new Map<
       string,
-      { name: string; lat: number; lng: number; hours?: string }
+      { name: string; lat: number; lng: number; hours?: string; center?: string }
     >();
     for (const [name, coords] of Object.entries(rooms)) {
       const key = `${coords.lat.toFixed(5)},${coords.lng.toFixed(5)}`;
       const existing = coordMap.get(key);
       if (!existing || name.length < existing.name.length) {
-        coordMap.set(key, { name, lat: coords.lat, lng: coords.lng, hours: coords.hours });
+        coordMap.set(key, { name, lat: coords.lat, lng: coords.lng, hours: coords.hours, center: coords.center });
       }
     }
 
