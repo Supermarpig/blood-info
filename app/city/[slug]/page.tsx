@@ -108,6 +108,24 @@ function generateJsonLd(city: CityConfig, eventCount: number) {
   return [
     {
       "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "首頁",
+          item: baseUrl,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: `${city.displayName}捐血活動`,
+          item: `${baseUrl}/city/${city.slug}`,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "CollectionPage",
       name: city.title,
       description: city.description,
@@ -118,23 +136,6 @@ function generateJsonLd(city: CityConfig, eventCount: number) {
         "@type": "ItemList",
         name: `${city.displayName}捐血活動列表`,
         numberOfItems: eventCount,
-      },
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "首頁",
-            item: baseUrl,
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: `${city.displayName}捐血活動`,
-            item: `${baseUrl}/city/${city.slug}`,
-          },
-        ],
       },
     },
     {

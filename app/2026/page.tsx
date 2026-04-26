@@ -85,15 +85,9 @@ const GIFT_TYPES = [
 
 function generateJsonLd() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  return {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: "2026 捐血贈品查詢",
-    description:
-      "2026 年台灣捐血贈品完整整理，包含電影票、超商禮券、餐飲券、生活用品、食品等各類贈品。",
-    url: `${baseUrl}/2026`,
-    dateModified: new Date().toISOString(),
-    breadcrumb: {
+  return [
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "首頁", item: baseUrl },
@@ -105,7 +99,17 @@ function generateJsonLd() {
         },
       ],
     },
-    mainEntity: {
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: "2026 捐血贈品查詢",
+      description:
+        "2026 年台灣捐血贈品完整整理，包含電影票、超商禮券、餐飲券、生活用品、食品等各類贈品。",
+      url: `${baseUrl}/2026`,
+      dateModified: new Date().toISOString(),
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: [
         {
@@ -126,7 +130,7 @@ function generateJsonLd() {
         },
       ],
     },
-  };
+  ];
 }
 
 export default function Year2026Page() {

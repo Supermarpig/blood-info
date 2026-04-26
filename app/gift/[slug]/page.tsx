@@ -118,20 +118,9 @@ function filterEventsByGift(
 function generateJsonLd(gift: GiftConfig, eventCount: number) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  return {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: gift.title,
-    description: gift.description,
-    url: `${baseUrl}/gift/${gift.slug}`,
-    dateModified: new Date().toISOString(),
-    numberOfItems: eventCount,
-    mainEntity: {
-      "@type": "ItemList",
-      name: `捐血送${gift.name}活動列表`,
-      numberOfItems: eventCount,
-    },
-    breadcrumb: {
+  return [
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
         {
@@ -148,7 +137,21 @@ function generateJsonLd(gift: GiftConfig, eventCount: number) {
         },
       ],
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: gift.title,
+      description: gift.description,
+      url: `${baseUrl}/gift/${gift.slug}`,
+      dateModified: new Date().toISOString(),
+      numberOfItems: eventCount,
+      mainEntity: {
+        "@type": "ItemList",
+        name: `捐血送${gift.name}活動列表`,
+        numberOfItems: eventCount,
+      },
+    },
+  ];
 }
 
 export default async function GiftPage({ params }: PageProps) {

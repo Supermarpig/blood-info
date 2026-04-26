@@ -19,12 +19,33 @@ export const metadata: Metadata = {
     siteName: "台灣捐血活動查詢",
     locale: "zh_TW",
     type: "website",
+    images: [
+      {
+        url: `${baseUrl}/imgs/og-img.webp`,
+        width: 1200,
+        height: 630,
+        alt: "台灣捐血活動查詢",
+      },
+    ],
   },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "首頁", item: baseUrl },
+    { "@type": "ListItem", position: 2, name: "關於我們", item: `${baseUrl}/about` },
+  ],
 };
 
 export default function AboutPage() {
   return (
     <div className="container mx-auto p-8 max-w-3xl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
         <Link href="/" className="hover:text-gray-700 transition-colors">

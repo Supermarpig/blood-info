@@ -95,18 +95,9 @@ function generateHowToJsonLd() {
 function generateFaqJsonLd() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: FAQ_DATA.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-    breadcrumb: {
+  return [
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
         {
@@ -123,7 +114,19 @@ function generateFaqJsonLd() {
         },
       ],
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: FAQ_DATA.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    },
+  ];
 }
 
 export default function FAQPage() {

@@ -118,20 +118,58 @@ export default async function ActivityPage({ params }: PageProps) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const pageUrl = `${baseUrl}/activity/${id}`;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: `${event.organization} 捐血活動`,
-    startDate: `${event.activityDate}T${event.time.split("~")[0]}:00`,
-    endDate: `${event.activityDate}T${event.time.split("~")[1]}:00`,
-    location: {
-      "@type": "Place",
+  const breadcrumbItems: Array<{ "@type": string; position: number; name: string; item: string }> = [
+    { "@type": "ListItem", position: 1, name: "首頁", item: baseUrl! },
+  ];
+  if (matchedCity) {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 2,
+      name: `${matchedCity.displayName}捐血活動`,
+      item: `${baseUrl}/city/${matchedCity.slug}`,
+    });
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 3,
       name: event.organization,
-      address: { "@type": "PostalAddress", streetAddress: event.location },
+      item: pageUrl,
+    });
+  } else {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 2,
+      name: event.organization,
+      item: pageUrl,
+    });
+  }
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems,
     },
-    url: pageUrl,
-    organizer: { "@type": "Organization", name: event.organization },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name: `${event.organization} 捐血活動`,
+      startDate: `${event.activityDate}T${event.time.split("~")[0]}:00`,
+      endDate: `${event.activityDate}T${event.time.split("~")[1]}:00`,
+      eventStatus: "https://schema.org/EventScheduled",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: {
+        "@type": "Place",
+        name: event.organization,
+        address: { "@type": "PostalAddress", streetAddress: event.location },
+      },
+      url: pageUrl,
+      organizer: {
+        "@type": "Organization",
+        name: event.organization,
+        url: "https://www.blood.org.tw",
+      },
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
