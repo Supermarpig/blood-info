@@ -131,13 +131,38 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
         (event) => event.coordinates?.lat && event.coordinates?.lng
       );
 
-      if (eventsWithCoords.length === 0) {
+      // 3. 載入固定捐血室座標，作為補充（若事件資料不足時也能顯示）
+      let staticRooms: DonationEvent[] = [];
+      try {
+        const res = await fetch("/api/blood-rooms");
+        if (res.ok) {
+          const json = await res.json();
+          const today = new Date().toISOString().split("T")[0];
+          staticRooms = (
+            json.rooms as { name: string; lat: number; lng: number }[]
+          ).map((r) => ({
+            location: r.name,
+            organization: "捐血室",
+            time: "",
+            rawContent: r.name,
+            activityDate: today,
+            coordinates: { lat: r.lat, lng: r.lng },
+          }));
+        }
+      } catch {
+        // 靜默失敗，靜態捐血室資料僅為補充
+      }
+
+      // 事件優先，靜態捐血室作為補充（後續去重會過濾座標重複者）
+      const allSources = [...eventsWithCoords, ...staticRooms];
+
+      if (allSources.length === 0) {
         setError("地點資料尚未準備完成，請稍後再試");
         return;
       }
 
-      // 3. 計算距離並排序
-      const locationsWithDistance: NearbyLocation[] = eventsWithCoords.map(
+      // 4. 計算距離並排序
+      const locationsWithDistance: NearbyLocation[] = allSources.map(
         (event) => ({
           event,
           distance: calculateDistance(
@@ -160,7 +185,7 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
         return true;
       });
 
-      setNearbyLocations(unique.slice(0, 5));
+      setNearbyLocations(unique.slice(0, 20));
     } catch (err) {
       setError(err instanceof Error ? err.message : "發生未知錯誤");
     } finally {

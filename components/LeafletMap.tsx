@@ -103,7 +103,6 @@ function AnimatedLines({ user, locations, selectedIndex }: { user: UserLocation;
     const c = toXY(user.lat, user.lng);
 
     const paths: PathItem[] = locations
-      .slice(0, 5)
       .map((l, i) => ({ l, i }))
       .filter(({ l, i }) => {
         if (!l.event.coordinates) return false;

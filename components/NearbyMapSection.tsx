@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useId, useState, useEffect, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { Loader2, Navigation2, ExternalLink } from "lucide-react";
 import { NearbyLocation, UserLocation } from "@/hooks/useNearbyLocations";
@@ -39,6 +39,29 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
   const uid = useId().replace(/[^a-zA-Z0-9]/g, "") || "nms";
   const hasResults = nearbyLocations.length > 0;
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const BATCH = 1;
+  const [displayCount, setDisplayCount] = useState(BATCH);
+
+  // Reset to first batch whenever new results arrive
+  useEffect(() => { setDisplayCount(BATCH); }, [nearbyLocations]);
+
+  // Expand: last card enters viewport → show next batch
+  // IntersectionObserver respects overflow-x:auto clipping, works on both wide and narrow screens
+  const lastCardRef = useCallback((node: HTMLDivElement | null) => {
+    if (!node) return;
+    const ob = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          ob.disconnect();
+          setDisplayCount(prev => Math.min(prev + BATCH, nearbyLocations.length));
+        }
+      },
+      { threshold: 0.5 }
+    );
+    ob.observe(node);
+  }, [nearbyLocations.length]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const visibleLocations = nearbyLocations.slice(0, displayCount);
 
   return (
     <section id="nearby-section" className="mb-6 scroll-mt-4">
@@ -64,7 +87,7 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
         <div className="absolute inset-0 rounded-2xl overflow-hidden">
         {userLocation ? (
           /* Real Leaflet map — AnimatedLines rendered inside via createPortal */
-          <LeafletMap user={userLocation} locations={nearbyLocations} selectedIndex={selectedIndex} />
+          <LeafletMap user={userLocation} locations={visibleLocations} selectedIndex={selectedIndex} />
         ) : (
           /* SVG demo animation before location is known */
           <div className="w-full h-full" style={{ background: "linear-gradient(180deg, #eef5ea 0%, #e3ede0 100%)" }}>
@@ -162,11 +185,13 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
         {/* Floating result cards — bottom of map */}
         {hasResults && (
           <div className="absolute bottom-2 left-2 right-2 z-[500] flex gap-2 overflow-x-auto pb-0.5 snap-x snap-mandatory scrollbar-none">
-            {nearbyLocations.map((loc, i) => {
+            {visibleLocations.map((loc, i) => {
               const isSelected = selectedIndex === i;
+              const isLast = i === visibleLocations.length - 1;
               return (
                 <div
                   key={i}
+                  ref={isLast ? lastCardRef : undefined}
                   onClick={() => setSelectedIndex(isSelected ? null : i)}
                   className={`snap-start flex-shrink-0 w-52 flex items-center gap-2.5 bg-white/95 backdrop-blur-sm rounded-xl p-3 border shadow-md transition-all cursor-pointer ${
                     isSelected ? "border-orange-400 shadow-orange-200" : "border-[#ececea] hover:shadow-lg"
