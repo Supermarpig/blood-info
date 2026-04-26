@@ -40,7 +40,7 @@ interface UseNearbyLocationsReturn {
   error: string | null;
   nearbyLocations: NearbyLocation[];
   userLocation: UserLocation | null;
-  findNearbyLocations: (events: DonationEvent[]) => Promise<void>;
+  findNearbyLocations: (events: DonationEvent[], skipStaticRooms?: boolean) => Promise<void>;
   clearResults: () => void;
 }
 
@@ -114,7 +114,7 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
   const [nearbyLocations, setNearbyLocations] = useState<NearbyLocation[]>([]);
   const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
 
-  const findNearbyLocations = useCallback(async (events: DonationEvent[]) => {
+  const findNearbyLocations = useCallback(async (events: DonationEvent[], skipStaticRooms = false) => {
     setIsLoading(true);
     setError(null);
     setNearbyLocations([]);
@@ -131,9 +131,9 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
         (event) => event.coordinates?.lat && event.coordinates?.lng
       );
 
-      // 3. 載入固定捐血室座標，作為補充（若事件資料不足時也能顯示）
+      // 3. 載入固定捐血室座標，作為補充（有 tag 篩選時略過，避免混入無 tag 的地標）
       let staticRooms: DonationEvent[] = [];
-      try {
+      if (!skipStaticRooms) try {
         const res = await fetch("/api/blood-rooms");
         if (res.ok) {
           const json = await res.json();

@@ -152,7 +152,7 @@ export default function SearchableDonationList({
 
   const handleFindNearby = async () => {
     document.getElementById("nearby-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    await findNearbyLocations(allCurrentEvents);
+    await findNearbyLocations(allCurrentEvents, selectedTags.length > 0 || !!staticFilterLabel);
   };
 
 
