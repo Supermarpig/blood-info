@@ -187,7 +187,7 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
         if (res.ok) {
           const json = await res.json();
           const today = new Date().toISOString().split("T")[0];
-          let rooms = json.rooms as { name: string; lat: number; lng: number }[];
+          let rooms = json.rooms as { name: string; lat: number; lng: number; hours?: string }[];
           // 有 roomNameFilter 時只保留名稱符合的捐血室，避免跨地區污染
           if (roomNameFilter && roomNameFilter.length > 0) {
             rooms = rooms.filter((r) =>
@@ -196,8 +196,8 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
           }
           staticRooms = rooms.map((r) => ({
             location: r.name,
-            organization: "捐血室",
-            time: "",
+            organization: r.name,
+            time: r.hours ?? "",
             rawContent: r.name,
             activityDate: today,
             coordinates: { lat: r.lat, lng: r.lng },

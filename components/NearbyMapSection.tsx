@@ -215,7 +215,9 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs font-semibold text-[#171717] truncate">{loc.event.organization}</p>
-                    <p className="text-[11px] text-[#7a7a7a] truncate mt-0.5">{loc.event.location}</p>
+                    <p className="text-[10px] mt-0.5 truncate" style={{ color: isSelected ? "#f97316" : "#9a9a9a" }}>
+                      {loc.event.time || "固定地點"}
+                    </p>
                   </div>
                   <div className="flex-shrink-0 text-right">
                     <p className="text-xs font-bold" style={{ color: isSelected ? "#f97316" : "#e11d2a" }}>{fmt(loc.distance)}</p>
