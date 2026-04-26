@@ -63,6 +63,18 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
 
   const visibleLocations = nearbyLocations.slice(0, displayCount);
 
+  // Sliding window: always show 5 pins, selected card anchored at the end.
+  // e.g. click #7 → show [3,4,5,6,7], click #8 → show [4,5,6,7,8]
+  const MAP_PIN_LIMIT = 5;
+  const windowStart = selectedIndex !== null
+    ? Math.max(0, selectedIndex - (MAP_PIN_LIMIT - 1))
+    : 0;
+  const mapLocations = nearbyLocations.slice(windowStart, windowStart + MAP_PIN_LIMIT);
+  const mapRanks = windowStart > 0
+    ? Array.from({ length: mapLocations.length }, (_, i) => windowStart + i + 1)
+    : undefined;
+  const mapSelectedIndex = selectedIndex !== null ? selectedIndex - windowStart : null;
+
   return (
     <section id="nearby-section" className="mb-6 scroll-mt-4">
       <div className="flex items-center justify-between mb-3">
@@ -87,7 +99,7 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
         <div className="absolute inset-0 rounded-2xl overflow-hidden">
         {userLocation ? (
           /* Real Leaflet map — AnimatedLines rendered inside via createPortal */
-          <LeafletMap user={userLocation} locations={visibleLocations} selectedIndex={selectedIndex} />
+          <LeafletMap user={userLocation} locations={mapLocations} selectedIndex={mapSelectedIndex} ranks={mapRanks} />
         ) : (
           /* SVG demo animation before location is known */
           <div className="w-full h-full" style={{ background: "linear-gradient(180deg, #eef5ea 0%, #e3ede0 100%)" }}>

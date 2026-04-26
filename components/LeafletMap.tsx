@@ -231,9 +231,10 @@ interface Props {
   user: UserLocation;
   locations: NearbyLocation[];
   selectedIndex: number | null;
+  ranks?: number[]; // actual card numbers (overrides i+1 default)
 }
 
-export default function LeafletMap({ user, locations, selectedIndex }: Props) {
+export default function LeafletMap({ user, locations, selectedIndex, ranks }: Props) {
   return (
     <MapContainer
       center={[user.lat, user.lng]}
@@ -261,7 +262,7 @@ export default function LeafletMap({ user, locations, selectedIndex }: Props) {
         const c = loc.event.coordinates;
         if (!c) return null;
         return (
-          <Marker key={i} position={[c.lat, c.lng]} icon={donationIcon(i + 1)}>
+          <Marker key={i} position={[c.lat, c.lng]} icon={donationIcon(ranks?.[i] ?? i + 1)}>
             <Popup closeButton={false} offset={[0, -14]}>
               <div style={{ fontFamily: "system-ui, sans-serif", minWidth: 150 }}>
                 <div style={{ fontWeight: 700, fontSize: 13, marginBottom: 2 }}>
