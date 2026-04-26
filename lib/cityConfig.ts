@@ -57,6 +57,16 @@ export const CITIES: CityConfig[] = [
         answer:
           "大多數台北市捐血車活動不需要預約，現場直接登記即可。建議先透過本頁查詢活動資訊，確認地點與時間後直接前往即可捐血。",
       },
+      {
+        question: "台北捐血需要帶什麼證件？",
+        answer:
+          "第一次捐血必須攜帶身分證正本。之後可憑捐血卡或健保卡辦理。建議隨身攜帶身分證，以免無法捐血。",
+      },
+      {
+        question: "台北捐血後多久可以再捐一次？",
+        answer:
+          "捐全血每次間隔至少 12 週（約 3 個月），男性每年最多捐 4 次，女性每年最多捐 3 次。捐血小板或血漿的間隔時間不同，可詢問台北捐血中心工作人員。",
+      },
     ],
     regionSlug: "north",
   },
@@ -97,6 +107,16 @@ export const CITIES: CityConfig[] = [
         question: "新北市哪裡捐血贈品比較好？",
         answer:
           "贈品由各活動主辦單位決定，與地點無關。建議透過本頁活動列表查看各場次的贈品資訊，挑選有喜歡贈品的活動前往捐血。",
+      },
+      {
+        question: "新北捐血活動多久更新一次？",
+        answer:
+          "本頁新北市捐血活動資料每小時自動更新，來源為台灣血液基金會官方公告，確保資訊正確即時。",
+      },
+      {
+        question: "新北市三重有捐血服務嗎？",
+        answer:
+          "三重區設有固定捐血室，提供每日定時的捐血服務，不需等待捐血車。另有捐血車定期在三重各社區巡迴，詳細時間可查詢本頁活動列表。",
       },
     ],
     regionSlug: "north",
@@ -270,6 +290,16 @@ export const CITIES: CityConfig[] = [
         answer:
           "台中捐血活動贈品由各主辦單位決定，常見包括超商禮券、電影票、飲料兌換券等。可透過本頁活動列表查看各場次的贈品資訊，選擇最划算的活動前往。",
       },
+      {
+        question: "台中豐原、大甲有捐血活動嗎？",
+        answer:
+          "台中捐血中心在豐原與大甲設有固定服務站，提供定期捐血服務。此外，捐血車也會巡迴至台中市各區，可透過本頁查詢最新的台中北部捐血活動資訊。",
+      },
+      {
+        question: "台中捐血資格有哪些基本條件？",
+        answer:
+          "一般全血捐血基本條件：年齡 17–65 歲、體重 50 公斤以上、近期身體健康無感冒發燒。首次捐血需攜帶身分證正本，之後可憑捐血卡辦理。詳細資格以台中捐血中心現場判定為準。",
+      },
     ],
     regionSlug: "central",
   },
@@ -332,6 +362,16 @@ export const CITIES: CityConfig[] = [
         question: "高雄捐血有什麼贈品？",
         answer:
           "高雄捐血活動贈品由各主辦單位決定，常見包括超商禮券、電影票、餐飲兌換券等。可透過本頁活動列表查看各場次的贈品資訊後再前往。",
+      },
+      {
+        question: "高雄鳳山、岡山有捐血服務嗎？",
+        answer:
+          "有的，高雄捐血中心在鳳山與岡山設有固定服務站，提供定時捐血服務。此外捐血車也定期巡迴至高雄市各區，可透過本頁查詢最新的高雄捐血活動資訊。",
+      },
+      {
+        question: "高雄捐血一次可以捐多少？",
+        answer:
+          "全血捐血一次可捐 250mL 或 500mL，由工作人員依捐血者體重與健康狀況建議適合的捐血量。捐血小板（單採）可捐更多，約需 60–90 分鐘，可洽高雄捐血中心了解詳情。",
       },
     ],
     regionSlug: "south",
@@ -425,4 +465,10 @@ export function getCityBySlug(slug: string): CityConfig | undefined {
 
 export function getAllCitySlugs(): string[] {
   return CITIES.map((c) => c.slug);
+}
+
+export function getNearbyCities(city: CityConfig): CityConfig[] {
+  return CITIES.filter(
+    (c) => c.regionSlug === city.regionSlug && c.slug !== city.slug
+  );
 }

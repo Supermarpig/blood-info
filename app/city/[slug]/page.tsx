@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
-import { getCityBySlug, getAllCitySlugs, CityConfig } from "@/lib/cityConfig";
+import { getCityBySlug, getAllCitySlugs, getNearbyCities, CityConfig } from "@/lib/cityConfig";
 
 interface DonationEvent {
   id?: string;
@@ -193,6 +193,7 @@ export default async function CityPage({ params }: PageProps) {
   );
 
   const jsonLd = generateJsonLd(city, totalEvents);
+  const nearbyCities = getNearbyCities(city);
 
   return (
     <div className="container mx-auto p-8">
@@ -257,6 +258,27 @@ export default async function CityPage({ params }: PageProps) {
           ))}
         </div>
       </section>
+
+      {/* Nearby cities cross-links */}
+      {nearbyCities.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+            同區域捐血活動
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {nearbyCities.map((nearby) => (
+              <Link
+                key={nearby.slug}
+                href={`/city/${nearby.slug}`}
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-700 hover:border-red-300 hover:text-red-600 transition-colors"
+              >
+                {nearby.displayName}捐血活動
+                <ChevronRight className="w-3.5 h-3.5" />
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }
