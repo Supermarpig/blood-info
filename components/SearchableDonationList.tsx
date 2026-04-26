@@ -13,6 +13,8 @@ import NearbyMapSection from "@/components/NearbyMapSection";
 import FilterPanel from "@/components/FilterPanel";
 import { REGIONS } from "@/lib/regionConfig";
 import { GIFTS } from "@/lib/giftConfig";
+import { getCityBySlug, CITIES } from "@/lib/cityConfig";
+import { getRegionBySlug } from "@/lib/regionConfig";
 
 interface DonationEvent {
   id?: string;
@@ -150,10 +152,33 @@ export default function SearchableDonationList({
     }
   };
 
+  // 城市/地區頁用 locationKeywords 篩選捐血室，避免跨地區污染
+  const roomNameFilter = useMemo<string[] | undefined>(() => {
+    if (currentCitySlug) return getCityBySlug(currentCitySlug)?.locationKeywords;
+    if (currentRegionSlug) {
+      getRegionBySlug(currentRegionSlug); // validate slug exists
+      return CITIES.filter((c) => c.regionSlug === currentRegionSlug).flatMap((c) => c.locationKeywords);
+    }
+    return undefined;
+  }, [currentCitySlug, currentRegionSlug]);
+
   const handleFindNearby = async () => {
     document.getElementById("nearby-section")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    await findNearbyLocations(allCurrentEvents, selectedTags.length > 0 || !!staticFilterLabel);
+    const skip = selectedTags.length > 0 || !!staticFilterLabel;
+    await findNearbyLocations(allCurrentEvents, skip, roomNameFilter);
   };
+
+  // 換 route 後自動重算距離（使用 sessionStorage 快取的位置，不需重新點擊）
+  const hasAutoTriggered = useRef(false);
+  useEffect(() => {
+    if (hasAutoTriggered.current) return;
+    if (userLocation && allCurrentEvents.length > 0) {
+      hasAutoTriggered.current = true;
+      const skip = selectedTags.length > 0 || !!staticFilterLabel;
+      findNearbyLocations(allCurrentEvents, skip, roomNameFilter);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allCurrentEvents, userLocation]);
 
 
   const renderEventSection = (

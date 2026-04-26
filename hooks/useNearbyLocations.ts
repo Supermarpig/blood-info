@@ -2,6 +2,41 @@
 
 import { useState, useCallback } from "react";
 
+const LOCATION_CACHE_KEY = "nearby_user_location";
+const LOCATION_CACHE_TTL = 10 * 60 * 1000; // 10 minutes
+
+interface StoredLocation {
+  lat: number;
+  lng: number;
+  timestamp: number;
+}
+
+function getStoredLocation(): UserLocation | null {
+  try {
+    const raw = sessionStorage.getItem(LOCATION_CACHE_KEY);
+    if (!raw) return null;
+    const stored: StoredLocation = JSON.parse(raw);
+    if (Date.now() - stored.timestamp > LOCATION_CACHE_TTL) {
+      sessionStorage.removeItem(LOCATION_CACHE_KEY);
+      return null;
+    }
+    return { lat: stored.lat, lng: stored.lng };
+  } catch {
+    return null;
+  }
+}
+
+function saveLocation(location: UserLocation) {
+  try {
+    sessionStorage.setItem(
+      LOCATION_CACHE_KEY,
+      JSON.stringify({ ...location, timestamp: Date.now() })
+    );
+  } catch {
+    // ignore
+  }
+}
+
 interface DonationEvent {
   id?: string;
   time: string;
@@ -40,7 +75,7 @@ interface UseNearbyLocationsReturn {
   error: string | null;
   nearbyLocations: NearbyLocation[];
   userLocation: UserLocation | null;
-  findNearbyLocations: (events: DonationEvent[], skipStaticRooms?: boolean) => Promise<void>;
+  findNearbyLocations: (events: DonationEvent[], skipStaticRooms?: boolean, roomNameFilter?: string[]) => Promise<void>;
   clearResults: () => void;
 }
 
@@ -112,19 +147,33 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [nearbyLocations, setNearbyLocations] = useState<NearbyLocation[]>([]);
-  const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
+  const [userLocation, setUserLocation] = useState<UserLocation | null>(() => {
+    if (typeof window === "undefined") return null;
+    return getStoredLocation();
+  });
 
-  const findNearbyLocations = useCallback(async (events: DonationEvent[], skipStaticRooms = false) => {
+  const findNearbyLocations = useCallback(async (events: DonationEvent[], skipStaticRooms = false, roomNameFilter?: string[]) => {
     setIsLoading(true);
     setError(null);
     setNearbyLocations([]);
 
     try {
-      // 1. 取得用戶位置
-      const position = await getUserLocation();
-      const userLat = position.coords.latitude;
-      const userLng = position.coords.longitude;
-      setUserLocation({ lat: userLat, lng: userLng });
+      // 1. 取得用戶位置（優先使用快取，避免重複彈出授權）
+      let userLat: number;
+      let userLng: number;
+      const cached = getStoredLocation();
+      if (cached) {
+        userLat = cached.lat;
+        userLng = cached.lng;
+        setUserLocation(cached);
+      } else {
+        const position = await getUserLocation();
+        userLat = position.coords.latitude;
+        userLng = position.coords.longitude;
+        const loc = { lat: userLat, lng: userLng };
+        setUserLocation(loc);
+        saveLocation(loc);
+      }
 
       // 2. 篩選有經緯度資料的事件
       const eventsWithCoords = events.filter(
@@ -138,9 +187,14 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
         if (res.ok) {
           const json = await res.json();
           const today = new Date().toISOString().split("T")[0];
-          staticRooms = (
-            json.rooms as { name: string; lat: number; lng: number }[]
-          ).map((r) => ({
+          let rooms = json.rooms as { name: string; lat: number; lng: number }[];
+          // 有 roomNameFilter 時只保留名稱符合的捐血室，避免跨地區污染
+          if (roomNameFilter && roomNameFilter.length > 0) {
+            rooms = rooms.filter((r) =>
+              roomNameFilter.some((kw) => r.name.includes(kw))
+            );
+          }
+          staticRooms = rooms.map((r) => ({
             location: r.name,
             organization: "捐血室",
             time: "",
