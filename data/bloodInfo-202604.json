@@ -15991,7 +15991,21 @@
       "location": "814高雄市仁武區仁雄路39之6號(仁武橋邊鵝肉)",
       "activityDate": "2026-04-29",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620126720783853"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q098620126720783853",
+      "pttData": {
+        "rawLine": "4/29(三)高雄仁武橋邊鵝肉",
+        "images": [
+          "https://i.imgur.com/58KUDPg.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/58KUDPg.jpeg",
+            "text": "09:30-17:00\n二 武 橋 邊 其 肉\n仁 武 橘 |\n高 雄 市 仁 武 區 仁雄 路 39 之 6 號\n加 剛好 禮 , 好 禮 都 有 限 送 完 為 止 人\n250CC 贈 超 值 好 禮 2 張\n捐血 請 攜帶 有 相 片 的 身分 證 ~!\nbd\n",
+            "confidence": 76
+          }
+        ]
+      },
+      "tags": []
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjktMTM6MzB+MTc6MDAt5Lit5L+h56eR5oqA5aSn5a24",
@@ -16100,6 +16114,34 @@
         ]
       },
       "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDQtMjktNC8yOSjkuIkp6auY6ZuE5peX5bGx6byT5bGx5YWs5ZyS",
+      "time": "",
+      "organization": "高雄旗山鼓山公園",
+      "location": "高雄旗山鼓山公園",
+      "activityDate": "2026-04-29",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "4/29(三)高雄旗山鼓山公園",
+        "images": [
+          "https://i.imgur.com/0Q6ZL9W.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/0Q6ZL9W.jpeg",
+            "text": "本\n衝\n4#/ 人 9。,\nO9:30-77:00\n上 AA\n+ 甘 山 公 園\n( 旗 山 區 中 正路 與 華中 街 口 )\n捐血 2 彌\n殲 用 好 禮 2 張 @ 生\n500cc 加 倍 送 !\n財團 法 人 旗 山 共 敬 堂 慈善 基金 會 敬 洲\n",
+            "confidence": 65
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.8894088,
+        "lng": 120.4760209
+      }
     }
   ],
   "2026-04-30": [
