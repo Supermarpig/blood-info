@@ -181,7 +181,6 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
       const eventsWithCoords = events.filter(
         (event) => event.coordinates?.lat && event.coordinates?.lng
       );
-
       // 3. 載入固定捐血室座標，作為補充（有 tag 篩選時略過，避免混入無 tag 的地標）
       let staticRooms: DonationEvent[] = [];
       if (!skipStaticRooms) try {

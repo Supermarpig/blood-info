@@ -70,7 +70,7 @@ export default async function BloodDonationPage() {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
     // Add no-store to ensure we get fresh data from the API
     const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      next: { revalidate: 86400 },
+      cache: 'no-store',
     });
     const apiData = await response.json();
     if (apiData.success && apiData.data) {
