@@ -184,7 +184,7 @@ export default async function RegionPage({ params }: PageProps) {
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
     const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      next: { revalidate: 3600 },
+      next: { revalidate: 86400 },
     });
     const apiData = await response.json();
     if (apiData.success && apiData.data) {

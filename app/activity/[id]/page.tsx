@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -36,7 +38,7 @@ function fromBase64Url(b64url: string): string {
 async function getEvent(id: string): Promise<DonationEvent | null> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
   const res = await fetch(`${baseUrl}/api/blood-donations`, {
-    next: { revalidate: 3600 },
+    cache: "no-store",
   });
   const json = await res.json();
   if (!json.success || !json.data) return null;
