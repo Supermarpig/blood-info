@@ -2,6 +2,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
+
+const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 // import { exec } from 'child_process';
 // import util from 'util';
 import https from 'https';
@@ -218,45 +220,35 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// 將地址轉換為經緯度
+// 將地址轉換為經緯度（使用 Google Maps Geocoding API）
 async function geocodeAddress(address) {
-    // 檢查快取
-    if (geocodeCache.has(address)) {
+    if (geocodeCache.has(address) && geocodeCache.get(address) !== null) {
         return geocodeCache.get(address);
     }
 
+    if (!GOOGLE_MAPS_API_KEY) {
+        geocodeCache.set(address, null);
+        return null;
+    }
+
     try {
-        // 簡化地址：移除括號內容和樓層資訊，只保留主要地址
-        let cleanAddress = address
-            .replace(/\(.*?\)/g, '')  // 移除括號內容
-            .replace(/\d+樓.*$/, '')  // 移除樓層資訊
-            .replace(/[^\u4e00-\u9fa5\d號路街巷弄段區鄉鎮市縣]+/g, '') // 只保留地址相關字
-            .trim();
-
-        // 確保包含「台灣」提高查詢準確度
-        if (!cleanAddress.includes('台灣')) {
-            cleanAddress = '台灣 ' + cleanAddress;
-        }
-
-        const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(cleanAddress)}&countrycodes=tw&limit=1`;
-
-        const response = await axios.get(url, {
-            headers: {
-                'User-Agent': 'BloodDonationInfoApp/1.0 (education project)',
+        const response = await axios.get('https://maps.googleapis.com/maps/api/geocode/json', {
+            params: {
+                address: address + ' 台灣',
+                key: GOOGLE_MAPS_API_KEY,
+                region: 'tw',
+                language: 'zh-TW',
             },
             timeout: 10000,
         });
 
-        if (response.data && response.data.length > 0) {
-            const result = {
-                lat: parseFloat(response.data[0].lat),
-                lng: parseFloat(response.data[0].lon),
-            };
+        if (response.data.status === 'OK' && response.data.results.length > 0) {
+            const loc = response.data.results[0].geometry.location;
+            const result = { lat: loc.lat, lng: loc.lng };
             geocodeCache.set(address, result);
             return result;
         }
 
-        // 找不到結果，快取為 null 避免重複查詢
         geocodeCache.set(address, null);
         return null;
     } catch (error) {
@@ -281,28 +273,26 @@ async function geocodeEvents(data) {
     }
     console.log(`靜態表命中 ${staticHits} 筆`);
 
-    // 第二步：剩下沒座標的才走 Nominatim
+    // 第二步：剩下沒座標的走 Google Maps Geocoding
     const addresses = new Set();
     for (const date in data) {
         for (const event of data[date]) {
-            if (event.coordinates) continue; // 靜態表已處理
-            // 只跑從未查過的地址（null 表示之前查失敗，不重試）
-            if (event.location && !geocodeCache.has(event.location)) {
+            if (event.coordinates) continue;
+            if (event.location && geocodeCache.get(event.location) == null) {
                 addresses.add(event.location);
             }
         }
     }
 
     const addressList = Array.from(addresses);
-    console.log(`\n開始 Geocoding ${addressList.length} 個新地址...`);
+    console.log(`\n開始 Geocoding ${addressList.length} 個地址...`);
 
     for (let i = 0; i < addressList.length; i++) {
         const address = addressList[i];
         console.log(`  [${i + 1}/${addressList.length}] ${address.substring(0, 30)}...`);
         await geocodeAddress(address);
-        // 符合 Nominatim 使用政策：1 秒 1 次請求
         if (i < addressList.length - 1) {
-            await delay(1100);
+            await new Promise(r => setTimeout(r, 100));
         }
     }
 

@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "updateData": "node scripts/updateData.js",
-    "importReports": "node scripts/importReports.js"
+    "importReports": "node scripts/importReports.js",
+    "geocode": "GOOGLE_MAPS_API_KEY=$(grep GOOGLE_MAPS_API_KEY .env.local | cut -d= -f2) node scripts/geocode-future.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
