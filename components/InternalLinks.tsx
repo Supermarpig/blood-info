@@ -57,6 +57,19 @@ export default function InternalLinks() {
         </div>
       </div>
 
+      {/* 新聞與衛教 */}
+      <div>
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2.5">
+          捐血新聞與衛教
+        </h2>
+        <Link
+          href="/news"
+          className="inline-flex items-center bg-white border border-gray-100 rounded-xl px-4 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
+        >
+          <span className="text-xs font-medium text-gray-700">查看所有捐血新聞與衛教文章</span>
+        </Link>
+      </div>
+
       {/* 贈品 */}
       <div>
         <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2.5">

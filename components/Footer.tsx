@@ -9,6 +9,9 @@ export default function Footer() {
             © {new Date().getFullYear()} 台灣捐血活動查詢
           </p>
           <nav className="flex items-center gap-6 text-sm text-gray-500">
+            <Link href="/news" className="hover:text-gray-800 transition-colors">
+              捐血新聞
+            </Link>
             <Link href="/about" className="hover:text-gray-800 transition-colors">
               關於我們
             </Link>
