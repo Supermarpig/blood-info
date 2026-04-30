@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { CalendarDays, MapPin, Gift } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -75,13 +75,13 @@ function getEventTags(event: DonationEvent): string[] {
   return event.tags || event.pttData?.tags || [];
 }
 
-export default function CalendarClient() {
+export default function CalendarClient({ initialData }: { initialData: DonationData }) {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
-  const [data, setData] = useState<DonationData>({});
   const [isNearbyModalOpen, setIsNearbyModalOpen] = useState(false);
-  const [isDataLoading, setIsDataLoading] = useState(true);
   const [activeTagFilter, setActiveTagFilter] = useState<string | null>(null);
   const [giftLightbox, setGiftLightbox] = useState<{ imageUrl: string; organization: string } | null>(null);
+
+  const data = initialData;
 
   const {
     isLoading: isNearbyLoading,
@@ -90,23 +90,6 @@ export default function CalendarClient() {
     findNearbyLocations,
     clearResults,
   } = useNearbyLocations();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/api/blood-donations");
-        const result = await response.json();
-        if (result.success && result.data) {
-          setData(result.data);
-        }
-      } catch (error) {
-        console.error("Failed to fetch donation data:", error);
-      } finally {
-        setIsDataLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
 
   // All unique tags across all events
   const allTags = useMemo(() => {
@@ -256,34 +239,28 @@ export default function CalendarClient() {
               : undefined
           }
         >
-          {isDataLoading ? (
-            <div className="flex items-center justify-center h-80">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-500"></div>
-            </div>
-          ) : (
-            <Calendar
-              mode="single"
-              selected={selectedDate}
-              onSelect={handleDateSelect}
-              locale={zhTW}
-              className=""
-              modifiers={{
-                hasEvents: activeTagFilter ? [] : datesWithEvents,
-                hasGifts: datesWithFilteredGifts,
-                hasNoGift: datesWithNoGiftMatch,
-              }}
-              modifiersClassNames={{
-                hasEvents:
-                  "relative after:absolute after:bottom-0.5 after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 after:bg-red-500 after:rounded-full",
-                hasGifts:
-                  activeTagFilter
-                    ? (TAG_CALENDAR_MODIFIER[activeTagFilter] ??
-                      "!text-orange-500 font-bold relative after:absolute after:bottom-0.5 after:left-1/2 after:-translate-x-1/2 after:w-2 after:h-2 after:bg-orange-400 after:rounded-full")
-                    : "",
-                hasNoGift: "opacity-20",
-              }}
-            />
-          )}
+          <Calendar
+            mode="single"
+            selected={selectedDate}
+            onSelect={handleDateSelect}
+            locale={zhTW}
+            className=""
+            modifiers={{
+              hasEvents: activeTagFilter ? [] : datesWithEvents,
+              hasGifts: datesWithFilteredGifts,
+              hasNoGift: datesWithNoGiftMatch,
+            }}
+            modifiersClassNames={{
+              hasEvents:
+                "relative after:absolute after:bottom-0.5 after:left-1/2 after:-translate-x-1/2 after:w-1.5 after:h-1.5 after:bg-red-500 after:rounded-full",
+              hasGifts:
+                activeTagFilter
+                  ? (TAG_CALENDAR_MODIFIER[activeTagFilter] ??
+                    "!text-orange-500 font-bold relative after:absolute after:bottom-0.5 after:left-1/2 after:-translate-x-1/2 after:w-2 after:h-2 after:bg-orange-400 after:rounded-full")
+                  : "",
+              hasNoGift: "opacity-20",
+            }}
+          />
           <div className="mt-4 flex items-center justify-center gap-4 text-xs text-gray-500">
             {!activeTagFilter && (
               <div className="flex items-center gap-1.5">

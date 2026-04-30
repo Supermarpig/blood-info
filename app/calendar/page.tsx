@@ -3,6 +3,8 @@ import CalendarClient from "./CalendarClient";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   title: "捐血活動月曆 | 每日捐血時間表與地點查詢",
   description:
@@ -38,6 +40,35 @@ export const metadata: Metadata = {
   },
 };
 
-export default function CalendarPage() {
-  return <CalendarClient />;
+interface DonationEvent {
+  id?: string;
+  time: string;
+  organization: string;
+  location: string;
+  rawContent: string;
+  customNote?: string;
+  activityDate: string;
+  center?: string;
+  detailUrl?: string;
+  tags?: string[];
+  coordinates?: { lat: number; lng: number };
+  pttData?: { rawLine: string; images: string[]; url: string; tags?: string[] };
+}
+
+export default async function CalendarPage() {
+  let data: Record<string, DonationEvent[]> = {};
+
+  try {
+    const response = await fetch(`${baseUrl}/api/blood-donations`, {
+      next: { revalidate: 3600 },
+    });
+    const result = await response.json();
+    if (result.success && result.data) {
+      data = result.data;
+    }
+  } catch {
+    // render with empty data; client still works
+  }
+
+  return <CalendarClient initialData={data} />;
 }
