@@ -1,8 +1,10 @@
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { promises as fs } from "fs";
+import path from "path";
 import { ChevronLeft, Clock, MapPin, Building2, ExternalLink, Gift } from "lucide-react";
 import { getGiftByTagId } from "@/lib/giftConfig";
 import { CITIES } from "@/lib/cityConfig";
@@ -29,23 +31,32 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
-function fromBase64Url(b64url: string): string {
-  const b64 = b64url.replace(/-/g, "+").replace(/_/g, "/");
-  const pad = b64.length % 4 === 0 ? "" : "=".repeat(4 - (b64.length % 4));
-  return b64 + pad;
-}
+const eventShortId = (id: string) => {
+  let hash = 5381;
+  for (let i = 0; i < id.length; i++) {
+    hash = ((hash << 5) + hash) + id.charCodeAt(i);
+    hash = hash >>> 0;
+  }
+  return hash.toString(36).padStart(6, "0");
+};
 
 async function getEvent(id: string): Promise<DonationEvent | null> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/api/blood-donations`, {
-    cache: "no-store",
-  });
-  const json = await res.json();
-  if (!json.success || !json.data) return null;
+  // id format: {YYYY-MM-DD}-{shortId}
+  const match = id.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/);
+  if (!match) return null;
 
-  const standardBase64 = fromBase64Url(id);
-  const allEvents: DonationEvent[] = Object.values(json.data).flat() as DonationEvent[];
-  return allEvents.find((e) => e.id === standardBase64) ?? null;
+  const [, date, shortId] = match;
+  const [year, month] = date.split("-");
+  const filePath = path.join(process.cwd(), "data", `bloodInfo-${year}${month}.json`);
+
+  try {
+    const content = await fs.readFile(filePath, "utf-8");
+    const data: Record<string, DonationEvent[]> = JSON.parse(content);
+    const dayEvents = data[date] ?? [];
+    return dayEvents.find((e) => e.id && eventShortId(e.id) === shortId) ?? null;
+  } catch {
+    return null;
+  }
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

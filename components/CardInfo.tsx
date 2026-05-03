@@ -99,8 +99,21 @@ export default function CardInfo({
   const toBase64Url = (b64: string) =>
     b64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
 
-  const shareUrl = donation.id
-    ? `https://www.bloodtw.com/activity/${toBase64Url(donation.id)}`
+  const eventShortId = (id: string) => {
+    let hash = 5381;
+    for (let i = 0; i < id.length; i++) {
+      hash = ((hash << 5) + hash) + id.charCodeAt(i);
+      hash = hash >>> 0;
+    }
+    return hash.toString(36).padStart(6, "0");
+  };
+
+  const detailPath = donation.id
+    ? `/activity/${donation.activityDate}-${eventShortId(donation.id)}`
+    : null;
+
+  const shareUrl = detailPath
+    ? `https://www.bloodtw.com${detailPath}`
     : matchedCity
     ? `https://www.bloodtw.com/city/${matchedCity.slug}`
     : "https://www.bloodtw.com";
@@ -348,17 +361,15 @@ export default function CardInfo({
             <div>
               <h3 className="text-lg font-bold text-gray-900 leading-tight mb-1 flex items-start gap-2">
                 <Building2 className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
-                {donation.id ? (
+                {detailPath ? (
                   <Link
-                    href={`/activity/${toBase64Url(donation.id)}`}
+                    href={detailPath}
                     className="hover:text-pink-600 hover:underline decoration-pink-300 underline-offset-2 transition-colors"
                   >
                     {highlightText(donation.organization, searchKeyword)}
                   </Link>
                 ) : (
-                  <span>
-                    {highlightText(donation.organization, searchKeyword)}
-                  </span>
+                  <span>{highlightText(donation.organization, searchKeyword)}</span>
                 )}
               </h3>
             </div>
