@@ -5,10 +5,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { promises as fs } from "fs";
 import path from "path";
-import { ChevronLeft, Clock, MapPin, Building2, ExternalLink, Gift } from "lucide-react";
+import { ChevronLeft, Clock, MapPin, Building2, ExternalLink, Gift, Heart, Droplets, Utensils, Moon, Ban, CreditCard } from "lucide-react";
 import { getGiftByTagId } from "@/lib/giftConfig";
 import { CITIES } from "@/lib/cityConfig";
 import ShareButton from "./ShareButton";
+import { ActivityImages } from "./ActivityImages";
 
 interface DonationEvent {
   id?: string;
@@ -40,10 +41,9 @@ const eventShortId = (id: string) => {
   return hash.toString(36).padStart(6, "0");
 };
 
-async function getEvent(id: string): Promise<DonationEvent | null> {
-  // id format: {YYYY-MM-DD}-{shortId}
+async function getDayData(id: string): Promise<{ event: DonationEvent | null; dayEvents: DonationEvent[] }> {
   const match = id.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/);
-  if (!match) return null;
+  if (!match) return { event: null, dayEvents: [] };
 
   const [, date, shortId] = match;
   const [year, month] = date.split("-");
@@ -53,15 +53,16 @@ async function getEvent(id: string): Promise<DonationEvent | null> {
     const content = await fs.readFile(filePath, "utf-8");
     const data: Record<string, DonationEvent[]> = JSON.parse(content);
     const dayEvents = data[date] ?? [];
-    return dayEvents.find((e) => e.id && eventShortId(e.id) === shortId) ?? null;
+    const event = dayEvents.find((e) => e.id && eventShortId(e.id) === shortId) ?? null;
+    return { event, dayEvents };
   } catch {
-    return null;
+    return { event: null, dayEvents: [] };
   }
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
-  const event = await getEvent(id);
+  const { event } = await getDayData(id);
   if (!event) return { title: "找不到此活動" };
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
@@ -113,7 +114,7 @@ const centerColors: Record<string, string> = {
 
 export default async function ActivityPage({ params }: PageProps) {
   const { id } = await params;
-  const event = await getEvent(id);
+  const { event, dayEvents } = await getDayData(id);
 
   if (!event) notFound();
 
@@ -125,6 +126,10 @@ export default async function ActivityPage({ params }: PageProps) {
       c.centerFilter === event.center &&
       c.locationKeywords.some((kw) => event.location.includes(kw))
   );
+
+  const relatedEvents = dayEvents
+    .filter((e) => e.id && e.id !== event.id && e.center === event.center)
+    .slice(0, 5);
 
   const images = event.pttData?.images || event.reportData?.images || [];
 
@@ -193,7 +198,7 @@ export default async function ActivityPage({ params }: PageProps) {
 
       <div className="max-w-lg mx-auto px-4 py-6">
         {/* 返回 */}
-        <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
+        <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6 flex-wrap">
           <Link href="/" className="flex items-center gap-1 hover:text-gray-800 transition-colors">
             <ChevronLeft className="w-4 h-4" />
             返回首頁
@@ -201,11 +206,12 @@ export default async function ActivityPage({ params }: PageProps) {
           {matchedCity && (
             <>
               <span className="text-gray-300">/</span>
-              <Link
-                href={`/city/${matchedCity.slug}`}
-                className="hover:text-gray-800 transition-colors"
-              >
+              <Link href={`/city/${matchedCity.slug}`} className="hover:text-gray-800 transition-colors">
                 {matchedCity.displayName}
+              </Link>
+              <span className="text-gray-300">/</span>
+              <Link href={`/region/${matchedCity.regionSlug}`} className="hover:text-gray-800 transition-colors">
+                附近捐血室
               </Link>
             </>
           )}
@@ -285,22 +291,7 @@ export default async function ActivityPage({ params }: PageProps) {
           </div>
 
           {/* 圖片 */}
-          {images.length > 0 && (
-            <div className="border-t border-gray-100 p-5 space-y-3">
-              {images.map((src, i) => (
-                <div key={i} className="rounded-xl overflow-hidden border border-gray-100 bg-gray-50">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={src}
-                    alt={`${event.organization} 活動圖片 ${i + 1}`}
-                    className="w-full h-auto object-contain"
-                    loading="lazy"
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+          <ActivityImages images={images} organization={event.organization} />
 
           {/* 來源 */}
           {(event.pttData || event.reportData) && (
@@ -330,6 +321,70 @@ export default async function ActivityPage({ params }: PageProps) {
             </div>
           )}
         </div>
+
+        {/* 捐血小提醒 */}
+        <div className="mt-4 bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="px-5 py-3 bg-gradient-to-r from-red-50 to-pink-50 border-b border-pink-100 flex items-center gap-2">
+            <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center">
+              <Heart className="w-3.5 h-3.5 text-red-500" />
+            </div>
+            <h2 className="text-sm font-semibold text-gray-700">捐血前注意事項</h2>
+          </div>
+          <div className="p-4 grid grid-cols-2 gap-3">
+            {([
+              { Icon: Droplets,  bg: "bg-blue-100",   text: "text-blue-500",   label: "多補充水分", desc: "捐血前 1 小時補水" },
+              { Icon: Utensils,  bg: "bg-amber-100",  text: "text-amber-500",  label: "避免空腹",   desc: "餐後 1 小時再前往" },
+              { Icon: Moon,      bg: "bg-indigo-100", text: "text-indigo-500", label: "睡眠充足",   desc: "前晚至少 6 小時" },
+              { Icon: Ban,       bg: "bg-red-100",    text: "text-red-500",    label: "禁酒 48 小時", desc: "同時避免阿斯匹靈" },
+              { Icon: CreditCard,bg: "bg-green-100",  text: "text-green-600",  label: "攜帶證件",   desc: "健保卡或身分證" },
+              { Icon: Heart,     bg: "bg-pink-100",   text: "text-pink-500",   label: "年齡 17–65 歲", desc: "體重需達 50 公斤" },
+            ] as const).map(({ Icon, bg, text, label, desc }) => (
+              <div key={label} className="flex items-start gap-2.5">
+                <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${bg}`}>
+                  <Icon className={`w-4 h-4 ${text}`} />
+                </div>
+                <div>
+                  <p className="text-xs font-semibold text-gray-700">{label}</p>
+                  <p className="text-xs text-gray-400 mt-0.5">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 同日同地區其他活動 */}
+        {relatedEvents.length > 0 && (
+          <div className="mt-4">
+            <h2 className="text-sm font-semibold text-gray-500 mb-3 px-1">
+              {event.activityDate} 同地區其他捐血活動
+            </h2>
+            <div className="space-y-2">
+              {relatedEvents.map((e) => {
+                const path = `/activity/${e.activityDate}-${eventShortId(e.id!)}`;
+                return (
+                  <Link
+                    key={e.id}
+                    href={path}
+                    className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 px-4 py-3 hover:border-pink-200 hover:bg-pink-50 transition-colors"
+                  >
+                    <span className="text-xs font-medium text-slate-500 tabular-nums whitespace-nowrap">{e.time}</span>
+                    <span className="text-sm font-medium text-gray-800 truncate flex-1">{e.organization}</span>
+                    <ChevronLeft className="w-4 h-4 text-gray-300 rotate-180 flex-shrink-0" />
+                  </Link>
+                );
+              })}
+            </div>
+            {matchedCity && (
+              <Link
+                href={`/city/${matchedCity.slug}`}
+                className="mt-2 flex items-center justify-center gap-1 text-xs text-pink-500 hover:text-pink-600 py-2"
+              >
+                查看{matchedCity.displayName}所有活動
+                <ChevronLeft className="w-3 h-3 rotate-180" />
+              </Link>
+            )}
+          </div>
+        )}
 
         {/* 分享 */}
         <ShareButton event={event} giftNames={giftLinks.map((g) => g!.name)} pageUrl={pageUrl} />
