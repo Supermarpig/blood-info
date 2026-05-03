@@ -348,9 +348,18 @@ export default function CardInfo({
             <div>
               <h3 className="text-lg font-bold text-gray-900 leading-tight mb-1 flex items-start gap-2">
                 <Building2 className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
-                <span>
-                  {highlightText(donation.organization, searchKeyword)}
-                </span>
+                {donation.id ? (
+                  <Link
+                    href={`/activity/${toBase64Url(donation.id)}`}
+                    className="hover:text-pink-600 hover:underline decoration-pink-300 underline-offset-2 transition-colors"
+                  >
+                    {highlightText(donation.organization, searchKeyword)}
+                  </Link>
+                ) : (
+                  <span>
+                    {highlightText(donation.organization, searchKeyword)}
+                  </span>
+                )}
               </h3>
             </div>
 
