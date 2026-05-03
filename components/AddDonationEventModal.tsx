@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Confetti from "@/components/Confetti";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,6 +17,8 @@ import {
   UtensilsCrossed,
   MapPin,
   Lightbulb,
+  ImagePlus,
+  X,
 } from "lucide-react";
 import {
   Dialog,
@@ -46,10 +48,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
-// 回報類型
 type ReportMode = "location" | "wishlist";
 
-// 與 SearchableDonationList 一致的標籤選項
 const GIFT_TAGS = [
   { id: "電影票", label: "電影票", icon: Film },
   { id: "禮券", label: "禮券", icon: Ticket },
@@ -61,20 +61,12 @@ const GIFT_TAGS = [
 
 const TIME_TAGS = ["早上", "下午", "整天"];
 
-// 捐血地點回報的 Schema
 const locationReportSchema = z.object({
   address: z.string().min(2, "地址至少需要 2 個字"),
   activityDate: z.string().min(1, "請選擇日期"),
-  imgurUrl: z
-    .string()
-    .url("必須是有效的網址")
-    .refine((url) => url.includes("i.imgur.com"), {
-      message: "必須是 i.imgur.com 的圖片連結",
-    }),
   tags: z.array(z.string()).default([]),
 });
 
-// 願望清單的 Schema
 const wishlistSchema = z.object({
   title: z.string().min(2, "標題至少需要 2 個字"),
   description: z.string().min(10, "說明至少需要 10 個字"),
@@ -91,22 +83,19 @@ export default function AddDonationEventModal() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [confettiKey, setConfettiKey] = useState(0);
 
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [uploadError, setUploadError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   const locationForm = useForm<LocationFormData>({
     resolver: zodResolver(locationReportSchema),
-    defaultValues: {
-      address: "",
-      activityDate: "",
-      imgurUrl: "",
-      tags: [],
-    },
+    defaultValues: { address: "", activityDate: "", tags: [] },
   });
 
   const wishlistForm = useForm<WishlistFormData>({
     resolver: zodResolver(wishlistSchema),
-    defaultValues: {
-      title: "",
-      description: "",
-    },
+    defaultValues: { title: "", description: "" },
   });
 
   const toggleTag = (tag: string) => {
@@ -115,19 +104,58 @@ export default function AddDonationEventModal() {
     );
   };
 
+  const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setImageFile(file);
+    setImagePreview(URL.createObjectURL(file));
+    setUploadError(null);
+  };
+
+  const clearImage = () => {
+    setImagePreview(null);
+    setImageFile(null);
+    setUploadError(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
+
   const onLocationSubmit = async (data: LocationFormData) => {
     setIsLoading(true);
     try {
+      let imgUrl: string | undefined;
+
+      if (imageFile) {
+        const formData = new FormData();
+        formData.append("file", imageFile);
+        const uploadRes = await fetch("/api/upload-image-public", {
+          method: "POST",
+          body: formData,
+        });
+        const uploadData = await uploadRes.json();
+        if (!uploadRes.ok) {
+          setUploadError(uploadData.error || "圖片上傳失敗，請重試");
+          setIsLoading(false);
+          return;
+        }
+        imgUrl = uploadData.url;
+      }
+
       const response = await fetch("/api/reports", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, tags: selectedTags, type: "location" }),
+        body: JSON.stringify({
+          ...data,
+          tags: selectedTags,
+          type: "location",
+          imgurUrl: imgUrl,
+        }),
       });
 
       if (response.ok) {
         handleSuccess();
         locationForm.reset();
         setSelectedTags([]);
+        clearImage();
       } else {
         const errorData = await response.json();
         console.error("Submission failed:", errorData);
@@ -176,6 +204,7 @@ export default function AddDonationEventModal() {
     wishlistForm.reset();
     setSelectedTags([]);
     setIsSubmitted(false);
+    clearImage();
   };
 
   const handleModeChange = (newMode: ReportMode) => {
@@ -204,12 +233,12 @@ export default function AddDonationEventModal() {
             </DialogTitle>
             <DialogDescription>
               {mode === "location"
-                ? "填寫地址、日期，選擇標籤，貼上圖片連結即可。"
+                ? "填寫地址、日期，選擇標籤，可附上圖片。"
                 : "告訴我們您想要什麼新功能！"}
             </DialogDescription>
           </DialogHeader>
 
-          {/* 模式切換按鈕 */}
+          {/* 模式切換 */}
           <div className="flex gap-2 mb-2">
             <button
               type="button"
@@ -247,7 +276,6 @@ export default function AddDonationEventModal() {
               </p>
             </div>
           ) : mode === "location" ? (
-            /* 捐血地點回報表單 */
             <Form key="location-form" {...locationForm}>
               <form
                 onSubmit={locationForm.handleSubmit(onLocationSubmit)}
@@ -375,30 +403,69 @@ export default function AddDonationEventModal() {
                   </div>
                 </div>
 
-                {/* 圖片連結 */}
-                <FormField
-                  control={locationForm.control}
-                  name="imgurUrl"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>圖片連結 (i.imgur.com)</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="https://i.imgur.com/xxx.jpg"
-                          {...field}
-                          disabled={isLoading}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                {/* 圖片上傳 */}
+                <div>
+                  <p className="text-sm font-medium mb-2">
+                    圖片{" "}
+                    <span className="text-gray-400 font-normal">(選填)</span>
+                  </p>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={handleImageSelect}
+                    disabled={isLoading}
+                  />
 
-                <Button type="submit" disabled={isLoading} className="w-full">
+                  {imagePreview ? (
+                    <div className="relative rounded-lg overflow-hidden border border-gray-200">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={imagePreview}
+                        alt="預覽"
+                        className="w-full max-h-48 object-cover"
+                      />
+                      {isLoading && (
+                        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                          <Loader2 className="h-6 w-6 text-white animate-spin" />
+                        </div>
+                      )}
+                      <button
+                        type="button"
+                        onClick={clearImage}
+                        disabled={isLoading}
+                        className="absolute top-2 right-2 bg-black/50 text-white rounded-full p-1 hover:bg-black/70 transition-colors"
+                      >
+                        <X className="h-4 w-4" />
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      disabled={isLoading}
+                      className="w-full flex flex-col items-center justify-center gap-2 py-6 border-2 border-dashed border-gray-200 rounded-lg text-gray-400 hover:border-gray-300 hover:text-gray-500 transition-colors"
+                    >
+                      <ImagePlus className="h-6 w-6" />
+                      <span className="text-sm">點擊上傳圖片（最大 5MB）</span>
+                    </button>
+                  )}
+
+                  {uploadError && (
+                    <p className="text-sm text-red-500 mt-1">{uploadError}</p>
+                  )}
+                </div>
+
+                <Button
+                  type="submit"
+                  disabled={isLoading}
+                  className="w-full"
+                >
                   {isLoading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      提交中...
+                      {imageFile ? "上傳圖片中..." : "提交中..."}
                     </>
                   ) : (
                     "提交回報"
@@ -407,13 +474,11 @@ export default function AddDonationEventModal() {
               </form>
             </Form>
           ) : (
-            /* 願望清單表單 */
             <Form key="wishlist-form" {...wishlistForm}>
               <form
                 onSubmit={wishlistForm.handleSubmit(onWishlistSubmit)}
                 className="space-y-4"
               >
-                {/* 功能標題 */}
                 <FormField
                   control={wishlistForm.control}
                   name="title"
@@ -432,7 +497,6 @@ export default function AddDonationEventModal() {
                   )}
                 />
 
-                {/* 功能說明 */}
                 <FormField
                   control={wishlistForm.control}
                   name="description"

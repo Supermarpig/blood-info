@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
+import { createPortal } from "react-dom";
 
 interface ConfettiProps {
   isActive: boolean;
@@ -182,8 +183,10 @@ export default function Confetti({ isActive, duration = 4000 }: ConfettiProps) {
       }
     }, 300);
 
-    // 動畫循環
+    // 動畫循環 — 持續跑直到 cleanupTimer 停止
+    let stopped = false;
     const animate = () => {
+      if (stopped) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       for (let i = particles.length - 1; i >= 0; i--) {
@@ -195,20 +198,19 @@ export default function Confetti({ isActive, duration = 4000 }: ConfettiProps) {
         }
       }
 
-      if (particles.length > 0) {
-        animationRef.current = requestAnimationFrame(animate);
-      }
+      animationRef.current = requestAnimationFrame(animate);
     };
 
     animationRef.current = requestAnimationFrame(animate);
 
-    // 清除定時器
     const cleanupTimer = setTimeout(() => {
+      stopped = true;
       cancelAnimationFrame(animationRef.current);
       particles.length = 0;
     }, duration);
 
     return () => {
+      stopped = true;
       cancelAnimationFrame(animationRef.current);
       clearTimeout(cleanupTimer);
       particles.length = 0;
@@ -217,10 +219,11 @@ export default function Confetti({ isActive, duration = 4000 }: ConfettiProps) {
 
   if (!isActive) return null;
 
-  return (
+  return createPortal(
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-[9999]"
-    />
+    />,
+    document.body
   );
 }

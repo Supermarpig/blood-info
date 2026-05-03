@@ -5,7 +5,7 @@ interface LocationReportInput {
   type: "location";
   address: string;
   activityDate: string;
-  imgurUrl: string;
+  imgurUrl?: string;
   tags?: string[];
 }
 
@@ -58,12 +58,8 @@ function handleLocationReport(data: LocationReportInput) {
   const { address, activityDate, imgurUrl, tags } = data;
 
   // 基本驗證
-  if (!address || !activityDate || !imgurUrl) {
-    return { error: "缺少必要欄位：地址、日期或圖片連結", status: 400 };
-  }
-
-  if (!imgurUrl.includes("i.imgur.com")) {
-    return { error: "圖片網址必須來自 i.imgur.com", status: 400 };
+  if (!address || !activityDate) {
+    return { error: "缺少必要欄位：地址或日期", status: 400 };
   }
 
   // 轉換時間標籤
@@ -108,9 +104,7 @@ function handleLocationReport(data: LocationReportInput) {
 | ⏰ 時間 | ${timeStr || "未指定"} |
 | 🏷️ 贈品 | ${giftTagsText} |
 
-### 圖片
-![${address}](${imgurUrl})
-
+${imgurUrl ? `### 圖片\n![${address}](${imgurUrl})\n` : ""}
 ---
 *此 Issue 由使用者透過網站表單自動建立*
 `;
