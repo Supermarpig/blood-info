@@ -65,6 +65,7 @@ const locationReportSchema = z.object({
   address: z.string().min(2, "地址至少需要 2 個字"),
   activityDate: z.string().min(1, "請選擇日期"),
   tags: z.array(z.string()).default([]),
+  email: z.string().email("請輸入有效的 Email").or(z.literal("")).optional(),
 });
 
 const wishlistSchema = z.object({
@@ -90,7 +91,7 @@ export default function AddDonationEventModal() {
 
   const locationForm = useForm<LocationFormData>({
     resolver: zodResolver(locationReportSchema),
-    defaultValues: { address: "", activityDate: "", tags: [] },
+    defaultValues: { address: "", activityDate: "", tags: [], email: "" },
   });
 
   const wishlistForm = useForm<WishlistFormData>({
@@ -456,6 +457,29 @@ export default function AddDonationEventModal() {
                     <p className="text-sm text-red-500 mt-1">{uploadError}</p>
                   )}
                 </div>
+
+                {/* Email */}
+                <FormField
+                  control={locationForm.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>
+                        Email{" "}
+                        <span className="text-gray-400 font-normal">(選填，上線時通知你)</span>
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          type="email"
+                          placeholder="example@gmail.com"
+                          {...field}
+                          disabled={isLoading}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
                 <Button
                   type="submit"

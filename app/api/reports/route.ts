@@ -7,6 +7,7 @@ interface LocationReportInput {
   activityDate: string;
   imgurUrl?: string;
   tags?: string[];
+  email?: string;
 }
 
 interface WishlistInput {
@@ -55,7 +56,7 @@ async function createGitHubIssue(
 }
 
 function handleLocationReport(data: LocationReportInput) {
-  const { address, activityDate, imgurUrl, tags } = data;
+  const { address, activityDate, imgurUrl, tags, email } = data;
 
   // 基本驗證
   if (!address || !activityDate) {
@@ -103,8 +104,10 @@ function handleLocationReport(data: LocationReportInput) {
 | 📅 日期 | ${activityDate} |
 | ⏰ 時間 | ${timeStr || "未指定"} |
 | 🏷️ 贈品 | ${giftTagsText} |
+| 📧 通知 Email | ${email || "未提供"} |
 
 ${imgurUrl ? `### 圖片\n![${address}](${imgurUrl})\n` : ""}
+<!-- CONTRIBUTOR_EMAIL:${email || ""} -->
 ---
 *此 Issue 由使用者透過網站表單自動建立*
 `;
