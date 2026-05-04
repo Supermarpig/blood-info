@@ -88,13 +88,7 @@ function handleLocationReport(data: LocationReportInput) {
 
 ### 資料
 \`\`\`json
-{
-  "address": "${address}",
-  "activityDate": "${activityDate}",
-  "time": "${timeStr}",
-  "tags": ${JSON.stringify(giftTags)},
-  "imgurUrl": "${imgurUrl}"
-}
+${JSON.stringify({ address, activityDate, time: timeStr, tags: giftTags, imgurUrl, email: email || "" }, null, 2)}
 \`\`\`
 
 ### 預覽
@@ -106,9 +100,7 @@ function handleLocationReport(data: LocationReportInput) {
 | 🏷️ 贈品 | ${giftTagsText} |
 | 📧 通知 Email | ${email || "未提供"} |
 
-${imgurUrl ? `### 圖片\n![${address}](${imgurUrl})\n` : ""}
-<!-- CONTRIBUTOR_EMAIL:${email || ""} -->
----
+${imgurUrl ? `### 圖片\n![${address}](${imgurUrl})\n` : ""}---
 *此 Issue 由使用者透過網站表單自動建立*
 `;
 
