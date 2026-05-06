@@ -36,7 +36,7 @@ class MemoryCache {
     timestamp: 0,
   };
 
-  private static TTL = 3600000; // 1小時，單位為毫秒
+  private static TTL = 86400000; // 24小時，單位為毫秒
 
   static get(): Record<string, DonationEvent[]> | null {
     if (!this.cache.data) return null;
