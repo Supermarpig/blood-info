@@ -3,7 +3,7 @@ import CalendarClient from "./CalendarClient";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "捐血活動月曆 | 每日捐血時間表與地點查詢",
@@ -60,7 +60,7 @@ export default async function CalendarPage() {
 
   try {
     const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      next: { revalidate: 3600 },
+      next: { revalidate: 86400 },
     });
     const result = await response.json();
     if (result.success && result.data) {
