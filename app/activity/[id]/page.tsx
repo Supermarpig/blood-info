@@ -187,6 +187,7 @@ export default async function ActivityPage({ params }: PageProps) {
         price: "0",
         priceCurrency: "TWD",
         availability: "https://schema.org/InStock",
+        validFrom: `${event.activityDate}T${event.time.split("~")[0]}:00`,
         url: pageUrl,
       },
       performer: {
