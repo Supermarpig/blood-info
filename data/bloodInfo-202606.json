@@ -338,5 +338,35 @@
         "lng": 120.3316574
       }
     }
+  ],
+  "2026-06-09": [
+    {
+      "id": "cHR0LTIwMjYtMDYtMDktNi85KOS6jCnlsY/mnbHorablr5/lsYDmnbHmuK/liIblsYA=",
+      "time": "",
+      "organization": "屏東警察局東港分局",
+      "location": "屏東警察局東港分局",
+      "activityDate": "2026-06-09",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "6/9(二)屏東警察局東港分局",
+        "images": [
+          "https://i.imgur.com/BiyvKXb.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/BiyvKXb.jpeg",
+            "text": "相 | 和 人\n\n肖 及 有 信和 】09:30-17:00\n\n屏 東 縣 政府 警察 局 東港 分 局 ( 層 束 縣 東港 鎮 海路 1 號 )\n\n( ) 指 250ce ( ) 捐 500cc 和 首 折\n\n一 口 鳥 魚子 + 好 禮 5 擇 1 | 一 口 鳥 魚子 2 包 + 好 禮 5 擇\n\n1 加 贈 200 去 全 聯 禮 券\n\n人\n\n人\n計 三 2 了 l 三 “學 過 人 潮 過 多 牙 視 情 江 共 登錄 作業 4 條 3 M\n| 主辦 單位. 高 雄 市 玉 廬 有 順 大 慈 善 全 | 9 2\n全 bs Ni 生\n",
+            "confidence": 52
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.4631275,
+        "lng": 120.4617628
+      }
+    }
   ]
 }
