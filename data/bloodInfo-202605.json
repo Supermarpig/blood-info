@@ -4446,6 +4446,27 @@
         "lat": 22.6427079,
         "lng": 120.3339424
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDYtNS82LTYvMzDpgLHkuIDjgIHkuozjgIHkuInjgIHkupTmlrzlj7DljZfmlrDnh5/mjZDooYDlrqTpoJDntITmjZDooYDkuKbmupbmmYLloLHliLDvvIzljbPotIjpu5Hnhorms5XomK3ntajmr5vmr6/kuZk=",
+      "time": "",
+      "organization": "週一、二、三、五於台南新營捐血室預約捐血並準時報到，即贈黑熊法蘭絨毛毯乙",
+      "location": "週一、二、三、五於台南新營捐血室預約捐血並準時報到，即贈黑熊法蘭絨毛毯乙",
+      "activityDate": "2026-05-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/6-6/30週一、二、三、五於台南新營捐血室預約捐血並準時報到，即贈黑熊法蘭絨毛毯乙",
+        "images": [
+          "https://i.imgur.com/sCdPHYD.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 23.310485,
+        "lng": 120.3156425
+      }
     }
   ],
   "2026-05-07": [
@@ -4567,8 +4588,8 @@
       }
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDUvMDctMDk6MzB+MTU6MzAt5aSn6IGv5aSn5o6n6IKh6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
-      "time": "09:30~15:30",
+      "id": "5Y+w5YyXLTIwMjYvMDUvMDctMTA6MDB+MTY6MDAt5aSn6IGv5aSn5o6n6IKh6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "10:00~16:00",
       "organization": "大聯大控股股份有限公司",
       "location": "臺北市南港區經貿二路191號",
       "activityDate": "2026-05-07",
@@ -4795,6 +4816,22 @@
       "activityDate": "2026-05-07",
       "center": "台中",
       "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q120334323149320738",
+      "pttData": {
+        "rawLine": "5/7(四)彰化和美鎮公所",
+        "images": [
+          "https://i.imgur.com/LCLf2Lt.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/LCLf2Lt.jpeg",
+            "text": "號\n側\n“人 和\n募集 各 種 血型 ~ 敬 請 熱血 朋友 們 攜帶 身分 證件 ~ 捐血 救 人\n時 間 : 115/ 05/ 07 ( 週 四 ) 09:30~16:00\n地 點 : 和 美 鎮 公 所 (彰化 縣 和 美 鎮 鹿 和 路 六 段 337 號 )\n主 辦 : 彰化 縣 和 美 一 心 慈 善 會\n協辦 : 道 周 醫院 , 周 君 綾 縣 議員 , 慶 昌 寐 具 , 王 鍛 企業 有 限 公司\n一 心 鮮花 禮儀 公司 , 佳 恩 國 際 同 濟 會 , 和 美 一 心 國 際 同 濟 會\n佳 彤 國 際 同 濟 會 , 鳳 凰 消防 水 電工 程 , 常 務 理 事 陳 惠 玲\n哈 妮 士 有 限 公司 , 遠 傳 和 美 鹿 和 門市 特 約 中 心\n捐血 贈送 : 衛 生 紙 一 串 + 新 竹 炊 粉 + 濕 紙 巾 一 包\n木耳 飲 1 瓶 + 飲料 6 瓶 等 精美 禮品\n揚 250cc 需 隔 2 個 月 、 揚 500cc 需 隔 3 個 月 、 年 扣 血 星 : 男 1500cc、 女 1000cc( 以 個 人 生 日 為 周期 )\n",
+            "confidence": 86
+          }
+        ]
+      },
+      "tags": [
+        "餐飲"
+      ],
       "coordinates": {
         "lat": 24.1084448,
         "lng": 120.4943524
@@ -4900,9 +4937,51 @@
       "activityDate": "2026-05-07",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534681801190288",
+      "pttData": {
+        "rawLine": "5/7(四)高雄大遠百",
+        "images": [
+          "https://i.imgur.com/txoROq2.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/txoROq2.jpeg",
+            "text": "~_c 俯\n喇 同\n和 0 春 人 2gt# 店\n窗 條 w 吧 斑 , 3\ns 人 cm\n+ 會 信 ] PC | 疝 計\nShe\n吧 一 計 信 292 號 半\n司 革\n和 本 記 元 SS、 2!\n( 司 瑚 下)\nCr 時 間\n人 族\n?? 說 4\n高 雄大 遠 百 歡 錠 2\n高 雄 市 食 雅 區 三 多 四 路 21 號 還 u |\n倫\n0 主 辦 戰 位: 和 泰 產物 保 撿 艙 份 有 由 公司 高 弘 分 公司\n色狼 敖 位\n4 會 人 | 和 奉 產 險 9 全 窒 婦 歐 甘 全 查 2 呈 晤 是 還 an\n",
+            "confidence": 33
+          }
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 22.6127672,
         "lng": 120.3043248
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDctNS83LTUvOCjlm5st5LqUKeWPsOWMl+WNl+a1t+aNkOihgOWupA==",
+      "time": "",
+      "organization": "台北南海捐血室",
+      "location": "台北南海捐血室",
+      "activityDate": "2026-05-07",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/7-5/8(四-五)台北南海捐血室",
+        "images": [
+          "https://i.imgur.com/nkIYKVL.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/nkIYKVL.jpeg",
+            "text": "re“\n衣 雇 有 委 、 es\n一 卻 * 六\nMAY\nAND\n伙 康 加 倍 “jeir\nME\n靖 靈 箇 、 送 好 福 佃 9\n配合 正確 影 , 3\n115.05.04-08 汪 議 仿 ,\n08:00-17:30 翁 2 語 【】\n中 DE\n和 人 次 送 人 條 全 和 店\n人 也 2 人\nEE 王\n數 轉 有 限 。 送 完 為 止 DB ag 殉 1 中 如\n一 meanSSEEEREEEEEEEEmS 衝 僻 唾液\nLa 怕 呈 者\nB 由 全 EE / 人 人 $ in 光\n人 由 人 EEEIEED / 倫 AV\n和 ag 人 amg 人 @iErmn Oil Aa ms 一\n(3 增加 唾液 分 溢 舒 儿 口 乾 人 @ [1 | 夜間 防護\n150% | 【 寺 】 抗 向 成 降低 牙 周 病 幫助 口腔 修 護\n海 捐 血 室\n仿 ;\n念 南海 捐血 室\n則 靖 血 一 袋 , 圾 人 一 命 , 讓 要 廷 續 蝦\n張 血 一 發 救 人 一 命 , 讓 要 自\n",
+            "confidence": 39
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 25.0328014,
+        "lng": 121.5172884
       }
     },
     {
@@ -4934,6 +5013,93 @@
         "lat": 25.0502151,
         "lng": 121.5648409
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDctNS83KOWbmynlj7DkuK3moqfmo7LntpPkuozot68=",
+      "time": "",
+      "organization": "台中梧棲經二路",
+      "location": "台中梧棲經二路",
+      "activityDate": "2026-05-07",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商",
+        "生活用品"
+      ],
+      "pttData": {
+        "rawLine": "5/7(四)台中梧棲經二路",
+        "images": [
+          "https://i.imgur.com/zkpyDPj.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/zkpyDPj.jpeg",
+            "text": "7URIO\n[一 」 3 |\n字 隆 科 技\n區\n捐血 有 你 , 熱 血 相 插\n115s05a07a\n時 間 p 星期 四 09:30-16:00\n地 點 * 字 隆 二 廠 貴 賓 停 車 區\n地 址 + 台 中 市 梧 棲 區 經 二 路 27 號\n「 活 品 加,。 二\n价 白 自 主\n捐血 250cc:\n7-11 商 品 卡 2 張 、 春 風 衛生 紙 1 串 、\n環保 購物 袋 1 個 、 刻 味香 油 1 瓶 、 彈 力 帶 1 條 、\n運動 毛巾 1 條 、 刷 樂 潔 牙 組 1 組 、 飲 品 1 杯\n捐血 500cc:\n7-11 商 品 卡 4 張 、 春 風 衛 生 紙 2 串 、\n環保 購物 袋 1 個 、 莖 味香 油 1 瓶 、 彈 力 帶 1 條 、\n運動 毛巾 1 條 、 刷 樂 潔 牙 組 1 組 、 飲 品 1 杯\n主 辦 : 宇 隆 科技 股份 有 限 公司\n協辦 : 經 濟 部 產業 園區 管理 局 臺中 分 局 、 臺 中 港 科 技 產業 園區 廠商 協 進 會\n負 琪 塑膠 ( 股 ) 公 司 、 福 壽 實業 ( 股 ) 公 司 、 維 勝 特 企業 ( 股 ) 公 司 、 明 源 橡膠\n工業 ( 股 ) 公 司 、 液 空 創新 材料 暨 服 務 ( 股 ) 公 司 、 彰 化 晶 華美 學 牙醫 診所\n",
+            "confidence": 84
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.2388133,
+        "lng": 120.5101823
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDctNS83LTUvOCjlm5st5LqUKeOAgTUvMTEtNS8xNSjkuIAt5LqUKeW9sOWMluaNkOihgOermQ==",
+      "time": "",
+      "organization": "、5/11-5/15(一-五)彰化捐血站",
+      "location": "、5/11-5/15(一-五)彰化捐血站",
+      "activityDate": "2026-05-07",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/7-5/8(四-五)、5/11-5/15(一-五)彰化捐血站",
+        "images": [
+          "https://i.imgur.com/7zGakUT.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/7zGakUT.jpeg",
+            "text": "人\nee\n肯 4 還 和 路, 了 5/i1~5/15\n自 一 濕 【 7 上 2 ,\n怕 守 問 當 人 / 有 人 廬 且 列 的 劑\n搬 血 完成 贈送 商 品 兌 瘓 券 5 點\n00 說 之\nSet 主 人\n~ 詩 毗 上 we\n由 7\n請 13 遇 (0 洱 地 點\nCu\n論語 (2)2) S te)-! 可 St)\n際\nN 、 全\n",
+            "confidence": 26
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.0606039,
+        "lng": 120.5352666
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDctNS83KOWbmynpq5jpm4TpvJPlsbHlhafmg5/mtL7lh7rmiYA=",
+      "time": "",
+      "organization": "高雄鼓山內惟派出所",
+      "location": "高雄鼓山內惟派出所",
+      "activityDate": "2026-05-07",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/7(四)高雄鼓山內惟派出所",
+        "images": [
+          "https://i.imgur.com/QOZfHmL.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/QOZfHmL.jpeg",
+            "text": "窗 鬧 ˋ\n5/ 了 709:30-1 6:30\n內 惟 派 出 所 前\n(鼓山 區 九 如 四 路 1139 號 )\n捐血 送 : 斷 繼\n250cc 全 聯 好 禮 邁 交 公\n語 500cc 加 倍 适\n\\ 星 每 人 再 加 碼 好 禮 二 選 1 仿 *\n內 惟 神 福 禍 鎮 安 宮 熱情 邀請 您 (這 完 飢 止 盡\n",
+            "confidence": 67
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.6583157,
+        "lng": 120.2791769
+      }
     }
   ],
   "2026-05-08": [
@@ -4945,6 +5111,20 @@
       "activityDate": "2026-05-08",
       "center": "台北",
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q120389009518218704",
+      "pttData": {
+        "rawLine": "5/8(五)宜蘭東門夜市",
+        "images": [
+          "https://i.imgur.com/dyXVd7y.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/dyXVd7y.jpeg",
+            "text": "東和 理 愛 + 對\nba 人 @\n說 全 襄 襄 計 襄 全\n宜蘭 東門 觀光 夜市 ir,X 公益 捐血 活動 2\n115 年 5 月 8 日 (五 )\n下 午 14:00 一 晚上 19:00\n東門 夜市 和 睦 路 段 ( 靠 停車 場 側 ) 【eod」\n捐血 送 好 禮 人\nAam250cc Gasoocc 生\n六 所為 和 2 還 記\nLA 本\n",
+            "confidence": 54
+          }
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 24.7581411,
         "lng": 121.7584576
@@ -5456,7 +5636,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 22.6733397,
         "lng": 120.2858627
@@ -5653,6 +5832,64 @@
         "lat": 24.1628007,
         "lng": 120.6758607
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDgtNS84KOS6lCnpq5jpm4Tlt6bnh5/lnJbmm7jppKg=",
+      "time": "",
+      "organization": "高雄左營圖書館",
+      "location": "高雄左營圖書館",
+      "activityDate": "2026-05-08",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/8(五)高雄左營圖書館",
+        "images": [
+          "https://i.imgur.com/mX1y0JW.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/mX1y0JW.jpeg",
+            "text": "自 助 里 e / AN\n捐 熱 從 八\n夕 B 欠\n喲 世界 彌 續 跳動 還 屠 ,\n( 高 雄 市 立 圖 書 館 左 營 分 館 和\n人 過 文 路 12 號 前 生\nQ9:30~17:00 Joss\n【 沮 250cc 劇 加 下 500GG Re\n賣場 好 禮 2 張 賣場 好 禮 4 張 之\n人 打 談 oo 2 (\n骨 22E329 之 人 @\n點名 漲 人 全\n和\n",
+            "confidence": 44
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.6733397,
+        "lng": 120.2858627
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDgtNS84KOS6lCnpq5jpm4Tpub3ln5XmnJ3lkI7lrq4=",
+      "time": "",
+      "organization": "高雄鹽埕朝后宮",
+      "location": "高雄鹽埕朝后宮",
+      "activityDate": "2026-05-08",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/8(五)高雄鹽埕朝后宮",
+        "images": [
+          "https://i.imgur.com/uwcVdQx.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/uwcVdQx.jpeg",
+            "text": "Mk 人 的\n由 議\nAN\n時 說 廁 條 生\nam\n5/8'a09:00.1 7:00\n革 一 還 [二\n高 雄 朝 后宮\n( 覽 埕 區 北斗 街 6 號 )\n捐血 送 :\n250cc 豐富 民生 好 禮 + 白 米\n500cc 加 倍 送\n銷 品\n他 【\"\n高 雄 朝 后宮 熱情 邀請 您 esagp。。\n",
+            "confidence": 57
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.6315691,
+        "lng": 120.2848744
+      }
     }
   ],
   "2026-05-09": [
@@ -5677,6 +5914,20 @@
       "activityDate": "2026-05-09",
       "center": "台北",
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q120389018138873244",
+      "pttData": {
+        "rawLine": "5/9(六)宜蘭冬山順安國小",
+        "images": [
+          "https://i.imgur.com/tcLN5yC.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/tcLN5yC.jpeg",
+            "text": "一 ss 一 二 一 一 /\n@ 間 則 章 有 2 全 所 章 陸\n\"可 意 心 濕 醫 悄 』 稍 118 坦 還 心 捐血 及 褒 年 華 活動\n[活動 時 間 】5 月 9 日 (星期 六 )09:00 至 16:00 (08:30 開 始 抽 號 碼 牌 )\n[1 順 安 國 民 小 學 (冬山 六 永興 路 二 段 17 號 鄉 立 圖 書 館 前 )\n) 谷 』 愛 心 悄 肌 公 倆 衣 澳 愛心 關 限 愛 心 坊 另 翊 怕 時 : f 沾 琅 有 器 例 合\n[ 主辦 單位 】 宜 蘭 縣 如 意 關 善之 友 會 台 灣 房屋 成 功 團隊 [ 聯 合 主辦 SS\n[協辦 單位 】 軸 辣 有 重 心 教育 協會 李 中 理事 長 光 橫 幼兒 轅 陳 汪 泉 先 生 ja\n[ 黃 助 單位 ] 匠人 親人 還\n[ME] 戰 枯 才 番 ) 條 LU\n乓 彌 工 修 弦 哇 年 九 葷 鵰 聞 飢 謂 言 遜 胡 緞\n[活動 贈品 】 加 了 ee 說 他 吧 、\n用 | 他 交 go 2\n廢 到 +@ + 圖 革 1 “\n[活動 聯絡 人 】 涯 練 信 如 0932-262747 (贈品 數 量 有 限 主 搓 單 位 保有 變更 權利\n一\n",
+            "confidence": 48
+          }
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 24.6542771,
         "lng": 121.7627121
@@ -6210,28 +6461,15 @@
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534709874563313",
       "pttData": {
-        "rawLine": "5/9(六)高雄楠梓天后宮/左營/鳳山/楠梓捐血室",
+        "rawLine": "5/9(六)高雄五甲捐血室",
         "images": [
-          "https://i.imgur.com/uvVx0pk.jpeg",
-          "https://i.imgur.com/EULeBw8.jpeg",
-          "https://i.imgur.com/TWHnXDt.jpeg",
-          "https://i.imgur.com/9AlQ1qd.jpeg"
+          "https://i.imgur.com/mC9nZIJ.jpeg"
         ],
         "ocrTexts": [
           {
-            "url": "https://i.imgur.com/uvVx0pk.jpeg",
-            "text": "8 記 字 二\n臣 朋 CH 革 說 + 選\n還 WP 捐 出 熱血\n成 為 生 命 的 守護 者 @\n楠 梓 天 后宮 熱情 邀約\n\n08:00-\n柄 樣 天 后宮 /9e 17:00\n全 聯 提貨 券 2 張 賠 精 樣 去 後 寬限 量 效 創 品\n\n捐 500ccli 刀 加 或 天 后宮 專屬 帽子 1 頂\n\n給 好 禮 通 通 送 完 為 止\nSeoul\n",
-            "confidence": 52
-          },
-          {
-            "url": "https://i.imgur.com/EULeBw8.jpeg",
-            "text": "玉生\nLe 劑 記 祐 和\n加 還\n加 Ms 指 出 府 血\nee\n還 兮\n\n09:30-\n\n左 當 捐血 王 2 /?2 18:00\nee ※17:45 結 束 登錄 作業\n",
-            "confidence": 40
-          },
-          {
-            "url": "https://i.imgur.com/TWHnXDt.jpeg",
-            "text": "融 還 記 j 直\n難以 > 8 字 用\n加 + 人\n嘻 me 損 出 熱血\n為 生 命 的 守護\n柄 樣 天 后宮 熱情 邀約 人\n說\n3 示 回 09:00-\n運 鳳 山 捐血 放 /7e ws\nJu 好 禮 1 張 & 楠 梓 天 后宮 限量 文 創 品\n",
-            "confidence": 46
+            "url": "https://i.imgur.com/mC9nZIJ.jpeg",
+            "text": "先 呈 和 八\n\n哉 血 鋁 個 愛心 僻 居\n四 25/9。>\n\nO9:00-77:30\n\n若 五 甲 捐血 室 (augmm-sse328\n| 250cc 贈 超 市 好 禮 2 張 + 豆漿 券\n500cc 贈 超 市 好 禮 4 張 + 豆漿 券 + 馬 克 杯 |\n。 捐血 好 禮 送 完 為 止\n主 辦 單位 : 龍 文 清水 祖師 為 善 服務 團隊\n\n協辦 單位 : 金 漢 美 珠寶 銀樓 . 秋 鎂 銀樓 . 劉 秋 美 女 士\n贊助 單位 : 琦 玉 豆 漿 . 協 供 輪胎 . 呂 淑華 女 士 . 呂 淑 瑛 女 士\n\n陳 昱 汝 女 士 熱情 邀約\n",
+            "confidence": 76
           }
         ]
       },
@@ -6631,6 +6869,36 @@
       "coordinates": {
         "lat": 22.6798837,
         "lng": 120.3086782
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMDktNS85KOWFrSnlj7DljZfkv6HnvqlBVFQ0RlVO",
+      "time": "",
+      "organization": "台南信義ATT4FUN",
+      "location": "台南信義ATT4FUN",
+      "activityDate": "2026-05-09",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "電影票"
+      ],
+      "pttData": {
+        "rawLine": "5/9(六)台南信義ATT4FUN",
+        "images": [
+          "https://i.imgur.com/n3kEX8k.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/n3kEX8k.jpeg",
+            "text": "第 九 分 區 聯合 舉辦 全\n吃 2\noz 閉 c、? 4\n誠 = 季 ae 弛 托 2 記\n馮 500CC 送禮 券 600 元 或 電影 票 2 張\n雇 250CC 送禮 券 300 元 或 電影 票 1 張\n訂 加 mamaomome ee\n",
+            "confidence": 52
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 25.0409201,
+        "lng": 121.5720055
       }
     },
     {
@@ -7199,6 +7467,20 @@
       "activityDate": "2026-05-10",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534718860149826",
+      "pttData": {
+        "rawLine": "5/10(日)台南永福捐血室",
+        "images": [
+          "https://i.imgur.com/LxopF4k.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/LxopF4k.jpeg",
+            "text": "全 5/10 唱 )\n中 vi rm 而\n捐血 室 1 嘲 ja 人\n下 昌 帳 吃 美 食\n忌 一 奶 層 暈 : pe\n全 全\n人 】 時 間 」 計 紗 乾 拌 麵\n8:00-17:00 | 小宮 洲 沙 茶 爐 肉 絲 醞 加 只\n\n捐 500cco 加 贈 乾 拌 通 加\noa ” 放生\n永福 捐血 室 生 生\n台 南 市 中 西區 永福 路 一 段 85 號 ' 和\n\n說 斧 務 人 W\n\n捐血 一 人 鍛 , 救 人 一 印 ae\n應 雙 感謝 小 豪 洲 沙 茶 爐 。] 質 助 色\n",
+            "confidence": 50
+          }
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 22.9985349,
         "lng": 120.1853155
@@ -7332,6 +7614,20 @@
       "activityDate": "2026-05-10",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q105534713598764302",
+      "pttData": {
+        "rawLine": "5/10(日)高雄五甲捐血室",
+        "images": [
+          "https://i.imgur.com/uV2TNWU.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/uV2TNWU.jpeg",
+            "text": "歡 ) 高 雄 市 酒類 商 業 同 業 公會\n2026-.-05.1g( 日 ) iW\n\n色 Q09x0O 到 390\n五 刀 希 血 窒\n250c.c 二 1\n4 >_w\nEE exeaa 一 汪\n\n500c.c 主 品 /\n-\n",
+            "confidence": 50
+          }
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 22.5955737,
         "lng": 120.3314338
@@ -7514,6 +7810,37 @@
       "coordinates": {
         "lat": 22.8911,
         "lng": 120.186
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMTAtNS8xMCjml6Up5a6c6Jit576F5p2x6JCs6YCj6Jmf5o2Q6KGA6LuK",
+      "time": "",
+      "organization": "宜蘭羅東萬連號捐血車",
+      "location": "宜蘭羅東萬連號捐血車",
+      "activityDate": "2026-05-10",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券",
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/10(日)宜蘭羅東萬連號捐血車",
+        "images": [
+          "https://i.imgur.com/D40BnDp.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/D40BnDp.jpeg",
+            "text": "二 他\n[EE 全 k 還\n捐血 有 愛 之 我 愛 捐血\n115/o5/10( 日 ) 駒\n時 間 :o9oo-16oo\n地 點 : 羅 東 萬 連 號 捐血 車\n( 羅 東 鎮 中 興 路 3 號 ) ‧\n全 操 箇 過 思 裡 :\n捐 25occ 全 聯 禮券 2oo 元\n捐 5oocc 全 聯 禮券 4oo 元\n冬山 鄉 農 會 4Kg 愛 心 米 4 包\n數 量 有 限 送 完 為 止\n女 捐血 請 攜帶 身份 證 (可 加 速 捐血 流程 ) , 充 足 睡眠 、 勿 空腹 捐血 。\n去 如 有 健康 疑慮 (手術 或 出 國 疫 區 ), 請 先 查詢 台 灣 血液 基金 會 健康 標準 。\n女 如 人 潮 多 , 會 依 現場 狀況 提前 發 放 號 碼 牌 及 提前 作業 , 等 待 叫 號 入 捐血 區 ,\n過 號 者 需 依 序 再 等 候 2 位 捐血 人 , 造 成 不 便 敬 請 見諒 。\n示 主 辦 單位 保留 修改 紀念 品 贈送 方式 之 權利 。 了\n主 辦 單 位 金 山 汽車 材料 行 。\n贊助 人 士 : 林 明 德 先 生 、 林 聿 活 小 姐 軋\n林 楷 茶 小 姐 、 林 佳 穎 小 姐 記 回\n",
+            "confidence": 80
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.6765906,
+        "lng": 121.7670837
       }
     }
   ],
@@ -7718,6 +8045,36 @@
         "lat": 22.6153148,
         "lng": 120.2950584
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMTEtNS8xMSjkuIAp5Y+w5Lit6KW/5bGv6buO5piO6Lev5LiJ5q61",
+      "time": "",
+      "organization": "台中西屯黎明路三段",
+      "location": "台中西屯黎明路三段",
+      "activityDate": "2026-05-11",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "餐飲"
+      ],
+      "pttData": {
+        "rawLine": "5/11(一)台中西屯黎明路三段",
+        "images": [
+          "https://i.imgur.com/kyPlvbX.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/kyPlvbX.jpeg",
+            "text": "人 9 說,+ee\n熱 包 台 中 。 受 心 擠 和 記 ,/\n9 和 1\n5 贍\n際 ] 地 點 : 台 中 市 西 屯 區 G 時 間 : 5/11( 一 )\n黎明 路 三 段 1202 號 09:00-16:00\n人\n下\n八 踢 說 加 蟬 間 六 澀 人)\n色 記 : 「 LT 2\n只 ) 人\n人 高 人\n“2 生 人\n自 補 宮 加 加 生計 呈 有\n(2 時\n( 馮 誠 售 W 禮品 :\n2 | 250cc => 全 聯 提貨 券 3 張 僅 央\n加 訓 ON 人 抽 0 張 還\n& 麵 茶 & 咖 啡 兌 CV 乓 〔@ 秋\n主 辦 : 寶 幹 國 際 貿 易 股 股份 有 限 公司 2 1 寐 踢\n協辦 : 永 多 國際 貿易 有 限 公司 、 先 龍 覺醒 咖啡 館 、 超 越 健康 科技 有 限 公 司 、 鹿 港 產 仲 麵 茶\n",
+            "confidence": 55
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.1851451,
+        "lng": 120.6399674
+      }
     }
   ],
   "2026-05-12": [
@@ -7810,6 +8167,62 @@
       "coordinates": {
         "lat": 23.0018119,
         "lng": 120.2166524
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMTItNS8xMijkuowp5Y+w5Lit5aSn55Sy6auU6IKy5aC05YyX5YG0",
+      "time": "",
+      "organization": "台中大甲體育場北側",
+      "location": "台中大甲體育場北側",
+      "activityDate": "2026-05-12",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/12(二)台中大甲體育場北側",
+        "images": [
+          "https://i.imgur.com/vrGAQlM.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/vrGAQlM.jpeg",
+            "text": "看 9\n旬 、\nAA\n當\n時 間 : 5 日 12 日 (還 二 )9:30~16:00\n寺 : 看 電 悶 KRgABMIE 全 /\n: @ 有 /\n汪 00)I 還 了 汪 JAit 層 必\n",
+            "confidence": 32
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.3508091,
+        "lng": 120.6154706
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMTItNS8xMi01LzEzKOS6jC3kuIkp5ZiJ576p5aSn5a246Jit5r2t5qCh5Y2A5a2455Sf5rS75YuV5Lit5b+D",
+      "time": "",
+      "organization": "嘉義大學蘭潭校區學生活動中心",
+      "location": "嘉義大學蘭潭校區學生活動中心",
+      "activityDate": "2026-05-12",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/12-5/13(二-三)嘉義大學蘭潭校區學生活動中心",
+        "images": [
+          "https://i.imgur.com/3SdW9vT.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/3SdW9vT.jpeg",
+            "text": "四 血 有 妥 % 冷\n有 你 %\n\n吧 5/12(-).5/13()\n\n地 點 : 嘉義 大 學 蘭 潭 校 區 了\n\nbe 學 生 活動 中 心 旁 [集 點 送 加\n\nEE 滬 黑熊 不鏽鋼\n\n加 隨身 瓶\n\n從\n\n計\n一 噴 卜 附 人 @\n\n一 一\n",
+            "confidence": 48
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 23.4678916,
+        "lng": 120.4848779
       }
     }
   ],
@@ -7970,6 +8383,36 @@
       "coordinates": {
         "lat": 25.0608579,
         "lng": 121.4622801
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMTMtNS8xMyjkuIkp5Y+w5Y2X546J5LqV5rCR55Sf6Lev",
+      "time": "",
+      "organization": "台南玉井民生路",
+      "location": "台南玉井民生路",
+      "activityDate": "2026-05-13",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/13(三)台南玉井民生路",
+        "images": [
+          "https://i.imgur.com/yQeIQXe.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/yQeIQXe.jpeg",
+            "text": "貳 六\n4 3 1 上衣 潑 才\n上 芝 和 人\n/ 念 鷹 心\n票 信 癌\n人\n仿 曲 【 ‧ 騙 訪\nAA 人 @G0@0O@Oeo\n人 一 人 3 婦 紹 襯 全 宜 導\n/ CA A/VA A/|/\n/ NWA /VIN M 人 /Y\n主 了 計 1 轉 #\n- 用 愛 心 綢 帳 為 他 人 的 生 命 朋 滴\n[li 國 115 年 5 月 13 日 (三 ) 10:00-16:30 |\n【 避 ii , 記 玉井 區 民生 路 1 號 (匠人 人 加 基 |\n21r 記 玄 空 法 寺 、 臺 南 市 政府 蕩 察 局 玉井 分 局 |\n臺南 市 開 說 善 功 生 會 維 病 事業 股份 有 限 公司\n說 謂 議 加 加 江 炎 和 董事 長 * 自 智 生 化 科技 有 限 公司\ngm, 捐血 250cc 贈 : 薔 麥 麵包 ^ 沐 浴 乳 * 洗 髮 精 ~ 衛生 紙 6 入 1 品 。\n譽 心 贈品 : 掉 ls00ecjll 增 : 維 義 油 之 希 級 油 1 江 。\n捐血 時 請 攜帶 具有 身分 證 字 號 和 相 片 之 證件\n玄 空 法 寺 : 台 南 市 楠 西區 中 華 路 270 號 電話 :06-575-1455\n蝴 台 南 市 警察 局 玉井 分 局 防 詐騙 、 婦 幼 安全 、 交 通 安全 宣 導 活動 卻\n",
+            "confidence": 55
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 23.1259399,
+        "lng": 120.4627932
       }
     }
   ],
@@ -8489,6 +8932,64 @@
         "lat": 22.6798837,
         "lng": 120.3086782
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMTUtNS8xNSjkupQp5Y+w5Lit6b6N5LqV5Y2A5YWs5omA",
+      "time": "",
+      "organization": "台中龍井區公所",
+      "location": "台中龍井區公所",
+      "activityDate": "2026-05-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/15(五)台中龍井區公所",
+        "images": [
+          "https://i.imgur.com/8qDUYSG.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/8qDUYSG.jpeg",
+            "text": "全 一 衣 熱 血\n中 二 旺\n肆 代 2 人 吧 【/\n儿\n硬是 鱔 生 的 程 子\nMA\n攻 多\n時\n人\n\n說\n募集 各 種 血型 ~ 敬 請 熱血 朋友 們 搓 帶 身分 證 、 戴 口罩 來 捐血\n時 間 : 115 生 5 月 15Hda,09:30~16:00\n地 點 : 龍井 區 公所 記 ( 井 區 沙田 路 4 段 247 嘻 )\n主 辦 單位 : 臺中 市 中 港 工 商 協 進 會\n協辦 單位 : 柬 龍 雜糧 有 限 公司 、 誼 德 信 通 訊 有 限 公司 、 樹 榮 橡膠 塑膠 股份 有 限 公司 、 豪 霖 工業\n\n有 有限 公司 、 漢 根 實業 有 限 公 司 、 後 憲 保 全 股份 有 限 公司 、 鼎 三 企 樂 股份 有 限 公 司\n250cc 贈 民生 通路 感謝 禮 2 張 + 拖鞋 + 憲 拌 麵 + 美 甲 修 容 組\n500cc 贈 民生 通路 感謝 禮 5 張 + 拖鞋 + 憲 拌 麵 + 腰 枕 和 數 量 有 限 、 送 完 為 止 大\n\n- 搶 鞋 敬 式 實際 以 現場 為 主 必\n\n扣 250cc 需 隔 2 個 月 、 扣 500cc 爾 隔 3 個 月 、 年 捐血 量 : 男 1500cc、 女 1000cc( 以 個 人 生 曰 為 周期 )\n",
+            "confidence": 74
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.1927123,
+        "lng": 120.5455757
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMTUtNS8xNSjkupQp5bGP5p2x5o2Q6KGA56uZ",
+      "time": "",
+      "organization": "屏東捐血站",
+      "location": "屏東捐血站",
+      "activityDate": "2026-05-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/15(五)屏東捐血站",
+        "images": [
+          "https://i.imgur.com/7AVzM2H.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/7AVzM2H.jpeg",
+            "text": "屏 東 縣 訪 品 流通\nAN 4 舉 品 ?\n凡 4 下 慷 朮 儿 侯\n六 商 業 同 業 公 會\n加 115 年 今 月 1 St\nG 08:00~17:00 「 戰 pU\n時 間 ( 數 量 有 限 . 送 完 為 止 )\n@ 屏 東 捐血 中 心\n地 點 ( 屏 東 縣 屏 東 市 忠孝 路 295 號 ) 數 量 有 隅 芒 送 完 為 正 ]\n銘 謝 贊助 廠商\n峰 群 國 際 包 裝 、 維 盛 發 食品 、 珍 品 新 食品 、 金 昌 鋪 食 品 、\n禾 大 洋酒 、 味 一 食品 、 樸 作 農 場 、 御 田 食品 、 如 記 食 品 、\n貼 上 貼紙 印刷 、 友 堡 建 築 、 清 淨 生 活 、 冀 喇 、 新 崎 食品 。\n捐血 好 禮\n250cc $500cec\n福 報 點 心 大 禮包 *#1 份 滿 血 回 歸 大 禮包 *1 份\n內 容 物 : 冰糖 銀耳 凍 乾 *1 包 、 蛋 捲 1 盒 、 內 容 物 : 養生 茶 *1 袋 、 烏 骨 雞 滴 雞 精 *1 包 、\n時 四 時\n",
+            "confidence": 72
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.6887611,
+        "lng": 120.4891787
+      }
     }
   ],
   "2026-05-16": [
@@ -8670,6 +9171,20 @@
       "activityDate": "2026-05-16",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319507405331549",
+      "pttData": {
+        "rawLine": "5/16(六)台南大灣廣護宮",
+        "images": [
+          "https://i.imgur.com/yWvZQY3.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/yWvZQY3.jpeg",
+            "text": "2 說 字\n人 7 「 廖 一 一 勞 一 細 二 對 議\n久 字 2 硅 )\n2 期 5/16( 六 )\n1 時 間 8:30-17:00\n( 地 點 大 灣 廣 護 宮 廟 前\n",
+            "confidence": 50
+          }
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 23.0072299,
         "lng": 120.2674562
@@ -8748,6 +9263,22 @@
       "activityDate": "2026-05-16",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q113319503955673008",
+      "pttData": {
+        "rawLine": "5/16(六)台南善化區農會",
+        "images": [
+          "https://i.imgur.com/jmQPW9I.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/jmQPW9I.jpeg",
+            "text": "例 和\n熱血 出 動 。” 警 守 血庫\n善 化 分 局 捐血 活動\n表 7\n宮 人 一\n點 休\nMR 說\n| 儿 | 115 年 5 月 16 日 (六 )\n| 時間 | 09:00-17:00\n| 地 點 | 善人 區 農 會\n區 全 圖 。 臺南 市 若 人 [區 中 山路 242 號\n捐血 贈 : 全 聯 券 、 沐 浴 乳 、 汗 蒸 券 、 農 會 產品 (也 機 發 閃 )\n和\nLe 汪 心 提醒 : 捐 血 分 證\n2 本 齊 | 飼 1 (品 項 依 現場 為 主 , 送 完 為 止 )\nae 生 說 詢 Pame 暢 1\n統一 超 商 茄 拔 門市 、 小 南 便當 店 、 善 化 分 局 志 工 中 隊\n",
+            "confidence": 67
+          }
+        ]
+      },
+      "tags": [
+        "餐飲"
+      ],
       "coordinates": {
         "lat": 23.1324943,
         "lng": 120.2974468
@@ -8889,6 +9420,36 @@
       "coordinates": {
         "lat": 24.2576264,
         "lng": 120.6605905
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMTYtNS8xNijlha0p5Y+w5Lit6LGQ5Y6f5o2Q6KGA5a6k",
+      "time": "",
+      "organization": "台中豐原捐血室",
+      "location": "台中豐原捐血室",
+      "activityDate": "2026-05-16",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/16(六)台中豐原捐血室",
+        "images": [
+          "https://i.imgur.com/OAAU9Dg.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/OAAU9Dg.jpeg",
+            "text": "父 久 菇 咽 、?\n『 加 名 8 4\n二 二\n神 和 型 者 生 富 座 六 者 引 苹\n你 可 9 本 說\n~ @@\n捐血 一 袋 救 人 一 命 ~ 敬 請 熱血 朋友 們 攜帶 來 捐血\n時 間 :D 日 Hdaz)09:00 一 17:30\n地 點 : 豐 原 捐血 室 ( 豐 原 區 北陽 路 2 同 )\n主 辦 : 台 灣 關 幅 地 中 當 型 魯 血 協會\n台 灣 洛 洋 性 側 血 協會\n協辦 單位 : 1. 豐原 慈 濟 宮 管 理 委 員 會 捐贈 白米 200 包\n2. 福 爾 摩 沙 野鳥 保育 協會 創 會 理事 長 王國 衍 先 生 捐贈 布 質 小 錢包 250 個\n捐血 250cc 脆 白米 1 包 、 超 商 商 品 卡 1 張 、 布 質 小 錢包 1 個\n捐血 5OOcc 脆 白米 2 包 、 超 商 商 品 卡 2 張 、 布 質 小 錢包 2 個\n當 日 前 捐血 50 人 加 送 高 級 洗 髮 精 一 瓶\n捐血 禮 數 量 有 限 送 完 為 止\n",
+            "confidence": 75
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.2522003,
+        "lng": 120.7294561
       }
     },
     {
@@ -10801,6 +11362,36 @@
       }
     },
     {
+      "id": "cHR0LTIwMjYtMDUtMjMtNS8yMyjlha0p5paw5YyX5rGQ5q2i54Gr6LuK56uZ5YmN",
+      "time": "",
+      "organization": "新北汐止火車站前",
+      "location": "新北汐止火車站前",
+      "activityDate": "2026-05-23",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券"
+      ],
+      "pttData": {
+        "rawLine": "5/23(六)新北汐止火車站前",
+        "images": [
+          "https://i.imgur.com/o1jwwGa.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/o1jwwGa.jpeg",
+            "text": "| 記 語 了\n人 全 4 多 信光 池\n店 2 2 六 人, 2 交 2\nxy XX 2 于 六 人 2\n人 人 AA 2 如\n0 AN 在 / 和 2\n1 人 人 ee 及 2 - 、 人\n吃 1 bU X 2 人 4\nA 一 一\n同 說 AA 『「 說 全 | x\nMA 人 人 M 了 加 記 富 人 放 點 人 之\n7 2 說 卻 多 放 他 和 和 有 有 2 |\n人 2 加 點,【 和 呈 @ 和 中 及 僑 |\n2 上 人) 下 0 由 和\n人 0 太 點 還 圖 用 放 、/\n3 1 前 2\n和 7 1 車 訪\nWe 光正 火車 站 zoo\n主 Aieioo_Fr21 啟 禮券 一\n天 了: 國 位: xx\n人 人 8 箇 25000 居 一 自 喲 下 +, 同 禮 拓 一\n蟬 寬 宁 毒 熙 務 區 。 /? 輔導 人 如 一 店 3 呈\n下 50000 掐 二 赴 喲 條 吧 位 當\n、/ 人 Ra 下 Fm 六 正常 喘 雪 竹 咖 【 替 電 一 家 3TT、 慢 佑 1 7 ct) 呢 人\n人 人 影 人 六 畫 人\n人 2 效 AA S 2 Xi 人 De\n說 人 9 人 以 2 芝 , 人 不\n說 人 六 2 、、 一\n人 人 as\n人 XX 入 2 2 2 2\nAa\n2\n生 人 只 ee 全 1\n人 銜 放 近 2 本 和 條 六 8 5\n全 人 廬 人 0 光 太 坊 人 人 ee 卻 主 呈 綢 交 說 2\nes 人 2 說 Re\n同 2 AN 沁\n人 敬 2 ec 當\n{7\n0 人\n人\n",
+            "confidence": 20
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 25.068315,
+        "lng": 121.661734
+      }
+    },
+    {
       "id": "cHR0LTIwMjYtMDUtMjMtNS8yMyjlha0p5Y+w5Lit5riv6YWS5bqX",
       "time": "",
       "organization": "台中港酒店",
@@ -11256,6 +11847,37 @@
       "coordinates": {
         "lat": 25.2207372,
         "lng": 121.6402736
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMjQtNS8yNCjml6Up5Y+w5Y2X5Zac5qi55Luj5aSp5bqc",
+      "time": "",
+      "organization": "台南喜樹代天府",
+      "location": "台南喜樹代天府",
+      "activityDate": "2026-05-24",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券",
+        "餐飲"
+      ],
+      "pttData": {
+        "rawLine": "5/24(日)台南喜樹代天府",
+        "images": [
+          "https://i.imgur.com/zVoZltH.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/zVoZltH.jpeg",
+            "text": "sa tc\n( 歡 避 旬 密 至 佐 聖 閏 閻 他 和\n謊 ,, 二 地 2 汪 ,\n及 澡 條 富 和 翊\n2\n4 es aa 轉 辣 1\n肉 WEnps 同 一 一 / 二 則\n一 章 (自 jj 陀 寢 三 聞 計較\n2 和 百 生 9\n! Q7rMML_ 一 區 (ie 店 必\n說 說 一 二 一 三 計 邀 請 您 一 起 挽 袖 做 愛 心 語 吃\n9 吉 机 代 天 府 萬 皇 寶 歸 請 選 一 起 2 還\n】】5 征 5 月 2 號 ( 刁\n2 二 《/\n了 了 9 允 9 必 鄉 4 与 ( 司 )\n時 間 :09:00 一 17:00\n地 點 : 喜 樹 代 天 府 萬 皇宮 廣場 上 歡\n(台 南 市 南 區 喜 樹 路 222 巷 52 號 )\n月 也 騰 ) j8s00ee 宜 8 人 送 針 六\n@ 全 家 禮券 250 元 過\n全 家 咖啡 一 杯\n捐血 完成 加 送 衛生 紙 一 串\n首次 捐血 者 : 贈 紀念 T 恤 一 件\nPER\n語 人 全 1. 捐 血 記得 攜帶 證件 , 穿 袖子 寬鬆 的 衣服 ! 且\n2: 一 週 內 未 服用 任何 藥物 1\n※ 贈品 依 實際 為 主 A\n※ 萬 皇宮 保有 活動 最 終 解釋 權 。 和 /\n全 主 辦 單位 : 萬 皇宮 管理 委員 會 茲 一 5\n合 協 辦 唱 位 : 喜 北里 林 鴻儒 時 長 辦公 室 、 喜 東 里 蔡 祠 重 里 長 辦公 室 、 喜 南里 曾 和 田 里 長 辦公 室\n翁 點 助 量 位 : 長 載 實業 股份 有 限 公司 董事 長 王 呻 民 、 顧 陽 山 機 械 實 業 社 董事 長 王 榮 南 、 全 家 三 喜 店\n蕊 岱 工業 股份 有 限 公司 董事 長 蔡 添 發 、 蘇 財 永 先 生 放\n",
+            "confidence": 58
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.942343,
+        "lng": 120.176351
       }
     }
   ],
