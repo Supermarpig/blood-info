@@ -241,6 +241,36 @@
         "lat": 23.6748429,
         "lng": 120.4710562
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMDctNi83KOaXpSnlj7DljJfljZfmuK/lr4zljZflrq4=",
+      "time": "",
+      "organization": "台北南港富南宮",
+      "location": "台北南港富南宮",
+      "activityDate": "2026-06-07",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券"
+      ],
+      "pttData": {
+        "rawLine": "6/7(日)台北南港富南宮",
+        "images": [
+          "https://i.imgur.com/FGmBwsb.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/FGmBwsb.jpeg",
+            "text": "有 ss 公 必 2eaN2 公 ,\n說 人 7vrrrammrnttnn\n還 人 全\n吧 歷 和\n司 回 山上 出 和 lg 了\n和 AS 生 生 三 三 二 三 主 2\n讓 1\n捐血 送禮 券 $\n熱血 募集 中\n衣 生\n日 期 :115 年 6 月 7 日 (日) 有\n時 間 : 09:30-16:30 胃 /\n地 點 : 台 北市 南港 區 研究 路 , 沁 從 打 也\n一 自 112 就 ( 富 南 宮 ), 食 証 、 讀\n活動 辦法 謂\n司 捐 7-~E1 元 禮券\n回 捐 25006 從 生 Qagsse 一 9)\n加 mo 蝦 人 人 Wiis- 芍 人 @)\nK 數 量 有 限 送 完 為 止\n主 辦 單位 : 台 北市 議員 李 明 賢 、 富 南宮 管理 委員 會 、 內 湖 麗 山里 鄰 長 陳 李 較 市\n協辦 單位 : 新 富里 、 中 南里 、 中 研 里 、 三 重 里 、 南 港 里 、 舊 莊 里 、 九 如 里\n順\n",
+            "confidence": 56
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 25.0516332,
+        "lng": 121.6157468
+      }
     }
   ],
   "2026-06-13": [
@@ -366,6 +396,36 @@
       "coordinates": {
         "lat": 22.4631275,
         "lng": 120.4617628
+      }
+    }
+  ],
+  "2026-06-06": [
+    {
+      "id": "cHR0LTIwMjYtMDYtMDYtNi82KOWFrSnlj7DkuK3mva3lrZDnpaXlkozot68=",
+      "time": "",
+      "organization": "台中潭子祥和路",
+      "location": "台中潭子祥和路",
+      "activityDate": "2026-06-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "6/6(六)台中潭子祥和路",
+        "images": [
+          "https://i.imgur.com/BitnIPN.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/BitnIPN.jpeg",
+            "text": "寶 財 有 避\n還 有 皮\n熱血 和 條\n06/06 SAT, 雪\n7\n約 了\nfi 全 隊 竹 邊 、\n@3ik9\n250cc @G @ 和 生 蝦 包 活動 日 期:\nMO 全 和\n0cc 和 AAB07 日 2)\n5 2\n現場 安排 人\n3 捐血 車 人 EE 六 115sFe 朋 6 日 六 ) 和 4\nni\n一” 合計 六 吉 博 企 業 有 限 公司 2\n4 圖 2 (台 中 市 潭 子 區 祥和 路 133 巷 33 號 ) 了 品\n主 辦 : 吉 輔 企業 有 限 公司 / 醫療 財團 法 人 台 灣 血 液 基金 會 台 中 捐血 中 心\n協辦 : 潭 子 區 栗林 里 辦 公 處 / 栗林 社區 發 展 協會 / 潭 子 區 嘉仁 里 辦 公 處 / 嘉仁 社區 發 展 協會\n",
+            "confidence": 61
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 24.2294449,
+        "lng": 120.7142016
       }
     }
   ]
