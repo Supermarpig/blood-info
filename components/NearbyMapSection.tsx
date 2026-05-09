@@ -205,7 +205,7 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
                   key={i}
                   ref={isLast ? lastCardRef : undefined}
                   onClick={() => setSelectedIndex(isSelected ? null : i)}
-                  className={`snap-start flex-shrink-0 w-52 flex items-center gap-2.5 bg-white/95 backdrop-blur-sm rounded-xl p-3 border shadow-md transition-all cursor-pointer ${
+                  className={`snap-start flex-shrink-0 w-44 sm:w-52 flex items-center gap-2.5 bg-white/95 backdrop-blur-sm rounded-xl p-3 border shadow-md transition-all cursor-pointer ${
                     isSelected ? "border-orange-400 shadow-orange-200" : "border-[#ececea] hover:shadow-lg"
                   }`}
                 >
