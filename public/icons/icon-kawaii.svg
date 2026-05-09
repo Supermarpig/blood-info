@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Background: soft warm pink -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE8EE"/>
+      <stop offset="100%" stop-color="#FFD0DC"/>
+    </linearGradient>
+    <!-- Drop body: bright coral-red -->
+    <linearGradient id="bodyGrad" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0%" stop-color="#FF4D6D"/>
+      <stop offset="100%" stop-color="#C8002A"/>
+    </linearGradient>
+    <!-- Arm: slightly lighter red -->
+    <linearGradient id="armGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6080"/>
+      <stop offset="100%" stop-color="#D01035"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ═══ BACKGROUND ═══ -->
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)"/>
+
+  <!-- ═══ SHADOW (shrinks when character bounces up) ═══ -->
+  <ellipse cx="256" cy="474" rx="108" ry="14" fill="rgba(180,0,30,0.18)">
+    <animate attributeName="rx"
+      values="108;78;108"
+      dur="1.8s" repeatCount="indefinite"
+      calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"/>
+    <animate attributeName="ry"
+      values="14;7;14"
+      dur="1.8s" repeatCount="indefinite"
+      calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"/>
+    <animate attributeName="opacity"
+      values="0.18;0.08;0.18"
+      dur="1.8s" repeatCount="indefinite"
+      calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"/>
+  </ellipse>
+
+  <!-- ═══ MAIN CHARACTER (bounces up/down) ═══ -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,-22; 0,0"
+      dur="1.8s" repeatCount="indefinite"
+      calcMode="spline"
+      keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"
+      keyTimes="0;0.5;1"/>
+
+    <!-- Left arm (little rounded nub) -->
+    <ellipse cx="112" cy="304" rx="32" ry="20" fill="url(#armGrad)"
+             transform="rotate(-30 112 304)"/>
+    <!-- Right arm -->
+    <ellipse cx="400" cy="304" rx="32" ry="20" fill="url(#armGrad)"
+             transform="rotate(30 400 304)"/>
+
+    <!-- Drop body: pointed top, round bottom -->
+    <path d="M256,72
+             C256,72 390,222 390,332
+             A134,134 0 0,1 122,332
+             C122,222 256,72 256,72Z"
+          fill="url(#bodyGrad)"/>
+
+    <!-- Body sheen (top-left highlight) -->
+    <path d="M256,72
+             C256,72 390,222 390,332
+             A134,134 0 0,1 122,332
+             C122,222 256,72 256,72Z"
+          fill="rgba(255,255,255,0.12)"/>
+    <ellipse cx="208" cy="210" rx="22" ry="50"
+             fill="rgba(255,255,255,0.28)"
+             transform="rotate(-20 208 210)"/>
+
+    <!-- White medical cross on upper body -->
+    <rect x="242" y="130" width="28" height="74" rx="8" fill="rgba(255,255,255,0.80)"/>
+    <rect x="214" y="158" width="84" height="28" rx="8" fill="rgba(255,255,255,0.80)"/>
+
+    <!-- Face area: white oval in lower half of drop -->
+    <ellipse cx="256" cy="358" rx="110" ry="90" fill="white"/>
+
+    <!-- ── Left eye ── -->
+    <g>
+      <!-- Pupil -->
+      <ellipse cx="215" cy="338" rx="21" ry="25" fill="#1A0A0F">
+        <!-- BLINK: squish ry to 2, then back -->
+        <animate attributeName="ry"
+          values="25;25;25;2;25;25;25"
+          keyTimes="0;0.25;0.30;0.33;0.36;0.6;1"
+          dur="5s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1"/>
+      </ellipse>
+      <!-- Catchlight -->
+      <circle cx="226" cy="326" r="8" fill="white">
+        <animate attributeName="r"
+          values="8;8;8;0;8;8;8"
+          keyTimes="0;0.25;0.30;0.33;0.36;0.6;1"
+          dur="5s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1"/>
+      </circle>
+      <circle cx="232" cy="322" r="3" fill="white">
+        <animate attributeName="r"
+          values="3;3;3;0;3;3;3"
+          keyTimes="0;0.25;0.30;0.33;0.36;0.6;1"
+          dur="5s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1"/>
+      </circle>
+    </g>
+
+    <!-- ── Right eye ── -->
+    <g>
+      <ellipse cx="297" cy="338" rx="21" ry="25" fill="#1A0A0F">
+        <animate attributeName="ry"
+          values="25;25;25;2;25;25;25"
+          keyTimes="0;0.25;0.30;0.33;0.36;0.6;1"
+          dur="5s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1"/>
+      </ellipse>
+      <circle cx="308" cy="326" r="8" fill="white">
+        <animate attributeName="r"
+          values="8;8;8;0;8;8;8"
+          keyTimes="0;0.25;0.30;0.33;0.36;0.6;1"
+          dur="5s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1"/>
+      </circle>
+      <circle cx="314" cy="322" r="3" fill="white">
+        <animate attributeName="r"
+          values="3;3;3;0;3;3;3"
+          keyTimes="0;0.25;0.30;0.33;0.36;0.6;1"
+          dur="5s" repeatCount="indefinite"
+          calcMode="spline"
+          keySplines="0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1; 0.5 0 0.5 1"/>
+      </circle>
+    </g>
+
+    <!-- Smile -->
+    <path d="M222,374 Q256,406 290,374"
+          stroke="#C8002A" stroke-width="9" fill="none" stroke-linecap="round"/>
+
+    <!-- Rosy cheeks -->
+    <ellipse cx="178" cy="368" rx="30" ry="18" fill="rgba(255,130,150,0.45)"/>
+    <ellipse cx="334" cy="368" rx="30" ry="18" fill="rgba(255,130,150,0.45)"/>
+
+    <!-- Sparkle top-left of canvas -->
+    <g transform="translate(68, 72)" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate"
+        values="68,72; 68,62; 68,72"
+        dur="2.2s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"/>
+      <line x1="0" y1="-14" x2="0" y2="14" stroke="#FF6B8A" stroke-width="5" stroke-linecap="round"/>
+      <line x1="-14" y1="0" x2="14" y2="0" stroke="#FF6B8A" stroke-width="5" stroke-linecap="round"/>
+      <line x1="-10" y1="-10" x2="10" y2="10" stroke="#FF6B8A" stroke-width="3" stroke-linecap="round"/>
+      <line x1="10" y1="-10" x2="-10" y2="10" stroke="#FF6B8A" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Sparkle top-right -->
+    <g transform="translate(430, 100)" opacity="0.55">
+      <animateTransform attributeName="transform" type="translate"
+        values="430,100; 430,90; 430,100"
+        dur="2.6s" begin="0.4s" repeatCount="indefinite"
+        calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"/>
+      <line x1="0" y1="-10" x2="0" y2="10" stroke="#FFAABB" stroke-width="4" stroke-linecap="round"/>
+      <line x1="-10" y1="0" x2="10" y2="0" stroke="#FFAABB" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+  </g>
+</svg>

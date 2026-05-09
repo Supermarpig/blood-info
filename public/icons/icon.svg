@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Background: deep crimson gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8193C"/>
+      <stop offset="100%" stop-color="#7A0018"/>
+    </linearGradient>
+    <!-- Drop: pure white with slight warm tint at bottom -->
+    <linearGradient id="dropFill" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#FFE8E8"/>
+    </linearGradient>
+    <!-- Inner glow on drop -->
+    <radialGradient id="innerGlow" cx="38%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.6)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded-square background -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+
+  <!-- Subtle vignette on background corners -->
+  <rect width="512" height="512" rx="96" fill="rgba(0,0,0,0.08)"/>
+
+  <!-- Drop shadow underneath -->
+  <ellipse cx="256" cy="462" rx="105" ry="16" fill="rgba(0,0,0,0.22)"/>
+
+  <!-- Blood drop shape: pointed top, round bottom -->
+  <!-- Path: start at top tip, bezier to right edge, arc around bottom, bezier back -->
+  <path d="M256,78
+           C256,78 384,236 384,340
+           A128,128 0 0,1 128,340
+           C128,236 256,78 256,78Z"
+        fill="url(#dropFill)"/>
+
+  <!-- Glass highlight: large soft glow in upper portion of drop -->
+  <path d="M256,78
+           C256,78 384,236 384,340
+           A128,128 0 0,1 128,340
+           C128,236 256,78 256,78Z"
+        fill="url(#innerGlow)"/>
+
+  <!-- Primary specular highlight (bright spot, upper-left) -->
+  <ellipse cx="210" cy="230" rx="24" ry="52"
+           fill="rgba(255,255,255,0.52)"
+           transform="rotate(-22 210 230)"/>
+
+  <!-- Secondary tiny highlight (sharp glint) -->
+  <ellipse cx="202" cy="202" rx="10" ry="20"
+           fill="rgba(255,255,255,0.75)"
+           transform="rotate(-22 202 202)"/>
+
+  <!-- Heart cutout inside the drop — subtle, same red as background -->
+  <!-- Heart centered at (256, 370), height ~100px -->
+  <path d="M256,402
+           C226,382 194,360 194,336
+           A 37,37 0 0,1 256,348
+           A 37,37 0 0,1 318,336
+           C318,360 286,382 256,402Z"
+        fill="rgba(180,10,35,0.28)"/>
+</svg>

@@ -96,6 +96,8 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <head>
+        {/* Animated SVG favicon — Chrome/Firefox shows the bouncing kawaii character */}
+        <link rel="icon" type="image/svg+xml" href="/icons/icon-kawaii.svg" />
         <link rel="alternate" type="text/plain" href="/llms.txt" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" />
       </head>
