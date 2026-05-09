@@ -36,7 +36,8 @@ class MemoryCache {
     timestamp: 0,
   };
 
-  private static TTL = 86400000; // 24小時，單位為毫秒
+  // Vercel instance 閒置幾分鐘就 cold down，24h 撐不住；1h 足以應付手動補資料後的刷新需求，且不影響 ISR 費用
+  private static TTL = 3600000; // 1小時，單位為毫秒
 
   static get(): Record<string, DonationEvent[]> | null {
     if (!this.cache.data) return null;
