@@ -1,5 +1,10 @@
 import type { Config } from "tailwindcss";
 
+// Keep in sync with lib/zIndex.ts — tailwind.config cannot import TS modules
+// because it runs in a separate PostCSS/Node context outside webpack.
+const Z = { mapAnim: 450, mapFloat: 500, toast: 800, modal: 1000, confetti: 9999 };
+const zHighest = Math.max(...Object.values(Z)) + 1;
+
 const config: Config = {
     darkMode: ["class"],
     content: [
@@ -67,6 +72,14 @@ const config: Config = {
   		},
   		animation: {
   			heartbeat: 'heartbeat 4s ease-in-out infinite',
+  		},
+  		zIndex: {
+  			'map-anim':  String(Z.mapAnim),
+  			'map-float': String(Z.mapFloat),
+  			'toast':     String(Z.toast),
+  			'modal':     String(Z.modal),
+  			'confetti':  String(Z.confetti),
+  			'highest':   String(zHighest),
   		},
   	}
   },

@@ -222,7 +222,7 @@ export default function Confetti({ isActive, duration = 4000 }: ConfettiProps) {
   return createPortal(
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-[9999]"
+      className="fixed inset-0 pointer-events-none z-highest"
     />,
     document.body
   );

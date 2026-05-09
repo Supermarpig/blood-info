@@ -6,6 +6,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { NearbyLocation, UserLocation } from "@/hooks/useNearbyLocations";
+import { zIndex } from "@/lib/zIndex";
 
 /* ── fix Leaflet default icon path broken by webpack ── */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -146,7 +147,7 @@ function AnimatedLines({ user, locations, selectedIndex }: { user: UserLocation;
         width: frame.w,
         height: frame.h,
         pointerEvents: "none",
-        zIndex: 450,
+        zIndex: zIndex.mapAnim,
       }}
     >
       <defs>

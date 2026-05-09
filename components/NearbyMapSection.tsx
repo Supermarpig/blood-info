@@ -185,7 +185,7 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
 
         {/* loading overlay */}
         {isLoading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-white/65 backdrop-blur-sm z-[500]">
+          <div className="absolute inset-0 flex items-center justify-center bg-white/65 backdrop-blur-sm z-map-float">
             <div className="flex items-center gap-2 text-sm font-medium text-[#4a4a4a]">
               <Loader2 className="w-4 h-4 animate-spin text-[#e11d2a]" />
               定位中…
@@ -196,7 +196,7 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
 
         {/* Floating result cards — bottom of map */}
         {hasResults && (
-          <div className="absolute bottom-2 left-2 right-2 z-[500] flex gap-2 overflow-x-auto pb-0.5 snap-x snap-mandatory scrollbar-none">
+          <div className="absolute bottom-2 left-2 right-2 z-map-float flex gap-2 overflow-x-auto pb-0.5 snap-x snap-mandatory scrollbar-none">
             {visibleLocations.map((loc, i) => {
               const isSelected = selectedIndex === i;
               const isLast = i === visibleLocations.length - 1;
