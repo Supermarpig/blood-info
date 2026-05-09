@@ -322,6 +322,7 @@ export default function CardInfo({
                               <span className="text-emerald-600">
                                 📍 使用者回報
                               </span>
+                              {/* TODO: admin only
                               <a
                                 href={donation.reportData.issueUrl}
                                 target="_blank"
@@ -331,6 +332,7 @@ export default function CardInfo({
                                 <span>查看 Issue</span>
                                 <ExternalLink className="w-3 h-3" />
                               </a>
+                              */}
                             </div>
                             <p className="text-emerald-700 text-xs mt-1">
                               感謝您的回報！此資訊由熱心使用者提供。

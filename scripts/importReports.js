@@ -180,20 +180,30 @@ async function main() {
                 existingData[date] = [];
             }
 
-            // 檢查是否已存在相同地址的資料
-            const exists = existingData[date].some(
-                (e) => e.location === event.location
+            // 精確比對，或模糊比對（地址互相包含）
+            const matchedEntry = existingData[date].find(
+                (e) =>
+                    e.location === event.location ||
+                    e.location.includes(event.location) ||
+                    event.location.includes(e.location)
             );
 
-            if (!exists) {
-                existingData[date].push(event);
-                console.log(`  ✅ 新增: ${date} - ${event.location}`);
-
-                // 關閉已處理的 Issue
+            if (matchedEntry) {
+                // 合併 reportData 與 tags 到既有資料
+                matchedEntry.reportData = event.reportData;
+                if (event.tags?.length) {
+                    const existing = new Set(matchedEntry.tags || []);
+                    for (const tag of event.tags) existing.add(tag);
+                    matchedEntry.tags = [...existing];
+                }
+                console.log(`  🔀 合併到已有資料: ${date} - ${matchedEntry.location}`);
                 await closeIssue(issueNumber);
                 console.log(`  🔒 已關閉 Issue #${issueNumber}`);
             } else {
-                console.log(`  ⏩ 跳過 (已存在): ${date} - ${event.location}`);
+                existingData[date].push(event);
+                console.log(`  ✅ 新增: ${date} - ${event.location}`);
+                await closeIssue(issueNumber);
+                console.log(`  🔒 已關閉 Issue #${issueNumber}`);
             }
         }
 

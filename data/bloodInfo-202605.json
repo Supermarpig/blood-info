@@ -7827,7 +7827,18 @@
       "coordinates": {
         "lat": 22.6294652,
         "lng": 120.2814304
-      }
+      },
+      "reportData": {
+        "images": [
+          "https://res.cloudinary.com/dm9udnm1j/image/upload/v1778262603/blood-reports/bpe8pkdbskob4tohzczs.jpg"
+        ],
+        "issueUrl": "https://github.com/Supermarpig/blood-info/issues/140"
+      },
+      "tags": [
+        "食品",
+        "禮券",
+        "餐飲"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMTAtMDk6MDB+MTc6MDAt5LiJ5rCR5Y2A6YeM6ZW36IGv6Kq85pyD",
@@ -8150,28 +8161,6 @@
         "lat": 24.6765906,
         "lng": 121.7670837
       }
-    },
-    {
-      "id": "cmVwb3J0LTIwMjYtMDUtMTAt6auY6ZuE5biC6bm95Z+V5Y2A5a+M6YeO6LevMTcw6Jmf",
-      "time": "09:00~17:00",
-      "organization": "使用者回報",
-      "location": "高雄市鹽埕區富野路170號",
-      "rawContent": "使用者回報: 高雄市鹽埕區富野路170號",
-      "activityDate": "2026-05-10",
-      "center": "使用者回報",
-      "detailUrl": "https://github.com/Supermarpig/blood-info/issues/140",
-      "tags": [
-        "食品",
-        "禮券",
-        "餐飲"
-      ],
-      "reportData": {
-        "images": [
-          "https://res.cloudinary.com/dm9udnm1j/image/upload/v1778262603/blood-reports/bpe8pkdbskob4tohzczs.jpg"
-        ],
-        "issueUrl": "https://github.com/Supermarpig/blood-info/issues/140"
-      },
-      "isUserReport": true
     }
   ],
   "2026-05-11": [
