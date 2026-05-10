@@ -2,7 +2,9 @@
 
 import { useId, useState, useEffect, useCallback } from "react";
 import dynamic from "next/dynamic";
-import { Loader2, Navigation2, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { Loader2, Navigation2, ExternalLink, Gift, X } from "lucide-react";
+import { getGiftByTagId } from "@/lib/giftConfig";
 import { NearbyLocation, UserLocation } from "@/hooks/useNearbyLocations";
 
 const LeafletMap = dynamic(() => import("@/components/LeafletMap"), {
@@ -39,6 +41,7 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
   const uid = useId().replace(/[^a-zA-Z0-9]/g, "") || "nms";
   const hasResults = nearbyLocations.length > 0;
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const [openGiftIndex, setOpenGiftIndex] = useState<number | null>(null);
   const BATCH = 1;
   const [displayCount, setDisplayCount] = useState(BATCH);
 
@@ -194,41 +197,93 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
         )}
         </div>{/* end map clip div */}
 
+        {/* Gift popover */}
+        {openGiftIndex !== null && nearbyLocations[openGiftIndex] && (() => {
+          const ev = nearbyLocations[openGiftIndex].event;
+          return (
+            <div className="absolute bottom-[84px] left-2 right-2 z-map-float bg-white/97 backdrop-blur-sm rounded-xl shadow-lg border border-amber-200 p-3">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-amber-600 flex items-center gap-1">
+                  <Gift className="w-3 h-3" /> 贈品資訊
+                </span>
+                <button onClick={() => setOpenGiftIndex(null)} className="text-[#7a7a7a] hover:text-[#171717]">
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+              <p className="text-xs font-semibold text-[#171717] mb-1.5">{ev.organization}</p>
+              <div className="flex gap-1 flex-wrap mb-2">
+                {ev.tags?.map(tag => (
+                  <span key={tag} className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              {(ev.customNote || ev.rawContent) && (
+                <p className="text-[10px] text-[#7a7a7a] line-clamp-2 mb-1.5">{ev.customNote || ev.rawContent}</p>
+              )}
+              {ev.tags && ev.tags.length > 0 && (() => {
+                const slug = getGiftByTagId(ev.tags[0])?.slug;
+                return slug ? (
+                  <Link href={`/gift/${slug}`} onClick={() => setOpenGiftIndex(null)}
+                    className="text-[10px] text-[#e11d2a] font-semibold flex items-center gap-0.5 mt-0.5">
+                    查看今日所有{ev.tags[0]}活動 →
+                  </Link>
+                ) : null;
+              })()}
+            </div>
+          );
+        })()}
+
         {/* Floating result cards — bottom of map */}
         {hasResults && (
           <div className="absolute bottom-2 left-2 right-2 z-map-float flex gap-2 overflow-x-auto pb-0.5 snap-x snap-mandatory scrollbar-none">
             {visibleLocations.map((loc, i) => {
               const isSelected = selectedIndex === i;
               const isLast = i === visibleLocations.length - 1;
+              const hasTags = loc.event.tags && loc.event.tags.length > 0;
               return (
                 <div
                   key={i}
                   ref={isLast ? lastCardRef : undefined}
-                  onClick={() => setSelectedIndex(isSelected ? null : i)}
-                  className={`snap-start flex-shrink-0 w-44 sm:w-52 flex items-center gap-2.5 bg-white/95 backdrop-blur-sm rounded-xl p-3 border shadow-md transition-all cursor-pointer ${
-                    isSelected ? "border-orange-400 shadow-orange-200" : "border-[#ececea] hover:shadow-lg"
-                  }`}
+                  className="snap-start flex-shrink-0 relative pt-3"
                 >
-                  <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-                    style={{ background: isSelected ? "#f97316" : "#e11d2a" }}>
-                    {i + 1}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs font-semibold text-[#171717] truncate">{loc.event.organization}</p>
-                    <p className="text-[10px] mt-0.5 truncate" style={{ color: isSelected ? "#f97316" : "#9a9a9a" }}>
-                      {loc.event.time || "固定地點"}
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0 text-right">
-                    <p className="text-xs font-bold" style={{ color: isSelected ? "#f97316" : "#e11d2a" }}>{fmt(loc.distance)}</p>
-                    <a
-                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.event.location)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
+                  {hasTags && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setOpenGiftIndex(openGiftIndex === i ? null : i); }}
+                      className="absolute top-0 right-3 z-10 flex items-center gap-0.5 text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-amber-400 text-white shadow-md active:bg-amber-500"
                     >
-                      <ExternalLink className="w-3 h-3 text-[#7a7a7a] mt-0.5 ml-auto" />
-                    </a>
+                      <Gift className="w-2.5 h-2.5" />
+                      {loc.event.tags![0]}
+                      {loc.event.tags!.length > 1 && <>+{loc.event.tags!.length - 1}</>}
+                    </button>
+                  )}
+                  <div
+                    onClick={() => setSelectedIndex(isSelected ? null : i)}
+                    className={`w-44 sm:w-52 flex items-center gap-2.5 bg-white/95 backdrop-blur-sm rounded-xl p-3 border shadow-md transition-all cursor-pointer ${
+                      isSelected ? "border-orange-400 shadow-orange-200" : "border-[#ececea] hover:shadow-lg"
+                    }`}
+                  >
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
+                      style={{ background: isSelected ? "#f97316" : "#e11d2a" }}>
+                      {i + 1}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs font-semibold text-[#171717] truncate">{loc.event.organization}</p>
+                      <p className="text-[10px] mt-0.5 truncate" style={{ color: isSelected ? "#f97316" : "#9a9a9a" }}>
+                        {loc.event.time || "固定地點"}
+                      </p>
+                    </div>
+                    <div className="flex-shrink-0 text-right">
+                      <p className="text-xs font-bold" style={{ color: isSelected ? "#f97316" : "#e11d2a" }}>{fmt(loc.distance)}</p>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.event.location)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <ExternalLink className="w-3 h-3 text-[#7a7a7a] mt-0.5 ml-auto" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               );
