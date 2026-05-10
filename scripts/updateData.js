@@ -274,11 +274,14 @@ async function geocodeEvents(data) {
     console.log(`靜態表命中 ${staticHits} 筆`);
 
     // 第二步：剩下沒座標的走 Google Maps Geocoding
+    // 只對看起來像真實地址的字串送 geocode（含路/街/大道 + 段/號/巷/弄）
+    // PTT-only 事件的 location 常是活動名稱（如「台北南港各指定捐血點」），geocode 會回傳錯誤座標
+    const ADDR_RE = /[路街道巷弄][0-9]/;
     const addresses = new Set();
     for (const date in data) {
         for (const event of data[date]) {
             if (event.coordinates) continue;
-            if (event.location && geocodeCache.get(event.location) == null) {
+            if (event.location && geocodeCache.get(event.location) == null && ADDR_RE.test(event.location)) {
                 addresses.add(event.location);
             }
         }
@@ -300,6 +303,7 @@ async function geocodeEvents(data) {
     for (const date in data) {
         for (const event of data[date]) {
             if (event.coordinates || !event.location) continue;
+            if (!ADDR_RE.test(event.location)) continue; // 跳過非地址字串
             const coords = geocodeCache.get(event.location);
             if (coords) {
                 event.coordinates = coords;
