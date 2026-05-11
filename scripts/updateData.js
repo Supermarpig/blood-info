@@ -303,7 +303,6 @@ async function geocodeEvents(data) {
     for (const date in data) {
         for (const event of data[date]) {
             if (event.coordinates || !event.location) continue;
-            if (!ADDR_RE.test(event.location)) continue; // 跳過非地址字串
             const coords = geocodeCache.get(event.location);
             if (coords) {
                 event.coordinates = coords;
