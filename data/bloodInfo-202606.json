@@ -25,6 +25,32 @@
         "lat": 22.6374475,
         "lng": 120.3385598
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMDEtNi8xKOS4gCnmoYPlnJLlhavlvrfkuInlhYPlrq4=",
+      "time": "",
+      "organization": "桃園八德三元宮",
+      "location": "桃園八德三元宮",
+      "activityDate": "2026-06-01",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "6/1(一)桃園八德三元宮",
+        "images": [
+          "https://i.imgur.com/T4UVgg4.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/T4UVgg4.jpeg",
+            "text": "時 人\nee\n2 當 捐血 ! 教 人 一 命 ,\n活動 日 期 :115 年 6 月 1 日 (星期 一 應\n活動 時 間 : o9:00~17:00\n活動 地 點 : 改 德 三 元 宮 廟 後 停車 坦 店\n主 辦 單位 : 八 德 三 學 客\n協辦 單位 : 桃 轅 市 三 元 關懷 協會 、 桃 德 獅 子 會 。\n、 代 書 呂 景 楓 、 有 德 獅 了 會\n、 國 泰 人 壽 八 德 分 處\n、 桃 園 市 南投 同 鄉 會 八 德 分 會\n、 市 議員 呂 林 小 几\n贈 雞蛋 ! 盒 (10 顆 裝 )、 壽 司 米 ! 包 (| 公斤)\n同 捐 250ce 。 濕 抵 巾 | 包 、 鮮 葉 麵 ! 包 、 冰 絲 防曬 油 誠\n圖 牙膏 | 條 、 白 嘉 蛋 ! 顆\n捐 500cc 贈 上 可 神 品 雙人\n八 仙 三 元 寐 管理 委員 會 主 任 委員 呂 林 小 鳳 暨 全 體委 員 最 六\n『 避 六 8 加 新 (和 中 心 維 絲 轉 了 間 hsinchu_blood_center\n號 總 此 請 加 入 「 愛 捐血 」LINE 官 方 帳號 , 一 彈 誤\n旗 呈 最 讓 您 即 時 接收 捐血 新 知 與 活動 訊息 灌 池 記\n區 繼 ) ※ 請 綁 定 「 新 竹 捐血 中 心 」 喔 ~!\nAL\n",
+            "confidence": 65
+          }
+        ]
+      },
+      "isPttOnly": true
     }
   ],
   "2026-06-02": [
@@ -1026,6 +1052,33 @@
       }
     },
     {
+      "id": "cHR0LTIwMjYtMDYtMDYtNi82KOWFrSnmlrDljJfmnb/mqYvlr4zlsbHooZc=",
+      "time": "",
+      "organization": "新北板橋富山街",
+      "location": "新北板橋富山街",
+      "activityDate": "2026-06-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券",
+        "餐飲"
+      ],
+      "pttData": {
+        "rawLine": "6/6(六)新北板橋富山街",
+        "images": [
+          "https://i.imgur.com/QkFSsJu.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/QkFSsJu.jpeg",
+            "text": "7 洶 , 交 CC PS < 寢 ~ 膝\n2\n@ S\nee Go!\n115/6/6(ZX)\n地 點 : 新 北市 板橋 區 富山 街 7 巷 10 之 1 號 3\n( 永 崗 竺 踢) 二 友和\n09:30~17:00\n捐血 咸 謝 禮 : 2\n捐 250cc 贈 全 聯 禮券 200 元\n捐 500cc 贈 全 聯 禮券 400 元\n: 史 生 一 送 完 為 目\n八 : 3 」 証 aa 也\n四 生 說 斷 寢\n單間 ! 宮本?\n讓 限定 保溫 林 生 一 來 呷 麻油 飯 + 喝 咖啡\n天 了 順便 把 好 運 帶 回 去 ~\n# 主 辦 單 位 : 之\n一 新 北市 指 慧 宮 區 72 CC,\n湛 / 人 人 指 站 當 後 放 難 全 / 六 NM\nNo “請 搭 帶 具有 身分 證 字 號 和 照片 之 證件\n",
+            "confidence": 54
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
       "id": "cHR0LTIwMjYtMDYtMDYtNi82KOWFrSnlj7DkuK3mva3lrZDnpaXlkozot68=",
       "time": "",
       "organization": "台中潭子祥和路",
@@ -1052,6 +1105,32 @@
         "lat": 24.2294449,
         "lng": 120.7142016
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMDYtNi82KOWFrSnpq5jpm4Tlt6bnh5/li53liKnlnIvlsI8=",
+      "time": "",
+      "organization": "高雄左營勝利國小",
+      "location": "高雄左營勝利國小",
+      "activityDate": "2026-06-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "6/6(六)高雄左營勝利國小",
+        "images": [
+          "https://i.imgur.com/2h2nVWB.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/2h2nVWB.jpeg",
+            "text": ", 一 鄧\n/ W8 包 一 信和 人 一 和\nN 入 4\nS‧ 捐血 活動\n加 es\n加\n宮下 旦 !\n!\n空 窗 期 和 監 病 品 席 場 !\n請 勿 利 愛 滋\n全\n各 mmee S\n蟬 「 和 1. 請 攜帶 有 相 片 的 身分 證\n反 明 : 們 546 月 6 ˋ2.14 天 內 服藥 或 註 畫 者\n托 斷 : 上 午 09;00 至 下 午 17:00 2 一 候\n活動 地 點 勝利 國 小 前 廣電 和 點\n高 雄 市 丰 炎 區 南 屏 路 1 號 和\n1. 平 安 米 1 包 .\n連絡 電話 07-5580865\n主 辦 單位 高 雄 市 左 營區 新 下 社區 發 展 協會 3 電熱 水 電 zaomigmsu)\n高 雄 市 博仁 關 善 會 4 方 師 全 夷 宋 夫 包\n協辦 單位 勝利 國 小 5 日 本 頂級 A5 和 牛 招待 谷 EE\n市 議員 陳 麗 珍 服務 處 samhtaeg |[ 斌 詳 眾 r\n新 下 里 里 長 黃 慶 德 服務 處 ※ 絹 500ccj 剛 二 制作\n信義 房屋 博愛 明 誠 店 烤 雞 一 隻 六 角 和 次 玫 3\n王 品 和 和 牛 涮 博愛 店 高 雄 市 博仁 慈善 會\n瑞 豐 夜 市 曾 繼 邊 % 媽 咪 樂 健康 科技 股份 有 限 公司\n也 卷 之 kr 了 印 次 沁 At 即 次 本 加 轉\n李 明 璋 ws 湯 家 運 ws 李 明 璋 先 生 湯 家 運 先 生 聯合 捐贈\n#Tggk 螢 慶 僵 *%4 隙 麗 玲 沮 洲\n",
+            "confidence": 56
+          }
+        ]
+      },
+      "isPttOnly": true
     }
   ],
   "2026-06-07": [
@@ -1375,6 +1454,34 @@
       }
     },
     {
+      "id": "cHR0LTIwMjYtMDYtMDctNi83KOaXpSnmlrDljJfomIbmtLLljYDlhazmiYA=",
+      "time": "",
+      "organization": "新北蘆洲區公所",
+      "location": "新北蘆洲區公所",
+      "activityDate": "2026-06-07",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "6/7(日)新北蘆洲區公所",
+        "images": [
+          "https://i.imgur.com/YJd95mG.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/YJd95mG.jpeg",
+            "text": "1 一 和 || 一 一\n員 , 行 性\n人 5\n用 早上 9:oo - 下 午 4:oo yy\n2 9 席\n“” 基 洲 區 公所 前 廣場\n____ 藹 洲 區 三 民 路 95\n\npe (捐血 禮品 ,\n憶 辦 單位 : 蘆 洲 受 玄 宮 新 北市 議員 顏 蔚 慈 服務 處\n",
+            "confidence": 52
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 25.0846288,
+        "lng": 121.4736897
+      }
+    },
+    {
       "id": "cHR0LTIwMjYtMDYtMDctNi83KOaXpSnlj7DkuK3mlrDnpL7lj5flpYnlrq4=",
       "time": "",
       "organization": "台中新社受奉宮",
@@ -1607,6 +1714,33 @@
         "lat": 23.679436,
         "lng": 120.4747975
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMTMtNi8xMyjlha0p5Y+w5Lit5p2x5Y2A56aP5a6J5a6u",
+      "time": "",
+      "organization": "台中東區福安宮",
+      "location": "台中東區福安宮",
+      "activityDate": "2026-06-13",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "餐飲",
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "6/13(六)台中東區福安宮",
+        "images": [
+          "https://i.imgur.com/rXSIGwz.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/rXSIGwz.jpeg",
+            "text": "( 閑 撼 (0 斷 線 [\n圖 晨 全\nmm 全\n弓 ~ 人 G\n一 2 Go@\n一 人\nee AN 當\n伍 儿 、\n人\n4 AMNe 人 ~\n日 期 : 1154 06 有 13 日 (星期 六 ) 09:00~16:00 國 點\n主 辦 : 台 中 市 東區 束 英里 福安 宮 管理 委員 會\n地 點 : 福 安 宮 ( 束 區 三 賢 街 268 號 )\n贊助 單位 :\nL- 利 奇 貿易 有 限 公司 蔡 享 窯 、 邱 櫻 語 。\n2 日 初 古 早 味 蛋 糕\n人 意義 興業 股份 有 限 公司 黃 敬 義 、 徐 筆 組 。\n4 巨 泰 開 發 有 限 公司 丁 文 亮 、 陳 婉 茹 。\n5 寶 鳥 眼鏡 公司 十 甲 店\n6 福安 宮 常 務 委 員 余 秀 蓮 (包子 260 顆 )、 黎 玉 妃 (茶葉 蛋 260 顆 )、 副 主 任 委員 鎬 建 鎖 (統一 蜜 豆 奶 12 箱 ) 。\n字 福安 宮 信 眾 捐 獻 芳 名 錄 等 ~ 若 心 人 士 (公布 欄 紅 榜 》。\nL. 台 中 市 東 英里 福安 宮 奸 因 福 袋 + 日 初 古 早 味 蛋 糕 禮 券 乙 張 。 2 福安 宮 平 安 麵 線 。\n& 日 初 古 早 味 蛋 糕 抵 用 券 乙 張 。4 明 橋 歐 風 耐熱 咖啡 杯 。\n5 明 橋 多 功能 筷 租 收納 盒 。6. 明 橋 竹 蓋 面 紙 盒 。7. 明 橋 EVA 桌 布 野餐 墊 。8. 乾 義興 業 帆布 環保 袋 。\n9 參加 獎 : 當 天 凡 領 有 捐血 號 碼 牌 ‧ 即 可 獲得 乙 份 寶島 眼鏡 造型 集 線 器 + 折價 券 2 合 1\n嘉 以 上 明 橋 贈 品 型 式 顏色 隨機\n出 1 吝 所 有 贈品 除 參 加 獎 扣 250ccx1 份 500ccx2 份\n※ 贈 品 數 量 有 限 送 宛 為 止 ※\n六 捐血 朋友 領有 號 碼 牌 才 點心 此 次 為 一 熱 包 了 、 茶 葉 蛋 、 義 美 豆奶 各 260 份 送 完 為 止 ! !\n",
+            "confidence": 72
+          }
+        ]
+      },
+      "isPttOnly": true
     }
   ],
   "2026-06-27": [
@@ -1737,6 +1871,34 @@
         "lat": 23.9762982,
         "lng": 120.6833542
       }
+    }
+  ],
+  "2026-06-10": [
+    {
+      "id": "cHR0LTIwMjYtMDYtMTAtNi8xMC02LzExKOS4iS3lm5sp6Ie65YyX56eR5oqA5aSn5a245a2455Sf5rS75YuV5Lit5b+D5YmN",
+      "time": "",
+      "organization": "臺北科技大學學生活動中心前",
+      "location": "臺北科技大學學生活動中心前",
+      "activityDate": "2026-06-10",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "電影票"
+      ],
+      "pttData": {
+        "rawLine": "6/10-6/11(三-四)臺北科技大學學生活動中心前",
+        "images": [
+          "https://i.imgur.com/d12sfte.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/d12sfte.jpeg",
+            "text": "二 9 則. 有, 」』 的 Ma\nAl. 7 有 0 啟 !: 暗\n和 Rd\n世人 當 人 公用 人 入\n上 NO 朮 “-\n(他 人 作家 殼 記 人\nIN 避 人 XX\n人 和 之\nCa 人\nCa 其 未 捐 箇 ee\n媽 7 fm 三\nNu( 三 和 @ 划 性\n3 紡 人 寢 師 廁 虹 轉 晶 :。\n之 人 記 ~ 號\nee 7\n必 瞳 2026 /06 /10-2026 /06/\n禮 (2 )1:00-18:00 《 診 /\n@ 學 生 活動 中 心 前 (原 中 正 紀念 館 前 ) 說\nY\n/ 。 |」 詳細 資訊 請 關注 意 幼 社 公告 【IG】\n( 全 NTUT_TSZYOU 啟 請 留意\n人\n來 捐 就 送 9\n“只 電影 票 乙 張 所\n好 2 序 x€\n數 量 有 限 換 完 為 止 寢 一\n和 說\n7 2\n咬 附 有 熱血 打 卡 牆 全 轉 pg\n3 歡迎 拍照 打 卡 唷 了 八 : 還\npl 還 您 只\n",
+            "confidence": 40
+          }
+        ]
+      },
+      "isPttOnly": true
     }
   ]
 }
