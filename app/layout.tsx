@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     google: "ytS-Ix7BNYWixGg1JlgYTQIZLNjHvtcsHm9E1QdBUHc",
   },
   title: {
-    default: "捐血活動查詢｜今天哪裡有捐血車？全台捐血地點與贈品即時查詢",
+    default: "2026捐血活動查詢｜今天哪裡有捐血車？全台捐血地點與贈品即時查詢",
     template: "%s | 台灣捐血活動查詢",
   },
   description:
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "捐血活動查詢｜今天哪裡有捐血車？全台捐血地點與贈品即時查詢",
+    title: "2026捐血活動查詢｜今天哪裡有捐血車？全台捐血地點與贈品即時查詢",
     description:
       "捐血活動查詢首選站！今天哪裡有捐血車、哪裡有捐血活動？即時更新全台（台北、新北、台中、高雄）捐血車出車地點、捐血站開放時間與捐血贈品，一頁掌握附近捐血資訊。",
     url: baseUrl,
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "捐血活動查詢｜今天哪裡有捐血車？全台捐血地點與贈品即時查詢",
+    title: "2026捐血活動查詢｜今天哪裡有捐血車？全台捐血地點與贈品即時查詢",
     description:
       "捐血活動查詢首選站！今天哪裡有捐血車、哪裡有捐血活動？即時更新全台（台北、新北、台中、高雄）捐血車出車地點、捐血站開放時間與捐血贈品，一頁掌握附近捐血資訊。",
     images: [`${baseUrl}/imgs/og-img.webp`],

@@ -66,8 +66,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!event) return { title: "找不到此活動" };
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const title = `${event.organization} 捐血活動 ${event.activityDate}`;
-  const description = `${event.activityDate} ${event.time}，地點：${event.location}`;
+  const tagHint = event.tags?.length ? `，捐血贈品：${event.tags.join("、")}` : "";
+  const title = `${event.activityDate} ${event.organization}捐血活動｜${event.location}捐血贈品查詢`;
+  const description = `${event.activityDate} ${event.organization} 捐血活動，地點：${event.location}，時間：${event.time}${tagHint}。查詢附近捐血車、捐血站出車資訊。`;
 
   return {
     title,
