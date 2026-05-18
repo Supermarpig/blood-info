@@ -14347,6 +14347,19 @@
       }
     },
     {
+      "id": "5paw56u5LTIwMjYvMDUvMjAtMDk6MDB+MTI6MzAt5qGD5ZyS5biC5Y2X5bSB5aWz542F5pyD",
+      "time": "09:00~12:30",
+      "organization": "桃園市南崁女獅會",
+      "location": "桃園市八德區和平路1127號",
+      "activityDate": "2026-05-20",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346133294952766",
+      "coordinates": {
+        "lat": 24.9669091,
+        "lng": 121.3208419
+      }
+    },
+    {
       "id": "5paw56u5LTIwMjYvMDUvMjAtMDk6MDB+MTY6MDAt5aSn5rqq5bel5ZWG5Y2U5pyD",
       "time": "09:00~16:00",
       "organization": "大溪工商協會",
@@ -15498,6 +15511,22 @@
       "activityDate": "2026-05-22",
       "center": "台中",
       "detailUrl": "https://www.tc.blood.org.tw/xcevent/cont?sid=0Q135317541000677060",
+      "pttData": {
+        "rawLine": "5/22(五)彰化線西武侯宮",
+        "images": [
+          "https://i.imgur.com/8CGkcTb.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/8CGkcTb.jpeg",
+            "text": "全 主 噴\n山 翁\n記 上\n虹 神 放\n人 地\n/ 人 人\n~ 和 咬 師 到 梧\n廬 ee\n9 攻 戰 人 點 導入 全 喇 罰 了 全 二\nswza^ 全 中 損 歷 中 人 必\n捐血 報 母 毯 、 佛 恩\n時 間 : 115/5/22 ( 週 五 ) 09:30~16:00\n地 點 : 線 西 武 師 宮 ( 線 西 鄉 中 華東 路 21 號 )\n主 辦 單 位 : 國 際 佛 光 會 中 華 總 會 、 佛 光 山 彰化 福山 寺\n承辦 單位 : 國 際 佛 光 會 中 華 總 會 彰化 線 西 分 會\n協辦 單位 : 台 灣 武 德 武 侯 慈 善 會 、 泰 峻 企業 有 限 公司\n財團 法 人 慈 輝 社會 福利 慈善 事業 基金 會\n彰化 縣 和 美 防火 宣 導 分 隊 、 彰 興 紙器 工業 股份 有 限 公司\n線 西 義 消 分 隊 、 瓏 濕 建 設 有 限 公司\n彰化 縣 美 容 美 髮 用 品 器 材 製造 裝修 職業 工會\n捐血 250cc 贈 送 全 聯 禮券 200 元 , 捐 血 500occ 贈 送 全 聯 禮券 400 元\n150 份 送 完 為 止 (當 日 還 有 義 剪 、 消 防 宣 導 及 其 他 豐富 紀念 品 )\n| 綱 290, 折 吧 基本 姓 什 : 且 基 45 公 斤 以 上 。 鬧 蝦 先 是 、 勿 空 畜 。 烙 組 2 過 (下 賣 打 寺 記 說\n",
+            "confidence": 66
+          }
+        ]
+      },
+      "tags": [
+        "禮券"
+      ],
       "coordinates": {
         "lat": 24.1316695,
         "lng": 120.4622016
@@ -16566,6 +16595,20 @@
       "activityDate": "2026-05-23",
       "center": "高雄",
       "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q120514558717961089",
+      "pttData": {
+        "rawLine": "5/23(六)高雄草衙籃球場",
+        "images": [
+          "https://i.imgur.com/KpC0F74.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/KpC0F74.jpeg",
+            "text": "人 店:\n還\n在 救 呈\n就 全 人 8\n| 扣\n| 【 信 # 春 轉 生\n章 竺 黎 球 燈\n草 衙 籃 和\n(前 鎮 區 后 安 路 183-219 號 ) 上 誠\n只 / 信 、、 關 汪 有 提\n9 9 蟬 ki\n\n2 / mu ii 陛 襄 人 誠 有\nEE 9:00-17:00\n多樣 實 用 好 禮 雇\n學 ~ 2\non - 并 四 小 議 小 導 多 # 六\n“500cc 有 贈 現 烤 烤 雞 廳\n兀 數 量 有 限 送 完 為 止 和\n。 高 才 市 後 備 府 兵 荷 松信 會 上\nni 廚 議\nIED\n讓 222 了 4 說 辣 了 2\n",
+            "confidence": 35
+          }
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 22.572886,
         "lng": 120.3221315
@@ -17566,6 +17609,32 @@
         "lat": 25.2207372,
         "lng": 121.6402736
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDUtMjQtNS8yNCjml6Up5Y+w5Lit5rKZ6bm/5Y2X5paX5a6u",
+      "time": "",
+      "organization": "台中沙鹿南斗宮",
+      "location": "台中沙鹿南斗宮",
+      "activityDate": "2026-05-24",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "5/24(日)台中沙鹿南斗宮",
+        "images": [
+          "https://i.imgur.com/5tCus7C.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/5tCus7C.jpeg",
+            "text": "衛 勢 百 愛 心 荔 會\n器\nit7// 們 生\n【 Beahero&Savethe wortd\n5/24 訊\n星期 日\n775 低 房 鹿 夫 丑 媽 必 荔 會 萄 雇 活 動\n捐血 完成 將 獲得 家 樂 福 提貨 券 ( 無 期 限 )\n乳牛 牧場 景觀 餐廳 加 碼 贊 助\n捐 250cc 加 贈 一 盒 雞 蛋 ” 捐 500cc 加 贈 二 盒 雞 蛋\nte, 沙 鹿 南 斗 宮\n台 中 市 沙 府 區 南陽 路 三 角 巷 3-1 號\n募集 各 種 血型 ~ 敬 請 熱血 朋友 們 攜帶 身分 證 、 戴 口罩 來 捐血 ” 海報 設計 : 台 中 李 宣 芳 設 計\n",
+            "confidence": 72
+          }
+        ]
+      },
+      "isPttOnly": true
     },
     {
       "id": "cHR0LTIwMjYtMDUtMjQtNS8yNCjml6Up5Y+w5Y2X5Zac5qi55Luj5aSp5bqc",
