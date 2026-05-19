@@ -14136,6 +14136,30 @@
       "isPttOnly": true
     },
     {
+      "id": "cHR0LTIwMjYtMDUtMTktNS8xOSjkuowp6Zuy5p6X5aSn5Z+k5Y2X5ZKM5p2R5rS75YuV5Lit5b+D",
+      "time": "",
+      "organization": "雲林大埤南和村活動中心",
+      "location": "雲林大埤南和村活動中心",
+      "activityDate": "2026-05-19",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "5/19(二)雲林大埤南和村活動中心",
+        "images": [
+          "https://i.imgur.com/CZFJ052.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/CZFJ052.jpeg",
+            "text": "和 人 寢 ~ 六\n開銷 了 四 日 ~ 人 個 )\n1 ou\n4 一 館 熱 魚 , Le | 斌 1 ka 了\n還 ( 4 上\n[ 劑 汪 司 國 5 區 圖 2 Na\n。 呈 姨 世 - 會 中 几 ee\n全 為\n) 說 選\n:5/19 捐血 活動\n人 「/ 人\n歸 人 馮 pp 』 et 卡 差 - 半 f\n咽 圖 ! * 能 翁 他 信 宙 來 布 竺 . @ 0\n和 人 一 捐血 一 發 他 救 人 一 命 。。、 只\n了 Ti IN\n全 0 們 1 滬 捐血 即 贈\n月 二 115/5/19 0 @ 一\n0 【 活動 地 點 . 二 生 吧\n)。 革 仿 太 翰 廁 和 村 活 動 中 心肝 已 放電 了 MuE\n9 ( 雲 林 縣 大 埤 鄉 中 正路 2 號 ) / 几 踢\n時 沙發 椅\nsm 了 瑟\n和 呈 4 用 和 血 , 點 宮 生 命 的 希 夢\n臣 》 憊 到 庄 3 芒 慈 元 行 善 協 會 x 尋 隆 沙發 窗 蘑 裝潢 行\n2 範 有 二 畫 芒 大 埤 鄉 南 和 村 辦 公 室\n",
+            "confidence": 37
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
       "id": "cHR0LTIwMjYtMDUtMTktNS8xOSjkuowp6auY6ZuE5YmN6Y6u5Lit6Yu857i96YOo5aSn5qiT",
       "time": "",
       "organization": "高雄前鎮中鋼總部大樓",
@@ -15919,19 +15943,6 @@
       "activityDate": "2026-05-23",
       "center": "台北",
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q135348955384134828"
-    },
-    {
-      "id": "5Y+w5YyXLTIwMjYvMDUvMjMtMDg6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Z+66ZqG5pWZ5bir5YiG5pyD",
-      "time": "08:00~17:00",
-      "organization": "國際佛光會中華總會基隆教師分會",
-      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
-      "activityDate": "2026-05-23",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q135348954671417846",
-      "coordinates": {
-        "lat": 25.1285625,
-        "lng": 121.7566158
-      }
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDUvMjMtMDk6MDB+MTc6MDAt5rGQ5q2i56aP5b635oSb5b+D5pyD",

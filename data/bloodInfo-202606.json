@@ -1,6 +1,48 @@
 {
   "2026-06-01": [
     {
+      "id": "5paw56u5LTIwMjYvMDYvMDEtMDk6MDB+MTc6MDAt5YWr5b635LiJ5YWD5a6u",
+      "time": "09:00~17:00",
+      "organization": "八德三元宮",
+      "location": "桃園市八德區中山路2號(八德三元宮後面廣場_現場備有3台車)",
+      "activityDate": "2026-06-01",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380554706236901",
+      "pttData": {
+        "rawLine": "6/1(一)桃園八德三元宮",
+        "images": [
+          "https://i.imgur.com/T4UVgg4.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/T4UVgg4.jpeg",
+            "text": "時 人\nee\n2 當 捐血 ! 教 人 一 命 ,\n活動 日 期 :115 年 6 月 1 日 (星期 一 應\n活動 時 間 : o9:00~17:00\n活動 地 點 : 改 德 三 元 宮 廟 後 停車 坦 店\n主 辦 單位 : 八 德 三 學 客\n協辦 單位 : 桃 轅 市 三 元 關懷 協會 、 桃 德 獅 子 會 。\n、 代 書 呂 景 楓 、 有 德 獅 了 會\n、 國 泰 人 壽 八 德 分 處\n、 桃 園 市 南投 同 鄉 會 八 德 分 會\n、 市 議員 呂 林 小 几\n贈 雞蛋 ! 盒 (10 顆 裝 )、 壽 司 米 ! 包 (| 公斤)\n同 捐 250ce 。 濕 抵 巾 | 包 、 鮮 葉 麵 ! 包 、 冰 絲 防曬 油 誠\n圖 牙膏 | 條 、 白 嘉 蛋 ! 顆\n捐 500cc 贈 上 可 神 品 雙人\n八 仙 三 元 寐 管理 委員 會 主 任 委員 呂 林 小 鳳 暨 全 體委 員 最 六\n『 避 六 8 加 新 (和 中 心 維 絲 轉 了 間 hsinchu_blood_center\n號 總 此 請 加 入 「 愛 捐血 」LINE 官 方 帳號 , 一 彈 誤\n旗 呈 最 讓 您 即 時 接收 捐血 新 知 與 活動 訊息 灌 池 記\n區 繼 ) ※ 請 綁 定 「 新 竹 捐血 中 心 」 喔 ~!\nAL\n",
+            "confidence": 65
+          }
+        ]
+      },
+      "tags": [
+        "食品"
+      ],
+      "coordinates": {
+        "lat": 24.9301836,
+        "lng": 121.2846575
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDEtMDg6MDB+MTY6MzAt5ZyL5rOw5Lq65aO95bGV5qWt56u55YyX6YCa6KiK6JmV",
+      "time": "08:00~16:30",
+      "organization": "國泰人壽展業竹北通訊處",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-01",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380550078620415",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
       "id": "6auY6ZuELTIwMjYvMDYvMDEtMDk6MzB+MTg6MDAt5ZyL5rOw5bGV5LiJ5rCR",
       "time": "09:30~18:00",
       "organization": "國泰展三民",
@@ -25,35 +67,57 @@
         "lat": 22.6374475,
         "lng": 120.3385598
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDYtMDEtNi8xKOS4gCnmoYPlnJLlhavlvrfkuInlhYPlrq4=",
-      "time": "",
-      "organization": "桃園八德三元宮",
-      "location": "桃園八德三元宮",
-      "activityDate": "2026-06-01",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "6/1(一)桃園八德三元宮",
-        "images": [
-          "https://i.imgur.com/T4UVgg4.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/T4UVgg4.jpeg",
-            "text": "時 人\nee\n2 當 捐血 ! 教 人 一 命 ,\n活動 日 期 :115 年 6 月 1 日 (星期 一 應\n活動 時 間 : o9:00~17:00\n活動 地 點 : 改 德 三 元 宮 廟 後 停車 坦 店\n主 辦 單位 : 八 德 三 學 客\n協辦 單位 : 桃 轅 市 三 元 關懷 協會 、 桃 德 獅 子 會 。\n、 代 書 呂 景 楓 、 有 德 獅 了 會\n、 國 泰 人 壽 八 德 分 處\n、 桃 園 市 南投 同 鄉 會 八 德 分 會\n、 市 議員 呂 林 小 几\n贈 雞蛋 ! 盒 (10 顆 裝 )、 壽 司 米 ! 包 (| 公斤)\n同 捐 250ce 。 濕 抵 巾 | 包 、 鮮 葉 麵 ! 包 、 冰 絲 防曬 油 誠\n圖 牙膏 | 條 、 白 嘉 蛋 ! 顆\n捐 500cc 贈 上 可 神 品 雙人\n八 仙 三 元 寐 管理 委員 會 主 任 委員 呂 林 小 鳳 暨 全 體委 員 最 六\n『 避 六 8 加 新 (和 中 心 維 絲 轉 了 間 hsinchu_blood_center\n號 總 此 請 加 入 「 愛 捐血 」LINE 官 方 帳號 , 一 彈 誤\n旗 呈 最 讓 您 即 時 接收 捐血 新 知 與 活動 訊息 灌 池 記\n區 繼 ) ※ 請 綁 定 「 新 竹 捐血 中 心 」 喔 ~!\nAL\n",
-            "confidence": 65
-          }
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-06-02": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDItMDk6MDB+MTY6MDAt6K2m5a+f5bGA6b6c5bGx5YiG5bGA",
+      "time": "09:00~16:00",
+      "organization": "警察局龜山分局",
+      "location": "桃園市龜山區萬壽路二段1399號(亦隆汽車修理場對面巨蛋旁226/228停車格)",
+      "activityDate": "2026-06-02",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380566529963073"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDItMDk6MDB+MTY6MDAt5qGD5ZyS5biC5aaC5oSP542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市如意獅子會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-02",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380565985084046",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDItMDk6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5paw56u556ys5YWt5YiG5pyD",
+      "time": "09:00~17:00",
+      "organization": "國際佛光會中華總會新竹第六分會",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-06-02",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380560257478560",
+      "coordinates": {
+        "lat": 24.8108593,
+        "lng": 120.9577185
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDItMDk6MDB+MTY6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD56u55p2x5qi55p2e5p6X5YiG5pyD",
+      "time": "09:00~16:00",
+      "organization": "國際佛光會中華總會竹東樹杞林分會",
+      "location": "新竹縣竹東鎮東林路30號(竹東第一銀行前)",
+      "activityDate": "2026-06-02",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380555341115928",
+      "coordinates": {
+        "lat": 24.736835,
+        "lng": 121.0891321
+      }
+    },
     {
       "id": "6auY6ZuELTIwMjYvMDYvMDItMTE6MDB+MTc6MDAt576O5ZKM56eR5oqA5aSn5a24",
       "time": "11:00~17:00",
@@ -234,6 +298,32 @@
     }
   ],
   "2026-06-03": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDMtMDg6MzB+MTY6MzAt5p2x5YWD57ac5ZCI6Yar6Zmi",
+      "time": "08:30~16:30",
+      "organization": "東元綜合醫院",
+      "location": "新竹縣竹北市縣政二路69號(大門前)",
+      "activityDate": "2026-06-03",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380566163832091",
+      "coordinates": {
+        "lat": 24.823452,
+        "lng": 121.0137094
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDMtMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-03",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380561891347587",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
+    },
     {
       "id": "6auY6ZuELTIwMjYvMDYvMDMtMDg6MDB+MTc6MDAt5Lit6I+v5rCR5ZyL6KiY5biz5Y+K5aCx56iF5Luj55CG5Lq65YWs5pyD5YWo5ZyL6IGv5ZCI5pyD",
       "time": "08:00~17:00",
@@ -463,6 +553,45 @@
   ],
   "2026-06-04": [
     {
+      "id": "5paw56u5LTIwMjYvMDYvMDQtMDk6MDB+MTY6MDAt5paw56u557ij5pS/5bqc6K2m5a+f5bGA",
+      "time": "09:00~16:00",
+      "organization": "新竹縣政府警察局",
+      "location": "新竹縣竹北市光明六路12號(新竹縣政府警察局正門口)",
+      "activityDate": "2026-06-04",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380567708711028",
+      "coordinates": {
+        "lat": 24.8266359,
+        "lng": 121.0111111
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDQtMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-04",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380562070195532",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDQtMTA6MDB+MTc6MDAt5paw56u55biC56u55aG56aiB5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "10:00~17:00",
+      "organization": "新竹市竹塹騁國際同濟會",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-06-04",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380561435226514",
+      "coordinates": {
+        "lat": 24.8108593,
+        "lng": 120.9577185
+      }
+    },
+    {
       "id": "6auY6ZuELTIwMjYvMDYvMDQtMDk6MzB+MTc6MzAt6auY6ZuE6YO15bGA",
       "time": "09:30~17:30",
       "organization": "高雄郵局",
@@ -621,6 +750,100 @@
   ],
   "2026-06-05": [
     {
+      "id": "5paw56u5LTIwMjYvMDYvMDUtMTA6MDB+MTc6MDAt5paw56u55paw6Z+7542F5a2Q5pyD",
+      "time": "10:00~17:00",
+      "organization": "新竹新韻獅子會",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-06-05",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380578420437090",
+      "coordinates": {
+        "lat": 24.8108593,
+        "lng": 120.9577185
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDUtMDk6MDB+MTY6MDAt5qWK5qKF5Y2A5rC45bmz56S+5Y2A6Zec5oe35Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "楊梅區永平社區關懷協會",
+      "location": "桃園市楊梅區三民北路22號(楊梅頭重溪三元宮)",
+      "activityDate": "2026-06-05",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380578065316027",
+      "coordinates": {
+        "lat": 24.9090414,
+        "lng": 121.170478
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDUtMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-05",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380573793822514",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDUtMDk6MDB+MTY6MDAt5pWR5ZyL5ZyY5qGD5ZyS5biC5paw5bGL5Y2A5ZyY5aeU5pyD",
+      "time": "09:00~16:00",
+      "organization": "救國團桃園市新屋區團委會",
+      "location": "桃園市新屋區中山路265號(新屋區公所)",
+      "activityDate": "2026-06-05",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380573158943586",
+      "coordinates": {
+        "lat": 24.9725439,
+        "lng": 121.105533
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDUtMDk6MDB+MTY6MDAt6KeA6Z+z5qC55ru/5Z+66YeR5pyD",
+      "time": "09:00~16:00",
+      "organization": "觀音根滿基金會",
+      "location": "桃園市平鎮區上海路250號(全聯福利中心對面廣場_現場備有2台車)",
+      "activityDate": "2026-06-05",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380572514074569",
+      "pttData": {
+        "rawLine": "6/5(五)桃園平鎮上海路",
+        "images": [
+          "https://i.imgur.com/eH293xN.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/eH293xN.jpeg",
+            "text": "念 桃 園 市 政府 芋 察 局 平 鎮 分 局\ns$s「115 年 警察 節 捐血 活動 」 公\n1 一 和 卻 全 共 名\n相 揪 攏 來 去 捐 出 熊熊 熱 9 人 Ex 訪 @\n血 俯 捐血 加 贈 警 察 小 熊 ae 噴\n(0 時 間 : 115 年 6 月 5 日 (星期 五 ) 上 午 9 時 至 下 午 4 時\n人 @ 地 點 : 桃園 市 平 鎮 區 上 海路 250 號 (全 聯 對 面 廣場 ) 4\n餾 贈品 數 量 有 限 送 完 為 止 情人\n1、 限 定 [警察 小 態 玩偶 」 組 合 包 ‧ 同\n(內 條 持 式 品 啡 > 麵包 、 箕 會 們 上 2\n精緻 米 ) 及 波 庚 士 手提 袋\n2、 韓 國 小 雞 點 心 容 及 「 在 地 美 食 抵 用 組 合 包 」 傅\n斧 85 度 C(150 元 )、 純 某 綿綿 冰 (100 元 )、<?>》 為\n8 鮮 小 火鍋 (70 元 )、Good Day 早 餐 (20 元 ) 他\n國 捐血 請 攜帶 身分 證 或 有 照片 之 健保 卡 或 駕照 @\n伺 現場 還 有 犯罪 預防 及 交通 宣 導 活動 攤位 、\n‧ 美 食 攤位 , 歡 迎 一 起 來 參加 , 倫 1e5\n回 fs 回\n甸 反 詐 = 步驟 : 1 聽 2 掛 3 查證 棄 人 )\n",
+            "confidence": 71
+          }
+        ]
+      },
+      "tags": [
+        "食品"
+      ],
+      "coordinates": {
+        "lat": 24.909582,
+        "lng": 121.2067
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDUtMDk6MDB+MTY6MDAt5aSn5rqq5rCR55y+5pyN5YuZ56S+",
+      "time": "09:00~16:00",
+      "organization": "大溪民眾服務社",
+      "location": "桃園市大溪區公園路46號(圳頂派出所)",
+      "activityDate": "2026-06-05",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380567342680045",
+      "coordinates": {
+        "lat": 24.9049189,
+        "lng": 121.2838114
+      }
+    },
+    {
       "id": "6auY6ZuELTIwMjYvMDYvMDUtMDk6MDB+MTc6MDAt5a+25oiQ5LyB5qWt5aSn5qiT",
       "time": "09:00~17:00",
       "organization": "寶成企業大樓",
@@ -749,39 +972,109 @@
         "lat": 25.0158267,
         "lng": 121.534845
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDYtMDUtNi81KOS6lCnmoYPlnJLlubPpjq7kuIrmtbfot68=",
-      "time": "",
-      "organization": "桃園平鎮上海路",
-      "location": "桃園平鎮上海路",
-      "activityDate": "2026-06-05",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "6/5(五)桃園平鎮上海路",
-        "images": [
-          "https://i.imgur.com/eH293xN.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/eH293xN.jpeg",
-            "text": "念 桃 園 市 政府 芋 察 局 平 鎮 分 局\ns$s「115 年 警察 節 捐血 活動 」 公\n1 一 和 卻 全 共 名\n相 揪 攏 來 去 捐 出 熊熊 熱 9 人 Ex 訪 @\n血 俯 捐血 加 贈 警 察 小 熊 ae 噴\n(0 時 間 : 115 年 6 月 5 日 (星期 五 ) 上 午 9 時 至 下 午 4 時\n人 @ 地 點 : 桃園 市 平 鎮 區 上 海路 250 號 (全 聯 對 面 廣場 ) 4\n餾 贈品 數 量 有 限 送 完 為 止 情人\n1、 限 定 [警察 小 態 玩偶 」 組 合 包 ‧ 同\n(內 條 持 式 品 啡 > 麵包 、 箕 會 們 上 2\n精緻 米 ) 及 波 庚 士 手提 袋\n2、 韓 國 小 雞 點 心 容 及 「 在 地 美 食 抵 用 組 合 包 」 傅\n斧 85 度 C(150 元 )、 純 某 綿綿 冰 (100 元 )、<?>》 為\n8 鮮 小 火鍋 (70 元 )、Good Day 早 餐 (20 元 ) 他\n國 捐血 請 攜帶 身分 證 或 有 照片 之 健保 卡 或 駕照 @\n伺 現場 還 有 犯罪 預防 及 交通 宣 導 活動 攤位 、\n‧ 美 食 攤位 , 歡 迎 一 起 來 參加 , 倫 1e5\n回 fs 回\n甸 反 詐 = 步驟 : 1 聽 2 掛 3 查證 棄 人 )\n",
-            "confidence": 71
-          }
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 24.9130638,
-        "lng": 121.2063841
-      }
     }
   ],
   "2026-06-06": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDYtMDk6MDB+MTY6MDAt5ZyL6Zqb5ZCM5r+f5pyD5Y+w54Gj57i95pyD56u56IuX5Y2A",
+      "time": "09:00~16:00",
+      "organization": "國際同濟會台灣總會竹苗區",
+      "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
+      "activityDate": "2026-06-06",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380579609285045",
+      "coordinates": {
+        "lat": 24.6921554,
+        "lng": 120.8796045
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDYtMDk6MzB+MTY6MDAt5qGD5ZyS5biC5oiQ5Yqf542F5a2Q5pyD",
+      "time": "09:30~16:00",
+      "organization": "桃園市成功獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-06",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380579243164072",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDYtMDk6MDB+MTY6MDAt6b6c5bGx5Y2A5qWT56aP6YeM56S+5Y2A55m85bGV5Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "龜山區楓福里社區發展協會",
+      "location": "桃園市龜山區自強南路123號(龜山分局對面)",
+      "activityDate": "2026-06-06",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380575794497531",
+      "coordinates": {
+        "lat": 24.991498,
+        "lng": 121.3378493
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDYtMDk6MDB+MTc6MDAt5qGD5ZyS5biC6b6N5b635Yqf5b635pyD",
+      "time": "09:00~17:00",
+      "organization": "桃園市龍德功德會",
+      "location": "桃園市蘆竹區富國路一段8號(龍德宮)",
+      "activityDate": "2026-06-06",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380575150428503"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDYtMDk6MzB+MTY6MzAt5qGD5ZyS5biC5oiQ5Yqf542F5a2Q5pyD",
+      "time": "09:30~16:30",
+      "organization": "桃園市成功獅子會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-06",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380574515549586",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDYtMDk6MDB+MTY6MDAt5aSq5bmz5rSL6Ieq6KGM6LuK6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:00~16:00",
+      "organization": "太平洋自行車股份有限公司",
+      "location": "桃園市中壢區九和三街15號(中壢區六和公園)",
+      "activityDate": "2026-06-06",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380574337791531",
+      "coordinates": {
+        "lat": 24.9633999,
+        "lng": 121.2245483
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDYtMDg6MDB+MTc6MDAt5rKC6aKo56OB56Oa5pyJ6ZmQ5YWs5Y+4",
+      "time": "08:00~17:00",
+      "organization": "沂風磁磚有限公司",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-06",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380570887033090",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDYtMDk6MDB+MTY6MDAt5b6p6IiI5ZCM5r+f5pyD",
+      "time": "09:00~16:00",
+      "organization": "復興同濟會",
+      "location": "桃園市龍潭區公園路39號(龍潭運動公園_北龍路肯德基對面)",
+      "activityDate": "2026-06-06",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380570422902027",
+      "coordinates": {
+        "lat": 24.868033,
+        "lng": 121.2187586
+      }
+    },
     {
       "id": "6auY6ZuELTIwMjYvMDYvMDYtMDk6MDB+MTc6MDAt5bem54ef5Y2A5paw5LiL6YeM6L6m5YWs5a6k",
       "time": "09:00~17:00",
@@ -1134,6 +1427,97 @@
     }
   ],
   "2026-06-07": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDctMDg6MzB+MTY6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "08:30~16:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-07",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380587407124503",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDctMDk6MDB+MTc6MDAt5qGD5ZyS5biC5Lit5aSu542F5a2Q5pyD",
+      "time": "09:00~17:00",
+      "organization": "桃園市中央獅子會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-07",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380586872245585",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDctMDk6MDB+MTY6MDAt5paw56u557ij5paw5Z+U6Y6u5b6M5YKZ5oay5YW16I235p2+5Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "新竹縣新埔鎮後備憲兵荷松協會",
+      "location": "新竹縣新埔鎮田新路600號(新埔鎮公所)",
+      "activityDate": "2026-06-07",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380582779508026",
+      "coordinates": {
+        "lat": 24.8256201,
+        "lng": 121.0740799
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDctMDk6MDB+MTY6MDAt5qGD5ZyS5biC5Lit5aSu542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市中央獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-07",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380581500750072",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDctMTE6MDB+MTc6MDAt5paw56u55biC5YWJ5piO5LuB5oSb5Y2U5pyD",
+      "time": "11:00~17:00",
+      "organization": "新竹市光明仁愛協會",
+      "location": "新竹市東區中央路229號(巨城民權路創藝大樓前廣場)",
+      "activityDate": "2026-06-07",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380581145639099",
+      "coordinates": {
+        "lat": 24.8098161,
+        "lng": 120.9751319
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDctMDk6MzB+MTY6MzAt5ZyL6Zqb5L2b5YWJ5pyD5bmz6Y6u5YiG5pyD",
+      "time": "09:30~16:30",
+      "organization": "國際佛光會平鎮分會",
+      "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
+      "activityDate": "2026-06-07",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380576238376558",
+      "coordinates": {
+        "lat": 24.9559892,
+        "lng": 121.226132
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDctMDk6MDB+MTY6MDAt6IuR6KOh5aSp5peo5LqU6aGv5a6u",
+      "time": "09:00~16:00",
+      "organization": "苑裡天旨五顯宮",
+      "location": "苗栗縣苑裡鎮為公路19號(苑裡渣打銀行)",
+      "activityDate": "2026-06-07",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380571966881044",
+      "coordinates": {
+        "lat": 24.441961,
+        "lng": 120.654731
+      }
+    },
     {
       "id": "6auY6ZuELTIwMjYvMDYvMDctMDk6MDB+MTc6MzAt5aSp5b2w5oWI5ZaE5Y2U5pyD",
       "time": "09:00~17:30",
@@ -1540,7 +1924,654 @@
       }
     }
   ],
+  "2026-06-08": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDgtMDk6MDB+MTY6MDAt5qGD5ZyS5biC5p2x5pa5576O542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市東方美獅子會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-08",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380588685972558",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDgtMDg6MzB+MTY6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "08:30~16:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-08",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380588229841585",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDgtMDk6MDB+MTY6MDAt5p6X5pmP6Imv5pyN5YuZ5ZyY6ZqK",
+      "time": "09:00~16:00",
+      "organization": "林晏良服務團隊",
+      "location": "桃園市八德區大智路99號(八德廣豐兒一公園)",
+      "activityDate": "2026-06-08",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380587041093530",
+      "coordinates": {
+        "lat": 24.9642678,
+        "lng": 121.2971038
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDgtMDk6MDB+MTc6MDAt5LqS5Yqp54ef6YCg6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:00~17:00",
+      "organization": "互助營造股份有限公司",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-06-08",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380583957356071",
+      "coordinates": {
+        "lat": 24.8108593,
+        "lng": 120.9577185
+      }
+    }
+  ],
+  "2026-06-09": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDktMDk6MDB+MTc6MDAt5LqS5Yqp54ef6YCg6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:00~17:00",
+      "organization": "互助營造股份有限公司",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-06-09",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380589308698530",
+      "coordinates": {
+        "lat": 24.8108593,
+        "lng": 120.9577185
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDktMDk6MDB+MTY6MDAt5ZyL5rOw5Lq65aO95qGD5biC6YCa6KiK6JmV",
+      "time": "09:00~16:00",
+      "organization": "國泰人壽桃市通訊處",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-09",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380588864729502",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDktMDk6MDB+MTY6MDAt5qGD5ZyS5biC5rC0576O5Lq65paH6Zec5oe35Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市水美人文關懷協會",
+      "location": "桃園市楊梅區大成路256號(楊梅火車站)",
+      "activityDate": "2026-06-09",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380584670083043",
+      "coordinates": {
+        "lat": 24.9143248,
+        "lng": 121.1464462
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMDktMDk6MDB+MTY6MDAt5qGD5ZyS5ZyL6Zqb5qmf5aC0",
+      "time": "09:00~16:00",
+      "organization": "桃園國際機場",
+      "location": "桃園市大園區航站南路9/1號(第二航廈_東二門出口外側巡迴巴士站)",
+      "activityDate": "2026-06-09",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380584136104026",
+      "coordinates": {
+        "lat": 25.0766591,
+        "lng": 121.2313348
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMDktNi85KOS6jCnlsY/mnbHorablr5/lsYDmnbHmuK/liIblsYA=",
+      "time": "",
+      "organization": "屏東警察局東港分局",
+      "location": "屏東警察局東港分局",
+      "activityDate": "2026-06-09",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "6/9(二)屏東警察局東港分局",
+        "images": [
+          "https://i.imgur.com/BiyvKXb.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/BiyvKXb.jpeg",
+            "text": "相 | 和 人\n\n肖 及 有 信和 】09:30-17:00\n\n屏 東 縣 政府 警察 局 東港 分 局 ( 層 束 縣 東港 鎮 海路 1 號 )\n\n( ) 指 250ce ( ) 捐 500cc 和 首 折\n\n一 口 鳥 魚子 + 好 禮 5 擇 1 | 一 口 鳥 魚子 2 包 + 好 禮 5 擇\n\n1 加 贈 200 去 全 聯 禮 券\n\n人\n\n人\n計 三 2 了 l 三 “學 過 人 潮 過 多 牙 視 情 江 共 登錄 作業 4 條 3 M\n| 主辦 單位. 高 雄 市 玉 廬 有 順 大 慈 善 全 | 9 2\n全 bs Ni 生\n",
+            "confidence": 52
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.4631275,
+        "lng": 120.4617628
+      }
+    }
+  ],
+  "2026-06-10": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTAtMDg6MDB+MTY6MDAt6aCM5Li75oGp5a+m5qWt5pyJ6ZmQ5YWs5Y+4",
+      "time": "08:00~16:00",
+      "organization": "頌主恩實業有限公司",
+      "location": "苗栗縣苗栗市為公路282號(苗栗捐血站)",
+      "activityDate": "2026-06-10",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380589942577557",
+      "coordinates": {
+        "lat": 24.5713259,
+        "lng": 120.8295529
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTAtMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-10",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380585859831098",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTAtMDk6MDB+MTY6MDAt5qGD5ZyS5biC55qH5a62542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市皇家獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-10",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380585214952061",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTAtMDk6MDB+MTY6MDAt5paw56u557ij5paw6LGQ542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "新竹縣新豐獅子會",
+      "location": "新竹縣新豐鄉中興路212號(新豐山崎公園旁)",
+      "activityDate": "2026-06-10",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380580121315502",
+      "coordinates": {
+        "lat": 24.8756663,
+        "lng": 120.9945787
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMTAtNi8xMC02LzExKOS4iS3lm5sp6Ie65YyX56eR5oqA5aSn5a245a2455Sf5rS75YuV5Lit5b+D5YmN",
+      "time": "",
+      "organization": "臺北科技大學學生活動中心前",
+      "location": "臺北科技大學學生活動中心前",
+      "activityDate": "2026-06-10",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "電影票"
+      ],
+      "pttData": {
+        "rawLine": "6/10-6/11(三-四)臺北科技大學學生活動中心前",
+        "images": [
+          "https://i.imgur.com/d12sfte.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/d12sfte.jpeg",
+            "text": "二 9 則. 有, 」』 的 Ma\nAl. 7 有 0 啟 !: 暗\n和 Rd\n世人 當 人 公用 人 入\n上 NO 朮 “-\n(他 人 作家 殼 記 人\nIN 避 人 XX\n人 和 之\nCa 人\nCa 其 未 捐 箇 ee\n媽 7 fm 三\nNu( 三 和 @ 划 性\n3 紡 人 寢 師 廁 虹 轉 晶 :。\n之 人 記 ~ 號\nee 7\n必 瞳 2026 /06 /10-2026 /06/\n禮 (2 )1:00-18:00 《 診 /\n@ 學 生 活動 中 心 前 (原 中 正 紀念 館 前 ) 說\nY\n/ 。 |」 詳細 資訊 請 關注 意 幼 社 公告 【IG】\n( 全 NTUT_TSZYOU 啟 請 留意\n人\n來 捐 就 送 9\n“只 電影 票 乙 張 所\n好 2 序 x€\n數 量 有 限 換 完 為 止 寢 一\n和 說\n7 2\n咬 附 有 熱血 打 卡 牆 全 轉 pg\n3 歡迎 拍照 打 卡 唷 了 八 : 還\npl 還 您 只\n",
+            "confidence": 40
+          }
+        ]
+      },
+      "isPttOnly": true
+    }
+  ],
+  "2026-06-11": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTEtMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-11",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380597216437098",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTEtMDk6MzB+MTU6MzAt6LuK576O5LuV6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:30~15:30",
+      "organization": "車美仕股份有限公司",
+      "location": "桃園市龜山區復興三路10號",
+      "activityDate": "2026-06-11",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380596671558060",
+      "coordinates": {
+        "lat": 25.0540048,
+        "lng": 121.3756975
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTEtMDk6MDB+MTY6MDAt5LiW55WM5peX6KKN542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "世界旗袍獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-11",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380596037689043",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTEtMDk6MDB+MTY6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwIEI25Y2A5paw5rmW542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "國際獅子會300 B6區新湖獅子會",
+      "location": "新竹縣湖口鄉成功路303號(湖口成功路停車場)",
+      "activityDate": "2026-06-11",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380592944042584",
+      "coordinates": {
+        "lat": 24.904126,
+        "lng": 121.043101
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTEtMTM6MzB+MTY6MzAt5o235Lqu56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "13:30~16:30",
+      "organization": "捷亮科技股份有限公司",
+      "location": "新竹縣竹北市環北路三段173號",
+      "activityDate": "2026-06-11",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380592588911501"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTEtMDk6MzB+MTY6MzAt6ZG955+z5ZCM5r+f5pyD",
+      "time": "09:30~16:30",
+      "organization": "鑽石同濟會",
+      "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
+      "activityDate": "2026-06-11",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380591765294539",
+      "coordinates": {
+        "lat": 24.9559892,
+        "lng": 121.226132
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMTEtNi8xMSjlm5sp5b2w5YyW5rqq5rmW57OW5bug",
+      "time": "",
+      "organization": "彰化溪湖糖廠",
+      "location": "彰化溪湖糖廠",
+      "activityDate": "2026-06-11",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "6/11(四)彰化溪湖糖廠",
+        "images": [
+          "https://i.imgur.com/9NFGVec.jpeg",
+          "https://i.imgur.com/I5wdymF.jpeg",
+          "https://i.imgur.com/dLhLv4j.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/9NFGVec.jpeg",
+            "text": "2026 @\n一 虫 視 各 察 飼\n號\n縮 警 察 有 受 * 熱 血 常 在 )\n** 熱血 捐血 活動 **\n活動 時 間 :115 年 6 月 11 日 星期 四 一\n店 谷\n人 一 偽 )\n守 位 所\n藻 務 暢 【 語 】 | 所 血族 人\n出, 諾 上 兀 N\n說 人 主\n.! 其 人 7\n1 ESSS 訪 2\n二 ) 獎品 豐富 。 歡 迎 共 襄 盛舉 人 二 生\n3\nFiE 誠 及 2\n王 二\n六 人 還 he\nEE 人\nWe 底 : 說\n> 前 ‧ 冊 作 上 革\n主 辦 單 位 : 彰 化 縣 警察 局 溪 湖 分 局\n溪 湖 警察 志 工 協 進 會\n協辦 單位 : 溪 湖 警察 志 工 中 隊\n溪 湖 分 局 轄 下 各 派出 所 志 工 隊\n贊助 單位 : 溪 湖 鎮 公 所 、 弘 農 菇 類 栽培 場 、 和 秋 食 品\n正大 造紙 廠 、 陳 義 發 餅 店 、 欣 亞 牙醫 診所\n",
+            "confidence": 58
+          },
+          {
+            "url": "https://i.imgur.com/I5wdymF.jpeg",
+            "text": "全 館 身 藹 捐 甸 仿 交\n人 4\n活動 地 點 : 消防 訓練 中 心 停車 貴\n損 250cc 送 馬 銀 錢 母 1 個 :' 捐 500cc 送 馬 金 、 銀 錢 母 各 1 個\n115 年 5 月 行 程 傅 例\ng9:30~15:00 X※ 結 束 時間 視 現場 人 潮 情 況 調整 ※\n5/05( 二 ) 5/09( 六 ) 5/11( 一 ) 5/12( 二 )\n5/13( 三 ) 5/14( 四 ) 5/15( 五 ) 5/18( 一 )\n5/19( 二 ) 5/22( 五 ) 5/24( 日 ) 5/25( 一 ) 8\n日\n5/27( 三 ) 5/28( 四 ) 5/29( 五 ) 5/31( 日 )\n紫 南 宮 整 年 度 都 有 捐血 送 錢 母 活動 , 請 利用 平日 來\n捐血 , 以 免 假日 人 數 眾多 無 法 完成 捐血 喔 !\n、,※ 捐 血 採 現場 排隊 , 請 依 指示 配合 ※ 約\n和 謝謝 大 家 的 愛 心\n",
+            "confidence": 79
+          },
+          {
+            "url": "https://i.imgur.com/dLhLv4j.jpeg",
+            "text": "讓 」\n人 條 和 請 條\n捐血 車 移 至 史上 生 的 症 机 避 庄 汪\n\n消防 訓練 中 心 停車 場\n鈞 # 愉 生\n大 哈 坊 箇 還 位 自 |!\n街 ss\n※ 捐 血 採 現場 排隊 , 請 依 指 示 配 合 ※ 2\n",
+            "confidence": 48
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 23.9511905,
+        "lng": 120.4792139
+      }
+    }
+  ],
+  "2026-06-12": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTItMDk6MDB+MTY6MDAt5paw56u55biC6K2m5a+f5bGA",
+      "time": "09:00~16:00",
+      "organization": "新竹市警察局",
+      "location": "新竹市北區中山路1號(警察局左側)",
+      "activityDate": "2026-06-12",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380599573133197",
+      "coordinates": {
+        "lat": 24.8063214,
+        "lng": 120.9685422
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTItMDk6MDB+MTY6MzAt5oSb5Zug5pav5Z2m5aSn5qiT",
+      "time": "09:00~16:30",
+      "organization": "愛因斯坦大樓",
+      "location": "新竹縣竹北市自強南路8號",
+      "activityDate": "2026-06-12",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380599117001114",
+      "coordinates": {
+        "lat": 24.819447,
+        "lng": 121.0276128
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTItMDk6MDB+MTY6MDAt5qGD5ZyS6L6w5aiB542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園辰威獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-12",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380598939254060",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTItMDk6MDB+MTY6MDAt6IuX5qCX57ij5pS/5bqc6K2m5a+f5bGA",
+      "time": "09:00~16:00",
+      "organization": "苗栗縣政府警察局",
+      "location": "苗栗縣苗栗市為公路282號(苗栗捐血站)",
+      "activityDate": "2026-06-12",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380598394385042",
+      "coordinates": {
+        "lat": 24.5713259,
+        "lng": 120.8295529
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTItMDk6MDB+MTY6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD56u55p2x56ys5LqM5YiG5pyD",
+      "time": "09:00~16:00",
+      "organization": "國際佛光會中華總會竹東第二分會",
+      "location": "新竹縣竹東鎮東林路30號(竹東第一銀行前)",
+      "activityDate": "2026-06-12",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380597750306015",
+      "coordinates": {
+        "lat": 24.736835,
+        "lng": 121.0891321
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTItMDk6MDB+MTY6MDAt5Y+w6ZC15paw56u56LuK56uZ",
+      "time": "09:00~16:00",
+      "organization": "台鐵新竹車站",
+      "location": "新竹市東區中華路二段445號(新竹火車站前廣場)",
+      "activityDate": "2026-06-12",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380594845517601"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTItMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-12",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380594489496628",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTItMDk6MDB+MTY6MDAt5qGD5ZyS5biC5pS/5bqc6K2m5a+f5bGA5qGD5ZyS5YiG5bGA",
+      "time": "09:00~16:00",
+      "organization": "桃園市政府警察局桃園分局",
+      "location": "桃園市桃園區力行路258號(分局前停車格)",
+      "activityDate": "2026-06-12",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380593666769556",
+      "coordinates": {
+        "lat": 25.0001687,
+        "lng": 121.29907
+      }
+    }
+  ],
+  "2026-06-13": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTMtMDg6MDB+MTc6MDAt5pWR5ZyL5ZyY5paw56u55ZyY5aeU5pyD",
+      "time": "08:00~17:00",
+      "organization": "救國團新竹團委會",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-13",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380606102113600",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTMtMDk6MDB+MTY6MDAt5LqM5YWr54mn6Zuy6b2L",
+      "time": "09:00~16:00",
+      "organization": "二八牧雲齋",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-13",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380605668244673",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTMtMDk6MDB+MTc6MDAtQmlnIENpdHnpgaDmnbHlt6jln47os7zniankuK3lv4M=",
+      "time": "09:00~17:00",
+      "organization": "Big City遠東巨城購物中心",
+      "location": "新竹市東區中央路229號(巨城廣場_現場備有5台車)",
+      "activityDate": "2026-06-13",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380600930728197",
+      "coordinates": {
+        "lat": 24.8098161,
+        "lng": 120.9751319
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTMtMDk6MzB+MTY6MzAt5Lit5aOi5Y2A5by15buW57Ch5a6X6Kaq5pyD",
+      "time": "09:30~16:30",
+      "organization": "中壢區張廖簡宗親會",
+      "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
+      "activityDate": "2026-06-13",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380595024365656",
+      "coordinates": {
+        "lat": 24.9559892,
+        "lng": 121.226132
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMTMtNi8xMyjlha0p5Y+w5Lit5p2x5Y2A56aP5a6J5a6u",
+      "time": "",
+      "organization": "台中東區福安宮",
+      "location": "台中東區福安宮",
+      "activityDate": "2026-06-13",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "餐飲",
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "6/13(六)台中東區福安宮",
+        "images": [
+          "https://i.imgur.com/rXSIGwz.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/rXSIGwz.jpeg",
+            "text": "( 閑 撼 (0 斷 線 [\n圖 晨 全\nmm 全\n弓 ~ 人 G\n一 2 Go@\n一 人\nee AN 當\n伍 儿 、\n人\n4 AMNe 人 ~\n日 期 : 1154 06 有 13 日 (星期 六 ) 09:00~16:00 國 點\n主 辦 : 台 中 市 東區 束 英里 福安 宮 管理 委員 會\n地 點 : 福 安 宮 ( 束 區 三 賢 街 268 號 )\n贊助 單位 :\nL- 利 奇 貿易 有 限 公司 蔡 享 窯 、 邱 櫻 語 。\n2 日 初 古 早 味 蛋 糕\n人 意義 興業 股份 有 限 公司 黃 敬 義 、 徐 筆 組 。\n4 巨 泰 開 發 有 限 公司 丁 文 亮 、 陳 婉 茹 。\n5 寶 鳥 眼鏡 公司 十 甲 店\n6 福安 宮 常 務 委 員 余 秀 蓮 (包子 260 顆 )、 黎 玉 妃 (茶葉 蛋 260 顆 )、 副 主 任 委員 鎬 建 鎖 (統一 蜜 豆 奶 12 箱 ) 。\n字 福安 宮 信 眾 捐 獻 芳 名 錄 等 ~ 若 心 人 士 (公布 欄 紅 榜 》。\nL. 台 中 市 東 英里 福安 宮 奸 因 福 袋 + 日 初 古 早 味 蛋 糕 禮 券 乙 張 。 2 福安 宮 平 安 麵 線 。\n& 日 初 古 早 味 蛋 糕 抵 用 券 乙 張 。4 明 橋 歐 風 耐熱 咖啡 杯 。\n5 明 橋 多 功能 筷 租 收納 盒 。6. 明 橋 竹 蓋 面 紙 盒 。7. 明 橋 EVA 桌 布 野餐 墊 。8. 乾 義興 業 帆布 環保 袋 。\n9 參加 獎 : 當 天 凡 領 有 捐血 號 碼 牌 ‧ 即 可 獲得 乙 份 寶島 眼鏡 造型 集 線 器 + 折價 券 2 合 1\n嘉 以 上 明 橋 贈 品 型 式 顏色 隨機\n出 1 吝 所 有 贈品 除 參 加 獎 扣 250ccx1 份 500ccx2 份\n※ 贈 品 數 量 有 限 送 宛 為 止 ※\n六 捐血 朋友 領有 號 碼 牌 才 點心 此 次 為 一 熱 包 了 、 茶 葉 蛋 、 義 美 豆奶 各 260 份 送 完 為 止 ! !\n",
+            "confidence": 72
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMTMtNi8xMyjlha0p6Zuy5p6X5YWt5oi/5aSp5LiK6IGW5q+NMTE1LTExNuW5tOaWl+WNl+iCoee0heWjhw==",
+      "time": "",
+      "organization": "雲林六房天上聖母115-116年斗南股紅壇",
+      "location": "雲林六房天上聖母115-116年斗南股紅壇",
+      "activityDate": "2026-06-13",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "6/13(六)雲林六房天上聖母115-116年斗南股紅壇",
+        "images": [
+          "https://i.imgur.com/JClyGUA.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/JClyGUA.jpeg",
+            "text": "和 說 人 全\n\n更 尿 一 一 點 所 @ 福 ~ 如 藹 4 全 產 、 )\n? 號 愉 系 和 所 色 , 于\n/ 蔽 @) 之 “2 2 匠 2 選 一\n: ( f ) 二 及 |\n\n是\n\njm 生 ttkWp 証 , 劑 一 3 了 )\n\n和 對 位?% 補 2 生\n活動 時 間 :06 月 13 日 9:00~16:00\nWILLEHETIIESIEIETTT\n捐血 250CC 估 1 袋 精美 禮品 + 抽獎 一 次 |\n捐血 500CC 送 2 袋 精 美 禮品 + 抽獎 兩 次\n超 豐富 獎項 : 獎 品 真 的 很 豐富 , 歡 迎 各 界 共 襄 盛舉\n行 動 電 源 , 藍 牙 耳 機 , 吹風 機 , 快 煮 壺 , 等 等 豐富 獎品\n\n勵 | 8 as 了\n洛 同 計 戶 生 閏 因\n主 時 mm 1 邊 W 中\n衝 1 圖 | 上\nv 富國 廬 則 圖 圖\n1 re 北 > > 一 3 ee 4 上\n5000mze- es 是 生 噴 -\n捐血 基本 條 件 一 泗\n~ 上 了 久生 滿 16 未 滿 65 歲 、 體 重 45 公 斤 以 上 、 睡 眠 充足 、 勿 空 度 、 感 冒 、 加 點 奢 -\n『【:: 沁 測 打 針 、 吃 藥 暫緩 2 週 、 捐 250CC 需 隔 2 個 月 、500CC 需 3\n| 隔 3 個 月 、 年 捐血 量 1500cc、 女 1000cc 說\n和 濟 介 放 (以 個 人 生 日 為 週期) 時 5 入 汪\n、 說 天 。。 。。。 三 高 者 、 吃 藥 控制 得 宜 、 血 壓 當 下 正常 可 以 捐血 世 |! 文 說 全 簿 和\n二 芷 才 汪 店 已 -^4 蝦\n_“___ 捐血 請 戴 口罩 攜帶 身分 證 。 各 還\n1 作 (人 含 ‧\n所 (人 上 末 0\nha 條 大 、 廁 二\n中 PTriTrTTLTTTEILTTE 了 PHPITOL1\n",
+            "confidence": 49
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 23.679436,
+        "lng": 120.4747975
+      }
+    }
+  ],
   "2026-06-14": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTQtMDk6MDB+MTY6MDAt5qGD5ZyS5b2p6aao5ZCM5r+f5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園彩馨同濟會",
+      "location": "桃園市楊梅區三民北路22號(楊梅頭重溪三元宮)",
+      "activityDate": "2026-06-14",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380608103698627",
+      "coordinates": {
+        "lat": 24.9090414,
+        "lng": 121.170478
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTQtMDk6MDB+MTY6MDAt5qGD5ZyS576k6Iux542F",
+      "time": "09:00~16:00",
+      "organization": "桃園群英獅",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-14",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380607925840672",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTQtMDk6MzB+MTY6MzAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5paw56u55rOV5a+25YiG5pyD",
+      "time": "09:30~16:30",
+      "organization": "國際佛光會中華總會新竹法寶分會",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-06-14",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380607569719600",
+      "coordinates": {
+        "lat": 24.8108593,
+        "lng": 120.9577185
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTQtMDk6MzB+MTY6MzAt6b6N5bKh5ZCM5r+f5pyD",
+      "time": "09:30~16:30",
+      "organization": "龍岡同濟會",
+      "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
+      "activityDate": "2026-06-14",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380607381961655",
+      "coordinates": {
+        "lat": 24.9559892,
+        "lng": 121.226132
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTQtMDg6MDB+MTc6MDAt5paw56u557ij5ZyL5Yud5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "08:00~17:00",
+      "organization": "新竹縣國勝國際同濟會",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-14",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380603831203113",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTQtMDk6MDB+MTY6MDAt6YCa6ZyE5b6M5oay6IGv57Wh5Lit5b+D",
+      "time": "09:00~16:00",
+      "organization": "通霄後憲聯絡中心",
+      "location": "苗栗縣通霄鎮中山路109號(通霄火車站)",
+      "activityDate": "2026-06-14",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380602297324196",
+      "coordinates": {
+        "lat": 24.491403,
+        "lng": 120.678424
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTQtMDk6MDB+MTY6MzAt5aSn5YWn5aOi5ZCM5r+f5pyD",
+      "time": "09:00~16:30",
+      "organization": "大內壢同濟會",
+      "location": "桃園市中壢區中華路一段450號(內壢家樂福)",
+      "activityDate": "2026-06-14",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380601474607114",
+      "coordinates": {
+        "lat": 24.9731158,
+        "lng": 121.2535158
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTQtMDk6MDB+MTc6MDAt6IuX5qCX57ij5pif5YWJ5pyN5YuZ5Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "苗栗縣星光服務協會",
+      "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
+      "activityDate": "2026-06-14",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380601018576141",
+      "coordinates": {
+        "lat": 24.6921554,
+        "lng": 120.8796045
+      }
+    },
     {
       "id": "cHR0LTIwMjYtMDYtMTQtNi8xNCjml6Up5Y+w5YyX6KW/6ZaA55S657SF5qiT",
       "time": "",
@@ -1612,7 +2643,307 @@
       }
     }
   ],
+  "2026-06-15": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTUtMDk6MDB+MTY6MDAt5qGD5ZyS5Y2A6YCj5rGf57ij5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園區連江縣國際同濟會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-15",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380609382446672",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTUtMTA6MDB+MTY6MDAt5ZyL5rOw5Lq65aO95Lit5aOi6YCa6KiK6JmV",
+      "time": "10:00~16:00",
+      "organization": "國泰人壽中壢通訊處",
+      "location": "桃園市中壢區慈惠二街9號(慈惠堂)",
+      "activityDate": "2026-06-15",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380608748567655",
+      "coordinates": {
+        "lat": 24.960614,
+        "lng": 121.223298
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTUtMDk6MDB+MTY6MDAt5paw56u55o2Q6KGA5Lit5b+D",
+      "time": "09:00~16:00",
+      "organization": "新竹捐血中心",
+      "location": "桃園市大園區大觀路18號(大園大觀路仁壽宮)",
+      "activityDate": "2026-06-15",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380603476172131",
+      "coordinates": {
+        "lat": 25.0651026,
+        "lng": 121.1964329
+      }
+    }
+  ],
+  "2026-06-16": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTYtMDk6MDB+MTY6MDAt5qGD5ZyS5biC6KeA6Z+z542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市觀音獅子會",
+      "location": "桃園市觀音區中興路2號(桃客觀音總站)",
+      "activityDate": "2026-06-16",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380609826315609",
+      "coordinates": {
+        "lat": 25.0378684,
+        "lng": 121.0808258
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTYtMDk6MDB+MTY6MDAt5qGD5ZyS5ZCM5b+D542F",
+      "time": "09:00~16:00",
+      "organization": "桃園同心獅",
+      "location": "桃園市蘆竹區南崁路150號(蘆竹區公所前)",
+      "activityDate": "2026-06-16",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380605733778130",
+      "coordinates": {
+        "lat": 25.046635,
+        "lng": 121.2947487
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTYtMDk6MDB+MTY6MDAt5pWR5ZyL5ZyY5qGD5ZyS5biC55yf5ZaE576O6IGv6Kq85pyD",
+      "time": "09:00~16:00",
+      "organization": "救國團桃園市真善美聯誼會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-16",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380604198809113",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMTYtNi8xNijkuowp5Y2X5oqV6I2J5bGv5aSq5r+f5a6u",
+      "time": "",
+      "organization": "南投草屯太濟宮",
+      "location": "南投草屯太濟宮",
+      "activityDate": "2026-06-16",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "餐飲",
+        "生活用品",
+        "食品"
+      ],
+      "pttData": {
+        "rawLine": "6/16(二)南投草屯太濟宮",
+        "images": [
+          "https://i.imgur.com/mA8CaTP.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/mA8CaTP.jpeg",
+            "text": "2 人\n一 次 朮 媽 礁 信 丰 加 仔 雇\n仿生\neeeoee) 6/16 史 00 2 台 芭 划\n還 轉 誠 一 草地 太 清宮 / 刁\n點 Emruram 六 大 活 動\n※ 甜 在 你 心 甜 米 爛 100 份 。 ※ 炳 錡 咖哩 | 北海道 野菜 燒 男 才 可 樂 餅 。300 份\n※ 元 氣 滿 滿 綜合 湯 100 份 ※ 整 心動 按摩 整復 店 | 30 分 鐘 筋 膜 放鬆 50 份\n※ 布 迪 時 光 . 鬆 餅 | 草莓 抹 醫 鬆 餅 30 份\n| 捐血 禮 | 脫 全\n※ 明 興 碾 潑 廠 濁水 好 米 3 公斤 250 包 。。 ※ 傳 奇 車 輸 餅 | 紅豆 餅 。 同\n※ 草 地 負 燒 從 | 海苔 壽司 50 份\n※ 味 王 王子 杯 麵 360 碗 抽 晤 愉\n主 250 歸 。 。※1 昭 1 湯 包 | 鮮肉 湯 色 20\n說 300 全 六 鮮 奶奶 (草地 店 ) | 單 料 豆花 50 碗\n還 二 定 ※ 翔 哥 茶 抽 ( 草 屯 店 ) | 紅茶 50 份\n※ 伊 莎 具 爾 洗手 乳 300 扛\n※ 大 太 一 又 牛肉 麵 | 鮮 蝦 蝕 蝕 湯 20 份\n※ 高 麗 雅 刀 護 手 霜 300 條 生 人 放\n※ 南 投 背包 智 旅 品 牌 馬 克 杯 300 個 和 20 份\n計 100 盒 。※※ 饑 力 老 潭 關 肉 夾角 | 招 和 肉 夾 錠\n※ 金 門 一 條 根 加 圖 擠 500cc 加 大 近 ( 近 一 ) |\n※ 鋼 寶 閃 燒 纖 30 扛\n| 捐 500cc 加 殼 | 臣 崗 且 指\n如 ※ 玫 莎 莉莉 時 空 膠囊 30 盒\n※ 絲 酥 入 叩 起 司 千 層 棒 150 包 吧 畜\n8 失 ※ 日 月 潭 茶 包 禮盒 30 盒\n※ 第 一 製 麵 日 曬 麵 150 包 還\n同 ※ 嘉 保 喲 髮 品 葉綠素 25 組\n※SMOK 製 甜 所 療 癒 點 心 盒 。 100 盒 同\n※SAEMMI 便 摧 式 可 折 軋 購物 代 5 組\n※ 米 几 衛 生 級 120 串\n※ 鈴 錢 氣泡 茶 飲 | 飲料 品 圖 一, 一 一\n※ 紫 泥 芋 香 吐 司 30 份 3 中 會 看\n※ 山 寨 夫人 放 山 雞 | 滴 雞精 60 包 凡 圖\n| 草 屯 貫 助 店 家 | | 主 辦 單 位 | 洪 姊妹 榕樹 下 扣 仔 距\n炳 錡 咖 嘿 、 上 安心 居家 長 照 機 構 負責 人 簡明 哲 、He&She 全 國 首創 百 元 美 容 - 南 投 草 屯 店 、 一 品 源 當 歸 鴨 、 桔 品 晨 食 館\n整 心 運動 按摩 整復 專門 店 、 布 迪 食 光 鬆 餅 、 順 安 藥 局 、 傳 奇 車 輸 燒 、 草 屯 鍋 燒 麵 、 明 箕 碾 米 廠 、 富 膀 商 行 、 一 鼠 一 湯 、 多 錢 飲料\n草 屯 永和 豆漿 、 草 屯 蚵 仔 麵 、 大 立 德 起 重工 程 公司 莊 明宗 、 簡 單 茶 生 活 、 嘉 保羅 髮 品 材料 、 第 一 製 從 、SMOK 製 甜 所\nmi PASTA 杯 杯 麵 、 洲 昇 消防 安全 設備 有 限 公司 、JL 美甲 小 請 、 紅 翻天 平價 現 炒 、 良 美 免 洗 餐具 行 、 美 人 佳美 髮 美 容 材 料 行\nmomo 結 婚事 物 所 、 翔 吉 中 古 汽車 材料 、 絲 酥 入 叩 山藥 鳳梨 酥 專賣 店 、 時 態 印 務 、 奶 靜 - 養 生 湯 品 , 滴 雞精 、 味 王 股份 有 限 公司\n鮮 奶奶 - 草 地 店 、 無 尾 熊 音 樂 美 語 中 心 、 老 張 牛肉 麵 餃子 館 、 一 也 豆乳 難 草 屯 店 、 翔 哥 茶 攤 、 添 好 運 投注 站 、 上 太 電 器 行\n草 屯 長 庚 中 醫 診所 潘 文 雄 院長 、 成 昌 鐘 錶 眼鏡 行 、 蝕 力 老 注 開 肉 夾 餞 、 台 北 組 魷魚 鑄 專 味 店 、 大 太 一 又 牛肉 麵 、 中 山 醫 醫療 團隊\n山寨 夫人 放 山 雞 、SmartStay 草 屯 智 旅 隔 上 花 開 、SmartStay 南 投 背包 智 旅 、 新 光 人 壽 區 經 理 簡 美 華\n陳 秋 統 、 黎 莉 萍 、 李 源 旺 、 莊 居 仁 、 李 桂 琳 、 白 麗 莎 、 陳 玟 君 、 余 取 劉 、 佘 素 圓 、 佘 佳 芳 、 黃 素 莉 、 陳 姿 俗 、 林 雅 津 、 李 博 鏽\n李 洱 恰 、 李 青 玲 、 曹 桂 妃 、 施 亡 虹 、 鍾 佩 琪 、 郭 螢 玉 、 印 士 家 、 林 苡 婚 、 洪 進 成 、 會 阿 換 、 洪 崧 倍\n",
+            "confidence": 69
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 23.9762982,
+        "lng": 120.6833542
+      }
+    }
+  ],
+  "2026-06-17": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTctMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-17",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380606911526185",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTctMDk6MDB+MTY6MDAt5L2b5YWJ5pyD5qGD5ZyS56ys5LiA5YiG5pyD",
+      "time": "09:00~16:00",
+      "organization": "佛光會桃園第一分會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-17",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380605377657168",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTctMDg6MzB+MTY6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "08:30~16:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-17",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380601649131671",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTctMDk6MDB+MTY6MDAt6b6N5r2t5b6M5oay6I235p2+5Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "龍潭後憲荷松協會",
+      "location": "桃園市龍潭區公園路39號(龍潭運動公園_北龍路肯德基對面)",
+      "activityDate": "2026-06-17",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380601283010609",
+      "coordinates": {
+        "lat": 24.868033,
+        "lng": 121.2187586
+      }
+    }
+  ],
+  "2026-06-18": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTgtMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-18",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380618278122185",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTgtMDk6MDB+MTY6MDAt5qGD5ZyS5Y2A5b635rCR542F",
+      "time": "09:00~16:00",
+      "organization": "桃園區德民獅",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-18",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380617734253167",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTgtMDg6MDB+MTY6MzAt5Y+w54Gj5Lit5rK5KOiCoSnlhazlj7jmjqLmjqE=",
+      "time": "08:00~16:30",
+      "organization": "台灣中油(股)公司探採",
+      "location": "苗栗縣苗栗市為公路282號(苗栗捐血站_現場另備有3台車)",
+      "activityDate": "2026-06-18",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380617190374130",
+      "coordinates": {
+        "lat": 24.5713259,
+        "lng": 120.8295529
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTgtMDk6MDB+MTY6MDAt5qGD5ZyS5biC5Zac5ZaE5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市喜善國際同濟會",
+      "location": "桃園市八德區大智路99號(八德廣豐兒一公園)",
+      "activityDate": "2026-06-18",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380616555405112",
+      "coordinates": {
+        "lat": 24.9642678,
+        "lng": 121.2971038
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTgtMDg6MzB+MTY6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "08:30~16:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-18",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380612006737671",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTgtMDk6MDB+MTY6MDAt5qGD5ZyS5biC6JeN5aSp542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市藍天獅子會",
+      "location": "桃園市中壢區中華路一段450號(內壢家樂福)",
+      "activityDate": "2026-06-18",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380611828989626",
+      "coordinates": {
+        "lat": 24.9731158,
+        "lng": 121.2535158
+      }
+    }
+  ],
   "2026-06-19": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTktMTA6MzB+MTc6MDAt5LiW55WM6I+v5Lq65bel5ZWG5amm5aWz5LyB566h5Y2U5pyD5paw56u55biC5YiG5pyD",
+      "time": "10:30~17:00",
+      "organization": "世界華人工商婦女企管協會新竹市分會",
+      "location": "新竹市東區中央路229號(巨城民權路創藝大樓前廣場)",
+      "activityDate": "2026-06-19",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380619457970139",
+      "coordinates": {
+        "lat": 24.8098161,
+        "lng": 120.9751319
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTktMDk6MDB+MTY6MDAt5qGD5ZyS5biC5qau5Yud5aq956WW5r+f5LiW5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市榮勝媽祖濟世會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-19",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380618812001112",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTktMDg6MzB+MTY6MzAt5paw56u557ij6I+v6LuS5LiW55WM6I+v5Lq65bel5ZWG5amm5aWz5LyB566h5Y2U5pyD",
+      "time": "08:30~16:30",
+      "organization": "新竹縣華軒世界華人工商婦女企管協會",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-19",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380614729464643",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMTktMDk6MDB+MTc6MDAt5LiW55WM6I+v5Lq65bel5ZWG5amm5aWz5LyB566h5Y2U5pyD5paw56u55biC5YiG5pyD",
+      "time": "09:00~17:00",
+      "organization": "世界華人工商婦女企管協會新竹市分會",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-06-19",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380613185585626",
+      "coordinates": {
+        "lat": 24.8108593,
+        "lng": 120.9577185
+      }
+    },
     {
       "id": "cHR0LTIwMjYtMDYtMTktNi8xOSjkupQp5qGD5ZyS6b6N5r2t5qKF6b6N6Lev77yI57ea5LiK5aCx5ZCN77ya",
       "time": "",
@@ -1668,106 +2999,567 @@
       "isPttOnly": true
     }
   ],
-  "2026-06-11": [
+  "2026-06-20": [
     {
-      "id": "cHR0LTIwMjYtMDYtMTEtNi8xMSjlm5sp5b2w5YyW5rqq5rmW57OW5bug",
-      "time": "",
-      "organization": "彰化溪湖糖廠",
-      "location": "彰化溪湖糖廠",
-      "activityDate": "2026-06-11",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "6/11(四)彰化溪湖糖廠",
-        "images": [
-          "https://i.imgur.com/9NFGVec.jpeg",
-          "https://i.imgur.com/I5wdymF.jpeg",
-          "https://i.imgur.com/dLhLv4j.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/9NFGVec.jpeg",
-            "text": "2026 @\n一 虫 視 各 察 飼\n號\n縮 警 察 有 受 * 熱 血 常 在 )\n** 熱血 捐血 活動 **\n活動 時 間 :115 年 6 月 11 日 星期 四 一\n店 谷\n人 一 偽 )\n守 位 所\n藻 務 暢 【 語 】 | 所 血族 人\n出, 諾 上 兀 N\n說 人 主\n.! 其 人 7\n1 ESSS 訪 2\n二 ) 獎品 豐富 。 歡 迎 共 襄 盛舉 人 二 生\n3\nFiE 誠 及 2\n王 二\n六 人 還 he\nEE 人\nWe 底 : 說\n> 前 ‧ 冊 作 上 革\n主 辦 單 位 : 彰 化 縣 警察 局 溪 湖 分 局\n溪 湖 警察 志 工 協 進 會\n協辦 單位 : 溪 湖 警察 志 工 中 隊\n溪 湖 分 局 轄 下 各 派出 所 志 工 隊\n贊助 單位 : 溪 湖 鎮 公 所 、 弘 農 菇 類 栽培 場 、 和 秋 食 品\n正大 造紙 廠 、 陳 義 發 餅 店 、 欣 亞 牙醫 診所\n",
-            "confidence": 58
-          },
-          {
-            "url": "https://i.imgur.com/I5wdymF.jpeg",
-            "text": "全 館 身 藹 捐 甸 仿 交\n人 4\n活動 地 點 : 消防 訓練 中 心 停車 貴\n損 250cc 送 馬 銀 錢 母 1 個 :' 捐 500cc 送 馬 金 、 銀 錢 母 各 1 個\n115 年 5 月 行 程 傅 例\ng9:30~15:00 X※ 結 束 時間 視 現場 人 潮 情 況 調整 ※\n5/05( 二 ) 5/09( 六 ) 5/11( 一 ) 5/12( 二 )\n5/13( 三 ) 5/14( 四 ) 5/15( 五 ) 5/18( 一 )\n5/19( 二 ) 5/22( 五 ) 5/24( 日 ) 5/25( 一 ) 8\n日\n5/27( 三 ) 5/28( 四 ) 5/29( 五 ) 5/31( 日 )\n紫 南 宮 整 年 度 都 有 捐血 送 錢 母 活動 , 請 利用 平日 來\n捐血 , 以 免 假日 人 數 眾多 無 法 完成 捐血 喔 !\n、,※ 捐 血 採 現場 排隊 , 請 依 指示 配合 ※ 約\n和 謝謝 大 家 的 愛 心\n",
-            "confidence": 79
-          },
-          {
-            "url": "https://i.imgur.com/dLhLv4j.jpeg",
-            "text": "讓 」\n人 條 和 請 條\n捐血 車 移 至 史上 生 的 症 机 避 庄 汪\n\n消防 訓練 中 心 停車 場\n鈞 # 愉 生\n大 哈 坊 箇 還 位 自 |!\n街 ss\n※ 捐 血 採 現場 排隊 , 請 依 指 示 配 合 ※ 2\n",
-            "confidence": 48
-          }
-        ]
-      },
-      "isPttOnly": true,
+      "id": "5paw56u5LTIwMjYvMDYvMjAtMDk6MDB+MTY6MDAt5L2b5YWJ5pyD5aSn5rqq56ys5LqM5YiG5pyD",
+      "time": "09:00~16:00",
+      "organization": "佛光會大溪第二分會",
+      "location": "中華電信前(桃園市大溪區慈湖路78號)",
+      "activityDate": "2026-06-20",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380619091859167",
       "coordinates": {
-        "lat": 23.9511905,
-        "lng": 120.4792139
-      }
-    }
-  ],
-  "2026-06-13": [
-    {
-      "id": "cHR0LTIwMjYtMDYtMTMtNi8xMyjlha0p6Zuy5p6X5YWt5oi/5aSp5LiK6IGW5q+NMTE1LTExNuW5tOaWl+WNl+iCoee0heWjhw==",
-      "time": "",
-      "organization": "雲林六房天上聖母115-116年斗南股紅壇",
-      "location": "雲林六房天上聖母115-116年斗南股紅壇",
-      "activityDate": "2026-06-13",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "6/13(六)雲林六房天上聖母115-116年斗南股紅壇",
-        "images": [
-          "https://i.imgur.com/JClyGUA.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/JClyGUA.jpeg",
-            "text": "和 說 人 全\n\n更 尿 一 一 點 所 @ 福 ~ 如 藹 4 全 產 、 )\n? 號 愉 系 和 所 色 , 于\n/ 蔽 @) 之 “2 2 匠 2 選 一\n: ( f ) 二 及 |\n\n是\n\njm 生 ttkWp 証 , 劑 一 3 了 )\n\n和 對 位?% 補 2 生\n活動 時 間 :06 月 13 日 9:00~16:00\nWILLEHETIIESIEIETTT\n捐血 250CC 估 1 袋 精美 禮品 + 抽獎 一 次 |\n捐血 500CC 送 2 袋 精 美 禮品 + 抽獎 兩 次\n超 豐富 獎項 : 獎 品 真 的 很 豐富 , 歡 迎 各 界 共 襄 盛舉\n行 動 電 源 , 藍 牙 耳 機 , 吹風 機 , 快 煮 壺 , 等 等 豐富 獎品\n\n勵 | 8 as 了\n洛 同 計 戶 生 閏 因\n主 時 mm 1 邊 W 中\n衝 1 圖 | 上\nv 富國 廬 則 圖 圖\n1 re 北 > > 一 3 ee 4 上\n5000mze- es 是 生 噴 -\n捐血 基本 條 件 一 泗\n~ 上 了 久生 滿 16 未 滿 65 歲 、 體 重 45 公 斤 以 上 、 睡 眠 充足 、 勿 空 度 、 感 冒 、 加 點 奢 -\n『【:: 沁 測 打 針 、 吃 藥 暫緩 2 週 、 捐 250CC 需 隔 2 個 月 、500CC 需 3\n| 隔 3 個 月 、 年 捐血 量 1500cc、 女 1000cc 說\n和 濟 介 放 (以 個 人 生 日 為 週期) 時 5 入 汪\n、 說 天 。。 。。。 三 高 者 、 吃 藥 控制 得 宜 、 血 壓 當 下 正常 可 以 捐血 世 |! 文 說 全 簿 和\n二 芷 才 汪 店 已 -^4 蝦\n_“___ 捐血 請 戴 口罩 攜帶 身分 證 。 各 還\n1 作 (人 含 ‧\n所 (人 上 末 0\nha 條 大 、 廁 二\n中 PTriTrTTLTTTEILTTE 了 PHPITOL1\n",
-            "confidence": 49
-          }
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 23.679436,
-        "lng": 120.4747975
+        "lat": 24.8818439,
+        "lng": 121.2887879
       }
     },
     {
-      "id": "cHR0LTIwMjYtMDYtMTMtNi8xMyjlha0p5Y+w5Lit5p2x5Y2A56aP5a6J5a6u",
+      "id": "5paw56u5LTIwMjYvMDYvMjAtMDg6MDB+MTY6MDAt6IC256mM5Z+6552j5b6M5pyf6IGW5b6S5pWZ5pyD5paw56u55pSv6IGv5pyD",
+      "time": "08:00~16:00",
+      "organization": "耶穌基督後期聖徒教會新竹支聯會",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-20",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380616620939670",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjAtMDk6MzB+MTY6MzAt5qGD5ZyS5biC5oiQ5Yqf542F5a2Q5pyD",
+      "time": "09:30~16:30",
+      "organization": "桃園市成功獅子會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-20",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380616186060643",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjAtMDk6MDB+MTY6MDAt6I+v6Iqv5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "09:00~16:00",
+      "organization": "華芯國際同濟會",
+      "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
+      "activityDate": "2026-06-20",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380615907212698",
+      "coordinates": {
+        "lat": 24.6921554,
+        "lng": 120.8796045
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjAtMDk6MzB+MTY6MzAt5bmz6Y6u5ZCM5r+f5pyD",
+      "time": "09:30~16:30",
+      "organization": "平鎮同濟會",
+      "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
+      "activityDate": "2026-06-20",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380615542181625",
+      "coordinates": {
+        "lat": 24.9559892,
+        "lng": 121.226132
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjAtMDk6MDB+MTY6MDAt5bmz6Y6u5ZCM5r+f5pyD",
+      "time": "09:00~16:00",
+      "organization": "平鎮同濟會",
+      "location": "桃園市中壢區中美路76號(中壢圖書館)",
+      "activityDate": "2026-06-20",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380614363333670",
+      "coordinates": {
+        "lat": 24.9587728,
+        "lng": 121.2261148
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjAtMTA6MDB+MTY6MzAt5YyX5Z+U6YSJ6IGv5ZCI56S+5Y2A5beh5a6I5Y2U5pyD",
+      "time": "10:00~16:30",
+      "organization": "北埔鄉聯合社區巡守協會",
+      "location": "新竹縣北埔鄉中山路20號(北埔鄉公所前)",
+      "activityDate": "2026-06-20",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380611458444166",
+      "coordinates": {
+        "lat": 24.7019901,
+        "lng": 121.0563354
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjAtMDk6MzB+MTY6MDAt5qGD5ZyS5biC5oiQ5Yqf542F5a2Q5pyD",
+      "time": "09:30~16:00",
+      "organization": "桃園市成功獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-20",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380610814576139",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMjAtNi8yMCjlha0p44CBOS8yNijlha0p44CBMTIvMjAo5pelKemrmOmbhOmXnOW4neW7nw==",
       "time": "",
-      "organization": "台中東區福安宮",
-      "location": "台中東區福安宮",
-      "activityDate": "2026-06-13",
+      "organization": "、9/26(六)、12/20(日)高雄關帝廟",
+      "location": "、9/26(六)、12/20(日)高雄關帝廟",
+      "activityDate": "2026-06-20",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
       "tags": [
-        "餐飲",
-        "食品"
+        "禮券"
       ],
       "pttData": {
-        "rawLine": "6/13(六)台中東區福安宮",
+        "rawLine": "6/20(六)、9/26(六)、12/20(日)高雄關帝廟",
         "images": [
-          "https://i.imgur.com/rXSIGwz.jpeg"
+          "https://i.imgur.com/buDCgXe.jpeg"
         ],
         "ocrTexts": [
           {
-            "url": "https://i.imgur.com/rXSIGwz.jpeg",
-            "text": "( 閑 撼 (0 斷 線 [\n圖 晨 全\nmm 全\n弓 ~ 人 G\n一 2 Go@\n一 人\nee AN 當\n伍 儿 、\n人\n4 AMNe 人 ~\n日 期 : 1154 06 有 13 日 (星期 六 ) 09:00~16:00 國 點\n主 辦 : 台 中 市 東區 束 英里 福安 宮 管理 委員 會\n地 點 : 福 安 宮 ( 束 區 三 賢 街 268 號 )\n贊助 單位 :\nL- 利 奇 貿易 有 限 公司 蔡 享 窯 、 邱 櫻 語 。\n2 日 初 古 早 味 蛋 糕\n人 意義 興業 股份 有 限 公司 黃 敬 義 、 徐 筆 組 。\n4 巨 泰 開 發 有 限 公司 丁 文 亮 、 陳 婉 茹 。\n5 寶 鳥 眼鏡 公司 十 甲 店\n6 福安 宮 常 務 委 員 余 秀 蓮 (包子 260 顆 )、 黎 玉 妃 (茶葉 蛋 260 顆 )、 副 主 任 委員 鎬 建 鎖 (統一 蜜 豆 奶 12 箱 ) 。\n字 福安 宮 信 眾 捐 獻 芳 名 錄 等 ~ 若 心 人 士 (公布 欄 紅 榜 》。\nL. 台 中 市 東 英里 福安 宮 奸 因 福 袋 + 日 初 古 早 味 蛋 糕 禮 券 乙 張 。 2 福安 宮 平 安 麵 線 。\n& 日 初 古 早 味 蛋 糕 抵 用 券 乙 張 。4 明 橋 歐 風 耐熱 咖啡 杯 。\n5 明 橋 多 功能 筷 租 收納 盒 。6. 明 橋 竹 蓋 面 紙 盒 。7. 明 橋 EVA 桌 布 野餐 墊 。8. 乾 義興 業 帆布 環保 袋 。\n9 參加 獎 : 當 天 凡 領 有 捐血 號 碼 牌 ‧ 即 可 獲得 乙 份 寶島 眼鏡 造型 集 線 器 + 折價 券 2 合 1\n嘉 以 上 明 橋 贈 品 型 式 顏色 隨機\n出 1 吝 所 有 贈品 除 參 加 獎 扣 250ccx1 份 500ccx2 份\n※ 贈 品 數 量 有 限 送 宛 為 止 ※\n六 捐血 朋友 領有 號 碼 牌 才 點心 此 次 為 一 熱 包 了 、 茶 葉 蛋 、 義 美 豆奶 各 260 份 送 完 為 止 ! !\n",
-            "confidence": 72
+            "url": "https://i.imgur.com/buDCgXe.jpeg",
+            "text": "as cc 人\n時 品 司 二 和\n距 廬 【d 才 點 品\nS@ 虎 毆 吧 用 澀 閃電 劑 紀 圖 上\n際 記 Re\nyi 同 的 EE 全 7\n1 避 避 同 避 遇 邊 2 毗 關 l 552 33 > | 2 戰 避 避 全 號 汪\nMe\n4 放 三 和 關稅\n的 店 晤 二 稅 | 人\n了 和 1\n踢 中 和 朋 還 二 宮 守宮 S 還 同 和\n全 5 弟 由 cue 【 加 EEr 加 池 | | 了\n人 和 人 上 Le 說 讓 和 一\n/ 選 : 鬧 2 肝 剛生 你 和 和 um\n3 時 和 月 史 中 層 作 吧 4# 紡 人 同 還\n了 上邊 點 著\n補 公映 2 前 用 間 匠 : 租 WWW\n高 雄 關 帝 廟 熱情 邀約\n人 多\n250cc 和 送 衛 生 紙 二 兩 張 禮券\n500cc 和 送 五 張 禮券\n加 革 必 講 一 1\n* 捐 血 請 攜帶 身分 論 * 熱血 招募\n",
+            "confidence": 23
           }
         ]
       },
-      "isPttOnly": true
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.6306674,
+        "lng": 120.3316574
+      }
+    }
+  ],
+  "2026-06-21": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjEtMDk6MDB+MTY6MDAt5qGD5ZyS5biC5paw5bGL542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市新屋獅子會",
+      "location": "桃園市新屋區中山路265號(新屋區公所_現場備有2台車)",
+      "activityDate": "2026-06-21",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380628622414797",
+      "coordinates": {
+        "lat": 24.9725439,
+        "lng": 121.105533
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjEtMDk6MDB+MTY6MDAt5qGD5ZyS5biC6KeA6Z+z542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市觀音獅子會",
+      "location": "桃園市龜山區文青路383號(水資源回收中心)",
+      "activityDate": "2026-06-21",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380623994998200",
+      "coordinates": {
+        "lat": 25.0394264,
+        "lng": 121.3936941
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjEtMDg6MDB+MTc6MDAt5paw56u55biC6IGa5pif5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "08:00~17:00",
+      "organization": "新竹市聚星國際同濟會",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-21",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380623359029283",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjEtMDk6MDB+MTY6MDAt5qGD5ZyS5biC55yf5ZaE576O542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市真善美獅子會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-21",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380618087535779",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjEtMDg6MDB+MTc6MDAt5b6M6b6N542F5a2Q5pyD",
+      "time": "08:00~17:00",
+      "organization": "後龍獅子會",
+      "location": "苗栗縣苗栗市為公路282號(苗栗捐血站)",
+      "activityDate": "2026-06-21",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380617809787725",
+      "coordinates": {
+        "lat": 24.5713259,
+        "lng": 120.8295529
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjEtMDk6MDB+MTY6MDAt5qGD5ZyS5biC6KeA6Z+z5aWz542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市觀音女獅子會",
+      "location": "桃園市中壢區民族路五段280號(聯邦銀行高榮分行前)",
+      "activityDate": "2026-06-21",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380616265818697"
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjEtMDk6MDB+MTY6MDAt5b6M6b6N542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "後龍獅子會",
+      "location": "苗栗縣後龍鎮車站街127號(後龍火車站 )",
+      "activityDate": "2026-06-21",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380612537292101",
+      "coordinates": {
+        "lat": 24.6162121,
+        "lng": 120.7873071
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjEtMDk6MzB+MTY6MzAt5rW36ZuB5ZCM5r+f5pyD",
+      "time": "09:30~16:30",
+      "organization": "海雁同濟會",
+      "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
+      "activityDate": "2026-06-21",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380612171171238",
+      "coordinates": {
+        "lat": 24.9559892,
+        "lng": 121.226132
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjEtMDk6MDB+MTY6MDAt5rW36ZuB5ZCM5r+f5pyD",
+      "time": "09:00~16:00",
+      "organization": "海雁同濟會",
+      "location": "桃園市中壢區中美路76號(中壢圖書館)",
+      "activityDate": "2026-06-21",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380611992323184",
+      "coordinates": {
+        "lat": 24.9587728,
+        "lng": 121.2261148
+      }
+    }
+  ],
+  "2026-06-22": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjItMDk6MDB+MTY6MDAt56aP54i+5pGp5rKZ542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "福爾摩沙獅子會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-22",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380629890262742",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjItMDk6MDB+MTY6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD6Zec6KW/5YiG5pyD",
+      "time": "09:00~16:00",
+      "organization": "國際佛光會中華總會關西分會",
+      "location": "新竹縣竹東鎮東林路30號(竹東第一銀行前)",
+      "activityDate": "2026-06-22",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380629266383724",
+      "coordinates": {
+        "lat": 24.736835,
+        "lng": 121.0891321
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjItMDg6MzB+MTY6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "08:30~16:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-22",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380624062746255",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    }
+  ],
+  "2026-06-23": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjMtMDk6MDB+MTY6MDAt5qGD5ZyS54Cn5pif542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園瀧星獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-23",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380625607625283",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjMtMDg6MzB+MTY6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "08:30~16:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-23",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380625241594200",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjMtMDk6MDB+MTY6MDAt6IuX5qCX57ij5LiJ576p6YSJ5b6M5YKZ5oay5YW16I235p2+5Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "苗栗縣三義鄉後備憲兵荷松協會",
+      "location": "苗栗縣三義鄉中正路169號(三義六角亭前)",
+      "activityDate": "2026-06-23",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380620334131779",
+      "coordinates": {
+        "lat": 24.412286,
+        "lng": 120.7707471
+      }
+    }
+  ],
+  "2026-06-24": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjQtMDk6MDB+MTY6MDAt5qGD5ZyS5biC5b+r5qiC542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市快樂獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-24",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380626885473237",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjQtMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-24",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380626429342255",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjQtMDk6MzB+MTY6MzAt5qGD6IuX5rG96LuKKOiCoSnlhazlj7gv5qGD",
+      "time": "09:30~16:30",
+      "organization": "桃苗汽車(股)公司/桃",
+      "location": "桃園市中壢區中園路162號(和泰汽車中壢營業處)",
+      "activityDate": "2026-06-24",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380621791737768",
+      "coordinates": {
+        "lat": 24.9693333,
+        "lng": 121.2370803
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjQtMDk6MzB+MTY6MDAt5LiJ5ZWG576O6YKm",
+      "time": "09:30~16:00",
+      "organization": "三商美邦",
+      "location": "桃園市中壢區環北路410號",
+      "activityDate": "2026-06-24",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380620513989724",
+      "coordinates": {
+        "lat": 24.96545,
+        "lng": 121.2270022
+      }
+    }
+  ],
+  "2026-06-25": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjUtMDk6MDB+MTY6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5qGD5qyj5YiG5pyD",
+      "time": "09:00~16:00",
+      "organization": "國際佛光會中華總會桃欣分會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-25",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380627608190209",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjUtMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-25",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380627242079237",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjUtMDk6MDB+MTY6MDAt5aSn5rmW542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "大湖獅子會",
+      "location": "苗栗縣大湖鄉中原路87/2號(全家便利商店 大湖金湖店前)",
+      "activityDate": "2026-06-25",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380627064221282",
+      "coordinates": {
+        "lat": 24.4247071,
+        "lng": 120.866096
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjUtMDk6MDB+MTc6MDAt5paw56u55biC5a6k5YWn6Kit6KiI6KOd5L+u5ZWG5qWt5ZCM5qWt5YWs5pyD",
+      "time": "09:00~17:00",
+      "organization": "新竹市室內設計裝修商業同業公會",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-25",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380622970584713",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    }
+  ],
+  "2026-06-26": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjYtMDk6MDB+MTY6MDAt5qGD5ZyS5biC5aSn5pyJ542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市大有獅子會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-26",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380628786948254",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjYtMDk6MDB+MTY6MDAt6JiG56u55aWz542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "蘆竹女獅子會",
+      "location": "桃園市蘆竹區南崁路150號(蘆竹區公所前)",
+      "activityDate": "2026-06-26",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380628321827282",
+      "coordinates": {
+        "lat": 25.046635,
+        "lng": 121.2947487
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjYtMTE6MDB+MTg6MDAt5Y+w54Gj5Lit5rK55YWs5Y+456u56IuX54ef5qWt",
+      "time": "11:00~18:00",
+      "organization": "台灣中油公司竹苗營業",
+      "location": "新竹縣竹北市縣政九路135巷36號(竹北號定點車)",
+      "activityDate": "2026-06-26",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380623059332768",
+      "coordinates": {
+        "lat": 24.8283339,
+        "lng": 121.0090699
+      }
     }
   ],
   "2026-06-27": [
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjctMDk6MDB+MTc6MDAt5paw56u55biC55Sf5ZG957ea5Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "新竹市生命線協會",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-06-27",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380635871059740",
+      "coordinates": {
+        "lat": 24.8108593,
+        "lng": 120.9577185
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjctMDk6MzB+MTY6MDAt6IqO5p6X6YSJ6Z2S5rqq5amm6IGv5pyD",
+      "time": "09:30~16:00",
+      "organization": "芎林鄉青溪婦聯會",
+      "location": "新竹縣芎林鄉文德路30號(文德水利大樓及悠遊戶外用品中間停車場\t)",
+      "activityDate": "2026-06-27",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380635416938767",
+      "coordinates": {
+        "lat": 24.7761036,
+        "lng": 121.075864
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjctMDk6MDB+MTY6MDAt5paw56u557ij5paw5Z+U5p2+562g542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "新竹縣新埔松筠獅子會",
+      "location": "新竹縣新埔鎮田新路600號(新埔鎮公所)",
+      "activityDate": "2026-06-27",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380630788423271",
+      "coordinates": {
+        "lat": 24.8256201,
+        "lng": 121.0740799
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjctMDg6MDB+MTY6MDAt5paw56u55biC5bel56iL6LOH6KiK5pyN5YuZ5Y2U5pyD",
+      "time": "08:00~16:00",
+      "organization": "新竹市工程資訊服務協會",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-27",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380630143544254",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjctMDk6MDB+MTY6MDAt5YWr5b635aWz542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "八德女獅子會",
+      "location": "桃園市桃園區文康街61號(桃園捐血站)",
+      "activityDate": "2026-06-27",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380629509675236",
+      "coordinates": {
+        "lat": 24.9939232,
+        "lng": 121.3037018
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjctMDk6MDB+MTY6MDAt6IuX5qCX57ij5b6u56yR5Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "苗栗縣微笑協會",
+      "location": "苗栗縣竹南鎮光復路372號(竹南捐血室)",
+      "activityDate": "2026-06-27",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380624693201795",
+      "coordinates": {
+        "lat": 24.6921554,
+        "lng": 120.8796045
+      }
+    },
     {
       "id": "cHR0LTIwMjYtMDYtMjctNi8yNyjlha0p6Zuy5p6X5o2Q6KGA56uZ",
       "time": "",
@@ -1801,128 +3593,153 @@
       }
     }
   ],
-  "2026-06-20": [
+  "2026-06-28": [
     {
-      "id": "cHR0LTIwMjYtMDYtMjAtNi8yMCjlha0p44CBOS8yNijlha0p44CBMTIvMjAo5pelKemrmOmbhOmXnOW4neW7nw==",
-      "time": "",
-      "organization": "、9/26(六)、12/20(日)高雄關帝廟",
-      "location": "、9/26(六)、12/20(日)高雄關帝廟",
-      "activityDate": "2026-06-20",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券"
-      ],
-      "pttData": {
-        "rawLine": "6/20(六)、9/26(六)、12/20(日)高雄關帝廟",
-        "images": [
-          "https://i.imgur.com/buDCgXe.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/buDCgXe.jpeg",
-            "text": "as cc 人\n時 品 司 二 和\n距 廬 【d 才 點 品\nS@ 虎 毆 吧 用 澀 閃電 劑 紀 圖 上\n際 記 Re\nyi 同 的 EE 全 7\n1 避 避 同 避 遇 邊 2 毗 關 l 552 33 > | 2 戰 避 避 全 號 汪\nMe\n4 放 三 和 關稅\n的 店 晤 二 稅 | 人\n了 和 1\n踢 中 和 朋 還 二 宮 守宮 S 還 同 和\n全 5 弟 由 cue 【 加 EEr 加 池 | | 了\n人 和 人 上 Le 說 讓 和 一\n/ 選 : 鬧 2 肝 剛生 你 和 和 um\n3 時 和 月 史 中 層 作 吧 4# 紡 人 同 還\n了 上邊 點 著\n補 公映 2 前 用 間 匠 : 租 WWW\n高 雄 關 帝 廟 熱情 邀約\n人 多\n250cc 和 送 衛 生 紙 二 兩 張 禮券\n500cc 和 送 五 張 禮券\n加 革 必 講 一 1\n* 捐 血 請 攜帶 身分 論 * 熱血 招募\n",
-            "confidence": 23
-          }
-        ]
-      },
-      "isPttOnly": true,
+      "id": "5paw56u5LTIwMjYvMDYvMjgtMDk6MDB+MTY6MDAt6Zec6KW/5oOg576k542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "關西惠群獅子會",
+      "location": "新竹縣關西鎮正義路51號(關西鎮公所)",
+      "activityDate": "2026-06-28",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380637773634767",
       "coordinates": {
-        "lat": 22.6306674,
-        "lng": 120.3316574
+        "lat": 24.79246,
+        "lng": 121.1758265
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjgtMDk6MDB+MTY6MDAt6auY5piO5ZCM5r+f",
+      "time": "09:00~16:00",
+      "organization": "高明同濟",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-28",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380636694886712",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjgtMTA6MDB+MTc6MDAt5paw56u55biC56u55aG56aiB5ZyL6Zqb5ZCM5r+f5pyD",
+      "time": "10:00~17:00",
+      "organization": "新竹市竹塹騁國際同濟會",
+      "location": "新竹市北區文雅街6號(西大捐血室)",
+      "activityDate": "2026-06-28",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380636138755740",
+      "coordinates": {
+        "lat": 24.8108593,
+        "lng": 120.9577185
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjgtMDk6MDB+MTc6MDAt5qGD5ZyS57ij5b6u56yR5Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "桃園縣微笑協會",
+      "location": "桃園市八德區忠勇街266號(八德忠勇公園前_現場備有5台車)",
+      "activityDate": "2026-06-28",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380635050907795",
+      "coordinates": {
+        "lat": 24.96456,
+        "lng": 121.3041274
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjgtMDg6MDB+MTY6MzAt5paw56u557ij5a6i5a625paH6Jed5L+D6YCy5Y2U5pyD",
+      "time": "08:00~16:30",
+      "organization": "新竹縣客家文藝促進協會",
+      "location": "新竹縣竹北市光明11路215巷8號(竹北愛心樓)",
+      "activityDate": "2026-06-28",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380632401140253",
+      "coordinates": {
+        "lat": 24.8336688,
+        "lng": 120.997844
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjgtMDk6MzB+MTY6MzAt5ZyL6Zqb5L2b5YWJ5pyD5bmz6Y6u5YiG5pyD",
+      "time": "09:30~16:30",
+      "organization": "國際佛光會平鎮分會",
+      "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
+      "activityDate": "2026-06-28",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380631322392208",
+      "coordinates": {
+        "lat": 24.9559892,
+        "lng": 121.226132
       }
     }
   ],
-  "2026-06-09": [
+  "2026-06-29": [
     {
-      "id": "cHR0LTIwMjYtMDYtMDktNi85KOS6jCnlsY/mnbHorablr5/lsYDmnbHmuK/liIblsYA=",
-      "time": "",
-      "organization": "屏東警察局東港分局",
-      "location": "屏東警察局東港分局",
-      "activityDate": "2026-06-09",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "6/9(二)屏東警察局東港分局",
-        "images": [
-          "https://i.imgur.com/BiyvKXb.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/BiyvKXb.jpeg",
-            "text": "相 | 和 人\n\n肖 及 有 信和 】09:30-17:00\n\n屏 東 縣 政府 警察 局 東港 分 局 ( 層 束 縣 東港 鎮 海路 1 號 )\n\n( ) 指 250ce ( ) 捐 500cc 和 首 折\n\n一 口 鳥 魚子 + 好 禮 5 擇 1 | 一 口 鳥 魚子 2 包 + 好 禮 5 擇\n\n1 加 贈 200 去 全 聯 禮 券\n\n人\n\n人\n計 三 2 了 l 三 “學 過 人 潮 過 多 牙 視 情 江 共 登錄 作業 4 條 3 M\n| 主辦 單位. 高 雄 市 玉 廬 有 順 大 慈 善 全 | 9 2\n全 bs Ni 生\n",
-            "confidence": 52
-          }
-        ]
-      },
-      "isPttOnly": true,
+      "id": "5paw56u5LTIwMjYvMDYvMjktMDk6MDB+MTY6MDAt5pWR5ZyL5ZyY5qWK5qKF5Y2A5ZyY5aeU5pyD",
+      "time": "09:00~16:00",
+      "organization": "救國團楊梅區團委會",
+      "location": "桃園市楊梅區大成路256號(楊梅火車站)",
+      "activityDate": "2026-06-29",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380638951482712",
       "coordinates": {
-        "lat": 22.4631275,
-        "lng": 120.4617628
+        "lat": 24.9143248,
+        "lng": 121.1464462
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjktMDk6MDB+MTY6MDAt5qGD5ZyS5biC5YWJ5pqJ542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市光暉獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-29",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380637317503794",
+      "coordinates": {
+        "lat": 24.9929776,
+        "lng": 121.3058
+      }
+    },
+    {
+      "id": "5paw56u5LTIwMjYvMDYvMjktMDk6MzB+MTY6MzAt5qGD5ZyS5biC5Lit5aOi5Y2A5rCR55y+5pyN5YuZ56S+",
+      "time": "09:30~16:30",
+      "organization": "桃園市中壢區民眾服務社",
+      "location": "桃園市中壢區中美路76號(中壢圖書館)",
+      "activityDate": "2026-06-29",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380632045019271",
+      "coordinates": {
+        "lat": 24.9587728,
+        "lng": 121.2261148
       }
     }
   ],
-  "2026-06-16": [
+  "2026-06-30": [
     {
-      "id": "cHR0LTIwMjYtMDYtMTYtNi8xNijkuowp5Y2X5oqV6I2J5bGv5aSq5r+f5a6u",
-      "time": "",
-      "organization": "南投草屯太濟宮",
-      "location": "南投草屯太濟宮",
-      "activityDate": "2026-06-16",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "餐飲",
-        "生活用品",
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "6/16(二)南投草屯太濟宮",
-        "images": [
-          "https://i.imgur.com/mA8CaTP.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/mA8CaTP.jpeg",
-            "text": "2 人\n一 次 朮 媽 礁 信 丰 加 仔 雇\n仿生\neeeoee) 6/16 史 00 2 台 芭 划\n還 轉 誠 一 草地 太 清宮 / 刁\n點 Emruram 六 大 活 動\n※ 甜 在 你 心 甜 米 爛 100 份 。 ※ 炳 錡 咖哩 | 北海道 野菜 燒 男 才 可 樂 餅 。300 份\n※ 元 氣 滿 滿 綜合 湯 100 份 ※ 整 心動 按摩 整復 店 | 30 分 鐘 筋 膜 放鬆 50 份\n※ 布 迪 時 光 . 鬆 餅 | 草莓 抹 醫 鬆 餅 30 份\n| 捐血 禮 | 脫 全\n※ 明 興 碾 潑 廠 濁水 好 米 3 公斤 250 包 。。 ※ 傳 奇 車 輸 餅 | 紅豆 餅 。 同\n※ 草 地 負 燒 從 | 海苔 壽司 50 份\n※ 味 王 王子 杯 麵 360 碗 抽 晤 愉\n主 250 歸 。 。※1 昭 1 湯 包 | 鮮肉 湯 色 20\n說 300 全 六 鮮 奶奶 (草地 店 ) | 單 料 豆花 50 碗\n還 二 定 ※ 翔 哥 茶 抽 ( 草 屯 店 ) | 紅茶 50 份\n※ 伊 莎 具 爾 洗手 乳 300 扛\n※ 大 太 一 又 牛肉 麵 | 鮮 蝦 蝕 蝕 湯 20 份\n※ 高 麗 雅 刀 護 手 霜 300 條 生 人 放\n※ 南 投 背包 智 旅 品 牌 馬 克 杯 300 個 和 20 份\n計 100 盒 。※※ 饑 力 老 潭 關 肉 夾角 | 招 和 肉 夾 錠\n※ 金 門 一 條 根 加 圖 擠 500cc 加 大 近 ( 近 一 ) |\n※ 鋼 寶 閃 燒 纖 30 扛\n| 捐 500cc 加 殼 | 臣 崗 且 指\n如 ※ 玫 莎 莉莉 時 空 膠囊 30 盒\n※ 絲 酥 入 叩 起 司 千 層 棒 150 包 吧 畜\n8 失 ※ 日 月 潭 茶 包 禮盒 30 盒\n※ 第 一 製 麵 日 曬 麵 150 包 還\n同 ※ 嘉 保 喲 髮 品 葉綠素 25 組\n※SMOK 製 甜 所 療 癒 點 心 盒 。 100 盒 同\n※SAEMMI 便 摧 式 可 折 軋 購物 代 5 組\n※ 米 几 衛 生 級 120 串\n※ 鈴 錢 氣泡 茶 飲 | 飲料 品 圖 一, 一 一\n※ 紫 泥 芋 香 吐 司 30 份 3 中 會 看\n※ 山 寨 夫人 放 山 雞 | 滴 雞精 60 包 凡 圖\n| 草 屯 貫 助 店 家 | | 主 辦 單 位 | 洪 姊妹 榕樹 下 扣 仔 距\n炳 錡 咖 嘿 、 上 安心 居家 長 照 機 構 負責 人 簡明 哲 、He&She 全 國 首創 百 元 美 容 - 南 投 草 屯 店 、 一 品 源 當 歸 鴨 、 桔 品 晨 食 館\n整 心 運動 按摩 整復 專門 店 、 布 迪 食 光 鬆 餅 、 順 安 藥 局 、 傳 奇 車 輸 燒 、 草 屯 鍋 燒 麵 、 明 箕 碾 米 廠 、 富 膀 商 行 、 一 鼠 一 湯 、 多 錢 飲料\n草 屯 永和 豆漿 、 草 屯 蚵 仔 麵 、 大 立 德 起 重工 程 公司 莊 明宗 、 簡 單 茶 生 活 、 嘉 保羅 髮 品 材料 、 第 一 製 從 、SMOK 製 甜 所\nmi PASTA 杯 杯 麵 、 洲 昇 消防 安全 設備 有 限 公司 、JL 美甲 小 請 、 紅 翻天 平價 現 炒 、 良 美 免 洗 餐具 行 、 美 人 佳美 髮 美 容 材 料 行\nmomo 結 婚事 物 所 、 翔 吉 中 古 汽車 材料 、 絲 酥 入 叩 山藥 鳳梨 酥 專賣 店 、 時 態 印 務 、 奶 靜 - 養 生 湯 品 , 滴 雞精 、 味 王 股份 有 限 公司\n鮮 奶奶 - 草 地 店 、 無 尾 熊 音 樂 美 語 中 心 、 老 張 牛肉 麵 餃子 館 、 一 也 豆乳 難 草 屯 店 、 翔 哥 茶 攤 、 添 好 運 投注 站 、 上 太 電 器 行\n草 屯 長 庚 中 醫 診所 潘 文 雄 院長 、 成 昌 鐘 錶 眼鏡 行 、 蝕 力 老 注 開 肉 夾 餞 、 台 北 組 魷魚 鑄 專 味 店 、 大 太 一 又 牛肉 麵 、 中 山 醫 醫療 團隊\n山寨 夫人 放 山 雞 、SmartStay 草 屯 智 旅 隔 上 花 開 、SmartStay 南 投 背包 智 旅 、 新 光 人 壽 區 經 理 簡 美 華\n陳 秋 統 、 黎 莉 萍 、 李 源 旺 、 莊 居 仁 、 李 桂 琳 、 白 麗 莎 、 陳 玟 君 、 余 取 劉 、 佘 素 圓 、 佘 佳 芳 、 黃 素 莉 、 陳 姿 俗 、 林 雅 津 、 李 博 鏽\n李 洱 恰 、 李 青 玲 、 曹 桂 妃 、 施 亡 虹 、 鍾 佩 琪 、 郭 螢 玉 、 印 士 家 、 林 苡 婚 、 洪 進 成 、 會 阿 換 、 洪 崧 倍\n",
-            "confidence": 69
-          }
-        ]
-      },
-      "isPttOnly": true,
+      "id": "5paw56u5LTIwMjYvMDYvMzAtMDk6MDB+MTY6MDAt5qGD5ZyS5biC5b+r5qiC542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "桃園市快樂獅子會",
+      "location": "桃園市桃園區三民路3段182號3樓之1(南門捐血室)",
+      "activityDate": "2026-06-30",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380638595351749",
       "coordinates": {
-        "lat": 23.9762982,
-        "lng": 120.6833542
+        "lat": 24.9929776,
+        "lng": 121.3058
       }
-    }
-  ],
-  "2026-06-10": [
+    },
     {
-      "id": "cHR0LTIwMjYtMDYtMTAtNi8xMC02LzExKOS4iS3lm5sp6Ie65YyX56eR5oqA5aSn5a245a2455Sf5rS75YuV5Lit5b+D5YmN",
-      "time": "",
-      "organization": "臺北科技大學學生活動中心前",
-      "location": "臺北科技大學學生活動中心前",
-      "activityDate": "2026-06-10",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "電影票"
-      ],
-      "pttData": {
-        "rawLine": "6/10-6/11(三-四)臺北科技大學學生活動中心前",
-        "images": [
-          "https://i.imgur.com/d12sfte.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/d12sfte.jpeg",
-            "text": "二 9 則. 有, 」』 的 Ma\nAl. 7 有 0 啟 !: 暗\n和 Rd\n世人 當 人 公用 人 入\n上 NO 朮 “-\n(他 人 作家 殼 記 人\nIN 避 人 XX\n人 和 之\nCa 人\nCa 其 未 捐 箇 ee\n媽 7 fm 三\nNu( 三 和 @ 划 性\n3 紡 人 寢 師 廁 虹 轉 晶 :。\n之 人 記 ~ 號\nee 7\n必 瞳 2026 /06 /10-2026 /06/\n禮 (2 )1:00-18:00 《 診 /\n@ 學 生 活動 中 心 前 (原 中 正 紀念 館 前 ) 說\nY\n/ 。 |」 詳細 資訊 請 關注 意 幼 社 公告 【IG】\n( 全 NTUT_TSZYOU 啟 請 留意\n人\n來 捐 就 送 9\n“只 電影 票 乙 張 所\n好 2 序 x€\n數 量 有 限 換 完 為 止 寢 一\n和 說\n7 2\n咬 附 有 熱血 打 卡 牆 全 轉 pg\n3 歡迎 拍照 打 卡 唷 了 八 : 還\npl 還 您 只\n",
-            "confidence": 40
-          }
-        ]
-      },
-      "isPttOnly": true
+      "id": "5paw56u5LTIwMjYvMDYvMzAtMDk6MDB+MTY6MDAt5L2b5YWJ5pyD5Lit6I+v57i95pyD5aSn5ZyS5YiG5pyD",
+      "time": "09:00~16:00",
+      "organization": "佛光會中華總會大園分會",
+      "location": "桃園市大園區大觀路18號(大園大觀路仁壽宮)",
+      "activityDate": "2026-06-30",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380633223866225",
+      "coordinates": {
+        "lat": 25.0651026,
+        "lng": 121.1964329
+      }
     }
   ]
 }
