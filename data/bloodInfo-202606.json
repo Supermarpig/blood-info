@@ -608,6 +608,19 @@
   ],
   "2026-06-04": [
     {
+      "id": "5paw56u5LTIwMjYvMDYvMDQtMDk6MDB+MTc6MzAt6LKh5ZyY5rOV5Lq65Lit6IiI5L+d5YWo5paH5pWZ5Z+66YeR5pyD",
+      "time": "09:00~17:30",
+      "organization": "財團法人中興保全文教基金會",
+      "location": "桃園市中壢區中央東路88號16樓(中壢捐血室)",
+      "activityDate": "2026-06-04",
+      "center": "新竹",
+      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q140536237022299686",
+      "coordinates": {
+        "lat": 24.9559892,
+        "lng": 121.226132
+      }
+    },
+    {
       "id": "5paw56u5LTIwMjYvMDYvMDQtMDk6MDB+MTY6MDAt5paw56u557ij5pS/5bqc6K2m5a+f5bGA",
       "time": "09:00~16:00",
       "organization": "新竹縣政府警察局",
@@ -815,19 +828,6 @@
       "coordinates": {
         "lat": 24.8108593,
         "lng": 120.9577185
-      }
-    },
-    {
-      "id": "5paw56u5LTIwMjYvMDYvMDUtMDk6MDB+MTY6MDAt5qWK5qKF5Y2A5rC45bmz56S+5Y2A6Zec5oe35Y2U5pyD",
-      "time": "09:00~16:00",
-      "organization": "楊梅區永平社區關懷協會",
-      "location": "桃園市楊梅區三民北路22號(楊梅頭重溪三元宮)",
-      "activityDate": "2026-06-05",
-      "center": "新竹",
-      "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380578065316027",
-      "coordinates": {
-        "lat": 24.9090414,
-        "lng": 121.170478
       }
     },
     {
@@ -3903,6 +3903,30 @@
         "lat": 24.9559892,
         "lng": 121.226132
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMjgtNi8yOCjml6Up5paw5YyX6JiG5rSy5oWI5r+f6Z2c5oCd5aCC",
+      "time": "",
+      "organization": "新北蘆洲慈濟靜思堂",
+      "location": "新北蘆洲慈濟靜思堂",
+      "activityDate": "2026-06-28",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "6/28(日)新北蘆洲慈濟靜思堂",
+        "images": [
+          "https://i.imgur.com/lJwruzA.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/lJwruzA.jpeg",
+            "text": "共計 救國 轉 新 北市 蘆 洲 區 團委 會\n匆 人 二 命 9 一 公益 義賣 |\n人 肌 本\n回 昌 : 115 年 | 說\n@】 時 間 : 9: 一 17:!\n和 食 地 點 : 牙 洲 慈 濟 靜 思 堂 門口\n2 高 吉\n記 ! 蔗 . 引 記 豆 對 店 優惠 卷 gg\nAg 、 冷 洗 精 時 6 下\n‧ 衛 生 紙 9\n贈送 物品 圖 片 僅 供 參考\n全 ~ 人 仿 6 下\n“ 冷 洗 精 #\n0 及 點 閃 作惡 起 、\n人 第 下 人\n> ig 5 說 和 有 無 量\n",
+            "confidence": 48
+          }
+        ]
+      },
+      "isPttOnly": true
     }
   ],
   "2026-06-29": [
