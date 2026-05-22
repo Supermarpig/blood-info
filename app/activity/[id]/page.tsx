@@ -60,6 +60,38 @@ async function getDayData(id: string): Promise<{ event: DonationEvent | null; da
   }
 }
 
+// 預渲染「當月與未來」的活動頁，讓這些有真實流量的頁面在 build 時就進 CDN（第一次被打就是 cache HIT）。
+// 過去月份的長尾活動維持預設的 on-demand ISR（dynamicParams 預設為 true）。
+export async function generateStaticParams(): Promise<{ id: string }[]> {
+  const dataDir = path.join(process.cwd(), "data");
+  const now = new Date();
+  const cutoff = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-01`;
+
+  let files: string[];
+  try {
+    files = (await fs.readdir(dataDir)).filter((f) => /^bloodInfo-\d{6}\.json$/.test(f));
+  } catch {
+    return [];
+  }
+
+  const params: { id: string }[] = [];
+  for (const file of files) {
+    try {
+      const content = await fs.readFile(path.join(dataDir, file), "utf-8");
+      const data: Record<string, DonationEvent[]> = JSON.parse(content);
+      for (const [date, events] of Object.entries(data)) {
+        if (date < cutoff) continue;
+        for (const event of events) {
+          if (event.id) params.push({ id: `${date}-${eventShortId(event.id)}` });
+        }
+      }
+    } catch {
+      // 略過無法解析的資料檔
+    }
+  }
+  return params;
+}
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
   const { event } = await getDayData(id);

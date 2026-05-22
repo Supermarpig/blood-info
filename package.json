@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "updateData": "node scripts/updateData.js",
     "importReports": "node scripts/importReports.js",
     "geocode": "GOOGLE_MAPS_API_KEY=$(grep GOOGLE_MAPS_API_KEY .env.local | cut -d= -f2) node scripts/geocode-future.js"

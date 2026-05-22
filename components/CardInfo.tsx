@@ -96,9 +96,6 @@ export default function CardInfo({
       c.centerFilter === donation.center &&
       c.locationKeywords.some((kw) => donation.location.includes(kw))
   );
-  const toBase64Url = (b64: string) =>
-    b64.replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
-
   const eventShortId = (id: string) => {
     let hash = 5381;
     for (let i = 0; i < id.length; i++) {

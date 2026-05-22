@@ -1,0 +1,7 @@
+node_modules
+.next
+out
+build
+next-env.d.ts
+# 純 Node CJS 資料管線腳本，不走 Next/TS 的 lint 規則
+scripts

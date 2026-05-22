@@ -38,11 +38,16 @@ class InventoryCache {
   }
 }
 
+// 庫存資料約一小時更新一次，讓 CDN 直接快取回應，避免每個請求都打進 function。
+const CACHE_HEADERS = {
+  "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+} as const;
+
 export async function GET(): Promise<NextResponse<ApiResponse>> {
   try {
     const cached = InventoryCache.get();
     if (cached) {
-      return NextResponse.json({ success: true, data: cached });
+      return NextResponse.json({ success: true, data: cached }, { headers: CACHE_HEADERS });
     }
 
     const filePath = path.join(process.cwd(), "data", "bloodInventory.json");
@@ -51,7 +56,7 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
 
     InventoryCache.set(inventory);
 
-    return NextResponse.json({ success: true, data: inventory });
+    return NextResponse.json({ success: true, data: inventory }, { headers: CACHE_HEADERS });
   } catch (error) {
     console.error("Error reading blood inventory:", error);
     return NextResponse.json(
