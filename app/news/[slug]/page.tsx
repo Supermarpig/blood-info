@@ -8,6 +8,53 @@ import AdCard from "@/components/AdCard";
 
 const AD_SLOT_NEWS = process.env.NEXT_PUBLIC_ADSENSE_SLOT_NEWS;
 
+// 本站網域（由 NEXT_PUBLIC_BASE_URL 推導，不寫死網址），用來判斷站內 / 站外連結
+const SITE_HOST = (() => {
+  try {
+    return new URL(process.env.NEXT_PUBLIC_BASE_URL ?? "").host.replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+})();
+
+// 自動把內文中出現的網址轉成可點擊連結：站內網址走 client-side 導航，站外網址開新分頁
+function renderContent(content: string) {
+  const parts = content.split(/(https?:\/\/[\w./?#=&%~:@+-]+|www\.[\w./?#=&%~:@+-]+)/g);
+  return parts.map((part, i) => {
+    if (!/^(https?:\/\/|www\.)/.test(part)) return part;
+
+    const href = part.startsWith("http") ? part : `https://${part}`;
+    let url: URL;
+    try {
+      url = new URL(href);
+    } catch {
+      return part;
+    }
+
+    const isInternal = SITE_HOST !== "" && url.host.replace(/^www\./, "") === SITE_HOST;
+
+    return isInternal ? (
+      <Link
+        key={i}
+        href={`${url.pathname}${url.search}${url.hash}`}
+        className="text-red-600 hover:underline"
+      >
+        {part}
+      </Link>
+    ) : (
+      <a
+        key={i}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-red-600 hover:underline"
+      >
+        {part}
+      </a>
+    );
+  });
+}
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
@@ -174,7 +221,9 @@ export default async function NewsArticlePage({ params }: PageProps) {
             <h2 className="text-lg font-bold text-gray-900 mb-3">
               {section.heading}
             </h2>
-            <p className="text-gray-700 leading-relaxed">{section.content}</p>
+            <p className="text-gray-700 leading-relaxed">
+              {renderContent(section.content)}
+            </p>
           </section>
         ))}
       </article>
