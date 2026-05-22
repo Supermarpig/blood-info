@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronDown, ChevronUp, Calendar } from "lucide-react";
 import { debounce } from "@/utils";
 import CardInfo from "@/components/CardInfo";
+import AdCard from "@/components/AdCard";
 import BackToTopButton from "@/components/BackToTopButton";
 import { Button } from "@/components/ui/button";
 import { useNearbyLocations } from "@/hooks/useNearbyLocations";
@@ -15,6 +16,10 @@ import { REGIONS } from "@/lib/regionConfig";
 import { GIFTS } from "@/lib/giftConfig";
 import { getCityBySlug } from "@/lib/cityConfig";
 import { getRegionBySlug } from "@/lib/regionConfig";
+
+// 每 AD_INTERVAL 張捐血卡片後插入一張廣告卡
+const AD_INTERVAL = 10;
+const AD_SLOT_FEED = process.env.NEXT_PUBLIC_ADSENSE_SLOT_FEED;
 
 interface DonationEvent {
   id?: string;
@@ -211,19 +216,33 @@ export default function SearchableDonationList({
                 </h3>
               </div>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {eventsByDate[date].map((donation, index) => (
-                  <div
-                    key={`${donation.id}-${index}`}
-                    className="h-full animate-fade-in-up"
-                    style={{ animationDelay: `${Math.min(index * 50, 250)}ms` }}
-                  >
-                    <CardInfo
-                      donation={donation}
-                      searchKeyword={searchKeyword}
-                      className="h-full"
-                    />
-                  </div>
-                ))}
+                {eventsByDate[date].flatMap((donation, index) => {
+                  const card = (
+                    <div
+                      key={`${donation.id}-${index}`}
+                      className="h-full animate-fade-in-up"
+                      style={{ animationDelay: `${Math.min(index * 50, 250)}ms` }}
+                    >
+                      <CardInfo
+                        donation={donation}
+                        searchKeyword={searchKeyword}
+                        className="h-full"
+                      />
+                    </div>
+                  );
+                  // 每 AD_INTERVAL 張卡後插入一張廣告卡（占 grid 一格）
+                  if (AD_SLOT_FEED && (index + 1) % AD_INTERVAL === 0) {
+                    return [
+                      card,
+                      <AdCard
+                        key={`ad-${date}-${index}`}
+                        slot={AD_SLOT_FEED}
+                        variant="card"
+                      />,
+                    ];
+                  }
+                  return [card];
+                })}
               </div>
             </div>
           ))}

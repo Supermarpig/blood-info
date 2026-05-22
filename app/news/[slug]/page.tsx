@@ -4,6 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { getNewsBySlug, getAllNewsSlugs, getAllNews } from "@/lib/newsUtils";
+import AdCard from "@/components/AdCard";
+
+const AD_SLOT_NEWS = process.env.NEXT_PUBLIC_ADSENSE_SLOT_NEWS;
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -175,6 +178,9 @@ export default async function NewsArticlePage({ params }: PageProps) {
           </section>
         ))}
       </article>
+
+      {/* 文章內廣告 */}
+      <AdCard slot={AD_SLOT_NEWS} variant="inline" className="mt-10" />
 
       {/* Sources */}
       {article.sources.length > 0 && (

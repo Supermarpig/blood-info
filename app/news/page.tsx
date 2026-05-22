@@ -3,6 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Newspaper } from "lucide-react";
 import { getAllNews } from "@/lib/newsUtils";
+import AdCard from "@/components/AdCard";
+
+const AD_SLOT_NEWS = process.env.NEXT_PUBLIC_ADSENSE_SLOT_NEWS;
 
 export const metadata: Metadata = {
   title: "捐血最新消息 | 台灣捐血活動查詢",
@@ -117,6 +120,9 @@ export default function NewsPage() {
           ))}
         </div>
       )}
+
+      {/* 列表底部廣告 */}
+      <AdCard slot={AD_SLOT_NEWS} variant="inline" className="mt-8" />
     </div>
   );
 }

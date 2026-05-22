@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
+const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -100,6 +102,14 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/icons/icon-kawaii.svg" />
         <link rel="alternate" type="text/plain" href="/llms.txt" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" />
+        {/* Google AdSense loader — 僅在設定 client 後輸出 */}
+        {adsenseClient && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+            crossOrigin="anonymous"
+          />
+        )}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
