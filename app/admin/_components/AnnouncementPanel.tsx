@@ -23,6 +23,7 @@ interface Announcement {
   gifts: string[];
   ctaText: string;
   ctaUrl: string;
+  autoRecommend: boolean;
 }
 
 const EMPTY: Announcement = {
@@ -33,6 +34,7 @@ const EMPTY: Announcement = {
   gifts: [],
   ctaText: "",
   ctaUrl: "",
+  autoRecommend: true,
 };
 
 function ListEditor({
@@ -107,6 +109,7 @@ export default function AnnouncementPanel() {
             gifts: d.gifts || [],
             ctaText: d.ctaText || "",
             ctaUrl: d.ctaUrl || "",
+            autoRecommend: d.autoRecommend !== false,
           });
         } else {
           setError(data.error || "讀取失敗");
@@ -176,6 +179,21 @@ export default function AnnouncementPanel() {
             />
             <span className="text-sm font-medium text-gray-700">
               在前台顯示公告（關閉則不會跳出）
+            </span>
+          </label>
+
+          <label className="flex cursor-pointer items-start gap-3 rounded-lg bg-gray-50 px-3 py-2.5">
+            <input
+              type="checkbox"
+              checked={form.autoRecommend}
+              onChange={(e) => update({ autoRecommend: e.target.checked })}
+              className="mt-0.5 h-4 w-4 accent-red-500"
+            />
+            <span className="text-sm text-gray-700">
+              <span className="font-medium">啟用今日自動推薦</span>
+              <span className="mt-0.5 block text-xs text-gray-400">
+                上方沒填推薦地點時，前台會自動挑「今天、有贈品」的一間顯示；關閉則完全不自動推薦。
+              </span>
             </span>
           </label>
 

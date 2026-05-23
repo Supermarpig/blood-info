@@ -1,25 +1,23 @@
 // /app/api/announcement/route.ts
 // 公開（唯讀）取得站台公告，含記憶體快取以避免每次頁面載入都打 GitHub。
 import { NextResponse } from "next/server";
+import { getAnnouncement, EMPTY_ANNOUNCEMENT } from "@/services/announcementService";
 import {
-  getAnnouncement,
-  EMPTY_ANNOUNCEMENT,
-  Announcement,
-} from "@/services/announcementService";
+  getCachedAnnouncement,
+  setCachedAnnouncement,
+} from "@/lib/announcementCache";
 
 export const dynamic = "force-dynamic";
 
-let cache: { data: Announcement; ts: number } | null = null;
-const TTL = 5 * 60 * 1000; // 5 分鐘
-
 export async function GET() {
-  if (cache && Date.now() - cache.ts < TTL) {
-    return NextResponse.json({ success: true, data: cache.data });
+  const cached = getCachedAnnouncement();
+  if (cached) {
+    return NextResponse.json({ success: true, data: cached });
   }
 
   try {
     const { data } = await getAnnouncement();
-    cache = { data, ts: Date.now() };
+    setCachedAnnouncement(data);
     return NextResponse.json({ success: true, data });
   } catch (error) {
     console.error("Error fetching public announcement:", error);

@@ -2,6 +2,7 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/apiAuth";
 import { getAnnouncement, saveAnnouncement } from "@/services/announcementService";
+import { clearAnnouncementCache } from "@/lib/announcementCache";
 
 export const dynamic = "force-dynamic";
 
@@ -45,7 +46,9 @@ export async function PUT(request: Request) {
         : [],
       ctaText: (body.ctaText || "").trim(),
       ctaUrl: (body.ctaUrl || "").trim(),
+      autoRecommend: body.autoRecommend !== false,
     });
+    clearAnnouncementCache(); // 存檔後立即清除前台快取
     return NextResponse.json({ success: true, data: saved });
   } catch (error) {
     console.error("Error saving announcement:", error);

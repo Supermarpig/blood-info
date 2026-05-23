@@ -62,6 +62,11 @@ class MemoryCache {
   }
 }
 
+/** 供後台「清除快取」呼叫，清掉捐血活動的記憶體快取 */
+export function clearBloodDonationsCache(): void {
+  MemoryCache.clear();
+}
+
 // 定義要爬取的網址列表
 const urls = [
   "https://www.tp.blood.org.tw/Internet/taipei/LocationMonth.aspx?site_id=2",

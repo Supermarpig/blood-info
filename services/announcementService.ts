@@ -19,6 +19,8 @@ export interface Announcement {
   gifts: string[];
   ctaText: string;
   ctaUrl: string;
+  /** 是否啟用前台「今日自動推薦」（後台未填推薦地點時自動挑今天有贈品的一間） */
+  autoRecommend: boolean;
   /** 版本時間，供前台 localStorage 判斷是否已看過 */
   updatedAt: string;
 }
@@ -31,6 +33,7 @@ export const EMPTY_ANNOUNCEMENT: Announcement = {
   gifts: [],
   ctaText: "",
   ctaUrl: "",
+  autoRecommend: true,
   updatedAt: "",
 };
 
@@ -47,6 +50,7 @@ function parseAnnouncement(body: string): Announcement {
         gifts: Array.isArray(d.gifts) ? d.gifts : [],
         ctaText: d.ctaText || "",
         ctaUrl: d.ctaUrl || "",
+        autoRecommend: d.autoRecommend !== false, // 預設開啟
         updatedAt: d.updatedAt || "",
       };
     } catch {
@@ -67,22 +71,24 @@ ${JSON.stringify(data, null, 2)}
 `;
 }
 
-/** 讀取目前公告（含對應 issue 編號，無則為 null）。 */
+/** 讀取目前公告（含對應 issue 編號與狀態，無則為 null）。已關閉的 issue 視為停用。 */
 export async function getAnnouncement(): Promise<{
   data: Announcement;
   issueNumber: number | null;
+  state: "open" | "closed" | null;
 }> {
   const issues = await listIssues({ labels: LABEL, state: "all" });
   if (issues.length === 0) {
-    return { data: { ...EMPTY_ANNOUNCEMENT }, issueNumber: null };
+    return { data: { ...EMPTY_ANNOUNCEMENT }, issueNumber: null, state: null };
   }
-  return {
-    data: parseAnnouncement(issues[0].body),
-    issueNumber: issues[0].number,
-  };
+  const issue = issues[0];
+  const data = parseAnnouncement(issue.body);
+  // 已關閉的 issue 一律視為停用，前台不顯示
+  if (issue.state !== "open") data.enabled = false;
+  return { data, issueNumber: issue.number, state: issue.state };
 }
 
-/** 儲存公告（更新既有 issue 或建立新 issue），回傳含最新 updatedAt 的內容。 */
+/** 儲存公告（更新既有 issue 或建立新 issue），存檔時會重新開啟 issue 使其生效。 */
 export async function saveAnnouncement(
   input: Omit<Announcement, "updatedAt">
 ): Promise<Announcement> {
@@ -91,7 +97,12 @@ export async function saveAnnouncement(
   const body = buildBody(data);
 
   if (issueNumber) {
-    await updateIssue(issueNumber, { title: TITLE, body });
+    await updateIssue(issueNumber, {
+      title: TITLE,
+      body,
+      state: "open",
+      state_reason: "reopened",
+    });
   } else {
     await createIssue(TITLE, body, [LABEL]);
   }

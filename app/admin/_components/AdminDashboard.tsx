@@ -10,6 +10,7 @@ import {
   CheckCircle2,
   Loader2,
   Megaphone,
+  DatabaseZap,
 } from "lucide-react";
 import ReportsPanel from "./ReportsPanel";
 import WishlistPanel from "./WishlistPanel";
@@ -65,6 +66,8 @@ function Badge({ count }: { count?: number }) {
 export default function AdminDashboard() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [clearing, setClearing] = useState(false);
+  const [clearMsg, setClearMsg] = useState<string | null>(null);
 
   const loadStats = useCallback(async () => {
     try {
@@ -82,8 +85,41 @@ export default function AdminDashboard() {
     loadStats();
   }, [loadStats]);
 
+  const clearCache = async () => {
+    setClearing(true);
+    setClearMsg(null);
+    try {
+      const res = await fetch("/api/admin/clear-cache", { method: "POST" });
+      const data = await res.json();
+      setClearMsg(data.success ? "✅ 已清除快取" : `❌ ${data.error || "失敗"}`);
+      loadStats();
+    } catch {
+      setClearMsg("❌ 清除失敗");
+    } finally {
+      setClearing(false);
+      setTimeout(() => setClearMsg(null), 3000);
+    }
+  };
+
   return (
     <div className="space-y-5">
+      <div className="flex items-center justify-end gap-3">
+        {clearMsg && <span className="text-sm text-gray-600">{clearMsg}</span>}
+        <button
+          onClick={clearCache}
+          disabled={clearing}
+          className="flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm text-gray-600 transition-colors hover:bg-gray-50 disabled:opacity-60"
+          title="清除公告與捐血活動的伺服器記憶體快取"
+        >
+          {clearing ? (
+            <Loader2 className="h-4 w-4 animate-spin" />
+          ) : (
+            <DatabaseZap className="h-4 w-4" />
+          )}
+          清除快取
+        </button>
+      </div>
+
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <StatCard
           icon={<Clock className="h-5 w-5 text-amber-600" />}
