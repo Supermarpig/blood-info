@@ -1,40 +1,158 @@
 "use client";
 
+import { useCallback, useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ClipboardList, Lightbulb, PlusCircle } from "lucide-react";
+import {
+  ClipboardList,
+  Lightbulb,
+  PlusCircle,
+  Clock,
+  CheckCircle2,
+  Loader2,
+  Megaphone,
+} from "lucide-react";
 import ReportsPanel from "./ReportsPanel";
 import WishlistPanel from "./WishlistPanel";
 import AddEventPanel from "./AddEventPanel";
+import AnnouncementPanel from "./AnnouncementPanel";
+
+interface Stats {
+  reportsPending: number;
+  reportsDone: number;
+  wishlistPending: number;
+  wishlistDone: number;
+}
+
+function StatCard({
+  icon,
+  label,
+  value,
+  accent,
+  loading,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: number;
+  accent: string;
+  loading: boolean;
+}) {
+  return (
+    <div className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+      <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${accent}`}>
+        {icon}
+      </div>
+      <div>
+        <p className="text-xs text-gray-500">{label}</p>
+        {loading ? (
+          <Loader2 className="mt-1 h-4 w-4 animate-spin text-gray-300" />
+        ) : (
+          <p className="text-2xl font-bold text-gray-900">{value}</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function Badge({ count }: { count?: number }) {
+  if (!count) return null;
+  return (
+    <span className="ml-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-red-500 px-1.5 text-xs font-semibold text-white">
+      {count}
+    </span>
+  );
+}
 
 export default function AdminDashboard() {
+  const [stats, setStats] = useState<Stats | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  const loadStats = useCallback(async () => {
+    try {
+      const res = await fetch("/api/admin/stats");
+      const data = await res.json();
+      if (data.success) setStats(data.data);
+    } catch {
+      // 統計失敗不影響主要功能
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadStats();
+  }, [loadStats]);
+
   return (
-    <Tabs defaultValue="reports" className="w-full">
-      <TabsList className="grid w-full grid-cols-3">
-        <TabsTrigger value="reports" className="gap-1.5">
-          <ClipboardList className="h-4 w-4" />
-          回報審核
-        </TabsTrigger>
-        <TabsTrigger value="wishlist" className="gap-1.5">
-          <Lightbulb className="h-4 w-4" />
-          功能許願
-        </TabsTrigger>
-        <TabsTrigger value="add" className="gap-1.5">
-          <PlusCircle className="h-4 w-4" />
-          手動新增
-        </TabsTrigger>
-      </TabsList>
+    <div className="space-y-5">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <StatCard
+          icon={<Clock className="h-5 w-5 text-amber-600" />}
+          accent="bg-amber-100"
+          label="待處理回報"
+          value={stats?.reportsPending ?? 0}
+          loading={loading}
+        />
+        <StatCard
+          icon={<CheckCircle2 className="h-5 w-5 text-emerald-600" />}
+          accent="bg-emerald-100"
+          label="已處理回報"
+          value={stats?.reportsDone ?? 0}
+          loading={loading}
+        />
+        <StatCard
+          icon={<Lightbulb className="h-5 w-5 text-blue-600" />}
+          accent="bg-blue-100"
+          label="待處理許願"
+          value={stats?.wishlistPending ?? 0}
+          loading={loading}
+        />
+        <StatCard
+          icon={<CheckCircle2 className="h-5 w-5 text-gray-500" />}
+          accent="bg-gray-100"
+          label="已處理許願"
+          value={stats?.wishlistDone ?? 0}
+          loading={loading}
+        />
+      </div>
 
-      <TabsContent value="reports" className="mt-4">
-        <ReportsPanel />
-      </TabsContent>
+      <Tabs defaultValue="reports" className="w-full">
+        <TabsList className="grid w-full grid-cols-4">
+          <TabsTrigger value="reports" className="gap-1.5">
+            <ClipboardList className="h-4 w-4" />
+            回報審核
+            <Badge count={stats?.reportsPending} />
+          </TabsTrigger>
+          <TabsTrigger value="wishlist" className="gap-1.5">
+            <Lightbulb className="h-4 w-4" />
+            功能許願
+            <Badge count={stats?.wishlistPending} />
+          </TabsTrigger>
+          <TabsTrigger value="add" className="gap-1.5">
+            <PlusCircle className="h-4 w-4" />
+            手動新增
+          </TabsTrigger>
+          <TabsTrigger value="announcement" className="gap-1.5">
+            <Megaphone className="h-4 w-4" />
+            公告
+          </TabsTrigger>
+        </TabsList>
 
-      <TabsContent value="wishlist" className="mt-4">
-        <WishlistPanel />
-      </TabsContent>
+        <TabsContent value="reports" className="mt-4">
+          <ReportsPanel onChanged={loadStats} />
+        </TabsContent>
 
-      <TabsContent value="add" className="mt-4">
-        <AddEventPanel />
-      </TabsContent>
-    </Tabs>
+        <TabsContent value="wishlist" className="mt-4">
+          <WishlistPanel onChanged={loadStats} />
+        </TabsContent>
+
+        <TabsContent value="add" className="mt-4">
+          <AddEventPanel onChanged={loadStats} />
+        </TabsContent>
+
+        <TabsContent value="announcement" className="mt-4">
+          <AnnouncementPanel />
+        </TabsContent>
+      </Tabs>
+    </div>
   );
 }

@@ -187,6 +187,48 @@ export async function listIssues(opts: {
 }
 
 /**
+ * 觸發 GitHub Actions workflow（workflow_dispatch）。
+ * 需要 token 具備 actions:write 權限。
+ */
+export async function dispatchWorkflow(
+  workflowFile: string,
+  ref = "main"
+): Promise<void> {
+  ensureConfig();
+  const res = await fetch(
+    `${API}/repos/${GITHUB_REPO}/actions/workflows/${workflowFile}/dispatches`,
+    {
+      method: "POST",
+      headers: ghHeaders(),
+      body: JSON.stringify({ ref }),
+    }
+  );
+  // 成功為 204 No Content
+  if (res.status !== 204) {
+    const text = await res.text().catch(() => "");
+    throw new Error(`觸發 workflow 失敗 (${res.status})：${text || "請確認 token 具備 workflow 權限"}`);
+  }
+}
+
+/**
+ * 用 Search API 取得精準的 issue 數量（不受 100 筆分頁限制）。
+ */
+export async function countIssues(
+  label: string,
+  state: "open" | "closed"
+): Promise<number> {
+  ensureConfig();
+  const q = `repo:${GITHUB_REPO} is:issue label:"${label}" state:${state}`;
+  const url = `${API}/search/issues?q=${encodeURIComponent(q)}&per_page=1`;
+  const res = await fetch(url, { headers: ghHeaders(), cache: "no-store" });
+  if (!res.ok) {
+    throw new Error(`GitHub API 錯誤: ${res.status}`);
+  }
+  const data = await res.json();
+  return typeof data.total_count === "number" ? data.total_count : 0;
+}
+
+/**
  * 建立一筆地點回報 issue（後台手動新增），走與前台表單相同的格式。
  */
 export async function createDonationIssue(
@@ -202,6 +244,26 @@ export async function createDonationIssue(
       body: buildDonationBody(d),
       labels: ["donation-report"],
     }),
+  });
+  if (!res.ok) {
+    throw new Error(`GitHub API 錯誤: ${res.status}`);
+  }
+  return toAdminIssue(await res.json());
+}
+
+/**
+ * 建立一個泛用 issue。
+ */
+export async function createIssue(
+  title: string,
+  body: string,
+  labels: string[]
+): Promise<AdminIssue> {
+  ensureConfig();
+  const res = await fetch(`${API}/repos/${GITHUB_REPO}/issues`, {
+    method: "POST",
+    headers: ghHeaders(),
+    body: JSON.stringify({ title, body, labels }),
   });
   if (!res.ok) {
     throw new Error(`GitHub API 錯誤: ${res.status}`);

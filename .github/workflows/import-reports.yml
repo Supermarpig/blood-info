@@ -1,0 +1,45 @@
+name: Import Donation Reports
+
+# 由後台「一鍵發佈」按鈕透過 workflow_dispatch 觸發，
+# 把 open 的 donation-report issues 匯入 /data 並開 PR（與 daily-update 相同流程）。
+on:
+  workflow_dispatch:
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Import reports from issues
+        run: node scripts/importReports.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPO: ${{ github.repository }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: import donation reports from issues"
+          title: "chore: import donation reports"
+          body: |
+            Automated import of `donation-report` issues into `/data`.
+
+            Triggered from the admin dashboard. Merge to publish to the site.
+          branch: chore/import-reports-${{ github.run_id }}
+          base: main
+          delete-branch: true
+          add-paths: |
+            data/*

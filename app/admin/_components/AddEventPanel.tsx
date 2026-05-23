@@ -16,7 +16,11 @@ const EMPTY = {
   email: "",
 };
 
-export default function AddEventPanel() {
+export default function AddEventPanel({
+  onChanged,
+}: {
+  onChanged?: () => void;
+}) {
   const [form, setForm] = useState({ ...EMPTY });
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -55,6 +59,7 @@ export default function AddEventPanel() {
       }
       setCreatedUrl(data.data?.htmlUrl || null);
       setForm({ ...EMPTY });
+      onChanged?.();
     } catch {
       setError("新增失敗，請稍後再試");
     } finally {

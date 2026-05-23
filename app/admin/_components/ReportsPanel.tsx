@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import {
   CheckCircle2,
@@ -12,29 +12,46 @@ import {
   MapPin,
   Clock,
   ExternalLink,
+  Inbox,
+  Search,
+  UploadCloud,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
 import type { AdminIssue, IssueState } from "./types";
 import { STATE_LABEL, STATE_STYLE } from "./types";
 import ReportEditDialog from "./ReportEditDialog";
+import ImageLightbox from "./ImageLightbox";
 
 const FILTERS: { value: IssueState; label: string }[] = [
   { value: "open", label: "待處理" },
   { value: "closed", label: "已處理" },
 ];
 
-export default function ReportsPanel() {
+export default function ReportsPanel({
+  onChanged,
+}: {
+  onChanged?: () => void;
+}) {
   const [filter, setFilter] = useState<IssueState>("open");
   const [issues, setIssues] = useState<AdminIssue[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState<number | null>(null);
+  const [query, setQuery] = useState("");
+  const [selected, setSelected] = useState<Set<number>>(new Set());
+  const [bulkBusy, setBulkBusy] = useState(false);
   const [editing, setEditing] = useState<AdminIssue | null>(null);
   const [editOpen, setEditOpen] = useState(false);
+  const [lightbox, setLightbox] = useState<string | null>(null);
+  const [publishing, setPublishing] = useState(false);
+  const [publishMsg, setPublishMsg] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
     setError(null);
+    setSelected(new Set());
     try {
       const res = await fetch(
         `/api/admin/reports?label=donation-report&state=${filter}`
@@ -58,6 +75,25 @@ export default function ReportsPanel() {
     load();
   }, [load]);
 
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return issues;
+    return issues.filter((it) => {
+      const p = it.parsed;
+      const haystack = [
+        it.title,
+        p?.address,
+        p?.activityDate,
+        p?.time,
+        ...(p?.tags || []),
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+      return haystack.includes(q);
+    });
+  }, [issues, query]);
+
   const setState = async (n: number, state: IssueState) => {
     setBusy(n);
     try {
@@ -67,15 +103,74 @@ export default function ReportsPanel() {
         body: JSON.stringify({ state }),
       });
       await load();
+      onChanged?.();
     } finally {
       setBusy(null);
     }
   };
 
+  const bulkSetState = async (state: IssueState) => {
+    if (selected.size === 0) return;
+    setBulkBusy(true);
+    try {
+      await Promise.all(
+        [...selected].map((n) =>
+          fetch(`/api/admin/reports/${n}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ state }),
+          })
+        )
+      );
+      await load();
+      onChanged?.();
+    } finally {
+      setBulkBusy(false);
+    }
+  };
+
+  const toggle = (n: number) =>
+    setSelected((prev) => {
+      const next = new Set(prev);
+      if (next.has(n)) next.delete(n);
+      else next.add(n);
+      return next;
+    });
+
+  const allSelected =
+    filtered.length > 0 && filtered.every((it) => selected.has(it.number));
+  const toggleAll = () =>
+    setSelected(allSelected ? new Set() : new Set(filtered.map((it) => it.number)));
+
+  const publish = async () => {
+    if (
+      !confirm(
+        "確定要發佈嗎？\n會觸發 GitHub Action 把待處理的回報匯入網站資料並建立 PR，合併後上線。"
+      )
+    )
+      return;
+    setPublishing(true);
+    setPublishMsg(null);
+    try {
+      const res = await fetch("/api/admin/publish", { method: "POST" });
+      const data = await res.json();
+      setPublishMsg(
+        data.success
+          ? "✅ 已觸發匯入，稍後到 GitHub Actions / PR 查看。"
+          : `❌ ${data.error || "觸發失敗"}`
+      );
+    } catch {
+      setPublishMsg("❌ 觸發失敗，請稍後再試");
+    } finally {
+      setPublishing(false);
+    }
+  };
+
   return (
     <div>
-      <div className="mb-4 flex items-center justify-between">
-        <div className="flex flex-wrap gap-2">
+      {/* 工具列 */}
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <div className="flex gap-2">
           {FILTERS.map((f) => (
             <button
               key={f.value}
@@ -90,45 +185,145 @@ export default function ReportsPanel() {
             </button>
           ))}
         </div>
+
+        <div className="relative ml-auto">
+          <Search className="pointer-events-none absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+          <Input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="搜尋地址 / 日期 / 贈品"
+            className="h-9 w-44 pl-8 sm:w-56"
+          />
+        </div>
+
+        <Button
+          size="sm"
+          className="gap-1.5 bg-emerald-600 hover:bg-emerald-700"
+          onClick={publish}
+          disabled={publishing}
+        >
+          {publishing ? (
+            <Loader2 className="h-4 w-4 animate-spin" />
+          ) : (
+            <UploadCloud className="h-4 w-4" />
+          )}
+          發佈到網站
+        </Button>
+
         <Button variant="ghost" size="sm" onClick={load} className="gap-1.5">
           <RefreshCw className="h-4 w-4" />
           重新整理
         </Button>
       </div>
 
+      {publishMsg && (
+        <p className="mb-3 rounded-md bg-gray-50 px-3 py-2 text-sm text-gray-700">
+          {publishMsg}
+        </p>
+      )}
       {error && (
         <p className="mb-3 rounded-md bg-red-50 px-3 py-2 text-sm text-red-600">
           {error}
         </p>
       )}
 
+      {/* 批次操作列 */}
+      {!loading && filtered.length > 0 && (
+        <div className="mb-3 flex items-center gap-3 rounded-lg bg-gray-50 px-3 py-2 text-sm">
+          <label className="flex cursor-pointer items-center gap-2">
+            <Checkbox checked={allSelected} onCheckedChange={toggleAll} />
+            <span className="text-gray-600">全選</span>
+          </label>
+          <span className="text-gray-400">
+            已選 {selected.size} / {filtered.length} 筆
+          </span>
+          {selected.size > 0 && (
+            <div className="ml-auto flex gap-2">
+              {filter === "open" ? (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="gap-1 text-emerald-600"
+                  disabled={bulkBusy}
+                  onClick={() => bulkSetState("closed")}
+                >
+                  {bulkBusy ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <CheckCircle2 className="h-4 w-4" />
+                  )}
+                  批次標記完成
+                </Button>
+              ) : (
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="gap-1 text-gray-600"
+                  disabled={bulkBusy}
+                  onClick={() => bulkSetState("open")}
+                >
+                  {bulkBusy ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <RotateCcw className="h-4 w-4" />
+                  )}
+                  批次重新開啟
+                </Button>
+              )}
+            </div>
+          )}
+        </div>
+      )}
+
       {loading ? (
         <div className="flex justify-center py-16">
           <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
         </div>
-      ) : issues.length === 0 ? (
-        <p className="py-16 text-center text-sm text-gray-400">沒有資料</p>
+      ) : filtered.length === 0 ? (
+        <div className="flex flex-col items-center gap-2 py-16 text-center">
+          <Inbox className="h-10 w-10 text-gray-300" />
+          <p className="text-sm text-gray-400">
+            {query
+              ? "沒有符合搜尋的回報"
+              : filter === "open"
+                ? "目前沒有待處理的回報 🎉"
+                : "沒有已處理的回報"}
+          </p>
+        </div>
       ) : (
         <ul className="space-y-3">
-          {issues.map((it) => {
+          {filtered.map((it) => {
             const p = it.parsed;
+            const checked = selected.has(it.number);
             return (
               <li
                 key={it.number}
-                className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm"
+                className={`rounded-lg border bg-white p-4 shadow-sm transition-colors ${
+                  checked ? "border-red-300 ring-1 ring-red-200" : "border-gray-200"
+                }`}
               >
-                <div className="flex gap-4">
+                <div className="flex gap-3">
+                  <Checkbox
+                    checked={checked}
+                    onCheckedChange={() => toggle(it.number)}
+                    className="mt-1"
+                  />
+
                   {p?.imgurUrl ? (
-                    <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-md bg-gray-100">
+                    <button
+                      type="button"
+                      onClick={() => setLightbox(p.imgurUrl)}
+                      className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-md bg-gray-100"
+                    >
                       <Image
                         src={p.imgurUrl}
                         alt={p.address}
                         fill
                         sizes="80px"
-                        className="object-cover"
+                        className="object-cover transition-transform hover:scale-105"
                         unoptimized
                       />
-                    </div>
+                    </button>
                   ) : null}
 
                   <div className="min-w-0 flex-1">
@@ -243,6 +438,11 @@ export default function ReportsPanel() {
         open={editOpen}
         onOpenChange={setEditOpen}
         onSaved={load}
+      />
+      <ImageLightbox
+        src={lightbox}
+        open={!!lightbox}
+        onOpenChange={(o) => !o && setLightbox(null)}
       />
     </div>
   );

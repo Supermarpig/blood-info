@@ -7,6 +7,7 @@ import {
   Loader2,
   RefreshCw,
   ExternalLink,
+  Inbox,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { AdminIssue, IssueState } from "./types";
@@ -17,7 +18,11 @@ const FILTERS: { value: IssueState; label: string }[] = [
   { value: "closed", label: "已處理" },
 ];
 
-export default function WishlistPanel() {
+export default function WishlistPanel({
+  onChanged,
+}: {
+  onChanged?: () => void;
+}) {
   const [filter, setFilter] = useState<IssueState>("open");
   const [issues, setIssues] = useState<AdminIssue[]>([]);
   const [loading, setLoading] = useState(true);
@@ -59,6 +64,7 @@ export default function WishlistPanel() {
         body: JSON.stringify({ state }),
       });
       await load();
+      onChanged?.();
     } finally {
       setBusy(null);
     }
@@ -82,10 +88,15 @@ export default function WishlistPanel() {
             </button>
           ))}
         </div>
-        <Button variant="ghost" size="sm" onClick={load} className="gap-1.5">
-          <RefreshCw className="h-4 w-4" />
-          重新整理
-        </Button>
+        <div className="flex items-center gap-3">
+          {!loading && (
+            <span className="text-xs text-gray-400">共 {issues.length} 筆</span>
+          )}
+          <Button variant="ghost" size="sm" onClick={load} className="gap-1.5">
+            <RefreshCw className="h-4 w-4" />
+            重新整理
+          </Button>
+        </div>
       </div>
 
       {error && (
@@ -99,7 +110,12 @@ export default function WishlistPanel() {
           <Loader2 className="h-6 w-6 animate-spin text-gray-400" />
         </div>
       ) : issues.length === 0 ? (
-        <p className="py-16 text-center text-sm text-gray-400">沒有資料</p>
+        <div className="flex flex-col items-center gap-2 py-16 text-center">
+          <Inbox className="h-10 w-10 text-gray-300" />
+          <p className="text-sm text-gray-400">
+            {filter === "open" ? "目前沒有待處理的許願" : "沒有已處理的許願"}
+          </p>
+        </div>
       ) : (
         <ul className="space-y-3">
           {issues.map((it) => (

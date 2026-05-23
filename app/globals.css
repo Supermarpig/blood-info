@@ -205,3 +205,46 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* 公告 modal 進場：從右上角的 tab 飛出展開 */
+@keyframes announceIn {
+  0% {
+    transform: translate(42vw, -10vh) rotate(35deg) scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* 公告 modal 關閉：順時針旋轉 → 撞到右邊界（回彈）→ 卡進上方 tab 後消失 */
+@keyframes announceDock {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    /* 旋轉著飛到右邊界 */
+    transform: translate(45vw, 1vh) rotate(300deg) scale(0.4);
+    opacity: 1;
+  }
+  64% {
+    /* 撞牆回彈一下 */
+    transform: translate(39vw, 1vh) rotate(335deg) scale(0.34);
+    opacity: 1;
+  }
+  100% {
+    /* 往上卡進 tab，縮小淡出 */
+    transform: translate(46vw, -12vh) rotate(360deg) scale(0.06);
+    opacity: 0;
+  }
+}
+
+.animate-announce-in {
+  animation: announceIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-announce-dock {
+  animation: announceDock 0.72s cubic-bezier(0.5, 0, 0.75, 0) forwards;
+}
