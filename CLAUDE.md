@@ -47,7 +47,20 @@ MONGODB_URI               # MongoDB Atlas connection string
 IMGUR_CLIENT_ID           # Imgur image hosting
 IMGUR_ACCESS_TOKEN
 GOOGLE_MAPS_API_KEY       # Geocoding + map tiles
+GITHUB_TOKEN              # Reports/wishlist issues (form + admin + importReports)
+GITHUB_REPO               # owner/repo for the above
+AUTH_SECRET               # Auth.js session secret (`npx auth secret`)
+ADMIN_USERNAME            # /admin 後台登入帳號
+ADMIN_PASSWORD            # /admin 後台登入密碼
 ```
+
+### Admin backend (`/admin`)
+
+The admin manages **GitHub Issues** — the same single source of truth as the public flow. The public report form (`/api/reports`) is unchanged: location reports open a `donation-report` issue, wishlist opens a `wishlist` issue; `scripts/importReports.js` then imports `donation-report` issues into `/data`.
+
+- Auth.js v5 (`auth.ts`) credentials login, gated by `middleware.ts`. Login page: `/admin/login`.
+- `services/githubIssuesService.ts` wraps the GitHub Issues API (list / parse body / create / edit / open-close); admin routes `/api/admin/reports` (GET list by `label`+`state`, POST create) and `/api/admin/reports/[number]` (PATCH edit fields / open / close) are guarded by `lib/apiAuth.ts`.
+- UI tabs (`app/admin/_components/`): 回報審核 (donation-report issues, open/closed, edit + close/reopen), 功能許願 (wishlist issues), 手動新增 (creates a donation-report issue). Closing an issue triggers the existing `notify-contributor` workflow (thank-you email).
 
 ## Content (news articles)
 
