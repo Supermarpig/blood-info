@@ -105,7 +105,11 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
           <LeafletMap user={userLocation} locations={mapLocations} selectedIndex={mapSelectedIndex} ranks={mapRanks} />
         ) : (
           /* SVG demo animation before location is known */
-          <div className="w-full h-full" style={{ background: "linear-gradient(180deg, #eef5ea 0%, #e3ede0 100%)" }}>
+          <div
+            className="w-full h-full"
+            style={{ background: "linear-gradient(180deg, #eef5ea 0%, #e3ede0 100%)", cursor: isLoading ? "default" : "pointer" }}
+            onClick={isLoading ? undefined : onRetry}
+          >
             <svg viewBox={`0 0 ${VW} ${VH}`} className="w-full h-full"
               style={{ fontFamily: "'Noto Sans TC', system-ui, sans-serif" }}>
               <defs>
@@ -176,10 +180,10 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
             </svg>
 
             {!isLoading && !error && (
-              <div className="absolute bottom-3 left-0 right-0 flex justify-center pointer-events-none">
-                <span className="flex items-center gap-1 text-[11px] text-[#7a7a7a] bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full border border-[#ececea]">
-                  <Navigation2 className="w-3 h-3" />
-                  點擊上方「找附近捐血點」開啟定位
+              <div className="absolute bottom-4 left-0 right-0 flex justify-center pointer-events-none">
+                <span className="animate-bounce flex items-center gap-1.5 text-xs font-semibold text-[#e11d2a] bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border border-[#e11d2a]/25 shadow-sm">
+                  <Navigation2 className="w-3.5 h-3.5" />
+                  點擊地圖開啟定位
                 </span>
               </div>
             )}
