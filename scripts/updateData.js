@@ -46,6 +46,10 @@ const GIFT_SUBTAG_MAPPING = {
     '超商－全聯': ['全聯'],
     '超商－家樂福': ['家樂福'],
     '超商－美廉社': ['美廉社'],
+    '禮券－全聯': ['全聯禮券', '全聯商品'],
+    '禮券－家樂福': ['家樂福禮券', '家樂福商品'],
+    '禮券－百貨': ['百貨禮券', 'SOGO', '新光三越', '太平洋百貨', '遠東百貨', '漢神百貨'],
+    '禮券－金聯': ['金聯禮券', '金聯'],
     '電影票－威秀': ['威秀'],
     '電影票－國賓': ['國賓'],
     '電影票－秀泰': ['秀泰'],
@@ -189,9 +193,13 @@ async function loadPttTagsFromExistingData() {
                 for (const event of data[date]) {
                     // 用頂層 tags 快取（pttData.tags 存檔前已被刪除）
                     if (event.pttData?.rawLine && event.tags?.length) {
-                        // 若沒有 subTags 但有 ocrTexts，從 OCR 文字反推 subTags
+                        const hasImages = event.pttData?.images?.length > 0;
+                        const hasOcrTexts = event.pttData?.ocrTexts?.length > 0;
+                        // 有圖片但沒有 ocrTexts 且沒有 subTags → 不快取，讓下次重跑 OCR 補全
+                        if (hasImages && !hasOcrTexts && !event.subTags?.length) continue;
+
                         let subTags = event.subTags || [];
-                        if (!subTags.length && event.pttData?.ocrTexts?.length) {
+                        if (!subTags.length && hasOcrTexts) {
                             const ocrText = event.pttData.ocrTexts.map(o => o.text).join(' ');
                             subTags = extractSubTagsFromText(ocrText + ' ' + event.pttData.rawLine);
                         }
