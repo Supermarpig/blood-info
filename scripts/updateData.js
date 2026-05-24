@@ -31,8 +31,8 @@ const GIFT_TAG_MAPPING = {
 
 // 贈品細項關鍵字對應 sub-tag（格式：大分類－具體品項）
 const GIFT_SUBTAG_MAPPING = {
-    '食品－米': ['壽司米', '蓬萊米', '糙米', '白米', '米（', '米!', '米 '],
-    '食品－蛋': ['雞蛋', '皮蛋', '鹹蛋', '蛋（', '蛋!', '蛋 '],
+    '食品－米': ['米'],
+    '食品－蛋': ['雞蛋', '皮蛋', '鹹蛋'],
     '食品－泡麵': ['泡麵', '速食麵', '方便麵', '鮮葉麵'],
     '食品－餅乾': ['餅乾'],
     '食品－零食': ['零食', '洋芋片'],
@@ -77,14 +77,25 @@ const GIFT_SUBTAG_MAPPING = {
 
 const OCR_CONCURRENCY = 4;
 
+// OCR 輸出中文字間常夾空格（e.g. "泡 麵"），正規化後再比對
+function normalizeOcrText(text) {
+    let prev = '';
+    let result = text;
+    while (result !== prev) {
+        prev = result;
+        result = result.replace(/([一-龥]) ([一-龥])/g, '$1$2');
+    }
+    return result;
+}
+
 // 從文字中識別贈品 tags
 function extractTagsFromText(text) {
     const tags = new Set();
-    const lowerText = text.toLowerCase();
+    const normalized = normalizeOcrText(text).toLowerCase();
 
     for (const [tag, keywords] of Object.entries(GIFT_TAG_MAPPING)) {
         for (const keyword of keywords) {
-            if (lowerText.includes(keyword.toLowerCase())) {
+            if (normalized.includes(keyword.toLowerCase())) {
                 tags.add(tag);
                 break;
             }
@@ -97,10 +108,12 @@ function extractTagsFromText(text) {
 // 從文字中識別具體贈品細項 sub-tags
 function extractSubTagsFromText(text) {
     const subTags = new Set();
-    // 針對 OCR 文字，直接做 includes（不 toLowerCase，保留中文原樣）
+    const normalized = normalizeOcrText(text);
+    const normalizedLower = normalized.toLowerCase();
+
     for (const [subTag, keywords] of Object.entries(GIFT_SUBTAG_MAPPING)) {
         for (const keyword of keywords) {
-            if (text.includes(keyword) || text.toLowerCase().includes(keyword.toLowerCase())) {
+            if (normalized.includes(keyword) || normalizedLower.includes(keyword.toLowerCase())) {
                 subTags.add(subTag);
                 break;
             }
@@ -638,7 +651,7 @@ async function fetchPttData() {
             const eventsNeedingOcr = eventsWithImages.filter(e => !pttOcrCache.has(e.rawLine));
             const eventsWithCachedTags = eventsWithImages.filter(e => pttOcrCache.has(e.rawLine));
 
-            // 套用快取的 tags + subTags
+            // 套用快取的 tags + subTags，並用 rawLine 補偵測缺漏的 subTags
             eventsWithCachedTags.forEach(event => {
                 const cached = pttOcrCache.get(event.rawLine);
                 if (cached && typeof cached === 'object' && !Array.isArray(cached)) {
@@ -646,6 +659,10 @@ async function fetchPttData() {
                     event.subTags = cached.subTags || [];
                 } else {
                     event.tags = Array.isArray(cached) ? cached : [];
+                }
+                // rawLine fallback：快取沒有 subTags 時，從 rawLine 再試一次
+                if (!event.subTags?.length) {
+                    event.subTags = extractSubTagsFromText(event.rawLine);
                 }
             });
             console.log(`快取命中 ${eventsWithCachedTags.length} 個活動，需新 OCR ${eventsNeedingOcr.length} 個活動...`);

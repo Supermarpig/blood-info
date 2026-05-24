@@ -3693,7 +3693,8 @@
         "lng": 120.2967849
       },
       "subTags": [
-        "生活用品－雨傘"
+        "生活用品－雨傘",
+        "超商－全聯"
       ]
     },
     {
@@ -4569,7 +4570,10 @@
       "coordinates": {
         "lat": 22.6278701,
         "lng": 120.2941928
-      }
+      },
+      "subTags": [
+        "生活用品－衛生紙"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTAtMDk6MDB+MTc6MDAt6auY6ZuE5biC6JOu5r2tOOiZn+aFiOWWhOacgy4=",
@@ -4595,7 +4599,11 @@
       "coordinates": {
         "lat": 22.7294721,
         "lng": 120.3468913
-      }
+      },
+      "subTags": [
+        "超商－全聯",
+        "生活用品－衛生紙"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTAtMDg6MDB+MTc6MDAt5rqi5rOw5a+m5qWt6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -4921,7 +4929,8 @@
         "lng": 121.5127029
       },
       "subTags": [
-        "食品－蛋"
+        "食品－蛋",
+        "電影票－威秀"
       ]
     },
     {
@@ -5314,7 +5323,11 @@
       "coordinates": {
         "lat": 24.108765,
         "lng": 120.690427
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMTEtMDk6MDB+MTc6MDAt5ZOh5p6X542F5a2Q5pyD",
@@ -5434,7 +5447,11 @@
       "coordinates": {
         "lat": 22.6127672,
         "lng": 120.3043248
-      }
+      },
+      "subTags": [
+        "超商－全聯",
+        "電影票－威秀"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTEtMDk6MzB+MTc6MDAt6auY6ZuE5biC5bqm6Ium5Y6E5oWI5ZaE5pyD",
@@ -5460,7 +5477,10 @@
       "coordinates": {
         "lat": 22.649736,
         "lng": 120.3247661
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTEtMDk6MDB+MTc6MDAt5ZCM5oW25oSb5b+D5pyD",
@@ -5544,7 +5564,10 @@
       "coordinates": {
         "lat": 22.68923,
         "lng": 120.29904
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTEtMDk6MDB+MTc6MDAt5ZiJ576p5rC05LiK6Y6u5a6J5a6u",
@@ -5618,7 +5641,11 @@
       "coordinates": {
         "lat": 22.996,
         "lng": 120.213
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTEtMDk6MDB+MTc6MDAt5oW25ZyW6YeR5bGs6ZaL55m86IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -5649,7 +5676,8 @@
         "lng": 120.297
       },
       "subTags": [
-        "餐飲－咖啡"
+        "餐飲－咖啡",
+        "超商－全聯"
       ]
     },
     {
@@ -5718,7 +5746,11 @@
       "coordinates": {
         "lat": 23.47,
         "lng": 120.44
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTEtMDg6MDB+MTc6MDAt5YyX5qau5pWZ5pyD576O56CU56S+",
@@ -6892,7 +6924,8 @@
         "lng": 120.2268128
       },
       "subTags": [
-        "食品－蛋"
+        "食品－蛋",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -7501,7 +7534,10 @@
       },
       "subTags": [
         "食品－米",
-        "超商－7-11"
+        "超商－7-11",
+        "禮券－百貨",
+        "超商－全家",
+        "生活用品－雨傘"
       ]
     },
     {
@@ -8192,7 +8228,8 @@
       },
       "subTags": [
         "食品－蛋",
-        "餐飲－咖啡"
+        "餐飲－咖啡",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -8378,7 +8415,10 @@
       "coordinates": {
         "lat": 22.4313389,
         "lng": 120.5152905
-      }
+      },
+      "subTags": [
+        "食品－烤雞"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTYtMTA6MDB+MTg6MDAt5ZyL56uL5oiQ5Yqf5aSn5a24",
@@ -8539,7 +8579,10 @@
       "coordinates": {
         "lat": 25.0328333,
         "lng": 121.516972
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMTctMDk6MzB+MTY6MDAt6LKh5ZyY5rOV5Lq66YGg6ZuE5paH5pWZ5YWs55uK5Z+66YeR5pyD",
@@ -8650,7 +8693,10 @@
       },
       "subTags": [
         "食品－米",
-        "食品－餅乾"
+        "食品－餅乾",
+        "食品－泡麵",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -8865,7 +8911,8 @@
         "lng": 120.6376
       },
       "subTags": [
-        "食品－蛋"
+        "食品－蛋",
+        "超商－全聯"
       ]
     },
     {
@@ -9136,7 +9183,9 @@
         "lng": 121.4815601
       },
       "subTags": [
-        "餐飲－咖啡"
+        "餐飲－咖啡",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -9228,7 +9277,9 @@
       },
       "subTags": [
         "食品－米",
-        "生活用品－雨傘"
+        "生活用品－雨傘",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -9262,7 +9313,8 @@
       },
       "subTags": [
         "食品－米",
-        "食品－蛋"
+        "食品－蛋",
+        "超商－全聯"
       ]
     },
     {
@@ -9307,7 +9359,10 @@
         "lng": 119.5639854
       },
       "subTags": [
-        "超商－7-11"
+        "超商－7-11",
+        "食品－烤雞",
+        "禮券－百貨",
+        "超商－全家"
       ]
     }
   ],
@@ -10586,7 +10641,10 @@
       "coordinates": {
         "lat": 22.6887611,
         "lng": 120.4891787
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMTgtNC8xOCjlha0p5r6O5rmW6aas5YWs5o2Q6KGA56uZ",
@@ -10895,7 +10953,11 @@
       "coordinates": {
         "lat": 24.8098161,
         "lng": 120.9751319
-      }
+      },
+      "subTags": [
+        "電影票－威秀",
+        "生活用品－衛生紙"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMTktMDg6MDB+MTY6MzAt5paw56u557ij56u55YyX5biC5b6M5YKZ5oay5YW16I235p2+5Y2U5pyD",
@@ -10924,7 +10986,12 @@
       "coordinates": {
         "lat": 24.8336688,
         "lng": 120.997844
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯",
+        "生活用品－衛生紙"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMTktMTA6MDB+MTc6MDAt5Yag6LuN5bu65p2QKOiCoSnmnInpmZDlhazlj7g=",
@@ -10979,7 +11046,11 @@
       "coordinates": {
         "lat": 24.803,
         "lng": 120.967
-      }
+      },
+      "subTags": [
+        "電影票－威秀",
+        "生活用品－衛生紙"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMTktMDk6MDB+MTY6MDAt5bSH5b635paX5Y2X5oWI5r+f5a6u",
@@ -11115,7 +11186,9 @@
       },
       "subTags": [
         "食品－米",
-        "食品－蛋"
+        "食品－蛋",
+        "超商－全聯",
+        "餐飲－咖啡"
       ]
     },
     {
@@ -11200,7 +11273,9 @@
         "lng": 120.5160506
       },
       "subTags": [
-        "食品－蛋"
+        "食品－蛋",
+        "超商－全聯",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -11597,7 +11672,10 @@
       "coordinates": {
         "lat": 22.56675,
         "lng": 120.35482
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMTktNC8xOSjml6Up6auY6ZuE5LuB5q2m5aSn54Gj5ZyL5Lit",
@@ -11625,7 +11703,11 @@
       "coordinates": {
         "lat": 22.67661,
         "lng": 120.34195
-      }
+      },
+      "subTags": [
+        "超商－全聯",
+        "餐飲－咖啡"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMTktNC8xOSjml6Up5Y+w5p2x5o2Q6KGA5a6k",
@@ -12406,7 +12488,12 @@
       "coordinates": {
         "lat": 23.9515531,
         "lng": 120.4807772
-      }
+      },
+      "subTags": [
+        "食品－烤雞",
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjEtMDk6MDB+MTc6MzAtMTUy5paw6a6u5bGL",
@@ -12563,7 +12650,10 @@
       "coordinates": {
         "lat": 22.8547435,
         "lng": 120.2592442
-      }
+      },
+      "subTags": [
+        "生活用品－衛生紙"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjEtMDk6MDB+MTc6MzAt6auY6ZuE6YO15bGA",
@@ -12630,7 +12720,10 @@
       "coordinates": {
         "lat": 23.3119567,
         "lng": 120.3089541
-      }
+      },
+      "subTags": [
+        "生活用品－衛生紙"
+      ]
     }
   ],
   "2026-04-22": [
@@ -13071,7 +13164,9 @@
         "lng": 121.516357
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -13102,7 +13197,12 @@
       "coordinates": {
         "lat": 24.9938647,
         "lng": 121.4269278
-      }
+      },
+      "subTags": [
+        "禮券－家樂福",
+        "超商－全聯",
+        "超商－家樂福"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjItNC8yMi00LzI0KOS4iS3kupQp44CBNC8yOS00LzMwKOS4iS3lm5sp56u55YyX6Jmf5o2Q6KGA6LuK",
@@ -13239,7 +13339,10 @@
       "coordinates": {
         "lat": 25.0449172,
         "lng": 121.5200501
-      }
+      },
+      "subTags": [
+        "電影票－威秀"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMjMtMTM6MDB+MjE6MDAt5Y+w54Gj6K2m6ZuB6Zec5oe35Y2U5pyD",
@@ -13281,7 +13384,11 @@
       "coordinates": {
         "lat": 25.0846613,
         "lng": 121.4738221
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMjMtMTQ6MDB+MTc6MDAt6Ie65YyX5biC5pS/5bqc5YW15b255bGAKOabv+S7o+W9ueS4reW/gyk=",
@@ -13310,7 +13417,10 @@
       "coordinates": {
         "lat": 25.0176432,
         "lng": 121.5267769
-      }
+      },
+      "subTags": [
+        "電影票－威秀"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMjMtMDk6MzB+MTY6MzAt5bCW6bue56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -13475,7 +13585,10 @@
       "coordinates": {
         "lat": 24.412286,
         "lng": 120.7707471
-      }
+      },
+      "subTags": [
+        "電影票－威秀"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjMtMDk6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyDKOWNl+aKlSk=",
@@ -13570,7 +13683,10 @@
       "coordinates": {
         "lat": 24.156503,
         "lng": 120.68153
-      }
+      },
+      "subTags": [
+        "電影票－威秀"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjMtMDk6MzB+MTU6MzAt6Zuy5p6X57ij5oWI5YWD6KGM5ZaE5Y2U5pyD",
@@ -13638,7 +13754,11 @@
       "coordinates": {
         "lat": 24.181937,
         "lng": 120.718292
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjMtMDk6MDB+MTc6MzAtMTUy5paw6a6u5bGL",
@@ -13772,7 +13892,10 @@
       "coordinates": {
         "lat": 23.558577,
         "lng": 120.4718534
-      }
+      },
+      "subTags": [
+        "電影票－威秀"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjMtMDk6MzB+MTg6MDAt6LKh5ZyY5rOV5Lq66auY6ZuE5biC5qmL6aCt5Y2A56aP5pm65a+6",
@@ -13816,7 +13939,8 @@
         "lng": 120.31417
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "超商－全聯"
       ]
     },
     {
@@ -13881,7 +14005,9 @@
         "lng": 121.55243
       },
       "subTags": [
-        "食品－蛋"
+        "食品－蛋",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -13916,7 +14042,9 @@
       },
       "subTags": [
         "超商－7-11",
-        "餐飲－咖啡"
+        "餐飲－咖啡",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -14312,7 +14440,10 @@
         "lng": 121.288392
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "食品－泡麵",
+        "食品－餅乾",
+        "超商－全聯"
       ]
     },
     {
@@ -14672,7 +14803,9 @@
         "lng": 120.4000814
       },
       "subTags": [
-        "餐飲－早餐"
+        "餐飲－早餐",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -14716,7 +14849,10 @@
       "coordinates": {
         "lat": 25.05972,
         "lng": 121.53318
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjQtNC8yNCjkupQp5Y+w5YyX6ImL6Ii65ZWG5ZyI5LiJ6KeS5YWs5ZyS",
@@ -14861,7 +14997,10 @@
         "lng": 120.7161428
       },
       "subTags": [
-        "食品－蛋"
+        "食品－蛋",
+        "禮券－全聯",
+        "超商－全聯",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -15019,7 +15158,11 @@
       "coordinates": {
         "lat": 24.9935079,
         "lng": 121.4266193
-      }
+      },
+      "subTags": [
+        "禮券－家樂福",
+        "超商－家樂福"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMjUtMDk6MDB+MTY6MDAt5Yas5bGx5a6a5a6J5a6u",
@@ -15132,7 +15275,10 @@
       "coordinates": {
         "lat": 25.1493786,
         "lng": 121.4014526
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMjUtMDg6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5aOv5ZyN56ys5LqM5YiG5pyD",
@@ -15227,7 +15373,11 @@
       "coordinates": {
         "lat": 24.9143248,
         "lng": 121.1464462
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMjUtMTA6MDB+MTc6MDAt5pyD5b+D5Y2B5LqU6Zec5oe35Y2U5pyD",
@@ -15359,7 +15509,11 @@
       "coordinates": {
         "lat": 24.9343574,
         "lng": 121.0830909
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMjUtMDk6MDB+MTY6MDAt5qGD5ZyS5b2p6aao5ZCM5r+f5pyD",
@@ -15440,7 +15594,11 @@
       "coordinates": {
         "lat": 23.954,
         "lng": 120.572
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjUtMDk6MDB+MTY6MDAt5b2w5oW25ZyL6Zqb5ZCM5r+f5pyD",
@@ -15469,7 +15627,11 @@
       "coordinates": {
         "lat": 24.0816236,
         "lng": 120.5383779
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjUtMDg6MDB+MTc6MDAt5paX5YWt5ZaE5L+u5a6uKOWtlOWtkOW7nyk=",
@@ -15592,7 +15754,8 @@
         "lng": 120.7155487
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "超商－全聯"
       ]
     },
     {
@@ -15637,7 +15800,10 @@
         "lng": 120.4350548
       },
       "subTags": [
-        "食品－蛋"
+        "食品－蛋",
+        "食品－蛋糕",
+        "生活用品－衛生紙",
+        "生活用品－購物袋"
       ]
     },
     {
@@ -15867,7 +16033,11 @@
       "coordinates": {
         "lat": 22.649736,
         "lng": 120.3247661
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjUtMDk6MzB+MTg6MDAt5ZyL6Zqb5om26LyqMzUxMOWcsOWNgOmrmOmbhOaZqOWFieaJtui8quekvg==",
@@ -16005,7 +16175,10 @@
       "coordinates": {
         "lat": 23.47,
         "lng": 120.44
-      }
+      },
+      "subTags": [
+        "餐飲－咖啡"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjUtMDg6MDB+MTc6MDAt5ZWf5Z2k56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -16162,7 +16335,11 @@
       "coordinates": {
         "lat": 24.2254639,
         "lng": 120.567163
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjUtNC8yNSjlha0p6Zuy5p6X5o2Q6KGA56uZ",
@@ -16190,7 +16367,11 @@
       "coordinates": {
         "lat": 23.703293,
         "lng": 120.545393
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjUtNC8yNSjlha0p5Y+w5Y2X5bCP6KW/6ZaA5ZyT55Kw5peB",
@@ -16223,7 +16404,9 @@
         "lng": 120.198123
       },
       "subTags": [
-        "食品－蛋"
+        "食品－蛋",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -16313,7 +16496,10 @@
       "coordinates": {
         "lat": 22.56675,
         "lng": 120.35482
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjUtNC8yNSjlha0p44CBOC8yMijlha0p44CBMTIvMTko5YWtKeWxj+adseekvuearuS4iea4heWuru+8iOmAgeemj+W+t+ato+elnuaLm+iyoemMouavje+8iQ==",
@@ -16346,7 +16532,8 @@
         "lng": 120.4721273
       },
       "subTags": [
-        "超商－家樂福"
+        "超商－家樂福",
+        "食品－米"
       ]
     },
     {
@@ -16405,7 +16592,11 @@
       "coordinates": {
         "lat": 24.6550376,
         "lng": 121.7641363
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjUtNC8yNSjlha0p5a6c6Jit5o2Q6KGA56uZ",
@@ -16482,7 +16673,11 @@
         "lng": 121.618742
       },
       "subTags": [
-        "超商－7-11"
+        "超商－7-11",
+        "禮券－全聯",
+        "禮券－百貨",
+        "超商－全家",
+        "超商－全聯"
       ]
     }
   ],
@@ -16618,7 +16813,11 @@
       "coordinates": {
         "lat": 24.9278051,
         "lng": 121.3670898
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMjYtMTA6MDB+MTg6MDAt5p2x5YSE542F5pyDQSAx",
@@ -16808,7 +17007,8 @@
         "lng": 121.48833
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "超商－全聯"
       ]
     },
     {
@@ -17021,7 +17221,11 @@
       "coordinates": {
         "lat": 23.9705541,
         "lng": 120.967765
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjYtMDk6MDB+MTc6MDAt6Zm45oiw5r2b6b6N5b+X5bel5ZyY",
@@ -17048,7 +17252,11 @@
       "coordinates": {
         "lat": 23.959301,
         "lng": 120.5695517
-      }
+      },
+      "subTags": [
+        "生活用品－衛生紙",
+        "生活用品－購物袋"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjYtMDg6MDB+MTc6MDAt6Zuy5p6X57ij5b+r5qiC5oWI5ZaE5ZyYKOmbsuaelyk=",
@@ -17325,7 +17533,10 @@
       "coordinates": {
         "lat": 22.6587295,
         "lng": 120.414229
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjYtMDk6MDB+MTc6MDAt5pWR5ZyL5ZyY6auY6ZuE5biC5bel5ZWG6Z2S5bm056S+5pyD5pyN5YuZ6ZqK56ys5YWt6ZqK",
@@ -17352,7 +17563,10 @@
       "coordinates": {
         "lat": 22.7983649,
         "lng": 120.2931195
-      }
+      },
+      "subTags": [
+        "禮券－金聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjYtMDk6MDB+MTc6MDAt5ZiJ576p57ij576p5YuH5raI6Ziy57i96ZqK5pWR6K235aSn6ZqK5biD6KKL5YiG6ZqK",
@@ -17700,7 +17914,11 @@
       "coordinates": {
         "lat": 25.0320486,
         "lng": 121.5373988
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjYtNC8yNijml6Up5paw5YyX5rGQ5q2i54Gr6LuK56uZ5YmN5L+h576p5buj5aC0",
@@ -17734,7 +17952,10 @@
       },
       "subTags": [
         "食品－米",
-        "食品－蛋"
+        "食品－蛋",
+        "食品－蛋糕",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -17768,7 +17989,8 @@
         "lng": 121.4587088
       },
       "subTags": [
-        "超商－家樂福"
+        "超商－家樂福",
+        "禮券－家樂福"
       ]
     },
     {
@@ -17833,7 +18055,12 @@
       "coordinates": {
         "lat": 24.1464576,
         "lng": 120.6854816
-      }
+      },
+      "subTags": [
+        "食品－烤雞",
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjYtNC8yNijml6Up5Y2X5oqV5o2Q6KGA5a6k",
@@ -17865,7 +18092,8 @@
         "lng": 121.1714903
       },
       "subTags": [
-        "餐飲－咖啡"
+        "餐飲－咖啡",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -18017,7 +18245,10 @@
       "coordinates": {
         "lat": 24.74435,
         "lng": 121.7506361
-      }
+      },
+      "subTags": [
+        "生活用品－衛生紙"
+      ]
     }
   ],
   "2026-04-27": [
@@ -18384,7 +18615,11 @@
       "coordinates": {
         "lat": 24.1210497,
         "lng": 120.4892895
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjctNC8yNy00LzI4KOS4gC3kuowp6auY6ZuE6ZW35bqa5YWS6Yar5p2x5YG0",
@@ -19806,7 +20041,11 @@
       "coordinates": {
         "lat": 22.7195276,
         "lng": 120.3063935
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMzAtNC8zMC01LzEo5ZubLeS6lCnlj7DmnbHmjZDooYDlrqQ=",

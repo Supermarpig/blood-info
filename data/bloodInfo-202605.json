@@ -743,7 +743,11 @@
       "coordinates": {
         "lat": 24.9781107,
         "lng": 121.5467767
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDUvMDItMTM6MDB+MjE6MDAt5Y+w5YyX5biC6YeR56uZ542F5a2Q5pyDQTI=",
@@ -837,7 +841,11 @@
       "coordinates": {
         "lat": 25.0679407,
         "lng": 121.6613062
-      }
+      },
+      "subTags": [
+        "禮券－金聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDUvMDItMDk6MDB+MTY6MDAt5buj5r+f5a6u",
@@ -1089,7 +1097,8 @@
         "lng": 120.9751319
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "生活用品－保溫杯"
       ]
     },
     {
@@ -1148,7 +1157,11 @@
       "coordinates": {
         "lat": 23.959301,
         "lng": 120.5695517
-      }
+      },
+      "subTags": [
+        "禮券－金聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MzB+MTc6MzAt5qKn5qOy5ZyL6Zqb5ZCM5r+f5pyD",
@@ -1324,7 +1337,11 @@
       "coordinates": {
         "lat": 24.0816236,
         "lng": 120.5383779
-      }
+      },
+      "subTags": [
+        "禮券－金聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDItMDk6MDB+MTc6MzAt6LGQ5Y6f5oWI6b6N5a+6",
@@ -1379,7 +1396,11 @@
       "coordinates": {
         "lat": 24.1172251,
         "lng": 120.4973067
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt6auY6ZuE5biC546J5peo6aCG5aSp5oWI5ZaE5pyD",
@@ -1490,7 +1511,10 @@
       "coordinates": {
         "lat": 22.6374475,
         "lng": 120.3385598
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDg6MzB+MTc6MDAt5b635bOw6KGM57On6aOf5pyJ6ZmQ5YWs5Y+4",
@@ -1546,7 +1570,12 @@
       "coordinates": {
         "lat": 22.6798837,
         "lng": 120.3086782
-      }
+      },
+      "subTags": [
+        "食品－烤雞",
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDg6MDB+MTY6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Y+w5p2x6I+p5o+Q56ys5LiA5YiG5pyD",
@@ -1590,7 +1619,8 @@
         "lng": 120.2476716
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -1644,7 +1674,11 @@
       "coordinates": {
         "lat": 23.0006759,
         "lng": 120.2282403
-      }
+      },
+      "subTags": [
+        "超商－全聯",
+        "超商－家樂福"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDk6MDB+MTc6MDAt5rC45bq35L+d55Sf5a6u",
@@ -1764,7 +1798,10 @@
       "coordinates": {
         "lat": 22.9454121,
         "lng": 120.1791382
-      }
+      },
+      "subTags": [
+        "禮券－金聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDItMDg6MDB+MTc6MDAt5ZiJ576p5biC5b2w5YyW5ZCM6YSJ5pyD",
@@ -1871,7 +1908,10 @@
       "coordinates": {
         "lat": 24.153255,
         "lng": 120.6459763
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnlj7DljZfoh7rngaPnpYDlhbjmrablu58=",
@@ -1934,7 +1974,11 @@
       "coordinates": {
         "lat": 22.7043585,
         "lng": 120.3446067
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDUtMDItNS8yKOWFrSnlsY/mnbHlhafln5Tpvo3ms4nlr7o=",
@@ -2197,7 +2241,10 @@
       "coordinates": {
         "lat": 24.6718652,
         "lng": 121.7645683
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDg6MzB+MTc6MDAtOTnpmrvnvoo=",
@@ -2241,7 +2288,8 @@
         "lng": 121.4577509
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "超商－全聯"
       ]
     },
     {
@@ -2297,7 +2345,11 @@
       "coordinates": {
         "lat": 24.992033,
         "lng": 121.5417633
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDUvMDMtMDk6MzB+MTc6MDAtSVZJUEHlnIvpmpvolKzpo5/nlKLmpa3mjqjlu6PljZTmnIM=",
@@ -2363,7 +2415,10 @@
       "coordinates": {
         "lat": 25.0131825,
         "lng": 121.3139712
-      }
+      },
+      "subTags": [
+        "生活用品－衛生紙"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMDMtMTA6MDB+MTc6MDAt5paw56u55biC56u55aG56aiB5ZyL6Zqb5ZCM5r+f5pyD",
@@ -2495,7 +2550,10 @@
       "coordinates": {
         "lat": 23.9789226,
         "lng": 120.693407
-      }
+      },
+      "subTags": [
+        "食品－烤雞"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt6Ie65Lit5biC5YWJ54Wn6Jed5paH55m85bGV5Y2U5pyD",
@@ -2730,7 +2788,10 @@
       },
       "subTags": [
         "食品－米",
-        "食品－餅乾"
+        "食品－餅乾",
+        "禮券－全聯",
+        "超商－全聯",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -2891,7 +2952,11 @@
       "coordinates": {
         "lat": 23.0006759,
         "lng": 120.2282403
-      }
+      },
+      "subTags": [
+        "超商－全聯",
+        "超商－家樂福"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5Y+w5Y2X5biC5LuB5oWI5pyD",
@@ -2918,7 +2983,10 @@
       "coordinates": {
         "lat": 22.9747562,
         "lng": 120.2215652
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5a6J5Y2X5Y2A5oWI6IGW5a6u",
@@ -2945,7 +3013,12 @@
       "coordinates": {
         "lat": 23.0316758,
         "lng": 120.1938052
-      }
+      },
+      "subTags": [
+        "超商－全聯",
+        "生活用品－衛生紙",
+        "生活用品－購物袋"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5rGf5qau5b635oSb5b+D5ZyY6ZqK5ZyY6ZqK5b+D5oSb5b+D5oOF",
@@ -3000,7 +3073,12 @@
       "coordinates": {
         "lat": 22.7983649,
         "lng": 120.2931195
-      }
+      },
+      "subTags": [
+        "食品－烤雞",
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDMtMDk6MDB+MTc6MDAt5Y+w5Y2X5biC57i95bel5pyD",
@@ -3113,7 +3191,8 @@
       },
       "subTags": [
         "食品－米",
-        "食品－蛋"
+        "食品－蛋",
+        "超商－全聯"
       ]
     },
     {
@@ -3311,7 +3390,9 @@
       "subTags": [
         "食品－米",
         "食品－蛋",
-        "超商－7-11"
+        "超商－7-11",
+        "禮券－百貨",
+        "超商－全家"
       ]
     },
     {
@@ -4342,7 +4423,8 @@
         "lng": 120.6925091
       },
       "subTags": [
-        "食品－餅乾"
+        "食品－餅乾",
+        "超商－全聯"
       ]
     },
     {
@@ -5934,7 +6016,10 @@
       "coordinates": {
         "lat": 22.6315691,
         "lng": 120.2848744
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     }
   ],
   "2026-05-09": [
@@ -6044,7 +6129,10 @@
       "coordinates": {
         "lat": 25.0320486,
         "lng": 121.5373988
-      }
+      },
+      "subTags": [
+        "生活用品－購物袋"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDUvMDktMTA6MDB+MTg6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5paw6I6K56ys5LiJ5YiG5pyD",
@@ -6714,7 +6802,10 @@
       "coordinates": {
         "lat": 22.6390209,
         "lng": 120.3543689
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDg6MzB+MTc6MDAt5b635bOw6KGM57On6aOf5pyJ6ZmQ5YWs5Y+4",
@@ -6825,7 +6916,8 @@
         "lng": 120.1584564
       },
       "subTags": [
-        "食品－蛋"
+        "食品－蛋",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -6866,7 +6958,10 @@
       "coordinates": {
         "lat": 22.7382351,
         "lng": 120.3241871
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MDB+MTc6MzAt5qWg5qKT5aSp5ZCO5a6u",
@@ -6906,7 +7001,10 @@
       "coordinates": {
         "lat": 22.6255336,
         "lng": 120.3636196
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDk6MDB+MTc6MDAt6Ie65Y2X5biC6KW/5ouJ6ZuF5ZyL6Zqb5ZCM5r+f5pyD",
@@ -6935,7 +7033,11 @@
       "coordinates": {
         "lat": 23.001842,
         "lng": 120.2092165
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMDktMDg6MDB+MTc6MDAt5Y+w5Y2X5biC5bCP5ZCD5qWt6IG35qWt5bel5pyD",
@@ -7002,7 +7104,10 @@
       "coordinates": {
         "lat": 22.6798837,
         "lng": 120.3086782
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDUtMDktNS85KOWFrSnlj7DljJfkv6HnvqlBVFQ0RlVO",
@@ -7060,7 +7165,10 @@
       "coordinates": {
         "lat": 24.95696,
         "lng": 121.349928
-      }
+      },
+      "subTags": [
+        "生活用品－衛生紙"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDUtMDktNS85KOWFrSnmlrDljJfmlrDojorkuK3lubPlnIvkuK0=",
@@ -7190,7 +7298,9 @@
       },
       "subTags": [
         "食品－米",
-        "生活用品－餐具"
+        "生活用品－餐具",
+        "生活用品－衛生紙",
+        "生活用品－毛巾"
       ]
     },
     {
@@ -9217,7 +9327,10 @@
       "coordinates": {
         "lat": 25.0605265,
         "lng": 121.4626237
-      }
+      },
+      "subTags": [
+        "生活用品－購物袋"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDUvMTMtMDg6MzB+MTc6MDAt5LiW55WM6I+v5Lq65bel5ZWG5amm5aWz5LyB566h5Y2U5pyD6Iqx6JOu5YiG5pyD",
@@ -9433,7 +9546,10 @@
       "coordinates": {
         "lat": 24.2395276,
         "lng": 120.5492143
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMTMtMDk6MzB+MTU6MDAt57Sr5Y2X5a6u",
@@ -9595,7 +9711,8 @@
         "lng": 120.4627932
       },
       "subTags": [
-        "食品－麵包"
+        "食品－麵包",
+        "生活用品－衛生紙"
       ]
     }
   ],
@@ -10327,7 +10444,9 @@
         "lng": 121.3154916
       },
       "subTags": [
-        "超商－7-11"
+        "超商－7-11",
+        "禮券－百貨",
+        "超商－全家"
       ]
     },
     {
@@ -10486,7 +10605,10 @@
       "coordinates": {
         "lat": 24.7894856,
         "lng": 121.003074
-      }
+      },
+      "subTags": [
+        "食品－麵包"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDUvMTUtMTE6MDB+MTc6MDAt6IGv56uL5rG96LuK5pyJ6ZmQ5YWs5Y+4",
@@ -10604,7 +10726,10 @@
       "coordinates": {
         "lat": 24.1846057,
         "lng": 120.6125981
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMTUtMDk6MzB+MTY6MDAt6Ie65Lit5biC5Lit5riv5bel5ZWG5Y2U6YCy5pyD",
@@ -10631,7 +10756,10 @@
       "coordinates": {
         "lat": 24.1927123,
         "lng": 120.5455757
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMTUtMDg6MDB+MTc6MDAt56eA5ZKM5oWI5ZaE5Z+66YeR5pyD",
@@ -10715,7 +10843,8 @@
         "lng": 120.6421111
       },
       "subTags": [
-        "餐飲－咖啡"
+        "餐飲－咖啡",
+        "超商－全聯"
       ]
     },
     {
@@ -11429,7 +11558,8 @@
         "lng": 120.6125981
       },
       "subTags": [
-        "餐飲－咖啡"
+        "餐飲－咖啡",
+        "超商－家樂福"
       ]
     },
     {
@@ -11474,7 +11604,8 @@
         "lng": 120.2718388
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "餐飲－咖啡"
       ]
     },
     {
@@ -11860,7 +11991,8 @@
         "lng": 120.2974468
       },
       "subTags": [
-        "餐飲－便當"
+        "餐飲－便當",
+        "超商－全聯"
       ]
     },
     {
@@ -11993,7 +12125,9 @@
       },
       "subTags": [
         "電影票－威秀",
-        "餐飲－飲料"
+        "餐飲－飲料",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -12076,7 +12210,11 @@
       "coordinates": {
         "lat": 24.1567255,
         "lng": 120.664844
-      }
+      },
+      "subTags": [
+        "超商－全聯",
+        "生活用品－衛生紙"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDUtMTYtNS8xNi01LzE3KOWFrS3ml6Up5b2w5YyW5ZOh5p6X5o2Q6KGA56uZ",
@@ -12492,7 +12630,9 @@
         "lng": 121.5874585
       },
       "subTags": [
-        "超商－7-11"
+        "超商－7-11",
+        "禮券－百貨",
+        "超商－全家"
       ]
     },
     {
@@ -12633,7 +12773,10 @@
       "subTags": [
         "食品－米",
         "食品－麵包",
-        "餐飲－便當"
+        "餐飲－便當",
+        "禮券－全聯",
+        "超商－全聯",
+        "生活用品－購物袋"
       ]
     },
     {
@@ -12767,7 +12910,11 @@
       "coordinates": {
         "lat": 24.0276786,
         "lng": 120.5455884
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMTctMDg6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyDLeilv+WNgOWIhuacgw==",
@@ -12820,7 +12967,10 @@
       "coordinates": {
         "lat": 24.0478895,
         "lng": 120.4438243
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMTctMDk6MDB+MTY6MDAt6LKh5ZyY5rOV5Lq65LiA6LKr6YGT5a+25YWJ57S56IiI5bSH6I+v6IGW6YGT5Z+66YeR5pyDKOWPsOS4reW4gik=",
@@ -13291,7 +13441,10 @@
       "coordinates": {
         "lat": 25.0170181,
         "lng": 121.4264313
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDUtMTctNS8xNyjml6XvvInmoYPlnJLluILmlL/lupzliY3lu6PloLQ=",
@@ -13321,7 +13474,9 @@
       "isPttOnly": true,
       "subTags": [
         "食品－米",
-        "餐飲－飲料"
+        "餐飲－飲料",
+        "生活用品－衛生紙",
+        "生活用品－購物袋"
       ]
     },
     {
@@ -13376,7 +13531,10 @@
           }
         ]
       },
-      "isPttOnly": true
+      "isPttOnly": true,
+      "subTags": [
+        "生活用品－購物袋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDUtMTctNS8xNyjml6Up6auY6ZuE5qWg5qKT5ZyL5piM5ZyL5Lit",
@@ -13461,7 +13619,10 @@
           }
         ]
       },
-      "isPttOnly": true
+      "isPttOnly": true,
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDUtMTctNS8xNyjml6Up6auY6ZuE5YmN6Y6u57Gs5LuU5YWn6Lev5Lit5buf5Y2D56eL5bqc",
@@ -13754,7 +13915,9 @@
       },
       "subTags": [
         "食品－蛋",
-        "超商－7-11"
+        "超商－7-11",
+        "超商－全聯",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -13787,7 +13950,9 @@
       },
       "subTags": [
         "食品－蛋",
-        "超商－7-11"
+        "超商－7-11",
+        "超商－全聯",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -14879,7 +15044,8 @@
       },
       "isPttOnly": true,
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "生活用品－衛生紙"
       ]
     }
   ],
@@ -15313,7 +15479,9 @@
         "lng": 120.2592442
       },
       "subTags": [
-        "食品－蛋"
+        "食品－蛋",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -15881,7 +16049,11 @@
       "coordinates": {
         "lat": 24.1316695,
         "lng": 120.4622016
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMjItMDk6MzB+MTY6MDAt6LKh5ZyY5rOV5Lq66Ie65Lit5biC57K+56We6KGb55Sf56S+56aP5Z+66YeR5pyD",
@@ -15987,7 +16159,11 @@
       "coordinates": {
         "lat": 22.6636815,
         "lng": 120.3630297
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDUvMjItMDk6MDB+MTc6MDAt6bq76LGG5YiG5bGA",
@@ -16018,7 +16194,8 @@
         "lng": 120.2477124
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -16161,7 +16338,11 @@
       "coordinates": {
         "lat": 25.0571574,
         "lng": 121.5635089
-      }
+      },
+      "subTags": [
+        "禮券－全聯",
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDUtMjItNS8yMijkupQp5paw5YyX5LqU6aGn5b6h5Y+y6Lev",
@@ -16189,7 +16370,9 @@
       },
       "isPttOnly": true,
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "超商－全聯",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -16214,7 +16397,10 @@
           }
         ]
       },
-      "isPttOnly": true
+      "isPttOnly": true,
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDUtMjItNS8yMijkupQp44CBNS8yNC01LzI2KOaXpS3kuowp44CBNS8yOS01LzMxKOS6lC3ml6Up5b2w5YyW5ZOh5p6X5o2Q6KGA5a6k",
@@ -16303,7 +16489,8 @@
       "isPttOnly": true,
       "subTags": [
         "食品－米",
-        "超商－7-11"
+        "超商－7-11",
+        "生活用品－衛生紙"
       ]
     },
     {
@@ -17418,7 +17605,9 @@
         "lng": 120.5407583
       },
       "subTags": [
-        "食品－米"
+        "食品－米",
+        "禮券－全聯",
+        "超商－全聯"
       ]
     },
     {
@@ -17713,13 +17902,6 @@
         "rawLine": "5/24(日)新北汐止捐血室",
         "images": [
           "https://i.imgur.com/3cXAjeb.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/3cXAjeb.jpeg",
-            "text": "圖 ) 全 A\n天 員 中 | 『 和 4\n汪 易 | 耳 呈 說 了 AM\n\"可 有 LI AA\nNg 月 血 一代 1\n了 ., 廬 和 救 人 一 命 |\n蛋 I 重 看 外 喉 仁王 救 八 一 六 |\n4 說 品 頁 上 X 詞 / 廈 入 人 人 人 和 /\n人 人 人 公 生 rj 晶 全 必\n風 過 論 十 mm 吉 限 店\nhe 影 一\nas\n呈 看 放下 為 上 及\n(@EEDEID 115.05.24@\n二 09:00~17:00\n(CO) 上 EEDME》 汐止 捐血 室\n且 蝦 新 北市 汐止 區 新 台 五 路 1 段 207 號 11 樓 B 室\n【 說 ) 主 辦 單位 , 周 氏 關懷 協會 / 汐止 捐血 人 協會\n共 。 捐血 成 功 以 袋 數 加 避 。 庫 加\n則 則\n| |\n1 人 |\n; BIANCO + 任 選 / @ 則\n| PB 休 閒 服 煙斗 牌 休閒 服\n、 時 說 號 備 大 盡 碼 T 他 生\n捐血 請 攜帶 主 辦 單 位 保有\n身分 證件 活動 變更 的 權利\n0 上\nep 人 pp 說 加 轉 攻 哆\n您 的 熱 魚 , 將 成 為 他 人 生 命 的 希望 / 72\n",
-            "confidence": 47
-          }
         ]
       },
       "tags": [
@@ -17760,30 +17942,17 @@
           "https://i.imgur.com/1c5xqdY.jpeg",
           "https://i.imgur.com/w7rIJLT.jpeg",
           "https://i.imgur.com/Vu7OFHA.png"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/1c5xqdY.jpeg",
-            "text": "日 。\n條 和\nos 9:00~16:\nWi 人 界 二 上 和 全 地 點 : 冬 山 天 照 宮\nee 冬山 鄉 各 山路 二 段 75 號\n生 則 li 是 和 品 : | 店 冬山 鄉 冬 山 蹭 二 段 75 號\n說 和 計 全 1 大 局 本 活動 備 有 2 台 捐血 車 無 須 久 候\n@ 國 際 獅 子 會 抗 糖 教 官 宜蘭 服務 團隊 免費 血糖 檢測\n溫馨 提醒 : 記 得 攜帶 身分 證 jw ae\n捐血 感恩 禮 le 忿 思\n二 說 1 VAN\n和\n2. 魚 魚 罐 頭 2 罐 5 謂\n3. 金 蘭 甘 醇 醬油 、 麵 筋 1 組\n4. 天 照 宮 平安 發 財 符\n5. 天 照 宮 平 安 麵 2 束\n6. 衛 生 紙 100 抽 12 包 1 袋 全\n7. 天 照 宮 可 折 點 環 保 袋 一 只 語\n捐血 250cc1 份 、500cc2 份 數 量 有 限 ?\n一 一\n2\n9 且 條 )\n一 衝 加\n",
-            "confidence": 63
-          },
-          {
-            "url": "https://i.imgur.com/w7rIJLT.jpeg",
-            "text": "115 年 捐血 日 開 胡 肯\n捐血 傳 愛 XX wo\nar 2\n守護 生 命 ‧\n1.15。%2.15\n\n完 捐 血 即 贈送\n了 1, 罰 # 捐血 日 限定 紀念 品 ~\n字 @ 和 吧 等 您 來 捐血 蒂 回 家\n|| Ly * 匣 選 舞 集 點 則 無 健 取 紀念 品 , 實 瞭 品 項 依 各 定點 為 主 *\n捐血 焦點 . 愛 心 湯 點 和\n115 年 1 日 15 日 ~115 年 11 有 日 30 日 止 由\n於 定點 捐血 入 點 達 3 次 。。 証\n#g 血 錢 革 型 抱 秒 | 全\n(每 人 臣 台 換 1 炎 ) etetawmes\n活動 辦法 以 官網 粉絲 團 公告 為 主 |\n* 歡 量 有 限 , 換 完 為 止 *\n了 9\n",
-            "confidence": 59
-          },
-          {
-            "url": "https://i.imgur.com/Vu7OFHA.png",
-            "text": "$ 活動 期 間 :115/1/15 一 115/11/30\n回 於 定點 捐血 集 點 達 3 次\n芯 即 可 兌換 「 血 袋 造型 抱枕 」 乙 個\n(每 人 限 兌 1 次 , 數 量 有 限 , 換 完 為 止 )\n「 捐 血 集 點 . 愛 心 滿 點 」 血 袋 造型 抱枕 集 點 活動\n活動 地 點 : 中 心 業 務 轄 區 內 14 個 捐血 固定 點\n(一 ) 每 位 捐血 人 於 捐血 當 天 可 領取 1 張 活動 專屬 集 點 卡 (專屬 集 點 活動 、 個 人 捐血 集 點 、\n當 季 紀 念 品 擇 1)\n(二 ) 全 血 捐 250cc 集 1 點 , 捐 500cc 集 2 點 ; 分 離 術 摔 1u 集 2 點 ,2u 集 4 點\n(三 ) 於 定點 集 3 點 , 可 兌換 『 血 袋 造型 抱枕 』 1 個 , 活 動 期 間 每 人 限 兌換 1 次\n500cc 捐 2 次 (4 點 ) 或 分 離 術 2u(4 點 ) 倪 換 後 剩餘 1 點 可 集 於 個 人 捐血 集 點 。\n(四 ) 兌 換 時 間 :115 年 6 月 1 日 起 至 11 月 30 日 止 (若 內 容 有 調整 , 則 以 官網 粉絲 團 公 告 為\n主 )\n2026 年 中 、 彰 、 投 、 雲 捐血 固定 點 * 可 做 分 離 式 捐血\n固定 捐血 地 點 電話 地 點 時 間\n* 中 港 捐血 室 (04)2461-2345 臺中 市 西 屯 區 臺灣 大 道 四 段 1176 號 08:00~18:00\n* 三 民 捐血 室 (04)2227-0393 臺中 市 西區 三 民 路 一 段 174 號 7 樓 08:00~17:00\n六 讓 臺中 市 北 區 學 士 路 91 號 十 量 想\n中 正 公園 摔 血 室 (04)2236-4473 (中 國 醫藥 大 學 附設 醫院 復 健 大 樓 ) 正 對 面 09:00~17:00\n臺中 市 梧 棲 區 中 華 路 一 段 1001 之 1 號 09:30~17:30\n說 Pi (全 家 便利 商 店 隔壁 ) (每 週日 、 一 、 二 休 )\n半 說 臺中 市 北 區 精 武路 291 之 3 號 對 面 10:00~18:00\n臺中 公園 捐血 車 (04)2223-1085 (中 興 堂 對 面 停車 場 內) (每 崗 二 休 )\n點 新 光 三 越 百 貨 台 中 中 港 店 後 方 - 惠 安 停車 電 還 晤\n新 光 三 越 捐血 車 (04)2251-5683 ( 惠 來 路 二 段 市 政 北 七 路 口 ) 10:30~18:30\n臺中 市 北 屯 區 昌平 路 與 松竹 路 品 10.00~18.00\n仁和 捐血 車 (04)2369-6183 ( 選 竹 福 德 廟 ) (每 週 四 、 五 、 六 作\n* 大 里 捐 血 室 (04)2483-0365 臺中 市 大 里 區 國 光路 二 段 239 號 1 樓 09:30~18:00\n臺中 市 豐原 區 北陽 路 2 號 全\n豐原 捐血 室 (04)2522-0636 (葫蘆 元 文 化 中 心 旁 ) 09:00~17:30\n* 彰化 損 血 站 (04)711-0313 彰化 市 中 山路 一 段 348 號 08:00~17:00\n品 彰化 縣 員 林 市 民權 街 55 號 09:00~17:00\n虫 林 劑 介 還 誠 ( 員 林 火車 站 一 樓 大 廳 ) (每 週 三 、 四 休 )\n08:00~16:00\n埔里 捐血 站 (049)298-1019 南投 縣 埔里 鎮 北 環 路 222 號 平日 每 週 2 天 (星期 一 、 星 期 五 作業 )\n假日 每 月 2 天 (第 2、4 週 星期 日 作業 )\n* 南投 捐血 室 (049)222-2100 南投 市 中 興 路 616 號 1 樓 人\n則 * 雲 林 捐血 站 (05)532-0866 雲 林 縣 斗 六 市 漢口 路 187 號 08:00~17:00\nGE\n)P\n",
-            "confidence": 84
-          }
         ]
       },
       "tags": [
         "超商"
       ],
       "subTags": [
-        "超商－7-11"
+        "超商－7-11",
+        "禮券－百貨",
+        "超商－全家",
+        "生活用品－衛生紙",
+        "生活用品－購物袋"
       ],
       "coordinates": {
         "lat": 24.6354911,
@@ -17893,13 +18062,6 @@
         "rawLine": "5/24(日)新北中和民享街",
         "images": [
           "https://i.imgur.com/xPHJJjO.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/xPHJJjO.jpeg",
-            "text": "戰 說 24 日 (星期 日 ) >\n1 二 和 寢 -\nAt 9 捐血 活動 。@\n人 吹 一 三 一 一 一\n/7NL3 器 售 扎 全 人\n全\n他人 次 和 EE 品\naa 朋 IPo 人 生 yo 生 二\n呈 用 Q 還 一 和 計生 中 三 人 語 生\n廬 w G@ 時 :09:00-16:30 人 4 條\n計 汪 讓 | , 侈 地 點 : 新 北市 中 和 區 民 部 街 37 號 嶼 人 加\n1 和 N ( 民 亭 市 場 旁 ) ii 价\n捐血 送 好 禮 0\n訓 捐 250cc 贈送 : | 捐 500cc 加 贈 :\n還 要 | 伍 \" 會 ‧ 作\n衛生 紙 一 串 雞蛋 1 盒 。 POLO 衫 [砧板\n只 捐血 再 加 贈 : (當 完 止 )\nai 窟\n電 儿 字 選 罰\n下\n陳 錦 錠 議員 贈送 ) ( 告 東 社區 贈送 )\n條\n侈 有 品 生 圖\n中 沙 其 馬 + 花生 早餐 兌換 券 50 元 鳳梨 醬\n圖 \\ (風華 佳人 旗 移 會 會 長 鄭 銀 ) ( 民 浴 早餐 店 贈送 ) (新 店 下 城 社區 贈送 ) |\n2 錦 助 義 剪 : 雅 肌 技 藝 中 心 陳 淑 英 老師\n",
-            "confidence": 52
-          }
         ]
       },
       "tags": [
@@ -17908,7 +18070,8 @@
       ],
       "subTags": [
         "食品－蛋",
-        "餐飲－早餐"
+        "餐飲－早餐",
+        "生活用品－衛生紙"
       ],
       "coordinates": {
         "lat": 25.00354,
@@ -18166,14 +18329,17 @@
           }
         ]
       },
-      "tags": [],
+      "tags": [
+        "超商"
+      ],
+      "subTags": [
+        "超商－全聯",
+        "禮券－百貨"
+      ],
       "coordinates": {
         "lat": 24.1641111,
         "lng": 120.6421111
-      },
-      "subTags": [
-        "禮券－百貨"
-      ]
+      }
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMjQtMDg6MDB+MTY6MDAt5ZCI5q2h5ZyL6Zqb5ZCM5r+f5pyD",
@@ -18538,13 +18704,6 @@
         "rawLine": "5/24(日)台北內湖七海酒樓",
         "images": [
           "https://i.imgur.com/PmhNe4K.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/PmhNe4K.jpeg",
-            "text": "人 區 和\n上 , 二 和 是 時 各 六\nNa 1 才\n2 別 Z 內 湖區 後 備 軍人 輔導 申 心 yys\n加 AU\n二 四 生 活 動 一\n依 國 加\n入 店 和 汪 語 和 同\n3 和\n了 燃 甸 。 容 你 我 仇 始\n了\n」 中 三 1 fm\n全 治 人\n人 仿 、3 捐血 上 著\n| 和\n人\n救 人 -G》\n時 間 : 115 年 5 月 24 日 (星期 日 ) 9:30 至 16:30\n| 地 點 : 內 湖區 成 功 路 四 段 166 號 (七海 涌 樓 ) 前\n(超 運 內 湖 站 1 號 出 口 , 步 行 約 1 分 鐘 )\n、ˋ~~ 一 一 放 Si\n1 年 滿 十 六 葳 以上, 七 十 葳 以 下 , 一 般 健 康 情 況 良好 ig 放 站 各\n2. 體重 : 男性 、 食 性 四 十 五 公斤 以 上 。\n5 血壓 須 是 常 。\n虹 4. 1 年 內 未 曾 有 危險 性 行 為 孝\n鋪 ( 鼻 陌 生 人 發 生 性 行 為 、 性 交易 、 一 夜 情 、 想 過 1 位 以 上 性 伴侶 等 ) 。\n計 5 非 B 型 肝 災 、C 型 肝炎 、 愛 滋 瘓 雪 。\n「 6 扣 血 前 8 小 時 請 勿 飲 滲 。\n天 7 前 一 天 睡 虫 需 是 六 小 時 。\n8. 最 近 一 週 內 未 披 牙 或 牙科 治療 。\n多 最 近 一 週 從 來 服 髓 任何 菈 物 ( 仿 阿 斯 匹 室 ) , 最 近 兩 週 肉 未 打 針 。\n10. 身體 了 適 (如 感 冊 等 ) 、 生 理 期 、 懷 孚 中 難產 後 六 個 月 內 才 捕 勿 指 血 。\n11. 需 爾 早餐 並 勿 空腹 六 小 時 以 上 ; 捐血 前 請 勿 食用 油膩 食物 。\nB 12. 上 次 捐血 250cc 已 間隔 兩 個 月 、500cc 已 間隔 三 個 月 。\n冰 請 攜帶 身分 詮 或 健 係 卡 收 駕 肢 坷 還 前 衝 捐 血 !\n檔 捐 血 成 功 加 送 精 半 小 禮物 ! (現場 品 項 擇 一 \" 送 完 為 止 )\n偽 容 租 、 係 劑 扳 、 疲 閏 碗 馨 、 手 動 研 大 彌 竺 人 @\n還 冬 辦 單 佳 : 壹 此 市 後 備 指揮 部內 關 區 後 備 軍人 輔導 中 選 ee\n臺北 市 青 漠 德 全 謂語\n昌 協辦 單 住 : 韶 北 市 新 青 放 婦 女 協會 內 湖 分 會 二\n電 北 市 內 測 青 講 協 會 轉\n還 人 央 全 |\n( 直上\n",
-            "confidence": 57
-          }
         ]
       },
       "isPttOnly": true
@@ -18613,7 +18772,12 @@
       "activityDate": "2026-05-24",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
+      "tags": [
+        "超商"
+      ],
+      "subTags": [
+        "超商－全聯"
+      ],
       "pttData": {
         "rawLine": "5/24(六)桃園青埔獅子會捐血亭",
         "images": [
@@ -18970,12 +19134,25 @@
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
       "tags": [
-        "禮券"
+        "禮券",
+        "超商",
+        "生活用品"
+      ],
+      "subTags": [
+        "超商－全聯",
+        "生活用品－衛生紙"
       ],
       "pttData": {
         "rawLine": "5/25(一)彰化保四總隊精誠樓/彰化縣警察局",
         "images": [
           "https://i.imgur.com/CUxLKOf.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/CUxLKOf.jpeg",
+            "text": "F 廢人 人\n義人\n2 電 計 和 / 族 。 es\n*‧ 和 7 覓 肝 可 人\n仿 43 F- 「 廊\n也 手 革\n急\n| ee) 一 命 人\n5 5 /2 : WE 人 聞\n戰 5/25e ) 二 放 史\ndoie00 上\n你 安 警察 第 四 總 隊 精 誠 樓 馮 捐血 就 送 超 值 好 禮 ! 上 凡 上 前\n彰化 市 南郭 路 一 段 505 號 (2 輛 捐血 車 ) 圖 捐血 全 聯 200 元 禮券 1\n彰化 縣 警察 局 250cc + 高 級 衛生 紙 一 大 袋\n彰化 市 中 正路 二 段 778 號 (3 輛 捐血 車 ) 。 捐血 | 全 聯 4( 00 元 禮券\n茲 EE 王府 @ 500cc | + 高 級 衛生 紙 兩 大 袋\n現場 摸 彩 超 狂 好 禮 ! al 說 9 中\n捐血 成 功 即 可 參加 仿 > 讓 時 :\n公 、 人 捐血 小 提醒 庫 謹 放\n【 。 | 蘭 @ 年 滿 17-65 歲 , 身 體 健康\n奇美 55 吋 電視 電 風 扁 泡 茶 組 高 級 快 鹿 壺 | | ? 請 攜帶 有 照片 之 身分 證件 :\ni @ 前 一 怕 睡 民 充 足 、 當 天 勿 空腹\n仙人 701 由\n+ 一 | | 太 熱血\n折疊 腳踏車 雅 石 十 顆 200 元 禮券 /\n_ 人 @” 還 有 更 多 好 禮 等 你 來 拿 ! 上 讓 世界 更 美 好\n。 若 經 了 、 電 和 局 0 是\n打\n",
+            "confidence": 60
+          }
         ]
       },
       "isPttOnly": true,
@@ -19390,7 +19567,12 @@
       "activityDate": "2026-05-26",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
+      "tags": [
+        "生活用品"
+      ],
+      "subTags": [
+        "生活用品－衛生紙"
+      ],
       "pttData": {
         "rawLine": "5/26(二)新北中和東森廣場",
         "images": [
@@ -19953,7 +20135,12 @@
           }
         ]
       },
-      "tags": [],
+      "tags": [
+        "食品"
+      ],
+      "subTags": [
+        "食品－麵包"
+      ],
       "coordinates": {
         "lat": 22.6137843,
         "lng": 120.3895131
@@ -20031,12 +20218,24 @@
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
       "tags": [
-        "禮券"
+        "禮券",
+        "超商"
+      ],
+      "subTags": [
+        "超商－全聯",
+        "禮券－全聯"
       ],
       "pttData": {
         "rawLine": "5/27(三)、6/27(六)彰化和美龍華慈惠堂",
         "images": [
           "https://i.imgur.com/HZNgyZ7.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/HZNgyZ7.jpeg",
+            "text": "斷 太 眶 選 二 答 合 到 萄\n說 目 丰 元 廊 3 回 小村 、 仙 回信\n說 時 獻 愛 , 匣 情 湯 吾\n世 泉 葛 章 合 “ 時 間 :09:30-16:00 ee\n六 龐 地 點 : 和 美 鎮 龍 華 慈 惠 堂 廣場 記 還 7\n@ (彰化 縣 和 美 鎖 西 美 路 115 號 ) 要\n\n捐血 請 攜帶 “04/27 05/27 06/27\n旨 星期 一 、 星 期 三 。 星期 六\n\n鹿 港 天 后 獅 子 會 、 寶 伸 實業 公司 、 瑞 膀 鈦 實業 社 、 鋒 明 興 業 ( 股 ) 公 司\n\n力 銓 興業 ( 股 ) 公 司 、 銘 帝 企業 社 、 啟 聖 ( 股 ) 公 司 、 三 商 美 邦人 壽\n\n日 正 國 際 公 司 、 至 膀 企 業 社 、 顧 問 施 欽 座 、 和 美 國 奈 人 天\n\n大 同 國 際 傑 人 會 、 永 豐美 實業 公司\n撤 完成 贈送 : 全 聯 禮券 2 張 + 環保 洗 潔 精 1 和 1 坊 華 慈\n惠 堂 福 麵 1 袋 等 精美 禮品 (900ec 雙 份 ), 捐血 而 集 潑\n滿 10 次 贈送 電 風 扇 1 支 (請 向 天 作 大 上 員 案 取 集 其 劑 虹\n",
+            "confidence": 65
+          }
         ]
       },
       "isPttOnly": true,
@@ -20979,6 +21178,13 @@
         "rawLine": "5/29(五)台南新化分局",
         "images": [
           "https://i.imgur.com/ceWEUIZ.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/ceWEUIZ.jpeg",
+            "text": "115 年 新 化 分 局 捐血 活動\n尼 自 啟 一 9 吧\n性 以 【 寢 凡 說 公 、 suy\n5/29 (五 )\n還 記 記 本 Mi 玉 9:00-16:30\n下 點 請 Q 新 化 分 局 前\nEPUB91 全\n8 記 由 MS 人\n3 說 mg\n| mm 王 AN 生\n螞 革 2 尖\nJu\nms 【 王 ig 人 NN\n【 人 全 回\n說: 歸 佃 回 回 選 41 所\n蜜 紅豆 超 商 禮券 怪 油 禮盒 沐浴 乳 包子 等 多 項 好 禮\n仿 捐 血 500Occ 雙 信 送 ! gt,\n主 辦 單位 : 雪 南 光 反 說 本 家 同 林 條 分 選 ,\n贊助 單位 : 中 大 全 品 煩 、 百 盈 企 業 、 成 功 醬油 、 超 捷 物 流 、 峰 智 生 化 、\n",
+            "confidence": 45
+          }
         ]
       },
       "tags": [
@@ -21049,7 +21255,13 @@
       "activityDate": "2026-05-29",
       "center": "PTT",
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
+      "tags": [
+        "餐飲",
+        "生活用品"
+      ],
+      "subTags": [
+        "生活用品－衛生紙"
+      ],
       "pttData": {
         "rawLine": "5/29(五)新北徐匯廣場",
         "images": [
@@ -21437,10 +21649,23 @@
         "rawLine": "5/30(六)竹北愛心樓",
         "images": [
           "https://i.imgur.com/HZU1G7a.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/HZU1G7a.jpeg",
+            "text": "一 ‧ 色 熱血 有 愛 - 殉 捐血 救 人 多\n人 汪 几何 戰 人 巷 加 還 還 公國\n條 SA 可 人 念 sm 一\nMs 人 讓 本 二 生 了 險 全 二:\n2 人 和 二 時!! 影 4mm 旺 刁 』\n點 歸 See\n7) < 人 有 店 一 放 肌 才 7 有\n2 影 价 閏 9 您 的 熱血 . 是 他 (她 ) 的 希望 % 3\n「 [還 活動 日 期 250CC 全 部 贈送\nta 115 年 說 轉 |\n「 下 拖 信 1 | 和 # 上 汪 還\n「 撕 一 | 入 曾 呈 2 1 1 |\n<》 月 ‧》\\/ 日 寢 店 sw ll 廢 」\n\\ˋ_ (星期 六 ) | EE 陪 鐘 此 (|\n點 活動 時 間 」 ! 手機 架 高 級 棉 巾 大 高 倫 茶 調理 油\nMAN / 高 衣 還 七 到\n二 09:00-16:00 區 史\n0 置 活 動 地 點 」 宣\n表 口罩 廚房 紙巾 ” 牙 線 米粉\n。 竹 北 愛 心 樓 說 還 ii |\n物 季 國 效 則 1 人! 圖 人\nui 捐 500cc 史上\n天 參加 贈 1 串 衛生 紙 , 購物 袋 “ 濕 紙巾 春風 衛生 紙\n同 》 人 0 人 點 所 有 品 法 完 條\n新 竹 縣 政 府 社會 瞄 勞工 卓\n是 點 新 竹 縣 恩典 關懷 協會\n承辦 單位 | 新 竹 縣 青少年 成 長 關懷 協會\n新 竹 縣 竹 北 青年 志 工 協會\n新 竹市 淨 心服 務 協 會\n1. 新 竹 縣 觀光 休閒 業 職 業 工會 7. 竹 北 市 民代 表 彭 竣 志\n寺 , 朮 二 2. 新 竹 縣 人 力 供 應 業 職 業 工 會 8. 新 福 龍 企業 行 由\n協辦 單位 了 iriT 19. 字 生 二 未 包工 業 有 笑 公 司 用\n5. 春耕 婚宴 租 廳 11. 陳 宣 伶 : 全\n了 2 讓 e 公 Re\n捐血 有 愛 ” 社會 有 情 。 讓 受 延 續 。 讓 生 命 發 光 一 ~ 交際\n",
+            "confidence": 51
+          }
         ]
       },
       "tags": [
+        "生活用品",
         "食品"
+      ],
+      "subTags": [
+        "食品－米",
+        "生活用品－衛生紙",
+        "生活用品－購物袋"
       ],
       "coordinates": {
         "lat": 24.8336688,
@@ -21677,7 +21902,12 @@
           }
         ]
       },
-      "tags": []
+      "tags": [
+        "超商"
+      ],
+      "subTags": [
+        "超商－家樂福"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDUvMzAtMDg6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyD",
@@ -21935,7 +22165,14 @@
           }
         ]
       },
-      "tags": [],
+      "tags": [
+        "禮券",
+        "超商"
+      ],
+      "subTags": [
+        "超商－全聯",
+        "禮券－全聯"
+      ],
       "coordinates": {
         "lat": 23.001842,
         "lng": 120.2092165
@@ -22794,10 +23031,22 @@
         "rawLine": "5/31(日)台南轉運站對面",
         "images": [
           "https://i.imgur.com/SEtfprn.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/SEtfprn.jpeg",
+            "text": "祁 典 大 天 后宮\n捐血 公益 活動\n公益 )\n115 年 5 月 31 日 (星期日)\n上 午 9 點 至 下 午 5 點\n地 點 : 中 山 公園 捐血 站\n表 細\n和 點 此\n選 有 層 訓 人 2 /\n人 全\n還\ne\n悅 還 5\n生 吧 捐 鼠\n好 禮\n必 2\n全 聯 禮券 200 元 + 平安 壽 麵 2 包 +\n旺 館 沙 士 1 罐 十 虎 爺 馬克 杯 1 個 + 平安 水 1 瓶\n全 聯 禮券 400 元 + 平安 壽 麵 4 包 + 旺 全 沙 士 2 罐 十\n大 福袋 1 組 (衣服 尺寸 依 現 有 發 送 )+ 平 安 水 2 瓶\n主 辦 單 位 : 祀 典 大 天 后宮 管理 委員 會 。 協辦 單位 : 台 南 捐血 中 心\n贊助 單位 : 台 灣 製 罐 工業 股份 有 限 公司 . 古 寶 無 患 子 生 技 公司\n",
+            "confidence": 73
+          }
         ]
       },
       "tags": [
-        "禮券"
+        "禮券",
+        "超商"
+      ],
+      "subTags": [
+        "超商－全聯",
+        "禮券－全聯"
       ],
       "coordinates": {
         "lat": 23.001842,
