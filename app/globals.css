@@ -248,3 +248,12 @@ body {
 .animate-announce-dock {
   animation: announceDock 0.72s cubic-bezier(0.5, 0, 0.75, 0) forwards;
 }
+
+/* 老虎機滾動：20 個數字（0-9 重複兩次），-50% 剛好回到第二個 0，seamless loop */
+@keyframes slot-spin {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+.slot-spinning {
+  animation: slot-spin 0.55s linear infinite;
+}

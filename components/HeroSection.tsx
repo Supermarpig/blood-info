@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import {
   MapPin,
   Calendar,
@@ -94,40 +94,75 @@ function GiftPills() {
   );
 }
 
-function AnimatedNumber({ value }: { value: number }) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const hasRun = useRef(false);
+// 單一數字滾輪
+// CSS animation 在第一次 paint 就啟動（不需等 JS hydration）
+// settleDelay < 0 → 永遠滾；>= 0 → settleDelay ms 後讀出當前位置、接手成 transition 定格
+function SlotDigit({ target, settleDelay }: { target: number; settleDelay: number }) {
+  const DIGITS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const stripRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    if (hasRun.current || value === 0) {
-      setCount(value);
-      return;
-    }
-    const el = ref.current;
-    if (!el) return;
+    if (settleDelay < 0) return; // 永遠滾，不做任何事
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasRun.current) {
-          hasRun.current = true;
-          observer.disconnect();
-          let current = 0;
-          const increment = Math.max(1, Math.ceil(value / 25));
-          const timer = setInterval(() => {
-            current = Math.min(current + increment, value);
-            setCount(current);
-            if (current >= value) clearInterval(timer);
-          }, 40);
-        }
-      },
-      { threshold: 0.1 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [value]);
+    const timer = setTimeout(() => {
+      const el = stripRef.current;
+      if (!el) return;
 
-  return <span ref={ref}>{count}</span>;
+      // 讀出 CSS animation 目前的 translateY（px）
+      const matrix = new DOMMatrix(window.getComputedStyle(el).transform);
+      const currentPx = matrix.m42; // 負值 = 往上位移
+      const totalH = el.scrollHeight; // 整條 strip 高度
+      const currentPct = (currentPx / totalH) * 100;
+
+      // 停止 CSS animation，固定在目前位置
+      el.style.animation = "none";
+      el.style.transform = `translateY(${currentPct}%)`;
+
+      // 兩幀後開始 transition 到目標位置（讓瀏覽器確實套用上面的 transform）
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => {
+          const targetPct = ((target + 10) / 20) * 100;
+          el.style.transition = "transform 0.55s cubic-bezier(0.25, 1, 0.3, 1)";
+          el.style.transform = `translateY(-${targetPct}%)`;
+        })
+      );
+    }, settleDelay);
+
+    return () => clearTimeout(timer);
+  }, [target, settleDelay]);
+
+  return (
+    <span
+      className="inline-block overflow-hidden"
+      style={{ height: "1.1em", lineHeight: "1.1em", verticalAlign: "bottom" }}
+    >
+      <span
+        ref={stripRef}
+        className="slot-spinning"
+        style={{ display: "block", willChange: "transform" }}
+      >
+        {DIGITS.map((d, i) => (
+          <span key={i} style={{ display: "block", height: "1.1em", lineHeight: "1.1em", textAlign: "center" }}>
+            {d}
+          </span>
+        ))}
+      </span>
+    </span>
+  );
+}
+
+function AnimatedNumber({ value }: { value: number }) {
+  const digitArr = value > 0 ? String(value).split("").map(Number) : [0];
+  return (
+    <span className="inline-flex" aria-label={String(value)}>
+      {digitArr.map((d, i) => {
+        const fromRight = digitArr.length - 1 - i; // 個位=0，十位=1，百位=2
+        // 先滾 1 秒，再從個位開始每隔 250ms 依序定格
+        const settleDelay = value > 0 ? 1000 + fromRight * 250 : -1;
+        return <SlotDigit key={i} target={d} settleDelay={settleDelay} />;
+      })}
+    </span>
+  );
 }
 
 export default function HeroSection({

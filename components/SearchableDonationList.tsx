@@ -252,16 +252,14 @@ export default function SearchableDonationList({
   };
 
   // 計算統計數據（供 HeroSection 使用）
-  const todayCount = useMemo(() => {
-    return Object.values(todayEvents).reduce((acc, arr) => acc + arr.length, 0);
-  }, [todayEvents]);
-
-  const upcomingCount = useMemo(() => {
-    return Object.values(upcomingEvents).reduce(
-      (acc, arr) => acc + arr.length,
-      0
-    );
-  }, [upcomingEvents]);
+  const todayCount = useMemo(
+    () => Object.values(todayEvents).reduce((acc, arr) => acc + arr.length, 0),
+    [todayEvents]
+  );
+  const upcomingCount = useMemo(
+    () => Object.values(upcomingEvents).reduce((acc, arr) => acc + arr.length, 0),
+    [upcomingEvents]
+  );
 
   const filterLabel = useMemo(() => {
     const parts: string[] = [];
