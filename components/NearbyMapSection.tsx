@@ -42,7 +42,7 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
   const hasResults = nearbyLocations.length > 0;
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [openGiftIndex, setOpenGiftIndex] = useState<number | null>(null);
-  const BATCH = 1;
+  const BATCH = 5;
   const [displayCount, setDisplayCount] = useState(BATCH);
 
   // Reset to first batch whenever new results arrive
