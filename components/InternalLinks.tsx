@@ -43,7 +43,7 @@ export default function InternalLinks() {
           各縣市捐血活動
         </h2>
         <div className="grid grid-cols-3 gap-2">
-          {CITIES.map((c) => (
+          {CITIES.filter((c) => c.level !== "district").map((c) => (
             <Link
               key={c.slug}
               href={`/city/${c.slug}`}
@@ -51,6 +51,26 @@ export default function InternalLinks() {
             >
               <span className="text-xs font-medium text-gray-700">
                 {c.displayName}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* 熱門行政區 */}
+      <div>
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2.5">
+          熱門行政區捐血
+        </h2>
+        <div className="grid grid-cols-3 gap-2">
+          {CITIES.filter((c) => c.level === "district").map((c) => (
+            <Link
+              key={c.slug}
+              href={`/city/${c.slug}`}
+              className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
+            >
+              <span className="text-xs font-medium text-gray-700">
+                {c.displayName}捐血
               </span>
             </Link>
           ))}

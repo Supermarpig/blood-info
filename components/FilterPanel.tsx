@@ -200,7 +200,7 @@ export default function FilterPanel({
               <span className="text-xs text-gray-400">（查看各縣市專頁）</span>
             </div>
             <div className="flex flex-wrap gap-2">
-              {CITIES.map((city) => (
+              {CITIES.filter((city) => city.level !== "district").map((city) => (
                 <Link
                   key={city.slug}
                   href={`/city/${city.slug}`}
