@@ -20,6 +20,7 @@ interface DonationEvent {
   location: string;
   activityDate: string;
   tags?: string[];
+  subTags?: string[];
   pttData?: { tags?: string[] };
 }
 

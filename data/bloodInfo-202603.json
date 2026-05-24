@@ -12349,7 +12349,10 @@
       "coordinates": {
         "lat": 25.0354793,
         "lng": 121.5663914
-      }
+      },
+      "subTags": [
+        "電影票－威秀"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDMvMjItMDk6MzB+MTY6MzAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Z+66ZqG5a6J5qiC56ys5LiJ5YiG5pyD",
@@ -16612,6 +16615,9 @@
       },
       "tags": [
         "超商"
+      ],
+      "subTags": [
+        "超商－家樂福"
       ]
     },
     {

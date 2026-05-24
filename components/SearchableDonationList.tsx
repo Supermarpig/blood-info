@@ -32,6 +32,7 @@ interface DonationEvent {
   center?: string;
   detailUrl?: string;
   tags?: string[];
+  subTags?: string[];
   coordinates?: {
     lat: number;
     lng: number;

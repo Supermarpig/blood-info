@@ -26,6 +26,7 @@ interface DonationEvent {
   center?: string;
   detailUrl?: string;
   tags?: string[];
+  subTags?: string[];
   coordinates?: {
     lat: number;
     lng: number;
@@ -399,18 +400,56 @@ export default function CardInfo({
               </div>
             )}
 
-            {/* 贈品 Tags 連結 */}
-            {giftLinks.length > 0 && (
+            {/* 贈品 Tags 連結 + 細項 */}
+            {(giftLinks.length > 0 || (donation.subTags && donation.subTags.length > 0)) && (
               <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-gray-100">
-                {giftLinks.map((gift) => (
-                  <Link
-                    key={gift!.slug}
-                    href={`/gift/${gift!.slug}`}
-                    className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full hover:bg-pink-100 transition-colors"
-                  >
-                    {gift!.name}
-                  </Link>
-                ))}
+                {/* 有 subTags 時，用 subTags 連結到對應大類頁面；否則顯示大類 */}
+                {donation.subTags && donation.subTags.length > 0 ? (
+                  <>
+                    {donation.subTags.map((subTag) => {
+                      const parentTag = subTag.split('－')[0];
+                      const gift = getGiftByTagId(parentTag);
+                      return gift ? (
+                        <Link
+                          key={subTag}
+                          href={`/gift/${gift.slug}`}
+                          className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full hover:bg-pink-100 transition-colors"
+                        >
+                          {subTag}
+                        </Link>
+                      ) : (
+                        <span
+                          key={subTag}
+                          className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full"
+                        >
+                          {subTag}
+                        </span>
+                      );
+                    })}
+                    {/* 沒有 subTags 對應到的大類，仍顯示大類 badge */}
+                    {giftLinks
+                      .filter(g => !(donation.subTags || []).some(st => st.startsWith(g!.tagId + '－')))
+                      .map((gift) => (
+                        <Link
+                          key={gift!.slug}
+                          href={`/gift/${gift!.slug}`}
+                          className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full hover:bg-pink-100 transition-colors"
+                        >
+                          {gift!.name}
+                        </Link>
+                      ))}
+                  </>
+                ) : (
+                  giftLinks.map((gift) => (
+                    <Link
+                      key={gift!.slug}
+                      href={`/gift/${gift!.slug}`}
+                      className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full hover:bg-pink-100 transition-colors"
+                    >
+                      {gift!.name}
+                    </Link>
+                  ))
+                )}
               </div>
             )}
           </div>

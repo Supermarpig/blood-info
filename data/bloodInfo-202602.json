@@ -598,7 +598,10 @@
           "https://i.imgur.com/GVHegoB.jpeg"
         ]
       },
-      "isPttOnly": true
+      "isPttOnly": true,
+      "subTags": [
+        "餐飲－星巴克"
+      ]
     }
   ],
   "2026-02-02": [

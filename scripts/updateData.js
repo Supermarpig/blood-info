@@ -29,6 +29,48 @@ const GIFT_TAG_MAPPING = {
     '食品': ['米', '蛋', '泡麵', '餅乾', '零食', '麵包', '蛋糕'],
 };
 
+// 贈品細項關鍵字對應 sub-tag（格式：大分類－具體品項）
+const GIFT_SUBTAG_MAPPING = {
+    '食品－米': ['壽司米', '蓬萊米', '糙米', '白米', '米（', '米!', '米 '],
+    '食品－蛋': ['雞蛋', '皮蛋', '鹹蛋', '蛋（', '蛋!', '蛋 '],
+    '食品－泡麵': ['泡麵', '速食麵', '方便麵', '鮮葉麵'],
+    '食品－餅乾': ['餅乾'],
+    '食品－零食': ['零食', '洋芋片'],
+    '食品－麵包': ['麵包'],
+    '食品－蛋糕': ['蛋糕'],
+    '食品－烤雞': ['烤雞'],
+    '超商－7-11': ['7-11', '7-ELEVEN', '7ELEVEN', '711'],
+    '超商－全家': ['全家便利', 'FamilyMart'],
+    '超商－萊爾富': ['萊爾富'],
+    '超商－OK': ['OK超商'],
+    '超商－全聯': ['全聯'],
+    '超商－家樂福': ['家樂福'],
+    '超商－美廉社': ['美廉社'],
+    '電影票－威秀': ['威秀'],
+    '電影票－國賓': ['國賓'],
+    '電影票－秀泰': ['秀泰'],
+    '電影票－美麗華': ['美麗華'],
+    '電影票－in89': ['in89'],
+    '電影票－IMAX': ['IMAX'],
+    '電影票－喜滿客': ['喜滿客'],
+    '電影票－京站': ['京站'],
+    '餐飲－星巴克': ['星巴克'],
+    '餐飲－路易莎': ['路易莎'],
+    '餐飲－麥當勞': ['麥當勞'],
+    '餐飲－肯德基': ['肯德基'],
+    '餐飲－摩斯': ['摩斯漢堡', '摩斯'],
+    '餐飲－咖啡': ['咖啡'],
+    '餐飲－飲料': ['飲料', '茶飲'],
+    '餐飲－便當': ['便當'],
+    '餐飲－早餐': ['早餐'],
+    '生活用品－衛生紙': ['衛生紙', '面紙'],
+    '生活用品－毛巾': ['毛巾'],
+    '生活用品－購物袋': ['購物袋', '環保袋'],
+    '生活用品－餐具': ['餐具'],
+    '生活用品－保溫杯': ['保溫杯'],
+    '生活用品－雨傘': ['雨傘'],
+};
+
 const OCR_CONCURRENCY = 4;
 
 // 從文字中識別贈品 tags
@@ -46,6 +88,21 @@ function extractTagsFromText(text) {
     }
 
     return Array.from(tags);
+}
+
+// 從文字中識別具體贈品細項 sub-tags
+function extractSubTagsFromText(text) {
+    const subTags = new Set();
+    // 針對 OCR 文字，直接做 includes（不 toLowerCase，保留中文原樣）
+    for (const [subTag, keywords] of Object.entries(GIFT_SUBTAG_MAPPING)) {
+        for (const keyword of keywords) {
+            if (text.includes(keyword) || text.toLowerCase().includes(keyword.toLowerCase())) {
+                subTags.add(subTag);
+                break;
+            }
+        }
+    }
+    return Array.from(subTags);
 }
 
 // 檢查 buffer 是否為 Leptonica 支援的圖片格式 (JPEG, PNG, GIF, BMP, TIFF)
@@ -91,7 +148,7 @@ async function ocrImageUrl(worker, imageUrl) {
 }
 
 // 對 PTT 事件的文字和圖片進行分析，提取 tags 與 OCR 結果（接收指定的 worker）
-// 回傳 { tags, ocrTexts }
+// 回傳 { tags, subTags, ocrTexts }
 async function extractTagsFromEvent(worker, rawLine, images) {
     const allText = [rawLine];
     const ocrTexts = [];
@@ -105,8 +162,10 @@ async function extractTagsFromEvent(worker, rawLine, images) {
         }
     }
 
+    const combined = allText.join(' ');
     return {
-        tags: extractTagsFromText(allText.join(' ')),
+        tags: extractTagsFromText(combined),
+        subTags: extractSubTagsFromText(combined),
         ocrTexts,
     };
 }
@@ -128,9 +187,15 @@ async function loadPttTagsFromExistingData() {
 
             for (const date in data) {
                 for (const event of data[date]) {
-                    // 如果有 pttData 且有 tags，就快取起來
-                    if (event.pttData?.rawLine && event.pttData?.tags) {
-                        pttOcrCache.set(event.pttData.rawLine, event.pttData.tags);
+                    // 用頂層 tags 快取（pttData.tags 存檔前已被刪除）
+                    if (event.pttData?.rawLine && event.tags?.length) {
+                        // 若沒有 subTags 但有 ocrTexts，從 OCR 文字反推 subTags
+                        let subTags = event.subTags || [];
+                        if (!subTags.length && event.pttData?.ocrTexts?.length) {
+                            const ocrText = event.pttData.ocrTexts.map(o => o.text).join(' ');
+                            subTags = extractSubTagsFromText(ocrText + ' ' + event.pttData.rawLine);
+                        }
+                        pttOcrCache.set(event.pttData.rawLine, { tags: event.tags, subTags });
                     }
                 }
             }
@@ -565,9 +630,15 @@ async function fetchPttData() {
             const eventsNeedingOcr = eventsWithImages.filter(e => !pttOcrCache.has(e.rawLine));
             const eventsWithCachedTags = eventsWithImages.filter(e => pttOcrCache.has(e.rawLine));
 
-            // 套用快取的 tags
+            // 套用快取的 tags + subTags
             eventsWithCachedTags.forEach(event => {
-                event.tags = pttOcrCache.get(event.rawLine) || [];
+                const cached = pttOcrCache.get(event.rawLine);
+                if (cached && typeof cached === 'object' && !Array.isArray(cached)) {
+                    event.tags = cached.tags || [];
+                    event.subTags = cached.subTags || [];
+                } else {
+                    event.tags = Array.isArray(cached) ? cached : [];
+                }
             });
             console.log(`快取命中 ${eventsWithCachedTags.length} 個活動，需新 OCR ${eventsNeedingOcr.length} 個活動...`);
 
@@ -588,10 +659,14 @@ async function fetchPttData() {
                         console.log(`  [${idx + 1}/${eventsNeedingOcr.length}] OCR: ${event.locationStr || event.rawLine.substring(0, 30)}`);
                         const ocrResult = await extractTagsFromEvent(worker, event.rawLine, event.images);
                         event.tags = ocrResult.tags;
+                        event.subTags = ocrResult.subTags;
                         event.ocrTexts = ocrResult.ocrTexts;
-                        pttOcrCache.set(event.rawLine, event.tags);
+                        pttOcrCache.set(event.rawLine, { tags: event.tags, subTags: event.subTags });
                         if (event.tags.length > 0) {
                             console.log(`    → 識別到 tags: ${event.tags.join(', ')}`);
+                        }
+                        if (event.subTags.length > 0) {
+                            console.log(`    → 識別到 subTags: ${event.subTags.join(', ')}`);
                         }
                         if (event.ocrTexts.length > 0) {
                             const avgConf = Math.round(event.ocrTexts.reduce((s, o) => s + o.confidence, 0) / event.ocrTexts.length);
@@ -606,10 +681,11 @@ async function fetchPttData() {
 
             console.log('OCR 識別完成');
 
-            // 對沒有圖片的事件，也從 rawLine 提取 tags
+            // 對沒有圖片的事件，也從 rawLine 提取 tags + subTags
             const eventsWithoutTags = pttEvents.filter(e => !e.tags || e.tags.length === 0);
             eventsWithoutTags.forEach(event => {
                 event.tags = extractTagsFromText(event.rawLine);
+                event.subTags = extractSubTagsFromText(event.rawLine);
                 if (event.tags.length > 0) {
                     console.log(`  從 rawLine 識別到 tags: ${event.rawLine.substring(0, 30)}... → ${event.tags.join(', ')}`);
                 }
@@ -697,6 +773,9 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                     const existingTags = event.tags || [];
                     const pttTags = matchedPtt.tags || [];
                     event.tags = Array.from(new Set([...existingTags, ...pttTags]));
+                    if (matchedPtt.subTags?.length) {
+                        event.subTags = Array.from(new Set([...(event.subTags || []), ...matchedPtt.subTags]));
+                    }
                     matchCount++;
                 } else if (existingEventsForDate.length > 0) {
                     // 嘗試從舊資料保留 pttData / tags / location
@@ -719,6 +798,9 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                             if (pttOnlyMatch.tags?.length) {
                                 event.tags = Array.from(new Set([...(event.tags || []), ...pttOnlyMatch.tags]));
                             }
+                            if (pttOnlyMatch.subTags?.length) {
+                                event.subTags = Array.from(new Set([...(event.subTags || []), ...pttOnlyMatch.subTags]));
+                            }
                             preservedCount++;
                         }
                     }
@@ -726,6 +808,9 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                     if (storedEvent?.tags?.length && !event.tags?.length) {
                         const existingTags = event.tags || [];
                         event.tags = Array.from(new Set([...existingTags, ...storedEvent.tags]));
+                    }
+                    if (storedEvent?.subTags?.length && !event.subTags?.length) {
+                        event.subTags = Array.from(new Set([...(event.subTags || []), ...storedEvent.subTags]));
                     }
                     if (storedEvent?.location?.startsWith(event.location) && storedEvent.location !== event.location) {
                         event.location = storedEvent.location;
@@ -767,6 +852,7 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                         center: 'PTT',
                         detailUrl: pttUrl,
                         tags: pttEvent.tags || [],
+                        ...(pttEvent.subTags?.length ? { subTags: pttEvent.subTags } : {}),
                         pttData: {
                             rawLine: pttEvent.rawLine,
                             images: pttEvent.images,

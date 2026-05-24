@@ -3691,7 +3691,10 @@
       "coordinates": {
         "lat": 23.1324288,
         "lng": 120.2967849
-      }
+      },
+      "subTags": [
+        "生活用品－雨傘"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMDgtMDk6MDB+MTc6MDAt5aGp5Z+V54OP5qmL6ZaL5Z+6546J6IGW5a6u",
@@ -4727,7 +4730,10 @@
       "coordinates": {
         "lat": 23.9683836,
         "lng": 121.5924099
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMTEtMDk6MzB+MTY6MzAt5qie55+z5ZCM5r+f5pyDKOWMl+W4guWNgCk=",
@@ -4913,7 +4919,10 @@
       "coordinates": {
         "lat": 25.0014294,
         "lng": 121.5127029
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMTEtMTA6MDB+MTg6MDAt5Lit6I+v542F5a2Q5pyDQSAz",
@@ -5078,7 +5087,10 @@
       "coordinates": {
         "lat": 24.904126,
         "lng": 121.043101
-      }
+      },
+      "subTags": [
+        "超商－7-11"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMTEtMDk6MDB+MTY6MzAt5Y+w54Gj55+956eR5a6P5pmf56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -5490,7 +5502,10 @@
       "coordinates": {
         "lat": 23.313,
         "lng": 120.315
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTEtMDk6MzB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTXljYAu",
@@ -5558,7 +5573,10 @@
       "coordinates": {
         "lat": 23.4301523,
         "lng": 120.4042489
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTEtMDg6MDB+MTc6MDAt6Im+5aSa576O6IKh5Lu95pyJ6ZmQ5YWs5Y+45Y+w5Y2X5bqc5Z+O5pWZ6IKy5Lit5b+D",
@@ -5629,7 +5647,10 @@
       "coordinates": {
         "lat": 22.796,
         "lng": 120.297
-      }
+      },
+      "subTags": [
+        "餐飲－咖啡"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTEtMDk6MDB+MTc6MDAt56S+5ZyY5rOV5Lq65Lit6I+v5rC45oiQ5ama5ae75aqS5ZCI6LyU5bCO5Y2U5pyD",
@@ -6869,7 +6890,10 @@
       "coordinates": {
         "lat": 22.9687059,
         "lng": 120.2268128
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTMtMDg6MDB+MTc6MDAt5oSb5ZyL6LaF5biC",
@@ -7290,7 +7314,10 @@
       "coordinates": {
         "lat": 22.8947952,
         "lng": 120.5419493
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMTQtMDg6MDB+MTc6MDAt5oSb5ZyL6LaF5biC",
@@ -7400,7 +7427,10 @@
       "coordinates": {
         "lat": 24.5940009,
         "lng": 121.8521289
-      }
+      },
+      "subTags": [
+        "餐飲－咖啡"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMTUtMTA6MDB+MTg6MDAt5Y+w5YyX5biC5piO5pif542F5a2Q5pyDQTI=",
@@ -7468,7 +7498,11 @@
       "coordinates": {
         "lat": 23.330972,
         "lng": 121.3158415
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "超商－7-11"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMTUtMTM6MDB+MjE6MDAt5Y+w5YyX5biC5piO5pif542F5a2Q5pyDQTI=",
@@ -7940,7 +7974,10 @@
       "coordinates": {
         "lat": 25.0508548,
         "lng": 121.5442985
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMTYtMDk6MDB+MTY6MDAt5a6c6byO5ZyL6Zqb6IKh5Lu95pyJ6ZmQ5YWs5Y+4KOWunOiYrSk=",
@@ -8152,7 +8189,11 @@
       "coordinates": {
         "lat": 23.8967455,
         "lng": 120.585869
-      }
+      },
+      "subTags": [
+        "食品－蛋",
+        "餐飲－咖啡"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMTYtMDg6MDB+MTc6MDAt5p+v6YeR5p2+",
@@ -8606,7 +8647,11 @@
       "coordinates": {
         "lat": 25.0454311,
         "lng": 121.4597332
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "食品－餅乾"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMTctMTA6MDB+MTc6MDAt5pe65pe65Y+L6IGv55Si54mp5L+d6Zqq6IKh5Lu95pyJ6ZmQ5YWs5Y+4KOWPsOWMlyk=",
@@ -8818,7 +8863,10 @@
       "coordinates": {
         "lat": 24.1629,
         "lng": 120.6376
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMTctMTA6MDB+MTc6MDAt6Ieq6L6mLeiQrOWSjOWurg==",
@@ -9086,7 +9134,10 @@
       "coordinates": {
         "lat": 25.0845198,
         "lng": 121.4815601
-      }
+      },
+      "subTags": [
+        "餐飲－咖啡"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMTctNC8xNyjkupQp5qGD5ZySL+WNl+mWgOaNkOihgOWupA==",
@@ -9174,7 +9225,11 @@
       "coordinates": {
         "lat": 24.6719166,
         "lng": 120.8508543
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "生活用品－雨傘"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMTctNC8xNyjkupQp5Y+w5Y2X5p2x5ba95buf",
@@ -9204,7 +9259,11 @@
       "coordinates": {
         "lat": 22.9905068,
         "lng": 120.2093431
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "食品－蛋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMTctNC8xNy00LzE4KOS6lC3lha0p5r6O5rmW6aas5YWs5o2Q6KGA56uZ",
@@ -9246,7 +9305,10 @@
       "coordinates": {
         "lat": 23.5636435,
         "lng": 119.5639854
-      }
+      },
+      "subTags": [
+        "超商－7-11"
+      ]
     }
   ],
   "2026-04-18": [
@@ -9366,7 +9428,10 @@
       "coordinates": {
         "lat": 24.9831458,
         "lng": 121.4585622
-      }
+      },
+      "subTags": [
+        "超商－家樂福"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMTgtMDk6MDB+MTc6MDAt5om/5ZKM5ZCM5r+f5pyDKOWMl+S6jOWNgCk=",
@@ -9896,7 +9961,10 @@
       "coordinates": {
         "lat": 24.0944302,
         "lng": 120.5425197
-      }
+      },
+      "subTags": [
+        "超商－家樂福"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMTgtMDk6MDB+MTc6MDAt6LKh5ZyY5rOV5Lq65YWD5q+N5rSe56S+5pyD56aP5Yip5oWI5ZaE5Z+66YeR5pyDKOWNl+aKleWNgCk=",
@@ -11044,7 +11112,11 @@
       "coordinates": {
         "lat": 24.2291463,
         "lng": 120.6478436
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "食品－蛋"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMTktMTA6MzB+MTg6MzAt6Ie65Lit5biC6Z2S6ICA6Z2S5bm05ZyL6Zqb5ZCM5r+f5pyD",
@@ -11126,7 +11198,10 @@
       "coordinates": {
         "lat": 24.1104908,
         "lng": 120.5160506
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMTktMDg6MDB+MTc6MDAt5o2356uL5ZyL6Zqb5ZCM5r+f5pyDKOWPsOS4reW4gik=",
@@ -11487,7 +11562,11 @@
       "coordinates": {
         "lat": 24.2102324,
         "lng": 120.7076483
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "食品－蛋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMTktNC8xOSjml6Up6auY6ZuE5bCP5riv5Lit5bGx5ZyL5Lit",
@@ -11576,7 +11655,10 @@
       "coordinates": {
         "lat": 22.99874,
         "lng": 120.23264
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMTktNC8xOSjml6Up5a6c6Jit5Lit5qOu5Yqg5rK556uZ6amX6LuK5bug",
@@ -12987,7 +13069,10 @@
       "coordinates": {
         "lat": 25.0430331,
         "lng": 121.516357
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjItNC8yMijkuIkp5paw5YyX5qi55p6X5r+f5a6J5a6u",
@@ -13267,7 +13352,10 @@
       "coordinates": {
         "lat": 25.0508548,
         "lng": 121.5442985
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMjMtMDk6MzB+MTY6MzAt5Yyv5YOR5a6k5YWn6KOd5L+u6Kit6KiI6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -13726,7 +13814,10 @@
       "coordinates": {
         "lat": 22.6366521,
         "lng": 120.31417
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjMtMDk6MDB+MTc6MDAt5aWH576O6Yar55mC6LKh5ZyY5rOV5Lq65rC45bq35aWH576O6Yar6Zmi",
@@ -13755,7 +13846,10 @@
       "coordinates": {
         "lat": 23.020866,
         "lng": 120.2220927
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjMtNC8yMyjlm5sp5Y+w5YyX5o236YGL5bCP5beo6JuL56uZM+iZn+WHuuWPow==",
@@ -13785,7 +13879,10 @@
       "coordinates": {
         "lat": 25.05152,
         "lng": 121.55243
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjMtNC8yMyjlm5sp5Y+w5YyX5bu65ZyL5YyX6Lev5LqM5q61",
@@ -13816,7 +13913,11 @@
       "coordinates": {
         "lat": 25.0591272,
         "lng": 121.5367103
-      }
+      },
+      "subTags": [
+        "超商－7-11",
+        "餐飲－咖啡"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjMtNC8yMyjlm5sp5paw5YyX6JiG5rSy5b+g576p5buf",
@@ -14209,7 +14310,10 @@
       "coordinates": {
         "lat": 25.053471,
         "lng": 121.288392
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMjQtMDk6MDB+MTY6MDAt6IGv5paw5ZyL6Zqb6Yar6Zmi",
@@ -14566,7 +14670,10 @@
       "coordinates": {
         "lat": 23.6043033,
         "lng": 120.4000814
-      }
+      },
+      "subTags": [
+        "餐飲－早餐"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjQtMTA6MDB+MTg6MDAt5YWo5a625L6/5Yip5ZWG5bqX5rC45piO6ZaA5biC",
@@ -14752,7 +14859,10 @@
       "coordinates": {
         "lat": 24.1586363,
         "lng": 120.7161428
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjQtNC8yNCjkupQp6Iqx6JOu55Ge56mX6YSJ5YWs5omA5bGV5ryU5aC05YmN",
@@ -14783,7 +14893,11 @@
       "coordinates": {
         "lat": 23.4964553,
         "lng": 121.3757788
-      }
+      },
+      "subTags": [
+        "食品－蛋",
+        "餐飲－飲料"
+      ]
     }
   ],
   "2026-04-25": [
@@ -14961,7 +15075,11 @@
       "coordinates": {
         "lat": 25.0649031,
         "lng": 121.3609962
-      }
+      },
+      "subTags": [
+        "食品－蛋",
+        "餐飲－飲料"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMjUtMTA6MDB+MTc6MDAt5paw5YyX5biC5aGR6Iag6KO95ZOB5ZWG5qWt5ZCM5qWt5YWs5pyD",
@@ -15138,7 +15256,10 @@
       "coordinates": {
         "lat": 24.993,
         "lng": 121.291
-      }
+      },
+      "subTags": [
+        "超商－7-11"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMjUtMDk6MDB+MTY6MDAt5qGD5ZyS5biC55yf5ZaE576O542F5a2Q5pyD",
@@ -15180,7 +15301,10 @@
       "coordinates": {
         "lat": 24.9854709,
         "lng": 121.2860142
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMjUtMDg6MDB+MTc6MDAt5paw56u55Y2A5b2w5YyW5ZCM6YSJ5pyD",
@@ -15466,7 +15590,10 @@
       "coordinates": {
         "lat": 24.1331355,
         "lng": 120.7155487
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjUtMDk6MzB+MTY6MDAt5b2w5YyW57ij56aP6IiI5p2x5Y2A5om26Lyq56S+",
@@ -15508,7 +15635,10 @@
       "coordinates": {
         "lat": 24.0572566,
         "lng": 120.4350548
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjUtMDk6MDB+MTc6MDAt5a+M5YGJ542F5a2Q5pyDKOWNl+aKlSk=",
@@ -15576,7 +15706,10 @@
       "coordinates": {
         "lat": 22.627,
         "lng": 120.358
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjUtMDg6MDB+MTc6MDAt5bGP5p2x57ij5bel6Z2S6ZqK",
@@ -15631,7 +15764,10 @@
       "coordinates": {
         "lat": 22.796,
         "lng": 120.297
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjUtMDk6MDB+MTc6MDAt5b+g5q2j6IiI5qWt5pyJ6ZmQ5YWs5Y+4",
@@ -15673,7 +15809,10 @@
       "coordinates": {
         "lat": 22.633497,
         "lng": 120.355174
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjUtMDg6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Y2X5Y2A5Y2U5pyD5Y+w5Y2X56ys5YWt552j5bCO5Y2A",
@@ -15797,7 +15936,10 @@
       "coordinates": {
         "lat": 22.605,
         "lng": 120.362
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjUtMDk6MDB+MTc6MDAt5aWH55uK5LyB5qWt5pyJ6ZmQ5YWs5Y+4",
@@ -16079,7 +16221,10 @@
       "coordinates": {
         "lat": 22.9903446,
         "lng": 120.198123
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjUtNC8yNSjlha0p5Y+w5Y2X5paw54ef5o2Q6KGA5a6k",
@@ -16137,7 +16282,10 @@
       "coordinates": {
         "lat": 22.6337138,
         "lng": 120.355493
-      }
+      },
+      "subTags": [
+        "超商－全聯"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjUtNC8yNSjlha0p6auY6ZuE5bCP5riv5Lit5bGx5ZyL5Lit",
@@ -16196,7 +16344,10 @@
       "coordinates": {
         "lat": 22.6161783,
         "lng": 120.4721273
-      }
+      },
+      "subTags": [
+        "超商－家樂福"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjUtNC8yNSjlha0p5bGP5p2x5o2Q6KGA56uZ",
@@ -16284,7 +16435,10 @@
       "coordinates": {
         "lat": 24.754,
         "lng": 121.756
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjUtNC8yNSjlha0p6Iqx6JOu6YGg55m+5ZKM5bmz5buj5aC0",
@@ -16326,7 +16480,10 @@
       "coordinates": {
         "lat": 23.979631,
         "lng": 121.618742
-      }
+      },
+      "subTags": [
+        "超商－7-11"
+      ]
     }
   ],
   "2026-04-26": [
@@ -16649,7 +16806,10 @@
       "coordinates": {
         "lat": 25.055,
         "lng": 121.48833
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMjYtMDk6MDB+MTc6MDAt56S+5ZyY5rOV5Lq65Y+w54Gj5q2h5Zac5YWr5pa55YGl5bq35b+D6Z2I5Y2U5pyD",
@@ -17002,7 +17162,11 @@
       "coordinates": {
         "lat": 24.1797816,
         "lng": 120.6628887
-      }
+      },
+      "subTags": [
+        "食品－蛋糕",
+        "餐飲－星巴克"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMjYtMDk6MDB+MTY6MDAt6Ie65Lit5biC6LGQ5Y6f5ben6IGW5YWI5bir5oWI5ZaE5pyD",
@@ -17365,7 +17529,11 @@
       "coordinates": {
         "lat": 23.0179174,
         "lng": 120.208046
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "餐飲－咖啡"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjYtMDk6MDB+MTc6MzAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5aSn5a+u5LiA5YiG5pyD",
@@ -17394,7 +17562,10 @@
       "coordinates": {
         "lat": 22.6255336,
         "lng": 120.3636196
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "6auY6ZuELTIwMjYvMDQvMjYtMDk6MDB+MTc6MDAt6Yec5rGf5rW35LqL5bel56iL5pyJ6ZmQ5YWs5Y+4",
@@ -17463,7 +17634,10 @@
       "coordinates": {
         "lat": 22.5955737,
         "lng": 120.3314338
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjYtNC8yNijml6Up5Y+w5YyX5o236YGL5b+g5a2d5b6p6IiI56uZMuiZn+WHuuWPow==",
@@ -17493,7 +17667,10 @@
       "coordinates": {
         "lat": 25.0416216,
         "lng": 121.5437808
-      }
+      },
+      "subTags": [
+        "超商－7-11"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjYtNC8yNijml6Up5Y+w5YyX5aSn5a6J5qOu5p6X5YWs5ZyS5o2Q6KGA6LuK",
@@ -17554,7 +17731,11 @@
       "coordinates": {
         "lat": 25.068315,
         "lng": 121.661734
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "食品－蛋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjYtNC8yNijml6Up5paw5YyX5Zyf5Z+O5a625qiC56aP",
@@ -17585,7 +17766,10 @@
       "coordinates": {
         "lat": 24.983228,
         "lng": 121.4587088
-      }
+      },
+      "subTags": [
+        "超商－家樂福"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjYtNC8yNijml6Up5Y+w5Lit6LGQ5Y6f5ben6IGW5LuZ5bir5buf",
@@ -17615,7 +17799,11 @@
       "coordinates": {
         "lat": 24.2508962,
         "lng": 120.7427809
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "食品－蛋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjYtNC8yNijml6Up5Y+w5Lit5YWs5ZyS5o2Q6KGA6LuK",
@@ -17675,7 +17863,10 @@
       "coordinates": {
         "lat": 24.9103095,
         "lng": 121.1714903
-      }
+      },
+      "subTags": [
+        "餐飲－咖啡"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjYtNC8yNijml6Up6Zuy5p6X5o2Q6KGA56uZ",
@@ -17705,7 +17896,10 @@
       "coordinates": {
         "lat": 23.7131852,
         "lng": 120.5407583
-      }
+      },
+      "subTags": [
+        "食品－米"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjYtNC8yNijml6Up5ZiJ576p5rC05LiK5rC06aCt5rS75YuV5Lit5b+D5bCN6Z2i",
@@ -17735,7 +17929,11 @@
       "coordinates": {
         "lat": 23.4359058,
         "lng": 120.4231339
-      }
+      },
+      "subTags": [
+        "食品－米",
+        "食品－蛋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMjYtNC8yNijml6Up5bGP5p2x5o2Q6KGA56uZ",
@@ -19173,7 +19371,10 @@
       "coordinates": {
         "lat": 25.0508548,
         "lng": 121.5442985
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDQvMzAtMTA6MDB+MTc6MDAt6LyU5LuB5aSn5a24",
@@ -19241,7 +19442,10 @@
       "coordinates": {
         "lat": 24.962725,
         "lng": 121.2236022
-      }
+      },
+      "subTags": [
+        "超商－7-11"
+      ]
     },
     {
       "id": "5paw56u5LTIwMjYvMDQvMzAtMTE6MDB+MTg6MDAt5aSW6auu5buKIFfDgEkgSEFJUg==",
@@ -19381,7 +19585,10 @@
       "coordinates": {
         "lat": 23.9337335,
         "lng": 120.6977306
-      }
+      },
+      "subTags": [
+        "餐飲－咖啡"
+      ]
     },
     {
       "id": "5Y+w5LitLTIwMjYvMDQvMzAtMDk6MzB+MTg6MDAt6Ie65Lit57ij5YGl5rCR542F5a2Q5pyDKOadseWPsOS4reWNgCk=",
@@ -19566,7 +19773,10 @@
       "coordinates": {
         "lat": 23.2888197,
         "lng": 120.3247366
-      }
+      },
+      "subTags": [
+        "食品－蛋"
+      ]
     },
     {
       "id": "cHR0LTIwMjYtMDQtMzAtNC8zMCjlm5sp6auY6ZuE5qWg5qKT56eR5oqA55Si5qWt5ZyS5Y2A6I6K5pWs5aCC",
