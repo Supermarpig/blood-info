@@ -8,6 +8,7 @@ import path from "path";
 import { ChevronLeft, Clock, MapPin, Building2, ExternalLink, Gift, Heart, Droplets, Utensils, Moon, Ban, CreditCard } from "lucide-react";
 import { getGiftByTagId } from "@/lib/giftConfig";
 import { CITIES } from "@/lib/cityConfig";
+import { eventShortId } from "@/lib/eventId";
 import ShareButton from "./ShareButton";
 import { ActivityImages } from "./ActivityImages";
 
@@ -31,15 +32,6 @@ interface DonationEvent {
 interface PageProps {
   params: Promise<{ id: string }>;
 }
-
-const eventShortId = (id: string) => {
-  let hash = 5381;
-  for (let i = 0; i < id.length; i++) {
-    hash = ((hash << 5) + hash) + id.charCodeAt(i);
-    hash = hash >>> 0;
-  }
-  return hash.toString(36).padStart(6, "0");
-};
 
 async function getDayData(id: string): Promise<{ event: DonationEvent | null; dayEvents: DonationEvent[] }> {
   const match = id.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/);

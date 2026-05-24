@@ -213,6 +213,10 @@ export default async function RecentPage() {
             { name: "台南", slug: "tainan" },
             { name: "桃園", slug: "taoyuan" },
             { name: "新竹", slug: "hsinchu" },
+            { name: "苗栗", slug: "miaoli" },
+            { name: "南投", slug: "nantou" },
+            { name: "雲林", slug: "yunlin" },
+            { name: "台東", slug: "taitung" },
           ].map((city) => (
             <Link
               key={city.slug}

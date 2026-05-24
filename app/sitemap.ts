@@ -1,10 +1,61 @@
 import { MetadataRoute } from "next";
+import { promises as fs } from "fs";
+import path from "path";
 import { getAllRegionSlugs } from "@/lib/regionConfig";
 import { getAllGiftSlugs } from "@/lib/giftConfig";
 import { getAllCitySlugs } from "@/lib/cityConfig";
 import { getAllNews } from "@/lib/newsUtils";
+import { eventShortId } from "@/lib/eventId";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+interface DonationEvent {
+  id?: string;
+}
+
+// 收集「當月與未來」的活動詳情頁 URL。
+// 與 activity/[id] 的 generateStaticParams 採同一 cutoff（當月起）：
+// 這些頁面已預渲染、內容最新鮮，且每天有真實搜尋意圖（地點×贈品長尾）。
+// 過去月份的活動頁仍可被內部連結爬到並 on-demand 索引，但不灌入 sitemap 以免稀釋品質。
+async function getActivitySitemapEntries(
+  baseUrl: string
+): Promise<MetadataRoute.Sitemap> {
+  const dataDir = path.join(process.cwd(), "data");
+  const now = new Date();
+  const cutoff = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-01`;
+
+  let files: string[];
+  try {
+    files = (await fs.readdir(dataDir)).filter((f) =>
+      /^bloodInfo-\d{6}\.json$/.test(f)
+    );
+  } catch {
+    return [];
+  }
+
+  const entries: MetadataRoute.Sitemap = [];
+  for (const file of files) {
+    try {
+      const content = await fs.readFile(path.join(dataDir, file), "utf-8");
+      const data: Record<string, DonationEvent[]> = JSON.parse(content);
+      for (const [date, events] of Object.entries(data)) {
+        if (date < cutoff) continue;
+        for (const event of events) {
+          if (!event.id) continue;
+          entries.push({
+            url: `${baseUrl}/activity/${date}-${eventShortId(event.id)}`,
+            lastModified: new Date(),
+            changeFrequency: "daily",
+            priority: 0.6,
+          });
+        }
+      }
+    } catch {
+      // 略過無法解析的資料檔
+    }
+  }
+  return entries;
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   if (!baseUrl) {
     throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
@@ -42,6 +93,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "never",
     priority: 0.8,
   }));
+
+  const activityPages = await getActivitySitemapEntries(baseUrl);
 
   return [
     {
@@ -84,5 +137,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...cityPages,
     ...giftPages,
     ...newsPages,
+    ...activityPages,
   ];
 }
