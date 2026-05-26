@@ -614,13 +614,6 @@
         "rawLine": "6/3(三)雲林麥寮光大寮聚寶宮",
         "images": [
           "https://i.imgur.com/PHMSNA0.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/PHMSNA0.jpeg",
-            "text": "噶 [| |l/Uz\n人 @ 一 一 ,\n/Y 性 碟 旦 估 三\n(三 脯 回 星期 三\n最 後 報到 時 間 15:30\n2 [ 遇 血 須知 ]\n(一 ) 正 常 飲 食 不 可 空腹 擴 血 也 點\n(二 ) 前 一 天 不 可 效 夜 圖 酒 。 1 麥 寮 光大 寮 聚 實 守\n(三 ) 摔 血 前 要 喝 適 當 的 水 2 和\n(四 ) 穿 著 輕便 衣物\n(五) 攏 帶 個 人 身分 說 >\n則 品 臣 轉\n人 ee 250 蕊\n2 多 竹 好 悄 便 ˋ、@ 名 8 上\n圖 ( 份 。 全 2 AA 放\n由 ACC 人 人 5 入\n捐 250cc: 生 1 家 人\n- 全 【 9 今 點 > CAFE\n和 』」 全 六 ,2KG 白 米 、 環 保 袋 、 台 望 清潔 卅\n一 果 又 是 妮 - 美 式 咖啡 爺 換 券 、 還\n捐 500cc: 樂 麥 咖啡 - 占 餅 兌換 券 、 、 前\n、 坊” | 多 功能 訂房 箇 ˋ 香氣 沐 治 膠 、 牙 崗 疆 “全 喇\n由 人 肥 儿 交\n出 語 2\n還 育 出 代表 主 席 服務 國 隊 、 吳 宗 尋 代表 服務 國 際 、 台 全 企業 社\n",
-            "confidence": 49
-          }
         ]
       },
       "isPttOnly": true
@@ -732,19 +725,6 @@
       }
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDYvMDQtMDk6MzB+MTc6MDAt57Sr5b6u5q6/",
-      "time": "09:30~17:00",
-      "organization": "紫微殿",
-      "location": "高雄市阿蓮區峰山路199號(紫微殿)",
-      "activityDate": "2026-06-04",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q133408527146662501",
-      "coordinates": {
-        "lat": 22.8776098,
-        "lng": 120.3508181
-      }
-    },
-    {
       "id": "6auY6ZuELTIwMjYvMDYvMDQtMDk6MzB+MTc6MDAt6auY6ZuE6Yar5a245aSn5a24",
       "time": "09:30~17:00",
       "organization": "高雄醫學大學",
@@ -823,8 +803,8 @@
       }
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDYvMDQtMDk6MzB+MTc6MDAt5q245LuB6K2m5a+f5YiG5bGA",
-      "time": "09:30~17:00",
+      "id": "6auY6ZuELTIwMjYvMDYvMDQtMDk6MDB+MTY6MDAt5q245LuB6K2m5a+f5YiG5bGA",
+      "time": "09:00~16:00",
       "organization": "歸仁警察分局",
       "location": "臺南市歸仁區中山路二段2號(歸仁區公所)",
       "activityDate": "2026-06-04",
@@ -1060,6 +1040,13 @@
         "rawLine": "6/5(五)台南遠東香格里拉飯店",
         "images": [
           "https://i.imgur.com/QScjngY.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/QScjngY.jpeg",
+            "text": "南 芷 第 一 分 局\n下\n\n香 約 捐血 才 起 傳 愛\n時 間 : 6 月 5 日 (五 ) 10 時 47 時\n地 點 : 臺南 市 東區 大 學 路 西 段 89 號\n\n(遠東 香 烙 里 攔 飯 店 東側 門口 ) 【\n\n信 捐 250c.c.: 波 波 鴿 濕 紙 市 、 涮 吃 葉 消費 滿額\n\n50 元 折價 券 、 十 拉 樓 消費 滿額 送 比 薩 爺 換 。 人\n\n券 、 舒 珊 汶 浴 乳 、 鋪 聯 禮券 200 元 、\n\n無 患 子 香 息 、 哎 錢 袋 、 多 毅 物 自 葡萄 橋 包\n信 捐 500c.c.: 再 加 贈 資生堂 化 妝 袋 、 春 水 堂 限定 徵\n章 、 例 聯 禮券 200 元 、 無 患 子 香 皂 、 呀 錢 袋\n\n7\n了 宮 朗 廚 輻 還 >\n富 讓 虛 全, 信\n三 于 歸 : 上 EPPETTTTTEE\n同 和 臺南 市 政府 區 察 局 第 一 分 局 、 台 兩 靈 柬 一 格 里拉 、 台 南大 四 百 、 臺 南 郵 局 圖\n",
+            "confidence": 63
+          }
         ]
       },
       "isPttOnly": true
@@ -1715,13 +1702,6 @@
         "rawLine": "6/7(日)高雄台中銀行燕巢分行",
         "images": [
           "https://i.imgur.com/O7At8E5.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/O7At8E5.jpeg",
-            "text": "一 用 / 說\n說 es 擴 邊 /\n一\nCC 詞 二\n全 讓 愛 延 絞\n鑄 于 說 115/706/70m\n台 中 銀行 若 巢 分 行\n由\n人 09:30217:00\n憊 和 說 億 晟 科技 股份 有 限 公司 敬 邀\nk 捐 250cc , 【 捐 500cc ,\n全 聯 禮券 作 張 全 聯 禮券 4 絹\n光合 秘 - 說 稚 和 時. 多\n和\n3 卻 時 胡 ~- 入 )2 粹 ~ 全 聯 商 品 禮券 歡\n1 際 , 人 3 也\n|「 全 \"10 謂 和 全 ws100 二\n",
-            "confidence": 34
-          }
         ]
       },
       "tags": [
@@ -1985,6 +1965,13 @@
         "rawLine": "6/7(日)台北南港富南宮",
         "images": [
           "https://i.imgur.com/FGmBwsb.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/FGmBwsb.jpeg",
+            "text": "有 ss 公 必 2eaN2 公 ,\n說 人 7vrrrammrnttnn\n還 人 全\n吧 歷 和\n司 回 山上 出 和 lg 了\n和 AS 生 生 三 三 二 三 主 2\n讓 1\n捐血 送禮 券 $\n熱血 募集 中\n衣 生\n日 期 :115 年 6 月 7 日 (日) 有\n時 間 : 09:30-16:30 胃 /\n地 點 : 台 北市 南港 區 研究 路 , 沁 從 打 也\n一 自 112 就 ( 富 南 宮 ), 食 証 、 讀\n活動 辦法 謂\n司 捐 7-~E1 元 禮券\n回 捐 25006 從 生 Qagsse 一 9)\n加 mo 蝦 人 人 Wiis- 芍 人 @)\nK 數 量 有 限 送 完 為 止\n主 辦 單位 : 台 北市 議員 李 明 賢 、 富 南宮 管理 委員 會 、 內 湖 麗 山里 鄰 長 陳 李 較 市\n協辦 單位 : 新 富里 、 中 南里 、 中 研 里 、 三 重 里 、 南 港 里 、 舊 莊 里 、 九 如 里\n順\n",
+            "confidence": 56
+          }
         ]
       },
       "isPttOnly": true,
@@ -2036,6 +2023,13 @@
         "rawLine": "6/7(日)台中新社受奉宮",
         "images": [
           "https://i.imgur.com/gkFUCCC.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/gkFUCCC.jpeg",
+            "text": "jr! 人 居 2 A 2 娘 人 太 和 名 人 症 科\n) 司 ji [ ”/vHH 2\nStb 抽 b aaua 革 全 呈 全 還\n全 損 血 好 禮 和 LY 當\n】 2 記 信 匣 點 捐血 賠 赤 鬼 牛排 餐 券\n? 了 還 說 上\n區 /, 字 2 ee 250ce 守 券 1 噶\n炎 燒 排 換 閃光 gaswoaousea 主 點\n主 辦 單 位 還 一 直\n和 襄 人 說 完 說 例 國 下 時 簿 郭 泰 亨\n受 奉 宮 : 新 社區 中 興 齊 街 2 段 1 號\n場 別 : 第 5 場 .‧ 第 1 車 時 間 :9:30~16:00\n1. 元 發 金 屬 工 程 行 。 | 部 說 享 、 郭 家 榮 , 赤 鬼 牛 排 餐 估 200 份\n2. 源 進 興 實業 有 限 公司 劉 隆 乾 | 異人 館 餐 券 200 份\n3. 順 源 興業 股份 有 限 公司 林 建成 | 異人 館 餐 券 100 份\n4. 八 方 盈 環保 科技 有 限 公司 | 黃 淑 微 | 異人 館 餐 券 100 份\n5. 中 古 車 員 賣 。 | 染 漂 財 | 哄 人 館 餐 券 100 份\n6. 鴻 源 環保 有 限 公司 | 徐 永吉 | 赤 鬼 牛排 餐 券 100 份\n7 了. 國 泰 人 壽 陳 沛 琳 異人 館 餐 券 100 份\n8. 亞 太 遊戲 場 | 連 靖 玟 異人 館 餐 券 100 份\n9. 建 欣 消防 工程 行 王 品 仁 | 異人 館 餐 券 100 份\n10. 尚 顆 有 限 公司 蔡 長 達 異人 館 餐 券 100 份\n11. 若 站 家 庭 關 人 協會 。 「 陳 若 舉 異人 館 餐 券 100 份\n12. 統 偉 工程 有 限 公司 ( 鷹 架 )| 藍 偉 銘 異人 館 餐 券 100 份\n13. 允 泰 消防 機 電 有 限 公司 | 黃 順 明 異人 館 餐 券 100 份\n14. 高 智慧 、 張 起 祥 赤 抑 牛排 餐 券 100 份\n15. 元 發 金 屬 工程 行 | 郭 泰 亨 海報 / 棚 架 / 紅 布 條 / 志 工 餐飲\n",
+            "confidence": 65
+          }
         ]
       },
       "isPttOnly": true,
@@ -2695,6 +2689,13 @@
         "rawLine": "6/10-6/11(三-四)臺北科技大學學生活動中心前",
         "images": [
           "https://i.imgur.com/d12sfte.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/d12sfte.jpeg",
+            "text": "二 9 則. 有, 」』 的 Ma\nAl. 7 有 0 啟 !: 暗\n和 Rd\n世人 當 人 公用 人 入\n上 NO 朮 “-\n(他 人 作家 殼 記 人\nIN 避 人 XX\n人 和 之\nCa 人\nCa 其 未 捐 箇 ee\n媽 7 fm 三\nNu( 三 和 @ 划 性\n3 紡 人 寢 師 廁 虹 轉 晶 :。\n之 人 記 ~ 號\nee 7\n必 瞳 2026 /06 /10-2026 /06/\n禮 (2 )1:00-18:00 《 診 /\n@ 學 生 活動 中 心 前 (原 中 正 紀念 館 前 ) 說\nY\n/ 。 |」 詳細 資訊 請 關注 意 幼 社 公告 【IG】\n( 全 NTUT_TSZYOU 啟 請 留意\n人\n來 捐 就 送 9\n“只 電影 票 乙 張 所\n好 2 序 x€\n數 量 有 限 換 完 為 止 寢 一\n和 說\n7 2\n咬 附 有 熱血 打 卡 牆 全 轉 pg\n3 歡迎 拍照 打 卡 唷 了 八 : 還\npl 還 您 只\n",
+            "confidence": 40
+          }
         ]
       },
       "isPttOnly": true
@@ -3946,13 +3947,6 @@
         "rawLine": "6/14(日)台中捐血中心",
         "images": [
           "https://i.imgur.com/Ze2CFIe.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/Ze2CFIe.jpeg",
-            "text": "M 沁 一 一 國 加 全\n\n自 自 圖 上 15 征 !\n\nN 放 畫 [1 生 k 1\n六 ) 腑 仿生, 二 國 上 際 全 天\n你 “2 仙人 1 二 | 曙 有 人\n\n2 人 和 ii | 品 ii EE 上 二 / 認 4\n\n店 度\n儿 / 誠 精 愛 霜 》_cCESs5T 4\nK 虱 房 屋 管理 科 聘 米 豔 專 8|\nACHANG E | |\nR.O.C. Military Academy\n的 ~, ms 之 8 還 還 人 共同 主 辦 單位 : 局\n和 日 期 ww g 呈 了 李 和 倫 x 7\n1 , 了 說 中 華 民國\n表 , 陸軍 軍官 學 校\n(2 時間: 丹麥 手 撕 麵 包 專科 班 校友 會\n0800-1700 時 陛 卻 玉 估 條 電 讓\n依 地 點 : 的 餓 益 誠 腐 特 動 保全\n和 人 主 2 股份 有 限 公司\n本 人 Aa 還\n昌 國\n、 了 人 200 份 人 多 2 大 且 六 產 人 理 廬\nMV- 說 一夫 送 完 為 止 ! 蝕 2 上 INA\n香 酥 層 次 ‧ 手 工 撕 享 ‧ 美 味 滿分\n坦 血 好 補 朮 1\n“入 并 弛 全 了\n4 弦 還 毗 。 凡 捐 箇 成 功 者 , 立 即 贈送 精美 好 禮 ! 還 寬\n點 財 條 盟 2\n科 1 天 們 伙 放 @ 由 人 說\n媽 | 細 | 站 | 他 有 2 k222 9 RAR\n自 自 圈 同 人 人 全\n一 (8 pr 有 下 全 凡 / >\n謂語 有 人 全\n",
-            "confidence": 36
-          }
         ]
       },
       "isPttOnly": true,
@@ -5048,13 +5042,6 @@
         "rawLine": "6/27(六)高雄七賢國小",
         "images": [
           "https://i.imgur.com/wtUwRLm.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/wtUwRLm.jpeg",
-            "text": "全\n國 kW 高 芭 只 區 轉 謝 人 一\n1) 創 角 多\n永 照 山 關 帝 廟 人\n開 聖帝 天 開 基 三 太 子\n一 關 平 將 軍 (SA.2 記\n駐 駕 賜 柳 ~ 一 對 偽 。\n{ 分 費 服務 屆\n算命 、 蔓 髮 、 美 店 、 紋 眉目\n繪 眉 、 紙 藝 、 按 摩 、 彩 妝 ... 等 劇\n2 7 # 旨 ( 星 期 六 ) 9:00-~16:00 |\n2/ ww / 高 雄 市 七 皿 國 小 |\n有 |\n力 避 仙 , 襄 # 且 紅 包 寬 券 500 元 + 類 際 券 2 張 (1 信 ) |\n5 首次 捐血 會 全 聯 狂 券 10(0) 元 2 張 + 餐 券 2 張\n。 烤 匡 券 選 張 (1 隻 ) 全 ) 全 聯 查 券 100 元 4 表 /\n*#500CC(@  _eE\n餐 券 及 張 + 新 福 活動 券 1 張 活\n烤鴨 券 | 張 ( 半 隻 ) 份 ) 全 聯 檀 券 1 0 元 肥 張\n*250CC 人 @ PET\n餐 券 | 張 + 新 福 活動 券 | 張 |\n",
-            "confidence": 51
-          }
         ]
       },
       "isPttOnly": true
