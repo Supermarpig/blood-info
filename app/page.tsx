@@ -103,11 +103,6 @@ export default async function BloodDonationPage() {
     "@type": "WebSite",
     name: "台灣捐血活動查詢",
     url: `${siteUrl}/`,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${siteUrl}/?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 
   // BreadcrumbList Schema for homepage
