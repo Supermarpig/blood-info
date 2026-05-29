@@ -6,6 +6,7 @@ import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import HealthFloatingButton from "@/components/HealthFloatingButton";
 import AnnouncementTab from "@/components/AnnouncementTab";
+import EligibilityFloatingButton from "@/components/EligibilityFloatingButton";
 import FaqSection from "@/components/FaqSection";
 import InternalLinks from "@/components/InternalLinks";
 import { FAQ_DATA } from "@/data/faq";
@@ -313,6 +314,7 @@ export default async function BloodDonationPage() {
       <FaqSection />
       <AnnouncementTab />
       <HealthFloatingButton />
+      <EligibilityFloatingButton />
     </div>
   );
 }

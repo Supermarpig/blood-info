@@ -257,3 +257,59 @@ body {
 .slot-spinning {
   animation: slot-spin 0.55s linear infinite;
 }
+
+/* ── Eligibility quiz ── */
+@keyframes quizCardIn {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-quiz-card-in {
+  animation: quizCardIn 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes confettiFall {
+  0%   { transform: translateY(0) rotate(0deg);    opacity: 1; }
+  80%  { opacity: 0.8; }
+  100% { transform: translateY(320px) rotate(600deg); opacity: 0; }
+}
+
+@keyframes iconBounceIn {
+  0%   { transform: scale(0) rotate(-15deg); opacity: 0; }
+  55%  { transform: scale(1.22) rotate(6deg);  opacity: 1; }
+  75%  { transform: scale(0.92) rotate(-3deg); }
+  100% { transform: scale(1) rotate(0deg);    opacity: 1; }
+}
+.animate-icon-bounce-in {
+  animation: iconBounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+}
+
+@keyframes mascotWiggle {
+  0%   { transform: rotate(0deg) scale(1); }
+  18%  { transform: rotate(-12deg) scale(1.07); }
+  36%  { transform: rotate(12deg) scale(1.07); }
+  54%  { transform: rotate(-6deg) scale(1.03); }
+  72%  { transform: rotate(5deg) scale(1.01); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+.animate-mascot-wiggle {
+  animation: mascotWiggle 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes celebrateJump {
+  0%   { transform: translateY(0) scale(1) rotate(0deg); }
+  28%  { transform: translateY(-22px) scale(1.1) rotate(-8deg); }
+  50%  { transform: translateY(4px) scale(0.95) rotate(0deg); }
+  68%  { transform: translateY(-12px) scale(1.06) rotate(5deg); }
+  84%  { transform: translateY(2px) scale(0.98) rotate(0deg); }
+  100% { transform: translateY(0) scale(1) rotate(0deg); }
+}
+.animate-celebrate-jump {
+  animation: celebrateJump 0.9s cubic-bezier(0.22, 1, 0.36, 1) both,
+             float 3s ease-in-out 0.9s infinite;
+}
