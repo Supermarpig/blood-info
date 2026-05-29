@@ -1,5 +1,7 @@
 // app/page.tsx
 import Link from "next/link";
+import { Search as SearchIcon } from "lucide-react";
+import SearchModal from "@/components/SearchModal";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import HealthFloatingButton from "@/components/HealthFloatingButton";
@@ -266,7 +268,14 @@ export default async function BloodDonationPage() {
           <span className="hidden sm:inline text-xs text-gray-400 font-normal">今天哪裡有捐血車</span>
         </div>
         <h1 className="sr-only">捐血活動查詢｜今天哪裡有捐血車</h1>
-        <AddDonationEventModal />
+        <div className="flex items-center gap-2">
+          <SearchModal>
+            <button className="p-2 rounded-full hover:bg-gray-100 transition-colors" aria-label="搜尋捐血活動">
+              <SearchIcon className="w-5 h-5 text-gray-500" />
+            </button>
+          </SearchModal>
+          <AddDonationEventModal />
+        </div>
       </div>
       <SearchableDonationList data={data} />
 
