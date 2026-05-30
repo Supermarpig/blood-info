@@ -323,14 +323,13 @@ export default function HeroSection({
               const card = (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, scale: 0.6, y: 16 }}
                   animate={isTop
-                    ? { opacity: 1, scale: [1, 1.04, 1], y: 0, boxShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 12px rgba(251,146,60,0.5)", "0 0 0px rgba(0,0,0,0)"] }
-                    : { opacity: 1, scale: 1, y: 0 }
+                    ? { boxShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 12px rgba(251,146,60,0.5)", "0 0 0px rgba(0,0,0,0)"] }
+                    : undefined
                   }
                   transition={isTop
-                    ? { delay: i * 0.08, type: "spring", stiffness: 400, damping: 18, boxShadow: { delay: 0.4, duration: 1.4, repeat: Infinity, repeatDelay: 2 }, scale: { delay: 0.3, duration: 0.6 } }
-                    : { delay: i * 0.08, type: "spring", stiffness: 400, damping: 18 }
+                    ? { boxShadow: { delay: 0.4, duration: 1.4, repeat: Infinity, repeatDelay: 2 } }
+                    : undefined
                   }
                   whileHover={{ scale: 1.12, y: -5, rotate: isTop ? 1 : -1, boxShadow: "0 8px 24px rgba(0,0,0,0.13)" }}
                   whileTap={{ scale: 0.94 }}
