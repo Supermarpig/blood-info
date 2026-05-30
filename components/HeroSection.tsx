@@ -270,23 +270,19 @@ export default function HeroSection({
 }: HeroSectionProps) {
   const heroBannerRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
-    if (!heroBannerRef.current) return;
-    const h2 = heroBannerRef.current.querySelector("h2");
-    const sub = heroBannerRef.current.querySelector(".hero-sub");
+  useEffect(() => {
+    const banner = heroBannerRef.current;
+    if (!banner) return;
+    const h2 = banner.querySelector("h2");
+    const sub = banner.querySelector(".hero-sub");
     if (!h2 || !sub) return;
     const splitH2 = new SplitText(h2, { type: "chars" });
     const splitSub = new SplitText(sub, { type: "chars" });
-    gsap.timeline({ delay: 0.55 })
-      .from(splitH2.chars, {
-        opacity: 0, y: 18,
-        stagger: 0.05, duration: 0.35, ease: "power2.out",
-      })
-      .from(splitSub.chars, {
-        opacity: 0, y: 10,
-        stagger: 0.03, duration: 0.25, ease: "power2.out",
-      }, "-=0.1");
-  }, { scope: heroBannerRef });
+    const tl = gsap.timeline({ delay: 0.55 })
+      .from(splitH2.chars, { opacity: 0, y: 18, stagger: 0.05, duration: 0.35, ease: "power2.out" })
+      .from(splitSub.chars, { opacity: 0, y: 10, stagger: 0.03, duration: 0.25, ease: "power2.out" }, "-=0.1");
+    return () => { tl.kill(); splitH2.revert(); splitSub.revert(); };
+  }, []);
 
   return (
     <div className="mb-6 space-y-4">

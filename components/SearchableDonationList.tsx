@@ -2,10 +2,9 @@
 
 import { useState, useMemo, useRef, useEffect, useLayoutEffect, useCallback } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/Flip";
 
-gsap.registerPlugin(ScrollTrigger, Flip);
+gsap.registerPlugin(Flip);
 import Link from "next/link";
 import { ChevronDown, ChevronUp, Calendar } from "lucide-react";
 import { debounce } from "@/utils";
@@ -113,23 +112,6 @@ export default function SearchableDonationList({
     });
   }, [selectedCenter, selectedTags, searchKeyword]);
 
-  useLayoutEffect(() => {
-    if (!contentRef.current) return;
-    const cards = contentRef.current.querySelectorAll(".card-item");
-    if (!cards.length) return;
-    gsap.set(cards, { opacity: 0, y: 24 });
-    const batch = ScrollTrigger.batch(cards, {
-      onEnter: (els) => gsap.to(els, {
-        opacity: 1, y: 0, duration: 0.4, stagger: 0.05, ease: "power2.out", overwrite: "auto",
-      }),
-      start: "top 95%",
-      once: true,
-    });
-    return () => {
-      batch.forEach((st) => st.kill());
-      gsap.set(cards, { clearProps: "opacity,y" });
-    };
-  }, []);
 
   useEffect(() => {
     const sentinel = sentinelRef.current;
