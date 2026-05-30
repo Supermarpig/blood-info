@@ -734,10 +734,10 @@ async function fetchPttData() {
 }
 
 function mergeData(officialData, pttData, existingLocalData = null, targetYear = null, targetMonth = null, pttUrl = PTT_FALLBACK_URL) {
-    const noiseWords = [
+    const cityWords = [
         '台北', '臺北', '新北', '基隆', '桃園', '新竹', '苗栗', '台中', '臺中', '彰化', '雲林', '南投', '嘉義', '台南', '臺南', '高雄', '屏東', '宜蘭', '花蓮', '台東', '臺東',
-        '捐血室', '捐血站', '捐血車', '巡迴車', '捷運站', '公園', '出口', '配合'
     ];
+    const noiseWords = ['捐血室', '捐血站', '捐血車', '巡迴車', '捷運站', '公園', '出口', '配合'];
 
     function isLocationMatch(pttLocationStr, eventLoc, eventLocNoAdmin, eventOrg) {
         let pLocRaw = pttLocationStr.replace(/台/g, '臺');
@@ -747,6 +747,21 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
             let pLocClean = subLoc
                 .replace(/[（(][^）)]*[）)]/g, '')
                 .replace(/[^\u4e00-\u9fa5a-zA-Z0-9]/g, '');
+
+            // 若 PTT 地點以城市名開頭，先確認活動地點在同一城市，再剝掉前綴比對
+            let strippedCity = null;
+            for (const city of cityWords) {
+                const cityNorm = city.replace(/台/g, '臺');
+                if (pLocClean.startsWith(cityNorm)) {
+                    strippedCity = cityNorm;
+                    pLocClean = pLocClean.substring(cityNorm.length);
+                    break;
+                }
+            }
+            if (strippedCity) {
+                const cityTw = strippedCity.replace(/臺/g, '台');
+                if (!eventLoc.includes(strippedCity) && !eventLoc.includes(cityTw)) return false;
+            }
 
             let prev;
             do {
