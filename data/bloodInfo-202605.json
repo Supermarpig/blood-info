@@ -22227,19 +22227,12 @@
       "activityDate": "2026-05-30",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q104346154535305718",
-      "pttData": {
-        "rawLine": "5/30(六)彰化家樂福",
-        "images": [
-          "https://i.imgur.com/Z6BWS9p.jpeg"
-        ]
-      },
       "tags": [
         "超商",
         "生活用品"
       ],
       "subTags": [
-        "超商－家樂福",
-        "生活用品－衛生紙"
+        "超商－家樂福"
       ],
       "coordinates": {
         "lat": 24.9731158,
