@@ -197,11 +197,12 @@ export default async function CityPage({ params }: PageProps) {
   const nearbyCities = getNearbyCities(city);
 
   return (
-    <div className="container mx-auto p-8">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <div className="container mx-auto p-8">
 
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
@@ -281,5 +282,6 @@ export default async function CityPage({ params }: PageProps) {
         </section>
       )}
     </div>
+    </>
   );
 }

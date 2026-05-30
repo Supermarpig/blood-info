@@ -221,7 +221,7 @@ export default async function BloodDonationPage() {
   });
 
   return (
-    <div className="container mx-auto p-8">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
@@ -244,6 +244,7 @@ export default async function BloodDonationPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLd) }}
         />
       )}
+      <div className="container mx-auto p-8">
 
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center gap-2">
@@ -317,5 +318,6 @@ export default async function BloodDonationPage() {
       <HealthFloatingButton />
       <EligibilityFloatingButton />
     </div>
+    </>
   );
 }
