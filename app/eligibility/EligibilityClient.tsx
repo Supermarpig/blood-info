@@ -1,10 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { RotateCcw, MapPin, Clock } from "lucide-react";
-import { motion, AnimatePresence, type Transition } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { Draggable } from "gsap/Draggable";
 import confetti from "canvas-confetti";
+
+gsap.registerPlugin(useGSAP, Draggable);
 
 /* ─── Data ──────────────────────────────────────────────────── */
 
@@ -211,43 +215,120 @@ function BloodDropMascot({ mood }: { mood: Mood }) {
   );
 }
 
-/* ─── Animated Mascot: draggable + mood spring ───────────────── */
-
-type MoodAnim = {
-  animate: { y?: number[]; rotate?: number[]; scale?: number[] };
-  transition: Transition;
-};
-
-const mascotAnimations: Record<Mood, MoodAnim> = {
-  neutral:   { animate: { y: [0, -10, 0] },                                                                           transition: { duration: 2.8, repeat: Infinity, ease: "easeInOut" } },
-  thinking:  { animate: { y: [0, -10, 0] },                                                                           transition: { duration: 2.8, repeat: Infinity, ease: "easeInOut" } },
-  happy:     { animate: { rotate: [-8, 8, -5, 5, -2, 0], scale: [1, 1.12, 1.06, 1.04, 1.01, 1] },                   transition: { duration: 0.55, ease: "easeOut" } },
-  sad:       { animate: { rotate: [0, -4, 4, -2, 0], y: [0, 6, 2, 0] },                                              transition: { duration: 0.65, ease: "easeOut" } },
-  celebrate: { animate: { y: [0, -28, 4, -18, 2, -10, 0], rotate: [0, -10, 10, -6, 6, -2, 0], scale: [1, 1.15, 0.94, 1.1, 0.97, 1.06, 1] }, transition: { duration: 1.0, ease: "easeOut" } },
-};
+/* ─── Animated Mascot: draggable + mood animation ────────────── */
 
 function AnimatedMascot({ mood }: { mood: Mood }) {
-  const { animate, transition } = mascotAnimations[mood];
+  const outerRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const [draggable] = Draggable.create(outerRef.current!, {
+      type: "x,y",
+      bounds: { minX: -55, maxX: 55, minY: -45, maxY: 45 },
+      edgeResistance: 0.65,
+      onDragStart: () => {
+        gsap.to(outerRef.current, { scale: 1.18, rotation: 8, duration: 0.15, overwrite: "auto" });
+      },
+      onDragEnd: () => {
+        gsap.to(outerRef.current, { x: 0, y: 0, scale: 1, rotation: 0, duration: 0.5, ease: "elastic.out(1.2,0.5)" });
+      },
+    });
+    return () => draggable?.kill();
+  }, { scope: outerRef });
+
+  useGSAP(() => {
+    const el = innerRef.current!;
+    switch (mood) {
+      case "neutral":
+      case "thinking":
+        gsap.to(el, { y: -10, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: -1 });
+        break;
+      case "happy":
+        gsap.to(el, {
+          keyframes: { rotation: [-8, 8, -5, 5, -2, 0], scale: [1, 1.12, 1.06, 1.04, 1.01, 1] },
+          duration: 0.55, ease: "none",
+        });
+        break;
+      case "sad":
+        gsap.to(el, {
+          keyframes: { rotation: [0, -4, 4, -2, 0], y: [0, 6, 2, 0] },
+          duration: 0.65, ease: "none",
+        });
+        break;
+      case "celebrate":
+        gsap.to(el, {
+          keyframes: {
+            y: [0, -28, 4, -18, 2, -10, 0],
+            rotation: [0, -10, 10, -6, 6, -2, 0],
+            scale: [1, 1.15, 0.94, 1.1, 0.97, 1.06, 1],
+          },
+          duration: 1.0, ease: "none",
+        });
+        break;
+    }
+  }, { scope: innerRef, dependencies: [mood], revertOnUpdate: true });
+
   return (
-    // Outer: drag layer — snaps back via dragConstraints + dragElastic
-    <motion.div
-      drag
-      dragConstraints={{ top: -45, bottom: 45, left: -55, right: 55 }}
-      dragElastic={0.35}
-      dragTransition={{ bounceStiffness: 550, bounceDamping: 14 }}
-      whileDrag={{ scale: 1.18, rotate: 8 }}
+    <div
+      ref={outerRef}
       className="w-28 h-32 cursor-grab active:cursor-grabbing select-none touch-none"
     >
-      {/* Inner: mood animation layer */}
-      <motion.div
-        key={mood}
-        animate={animate}
-        transition={transition}
-        className="w-full h-full"
-      >
+      <div ref={innerRef} className="w-full h-full">
         <BloodDropMascot mood={mood} />
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Animated Button ────────────────────────────────────────── */
+
+function ButtonAnimated({
+  onClick,
+  className,
+  children,
+}: {
+  onClick?: () => void;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  const ref = useRef<HTMLButtonElement>(null);
+  const isHovering = useRef(false);
+
+  const { contextSafe } = useGSAP({ scope: ref });
+
+  const onMouseEnter = contextSafe(() => {
+    isHovering.current = true;
+    gsap.to(ref.current, { scale: 1.03, duration: 0.15, ease: "power2.out" });
+  });
+
+  const onMouseLeave = contextSafe(() => {
+    isHovering.current = false;
+    gsap.to(ref.current, { scale: 1, duration: 0.15, ease: "power2.out" });
+  });
+
+  const onPointerDown = contextSafe(() => {
+    gsap.to(ref.current, { scaleX: 1.04, scaleY: 0.92, duration: 0.1, overwrite: "auto" });
+  });
+
+  const onPointerUp = contextSafe(() => {
+    gsap.to(ref.current, {
+      scale: isHovering.current ? 1.03 : 1,
+      duration: 0.15, overwrite: "auto",
+    });
+  });
+
+  return (
+    <button
+      ref={ref}
+      onClick={onClick}
+      className={className}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onPointerDown={onPointerDown}
+      onPointerUp={onPointerUp}
+    >
+      {children}
+    </button>
   );
 }
 
@@ -255,71 +336,42 @@ function AnimatedMascot({ mood }: { mood: Mood }) {
 
 function fireConfetti() {
   const colors = ["#ff6b6b", "#ffd93d", "#6bcb77", "#4d96ff", "#ff6b9d", "#c77dff", "#ff9a3c"];
-
-  // Centre burst
-  confetti({
-    particleCount: 130,
-    spread: 80,
-    origin: { y: 0.55 },
-    colors,
-    gravity: 1.1,
-    scalar: 1.1,
-  });
-
-  // Side cannons with slight delay
+  confetti({ particleCount: 130, spread: 80, origin: { y: 0.55 }, colors, gravity: 1.1, scalar: 1.1 });
   setTimeout(() => {
     confetti({ particleCount: 70, angle: 55, spread: 60, origin: { x: 0, y: 0.6 }, colors, gravity: 1.2 });
     confetti({ particleCount: 70, angle: 125, spread: 60, origin: { x: 1, y: 0.6 }, colors, gravity: 1.2 });
   }, 280);
-
-  // Final small shower
   setTimeout(() => {
     confetti({ particleCount: 40, spread: 100, origin: { y: 0.3 }, colors, scalar: 0.8 });
   }, 550);
 }
 
-/* ─── Pass Result (fires confetti on mount) ──────────────────── */
+/* ─── Pass Result ────────────────────────────────────────────── */
 
 function PassResult({ onRestart }: { onRestart: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => { fireConfetti(); }, []);
 
+  useGSAP(() => {
+    gsap.from(".pass-icon", { scale: 0, rotation: -30, duration: 0.4, delay: 0.05, ease: "back.out(2)" });
+    gsap.from(".pass-heading", { opacity: 0, y: 12, duration: 0.35, delay: 0.2, ease: "power2.out" });
+    gsap.from(".pass-text", { opacity: 0, duration: 0.3, delay: 0.32, ease: "power2.out" });
+    gsap.from(".pass-actions", { opacity: 0, y: 12, duration: 0.35, delay: 0.42, ease: "back.out(1.4)" });
+  }, { scope: ref });
+
   return (
-    <div className="bg-white rounded-3xl shadow-sm border border-emerald-200 p-7 text-center">
-      <motion.div
-        className="w-20 h-20 mx-auto mb-4 rounded-full bg-emerald-100 border-4 border-emerald-300 flex items-center justify-center"
-        initial={{ scale: 0, rotate: -30 }}
-        animate={{ scale: 1, rotate: 0 }}
-        transition={{ type: "spring", stiffness: 300, damping: 12, delay: 0.05 }}
-      >
+    <div ref={ref} className="bg-white rounded-3xl shadow-sm border border-emerald-200 p-7 text-center">
+      <div className="pass-icon w-20 h-20 mx-auto mb-4 rounded-full bg-emerald-100 border-4 border-emerald-300 flex items-center justify-center">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
           <path d="M7 18l7.5 7.5L29 10" stroke="#10b981" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
-      </motion.div>
-
-      <motion.h2
-        className="text-2xl font-bold text-emerald-600 mb-2"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20, delay: 0.2 }}
-      >
-        可以捐血！
-      </motion.h2>
-
-      <motion.p
-        className="text-gray-500 text-sm leading-relaxed mb-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.32 }}
-      >
+      </div>
+      <h2 className="pass-heading text-2xl font-bold text-emerald-600 mb-2">可以捐血！</h2>
+      <p className="pass-text text-gray-500 text-sm leading-relaxed mb-6">
         你符合捐血資格，謝謝你願意伸出援手<br />
         快去找附近的捐血活動吧！
-      </motion.p>
-
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 400, damping: 22, delay: 0.42 }}
-      >
+      </p>
+      <div className="pass-actions">
         <Link
           href="/"
           className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-2xl font-bold text-base shadow-md mb-3"
@@ -334,7 +386,7 @@ function PassResult({ onRestart }: { onRestart: () => void }) {
           <RotateCcw size={14} />
           重新測驗
         </button>
-      </motion.div>
+      </div>
     </div>
   );
 }
@@ -345,66 +397,42 @@ function FailResult({ failReason, onRestart }: {
   failReason: { msg: string; waitTime: string | null };
   onRestart: () => void;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    gsap.from(".fail-icon", { scale: 0, rotation: 20, duration: 0.4, delay: 0.05, ease: "back.out(2)" });
+    gsap.from(".fail-heading", { opacity: 0, y: 10, duration: 0.35, delay: 0.2, ease: "power2.out" });
+    gsap.from(".fail-text", { opacity: 0, duration: 0.3, delay: 0.3, ease: "power2.out" });
+    gsap.from(".fail-wait", { opacity: 0, scale: 0.88, duration: 0.35, delay: 0.38, ease: "back.out(1.4)" });
+    gsap.from(".fail-restart", { opacity: 0, duration: 0.2, delay: 0.48, ease: "power2.out" });
+  }, { scope: ref });
+
   return (
-    <div className="bg-white rounded-3xl shadow-sm border border-orange-100 p-7 text-center">
-      <motion.div
-        className="w-16 h-16 mx-auto mb-4 rounded-full bg-orange-50 border-4 border-orange-200 flex items-center justify-center"
-        initial={{ scale: 0, rotate: 20 }}
-        animate={{ scale: 1, rotate: 0 }}
-        transition={{ type: "spring", stiffness: 300, damping: 12, delay: 0.05 }}
-      >
+    <div ref={ref} className="bg-white rounded-3xl shadow-sm border border-orange-100 p-7 text-center">
+      <div className="fail-icon w-16 h-16 mx-auto mb-4 rounded-full bg-orange-50 border-4 border-orange-200 flex items-center justify-center">
         <Clock className="w-7 h-7 text-orange-400" />
-      </motion.div>
-
-      <motion.h2
-        className="text-xl font-bold text-orange-600 mb-3"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 400, damping: 20, delay: 0.2 }}
-      >
-        這次暫時不行
-      </motion.h2>
-
-      <motion.p
-        className="text-gray-600 text-sm leading-relaxed mb-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-      >
-        {failReason.msg}
-      </motion.p>
-
+      </div>
+      <h2 className="fail-heading text-xl font-bold text-orange-600 mb-3">這次暫時不行</h2>
+      <p className="fail-text text-gray-600 text-sm leading-relaxed mb-4">{failReason.msg}</p>
       {failReason.waitTime && (
-        <motion.div
-          className="flex items-center justify-center gap-2 bg-orange-50 border border-orange-200 rounded-2xl px-4 py-3 mb-5"
-          initial={{ opacity: 0, scale: 0.88 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ type: "spring", stiffness: 450, damping: 18, delay: 0.38 }}
-        >
+        <div className="fail-wait flex items-center justify-center gap-2 bg-orange-50 border border-orange-200 rounded-2xl px-4 py-3 mb-5">
           <span className="w-2 h-2 rounded-full bg-orange-400 flex-shrink-0" />
-          <span className="text-orange-700 text-sm font-medium">
-            {failReason.waitTime}再來捐血
-          </span>
-        </motion.div>
+          <span className="text-orange-700 text-sm font-medium">{failReason.waitTime}再來捐血</span>
+        </div>
       )}
-
       <p className="text-xs text-gray-400 mb-5">
         有疑問可撥打捐血諮詢專線{" "}
         <a href="tel:0800024995" className="text-rose-500 font-medium underline underline-offset-2">
           0800-024-995
         </a>
       </p>
-
-      <motion.button
+      <ButtonAnimated
         onClick={onRestart}
-        whileHover={{ scale: 1.03 }}
-        whileTap={{ scaleX: 1.05, scaleY: 0.92 }}
-        transition={{ type: "spring", stiffness: 500, damping: 15 }}
-        className="flex items-center justify-center gap-2 w-full py-4 border-2 border-rose-200 bg-rose-50 text-rose-600 font-bold rounded-2xl"
+        className="fail-restart flex items-center justify-center gap-2 w-full py-4 border-2 border-rose-200 bg-rose-50 text-rose-600 font-bold rounded-2xl"
       >
         <RotateCcw size={17} />
         重新測驗
-      </motion.button>
+      </ButtonAnimated>
     </div>
   );
 }
@@ -422,6 +450,28 @@ export default function EligibilityClient() {
   const currentQuestion = step >= 1 && step <= totalQuestions ? QUESTIONS[step - 1] : null;
   const pct = step >= 1 && step <= totalQuestions ? Math.round((step / totalQuestions) * 100) : 0;
 
+  const cardRef = useRef<HTMLDivElement>(null);
+  const progressRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!cardRef.current) return;
+    gsap.fromTo(cardRef.current,
+      { x: dir * 60, opacity: 0, scale: 0.94, rotation: dir * 2 },
+      { x: 0, opacity: 1, scale: 1, rotation: 0, duration: 0.35, ease: "back.out(1.4)" }
+    );
+    if (step === 0) {
+      const items = cardRef.current.querySelectorAll(".intro-item");
+      if (items.length) {
+        gsap.from(items, { opacity: 0, y: 12, duration: 0.35, stagger: 0.07, delay: 0.12, ease: "power2.out" });
+      }
+    }
+  }, { dependencies: [step, dir], revertOnUpdate: true });
+
+  useGSAP(() => {
+    if (!progressRef.current) return;
+    gsap.to(progressRef.current, { width: `${pct}%`, duration: 0.6, ease: "back.out(1.4)" });
+  }, { dependencies: [pct] });
+
   function startQuiz() {
     setDir(1);
     setMood("thinking");
@@ -431,7 +481,6 @@ export default function EligibilityClient() {
   function handleAnswer(isPassing: boolean) {
     if (!currentQuestion) return;
     setDir(1);
-
     if (!isPassing) {
       setMood("sad");
       setResult("fail");
@@ -462,18 +511,15 @@ export default function EligibilityClient() {
     <div className="min-h-screen bg-gradient-to-b from-rose-50 via-rose-50/40 to-white">
       <div className="max-w-md mx-auto px-4 pt-8 pb-16">
 
-        {/* Title */}
         <div className="text-center mb-6">
           <h1 className="text-2xl font-bold text-rose-700">我可以捐血嗎？</h1>
           <p className="text-sm text-rose-400 mt-1">拖動我，8 題快速測驗知道結果</p>
         </div>
 
-        {/* Draggable mascot */}
         <div className="flex justify-center mb-5">
           <AnimatedMascot mood={mood} />
         </div>
 
-        {/* Progress bar */}
         {step >= 1 && step <= totalQuestions && (
           <div className="mb-5">
             <div className="flex justify-between text-xs text-rose-400 mb-1.5 font-medium">
@@ -481,104 +527,76 @@ export default function EligibilityClient() {
               <span>{step} / {totalQuestions}</span>
             </div>
             <div className="h-3 bg-rose-100 rounded-full overflow-hidden">
-              <motion.div
+              <div
+                ref={progressRef}
                 className="h-full bg-gradient-to-r from-rose-400 to-red-500 rounded-full origin-left"
-                animate={{ width: `${pct}%` }}
-                transition={{ type: "spring", stiffness: 180, damping: 22 }}
+                style={{ width: 0 }}
               />
             </div>
           </div>
         )}
 
-        {/* Cards */}
         <div className="relative" style={{ minHeight: 300 }}>
-          <AnimatePresence mode="popLayout">
-            <motion.div
-              key={step}
-              initial={{ x: dir * 80, opacity: 0, scale: 0.92, rotate: dir * 3 }}
-              animate={{ x: 0, opacity: 1, scale: 1, rotate: 0 }}
-              exit={{ x: dir * -80, opacity: 0, scale: 0.92, rotate: dir * -3 }}
-              transition={{ type: "spring", stiffness: 380, damping: 24 }}
-            >
+          <div ref={cardRef}>
 
-              {/* ── Intro ── */}
-              {step === 0 && (
-                <div className="bg-white rounded-3xl shadow-sm border border-rose-100 p-7">
-                  <p className="text-center text-gray-500 text-sm mb-5 leading-relaxed">
-                    不確定自己能不能捐血？<br />
-                    根據台灣血液基金會標準，一起來確認
-                  </p>
-                  <div className="grid grid-cols-2 gap-2.5 mb-7">
-                    {["年齡 & 體重", "今日健康狀況", "最近手術 / 刺青", "用藥情形"].map((item, i) => (
-                      <motion.div
-                        key={item}
-                        initial={{ opacity: 0, y: 12 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 22, delay: 0.08 + i * 0.07 }}
-                        className="flex items-center gap-2 bg-rose-50 rounded-xl px-3 py-2.5 text-sm text-gray-600"
-                      >
-                        <span className="w-2 h-2 rounded-full bg-rose-400 flex-shrink-0" />
-                        {item}
-                      </motion.div>
-                    ))}
-                  </div>
-                  <motion.button
-                    onClick={startQuiz}
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scaleX: 1.05, scaleY: 0.91 }}
-                    transition={{ type: "spring", stiffness: 500, damping: 14 }}
-                    className="w-full py-4 bg-gradient-to-r from-rose-500 to-red-500 text-white rounded-2xl font-bold text-lg shadow-md"
+            {step === 0 && (
+              <div className="bg-white rounded-3xl shadow-sm border border-rose-100 p-7">
+                <p className="text-center text-gray-500 text-sm mb-5 leading-relaxed">
+                  不確定自己能不能捐血？<br />
+                  根據台灣血液基金會標準，一起來確認
+                </p>
+                <div className="grid grid-cols-2 gap-2.5 mb-7">
+                  {["年齡 & 體重", "今日健康狀況", "最近手術 / 刺青", "用藥情形"].map((item) => (
+                    <div
+                      key={item}
+                      className="intro-item flex items-center gap-2 bg-rose-50 rounded-xl px-3 py-2.5 text-sm text-gray-600"
+                    >
+                      <span className="w-2 h-2 rounded-full bg-rose-400 flex-shrink-0" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+                <ButtonAnimated
+                  onClick={startQuiz}
+                  className="w-full py-4 bg-gradient-to-r from-rose-500 to-red-500 text-white rounded-2xl font-bold text-lg shadow-md"
+                >
+                  開始測驗
+                </ButtonAnimated>
+              </div>
+            )}
+
+            {currentQuestion && (
+              <div className="bg-white rounded-3xl shadow-sm border border-rose-100 p-7">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-xs font-semibold text-rose-400 bg-rose-50 px-2.5 py-1 rounded-full">
+                    {currentQuestion.label}
+                  </span>
+                </div>
+                <h2 className="text-xl font-bold text-gray-800 mb-2">{currentQuestion.question}</h2>
+                <p className="text-xs text-gray-400 leading-relaxed mb-6">{currentQuestion.hint}</p>
+                <div className="space-y-3">
+                  <ButtonAnimated
+                    onClick={() => handleAnswer(true)}
+                    className="w-full py-4 px-5 bg-rose-50 border-2 border-rose-200 hover:border-rose-400 text-rose-700 font-semibold rounded-2xl flex items-center gap-3.5 text-left"
                   >
-                    開始測驗
-                  </motion.button>
+                    <PassIcon />
+                    <span className="flex-1 text-sm leading-snug">{currentQuestion.passLabel}</span>
+                  </ButtonAnimated>
+                  <ButtonAnimated
+                    onClick={() => handleAnswer(false)}
+                    className="w-full py-4 px-5 bg-gray-50 border-2 border-gray-200 hover:border-gray-400 text-gray-600 font-semibold rounded-2xl flex items-center gap-3.5 text-left"
+                  >
+                    <FailIcon />
+                    <span className="flex-1 text-sm leading-snug">{currentQuestion.failLabel}</span>
+                  </ButtonAnimated>
                 </div>
-              )}
+              </div>
+            )}
 
-              {/* ── Question ── */}
-              {currentQuestion && (
-                <div className="bg-white rounded-3xl shadow-sm border border-rose-100 p-7">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="text-xs font-semibold text-rose-400 bg-rose-50 px-2.5 py-1 rounded-full">
-                      {currentQuestion.label}
-                    </span>
-                  </div>
-                  <h2 className="text-xl font-bold text-gray-800 mb-2">{currentQuestion.question}</h2>
-                  <p className="text-xs text-gray-400 leading-relaxed mb-6">{currentQuestion.hint}</p>
+            {result === "pass" && <PassResult onRestart={restart} />}
+            {result === "fail" && failReason && <FailResult failReason={failReason} onRestart={restart} />}
 
-                  <div className="space-y-3">
-                    {/* Pass button — squish on tap */}
-                    <motion.button
-                      onClick={() => handleAnswer(true)}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scaleX: 1.04, scaleY: 0.92 }}
-                      transition={{ type: "spring", stiffness: 600, damping: 14 }}
-                      className="w-full py-4 px-5 bg-rose-50 border-2 border-rose-200 hover:border-rose-400 text-rose-700 font-semibold rounded-2xl flex items-center gap-3.5 text-left"
-                    >
-                      <PassIcon />
-                      <span className="flex-1 text-sm leading-snug">{currentQuestion.passLabel}</span>
-                    </motion.button>
-
-                    {/* Fail button */}
-                    <motion.button
-                      onClick={() => handleAnswer(false)}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scaleX: 1.04, scaleY: 0.92 }}
-                      transition={{ type: "spring", stiffness: 600, damping: 14 }}
-                      className="w-full py-4 px-5 bg-gray-50 border-2 border-gray-200 hover:border-gray-400 text-gray-600 font-semibold rounded-2xl flex items-center gap-3.5 text-left"
-                    >
-                      <FailIcon />
-                      <span className="flex-1 text-sm leading-snug">{currentQuestion.failLabel}</span>
-                    </motion.button>
-                  </div>
-                </div>
-              )}
-
-              {/* ── Results ── */}
-              {result === "pass" && <PassResult onRestart={restart} />}
-              {result === "fail" && failReason && <FailResult failReason={failReason} onRestart={restart} />}
-
-            </motion.div>
-          </AnimatePresence>
+          </div>
         </div>
 
         <p className="text-center text-xs text-gray-400 mt-6 leading-relaxed">

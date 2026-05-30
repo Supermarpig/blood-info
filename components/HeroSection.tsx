@@ -28,7 +28,10 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import BloodInventoryPanel from "@/components/BloodInventoryPanel";
 import { GIFTS } from "@/lib/giftConfig";
-import { motion } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
 
 interface CpEvent {
   href?: string;
@@ -179,6 +182,80 @@ function AnimatedNumber({ value }: { value: number }) {
   );
 }
 
+interface CpCardProps {
+  isTop: boolean;
+  colorClass: string;
+  giftName: string;
+  area: string;
+}
+
+function CpCard({ isTop, colorClass, giftName, area }: CpCardProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const loopRef = useRef<gsap.core.Tween | null>(null);
+  const isHovering = useRef(false);
+
+  const { contextSafe } = useGSAP(() => {
+    if (!isTop) return;
+    loopRef.current = gsap.to(ref.current, {
+      boxShadow: "0 0 12px rgba(251,146,60,0.5)",
+      duration: 1.4,
+      delay: 0.4,
+      yoyo: true,
+      repeat: -1,
+      repeatDelay: 2,
+      ease: "sine.inOut",
+    });
+  }, { scope: ref });
+
+  const onMouseEnter = contextSafe(() => {
+    isHovering.current = true;
+    loopRef.current?.pause();
+    gsap.to(ref.current, {
+      scale: 1.12, y: -5, rotation: isTop ? 1 : -1,
+      boxShadow: "0 8px 24px rgba(0,0,0,0.13)",
+      duration: 0.2,
+    });
+  });
+
+  const onMouseLeave = contextSafe(() => {
+    isHovering.current = false;
+    gsap.to(ref.current, {
+      scale: 1, y: 0, rotation: 0,
+      boxShadow: "0 0 0px rgba(0,0,0,0)",
+      duration: 0.2,
+      onComplete: () => loopRef.current?.resume(),
+    });
+  });
+
+  const onPointerDown = contextSafe(() => {
+    gsap.to(ref.current, { scale: 0.94, duration: 0.1, overwrite: "auto" });
+  });
+
+  const onPointerUp = contextSafe(() => {
+    gsap.to(ref.current, {
+      scale: isHovering.current ? 1.12 : 1,
+      duration: 0.15,
+      overwrite: "auto",
+    });
+  });
+
+  return (
+    <div
+      ref={ref}
+      className={`flex-shrink-0 border-2 rounded-xl px-3 py-2 text-xs min-w-[84px] cursor-pointer ${colorClass}`}
+      style={{ transformOrigin: "bottom center" }}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onPointerDown={onPointerDown}
+      onPointerUp={onPointerUp}
+    >
+      {isTop && <div className="text-[10px] font-bold mb-0.5 opacity-60">🏆 今日最強</div>}
+      <div className="font-semibold truncate max-w-[84px] text-[11px] opacity-70">{area}</div>
+      <div className="mt-0.5 font-bold text-[14px]">{giftName}</div>
+    </div>
+  );
+}
+
 export default function HeroSection({
   todayCount,
   upcomingCount,
@@ -321,29 +398,18 @@ export default function HeroSection({
               const colorClass = CP_BADGE[e.score] ?? CP_BADGE[2];
               const isTop = i === 0;
               const card = (
-                <motion.div
-                  key={i}
-                  animate={isTop
-                    ? { boxShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 12px rgba(251,146,60,0.5)", "0 0 0px rgba(0,0,0,0)"] }
-                    : undefined
-                  }
-                  transition={isTop
-                    ? { boxShadow: { delay: 0.4, duration: 1.4, repeat: Infinity, repeatDelay: 2 } }
-                    : undefined
-                  }
-                  whileHover={{ scale: 1.12, y: -5, rotate: isTop ? 1 : -1, boxShadow: "0 8px 24px rgba(0,0,0,0.13)" }}
-                  whileTap={{ scale: 0.94 }}
-                  className={`flex-shrink-0 border-2 rounded-xl px-3 py-2 text-xs min-w-[84px] cursor-pointer ${colorClass}`}
-                  style={{ transformOrigin: "bottom center" }}
-                >
-                  {isTop && <div className="text-[10px] font-bold mb-0.5 opacity-60">🏆 今日最強</div>}
-                  <div className="font-semibold truncate max-w-[84px] text-[11px] opacity-70">{area}</div>
-                  <div className="mt-0.5 font-bold text-[14px]">{giftName}</div>
-                </motion.div>
+                <CpCard
+                  isTop={isTop}
+                  colorClass={colorClass}
+                  giftName={giftName}
+                  area={area}
+                />
               );
               return e.href ? (
                 <Link key={i} href={e.href}>{card}</Link>
-              ) : card;
+              ) : (
+                <div key={i}>{card}</div>
+              );
             })}
           </div>
           </div>
