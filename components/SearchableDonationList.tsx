@@ -1,6 +1,11 @@
 "use client";
 
-import { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo, useRef, useEffect, useLayoutEffect, useCallback } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Flip } from "gsap/Flip";
+
+gsap.registerPlugin(ScrollTrigger, Flip);
 import Link from "next/link";
 import { ChevronDown, ChevronUp, Calendar } from "lucide-react";
 import { debounce } from "@/utils";
@@ -69,6 +74,55 @@ export default function SearchableDonationList({
   const [showPastEvents, setShowPastEvents] = useState<boolean>(false);
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const flipStateRef = useRef<ReturnType<typeof Flip.getState> | null>(null);
+
+  const captureFlipState = useCallback(() => {
+    if (!contentRef.current) return;
+    const cards = contentRef.current.querySelectorAll(".card-item");
+    if (cards.length > 0) flipStateRef.current = Flip.getState(cards);
+  }, []);
+
+  const handleTagChange = useCallback((tags: string[]) => {
+    captureFlipState();
+    setSelectedTags(tags);
+  }, [captureFlipState]);
+
+  const handleCenterChange = useCallback((center: string | null) => {
+    captureFlipState();
+    setSelectedCenter(center);
+  }, [captureFlipState]);
+
+  useLayoutEffect(() => {
+    if (!flipStateRef.current) return;
+    const state = flipStateRef.current;
+    flipStateRef.current = null;
+    Flip.from(state, {
+      duration: 0.35,
+      ease: "power2.out",
+      stagger: 0.015,
+      onLeave: (els) => gsap.to(els, { opacity: 0, duration: 0.15 }),
+      onEnter: (els) => gsap.from(els, { opacity: 0, duration: 0.25 }),
+    });
+  }, [selectedCenter, selectedTags, searchKeyword]);
+
+  useLayoutEffect(() => {
+    if (!contentRef.current) return;
+    const cards = contentRef.current.querySelectorAll(".card-item");
+    if (!cards.length) return;
+    gsap.set(cards, { opacity: 0, y: 24 });
+    const batch = ScrollTrigger.batch(cards, {
+      onEnter: (els) => gsap.to(els, {
+        opacity: 1, y: 0, duration: 0.4, stagger: 0.05, ease: "power2.out", overwrite: "auto",
+      }),
+      start: "top 95%",
+      once: true,
+    });
+    return () => {
+      batch.forEach((st) => st.kill());
+      gsap.set(cards, { clearProps: "opacity,y" });
+    };
+  }, []);
 
   const {
     isLoading: isNearbyLoading,
@@ -152,6 +206,7 @@ export default function SearchableDonationList({
   }, [todayEvents, upcomingEvents]);
 
   const handleCenterSelect = (centerName: string, withScroll = true, toggle = true) => {
+    captureFlipState();
     setSelectedCenter((prev) => (toggle && prev === centerName ? null : centerName));
     if (withScroll) {
       setTimeout(() => {
@@ -223,8 +278,7 @@ export default function SearchableDonationList({
                   const card = (
                     <div
                       key={`${donation.id}-${index}`}
-                      className="h-full animate-fade-in-up"
-                      style={{ animationDelay: `${Math.min(index * 50, 250)}ms` }}
+                      className="card-item h-full"
                     >
                       <CardInfo
                         donation={donation}
@@ -324,9 +378,9 @@ export default function SearchableDonationList({
           currentRegionSlug={currentRegionSlug}
           currentCitySlug={currentCitySlug}
           selectedTags={selectedTags}
-          onTagChange={setSelectedTags}
+          onTagChange={handleTagChange}
           selectedCenter={selectedCenter}
-          onCenterChange={setSelectedCenter}
+          onCenterChange={handleCenterChange}
           onSearchChange={debounce(
             (e: React.ChangeEvent<HTMLInputElement>) =>
               setSearchKeyword(e.target.value),
@@ -336,7 +390,7 @@ export default function SearchableDonationList({
       </div>
       <div id="today-events" className="scroll-mt-44" />
       {/* 主要內容區 */}
-      <div className="space-y-8 pb-20">
+      <div ref={contentRef} className="space-y-8 pb-20">
         {/* 今日活動 */}
         {renderEventSection(
           todayEvents,

@@ -1,9 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { REGIONS } from "@/lib/regionConfig";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 interface BloodInventoryCenter {
   name: string;
@@ -155,6 +160,7 @@ export default function BloodInventoryPanel({
   const pathname = usePathname();
   const [inventory, setInventory] = useState<BloodInventory | null>(null);
   const [activeCenter, setActiveCenter] = useState(0);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetch("/api/blood-inventory")
@@ -164,6 +170,24 @@ export default function BloodInventoryPanel({
       })
       .catch(() => {});
   }, []);
+
+  useGSAP(() => {
+    if (!panelRef.current || !inventory) return;
+    const drops = panelRef.current.querySelectorAll(".blood-drop-item");
+    gsap.from(drops, {
+      opacity: 0,
+      y: 30,
+      scale: 0.7,
+      duration: 0.5,
+      stagger: 0.1,
+      ease: "back.out(1.7)",
+      scrollTrigger: {
+        trigger: panelRef.current,
+        start: "top 85%",
+        once: true,
+      },
+    });
+  }, { scope: panelRef, dependencies: [inventory] });
 
   if (!inventory || pathname !== "/") return null;
 
@@ -194,7 +218,7 @@ export default function BloodInventoryPanel({
   const center = inventory.centers[activeCenter];
 
   return (
-    <div className="rounded-2xl border border-gray-200/60 bg-white overflow-hidden shadow-sm">
+    <div ref={panelRef} className="rounded-2xl border border-gray-200/60 bg-white overflow-hidden shadow-sm">
       {/* 頂部警示橫幅 */}
       {urgentCount > 0 && (
         <div className="bg-gray-50 border-b border-gray-100 px-4 py-2.5 flex items-center gap-2">
@@ -239,14 +263,15 @@ export default function BloodInventoryPanel({
         {/* 血滴水位圖 */}
         <div className="flex justify-around items-end py-2">
           {BLOOD_TYPES.map((t, i) => (
-            <BloodDrop
-              key={`${center.name}-${t}`}
-              type={t}
-              status={(center.bloodTypes[t] as StatusKey) || "unknown"}
-              delay={i * 80}
-              onSelect={onCenterSelect ? () => onCenterSelect(center.name, true, false) : undefined}
-              isSelected={selectedCenter === center.name}
-            />
+            <div key={`${center.name}-${t}`} className="blood-drop-item">
+              <BloodDrop
+                type={t}
+                status={(center.bloodTypes[t] as StatusKey) || "unknown"}
+                delay={i * 80}
+                onSelect={onCenterSelect ? () => onCenterSelect(center.name, true, false) : undefined}
+                isSelected={selectedCenter === center.name}
+              />
+            </div>
           ))}
         </div>
 

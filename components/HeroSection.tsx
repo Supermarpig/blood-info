@@ -30,8 +30,9 @@ import BloodInventoryPanel from "@/components/BloodInventoryPanel";
 import { GIFTS } from "@/lib/giftConfig";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/SplitText";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, SplitText);
 
 interface CpEvent {
   href?: string;
@@ -265,10 +266,31 @@ export default function HeroSection({
   selectedCenter,
   filterLabel,
 }: HeroSectionProps) {
+  const heroBannerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!heroBannerRef.current) return;
+    const h2 = heroBannerRef.current.querySelector("h2");
+    const sub = heroBannerRef.current.querySelector(".hero-sub");
+    if (!h2 || !sub) return;
+    const splitH2 = new SplitText(h2, { type: "chars" });
+    const splitSub = new SplitText(sub, { type: "chars" });
+    gsap.timeline({ delay: 0.55 })
+      .from(splitH2.chars, {
+        opacity: 0, y: 18,
+        stagger: 0.05, duration: 0.35, ease: "power2.out",
+      })
+      .from(splitSub.chars, {
+        opacity: 0, y: 10,
+        stagger: 0.03, duration: 0.25, ease: "power2.out",
+      }, "-=0.1");
+  }, { scope: heroBannerRef });
+
   return (
     <div className="mb-6 space-y-4">
       {/* Hero Banner */}
       <div
+        ref={heroBannerRef}
         className="relative bg-gradient-to-br from-red-600 via-rose-600 to-pink-700 rounded-2xl p-6 overflow-hidden animate-fade-in-up"
         style={{ animationDuration: "0.5s" }}
       >
@@ -324,7 +346,7 @@ export default function HeroSection({
         <h2 className="text-2xl font-extrabold text-white leading-snug">
           你的 250cc
         </h2>
-        <p className="text-xl font-bold text-pink-200 mb-4">是別人的全部</p>
+        <p className="hero-sub text-xl font-bold text-pink-200 mb-4">是別人的全部</p>
 
         <GiftPills />
       </div>
