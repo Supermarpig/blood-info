@@ -59,7 +59,11 @@ function pickAutoRec(
   const withGifts = events
     .map((e) => ({
       e,
-      gifts: e.tags?.length ? e.tags : e.pttData?.tags || [],
+      gifts: e.subTags?.length
+        ? e.subTags.map((t) => t.split("－")[1] ?? t)
+        : e.tags?.length
+        ? e.tags
+        : e.pttData?.tags || [],
     }))
     .filter((x) => x.gifts.length > 0);
   if (withGifts.length === 0) return null;

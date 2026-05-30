@@ -23,6 +23,7 @@ interface DonationEvent {
   center?: string;
   detailUrl?: string;
   tags?: string[];
+  subTags?: string[];
   coordinates?: { lat: number; lng: number };
   pttData?: { rawLine: string; images: string[]; url: string; tags?: string[] };
   reportData?: { images: string[]; issueUrl: string };
@@ -325,6 +326,21 @@ export default async function ActivityPage({ params }: PageProps) {
                     </Link>
                   ))}
                 </div>
+                {event.subTags && event.subTags.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5 mt-2">
+                    {event.subTags.map((tag) => {
+                      const name = tag.split("－")[1] ?? tag;
+                      return (
+                        <span
+                          key={tag}
+                          className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded-full"
+                        >
+                          {name}
+                        </span>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
             )}
           </div>

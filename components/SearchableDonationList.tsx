@@ -16,6 +16,8 @@ import { REGIONS } from "@/lib/regionConfig";
 import { GIFTS } from "@/lib/giftConfig";
 import { getCityBySlug } from "@/lib/cityConfig";
 import { getRegionBySlug } from "@/lib/regionConfig";
+import { getEventCpScore, getTopSubTag } from "@/lib/cpScore";
+import { eventShortId } from "@/lib/eventId";
 
 // 每 AD_INTERVAL 張捐血卡片後插入一張廣告卡
 const AD_INTERVAL = 10;
@@ -262,6 +264,21 @@ export default function SearchableDonationList({
     [upcomingEvents]
   );
 
+  const cpEvents = useMemo(() => {
+    return Object.values(todayEvents)
+      .flat()
+      .filter((e) => e.subTags?.length)
+      .map((e) => ({
+        href: e.id ? `/activity/${e.activityDate}-${eventShortId(e.id)}` : undefined,
+        location: e.location,
+        score: getEventCpScore(e.subTags),
+        topTag: getTopSubTag(e.subTags),
+      }))
+      .filter((e) => e.score >= 2 && e.topTag)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5) as { href?: string; location: string; score: number; topTag: string }[];
+  }, [todayEvents]);
+
   const filterLabel = useMemo(() => {
     const parts: string[] = [];
     if (staticFilterLabel) parts.push(staticFilterLabel);
@@ -275,25 +292,13 @@ export default function SearchableDonationList({
     return parts.join("");
   }, [staticFilterLabel, selectedCenter, selectedTags]);
 
-  // 取得「今日」有的贈品類型（使用篩選後的資料）
-  const todayGiftTags = useMemo(() => {
-    const allTags = new Set<string>();
-    Object.values(todayEvents).forEach((events) => {
-      events.forEach((event) => {
-        const tags = event.tags || event.pttData?.tags || [];
-        tags.forEach((tag) => allTags.add(tag));
-      });
-    });
-    return Array.from(allTags);
-  }, [todayEvents]);
-
   return (
     <div className="max-w-7xl mx-auto">
       {/* Hero Section - 快速行動區 */}
       <HeroSection
         todayCount={todayCount}
         upcomingCount={upcomingCount}
-        todayGiftTags={todayGiftTags}
+        cpEvents={cpEvents}
         onFindNearby={handleFindNearby}
         onCenterSelect={handleCenterSelect}
         selectedCenter={selectedCenter}

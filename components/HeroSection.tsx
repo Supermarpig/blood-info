@@ -6,7 +6,6 @@ import {
   Calendar,
   Sparkles,
   TrendingUp,
-  Gift,
   Heart,
   Film,
   Tag,
@@ -29,11 +28,26 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import BloodInventoryPanel from "@/components/BloodInventoryPanel";
 import { GIFTS } from "@/lib/giftConfig";
+import { motion } from "framer-motion";
+
+interface CpEvent {
+  href?: string;
+  location: string;
+  score: number;
+  topTag: string;
+}
+
+const CP_BADGE: Record<number, string> = {
+  5: "bg-red-50 border-red-200 text-red-800",
+  4: "bg-orange-50 border-orange-200 text-orange-800",
+  3: "bg-yellow-50 border-yellow-200 text-yellow-800",
+  2: "bg-gray-50 border-gray-200 text-gray-600",
+};
 
 interface HeroSectionProps {
   todayCount: number;
   upcomingCount: number;
-  todayGiftTags: string[];
+  cpEvents?: CpEvent[];
   onFindNearby: () => void;
   onCenterSelect?: (
     center: string,
@@ -168,7 +182,7 @@ function AnimatedNumber({ value }: { value: number }) {
 export default function HeroSection({
   todayCount,
   upcomingCount,
-  todayGiftTags,
+  cpEvents,
   onFindNearby,
   onCenterSelect,
   selectedCenter,
@@ -295,18 +309,45 @@ export default function HeroSection({
         </a>
       </div>
 
-      {/* 今日贈品提示 */}
-      {todayGiftTags.length > 0 && (
-        <div
-          className="flex items-center gap-2.5 bg-amber-50 border border-amber-200/50 rounded-xl px-4 py-3 animate-fade-in-up"
-          style={{ animationDelay: "180ms" }}
-        >
-          <div className="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-            <Gift className="w-4 h-4 text-amber-600" />
+      {/* 今日精選贈品 */}
+      {cpEvents && cpEvents.length > 0 && (
+        <div className="animate-fade-in-up" style={{ animationDelay: "180ms" }}>
+          <p className="text-xs text-gray-400 mb-1.5">今日精選贈品</p>
+          <div className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-1 p-4">
+          <div className="flex gap-2 px-1">
+            {cpEvents.map((e, i) => {
+              const giftName = e.topTag.split("－")[1] ?? e.topTag;
+              const area = (e.location.match(/^([^\d]+)/)?.[1] ?? e.location).trim().slice(0, 9);
+              const colorClass = CP_BADGE[e.score] ?? CP_BADGE[2];
+              const isTop = i === 0;
+              const card = (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.6, y: 16 }}
+                  animate={isTop
+                    ? { opacity: 1, scale: [1, 1.04, 1], y: 0, boxShadow: ["0 0 0px rgba(0,0,0,0)", "0 0 12px rgba(251,146,60,0.5)", "0 0 0px rgba(0,0,0,0)"] }
+                    : { opacity: 1, scale: 1, y: 0 }
+                  }
+                  transition={isTop
+                    ? { delay: i * 0.08, type: "spring", stiffness: 400, damping: 18, boxShadow: { delay: 0.4, duration: 1.4, repeat: Infinity, repeatDelay: 2 }, scale: { delay: 0.3, duration: 0.6 } }
+                    : { delay: i * 0.08, type: "spring", stiffness: 400, damping: 18 }
+                  }
+                  whileHover={{ scale: 1.12, y: -5, rotate: isTop ? 1 : -1, boxShadow: "0 8px 24px rgba(0,0,0,0.13)" }}
+                  whileTap={{ scale: 0.94 }}
+                  className={`flex-shrink-0 border-2 rounded-xl px-3 py-2 text-xs min-w-[84px] cursor-pointer ${colorClass}`}
+                  style={{ transformOrigin: "bottom center" }}
+                >
+                  {isTop && <div className="text-[10px] font-bold mb-0.5 opacity-60">🏆 今日最強</div>}
+                  <div className="font-semibold truncate max-w-[84px] text-[11px] opacity-70">{area}</div>
+                  <div className="mt-0.5 font-bold text-[14px]">{giftName}</div>
+                </motion.div>
+              );
+              return e.href ? (
+                <Link key={i} href={e.href}>{card}</Link>
+              ) : card;
+            })}
           </div>
-          <p className="text-sm font-medium text-amber-800">
-            今日贈品：{todayGiftTags.join("、")}
-          </p>
+          </div>
         </div>
       )}
 
