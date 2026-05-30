@@ -10,12 +10,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-interface BloodInventoryCenter {
+export interface BloodInventoryCenter {
   name: string;
   bloodTypes: Record<string, string>;
 }
 
-interface BloodInventory {
+export interface BloodInventory {
   updatedAt: string;
   centers: BloodInventoryCenter[];
 }
@@ -153,23 +153,26 @@ function BloodDrop({
 export default function BloodInventoryPanel({
   onCenterSelect,
   selectedCenter,
+  initialInventory,
 }: {
   onCenterSelect?: (center: string, withScroll?: boolean, toggle?: boolean) => void;
   selectedCenter?: string | null;
+  initialInventory?: BloodInventory;
 }) {
   const pathname = usePathname();
-  const [inventory, setInventory] = useState<BloodInventory | null>(null);
+  const [inventory, setInventory] = useState<BloodInventory | null>(initialInventory ?? null);
   const [activeCenter, setActiveCenter] = useState(0);
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (initialInventory) return;
     fetch("/api/blood-inventory")
       .then((res) => res.json())
       .then((json) => {
         if (json.success && json.data) setInventory(json.data);
       })
       .catch(() => {});
-  }, []);
+  }, [initialInventory]);
 
   useGSAP(() => {
     if (!panelRef.current || !inventory) return;

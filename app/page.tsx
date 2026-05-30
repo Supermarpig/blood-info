@@ -1,4 +1,6 @@
 // app/page.tsx
+import { promises as fs } from "fs";
+import path from "path";
 import Link from "next/link";
 import { Search as SearchIcon } from "lucide-react";
 import SearchModal from "@/components/SearchModal";
@@ -70,6 +72,15 @@ function parseTime(
 export default async function BloodDonationPage() {
   let data: Record<string, DonationEvent[]> = {};
   let error = null;
+  let initialInventory = undefined;
+
+  try {
+    const inventoryPath = path.join(process.cwd(), "data", "bloodInventory.json");
+    const raw = await fs.readFile(inventoryPath, "utf-8");
+    initialInventory = JSON.parse(raw);
+  } catch {
+    // 讀不到就讓 client 自己 fetch
+  }
 
   try {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
@@ -280,7 +291,7 @@ export default async function BloodDonationPage() {
           <AddDonationEventModal />
         </div>
       </div>
-      <SearchableDonationList data={data} />
+      <SearchableDonationList data={data} initialInventory={initialInventory} />
 
       <details className="my-8 rounded-lg border border-gray-100 bg-gray-50/60 group">
         <summary className="flex items-center justify-between gap-2 p-5 cursor-pointer list-none select-none">
@@ -314,7 +325,7 @@ export default async function BloodDonationPage() {
 
       <InternalLinks />
       <FaqSection />
-      <AnnouncementTab />
+      <AnnouncementTab todayEvents={data[today] ?? []} />
       <HealthFloatingButton />
       <EligibilityFloatingButton />
     </div>

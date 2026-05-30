@@ -51,11 +51,11 @@ function todayStr() {
   return new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Taipei" });
 }
 
-/** 從捐血活動資料自動挑「今天、有贈品」的一間 */
+/** 從今日捐血活動自動挑「有贈品」的一間 */
 function pickAutoRec(
   data: Record<string, DonationEvent[]>
 ): AutoRec | null {
-  const events = data[todayStr()] || [];
+  const events = data[todayStr()] ?? [];
   const withGifts = events
     .map((e) => ({
       e,
@@ -77,7 +77,7 @@ function pickAutoRec(
   return { location: best.e.location, gifts: best.gifts, href };
 }
 
-export default function AnnouncementTab() {
+export default function AnnouncementTab({ todayEvents = [] }: { todayEvents?: DonationEvent[] }) {
   const [ann, setAnn] = useState<Announcement | null>(null);
   const [autoRec, setAutoRec] = useState<AutoRec | null>(null);
   const [ready, setReady] = useState(false);
@@ -87,25 +87,20 @@ export default function AnnouncementTab() {
   const [dot, setDot] = useState(false); // tab 上未讀紅點
 
   useEffect(() => {
+    setAutoRec(pickAutoRec({ [todayStr()]: todayEvents }));
+  }, [todayEvents]);
+
+  useEffect(() => {
     let active = true;
-    Promise.all([
-      fetch("/api/announcement")
-        .then((r) => r.json())
-        .catch(() => null),
-      fetch("/api/blood-donations")
-        .then((r) => r.json())
-        .catch(() => null),
-    ]).then(([annRes, donRes]) => {
-      if (!active) return;
-      setAnn(annRes?.success ? (annRes.data as Announcement) : null);
-      if (donRes?.success && donRes.data) {
-        setAutoRec(pickAutoRec(donRes.data));
-      }
-      setReady(true);
-    });
-    return () => {
-      active = false;
-    };
+    fetch("/api/announcement")
+      .then((r) => r.json())
+      .catch(() => null)
+      .then((annRes) => {
+        if (!active) return;
+        setAnn(annRes?.success ? (annRes.data as Announcement) : null);
+        setReady(true);
+      });
+    return () => { active = false; };
   }, []);
 
   // 後台優先；後台沒填的欄位用自動推薦補上。autoRecommend 關閉時不自動推薦。

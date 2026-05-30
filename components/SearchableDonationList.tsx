@@ -15,6 +15,7 @@ import BackToTopButton from "@/components/BackToTopButton";
 import { Button } from "@/components/ui/button";
 import { useNearbyLocations } from "@/hooks/useNearbyLocations";
 import HeroSection from "@/components/HeroSection";
+import type { BloodInventory } from "@/components/BloodInventoryPanel";
 import NearbyMapSection from "@/components/NearbyMapSection";
 import FilterPanel from "@/components/FilterPanel";
 import { REGIONS } from "@/lib/regionConfig";
@@ -60,6 +61,7 @@ interface SearchableDonationListProps {
   currentCitySlug?: string;
   /** 靜態 filter 標籤（如贈品頁的贈品名稱），會固定顯示在卡片標題前 */
   staticFilterLabel?: string;
+  initialInventory?: BloodInventory;
 }
 
 export default function SearchableDonationList({
@@ -67,11 +69,16 @@ export default function SearchableDonationList({
   currentRegionSlug,
   currentCitySlug,
   staticFilterLabel,
+  initialInventory,
 }: SearchableDonationListProps) {
   const [searchKeyword, setSearchKeyword] = useState<string>("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedCenter, setSelectedCenter] = useState<string | null>(null);
   const [showPastEvents, setShowPastEvents] = useState<boolean>(false);
+  const [upcomingDaysLimit, setUpcomingDaysLimit] = useState<number>(5);
+  const [todayCardLimit, setTodayCardLimit] = useState<number>(10);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const todaySentinelRef = useRef<HTMLDivElement>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -122,6 +129,28 @@ export default function SearchableDonationList({
       batch.forEach((st) => st.kill());
       gsap.set(cards, { clearProps: "opacity,y" });
     };
+  }, []);
+
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+    const observer = new IntersectionObserver(
+      (entries) => { if (entries[0].isIntersecting) setUpcomingDaysLimit((p) => p + 7); },
+      { rootMargin: "400px" }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const sentinel = todaySentinelRef.current;
+    if (!sentinel) return;
+    const observer = new IntersectionObserver(
+      (entries) => { if (entries[0].isIntersecting) setTodayCardLimit((p) => p + 15); },
+      { rootMargin: "400px" }
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
   }, []);
 
   const {
@@ -196,6 +225,27 @@ export default function SearchableDonationList({
       pastEvents: _pastEvents,
     };
   }, [data, searchKeyword, selectedTags, selectedCenter, today]);
+
+  const visibleUpcomingEvents = useMemo(() => {
+    const dates = Object.keys(upcomingEvents).sort();
+    const limited = dates.slice(0, upcomingDaysLimit);
+    return Object.fromEntries(limited.map((d) => [d, upcomingEvents[d]]));
+  }, [upcomingEvents, upcomingDaysLimit]);
+
+  const visibleTodayEvents = useMemo(() => {
+    return Object.fromEntries(
+      Object.entries(todayEvents).map(([d, events]) => [d, events.slice(0, todayCardLimit)])
+    );
+  }, [todayEvents, todayCardLimit]);
+
+  const totalTodayCards = useMemo(
+    () => Object.values(todayEvents).reduce((s, arr) => s + arr.length, 0),
+    [todayEvents]
+  );
+  const hasMoreToday = totalTodayCards > todayCardLimit;
+
+  const totalUpcomingDays = Object.keys(upcomingEvents).length;
+  const hasMoreUpcoming = totalUpcomingDays > upcomingDaysLimit;
 
   // 取得所有當前和未來的活動事件（用於找附近功能）
   const allCurrentEvents = useMemo(() => {
@@ -357,6 +407,7 @@ export default function SearchableDonationList({
         onCenterSelect={handleCenterSelect}
         selectedCenter={selectedCenter}
         filterLabel={filterLabel}
+        initialInventory={initialInventory}
       />
 
       {/* ── 離你最近的捐血點 ── */}
@@ -393,21 +444,23 @@ export default function SearchableDonationList({
       <div ref={contentRef} className="space-y-8 pb-20">
         {/* 今日活動 */}
         {renderEventSection(
-          todayEvents,
+          visibleTodayEvents,
           "今日活動",
           <span className="relative flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
           </span>
         )}
+        {hasMoreToday && <div ref={todaySentinelRef} className="h-px" />}
 
         {/* 未來活動 */}
         <div id="upcoming-events" className="scroll-mt-44" />
         {renderEventSection(
-          upcomingEvents,
+          visibleUpcomingEvents,
           "即將開始",
           <span className="inline-block w-2 h-2 rounded-full bg-blue-500 ml-1"></span>
         )}
+        {hasMoreUpcoming && <div ref={sentinelRef} className="h-px" />}
 
         {/* 歷史活動控制 */}
         <div className="pt-8 border-t border-gray-100">

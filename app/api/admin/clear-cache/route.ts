@@ -1,7 +1,8 @@
 // /app/api/admin/clear-cache/route.ts
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/apiAuth";
-import { clearAnnouncementCache } from "@/lib/announcementCache";
+import { revalidateTag } from "next/cache";
+import { ANNOUNCEMENT_CACHE_TAG } from "@/services/announcementService";
 import { clearBloodDonationsCache } from "@/app/api/blood-donations/route";
 
 export const dynamic = "force-dynamic";
@@ -12,7 +13,7 @@ export async function POST() {
   if (unauthorized) return unauthorized;
 
   try {
-    clearAnnouncementCache();
+    revalidateTag(ANNOUNCEMENT_CACHE_TAG, {});
     clearBloodDonationsCache();
     return NextResponse.json({
       success: true,

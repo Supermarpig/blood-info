@@ -26,7 +26,7 @@ const GIFT_ICONS: Record<string, LucideIcon> = {
 };
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import BloodInventoryPanel from "@/components/BloodInventoryPanel";
+import BloodInventoryPanel, { type BloodInventory } from "@/components/BloodInventoryPanel";
 import { GIFTS } from "@/lib/giftConfig";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -60,6 +60,7 @@ interface HeroSectionProps {
   ) => void;
   selectedCenter?: string | null;
   filterLabel?: string;
+  initialInventory?: BloodInventory;
 }
 
 // 星星位置與動畫延遲設定
@@ -265,6 +266,7 @@ export default function HeroSection({
   onCenterSelect,
   selectedCenter,
   filterLabel,
+  initialInventory,
 }: HeroSectionProps) {
   const heroBannerRef = useRef<HTMLDivElement>(null);
 
@@ -442,6 +444,7 @@ export default function HeroSection({
       <BloodInventoryPanel
         onCenterSelect={onCenterSelect}
         selectedCenter={selectedCenter}
+        initialInventory={initialInventory}
       />
 
       {/* 主要行動按鈕 */}

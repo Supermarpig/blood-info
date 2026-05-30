@@ -1,10 +1,13 @@
 // /services/announcementService.ts
 // 站台公告 / 本週推薦：以一個帶 `announcement` 標籤的 GitHub Issue 當儲存。
+import { unstable_cache } from "next/cache";
 import {
   listIssues,
   createIssue,
   updateIssue,
 } from "@/services/githubIssuesService";
+
+export const ANNOUNCEMENT_CACHE_TAG = "announcement";
 
 const LABEL = "announcement";
 const TITLE = "[公告] 網站公告設定（系統用，請勿關閉）";
@@ -87,6 +90,16 @@ export async function getAnnouncement(): Promise<{
   if (issue.state !== "open") data.enabled = false;
   return { data, issueNumber: issue.number, state: issue.state };
 }
+
+/** 讀取公告（含 Next.js 跨 invocation 快取，5 分鐘 TTL）。前台請用這個。 */
+export const getCachedAnnouncement = unstable_cache(
+  async (): Promise<Announcement> => {
+    const { data } = await getAnnouncement();
+    return data;
+  },
+  [ANNOUNCEMENT_CACHE_TAG],
+  { revalidate: 300, tags: [ANNOUNCEMENT_CACHE_TAG] }
+);
 
 /** 儲存公告（更新既有 issue 或建立新 issue），存檔時會重新開啟 issue 使其生效。 */
 export async function saveAnnouncement(

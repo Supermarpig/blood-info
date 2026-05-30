@@ -1,8 +1,8 @@
 // /app/api/admin/announcement/route.ts
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/apiAuth";
-import { getAnnouncement, saveAnnouncement } from "@/services/announcementService";
-import { clearAnnouncementCache } from "@/lib/announcementCache";
+import { getAnnouncement, saveAnnouncement, ANNOUNCEMENT_CACHE_TAG } from "@/services/announcementService";
+import { revalidateTag } from "next/cache";
 
 export const dynamic = "force-dynamic";
 
@@ -48,7 +48,7 @@ export async function PUT(request: Request) {
       ctaUrl: (body.ctaUrl || "").trim(),
       autoRecommend: body.autoRecommend !== false,
     });
-    clearAnnouncementCache(); // 存檔後立即清除前台快取
+    revalidateTag(ANNOUNCEMENT_CACHE_TAG, {});
     return NextResponse.json({ success: true, data: saved });
   } catch (error) {
     console.error("Error saving announcement:", error);
