@@ -66,30 +66,41 @@ export default function DonateLanding() {
   const heroTitleRef = useRef<HTMLHeadingElement>(null);
   const heroSubRef = useRef<HTMLParagraphElement>(null);
   const dropRef = useRef<HTMLDivElement>(null);
+  const dropSvgRef = useRef<SVGSVGElement>(null);
   const statNumRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
   useGSAP(() => {
-    // ── Hero entrance: SplitText ─────────────────────────────────
+    // ── Grab refs early so we can use in entrance + idle ─────────
+    const dropEl = dropRef.current!;
+    const dropSvg = dropSvgRef.current!;
+
+    // ── Measure drop natural center before any animation ─────────
+    const dropRect = dropEl.getBoundingClientRect();
+    const dropNaturalCenterY = dropRect.top + dropRect.height / 2;
+    const yToCenter = window.innerHeight / 2 - dropNaturalCenterY;
+
+    // ── Hero entrance: drop falls in, then text ───────────────────
     const splitTitle = new SplitText(heroTitleRef.current!, { type: "chars" });
     const splitSub = new SplitText(heroSubRef.current!, { type: "chars" });
 
-    gsap.timeline({ delay: 0.35 })
+    gsap.timeline({ delay: 0.2 })
+      // drop pops in — power3.out has zero overshoot so it never exceeds natural size
+      .from(dropEl, { scale: 0.55, duration: 0.6, ease: "power3.out" }, 0)
+      // squash on landing
+      .to(dropSvg, { scaleY: 0.76, scaleX: 1.24, duration: 0.06, ease: "power2.in" }, 0.57)
+      .to(dropSvg, { scaleY: 1.08, scaleX: 0.93, duration: 0.08, ease: "power2.out" }, 0.62)
+      .to(dropSvg, { scaleY: 1, scaleX: 1, duration: 0.38, ease: "elastic.out(1, 0.45)" }, 0.68)
+      // text flies in right after
       .from(splitTitle.chars, {
         opacity: 0, y: 55, rotationX: -85,
         stagger: 0.04, duration: 0.65, ease: "back.out(1.8)",
         transformPerspective: 800,
-      })
+      }, 0.35)
       .from(splitSub.chars, {
         opacity: 0, y: 18, stagger: 0.02, duration: 0.4, ease: "power2.out",
       }, "-=0.3")
       .from(".hero-cta-group", { opacity: 0, y: 22, duration: 0.4, ease: "power2.out" }, "-=0.1")
       .from(".hero-scroll-hint", { opacity: 0, duration: 0.5 }, "+=0.3");
-
-    // ── Measure drop natural center before any animation ─────────
-    const dropEl = dropRef.current!;
-    const dropRect = dropEl.getBoundingClientRect();
-    const dropNaturalCenterY = dropRect.top + dropRect.height / 2;
-    const yToCenter = window.innerHeight / 2 - dropNaturalCenterY;
 
     // ── Set initial states ───────────────────────────────────────
     gsap.set(".blood-bg", { opacity: 0 });
@@ -99,7 +110,17 @@ export default function DonateLanding() {
       gsap.set(`.comp-text-${i}`, { opacity: 0, y: 24, xPercent: -50 });
     });
 
+    // ── Idle: float + gentle squash (no rotation — avoids snap on scroll) ──
+    // delays are long enough that entrance (~1.1s) finishes first
+    const idleFloat = gsap.to(dropEl, {
+      y: -11, duration: 2.3, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 1.6,
+    });
+    const idleSquash = gsap.to(dropSvg, {
+      scaleX: 0.94, scaleY: 1.06, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 1.9,
+    });
+
     // ── Mega timeline: one scrub controls everything ─────────────
+    // just kill idle tweens — no gsap.set snap; scrub timeline takes over naturally
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".mega-section",
@@ -107,6 +128,10 @@ export default function DonateLanding() {
         end: "+=500%",
         pin: true,
         scrub: 1.5,
+        onEnter: () => {
+          idleFloat.kill();
+          idleSquash.kill();
+        },
       },
     });
 
@@ -118,6 +143,10 @@ export default function DonateLanding() {
       // 8–32%: drop glides to center, shrinks
       .to(dropEl, { y: yToCenter, scale: 0.6, duration: 0.24, ease: "power1.inOut" }, 0.08)
 
+      // 28–33%: squash-bounce as it "lands" at center
+      .to(dropSvg, { scaleY: 0.78, scaleX: 1.22, duration: 0.03 }, 0.28)
+      .to(dropSvg, { scaleY: 1, scaleX: 1, duration: 0.05, ease: "back.out(2.5)" }, 0.30)
+
       // 18–34%: backgrounds swap
       .to(".hero-bg", { opacity: 0, duration: 0.16 }, 0.18)
       .to(".blood-bg", { opacity: 1, duration: 0.14 }, 0.22)
@@ -126,25 +155,31 @@ export default function DonateLanding() {
       // 32–36%: highlights fade before first morph
       .to(".drop-highlights", { opacity: 0, duration: 0.08 }, 0.32)
 
-      // 36–50%: morph → RBC oval, ring grows, text slides up
+      // 36–50%: pre-squash → morph → RBC oval, ring grows, text slides up
+      .to(dropSvg, { scaleX: 1.22, scaleY: 0.80, duration: 0.03 }, 0.36)
+      .to(dropSvg, { scaleX: 1, scaleY: 1, duration: 0.08, ease: "back.out(2.5)" }, 0.41)
       .to(".morph-path", { morphSVG: ".rbc-target", duration: 0.14 }, 0.36)
       .to(".morph-path", { attr: { fill: "#ef4444" }, duration: 0.06 }, 0.37)
       .to(".drop-ring-0", { scale: 1, opacity: 1, duration: 0.14 }, 0.36)
       .to(".comp-text-0", { opacity: 1, y: 0, duration: 0.14 }, 0.44)
 
-      // 60–68%: RBC exits → morph to platelet spiky shape
+      // 60–68%: RBC exits → pre-squash → morph to platelet spiky shape
       .to(".comp-text-0", { opacity: 0, y: -18, duration: 0.10 }, 0.60)
       .to(".drop-ring-0", { opacity: 0, scale: 0.85, duration: 0.10 }, 0.60)
+      .to(dropSvg, { scaleX: 1.22, scaleY: 0.80, duration: 0.03 }, 0.60)
       .to(".morph-path", { morphSVG: ".platelet-target", duration: 0.12 }, 0.60)
       .to(".morph-path", { attr: { fill: "#f59e0b" }, duration: 0.06 }, 0.61)
+      .to(dropSvg, { scaleX: 1, scaleY: 1, duration: 0.08, ease: "back.out(2.5)" }, 0.64)
       .to(".drop-ring-1", { scale: 1, opacity: 1, duration: 0.12 }, 0.64)
       .to(".comp-text-1", { opacity: 1, y: 0, duration: 0.14 }, 0.68)
 
-      // 79–88%: platelet exits → morph to plasma wide oval
+      // 79–88%: platelet exits → pre-squash → morph to plasma wide oval
       .to(".comp-text-1", { opacity: 0, y: -18, duration: 0.10 }, 0.79)
       .to(".drop-ring-1", { opacity: 0, scale: 0.85, duration: 0.10 }, 0.79)
+      .to(dropSvg, { scaleX: 1.22, scaleY: 0.80, duration: 0.03 }, 0.79)
       .to(".morph-path", { morphSVG: ".plasma-target", duration: 0.12 }, 0.79)
       .to(".morph-path", { attr: { fill: "#eab308" }, duration: 0.06 }, 0.80)
+      .to(dropSvg, { scaleX: 1, scaleY: 1, duration: 0.08, ease: "back.out(2.5)" }, 0.83)
       .to(".drop-ring-2", { scale: 1, opacity: 1, duration: 0.12 }, 0.83)
       .to(".comp-text-2", { opacity: 1, y: 0, duration: 0.14 }, 0.87);
 
@@ -197,11 +232,12 @@ export default function DonateLanding() {
 
         {/* Background layers */}
         <div className="hero-bg absolute inset-0 bg-gradient-to-br from-[#1c0008] via-[#3a0010] to-[#0a0205] pointer-events-none" aria-hidden />
-        <div className="blood-bg absolute inset-0 bg-[#06000a] pointer-events-none" aria-hidden />
+        <div className="blood-bg absolute inset-0 bg-[#06000a] pointer-events-none" style={{ opacity: 0 }} aria-hidden />
 
         {/* "血液的組成" label — absolute top center */}
         <p
           className="blood-label absolute top-8 left-1/2 text-white/20 text-[9px] tracking-[0.4em] uppercase font-medium whitespace-nowrap select-none z-20 pointer-events-none"
+          style={{ opacity: 0 }}
           aria-hidden
         />
 
@@ -216,6 +252,7 @@ export default function DonateLanding() {
               background: c.ringBg,
               border: `2px solid ${c.ringBorder}`,
               boxShadow: `0 0 60px ${c.ringBg}`,
+              opacity: 0,
             }}
             aria-hidden
           />
@@ -228,6 +265,7 @@ export default function DonateLanding() {
           style={{ willChange: "transform" }}
         >
           <svg
+            ref={dropSvgRef}
             viewBox="0 0 120 150"
             className="w-32 h-40 sm:w-40 sm:h-52"
             style={{ filter: "drop-shadow(0 0 48px rgba(220,38,38,0.45))" }}
@@ -242,10 +280,10 @@ export default function DonateLanding() {
               {/* MorphSVG target shapes — in defs so they are not rendered */}
               {/* RBC: flat biconcave disc (wide oval) */}
               <path className="rbc-target" d="M10 75 C10 50,32 30,60 30 C88 30,110 50,110 75 C110 100,88 120,60 120 C32 120,10 100,10 75 Z" />
-              {/* Platelet: spiky irregular blob */}
-              <path className="platelet-target" d="M50 15 C66 10,90 18,98 34 C108 28,116 44,108 56 C120 62,118 80,104 84 C110 98,100 112,86 108 C84 122,68 128,56 120 C48 130,32 124,30 110 C16 114,6 100,14 86 C2 80,2 62,16 56 C8 44,14 28,28 28 C22 14,38 8,50 15 Z" />
-              {/* Plasma: wide teardrop / rounded oval */}
-              <path className="plasma-target" d="M8 72 C8 36,30 8,60 8 C90 8,112 36,112 72 C112 108,90 138,60 138 C30 138,8 108,8 72 Z" />
+              {/* Platelet: irregular disc with 3 pseudopods (activated thrombocyte) */}
+              <path className="platelet-target" d="M55 18 C65 10,88 18,98 34 C108 26,116 42,106 58 C116 66,112 82,96 88 C100 100,88 112,72 116 C66 126,52 130,40 122 C28 126,14 114,16 98 C4 92,6 74,20 66 C6 56,12 38,28 32 C30 20,44 14,55 18 Z" />
+              {/* Plasma: wide horizontal oval — liquid has no fixed shape, wider than tall */}
+              <path className="plasma-target" d="M5 85 C5 65,22 52,46 50 C52 46,60 46,68 50 C92 52,115 65,115 85 C115 105,98 118,74 118 C64 122,56 122,46 118 C22 118,5 105,5 85 Z" />
             </defs>
             {/* Main morphable path — starts as blood drop */}
             <path
@@ -266,7 +304,7 @@ export default function DonateLanding() {
           <div
             key={i}
             className={`comp-text-${i} absolute left-1/2 text-center z-20 pointer-events-none`}
-            style={{ top: "calc(50% + 108px)", width: "min(340px, 88vw)" }}
+            style={{ top: "calc(50% + 108px)", width: "min(340px, 88vw)", opacity: 0 }}
             aria-hidden
           >
             <p className="text-white/28 text-[10px] font-semibold tracking-[0.28em] uppercase mb-2">
