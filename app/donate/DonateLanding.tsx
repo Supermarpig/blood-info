@@ -55,7 +55,7 @@ const STATS = [
 const STEPS = [
   { num: "01", title: "填寫問卷", desc: "確認健康狀況，約 3 分鐘" },
   { num: "02", title: "健康篩檢", desc: "血壓、血型、血色素快速測試" },
-  { num: "03", title: "捐血", desc: "全血 250–450cc，約 10 分鐘" },
+  { num: "03", title: "捐血", desc: "全血 250–500cc，約 10 分鐘" },
   { num: "04", title: "休息領贈品", desc: "補充點心飲料，帶走紀念品" },
 ];
 
@@ -66,6 +66,7 @@ export default function DonateLanding() {
   const heroTitleRef = useRef<HTMLHeadingElement>(null);
   const heroSubRef = useRef<HTMLParagraphElement>(null);
   const dropRef = useRef<HTMLDivElement>(null);
+  const dropEntranceRef = useRef<HTMLDivElement>(null);
   const dropSvgRef = useRef<SVGSVGElement>(null);
   const statNumRefs = useRef<(HTMLSpanElement | null)[]>([]);
 
@@ -84,8 +85,8 @@ export default function DonateLanding() {
     const splitSub = new SplitText(heroSubRef.current!, { type: "chars" });
 
     gsap.timeline({ delay: 0.2 })
-      // drop pops in — power3.out has zero overshoot so it never exceeds natural size
-      .from(dropEl, { scale: 0.55, duration: 0.6, ease: "power3.out" }, 0)
+      // drop pops in via inner wrapper — dropEl is reserved for scrub scale only
+      .from(dropEntranceRef.current!, { scale: 0.55, duration: 0.6, ease: "power3.out" }, 0)
       // squash on landing
       .to(dropSvg, { scaleY: 0.76, scaleX: 1.24, duration: 0.06, ease: "power2.in" }, 0.57)
       .to(dropSvg, { scaleY: 1.08, scaleX: 0.93, duration: 0.08, ease: "power2.out" }, 0.62)
@@ -136,6 +137,8 @@ export default function DonateLanding() {
           idleFloat.kill();
           idleSquash.kill();
           idleGlow.kill();
+          gsap.set(dropEl, { y: 0 });
+          gsap.set(dropSvg, { scaleX: 1, scaleY: 1, clearProps: "filter" });
         },
       },
     });
@@ -145,12 +148,12 @@ export default function DonateLanding() {
       .to(".hero-text-group", { opacity: 0, y: -30, duration: 0.15 }, 0)
       .to(".hero-scroll-hint", { opacity: 0, duration: 0.08 }, 0)
 
-      // 8–32%: drop glides to center, shrinks
-      .to(dropEl, { y: yToCenter, scale: 0.6, duration: 0.24, ease: "power1.inOut" }, 0.08)
+      // 0–32%: drop glides to center + shrinks linearly from first scroll pixel
+      .to(dropEl, { y: yToCenter, scale: 0.6, duration: 0.32, ease: "none" }, 0)
 
-      // 28–33%: squash-bounce as it "lands" at center
-      .to(dropSvg, { scaleY: 0.78, scaleX: 1.22, duration: 0.03 }, 0.28)
-      .to(dropSvg, { scaleY: 1, scaleX: 1, duration: 0.05, ease: "back.out(2.5)" }, 0.30)
+      // 32–37%: squash-bounce as it "lands" at center
+      .to(dropSvg, { scaleY: 0.78, scaleX: 1.22, duration: 0.03 }, 0.32)
+      .to(dropSvg, { scaleY: 1, scaleX: 1, duration: 0.05, ease: "back.out(2.5)" }, 0.35)
 
       // 18–34%: backgrounds swap
       .to(".hero-bg", { opacity: 0, duration: 0.16 }, 0.18)
@@ -336,6 +339,8 @@ export default function DonateLanding() {
           className="relative z-20 mb-8 flex-shrink-0"
           style={{ willChange: "transform" }}
         >
+          {/* inner wrapper: entrance scale only — scrub scale is on the outer dropRef */}
+          <div ref={dropEntranceRef}>
           <svg
             ref={dropSvgRef}
             viewBox="0 0 120 150"
@@ -369,6 +374,7 @@ export default function DonateLanding() {
               <ellipse cx="52" cy="46" rx="5" ry="8" fill="rgba(255,255,255,0.1)" />
             </g>
           </svg>
+          </div>
         </div>
 
         {/* Component text blocks — absolute centered below drop-at-center */}
