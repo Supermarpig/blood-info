@@ -469,7 +469,7 @@ export default function EligibilityClient() {
 
   useGSAP(() => {
     if (!progressRef.current) return;
-    gsap.to(progressRef.current, { width: `${pct}%`, duration: 0.6, ease: "back.out(1.4)" });
+    gsap.to(progressRef.current, { scaleX: pct / 100, duration: 0.6, ease: "back.out(1.4)" });
   }, { dependencies: [pct] });
 
   function startQuiz() {
@@ -530,7 +530,7 @@ export default function EligibilityClient() {
               <div
                 ref={progressRef}
                 className="h-full bg-gradient-to-r from-rose-400 to-red-500 rounded-full origin-left"
-                style={{ width: 0 }}
+                style={{ width: "100%", transform: "scaleX(0)" }}
               />
             </div>
           </div>

@@ -193,13 +193,14 @@ interface CpCardProps {
 
 function CpCard({ isTop, colorClass, giftName, area }: CpCardProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
   const loopRef = useRef<gsap.core.Tween | null>(null);
   const isHovering = useRef(false);
 
   const { contextSafe } = useGSAP(() => {
     if (!isTop) return;
-    loopRef.current = gsap.to(ref.current, {
-      boxShadow: "0 0 12px rgba(251,146,60,0.5)",
+    loopRef.current = gsap.to(glowRef.current, {
+      opacity: 1,
       duration: 1.4,
       delay: 0.4,
       yoyo: true,
@@ -244,13 +245,20 @@ function CpCard({ isTop, colorClass, giftName, area }: CpCardProps) {
   return (
     <div
       ref={ref}
-      className={`flex-shrink-0 border-2 rounded-xl px-3 py-2 text-xs min-w-[84px] cursor-pointer ${colorClass}`}
+      className={`relative flex-shrink-0 border-2 rounded-xl px-3 py-2 text-xs min-w-[84px] cursor-pointer ${colorClass}`}
       style={{ transformOrigin: "bottom center" }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onPointerDown={onPointerDown}
       onPointerUp={onPointerUp}
     >
+      {isTop && (
+        <div
+          ref={glowRef}
+          className="absolute inset-0 rounded-xl pointer-events-none"
+          style={{ boxShadow: "0 0 12px rgba(251,146,60,0.5)", opacity: 0 }}
+        />
+      )}
       {isTop && <div className="text-[10px] font-bold mb-0.5 opacity-60">🏆 今日最強</div>}
       <div className="font-semibold truncate max-w-[84px] text-[11px] opacity-70">{area}</div>
       <div className="mt-0.5 font-bold text-[14px]">{giftName}</div>
