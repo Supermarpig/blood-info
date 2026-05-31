@@ -118,6 +118,10 @@ export default function DonateLanding() {
     const idleSquash = gsap.to(dropSvg, {
       scaleX: 0.94, scaleY: 1.06, duration: 2.4, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 1.9,
     });
+    const idleGlow = gsap.to(dropSvg, {
+      filter: "drop-shadow(0 0 72px rgba(220,38,38,0.85)) drop-shadow(0 0 24px rgba(255,80,80,0.55))",
+      duration: 1.8, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 1.5,
+    });
 
     // ── Mega timeline: one scrub controls everything ─────────────
     // just kill idle tweens — no gsap.set snap; scrub timeline takes over naturally
@@ -131,6 +135,7 @@ export default function DonateLanding() {
         onEnter: () => {
           idleFloat.kill();
           idleSquash.kill();
+          idleGlow.kill();
         },
       },
     });
@@ -221,7 +226,71 @@ export default function DonateLanding() {
         opacity: 0, y: 55, duration: 0.8, ease: "power2.out",
         scrollTrigger: { trigger: ctaEl as Element, start: "top 78%", once: true },
       });
+      ScrollTrigger.create({
+        trigger: ctaEl,
+        start: "top 72%",
+        once: true,
+        onEnter: () => {
+          [".cta-ripple-1", ".cta-ripple-2"].forEach((sel, i) => {
+            const el = ctaEl.querySelector(sel);
+            if (!el) return;
+            gsap.timeline({ repeat: -1, delay: i * 1.1 })
+              .set(el, { scale: 1, opacity: 0.45 })
+              .to(el, { scale: 3.4, opacity: 0, duration: 2.6, ease: "power2.out" });
+          });
+        },
+      });
     }
+
+    // ── Floating ambient particles ────────────────────────────
+    const rng = (a: number, b: number) => a + Math.random() * (b - a);
+    const particleContainer = containerRef.current!.querySelector(".hero-particles") as HTMLElement;
+    const dots: HTMLElement[] = [];
+    for (let i = 0; i < 22; i++) {
+      const dot = document.createElement("span");
+      const size = rng(2, 7);
+      gsap.set(dot, {
+        position: "absolute",
+        display: "block",
+        borderRadius: "50%",
+        width: size,
+        height: size,
+        left: `${rng(5, 95)}%`,
+        top: `${rng(10, 95)}%`,
+        background: "#dc2626",
+        opacity: 0,
+        boxShadow: `0 0 ${size * 3}px rgba(220,38,38,0.55)`,
+      });
+      particleContainer.appendChild(dot);
+      dots.push(dot);
+      gsap.timeline({ repeat: -1, delay: rng(0, 9) })
+        .to(dot, { opacity: rng(0.08, 0.28), duration: rng(1, 2.5), ease: "power1.in" })
+        .to(dot, { y: -rng(100, 300), x: rng(-50, 50), opacity: 0, duration: rng(7, 15), ease: "none" }, "-=0.5")
+        .set(dot, { y: 0, x: 0, left: `${rng(5, 95)}%` });
+    }
+
+    // ── EKG heartbeat line ────────────────────────────────────
+    const ekgSvgEl = containerRef.current!.querySelector(".ekg-svg") as SVGSVGElement | null;
+    const ekgPath = ekgSvgEl?.querySelector(".ekg-path") as SVGPathElement | null;
+    if (ekgSvgEl && ekgPath) {
+      const len = ekgPath.getTotalLength();
+      gsap.set(ekgPath, { strokeDasharray: len, strokeDashoffset: len });
+      ScrollTrigger.create({
+        trigger: ekgSvgEl,
+        start: "top 82%",
+        once: true,
+        onEnter: () => gsap.to(ekgPath, {
+          strokeDashoffset: 0,
+          duration: 1.6,
+          ease: "power2.inOut",
+          onComplete: () => gsap.to(ekgPath, {
+            strokeOpacity: 0.15, duration: 1.4, ease: "sine.inOut", yoyo: true, repeat: -1,
+          }),
+        }),
+      });
+    }
+
+    return () => { dots.forEach(d => d.remove()); };
   }, { scope: containerRef });
 
   return (
@@ -233,6 +302,9 @@ export default function DonateLanding() {
         {/* Background layers */}
         <div className="hero-bg absolute inset-0 bg-gradient-to-br from-[#1c0008] via-[#3a0010] to-[#0a0205] pointer-events-none" aria-hidden />
         <div className="blood-bg absolute inset-0 bg-[#06000a] pointer-events-none" style={{ opacity: 0 }} aria-hidden />
+
+        {/* Ambient floating particles */}
+        <div className="hero-particles absolute inset-0 overflow-hidden pointer-events-none z-[6]" aria-hidden />
 
         {/* "血液的組成" label — absolute top center */}
         <p
@@ -361,7 +433,20 @@ export default function DonateLanding() {
       <section className="py-28 px-6 bg-gradient-to-b from-[#06000a] to-[#0a0205]">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-center text-3xl sm:text-4xl font-black text-white mb-3">捐血的影響力</h2>
-          <p className="text-center text-white/32 mb-16 text-sm tracking-wide">每一袋血，都是真實的生命延續</p>
+          <p className="text-center text-white/32 mb-10 text-sm tracking-wide">每一袋血，都是真實的生命延續</p>
+          <div className="flex justify-center mb-10">
+            <svg className="ekg-svg overflow-visible" width="320" height="36" viewBox="0 0 320 36" fill="none" aria-hidden>
+              <path
+                className="ekg-path"
+                d="M0 18 L78 18 L90 18 L97 3 L107 33 L117 3 L127 18 L320 18"
+                stroke="#ef4444"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeOpacity="0.45"
+              />
+            </svg>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-6">
             {STATS.map((s, i) => (
               <div key={i} className="stat-card text-center">
@@ -418,13 +503,17 @@ export default function DonateLanding() {
           <p className="text-rose-200/45 text-base mb-10 leading-relaxed">
             走進附近的捐血點，15 分鐘換來別人的第二次機會
           </p>
-          <Link
-            href="/"
-            className="inline-flex items-center gap-3 bg-white text-rose-700 font-black text-lg sm:text-xl px-10 py-5 rounded-2xl shadow-2xl hover:bg-rose-50 active:bg-rose-100 transition-colors"
-          >
-            <MapPin className="w-5 h-5 flex-shrink-0" />
-            立刻找附近捐血點
-          </Link>
+          <div className="relative inline-block">
+            <div className="cta-ripple-1 absolute inset-0 rounded-2xl pointer-events-none border border-white/40" />
+            <div className="cta-ripple-2 absolute inset-0 rounded-2xl pointer-events-none border border-white/25" />
+            <Link
+              href="/"
+              className="relative inline-flex items-center gap-3 bg-white text-rose-700 font-black text-lg sm:text-xl px-10 py-5 rounded-2xl shadow-2xl hover:bg-rose-50 active:bg-rose-100 transition-colors"
+            >
+              <MapPin className="w-5 h-5 flex-shrink-0" />
+              立刻找附近捐血點
+            </Link>
+          </div>
         </div>
       </section>
 
