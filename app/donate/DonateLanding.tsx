@@ -76,9 +76,15 @@ export default function DonateLanding() {
     const dropSvg = dropSvgRef.current!;
 
     // ── Measure drop natural center before any animation ─────────
+    // 落點要對齊 section 中心（rings/文字都是 top:50% 定位在 section），
+    // 不能用 window.innerHeight/2 —— 手機版內容溢出時 section 會高於視窗，
+    // 兩者基準不同會害血滴跑到圈圈上方。
+    const sectionEl = dropEl.closest(".mega-section") as HTMLElement;
+    const sectionRect = sectionEl.getBoundingClientRect();
+    const sectionCenterY = sectionRect.top + sectionRect.height / 2;
     const dropRect = dropEl.getBoundingClientRect();
     const dropNaturalCenterY = dropRect.top + dropRect.height / 2;
-    const yToCenter = window.innerHeight / 2 - dropNaturalCenterY;
+    const yToCenter = sectionCenterY - dropNaturalCenterY;
 
     // ── Hero entrance: drop falls in, then text ───────────────────
     const splitTitle = new SplitText(heroTitleRef.current!, { type: "chars" });
