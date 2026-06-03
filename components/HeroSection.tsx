@@ -39,6 +39,7 @@ interface CpEvent {
   location: string;
   score: number;
   topTag: string;
+  distance?: number;
 }
 
 const CP_BADGE: Record<number, string> = {
@@ -47,6 +48,13 @@ const CP_BADGE: Record<number, string> = {
   3: "bg-yellow-50 border-yellow-200 text-yellow-800",
   2: "bg-gray-50 border-gray-200 text-gray-600",
 };
+
+const DATE_OPTIONS = [
+  { label: "今天", value: 0 },
+  { label: "3天", value: 3 },
+  { label: "7天", value: 7 },
+  { label: "本月", value: 31 },
+] as const;
 
 interface HeroSectionProps {
   todayCount: number;
@@ -61,6 +69,9 @@ interface HeroSectionProps {
   selectedCenter?: string | null;
   filterLabel?: string;
   initialInventory?: BloodInventory;
+  daysAhead?: number;
+  onDaysAheadChange?: (days: number) => void;
+  nearbyCpEvents?: CpEvent[];
 }
 
 // 星星位置與動畫延遲設定
@@ -189,9 +200,10 @@ interface CpCardProps {
   colorClass: string;
   giftName: string;
   area: string;
+  topLabel?: string;
 }
 
-function CpCard({ isTop, colorClass, giftName, area }: CpCardProps) {
+function CpCard({ isTop, colorClass, giftName, area, topLabel }: CpCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
   const loopRef = useRef<gsap.core.Tween | null>(null);
@@ -259,7 +271,7 @@ function CpCard({ isTop, colorClass, giftName, area }: CpCardProps) {
           style={{ boxShadow: "0 0 12px rgba(251,146,60,0.5)", opacity: 0 }}
         />
       )}
-      {isTop && <div className="text-[10px] font-bold mb-0.5 opacity-60">🏆 今日最強</div>}
+      {isTop && <div className="text-[10px] font-bold mb-0.5 opacity-60">🏆 {topLabel ?? "今日最強"}</div>}
       <div className="font-semibold truncate max-w-[84px] text-[11px] opacity-70">{area}</div>
       <div className="mt-0.5 font-bold text-[14px]">{giftName}</div>
     </div>
@@ -275,6 +287,9 @@ export default function HeroSection({
   selectedCenter,
   filterLabel,
   initialInventory,
+  daysAhead,
+  onDaysAheadChange,
+  nearbyCpEvents,
 }: HeroSectionProps) {
   const heroBannerRef = useRef<HTMLDivElement>(null);
 
@@ -357,6 +372,13 @@ export default function HeroSection({
         <GiftPills />
       </div>
 
+      {/* 血液庫存儀表板 */}
+      <BloodInventoryPanel
+        onCenterSelect={onCenterSelect}
+        selectedCenter={selectedCenter}
+        initialInventory={initialInventory}
+      />
+
       {/* 統計卡片組 */}
       <div className="grid grid-cols-2 gap-3">
         <a
@@ -414,42 +436,71 @@ export default function HeroSection({
         </a>
       </div>
 
-      {/* 今日精選贈品 */}
-      {cpEvents && cpEvents.length > 0 && (
-        <div className="animate-fade-in-up" style={{ animationDelay: "180ms" }}>
-          <p className="text-xs text-gray-400 mb-1.5">今日精選贈品</p>
-          <div className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-1 p-4">
-          <div className="flex gap-2 px-1">
-            {cpEvents.map((e, i) => {
-              const giftName = e.topTag.split("－")[1] ?? e.topTag;
-              const area = (e.location.match(/^([^\d]+)/)?.[1] ?? e.location).trim().slice(0, 9);
-              const colorClass = CP_BADGE[e.score] ?? CP_BADGE[2];
-              const isTop = i === 0;
-              const card = (
-                <CpCard
-                  isTop={isTop}
-                  colorClass={colorClass}
-                  giftName={giftName}
-                  area={area}
-                />
-              );
-              return e.href ? (
-                <Link key={i} href={e.href}>{card}</Link>
-              ) : (
-                <div key={i}>{card}</div>
-              );
-            })}
-          </div>
-          </div>
+      {/* 日期範圍快速篩選 */}
+      {onDaysAheadChange && (
+        <div className="flex gap-2 animate-fade-in-up" style={{ animationDelay: "160ms" }}>
+          {DATE_OPTIONS.map((opt) => (
+            <button
+              key={opt.value}
+              onClick={() => onDaysAheadChange(opt.value)}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium border transition-all duration-150 ${
+                daysAhead === opt.value
+                  ? "bg-red-500 text-white border-red-500 shadow-sm"
+                  : "bg-white text-gray-600 border-gray-200 hover:border-red-300 hover:text-red-600"
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
         </div>
       )}
 
-      {/* 血液庫存儀表板 */}
-      <BloodInventoryPanel
-        onCenterSelect={onCenterSelect}
-        selectedCenter={selectedCenter}
-        initialInventory={initialInventory}
-      />
+      {/* 精選贈品（全台 + 附近同一列） */}
+      {cpEvents && cpEvents.length > 0 && (
+        <div className="animate-fade-in-up flex gap-3" style={{ animationDelay: "180ms" }}>
+          {/* 全台精選 */}
+          <div className="flex-1 min-w-0">
+            <p className="text-xs text-gray-400 mb-1.5">
+              {daysAhead === 0 || daysAhead == null ? "今日精選贈品" : `${daysAhead}天內精選贈品`}
+            </p>
+            <div className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              <div className="flex gap-2">
+                {cpEvents.map((e, i) => {
+                  const giftName = e.topTag.split("－")[1] ?? e.topTag;
+                  const area = (e.location.match(/^([^\d]+)/)?.[1] ?? e.location).trim().slice(0, 9);
+                  const colorClass = CP_BADGE[e.score] ?? CP_BADGE[2];
+                  const rangeLabel = daysAhead === 0 || daysAhead == null ? "今日最強" : `${daysAhead}天最強`;
+                  const card = (
+                    <CpCard isTop={i === 0} colorClass={colorClass} giftName={giftName} area={area} topLabel={rangeLabel} />
+                  );
+                  return e.href ? <Link key={i} href={e.href}>{card}</Link> : <div key={i}>{card}</div>;
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* 附近精選（定位開啟後才顯示） */}
+          {nearbyCpEvents && nearbyCpEvents.length > 0 && (
+            <div className="flex-shrink-0">
+              <p className="text-xs text-gray-400 mb-1.5 flex items-center gap-1">
+                <MapPin className="w-3 h-3" />
+                附近精選
+              </p>
+              <div className="flex gap-2">
+                {nearbyCpEvents.map((e, i) => {
+                  const giftName = e.topTag.split("－")[1] ?? e.topTag;
+                  const colorClass = CP_BADGE[e.score] ?? CP_BADGE[2];
+                  const nearbyLabel = daysAhead === 0 || daysAhead == null ? "今日附近最強" : `${daysAhead}天附近最強`;
+                  const card = (
+                    <CpCard isTop={i === 0} colorClass={colorClass} giftName={giftName} area={e.location.slice(0, 10)} topLabel={nearbyLabel} />
+                  );
+                  return e.href ? <Link key={i} href={e.href}>{card}</Link> : <div key={i}>{card}</div>;
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* 主要行動按鈕 */}
       <div

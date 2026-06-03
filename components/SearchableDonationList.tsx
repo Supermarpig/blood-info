@@ -74,9 +74,8 @@ export default function SearchableDonationList({
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedCenter, setSelectedCenter] = useState<string | null>(null);
   const [showPastEvents, setShowPastEvents] = useState<boolean>(false);
-  const [upcomingDaysLimit, setUpcomingDaysLimit] = useState<number>(5);
+  const [daysAhead, setDaysAhead] = useState<number>(0);
   const [todayCardLimit, setTodayCardLimit] = useState<number>(10);
-  const sentinelRef = useRef<HTMLDivElement>(null);
   const todaySentinelRef = useRef<HTMLDivElement>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerRef = useRef<HTMLDivElement>(null);
@@ -112,17 +111,6 @@ export default function SearchableDonationList({
     });
   }, [selectedCenter, selectedTags, searchKeyword]);
 
-
-  useEffect(() => {
-    const sentinel = sentinelRef.current;
-    if (!sentinel) return;
-    const observer = new IntersectionObserver(
-      (entries) => { if (entries[0].isIntersecting) setUpcomingDaysLimit((p) => p + 7); },
-      { rootMargin: "400px" }
-    );
-    observer.observe(sentinel);
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     const sentinel = todaySentinelRef.current;
@@ -209,10 +197,16 @@ export default function SearchableDonationList({
   }, [data, searchKeyword, selectedTags, selectedCenter, today]);
 
   const visibleUpcomingEvents = useMemo(() => {
-    const dates = Object.keys(upcomingEvents).sort();
-    const limited = dates.slice(0, upcomingDaysLimit);
-    return Object.fromEntries(limited.map((d) => [d, upcomingEvents[d]]));
-  }, [upcomingEvents, upcomingDaysLimit]);
+    if (daysAhead === 0) return {};
+    const [y, m, d] = today.split("-").map(Number);
+    const cutoff = new Date(y, m - 1, d + daysAhead);
+    const cutoffStr = cutoff.toLocaleDateString("en-CA");
+    return Object.fromEntries(
+      Object.entries(upcomingEvents)
+        .filter(([date]) => date <= cutoffStr)
+        .sort(([a], [b]) => a.localeCompare(b))
+    );
+  }, [upcomingEvents, daysAhead, today]);
 
   const visibleTodayEvents = useMemo(() => {
     return Object.fromEntries(
@@ -226,16 +220,14 @@ export default function SearchableDonationList({
   );
   const hasMoreToday = totalTodayCards > todayCardLimit;
 
-  const totalUpcomingDays = Object.keys(upcomingEvents).length;
-  const hasMoreUpcoming = totalUpcomingDays > upcomingDaysLimit;
 
-  // 取得所有當前和未來的活動事件（用於找附近功能）
+  // 取得所有當前和未來的活動事件（用於找附近功能，隨日期範圍篩選更新）
   const allCurrentEvents = useMemo(() => {
     const events: DonationEvent[] = [];
     Object.values(todayEvents).forEach((arr) => events.push(...arr));
-    Object.values(upcomingEvents).forEach((arr) => events.push(...arr));
+    Object.values(visibleUpcomingEvents).forEach((arr) => events.push(...arr));
     return events;
-  }, [todayEvents, upcomingEvents]);
+  }, [todayEvents, visibleUpcomingEvents]);
 
   const handleCenterSelect = (centerName: string, withScroll = true, toggle = true) => {
     captureFlipState();
@@ -351,8 +343,11 @@ export default function SearchableDonationList({
   );
 
   const cpEvents = useMemo(() => {
-    return Object.values(todayEvents)
-      .flat()
+    const allVisible = [
+      ...Object.values(todayEvents).flat(),
+      ...Object.values(visibleUpcomingEvents).flat(),
+    ];
+    return allVisible
       .filter((e) => e.subTags?.length)
       .map((e) => ({
         href: e.id ? `/activity/${e.activityDate}-${eventShortId(e.id)}` : undefined,
@@ -363,7 +358,53 @@ export default function SearchableDonationList({
       .filter((e) => e.score >= 2 && e.topTag)
       .sort((a, b) => b.score - a.score)
       .slice(0, 5) as { href?: string; location: string; score: number; topTag: string }[];
-  }, [todayEvents]);
+  }, [todayEvents, visibleUpcomingEvents]);
+
+  // 各血液中心大概座標，用來判斷使用者最近的區域
+  const CENTER_COORDS: Record<string, { lat: number; lng: number; name: string }> = {
+    台北: { lat: 25.05, lng: 121.53, name: "北區" },
+    新竹: { lat: 24.80, lng: 120.97, name: "桃竹苗" },
+    台中: { lat: 24.15, lng: 120.67, name: "中區" },
+    高雄: { lat: 22.63, lng: 120.30, name: "南區" },
+  };
+
+  const nearbyCpEvents = useMemo(() => {
+    if (!userLocation) return [];
+
+    // 找距離使用者最近的血液中心
+    const nearestCenter = Object.entries(CENTER_COORDS)
+      .map(([key, c]) => {
+        const dLat = (userLocation.lat - c.lat) * Math.PI / 180;
+        const dLng = (userLocation.lng - c.lng) * Math.PI / 180;
+        const a = Math.sin(dLat / 2) ** 2 + Math.cos(userLocation.lat * Math.PI / 180) * Math.cos(c.lat * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
+        return { key, name: c.name, dist: 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)) };
+      })
+      .sort((a, b) => a.dist - b.dist)[0];
+
+    // 附近推薦：跟 chip 一致，但至少往後 3 天（避免今天選 0 卻毫無資料）
+    const lookAhead = Math.max(daysAhead, 3);
+    const [y, m, d] = today.split("-").map(Number);
+    const cutoff = new Date(y, m - 1, d + lookAhead).toLocaleDateString("en-CA");
+    const pool = [
+      ...Object.values(todayEvents).flat(),
+      ...Object.entries(upcomingEvents)
+        .filter(([date]) => date <= cutoff)
+        .flatMap(([, evts]) => evts),
+    ];
+
+    return pool
+      .filter((e) => e.center === nearestCenter.key && e.subTags?.length)
+      .map((e) => ({
+        href: e.id ? `/activity/${e.activityDate}-${eventShortId(e.id)}` : undefined,
+        location: `${e.activityDate.slice(5).replace("-", "/")} ${e.location}`,
+        score: getEventCpScore(e.subTags),
+        topTag: getTopSubTag(e.subTags),
+      }))
+      .filter((e): e is typeof e & { topTag: string } => e.score >= 2 && e.topTag != null)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userLocation, todayEvents, visibleUpcomingEvents]);
 
   const filterLabel = useMemo(() => {
     const parts: string[] = [];
@@ -390,6 +431,9 @@ export default function SearchableDonationList({
         selectedCenter={selectedCenter}
         filterLabel={filterLabel}
         initialInventory={initialInventory}
+        daysAhead={daysAhead}
+        onDaysAheadChange={setDaysAhead}
+        nearbyCpEvents={nearbyCpEvents}
       />
 
       {/* ── 離你最近的捐血點 ── */}
@@ -442,7 +486,6 @@ export default function SearchableDonationList({
           "即將開始",
           <span className="inline-block w-2 h-2 rounded-full bg-blue-500 ml-1"></span>
         )}
-        {hasMoreUpcoming && <div ref={sentinelRef} className="h-px" />}
 
         {/* 歷史活動控制 */}
         <div className="pt-8 border-t border-gray-100">
