@@ -1,11 +1,16 @@
 "use client";
 
-import { useId, useState, useEffect, useCallback } from "react";
+import { useId, useState, useEffect, useCallback, useRef } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Loader2, Navigation2, ExternalLink, Gift, X } from "lucide-react";
+import { Loader2, Navigation2, ExternalLink, Gift, X, Heart } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { getGiftByTagId } from "@/lib/giftConfig";
+import { eventShortId } from "@/lib/eventId";
 import { NearbyLocation, UserLocation } from "@/hooks/useNearbyLocations";
+
+gsap.registerPlugin(useGSAP);
 
 const LeafletMap = dynamic(() => import("@/components/LeafletMap"), {
   ssr: false,
@@ -27,6 +32,72 @@ const LW = 80, LH = 28;
 
 function fmt(km: number) {
   return km < 1 ? `${Math.round(km * 1000)}m` : `${km.toFixed(1)}km`;
+}
+
+type DonationEvent = NearbyLocation["event"];
+
+function GiftPopover({ ev, onClose }: { ev: DonationEvent; onClose: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    // Slide up + fade in on mount
+    gsap.from(ref.current, { y: 14, opacity: 0, duration: 0.22, ease: "power2.out" });
+    // Heart pulse loop
+    gsap.to(".gift-popover-heart", {
+      scale: 1.35,
+      duration: 0.45,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+      transformOrigin: "center center",
+    });
+  }, { scope: ref });
+
+  const giftSlug = ev.tags && ev.tags.length > 0 ? getGiftByTagId(ev.tags[0])?.slug : null;
+
+  return (
+    <div
+      ref={ref}
+      className="absolute bottom-[84px] left-2 right-2 z-map-float bg-white/97 backdrop-blur-sm rounded-xl shadow-lg border border-amber-200 p-3"
+    >
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-xs font-bold text-amber-600 flex items-center gap-1">
+          <Gift className="w-3 h-3" /> 贈品資訊
+        </span>
+        <button onClick={onClose} className="text-[#7a7a7a] hover:text-[#171717]">
+          <X className="w-4 h-4" />
+        </button>
+      </div>
+      <p className="text-xs font-semibold text-[#171717] mb-1.5">{ev.organization}</p>
+      <div className="flex gap-1 flex-wrap mb-2">
+        {ev.tags?.map(tag => (
+          <span key={tag} className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">
+            {tag}
+          </span>
+        ))}
+      </div>
+      {(ev.customNote || ev.rawContent) && (
+        <p className="text-[10px] text-[#7a7a7a] line-clamp-2 mb-1.5">{ev.customNote || ev.rawContent}</p>
+      )}
+      <div className="flex items-center justify-between mt-2 pt-2 border-t border-amber-100">
+        {giftSlug ? (
+          <Link href={`/gift/${giftSlug}`} onClick={onClose} className="text-[10px] text-amber-600 font-medium">
+            全部{ev.tags![0]}活動
+          </Link>
+        ) : <span />}
+        {ev.id && (
+          <Link
+            href={`/activity/${ev.activityDate}-${eventShortId(ev.id)}`}
+            onClick={onClose}
+            className="flex items-center gap-1 text-xs font-semibold text-[#e11d2a] px-3 py-1 rounded-full border-2 border-[#e11d2a] bg-white hover:bg-[#fff0f1] transition-colors"
+          >
+            <Heart className="gift-popover-heart w-3 h-3 fill-[#e11d2a]" />
+            活動詳情
+          </Link>
+        )}
+      </div>
+    </div>
+  );
 }
 
 interface Props {
@@ -202,41 +273,12 @@ export default function NearbyMapSection({ nearbyLocations, userLocation, isLoad
         </div>{/* end map clip div */}
 
         {/* Gift popover */}
-        {openGiftIndex !== null && nearbyLocations[openGiftIndex] && (() => {
-          const ev = nearbyLocations[openGiftIndex].event;
-          return (
-            <div className="absolute bottom-[84px] left-2 right-2 z-map-float bg-white/97 backdrop-blur-sm rounded-xl shadow-lg border border-amber-200 p-3">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold text-amber-600 flex items-center gap-1">
-                  <Gift className="w-3 h-3" /> 贈品資訊
-                </span>
-                <button onClick={() => setOpenGiftIndex(null)} className="text-[#7a7a7a] hover:text-[#171717]">
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-              <p className="text-xs font-semibold text-[#171717] mb-1.5">{ev.organization}</p>
-              <div className="flex gap-1 flex-wrap mb-2">
-                {ev.tags?.map(tag => (
-                  <span key={tag} className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              {(ev.customNote || ev.rawContent) && (
-                <p className="text-[10px] text-[#7a7a7a] line-clamp-2 mb-1.5">{ev.customNote || ev.rawContent}</p>
-              )}
-              {ev.tags && ev.tags.length > 0 && (() => {
-                const slug = getGiftByTagId(ev.tags[0])?.slug;
-                return slug ? (
-                  <Link href={`/gift/${slug}`} onClick={() => setOpenGiftIndex(null)}
-                    className="text-[10px] text-[#e11d2a] font-semibold flex items-center gap-0.5 mt-0.5">
-                    查看今日所有{ev.tags[0]}活動 →
-                  </Link>
-                ) : null;
-              })()}
-            </div>
-          );
-        })()}
+        {openGiftIndex !== null && nearbyLocations[openGiftIndex] && (
+          <GiftPopover
+            ev={nearbyLocations[openGiftIndex].event}
+            onClose={() => setOpenGiftIndex(null)}
+          />
+        )}
 
         {/* Floating result cards — bottom of map */}
         {hasResults && (
