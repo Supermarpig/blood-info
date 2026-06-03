@@ -463,8 +463,8 @@ export default function HeroSection({
             <p className="text-xs text-gray-400 mb-1.5">
               {daysAhead === 0 || daysAhead == null ? "今日精選贈品" : `${daysAhead}天內精選贈品`}
             </p>
-            <div className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <div className="flex gap-2">
+            <div className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-4 -my-4">
+              <div className="flex gap-2 px-4 py-4">
                 {cpEvents.map((e, i) => {
                   const giftName = e.topTag.split("－")[1] ?? e.topTag;
                   const area = (e.location.match(/^([^\d]+)/)?.[1] ?? e.location).trim().slice(0, 9);
