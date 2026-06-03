@@ -154,18 +154,6 @@ function generateJsonLd(region: RegionConfig, eventCount: number) {
         numberOfItems: eventCount,
       },
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: region.faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    },
   ];
 }
 

@@ -108,28 +108,6 @@ function generateJsonLd() {
       url: `${baseUrl}/2026`,
       dateModified: new Date().toISOString(),
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "2026 年捐血送什麼贈品？",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "2026 年各捐血活動的贈品種類豐富，常見包括：超商禮券（7-11、全家）、電影票（威秀、國賓）、餐飲兌換券、生活用品（衛生紙、洗衣精）、食品禮盒等。贈品由各主辦單位自行決定，不同場次贈品不同，建議透過 bloodtw.com 查詢各活動的最新贈品資訊再前往。",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "2026 捐血活動在哪裡查？",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "可至 bloodtw.com 查詢全台今日捐血活動，資料每小時更新，支援依縣市、地區、贈品類型篩選，快速找到附近的捐血地點與贈品資訊。",
-          },
-        },
-      ],
-    },
   ];
 }
 
