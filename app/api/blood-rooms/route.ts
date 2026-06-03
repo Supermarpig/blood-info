@@ -22,7 +22,10 @@ export async function GET() {
       }
     }
 
-    return NextResponse.json({ rooms: Array.from(coordMap.values()) });
+    return NextResponse.json(
+      { rooms: Array.from(coordMap.values()) },
+      { headers: { "Cache-Control": "public, s-maxage=86400, stale-while-revalidate=604800" } }
+    );
   } catch {
     return NextResponse.json(
       { error: "無法載入捐血室資料" },

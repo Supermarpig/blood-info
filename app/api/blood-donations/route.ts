@@ -67,6 +67,11 @@ export function clearBloodDonationsCache(): void {
   MemoryCache.clear();
 }
 
+// 捐血活動每日更新，讓 CDN 快取 1 小時，降低 Origin Transfer 用量
+const CDN_CACHE_HEADERS = {
+  "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+} as const;
+
 // 定義要爬取的網址列表
 const urls = [
   "https://www.tp.blood.org.tw/Internet/taipei/LocationMonth.aspx?site_id=2",
@@ -150,11 +155,7 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
     if (cachedData) {
       return NextResponse.json(
         { success: true, data: cachedData },
-        {
-          headers: {
-            "Cache-Control": "no-store", // 禁用快取
-          },
-        }
+        { headers: CDN_CACHE_HEADERS }
       );
     }
 
@@ -204,12 +205,8 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
     }
 
     if (Object.keys(allData).length > 0) {
-      // 快取並返回資料
       MemoryCache.set(allData);
-      return NextResponse.json({
-        success: true,
-        data: allData,
-      });
+      return NextResponse.json({ success: true, data: allData }, { headers: CDN_CACHE_HEADERS });
     }
 
     // 若無文件或本地檔案不可讀，開始爬取資料
@@ -273,13 +270,9 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
     const filePathToSave = path.join(process.cwd(), "data", fileName);
     await saveLocalDataWithFormattedDates(donationsByDate, filePathToSave);
 
-    // 將資料存入快取
     MemoryCache.set(donationsByDate);
 
-    return NextResponse.json({
-      success: true,
-      data: donationsByDate,
-    });
+    return NextResponse.json({ success: true, data: donationsByDate }, { headers: CDN_CACHE_HEADERS });
   } catch (error) {
     console.error("Error fetching blood donation data:", error);
     return NextResponse.json(
