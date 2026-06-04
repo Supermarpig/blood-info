@@ -40,6 +40,7 @@ interface CpEvent {
   score: number;
   topTag: string;
   distance?: number;
+  isFallback?: boolean;
 }
 
 const CP_BADGE: Record<number, string> = {
@@ -490,7 +491,9 @@ export default function HeroSection({
                 {nearbyCpEvents.map((e, i) => {
                   const giftName = e.topTag.split("－")[1] ?? e.topTag;
                   const colorClass = CP_BADGE[e.score] ?? CP_BADGE[2];
-                  const nearbyLabel = daysAhead === 0 || daysAhead == null ? "今日附近最強" : `${daysAhead}天附近最強`;
+                  const nearbyLabel = e.isFallback
+                    ? (daysAhead === 0 || daysAhead == null ? "全台最強" : `${daysAhead}天全台最強`)
+                    : (daysAhead === 0 || daysAhead == null ? "今日附近最強" : `${daysAhead}天附近最強`);
                   const card = (
                     <CpCard isTop={i === 0} colorClass={colorClass} giftName={giftName} area={e.location.slice(0, 10)} topLabel={nearbyLabel} />
                   );

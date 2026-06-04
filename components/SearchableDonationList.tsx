@@ -371,18 +371,21 @@ export default function SearchableDonationList({
   const nearbyCpEvents = useMemo(() => {
     if (!userLocation) return [];
 
-    // 找距離使用者最近的血液中心
-    const nearestCenter = Object.entries(CENTER_COORDS)
-      .map(([key, c]) => {
-        const dLat = (userLocation.lat - c.lat) * Math.PI / 180;
-        const dLng = (userLocation.lng - c.lng) * Math.PI / 180;
-        const a = Math.sin(dLat / 2) ** 2 + Math.cos(userLocation.lat * Math.PI / 180) * Math.cos(c.lat * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
-        return { key, name: c.name, dist: 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)) };
-      })
-      .sort((a, b) => a.dist - b.dist)[0];
+    // 計算使用者到各血液中心的距離
+    const haversine = (lat1: number, lng1: number, lat2: number, lng2: number) => {
+      const dLat = (lat1 - lat2) * Math.PI / 180;
+      const dLng = (lng1 - lng2) * Math.PI / 180;
+      const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
+      return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    };
+    const centerDists = Object.fromEntries(
+      Object.entries(CENTER_COORDS).map(([key, c]) => [key, haversine(userLocation.lat, userLocation.lng, c.lat, c.lng)])
+    );
+    const nearestCenter = Object.entries(centerDists).sort((a, b) => a[1] - b[1])[0];
+    const nearestCenterKey = nearestCenter[0];
 
-    // 附近推薦：跟 chip 一致，但至少往後 3 天（避免今天選 0 卻毫無資料）
-    const lookAhead = Math.max(daysAhead, 3);
+    // 今天選 0 時至少往後看 3 天，避免資料太少
+    const lookAhead = Math.max(daysAhead ?? 0, 3);
     const [y, m, d] = today.split("-").map(Number);
     const cutoff = new Date(y, m - 1, d + lookAhead).toLocaleDateString("en-CA");
     const pool = [
@@ -392,17 +395,57 @@ export default function SearchableDonationList({
         .flatMap(([, evts]) => evts),
     ];
 
-    return pool
-      .filter((e) => e.center === nearestCenter.key && e.subTags?.length)
+    const nearby = pool
+      .filter((e) => e.center === nearestCenterKey && e.subTags?.length)
       .map((e) => ({
         href: e.id ? `/activity/${e.activityDate}-${eventShortId(e.id)}` : undefined,
         location: `${e.activityDate.slice(5).replace("-", "/")} ${e.location}`,
         score: getEventCpScore(e.subTags),
         topTag: getTopSubTag(e.subTags),
+        isFallback: false,
       }))
       .filter((e): e is typeof e & { topTag: string } => e.score >= 2 && e.topTag != null)
       .sort((a, b) => b.score - a.score)
       .slice(0, 5);
+
+    if (nearby.length >= 3) return nearby;
+
+    // PTT 活動沒有 center 區域，改用地點文字推斷最近的血液中心距離
+    const PTT_REGION_KEYWORDS: Record<string, string[]> = {
+      台北: ["台北", "新北", "基隆", "台北市", "新北市"],
+      新竹: ["新竹", "桃園", "苗栗", "宜蘭", "新竹市", "桃園市"],
+      台中: ["台中", "彰化", "南投", "雲林", "台中市", "彰化縣"],
+      高雄: ["高雄", "台南", "嘉義", "屏東", "台東", "花蓮", "高雄市", "台南市"],
+    };
+    const getPttDist = (location: string): number => {
+      for (const [center, keywords] of Object.entries(PTT_REGION_KEYWORDS)) {
+        if (keywords.some((kw) => location.includes(kw))) return centerDists[center] ?? 9999;
+      }
+      return 9999;
+    };
+
+    // 附近資料不足時補上全台活動，依距離排序（近的優先），同距離再依分數排
+    const nearbyHrefs = new Set(nearby.map((e) => e.href));
+    const fallback = pool
+      .filter((e) => e.subTags?.length && !(e.id && nearbyHrefs.has(`/activity/${e.activityDate}-${eventShortId(e.id)}`)))
+      .map((e) => {
+        const dist = e.center === "PTT"
+          ? getPttDist(e.location ?? "")
+          : (e.center ? centerDists[e.center] : undefined) ?? 9999;
+        return {
+          href: e.id ? `/activity/${e.activityDate}-${eventShortId(e.id)}` : undefined,
+          location: `${e.activityDate.slice(5).replace("-", "/")} ${e.location}`,
+          score: getEventCpScore(e.subTags),
+          topTag: getTopSubTag(e.subTags),
+          isFallback: true,
+          centerDist: dist,
+        };
+      })
+      .filter((e): e is typeof e & { topTag: string } => e.score >= 2 && e.topTag != null)
+      .sort((a, b) => a.centerDist - b.centerDist || b.score - a.score)
+      .slice(0, 5 - nearby.length);
+
+    return [...nearby, ...fallback];
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userLocation, todayEvents, visibleUpcomingEvents]);
 
