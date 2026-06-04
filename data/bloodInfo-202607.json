@@ -44,13 +44,6 @@
         "rawLine": "7/5(日)桃園大有國中",
         "images": [
           "https://i.imgur.com/jtkTzpW.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/jtkTzpW.jpeg",
-            "text": "侈 / \\9\nje 中\n還 捐血 一 袋 救 人 一 命 如\n時 間 :115 年 7 月 5 日 上 午 9:00 起\n地 點 : 大 有 國 中 頌 上\n\n5 0 人 |\n2 品\n2\n卻\nuie\n計時 呈 1000 覓\n| 2 六 全 禮券\n人 5\n| 點 ar\n| 主辦 單位 : 大 同 扶 輪 社 (人 @) 桃 園區 柯 蔡 宗 親 會\n品 攜手 行 善 感恩 有 您 所\n",
-            "confidence": 60
-          }
         ]
       },
       "isPttOnly": true
@@ -124,13 +117,19 @@
       "pttData": {
         "rawLine": "7/12(日)南投埔里捐血站",
         "images": [
-          "https://i.imgur.com/aQVNNHI.jpeg"
+          "https://i.imgur.com/aQVNNHI.jpeg",
+          "https://i.imgur.com/kec9nFB.jpeg"
         ],
         "ocrTexts": [
           {
             "url": "https://i.imgur.com/aQVNNHI.jpeg",
             "text": "| 聖 武 太 子宮 忠孝 功 委 馬 “有 上 電 2\n捐血 活動 全\n9@ 竺 | 下 二\n4 你 的 熱血 , 能 成 為 別人 的 希望 。\n7/12 日 人 HSUEEIIZTED\n人 共生) 沁 邊 村上 主 生 放 還 圖 地址: 南投 縣 埔里 鎮 北門 里 北 環 路 222 號\n(8 250ce ( 提 500co」\n送 ! 德 恩 奈 牙膏 + 牙刷 組 」| 加 碼 送 「 洗 沐 二 合 一 」\n一 份 (150 組 ) 只 一 罐\n吧 補 % 仿 3\nmm 蟬 W INWR 于 璐 3\n和 62 導\n和 人 全店\ney.2 3 讓 4 et - 伯 > 有 | 人 人 > 佃\n70 和 名 還 三\n『 的 (2 個 中\n(未 耳 禮盒 」 一 生 三 份 光 鹿 。\n” 送 完 為 止 ! / 人 2 還 主 辦 單位 : 埔里 聖 武 太 子宮\n了 失語 還 還 8 的 協辦 單位 : 德 恩 奈 國 際 股份 有 限 公司\n捐血 一 袋 熱血 站 說 做 愛 心 性 夫\n人 wa 人 了 am 人 sg 金; 鋪\n(7) 捐血 有 你 , 愛 不 止息 ! 公 - 上\nAN (感謝 您 的 熱血 與 愛 心 ! ) 人\n",
             "confidence": 50
+          },
+          {
+            "url": "https://i.imgur.com/kec9nFB.jpeg",
+            "text": "an 品 生 到 生 太 打 二\n即 日 起 至 雲 林 捐血 站 ,,\n計 次 捐血 者 贈送 ,G\n+ 首次 捐 首 送 ,\naee+ 折 狼 恒 仿若 克\n三 1 生 寢 個 /\n國 讓 人 生 第 一 次 捐血 , 條\n革 完成 人 二 三 痞 的 紀念 !\n名 下 是 有 說 玉 語 2\n四 扣 務 As\n中 各 罕 附和 es 人\n同 還 Pa 尼 泌\n是\n同 有 雲 林 捐血 lu 庄 l 同 , 請\nak\n放 ii 「、 加 蟬 玉 還 有 >」\n(5 茲 條 是 入 一 一 起 克 賓 ,\nPaee- 人\n六 本 活動 由 雲 林 捐血 站 分 離 術 捐血 人 林 瑞祥 先 生 熱心 提供 。 丙\n馬克 杯 贈送 日 期 , 依 雲 林 捐血 站 粉絲 團 公告 為 準 。 G9 | 人)\n",
+            "confidence": 49
           }
         ]
       },
@@ -165,6 +164,38 @@
         "lat": 22.8894088,
         "lng": 120.4760209
       }
+    }
+  ],
+  "2026-07-26": [
+    {
+      "id": "cHR0LTIwMjYtMDctMjYtNy8yNijml6Up5ZiJ576pL+WegualiuaNkOihgOermQ==",
+      "time": "",
+      "organization": "嘉義/垂楊捐血站",
+      "location": "嘉義/垂楊捐血站",
+      "activityDate": "2026-07-26",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "7/26(日)嘉義/垂楊捐血站",
+        "images": [
+          "https://i.imgur.com/e1Zccsf.jpeg",
+          "https://i.imgur.com/6WYieYv.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/e1Zccsf.jpeg",
+            "text": "作 瑟 人 SA\nAA 翩 有 你 志 有 愛 / 一 2\n嘉 蝦 廓 冉 宗 祝 全 必 / 汪 , 癸 昌 。 ,\n1 人\n) 和 天 全 人\nSi 宵 血 一 袋\nAu 還 人 六\n加 才 7 2 慷 / EE 一 光\n作戰\n人 加 信人\nae\n避 加 說 全 蟬 ma\n謗 加 史 ges\nAGO 3 呈\n上 午 8:30- 下 午 5:00 全\n全 廬 家 人 災 捐 自 店 查 59Ope 六 說 全 4 六\n人 電 妥 捐 血 站 烽 難 一 俯 條 呈 ?\n胃 查 幼 面 部 ?\n賠 引 6 還 生 扣 生 時 艙 繹 9 捐 和 250or500cc 人 Sa\n",
+            "confidence": 23
+          },
+          {
+            "url": "https://i.imgur.com/6WYieYv.jpeg",
+            "text": "新 營 捐血 室 最 2\nxwvwe sto oowrowcewres | 店\nS |\n_/ 卻\n平日 預約\n( 呈 區\n較 了 彈 刀 不 :\n快速 捐血 宮 N 記 全\nHI\n全 血 限定 . 預 約 專案 |\n預約 免 久 候 | 到 站 快速 通關 | 捐血 更 安心 人 所\n| 共 捐血 有 你\n即 日 起 至 6 月 30 日 止 讀 ! 全\n讓 點 和 0\n, 畫 禮 相 送 !\n週 一 至 週 五 預約 免 久 候 完成 捐血 讓 吝\n平日 預約 制 到 站 快速 通關 贈 黑熊 保冷 袋 襄\n全 血 捐血 適用 節省 您 的 寶貴 時 間 實用 . 可 愛 .‧ 好 攜帶 1\n(和\n1\nacoue 」\n同\n仿生 30 秒 完成 預約\n回 和 不 用 排隊 . 輕 鬆 捐血\n固 和 GO 所 人 2 sa 0\n",
+            "confidence": 60
+          }
+        ]
+      },
+      "isPttOnly": true
     }
   ]
 }
