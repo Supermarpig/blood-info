@@ -187,7 +187,7 @@ export default function AnnouncementTab({
       {/* 浮動 Tab — 疊在「健康補給」上方 */}
       <button
         onClick={openModal}
-        aria-label="開啟本週公告"
+        aria-label="開啟今日推薦"
         className="fixed right-0 z-30 flex -translate-y-1/2 items-center gap-1 rounded-l-xl bg-gradient-to-b from-amber-400 to-orange-500 px-1.5 py-3 text-white shadow-lg transition-all duration-300 hover:px-2.5 hover:shadow-xl"
         style={{ top: "calc(50% - 104px)", writingMode: "vertical-rl" }}
       >
@@ -198,7 +198,7 @@ export default function AnnouncementTab({
           </span>
         )}
         <Megaphone className="h-3.5 w-3.5" />
-        <span className="text-xs font-bold tracking-widest">本週公告</span>
+        <span className="text-xs font-bold tracking-widest">今日推薦</span>
       </button>
 
       {/* 公告 Modal：從右側 tab 飛出 / 收回 */}
