@@ -456,16 +456,16 @@ export default function HeroSection({
         </div>
       )}
 
-      {/* 精選贈品（全台 + 附近同一列） */}
+      {/* 精選贈品（全台 + 附近：手機上下排、桌機左右並排） */}
       {cpEvents && cpEvents.length > 0 && (
-        <div className="animate-fade-in-up flex gap-3" style={{ animationDelay: "180ms" }}>
+        <div className="animate-fade-in-up flex flex-col sm:flex-row sm:gap-3 gap-2" style={{ animationDelay: "180ms" }}>
           {/* 全台精選 */}
-          <div className="flex-1 min-w-0">
+          <div className="sm:flex-1 sm:min-w-0">
             <p className="text-xs text-gray-400 mb-1.5">
               {daysAhead === 0 || daysAhead == null ? "今日精選贈品" : `${daysAhead}天內精選贈品`}
             </p>
-            <div className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-4 -my-4">
-              <div className="flex gap-2 px-4 py-4">
+            <div className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-4 sm:mx-0">
+              <div className="flex gap-2 px-4 sm:px-0 py-2">
                 {cpEvents.map((e, i) => {
                   const giftName = e.topTag.split("－")[1] ?? e.topTag;
                   const area = (e.location.match(/^([^\d]+)/)?.[1] ?? e.location).trim().slice(0, 9);
@@ -482,23 +482,25 @@ export default function HeroSection({
 
           {/* 附近精選（定位開啟後才顯示） */}
           {nearbyCpEvents && nearbyCpEvents.length > 0 && (
-            <div className="flex-shrink-0">
+            <div className="sm:flex-shrink-0">
               <p className="text-xs text-gray-400 mb-1.5 flex items-center gap-1">
                 <MapPin className="w-3 h-3" />
                 附近精選
               </p>
-              <div className="flex gap-2">
-                {nearbyCpEvents.map((e, i) => {
-                  const giftName = e.topTag.split("－")[1] ?? e.topTag;
-                  const colorClass = CP_BADGE[e.score] ?? CP_BADGE[2];
-                  const nearbyLabel = e.isFallback
-                    ? (daysAhead === 0 || daysAhead == null ? "全台最強" : `${daysAhead}天全台最強`)
-                    : (daysAhead === 0 || daysAhead == null ? "今日附近最強" : `${daysAhead}天附近最強`);
-                  const card = (
-                    <CpCard isTop={i === 0} colorClass={colorClass} giftName={giftName} area={e.location.slice(0, 10)} topLabel={nearbyLabel} />
-                  );
-                  return e.href ? <Link key={i} href={e.href}>{card}</Link> : <div key={i}>{card}</div>;
-                })}
+              <div className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-4 sm:mx-0">
+                <div className="flex gap-2 px-4 sm:px-0 py-2">
+                  {nearbyCpEvents.map((e, i) => {
+                    const giftName = e.topTag.split("－")[1] ?? e.topTag;
+                    const colorClass = CP_BADGE[e.score] ?? CP_BADGE[2];
+                    const nearbyLabel = e.isFallback
+                      ? (daysAhead === 0 || daysAhead == null ? "全台最強" : `${daysAhead}天全台最強`)
+                      : (daysAhead === 0 || daysAhead == null ? "今日附近最強" : `${daysAhead}天附近最強`);
+                    const card = (
+                      <CpCard isTop={i === 0} colorClass={colorClass} giftName={giftName} area={e.location.slice(0, 10)} topLabel={nearbyLabel} />
+                    );
+                    return e.href ? <Link key={i} href={e.href}>{card}</Link> : <div key={i}>{card}</div>;
+                  })}
+                </div>
               </div>
             </div>
           )}
