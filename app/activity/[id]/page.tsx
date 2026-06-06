@@ -1,4 +1,4 @@
-export const revalidate = 86400;
+export const revalidate = 604800; // 7 days — reduces ISR writes vs daily revalidation
 
 import { Metadata } from "next";
 import { notFound } from "next/navigation";

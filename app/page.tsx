@@ -11,6 +11,7 @@ import AnnouncementTab from "@/components/AnnouncementTab";
 import EligibilityFloatingButton from "@/components/EligibilityFloatingButton";
 import FaqSection from "@/components/FaqSection";
 import InternalLinks from "@/components/InternalLinks";
+import { getCachedAnnouncement } from "@/services/announcementService";
 
 interface DonationEvent {
   id?: string;
@@ -72,6 +73,8 @@ export default async function BloodDonationPage() {
   let data: Record<string, DonationEvent[]> = {};
   let error = null;
   let initialInventory = undefined;
+
+  const initialAnn = await getCachedAnnouncement().catch(() => undefined);
 
   try {
     const inventoryPath = path.join(process.cwd(), "data", "bloodInventory.json");
@@ -309,7 +312,7 @@ export default async function BloodDonationPage() {
 
       <InternalLinks />
       <FaqSection />
-      <AnnouncementTab todayEvents={data[today] ?? []} />
+      <AnnouncementTab todayEvents={data[today] ?? []} initialAnn={initialAnn} />
       <HealthFloatingButton />
       <EligibilityFloatingButton />
     </div>

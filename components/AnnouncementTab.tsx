@@ -77,10 +77,16 @@ function pickAutoRec(
   return { location: best.e.location, gifts: best.gifts, href };
 }
 
-export default function AnnouncementTab({ todayEvents = [] }: { todayEvents?: DonationEvent[] }) {
-  const [ann, setAnn] = useState<Announcement | null>(null);
+export default function AnnouncementTab({
+  todayEvents = [],
+  initialAnn,
+}: {
+  todayEvents?: DonationEvent[];
+  initialAnn?: Announcement;
+}) {
+  const [ann, setAnn] = useState<Announcement | null>(initialAnn ?? null);
   const [autoRec, setAutoRec] = useState<AutoRec | null>(null);
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = useState(!!initialAnn);
 
   const [render, setRender] = useState(false); // modal 是否在 DOM
   const [closing, setClosing] = useState(false); // 是否正在播放收合動畫
@@ -91,6 +97,7 @@ export default function AnnouncementTab({ todayEvents = [] }: { todayEvents?: Do
   }, [todayEvents]);
 
   useEffect(() => {
+    if (initialAnn) return; // skip fetch when server pre-rendered
     let active = true;
     fetch("/api/announcement")
       .then((r) => r.json())
@@ -101,7 +108,7 @@ export default function AnnouncementTab({ todayEvents = [] }: { todayEvents?: Do
         setReady(true);
       });
     return () => { active = false; };
-  }, []);
+  }, [initialAnn]);
 
   // 後台優先；後台沒填的欄位用自動推薦補上。autoRecommend 關閉時不自動推薦。
   const adminActive = !!ann && announcementHasContent(ann);
