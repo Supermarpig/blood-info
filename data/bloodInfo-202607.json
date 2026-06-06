@@ -44,12 +44,38 @@
         "rawLine": "7/5(日)桃園大有國中",
         "images": [
           "https://i.imgur.com/jtkTzpW.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMDUtNy81KOaXpSnlvbDljJblkoznvo7mnbHlubPot68=",
+      "time": "",
+      "organization": "彰化和美東平路",
+      "location": "彰化和美東平路",
+      "activityDate": "2026-07-05",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券",
+        "超商",
+        "生活用品"
+      ],
+      "subTags": [
+        "超商－全聯",
+        "禮券－全聯",
+        "生活用品－衛生紙"
+      ],
+      "pttData": {
+        "rawLine": "7/5(日)彰化和美東平路",
+        "images": [
+          "https://i.imgur.com/BjaDVQb.jpeg"
         ],
         "ocrTexts": [
           {
-            "url": "https://i.imgur.com/jtkTzpW.jpeg",
-            "text": "侈 / \\9\nje 中\n還 捐血 一 袋 救 人 一 命 如\n時 間 :115 年 7 月 5 日 上 午 9:00 起\n地 點 : 大 有 國 中 頌 上\n\n5 0 人 |\n2 品\n2\n卻\nuie\n計時 呈 1000 覓\n| 2 六 全 禮券\n人 5\n| 點 ar\n| 主辦 單位 : 大 同 扶 輪 社 (人 @) 桃 園區 柯 蔡 宗 親 會\n品 攜手 行 善 感恩 有 您 所\n",
-            "confidence": 60
+            "url": "https://i.imgur.com/BjaDVQb.jpeg",
+            "text": "es\n203 洋行 友 ,\n主 r 多 99 人 9 人 9 【 說 廚 ,\n( 夫\nee\nOh\n一\n全 和\n人 集 各 種 血型 ~ 敬 請 熱血 朋友 們 攜帶 身 分 證件 ~ 捐血 救 -\n時 間 :115/07/05( 週 日 )09:00~16:00\n地 [點 : 和 美 鎮 犁 盛 里 高 香 宮 ( 彰 化 縣 和 美 鎮 東平 路 220 號 )\n主 辦 單位 : 彰化 縣 葉 姓 宗 親 會 (一 台 車 )、 台 灣 葉 姓 宗 親 總 會 (一 台 車 ) 共 二 台 捐血 車\n協辦 單位 : 和 美 鎮 犁 盛 里 高 香 宮 、 犁 盛 里 社區 發 展 協會 、 絡 力 馨 經 絡 養生 協會\n贊助 單位 : 葉 乙 清 、 葉 天 生 、 葉 信良 、 葉 明 朮 、 葉 茂 林 、 葉 論 昶 、 葉 佳 典 、 葉 香\n彰化 縣 沒 、 葉 清 煌 、 葉 明 洲 、 葉 碧 雯 、 葉 瑞 蓁 、 葉 東城 、 葉 茂 良 、 葉 謝 雪 玉\n葉 姓 宗 親 會 、 葉 朝宗 、 葉 謝 秀吉 、 葉 偉 助 、 葉 進 成 、 葉 敏 過 、 葉 知 翟 、 葉 文 德 、\n贊助 一 台 車 葉 昭 群 、 葉 金 泉 、 葉 紹 男 、 葉 膀 德 、 葉 國 鐘 、 葉 嘉 厚 、 葉 基 軒 、 葉 慶\n經 費 。]” 明 、 葉 語 偉 、 葉 全 龍 、 葉 木 火 、 葉 景 陽 、 憲 校 預 士 校友 會 、...... 孖 續 募\n資 中 (贊助 3000 元 以 上 依照 登記 順 續 掛 名 贊助 )。\n贈品 : 捐血 一 袋 250cc 全 聯 禮券 3 張 + 抽取 式 衛生 紙 一 袋 + 潮 港 城 100 元 平日 抵 用 卷\n500cc 有 贈送 二 份 + 中 午前 完成 捐血 另 提 供 經 絡 推 拿 。\n※ 歡 迎 葉 姓 人 士 加 入 「 彰 化 縣 葉 姓 宗 親 會 」 另 加 贈禮 品 乙 份 。\n",
+            "confidence": 79
           }
         ]
       },
@@ -80,6 +106,36 @@
         "rawLine": "7/11(六)苗栗竹南捐血室",
         "images": [
           "https://i.imgur.com/KuTIPZT.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTEtNy8xMSjlha0p5qGD5ZyS5YWr5b635aaC5oSP5aq956WW5buf",
+      "time": "",
+      "organization": "桃園八德如意媽祖廟",
+      "location": "桃園八德如意媽祖廟",
+      "activityDate": "2026-07-11",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券",
+        "超商"
+      ],
+      "subTags": [
+        "超商－全聯"
+      ],
+      "pttData": {
+        "rawLine": "7/11(六)桃園八德如意媽祖廟",
+        "images": [
+          "https://i.imgur.com/bvKIJGr.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/bvKIJGr.jpeg",
+            "text": "2\nNi 入\n2 2. 你\n玉 色\n1 銜 筷 秒 緻 你 一 選 痊 旋 級 上\nfi\n日 期 2026 年 7 日 ]i 日 (六 ) 時 間 09:00-16:00\n地 點 ” 桃 園 市 八 德 區 罕 豐 街 47 號 【 可 意 反 祖 廁 】\n周全 指 箇 和 宣 嗎 送禮 還 了 和 衝\n鑣 捐血 250co G@ 騙 捐血 500oo (9\n一 一 時\n禮 卷 500 元 同 廬 神 符 i000 朮 @\n反 一 份 小 禮物 肥 一 份 小 禮物\n倆\n祥 身分 說 和\n主 辦 單 位\n檔 園 天 德 道 院 各 意 風 祖 Go\n協辦 單位 人\n宏 駿 交通 有 限 公司 宏 捷 國 際 侍 業 股 份 有 限 公司 廬 2\n全 聯 福 天 中 心 【 樣 園 關 文 店 】 8\n",
+            "confidence": 48
+          }
         ]
       },
       "isPttOnly": true
