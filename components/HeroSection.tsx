@@ -296,13 +296,29 @@ function CpCard({ isTop, colorClass, giftName, area, topLabel, subTags }: CpCard
       onPointerUp={onPointerUp}
     >
       {isTop && (
-        <div
-          ref={glowRef}
-          className="absolute inset-0 rounded-xl pointer-events-none"
-          style={{ boxShadow: "0 0 12px rgba(251,146,60,0.5)", opacity: 0 }}
-        />
+        <>
+          <div
+            ref={glowRef}
+            className="absolute inset-0 rounded-xl pointer-events-none"
+            style={{ boxShadow: "0 0 16px rgba(251,146,60,0.6)", opacity: 0 }}
+          />
+          {/* Animated gradient border overlay */}
+          <div
+            className="absolute inset-0 rounded-xl pointer-events-none"
+            style={{
+              background: "linear-gradient(135deg, rgba(251,191,36,0.25) 0%, rgba(251,191,36,0) 50%, rgba(251,191,36,0.25) 100%)",
+              backgroundSize: "200% 200%",
+              animation: "goldShimmer 2.2s linear infinite",
+            }}
+          />
+        </>
       )}
-      {isTop && <div className="text-[10px] font-bold mb-0.5 opacity-60">🏆 {topLabel ?? "今日最強"}</div>}
+      {isTop && (
+        <div className="mb-1 flex items-center gap-0.5">
+          <span className="trophy-pop text-[13px] leading-none">🏆</span>
+          <span className="top-badge-text text-[10px] tracking-wide whitespace-nowrap">{topLabel ?? "今日最強"}</span>
+        </div>
+      )}
       <div className="font-semibold truncate max-w-[84px] text-[11px] opacity-70">{area}</div>
       <div ref={giftRef} className="mt-0.5 font-bold text-[14px] flex items-center gap-1">
         {labels[activeIdx]}
