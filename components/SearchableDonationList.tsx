@@ -354,10 +354,11 @@ export default function SearchableDonationList({
         location: e.location,
         score: getEventCpScore(e.subTags),
         topTag: getTopSubTag(e.subTags),
+        subTags: e.subTags,
       }))
       .filter((e) => e.score >= 2 && e.topTag)
       .sort((a, b) => b.score - a.score)
-      .slice(0, 5) as { href?: string; location: string; score: number; topTag: string }[];
+      .slice(0, 5) as { href?: string; location: string; score: number; topTag: string; subTags?: string[] }[];
   }, [todayEvents, visibleUpcomingEvents]);
 
   // 各血液中心大概座標，用來判斷使用者最近的區域
@@ -402,6 +403,7 @@ export default function SearchableDonationList({
         location: `${e.activityDate.slice(5).replace("-", "/")} ${e.location}`,
         score: getEventCpScore(e.subTags),
         topTag: getTopSubTag(e.subTags),
+        subTags: e.subTags,
         isFallback: false,
       }))
       .filter((e): e is typeof e & { topTag: string } => e.score >= 2 && e.topTag != null)
@@ -437,6 +439,7 @@ export default function SearchableDonationList({
           location: `${e.activityDate.slice(5).replace("-", "/")} ${e.location}`,
           score: getEventCpScore(e.subTags),
           topTag: getTopSubTag(e.subTags),
+          subTags: e.subTags,
           isFallback: true,
           centerDist: dist,
         };

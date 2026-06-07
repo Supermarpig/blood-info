@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   MapPin,
   Calendar,
@@ -39,6 +39,7 @@ interface CpEvent {
   location: string;
   score: number;
   topTag: string;
+  subTags?: string[];
   distance?: number;
   isFallback?: boolean;
 }
@@ -202,13 +203,21 @@ interface CpCardProps {
   giftName: string;
   area: string;
   topLabel?: string;
+  subTags?: string[];
 }
 
-function CpCard({ isTop, colorClass, giftName, area, topLabel }: CpCardProps) {
+function CpCard({ isTop, colorClass, giftName, area, topLabel, subTags }: CpCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
+  const giftRef = useRef<HTMLDivElement>(null);
   const loopRef = useRef<gsap.core.Tween | null>(null);
   const isHovering = useRef(false);
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  // Build deduplicated display labels from subTags
+  const labels = subTags && subTags.length > 0
+    ? Array.from(new Set(subTags.map((t) => t.split("－")[1] ?? t)))
+    : [giftName];
 
   const { contextSafe } = useGSAP(() => {
     if (!isTop) return;
@@ -222,6 +231,27 @@ function CpCard({ isTop, colorClass, giftName, area, topLabel }: CpCardProps) {
       ease: "sine.inOut",
     });
   }, { scope: ref });
+
+  // Carousel: rotate through labels every 2s when there are multiple
+  useEffect(() => {
+    if (labels.length <= 1) return;
+    const interval = setInterval(() => {
+      setActiveIdx((prev) => {
+        const next = (prev + 1) % labels.length;
+        // Animate out then in
+        if (giftRef.current) {
+          gsap.fromTo(
+            giftRef.current,
+            { opacity: 0, y: 8 },
+            { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }
+          );
+        }
+        return next;
+      });
+    }, 2000);
+    return () => clearInterval(interval);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [labels.length]);
 
   const onMouseEnter = contextSafe(() => {
     isHovering.current = true;
@@ -274,7 +304,12 @@ function CpCard({ isTop, colorClass, giftName, area, topLabel }: CpCardProps) {
       )}
       {isTop && <div className="text-[10px] font-bold mb-0.5 opacity-60">🏆 {topLabel ?? "今日最強"}</div>}
       <div className="font-semibold truncate max-w-[84px] text-[11px] opacity-70">{area}</div>
-      <div className="mt-0.5 font-bold text-[14px]">{giftName}</div>
+      <div ref={giftRef} className="mt-0.5 font-bold text-[14px] flex items-center gap-1">
+        {labels[activeIdx]}
+        {labels.length > 1 && (
+          <span className="text-[9px] opacity-40 font-normal">{activeIdx + 1}/{labels.length}</span>
+        )}
+      </div>
     </div>
   );
 }
@@ -472,7 +507,7 @@ export default function HeroSection({
                   const colorClass = CP_BADGE[e.score] ?? CP_BADGE[2];
                   const rangeLabel = daysAhead === 0 || daysAhead == null ? "今日最強" : `${daysAhead}天最強`;
                   const card = (
-                    <CpCard isTop={i === 0} colorClass={colorClass} giftName={giftName} area={area} topLabel={rangeLabel} />
+                    <CpCard isTop={i === 0} colorClass={colorClass} giftName={giftName} area={area} topLabel={rangeLabel} subTags={e.subTags} />
                   );
                   return e.href ? <Link key={i} href={e.href}>{card}</Link> : <div key={i}>{card}</div>;
                 })}
@@ -496,7 +531,7 @@ export default function HeroSection({
                       ? (daysAhead === 0 || daysAhead == null ? "全台最強" : `${daysAhead}天全台最強`)
                       : (daysAhead === 0 || daysAhead == null ? "今日附近最強" : `${daysAhead}天附近最強`);
                     const card = (
-                      <CpCard isTop={i === 0} colorClass={colorClass} giftName={giftName} area={e.location.slice(0, 10)} topLabel={nearbyLabel} />
+                      <CpCard isTop={i === 0} colorClass={colorClass} giftName={giftName} area={e.location.slice(0, 10)} topLabel={nearbyLabel} subTags={e.subTags} />
                     );
                     return e.href ? <Link key={i} href={e.href}>{card}</Link> : <div key={i}>{card}</div>;
                   })}
