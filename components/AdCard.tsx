@@ -31,11 +31,16 @@ export default function AdCard({ slot, className = "", variant = "card" }: AdCar
   useEffect(() => {
     const ins = insRef.current;
     if (!ins) return;
+    // AdSense may transiently set "unfilled" before settling — wait 3s for final status
+    let timer: ReturnType<typeof setTimeout>;
     const observer = new MutationObserver(() => {
-      if ((ins as HTMLElement).dataset.adStatus === "unfilled") setUnfilled(true);
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if ((ins as HTMLElement).dataset.adStatus === "unfilled") setUnfilled(true);
+      }, 3000);
     });
     observer.observe(ins, { attributes: true, attributeFilter: ["data-ad-status"] });
-    return () => observer.disconnect();
+    return () => { observer.disconnect(); clearTimeout(timer); };
   }, []);
 
   if (!AD_CLIENT || !slot || unfilled) return null;
