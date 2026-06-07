@@ -108,11 +108,11 @@ export default function AboutPage() {
             如有資料錯誤回報、合作洽詢或其他意見，歡迎透過電子郵件與我們聯繫。
           </p>
           <a
-            href="mailto:ken51717@gmail.com"
+            href="mailto:cody.yu@bloodtw.com"
             className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-medium"
           >
             <Mail className="w-4 h-4" />
-            ken51717@gmail.com
+            cody.yu@bloodtw.com
           </a>
         </section>
       </div>

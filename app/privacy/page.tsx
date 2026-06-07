@@ -176,8 +176,8 @@ export default function PrivacyPage() {
           <h2 className="text-lg font-bold text-gray-900 mb-3">八、聯絡我們</h2>
           <p className="text-gray-600">
             如對本隱私權政策有任何疑問，請透過電子郵件聯繫：{" "}
-            <a href="mailto:ken51717@gmail.com" className="text-red-600 hover:underline">
-              ken51717@gmail.com
+            <a href="mailto:cody.yu@bloodtw.com" className="text-red-600 hover:underline">
+              cody.yu@bloodtw.com
             </a>
           </p>
         </section>
