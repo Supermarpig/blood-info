@@ -11,6 +11,10 @@ import { CITIES } from "@/lib/cityConfig";
 import { eventShortId } from "@/lib/eventId";
 import ShareButton from "./ShareButton";
 import { ActivityImages } from "./ActivityImages";
+import AdCard from "@/components/AdCard";
+
+const AD_SLOT_ACTIVITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
+const AD_SLOT_SIDEBAR = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
 
 interface DonationEvent {
   id?: string;
@@ -236,7 +240,17 @@ export default async function ActivityPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-lg mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-6 max-w-5xl">
+      <div className="flex gap-6 items-start">
+
+        {/* 左側欄廣告 */}
+        <aside className="hidden xl:block w-[160px] flex-shrink-0">
+          <div className="sticky top-24">
+            <AdCard slot={AD_SLOT_SIDEBAR} variant="sidebar" />
+          </div>
+        </aside>
+
+        <div className="flex-1 min-w-0 max-w-lg mx-auto">
         {/* 返回 */}
         <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6 flex-wrap">
           <Link href="/" className="flex items-center gap-1 hover:text-gray-800 transition-colors">
@@ -407,6 +421,8 @@ export default async function ActivityPage({ params }: PageProps) {
           </div>
         </div>
 
+        <AdCard slot={AD_SLOT_ACTIVITY} variant="inline" className="mt-4" />
+
         {/* 同日同地區其他活動 */}
         {relatedEvents.length > 0 && (
           <div className="mt-4">
@@ -443,7 +459,17 @@ export default async function ActivityPage({ params }: PageProps) {
 
         {/* 分享 */}
         <ShareButton event={event} giftNames={giftLinks.map((g) => g!.name)} pageUrl={pageUrl} />
-      </div>
+        </div>{/* flex-1 主內容 */}
+
+        {/* 右側欄廣告 */}
+        <aside className="hidden xl:block w-[160px] flex-shrink-0">
+          <div className="sticky top-24">
+            <AdCard slot={AD_SLOT_SIDEBAR} variant="sidebar" />
+          </div>
+        </aside>
+
+      </div>{/* flex */}
+      </div>{/* container */}
     </div>
   );
 }
