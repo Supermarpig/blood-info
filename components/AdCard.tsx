@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const AD_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
@@ -14,6 +14,8 @@ interface AdCardProps {
 
 export default function AdCard({ slot, className = "", variant = "card" }: AdCardProps) {
   const pushed = useRef(false);
+  const insRef = useRef<HTMLModElement>(null);
+  const [unfilled, setUnfilled] = useState(false);
 
   useEffect(() => {
     if (!AD_CLIENT || !slot || pushed.current) return;
@@ -26,7 +28,17 @@ export default function AdCard({ slot, className = "", variant = "card" }: AdCar
     }
   }, [slot]);
 
-  if (!AD_CLIENT || !slot) return null;
+  useEffect(() => {
+    const ins = insRef.current;
+    if (!ins) return;
+    const observer = new MutationObserver(() => {
+      if ((ins as HTMLElement).dataset.adStatus === "unfilled") setUnfilled(true);
+    });
+    observer.observe(ins, { attributes: true, attributeFilter: ["data-ad-status"] });
+    return () => observer.disconnect();
+  }, []);
+
+  if (!AD_CLIENT || !slot || unfilled) return null;
 
   if (variant === "sidebar") {
     return (
@@ -35,6 +47,7 @@ export default function AdCard({ slot, className = "", variant = "card" }: AdCar
           廣告
         </span>
         <ins
+          ref={insRef}
           className="adsbygoogle"
           style={{ display: "block", minHeight: 600 }}
           data-ad-client={AD_CLIENT}
@@ -60,6 +73,7 @@ export default function AdCard({ slot, className = "", variant = "card" }: AdCar
         廣告
       </span>
       <ins
+        ref={insRef}
         className="adsbygoogle"
         style={{ display: "block", minHeight: isCard ? 250 : 100 }}
         data-ad-client={AD_CLIENT}
