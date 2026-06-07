@@ -772,14 +772,32 @@ function mergeData(officialData, pttData, existingLocalData = null, targetYear =
                 });
             } while (prev !== pLocClean && pLocClean.length > 2);
 
-            if (!pLocClean || pLocClean.length < 2 || /^\d+$/.test(pLocClean)) return false;
+            if (!pLocClean || pLocClean.length < 2 || /^\d+$/.test(pLocClean)) {
+                // 處理「台東捐血站」這類：城市剝掉後剩下的全是 noiseWord
+                if (strippedCity) {
+                    const afterCity = subLoc
+                        .replace(/[（(][^）)]*[）)]/g, '')
+                        .replace(/[^一-龥a-zA-Z0-9]/g, '')
+                        .substring(strippedCity.length);
+                    if (noiseWords.some(nw => afterCity === nw) && eventLoc.includes(afterCity)) return true;
+                }
+                return false;
+            }
 
             const pLocNoAdmin = pLocClean.replace(/[市縣區鄉鎮]/g, '');
+            const combined = eventLoc + eventLocNoAdmin + eventOrg;
 
-            return eventLoc.includes(pLocClean) ||
-                   eventLocNoAdmin.includes(pLocClean) ||
-                   eventOrg.includes(pLocClean) ||
-                   (pLocNoAdmin !== pLocClean && eventLocNoAdmin.includes(pLocNoAdmin));
+            if (combined.includes(pLocClean) ||
+                (pLocNoAdmin !== pLocClean && eventLocNoAdmin.includes(pLocNoAdmin))) return true;
+
+            // Fallback: 拆成 2-char token，要求 ≥75% 出現在官方地點（處理「板橋國慶郵局」vs「板橋區國慶路...郵局」）
+            const tokens = [];
+            for (let i = 0; i + 1 < pLocClean.length; i += 2) tokens.push(pLocClean.slice(i, i + 2));
+            if (tokens.length >= 2) {
+                const matched = tokens.filter(t => combined.includes(t)).length;
+                if (matched >= Math.ceil(tokens.length * 0.5)) return true;
+            }
+            return false;
         });
     }
 
