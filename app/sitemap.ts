@@ -4,6 +4,7 @@ import path from "path";
 import { getAllRegionSlugs } from "@/lib/regionConfig";
 import { getAllGiftSlugs } from "@/lib/giftConfig";
 import { getAllCitySlugs } from "@/lib/cityConfig";
+import { getAllOrgSlugs } from "@/lib/organizationConfig";
 import { getAllNews } from "@/lib/newsUtils";
 import { eventShortId } from "@/lib/eventId";
 
@@ -64,6 +65,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const regionSlugs = getAllRegionSlugs();
   const giftSlugs = getAllGiftSlugs();
   const citySlugs = getAllCitySlugs();
+  const orgSlugs = getAllOrgSlugs();
   const newsArticles = getAllNews();
 
   const regionPages: MetadataRoute.Sitemap = regionSlugs.map((slug) => ({
@@ -86,6 +88,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: "daily",
     priority: 0.75,
   }));
+
+  const orgPages: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/organization`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
+    ...orgSlugs.map((slug) => ({
+      url: `${baseUrl}/organization/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "daily" as const,
+      priority: 0.75,
+    })),
+  ];
 
   const newsPages: MetadataRoute.Sitemap = newsArticles.map((article) => ({
     url: `${baseUrl}/news/${article.slug}`,
@@ -141,6 +153,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...regionPages,
     ...cityPages,
+    ...orgPages,
     ...giftPages,
     ...newsPages,
     ...activityPages,

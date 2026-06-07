@@ -8,6 +8,7 @@ import path from "path";
 import { ChevronLeft, Clock, MapPin, Building2, ExternalLink, Gift, Heart, Droplets, Utensils, Moon, Ban, CreditCard } from "lucide-react";
 import { getGiftByTagId } from "@/lib/giftConfig";
 import { CITIES } from "@/lib/cityConfig";
+import { ORGANIZATIONS } from "@/lib/organizationConfig";
 import { eventShortId } from "@/lib/eventId";
 import ShareButton from "./ShareButton";
 import { ActivityImages } from "./ActivityImages";
@@ -157,6 +158,10 @@ export default async function ActivityPage({ params }: PageProps) {
       c.locationKeywords.some((kw) => event.location.includes(kw))
   );
 
+  const matchedOrg = ORGANIZATIONS.find((o) =>
+    o.keywords.some((kw) => event.organization.includes(kw))
+  );
+
   const relatedEvents = dayEvents
     .filter((e) => e.id && e.id !== event.id && e.center === event.center)
     .slice(0, 5);
@@ -299,7 +304,13 @@ export default async function ActivityPage({ params }: PageProps) {
           <div className="p-5 space-y-4">
             <h1 className="text-xl font-bold text-gray-900 flex items-start gap-2">
               <Building2 className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
-              {event.organization}
+              {matchedOrg ? (
+                <Link href={`/organization/${matchedOrg.slug}`} className="hover:text-red-600 hover:underline underline-offset-2 transition-colors">
+                  {event.organization}
+                </Link>
+              ) : (
+                event.organization
+              )}
             </h1>
 
             <a

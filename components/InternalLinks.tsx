@@ -2,6 +2,7 @@ import Link from "next/link";
 import { REGIONS } from "@/lib/regionConfig";
 import { GIFTS } from "@/lib/giftConfig";
 import { CITIES } from "@/lib/cityConfig";
+import { getLionsOrgs } from "@/lib/organizationConfig";
 
 
 const REGION_CITIES: Record<string, string> = {
@@ -12,6 +13,8 @@ const REGION_CITIES: Record<string, string> = {
 };
 
 export default function InternalLinks() {
+  const lionsOrgs = getLionsOrgs();
+
   return (
     <nav className="mt-8 space-y-5" aria-label="各地區與贈品種類捐血查詢">
       {/* 地區 */}
@@ -74,6 +77,36 @@ export default function InternalLinks() {
               </span>
             </Link>
           ))}
+        </div>
+      </div>
+
+      {/* 主辦單位（獅子會） */}
+      <div>
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2.5">
+          依主辦單位查詢
+        </h2>
+        <div className="grid grid-cols-3 gap-2">
+          <Link
+            href="/organization/lions-club"
+            className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
+          >
+            <span className="text-xs font-medium text-gray-700">獅子會捐血</span>
+          </Link>
+          {lionsOrgs.filter((o) => o.slug !== "lions-club").map((o) => (
+            <Link
+              key={o.slug}
+              href={`/organization/${o.slug}`}
+              className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
+            >
+              <span className="text-xs font-medium text-gray-700">{o.displayName}</span>
+            </Link>
+          ))}
+          <Link
+            href="/organization"
+            className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
+          >
+            <span className="text-xs font-medium text-gray-500">全部主辦單位 →</span>
+          </Link>
         </div>
       </div>
 
