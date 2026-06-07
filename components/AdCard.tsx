@@ -8,15 +8,10 @@ interface AdCardProps {
   /** AdSense 廣告版位 ID（在 AdSense 後台建立廣告單元後取得） */
   slot?: string;
   className?: string;
-  /** card：首頁卡牌格內的廣告（外觀做成卡片）；inline：文章／列表內的橫幅 */
-  variant?: "card" | "inline";
+  /** card：首頁卡牌；inline：文章內橫幅；sidebar：文章左右側欄 */
+  variant?: "card" | "inline" | "sidebar";
 }
 
-/**
- * Google AdSense 廣告單元。
- * 尚未設定 NEXT_PUBLIC_ADSENSE_CLIENT 或對應 slot 時不渲染，
- * 避免在審核通過 / 填入版位 ID 前留下空白廣告框或破版。
- */
 export default function AdCard({ slot, className = "", variant = "card" }: AdCardProps) {
   const pushed = useRef(false);
 
@@ -32,6 +27,24 @@ export default function AdCard({ slot, className = "", variant = "card" }: AdCar
   }, [slot]);
 
   if (!AD_CLIENT || !slot) return null;
+
+  if (variant === "sidebar") {
+    return (
+      <div className={`overflow-hidden ${className}`}>
+        <span className="block px-1 pb-1 text-[10px] uppercase tracking-wider text-gray-300">
+          廣告
+        </span>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block", minHeight: 600 }}
+          data-ad-client={AD_CLIENT}
+          data-ad-slot={slot}
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+      </div>
+    );
+  }
 
   const isCard = variant === "card";
 
