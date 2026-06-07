@@ -5,6 +5,9 @@ import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import { getGiftBySlug, getAllGiftSlugs, GiftConfig } from "@/lib/giftConfig";
+import AdCard from "@/components/AdCard";
+
+const AD_SLOT_GIFT = process.env.NEXT_PUBLIC_ADSENSE_SLOT_GIFT;
 
 interface DonationEvent {
   id?: string;
@@ -228,6 +231,8 @@ export default async function GiftPage({ params }: PageProps) {
 
       {/* Event list */}
       <SearchableDonationList data={data} staticFilterLabel={gift.name} />
+
+      <AdCard slot={AD_SLOT_GIFT} variant="inline" className="mt-8" />
     </div>
     </>
   );

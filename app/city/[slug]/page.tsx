@@ -5,6 +5,9 @@ import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import { getCityBySlug, getAllCitySlugs, getNearbyCities, CityConfig } from "@/lib/cityConfig";
+import AdCard from "@/components/AdCard";
+
+const AD_SLOT_CITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
 
 interface DonationEvent {
   id?: string;
@@ -221,6 +224,8 @@ export default async function CityPage({ params }: PageProps) {
       <p className="text-sm text-gray-500 mb-6">{city.intro}</p>
 
       <SearchableDonationList data={data} currentCitySlug={slug} />
+
+      <AdCard slot={AD_SLOT_CITY} variant="inline" className="mt-8" />
 
       {/* City FAQ */}
       <section className="mt-10">
