@@ -459,8 +459,6 @@ export default async function ActivityPage({ params }: PageProps) {
 
         {/* 分享 */}
         <ShareButton event={event} giftNames={giftLinks.map((g) => g!.name)} pageUrl={pageUrl} />
-
-        <AdCard slot={AD_SLOT_ACTIVITY} variant="inline" className="mt-4" />
         </div>{/* flex-1 主內容 */}
 
         {/* 右側欄廣告 */}
