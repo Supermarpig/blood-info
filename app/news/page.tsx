@@ -104,32 +104,38 @@ export default function NewsPage() {
             <p className="text-gray-400">目前尚無文章。</p>
           ) : (
             <div className="flex flex-col gap-6">
-              {articles.map((article) => (
-                <Link
-                  key={article.slug}
-                  href={`/news/${article.slug}`}
-                  className="group flex gap-4 rounded-xl border border-gray-100 p-4 hover:border-red-200 hover:bg-red-50 transition-colors"
-                >
-                  <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
-                    <Image
-                      src={article.imageUrl}
-                      alt={article.imageAlt}
-                      fill
-                      className="object-cover"
-                      sizes="96px"
-                    />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs text-gray-400 mb-1">{article.date}</p>
-                    <h2 className="font-semibold text-gray-900 group-hover:text-red-600 transition-colors line-clamp-2">
-                      {article.title}
-                    </h2>
-                    <p className="text-sm text-gray-500 mt-1 line-clamp-2">
-                      {article.summary}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+              {articles.flatMap((article, index) => {
+                const card = (
+                  <Link
+                    key={article.slug}
+                    href={`/news/${article.slug}`}
+                    className="group flex gap-4 rounded-xl border border-gray-100 p-4 hover:border-red-200 hover:bg-red-50 transition-colors"
+                  >
+                    <div className="relative w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
+                      <Image
+                        src={article.imageUrl}
+                        alt={article.imageAlt}
+                        fill
+                        className="object-cover"
+                        sizes="96px"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-gray-400 mb-1">{article.date}</p>
+                      <h2 className="font-semibold text-gray-900 group-hover:text-red-600 transition-colors line-clamp-2">
+                        {article.title}
+                      </h2>
+                      <p className="text-sm text-gray-500 mt-1 line-clamp-2">
+                        {article.summary}
+                      </p>
+                    </div>
+                  </Link>
+                );
+                if ((index + 1) % 4 === 0 && index !== articles.length - 1) {
+                  return [card, <AdCard key={`ad-${index}`} slot={AD_SLOT_NEWS} variant="inline" />];
+                }
+                return [card];
+              })}
             </div>
           )}
 

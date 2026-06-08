@@ -227,20 +227,24 @@ export default async function NewsArticlePage({ params }: PageProps) {
 
           {/* Article Body */}
           <article className="space-y-8">
-            {article.sections.map((section) => (
-              <section key={section.id} id={section.id}>
-                <h2 className="text-lg font-bold text-gray-900 mb-3">
-                  {section.heading}
-                </h2>
-                <p className="text-gray-700 leading-relaxed">
-                  {renderContent(section.content)}
-                </p>
-              </section>
-            ))}
+            {article.sections.flatMap((section, index) => {
+              const midPoint = Math.floor((article.sections.length - 1) / 2);
+              const sectionEl = (
+                <section key={section.id} id={section.id}>
+                  <h2 className="text-lg font-bold text-gray-900 mb-3">
+                    {section.heading}
+                  </h2>
+                  <p className="text-gray-700 leading-relaxed">
+                    {renderContent(section.content)}
+                  </p>
+                </section>
+              );
+              if (index === midPoint) {
+                return [sectionEl, <AdCard key="mid-ad" slot={AD_SLOT_NEWS} variant="inline" />];
+              }
+              return [sectionEl];
+            })}
           </article>
-
-          {/* 文章內廣告 */}
-          <AdCard slot={AD_SLOT_NEWS} variant="inline" className="mt-10" />
 
           {/* Sources */}
           {article.sources.length > 0 && (
