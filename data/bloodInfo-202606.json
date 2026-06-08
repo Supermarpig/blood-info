@@ -410,7 +410,9 @@
         "rawLine": "6/1-送完為止，宜蘭捐血站",
         "images": [
           "https://i.imgur.com/kco8Wvq.jpeg",
-          "https://i.imgur.com/XcROqNR.jpeg"
+          "https://i.imgur.com/XcROqNR.jpeg",
+          "https://i.imgur.com/w7rIJLT.jpeg",
+          "https://i.imgur.com/Vu7OFHA.png"
         ]
       },
       "isPttOnly": true
@@ -5539,6 +5541,20 @@
       "activityDate": "2026-06-08",
       "center": "台北",
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q156387892403528562",
+      "pttData": {
+        "rawLine": "6/8(一)新北汐止新台五路一段",
+        "images": [
+          "https://i.imgur.com/zCxNa7k.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/zCxNa7k.jpeg",
+            "text": "中 | ※ 生 二 一 2\n2 們 人 公 -\ne 卻 [>\n和 暢 (字\n世人 【】 N\n2 司 人 人\nos Hu +a 血 車 | Q2z 人 4\n一 1 人 # 交 |\n有 上 (9\n| 2\n則 一 ~ |] 有\n人\n容 @@ 脫 ) 全 ee\nLAI 上 e\n一 te 而\n您 的 熱血 ,\n可 居 引\n中 人 一 全 命 。 4\n上 二 二\n六 月 的 日 光 與 您 血液 裡 的 暖 意\n六 月 的 風 剛 開 始 有 了 夏天 的 輪廓 。\n有 些 禮物 , 無 法 在 商 店 買 到 , 只 能 從 一 個 生 命 傳遞 給 另 一 個 生 命 。\n我 們 總 是 在 忙碌 的 報表 與 會 議 間 , 尋 找 生 存 的 意義 ;\n但 在 這 天 , 意 義 不 在 字 裡 行 間 , 而 在 於 您 捲 起 袖子 的 那 一 刻 。\n那 不 只 是 一 袋 紅 色 的 液體 而 是 您 分 給 這 世界 的 一 抹 微 光 。\n讓 您 的 溫度 , 成 為 他 人 生 命 裡 , 如 期 而 至 的 春天 。\nHua/em 還 \"3 s 09:30-16:00\n華電 聯網 - 勞 瘦 究 角 1\n2- 行 動 本 加\n記入 |\n‧ 卅 昌\n",
+            "confidence": 66
+          }
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 25.0637253,
         "lng": 121.6567136
@@ -5552,6 +5568,20 @@
       "activityDate": "2026-06-08",
       "center": "台北",
       "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q156387886952286004",
+      "pttData": {
+        "rawLine": "6/8(一)台北市政府警察局",
+        "images": [
+          "https://i.imgur.com/jxZW80m.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/jxZW80m.jpeg",
+            "text": "懊 念 臺北 市 政府 警察 局 | 和\n晤 影 Taipei City Poliee Department 六 了\n2 4 可 肪 , 4\n) 和 路 店 肥 )!! 上\n1 鶴\n品\n”-. 累 民 同 心 拆\n爛 「 雲 】」 w\n(和\n凍 伺 115 年 6 月 8 日 (星期 ~) 翊\n(區 上 和 9 所 303 = 下午 4 凡 303 全 2 人 說\n2 (臺北 市 政府 警察 局\n(臺北 市 中 正 區 延平 南路 96 號 ) RE\n喇 登 登 登 合\n桐 花 沐浴 乳 4 瓶 及 上 事 全 車\n宣 導 品 1 袋 司 廬 還 計 |e\n[辦理 單位 條 ML\n臺北 市 政府 警察 局 及 / 、\n峰 智 生 化 科技 有 限 公司 和 2 仿\n汪汪 2 罰 捐血 請 攜帶 身分 證 或 有 照片 之 八 9\n蕊 吧 健保 卡 或 駕照 倫 全\n",
+            "confidence": 53
+          }
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 25.0438322,
         "lng": 121.509779
@@ -5577,7 +5607,21 @@
       "location": "新北市汐止區新台五路一段108號中巴",
       "activityDate": "2026-06-08",
       "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q156387881680891590"
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q156387881680891590",
+      "pttData": {
+        "rawLine": "6/8(一)新北汐止新台五路一段",
+        "images": [
+          "https://i.imgur.com/zCxNa7k.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/zCxNa7k.jpeg",
+            "text": "中 | ※ 生 二 一 2\n2 們 人 公 -\ne 卻 [>\n和 暢 (字\n世人 【】 N\n2 司 人 人\nos Hu +a 血 車 | Q2z 人 4\n一 1 人 # 交 |\n有 上 (9\n| 2\n則 一 ~ |] 有\n人\n容 @@ 脫 ) 全 ee\nLAI 上 e\n一 te 而\n您 的 熱血 ,\n可 居 引\n中 人 一 全 命 。 4\n上 二 二\n六 月 的 日 光 與 您 血液 裡 的 暖 意\n六 月 的 風 剛 開 始 有 了 夏天 的 輪廓 。\n有 些 禮物 , 無 法 在 商 店 買 到 , 只 能 從 一 個 生 命 傳遞 給 另 一 個 生 命 。\n我 們 總 是 在 忙碌 的 報表 與 會 議 間 , 尋 找 生 存 的 意義 ;\n但 在 這 天 , 意 義 不 在 字 裡 行 間 , 而 在 於 您 捲 起 袖子 的 那 一 刻 。\n那 不 只 是 一 袋 紅 色 的 液體 而 是 您 分 給 這 世界 的 一 抹 微 光 。\n讓 您 的 溫度 , 成 為 他 人 生 命 裡 , 如 期 而 至 的 春天 。\nHua/em 還 \"3 s 09:30-16:00\n華電 聯網 - 勞 瘦 究 角 1\n2- 行 動 本 加\n記入 |\n‧ 卅 昌\n",
+            "confidence": 66
+          }
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDYvMDgtMDk6MDB+MTc6MDAt5YWn5pS/6YOo6K2m5pS/572y5L+d5a6J6K2m5a+f56ys5LiA57i96ZqK",
@@ -6510,6 +6554,13 @@
         "rawLine": "6/9(二)台南學甲分局",
         "images": [
           "https://i.imgur.com/Jfpnsvi.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/Jfpnsvi.jpeg",
+            "text": "則 臺南 市 政府 警察 局 捐血 一 家\n廊 學 甲 分 司 。] 救 人 ~ 命\n凡 上 還\n人 二\n。 AS 問 站 記 「 廖 汪 註記\n加 一 玉 一 上 全 下 上 大 旭 廬 生 天 2\n人 激 請 出 動\n學 甲 警 友 會 邀請 /\n世 謂 史 - 全\n日 期 am 還 / /,\ntn 115 年 6 月 9 日 (二 ) 一 /\n飼 纏 09:00-16:30 伺\n若 共有 學 甲 分 局 前 二\n(臺南 市 學 甲 區 慈 福里 華 宗 路 294 號 ) 和\n0\n對 人 ‧ 沐 浴 露 ‧ 禮 券 生 條 Lai 1\n‧ 警 察 熊 娃娃 到 生 | 說\n必 小 馬 吊 飾 ( 限 前 50 名 捐血 者 ) 人\n紀念 品 以 現場 實 品 為 主 (圖 片 僅 供 參 考 ) 一 0\n員 員 ssl! 可 ! !\n5 一 2 ! 國 有 。 生 全 和\n了\n昌 一 3 六 六 癌 廬\n三 避\n沐浴 吉 禮 炎 警察 然 娃娃 di 呈 抱 覓 0\n捐血 有 愛 。 敬 民 同 心 “~ ) sm (\n熱血 守護 臺南 王\n)” 娃 導 加 貫 助 單位\n組 南 市 大 台 之 友 以 3 寶\nHe\n店 廬 峰 智 生 化 科技 有 限 公司\n",
+            "confidence": 49
+          }
         ]
       },
       "tags": [
@@ -6560,6 +6611,13 @@
         "rawLine": "6/10-6/11(三-四)臺北科技大學學生活動中心前",
         "images": [
           "https://i.imgur.com/d12sfte.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/d12sfte.jpeg",
+            "text": "二 9 則. 有, 」』 的 Ma\nAl. 7 有 0 啟 !: 暗\n和 Rd\n世人 當 人 公用 人 入\n上 NO 朮 “-\n(他 人 作家 殼 記 人\nIN 避 人 XX\n人 和 之\nCa 人\nCa 其 未 捐 箇 ee\n媽 7 fm 三\nNu( 三 和 @ 划 性\n3 紡 人 寢 師 廁 虹 轉 晶 :。\n之 人 記 ~ 號\nee 7\n必 瞳 2026 /06 /10-2026 /06/\n禮 (2 )1:00-18:00 《 診 /\n@ 學 生 活動 中 心 前 (原 中 正 紀念 館 前 ) 說\nY\n/ 。 |」 詳細 資訊 請 關注 意 幼 社 公告 【IG】\n( 全 NTUT_TSZYOU 啟 請 留意\n人\n來 捐 就 送 9\n“只 電影 票 乙 張 所\n好 2 序 x€\n數 量 有 限 換 完 為 止 寢 一\n和 說\n7 2\n咬 附 有 熱血 打 卡 牆 全 轉 pg\n3 歡迎 拍照 打 卡 唷 了 八 : 還\npl 還 您 只\n",
+            "confidence": 40
+          }
         ]
       },
       "tags": [
@@ -7656,6 +7714,13 @@
         "rawLine": "6/12(五)、8/8(六)、9/6(日)、9/11(五)、10/9(五)、10/23(五)、11/29(日)、12/25(五) 台北松壽路16巷愛迪達旁",
         "images": [
           "https://i.imgur.com/SQL9Y7F.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/SQL9Y7F.jpeg",
+            "text": "點 國 點 國\n安 致 勤 資 公 益 信 託 捐血 活動\n捐 導 0 請 看 嶄 ) 影\n時 間 : 11:00-18:00\n地 點 : 松 壽 路 16 巷 愛 迪 達 旁\n1/9、1/25、2/14\n3/13、4/3、5/1\n5/30、6/12、8/8\n9/6、9/1I、10/9\n10/23、11/29、12/25\n計 歡迎 拍照 分 享\nSi\n3 凍 2\n全 “2\n2 襄 | 人 9 捐 500cc 送 二 張\n",
+            "confidence": 61
+          }
         ]
       },
       "tags": [
@@ -7909,6 +7974,20 @@
       "activityDate": "2026-06-12",
       "center": "新竹",
       "detailUrl": "https://www.sc.blood.org.tw/xcevent/cont?sid=0Q138380593666769556",
+      "pttData": {
+        "rawLine": "6/12(五)桃園市政府警察局桃園分局",
+        "images": [
+          "https://i.imgur.com/buO4O0D.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/buO4O0D.jpeg",
+            "text": "co 大 名 司 記入\n區 5 是 時 和 生\n玫 115th 是 Blood 八重 1314\n褒 信 。 時間: 115 年 6 月 12 日 09-16 時\n說 樣 地 點 : 桃園 區 力行 路 258 號\nEX 桃園 市 政府 警察 局 桃園 分 局 前\n才 = 曲 一 生 2 副\nrm\n們 了 區 TA\n回 一 一 補 全\n| A 點 es, 寶 轉\n中 還 和 M 姜 主 汪\n1 / > 模 天 下 、 領 梨 「 昌 銜 三 說\n捐血 人 送 粽子 禮盒 或 捐血\njg 250CC 花旗 夢 麵 線 二 擇 一 神 號 ws\n” 桃園 市 政府 警察 局 桃園 分 局 ,\n桃 園 民 防 中 ” 隊 邀請\n",
+            "confidence": 48
+          }
+        ]
+      },
+      "tags": [],
       "coordinates": {
         "lat": 25.0001687,
         "lng": 121.29907
@@ -9903,19 +9982,6 @@
       }
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDYvMTUtMTA6MDB+MTY6MzAt5paw5YyW5beh6L+0",
-      "time": "10:00~16:30",
-      "organization": "新化巡迴",
-      "location": "臺南市新化區護國里6鄰中山路173號(新化國小)",
-      "activityDate": "2026-06-15",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q147295984693201795",
-      "coordinates": {
-        "lat": 23.0376723,
-        "lng": 120.3107977
-      }
-    },
-    {
       "id": "6auY6ZuELTIwMjYvMDYvMTUtMDk6MDB+MTc6MzAt5L2O6Kq/55qE5ZaE5b+D5Lq65aOr",
       "time": "09:00~17:30",
       "organization": "低調的善心人士",
@@ -10297,9 +10363,9 @@
       }
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDYvMTctMTA6MDB+MTY6MzAt5pWR5ZyL5ZyY5Y+w5Y2X5biC5q245LuB5Y2A5ZyY5aeU5pyD",
+      "id": "6auY6ZuELTIwMjYvMDYvMTctMTA6MDB+MTY6MzAt6Zec5buf5beh6L+0",
       "time": "10:00~16:30",
-      "organization": "救國團台南市歸仁區團委會",
+      "organization": "關廟巡迴",
       "location": "臺南市關廟區正義街37號(關廟山西宮)",
       "activityDate": "2026-06-17",
       "center": "高雄",
@@ -11209,13 +11275,6 @@
         "rawLine": "6/20-6/21(六-日)嘉義捐血站",
         "images": [
           "https://i.imgur.com/VKFdeOU.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/VKFdeOU.jpeg",
-            "text": "2\n2 Ru/7. | 4\n全 誕 和 二]\nIT\n愉\n一 販 全 p 2 2《/ 衣 4 人\n說 條 當 00217:00-\n區 xo 8\n捐血 250cc (CCD\n紅心 蛋 禮 盒 。 Base\n局 9 二\n捐血 500cc (0 各 說\n浪 心 蛋 一 包 髒 昌 6\n癌 誠 主 寢室\n主 辦 單位 :\n佳 展 蛋品 科技 公司 . 東森 白金 蛋 必\n",
-            "confidence": 39
-          }
         ]
       },
       "tags": [
