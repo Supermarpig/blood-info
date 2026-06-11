@@ -3,6 +3,9 @@ import { Metadata } from "next";
 import ImageApprovalList from "@/components/ImageApprovalList";
 import { getAllBloodImgInfo } from "@/services/bloodService";
 
+// 這頁在 render 時會連 MongoDB，標記 force-dynamic 避免 build 階段就嘗試連線。
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };

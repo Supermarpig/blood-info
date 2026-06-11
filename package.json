@@ -10,7 +10,10 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "updateData": "node scripts/updateData.js",
     "importReports": "node scripts/importReports.js",
-    "geocode": "GOOGLE_MAPS_API_KEY=$(grep GOOGLE_MAPS_API_KEY .env.local | cut -d= -f2) node scripts/geocode-future.js"
+    "geocode": "GOOGLE_MAPS_API_KEY=$(grep GOOGLE_MAPS_API_KEY .env.local | cut -d= -f2) node scripts/geocode-future.js",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -34,7 +37,7 @@
     "leaflet": "^1.9.4",
     "lucide-react": "^0.453.0",
     "mongoose": "^8.7.2",
-    "next": "16.1.7",
+    "next": "16.2.9",
     "next-auth": "5.0.0-beta.31",
     "react": "^19.2.4",
     "react-day-picker": "^9.13.0",
@@ -48,6 +51,7 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.19.11",
     "@types/canvas-confetti": "^1.9.0",
     "@types/leaflet": "^1.9.21",
     "@types/node": "^20",
@@ -57,7 +61,8 @@
     "eslint-config-next": "14.2.15",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.100.0"
   },
   "packageManager": "pnpm@9.14.4+sha512.c8180b3fbe4e4bca02c94234717896b5529740a6cbadf19fa78254270403ea2f27d4e1d46a08a0f56c89b63dc8ebfd3ee53326da720273794e6200fcf0d184ab"
 }

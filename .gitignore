@@ -37,3 +37,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# cloudflare / opennext
+.open-next/
+.wrangler/
+.dev.vars
+cloudflare-env.d.ts
+
+# generated static data (build 時從 /data 複製過來)
+/public/data/

@@ -39,23 +39,41 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
+// build / 預渲染時直接讀 /data 檔；Workers runtime 沒有 fs（ISR 重生或 on-demand 頁面），
+// fallback 改抓同源靜態資源 /data/*.json（build 時由 next.config 從 /data 複製到 public/data）。
+async function loadMonthData(
+  year: string,
+  month: string
+): Promise<Record<string, DonationEvent[]> | null> {
+  const file = `bloodInfo-${year}${month}.json`;
+  try {
+    const content = await fs.readFile(path.join(process.cwd(), "data", file), "utf-8");
+    return JSON.parse(content);
+  } catch {
+    const base = process.env.NEXT_PUBLIC_BASE_URL;
+    if (!base) return null;
+    try {
+      const res = await fetch(new URL(`/data/${file}`, base));
+      return res.ok ? ((await res.json()) as Record<string, DonationEvent[]>) : null;
+    } catch {
+      return null;
+    }
+  }
+}
+
 async function getDayData(id: string): Promise<{ event: DonationEvent | null; dayEvents: DonationEvent[] }> {
   const match = id.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/);
   if (!match) return { event: null, dayEvents: [] };
 
   const [, date, shortId] = match;
   const [year, month] = date.split("-");
-  const filePath = path.join(process.cwd(), "data", `bloodInfo-${year}${month}.json`);
 
-  try {
-    const content = await fs.readFile(filePath, "utf-8");
-    const data: Record<string, DonationEvent[]> = JSON.parse(content);
-    const dayEvents = data[date] ?? [];
-    const event = dayEvents.find((e) => e.id && eventShortId(e.id) === shortId) ?? null;
-    return { event, dayEvents };
-  } catch {
-    return { event: null, dayEvents: [] };
-  }
+  const data = await loadMonthData(year, month);
+  if (!data) return { event: null, dayEvents: [] };
+
+  const dayEvents = data[date] ?? [];
+  const event = dayEvents.find((e) => e.id && eventShortId(e.id) === shortId) ?? null;
+  return { event, dayEvents };
 }
 
 // 預渲染「當月與未來」的活動頁，讓這些有真實流量的頁面在 build 時就進 CDN（第一次被打就是 cache HIT）。

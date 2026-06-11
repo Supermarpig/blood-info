@@ -1,8 +1,4 @@
 import { NextResponse } from "next/server";
-import axios from "axios";
-import * as cheerio from "cheerio";
-import { promises as fs } from "fs";
-import path from "path";
 
 interface DonationEvent {
   id?: string;
@@ -36,7 +32,7 @@ class MemoryCache {
     timestamp: 0,
   };
 
-  // Vercel instance 閒置幾分鐘就 cold down，24h 撐不住；1h 足以應付手動補資料後的刷新需求，且不影響 ISR 費用
+  // instance 閒置幾分鐘就 cold down，24h 撐不住；1h 足以應付手動補資料後的刷新需求
   private static TTL = 3600000; // 1小時，單位為毫秒
 
   static get(): Record<string, DonationEvent[]> | null {
@@ -72,83 +68,24 @@ const CDN_CACHE_HEADERS = {
   "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
 } as const;
 
-// 定義要爬取的網址列表
-const urls = [
-  "https://www.tp.blood.org.tw/Internet/taipei/LocationMonth.aspx?site_id=2",
-  "https://www.sc.blood.org.tw/Internet/hsinchu/LocationMonth.aspx?site_id=3",
-  "https://www.tc.blood.org.tw/Internet/Taichung/LocationMonth.aspx?site_id=4",
-  "https://www.ks.blood.org.tw/Internet/Kaohsiung/LocationMonth.aspx?site_id=6",
-];
-
-// 生成當前月份的 JSON 文件名稱
-function getCurrentMonthFileName(): string {
-  const currentDate = new Date();
-  const year = currentDate.getFullYear();
-  const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // 月份補零
-  // console.log(`bloodInfo-${year}${month}.json😍😍😍`)
-  return `bloodInfo-${year}${month}.json`;
-}
-
-// 定義函數將中文日期轉換為標準日期格式
-function parseChineseDate(chineseDate: string): string {
-  const currentYear = new Date().getFullYear();
-
-  // 匹配中文日期格式，如 "10月1日"
-  const dateMatch = chineseDate.match(/(\d+)月(\d+)日/);
-  if (!dateMatch) return chineseDate; // 如果無法匹配，返回原日期
-
-  const month = parseInt(dateMatch[1], 10);
-  const day = parseInt(dateMatch[2], 10);
-
-  // 檢查月份，確保正確處理跨年情況
-  const parsedYear =
-    month < new Date().getMonth() + 1 ? currentYear + 1 : currentYear;
-
-  // 格式化為 YYYY-MM-DD
-  const formattedDate = `${parsedYear}-${String(month).padStart(
-    2,
-    "0"
-  )}-${String(day).padStart(2, "0")}`;
-  return formattedDate;
-}
-
-// 保存資料到本地 JSON 文件，並將日期轉換為標準格式
-async function saveLocalDataWithFormattedDates(
-  data: Record<string, DonationEvent[]>,
-  filePath: string
-): Promise<void> {
-  const formattedData = Object.keys(data).reduce((acc, date) => {
-    const formattedDate = parseChineseDate(date); // 轉換日期格式
-    acc[formattedDate] = data[date]; // 保存轉換後的日期
-    return acc;
-  }, {} as Record<string, DonationEvent[]>);
-
-  try {
-    await fs.writeFile(
-      filePath,
-      JSON.stringify(formattedData, null, 2),
-      "utf-8"
-    );
-  } catch (error) {
-    console.error("Error saving local data:", error);
-  }
-}
-
-// 從本地文件中讀取資料
-async function loadLocalData(
-  filePath: string
+// 從靜態資源（/data/*.json，build 時由 next.config 從 /data 複製到 public/data）讀取單月資料。
+// Workers 沒有檔案系統，改用 fetch 同源靜態檔，資料由 CDN 提供、不占 worker bundle。
+async function loadMonthData(
+  origin: string,
+  file: string
 ): Promise<Record<string, DonationEvent[]> | null> {
   try {
-    const fileContent = await fs.readFile(filePath, "utf-8");
-    return JSON.parse(fileContent);
+    const res = await fetch(new URL(`/data/${file}`, origin));
+    if (!res.ok) return null;
+    return (await res.json()) as Record<string, DonationEvent[]>;
   } catch (error) {
-    console.log("Error reading local data:", error);
+    console.log("Error loading donation data:", error);
     return null;
   }
 }
 
-// GET - 取得捐血活動列表
-export async function GET(): Promise<NextResponse<ApiResponse>> {
+// GET - 取得捐血活動列表（當月 + 下個月）
+export async function GET(request: Request): Promise<NextResponse<ApiResponse>> {
   try {
     // 檢查記憶體快取
     const cachedData = MemoryCache.get();
@@ -159,12 +96,13 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
       );
     }
 
-    // 載入當月和下個月的資料
+    const origin = new URL(request.url).origin;
+
+    // 計算當月與下個月的檔名
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
     const currentMonth = currentDate.getMonth() + 1;
 
-    // 計算下個月
     let nextYear = currentYear;
     let nextMonth = currentMonth + 1;
     if (nextMonth > 12) {
@@ -180,21 +118,17 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
       "0"
     )}.json`;
 
-    const currentMonthPath = path.join(process.cwd(), "data", currentMonthFile);
-    const nextMonthPath = path.join(process.cwd(), "data", nextMonthFile);
-
     let allData: Record<string, DonationEvent[]> = {};
 
     // 載入當月資料
-    const currentData = await loadLocalData(currentMonthPath);
+    const currentData = await loadMonthData(origin, currentMonthFile);
     if (currentData) {
       allData = { ...currentData };
     }
 
-    // 載入下個月資料
-    const nextData = await loadLocalData(nextMonthPath);
+    // 載入下個月資料並合併
+    const nextData = await loadMonthData(origin, nextMonthFile);
     if (nextData) {
-      // 合併資料
       for (const date in nextData) {
         if (allData[date]) {
           allData[date] = [...allData[date], ...nextData[date]];
@@ -204,75 +138,12 @@ export async function GET(): Promise<NextResponse<ApiResponse>> {
       }
     }
 
-    if (Object.keys(allData).length > 0) {
-      MemoryCache.set(allData);
-      return NextResponse.json({ success: true, data: allData }, { headers: CDN_CACHE_HEADERS });
-    }
+    MemoryCache.set(allData);
 
-    // 若無文件或本地檔案不可讀，開始爬取資料
-    const headers = {
-      "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-      Accept:
-        "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-      "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-    };
-
-    const donationsByDate: Record<string, DonationEvent[]> = {};
-
-    for (const url of urls) {
-      const response = await axios.get(url, { headers });
-      const $ = cheerio.load(response.data);
-
-      // 解析網站並組織資料
-      $(
-        "table#ctl00_ContentPlaceHolder1_cale_bloodSpotCalendar tbody tr td"
-      ).each((_, element) => {
-        const date = $(element).find("a").attr("title");
-        const tooltipElement = $(element).find("font.tooltip");
-        const tooltipText = tooltipElement.attr("title");
-
-        if (date && tooltipText) {
-          const eventsArray = tooltipText
-            .split(/<font color=red>◎<\/font>/)
-            .filter((text) => text.trim() !== "");
-          eventsArray.forEach((eventText) => {
-            const cleanText = eventText.replace(/<\/?.*?>/g, "").trim();
-            const timeRegex = /作業時間：([\d:]+~[\d:]+)/;
-            const organizationRegex = /主辦單位：([^。]+)/;
-            const locationRegex = /地址：([^<]+)/;
-            const timeMatch = cleanText.match(timeRegex);
-            const organizationMatch = cleanText.match(organizationRegex);
-            const locationMatch = cleanText.match(locationRegex);
-
-            if (timeMatch && organizationMatch && locationMatch) {
-              const eventInfo: DonationEvent = {
-                id: Buffer.from(cleanText).toString("base64"),
-                time: timeMatch[1].trim(),
-                organization: organizationMatch[1].trim(),
-                location: locationMatch[1].trim(),
-                rawContent: cleanText,
-                activityDate: parseChineseDate(date),
-              };
-
-              if (!donationsByDate[date]) {
-                donationsByDate[date] = [];
-              }
-              donationsByDate[date].push(eventInfo);
-            }
-          });
-        }
-      });
-    }
-
-    // 保存爬取到的資料
-    const fileName = getCurrentMonthFileName();
-    const filePathToSave = path.join(process.cwd(), "data", fileName);
-    await saveLocalDataWithFormattedDates(donationsByDate, filePathToSave);
-
-    MemoryCache.set(donationsByDate);
-
-    return NextResponse.json({ success: true, data: donationsByDate }, { headers: CDN_CACHE_HEADERS });
+    return NextResponse.json(
+      { success: true, data: allData },
+      { headers: CDN_CACHE_HEADERS }
+    );
   } catch (error) {
     console.error("Error fetching blood donation data:", error);
     return NextResponse.json(
