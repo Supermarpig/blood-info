@@ -2,30 +2,46 @@ import { promises as fs } from "fs";
 import path from "path";
 
 /**
- * 取得「當月 + 下個月」的捐血活動資料（給 server component 用）。
+ * 讀 /data 下的 JSON 檔，回傳原始字串。
  *
- * 取代各頁原本「自己 fetch /api/blood-donations」的寫法 —— 那在 Cloudflare Workers 上
- * 會讓 worker 對自己發大量子請求（被 Next 預抓時），爆掉免費方案的 CPU/子請求限制而回 503。
- *
- * build / 預渲染時直接讀 /data 檔（fs）；Workers runtime（ISR 重生）沒有 fs，
- * 改抓同源靜態資源 /data/*.json（build 時由 next.config 從 /data 複製到 public/data）。
+ * - build / 預渲染：直接讀檔（fs）。
+ * - Cloudflare Workers runtime：沒有 fs，且 worker「fetch 自己的公開網址」在 Cloudflare 上
+ *   不可靠（會讀不到），所以改用 ASSETS binding 讀已部署的靜態資源。
  */
-async function loadMonth<T>(file: string): Promise<Record<string, T[]> | null> {
+async function readDataFile(file: string): Promise<string | null> {
   try {
-    const raw = await fs.readFile(path.join(process.cwd(), "data", file), "utf-8");
-    return JSON.parse(raw);
+    return await fs.readFile(path.join(process.cwd(), "data", file), "utf-8");
   } catch {
-    const base = process.env.NEXT_PUBLIC_BASE_URL;
-    if (!base) return null;
     try {
-      const res = await fetch(new URL(`/data/${file}`, base));
-      return res.ok ? ((await res.json()) as Record<string, T[]>) : null;
+      const { getCloudflareContext } = await import("@opennextjs/cloudflare");
+      const env = getCloudflareContext().env as unknown as {
+        ASSETS?: { fetch: (input: Request | string | URL) => Promise<Response> };
+      };
+      if (!env.ASSETS) return null;
+      const res = await env.ASSETS.fetch(
+        new URL(`/data/${file}`, "http://assets.local")
+      );
+      return res.ok ? await res.text() : null;
     } catch {
       return null;
     }
   }
 }
 
+/** 讀單一月份檔（例如 bloodInfo-202606.json），解析成 { 日期: 活動[] }。 */
+export async function loadMonth<T = unknown>(
+  file: string
+): Promise<Record<string, T[]> | null> {
+  const raw = await readDataFile(file);
+  if (!raw) return null;
+  try {
+    return JSON.parse(raw) as Record<string, T[]>;
+  } catch {
+    return null;
+  }
+}
+
+/** 讀「當月 + 下個月」的捐血活動並合併。給 server component / API route 共用。 */
 export async function getDonations<T = unknown>(): Promise<Record<string, T[]>> {
   const now = new Date();
   const cy = now.getFullYear();

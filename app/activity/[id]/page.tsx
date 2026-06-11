@@ -10,6 +10,7 @@ import { getGiftByTagId } from "@/lib/giftConfig";
 import { CITIES } from "@/lib/cityConfig";
 import { ORGANIZATIONS } from "@/lib/organizationConfig";
 import { eventShortId } from "@/lib/eventId";
+import { loadMonth } from "@/lib/getDonations";
 import ShareButton from "./ShareButton";
 import { ActivityImages } from "./ActivityImages";
 import AdCard from "@/components/AdCard";
@@ -39,28 +40,6 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
-// build / 預渲染時直接讀 /data 檔；Workers runtime 沒有 fs（ISR 重生或 on-demand 頁面），
-// fallback 改抓同源靜態資源 /data/*.json（build 時由 next.config 從 /data 複製到 public/data）。
-async function loadMonthData(
-  year: string,
-  month: string
-): Promise<Record<string, DonationEvent[]> | null> {
-  const file = `bloodInfo-${year}${month}.json`;
-  try {
-    const content = await fs.readFile(path.join(process.cwd(), "data", file), "utf-8");
-    return JSON.parse(content);
-  } catch {
-    const base = process.env.NEXT_PUBLIC_BASE_URL;
-    if (!base) return null;
-    try {
-      const res = await fetch(new URL(`/data/${file}`, base));
-      return res.ok ? ((await res.json()) as Record<string, DonationEvent[]>) : null;
-    } catch {
-      return null;
-    }
-  }
-}
-
 async function getDayData(id: string): Promise<{ event: DonationEvent | null; dayEvents: DonationEvent[] }> {
   const match = id.match(/^(\d{4}-\d{2}-\d{2})-(.+)$/);
   if (!match) return { event: null, dayEvents: [] };
@@ -68,7 +47,7 @@ async function getDayData(id: string): Promise<{ event: DonationEvent | null; da
   const [, date, shortId] = match;
   const [year, month] = date.split("-");
 
-  const data = await loadMonthData(year, month);
+  const data = await loadMonth<DonationEvent>(`bloodInfo-${year}${month}.json`);
   if (!data) return { event: null, dayEvents: [] };
 
   const dayEvents = data[date] ?? [];
