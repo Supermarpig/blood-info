@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import CalendarClient from "./CalendarClient";
+import { getDonations } from "@/lib/getDonations";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -59,13 +60,7 @@ export default async function CalendarPage() {
   let data: Record<string, DonationEvent[]> = {};
 
   try {
-    const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      next: { revalidate: 86400 },
-    });
-    const result = await response.json();
-    if (result.success && result.data) {
-      data = result.data;
-    }
+    data = await getDonations<DonationEvent>();
   } catch {
     // render with empty data; client still works
   }

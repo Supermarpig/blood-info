@@ -10,6 +10,7 @@ import {
   getLionsOrgs,
   OrgConfig,
 } from "@/lib/organizationConfig";
+import { getDonations } from "@/lib/getDonations";
 
 const AD_SLOT_CITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
 
@@ -115,16 +116,8 @@ export default async function OrganizationPage({ params }: PageProps) {
   let error: string | null = null;
 
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      next: { revalidate: 86400 },
-    });
-    const apiData = await response.json();
-    if (apiData.success && apiData.data) {
-      data = filterEventsByOrg(apiData.data, org);
-    } else {
-      error = apiData.error || "發生錯誤";
-    }
+    const allData = await getDonations<DonationEvent>();
+    data = filterEventsByOrg(allData, org);
   } catch {
     error = "無法獲取捐血活動資料";
   }

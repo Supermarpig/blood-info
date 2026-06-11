@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import { getCityBySlug, getAllCitySlugs, getNearbyCities, CityConfig } from "@/lib/cityConfig";
+import { getDonations } from "@/lib/getDonations";
 import AdCard from "@/components/AdCard";
 import GuideCallout from "@/components/GuideCallout";
 
@@ -157,16 +158,8 @@ export default async function CityPage({ params }: PageProps) {
   let error = null;
 
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      next: { revalidate: 86400 },
-    });
-    const apiData = await response.json();
-    if (apiData.success && apiData.data) {
-      data = filterEventsByCity(apiData.data, city);
-    } else {
-      error = apiData.error || "發生錯誤";
-    }
+    const allData = await getDonations<DonationEvent>();
+    data = filterEventsByCity(allData, city);
   } catch (err) {
     console.error(err);
     error = "無法獲取捐血活動資料";

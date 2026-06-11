@@ -10,6 +10,7 @@ import {
   getAllRegionSlugs,
   RegionConfig,
 } from "@/lib/regionConfig";
+import { getDonations } from "@/lib/getDonations";
 
 interface DonationEvent {
   id?: string;
@@ -171,16 +172,8 @@ export default async function RegionPage({ params }: PageProps) {
   let error = null;
 
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      next: { revalidate: 86400 },
-    });
-    const apiData = await response.json();
-    if (apiData.success && apiData.data) {
-      data = filterEventsByRegion(apiData.data, region);
-    } else {
-      error = apiData.error || "發生錯誤";
-    }
+    const allData = await getDonations<DonationEvent>();
+    data = filterEventsByRegion(allData, region);
   } catch (err) {
     console.error(err);
     error = "無法獲取捐血活動資料";

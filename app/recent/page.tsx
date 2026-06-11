@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
+import { getDonations } from "@/lib/getDonations";
 
 interface DonationEvent {
   id?: string;
@@ -136,16 +137,8 @@ export default async function RecentPage() {
   let error = null;
 
   try {
-    const apiBase = baseUrl || "http://localhost:3000";
-    const response = await fetch(`${apiBase}/api/blood-donations`, {
-      next: { revalidate: 86400 },
-    });
-    const apiData = await response.json();
-    if (apiData.success && apiData.data) {
-      data = filterUpcomingDays(apiData.data, 7);
-    } else {
-      error = apiData.error || "發生錯誤";
-    }
+    const allData = await getDonations<DonationEvent>();
+    data = filterUpcomingDays(allData, 7);
   } catch (err) {
     console.error(err);
     error = "無法獲取捐血活動資料";

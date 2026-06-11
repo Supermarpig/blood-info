@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import { getGiftBySlug, getAllGiftSlugs, GiftConfig } from "@/lib/giftConfig";
+import { getDonations } from "@/lib/getDonations";
 import AdCard from "@/components/AdCard";
 
 const AD_SLOT_GIFT = process.env.NEXT_PUBLIC_ADSENSE_SLOT_GIFT;
@@ -171,16 +172,8 @@ export default async function GiftPage({ params }: PageProps) {
   let error = null;
 
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      next: { revalidate: 86400 },
-    });
-    const apiData = await response.json();
-    if (apiData.success && apiData.data) {
-      data = filterEventsByGift(apiData.data, gift);
-    } else {
-      error = apiData.error || "發生錯誤";
-    }
+    const allData = await getDonations<DonationEvent>();
+    data = filterEventsByGift(allData, gift);
   } catch (err) {
     console.error(err);
     error = "無法獲取捐血活動資料";
