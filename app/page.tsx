@@ -85,20 +85,49 @@ export default async function BloodDonationPage() {
   }
 
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-    // Add no-store to ensure we get fresh data from the API
-    const response = await fetch(`${baseUrl}/api/blood-donations`, {
-      next: { revalidate: 86400 },
-    });
-    const apiData = await response.json();
-    if (apiData.success && apiData.data) {
-      data = apiData.data;
-    } else {
-      error = apiData.error || "發生錯誤";
+    // build / 預渲染時直接讀 /data 檔；Workers runtime（ISR 重生）沒有 fs，fallback 抓同源靜態資源。
+    // 不再自己 fetch /api/blood-donations，避免 build 時 API 還沒上線而抓不到資料。
+    const now = new Date();
+    const cy = now.getFullYear();
+    const cm = now.getMonth() + 1;
+    let ny = cy;
+    let nm = cm + 1;
+    if (nm > 12) {
+      nm = 1;
+      ny++;
+    }
+    const monthFiles = [
+      `bloodInfo-${cy}${String(cm).padStart(2, "0")}.json`,
+      `bloodInfo-${ny}${String(nm).padStart(2, "0")}.json`,
+    ];
+
+    for (const file of monthFiles) {
+      let monthData: Record<string, DonationEvent[]> | null = null;
+      try {
+        const raw = await fs.readFile(path.join(process.cwd(), "data", file), "utf-8");
+        monthData = JSON.parse(raw);
+      } catch {
+        const base = process.env.NEXT_PUBLIC_BASE_URL;
+        if (base) {
+          try {
+            const res = await fetch(new URL(`/data/${file}`, base));
+            if (res.ok) monthData = await res.json();
+          } catch {
+            // 略過
+          }
+        }
+      }
+      if (monthData) {
+        for (const date in monthData) {
+          data[date] = data[date]
+            ? [...data[date], ...monthData[date]]
+            : monthData[date];
+        }
+      }
     }
   } catch (err) {
     console.error(err);
-    error = "無法獲取捐血活動資料😍😍😍";
+    error = "無法獲取捐血活動資料";
   }
 
   if (error) {
