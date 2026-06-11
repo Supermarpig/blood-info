@@ -37,7 +37,7 @@ async function main() {
     const cache = JSON.parse(cacheRaw);
 
     // 找出未來活動缺座標的地址
-    const targetFiles = ['bloodInfo-202604.json', 'bloodInfo-202605.json'];
+    const targetFiles = ['bloodInfo-202606.json', 'bloodInfo-202607.json'];
     const missingAddresses = new Set();
 
     for (const fileName of targetFiles) {
