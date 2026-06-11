@@ -6,6 +6,7 @@ import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import { getCityBySlug, getAllCitySlugs, getNearbyCities, CityConfig } from "@/lib/cityConfig";
 import AdCard from "@/components/AdCard";
+import GuideCallout from "@/components/GuideCallout";
 
 const AD_SLOT_CITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
 
@@ -274,6 +275,8 @@ export default async function CityPage({ params }: PageProps) {
           </div>
         </section>
       )}
+
+      <GuideCallout className="mt-10" />
     </div>
     </>
   );

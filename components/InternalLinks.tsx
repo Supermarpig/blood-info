@@ -116,6 +116,17 @@ export default function InternalLinks() {
           捐血新聞與衛教
         </h2>
         <Link
+          href="/news/2026-05-10-blood-donation-complete-guide"
+          className="flex flex-col bg-white border border-red-100 rounded-xl px-4 py-3 mb-2 hover:border-red-300 hover:bg-red-50/50 transition-colors"
+        >
+          <span className="text-sm font-semibold text-gray-800">
+            捐血懶人包：條件、流程、好處與贈品一次看懂
+          </span>
+          <span className="text-xs text-gray-400 mt-0.5">
+            第一次捐血必看 — 從捐血資格到今日捐血活動查詢
+          </span>
+        </Link>
+        <Link
           href="/news"
           className="inline-flex items-center bg-white border border-gray-100 rounded-xl px-4 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
         >

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
+import GuideCallout from "@/components/GuideCallout";
 import {
   getRegionBySlug,
   getAllRegionSlugs,
@@ -259,6 +260,8 @@ export default async function RegionPage({ params }: PageProps) {
           ))}
         </div>
       </section>
+
+      <GuideCallout className="mt-10" />
     </div>
     </>
   );

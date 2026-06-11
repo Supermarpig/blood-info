@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import { getNewsBySlug, getAllNewsSlugs, getAllNews } from "@/lib/newsUtils";
 import AdCard from "@/components/AdCard";
+import { GUIDE_SLUG } from "@/components/GuideCallout";
 
 const AD_SLOT_NEWS = process.env.NEXT_PUBLIC_ADSENSE_SLOT_NEWS;
 const AD_SLOT_SIDEBAR = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
@@ -110,9 +111,12 @@ export default async function NewsArticlePage({ params }: PageProps) {
 
   const author = article.author ?? "血荒資訊編輯部";
 
-  const relatedArticles = getAllNews()
-    .filter((a) => a.slug !== article.slug)
-    .slice(0, 3);
+  // 把「捐血懶人包」支柱頁釘在延伸閱讀首位，讓全站文章都回連它、集中權重衝「捐血」大詞。
+  const others = getAllNews().filter((a) => a.slug !== article.slug);
+  const pillar = others.find((a) => a.slug === GUIDE_SLUG);
+  const relatedArticles = pillar
+    ? [pillar, ...others.filter((a) => a.slug !== GUIDE_SLUG).slice(0, 2)]
+    : others.slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
