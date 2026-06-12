@@ -1,0 +1,31 @@
+name: Submit to IndexNow
+
+# data 或文章合進 main 後，把近期變動的頁面推給 IndexNow
+# （Bing / Yahoo 奇摩 / Naver 等共用端點，Google 不吃 IndexNow 但有 sitemap）。
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "data/**"
+      - "content/news/**"
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 等 Cloudflare 部署 + 快取清除完成，確保抓到的 sitemap 是新版
+      - name: Wait for deployment
+        run: sleep 240
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Submit URLs to IndexNow
+        run: node scripts/indexnow.js
