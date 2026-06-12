@@ -99,13 +99,6 @@
         "rawLine": "7/1(三)台中中清果菜市場",
         "images": [
           "https://i.imgur.com/20o8wKx.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/20o8wKx.jpeg",
-            "text": "西 屯 區 ~ 捐血 送 烤 雞 活動\n人\n2\n還 上\n//1 (三 )9:00-16:00 烤 難 穢 攻 隊\n台 中 市 中 清 果菜 市 電\n(台 中 市 西 地 區 環 中 路 一 段 2151 號 ) 加計 放生 六\n捐血 250cc 贈送 烤 雞 特 攻 隊 烤 雞 一 隻 ” 區 詞 家 全 有 克 吉\n捐血 500cc 補 誠 了\n送 烤 雞 特 攻 隊 烤 雞 一 人 六 砰\n+ 全 聯 禮券 200 元\n王 生 (數 量 有 限 送 完 為 止 )\n” 主 辦 單位 : 彰 化 縣 德 樂 功 德 會\n",
-            "confidence": 68
-          }
         ]
       },
       "isPttOnly": true
@@ -894,13 +887,6 @@
         "rawLine": "7/5(日)桃園大有國中",
         "images": [
           "https://i.imgur.com/jtkTzpW.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/jtkTzpW.jpeg",
-            "text": "侈 / \\9\nje 中\n還 捐血 一 袋 救 人 一 命 如\n時 間 :115 年 7 月 5 日 上 午 9:00 起\n地 點 : 大 有 國 中 頌 上\n\n5 0 人 |\n2 品\n2\n卻\nuie\n計時 呈 1000 覓\n| 2 六 全 禮券\n人 5\n| 點 ar\n| 主辦 單位 : 大 同 扶 輪 社 (人 @) 桃 園區 柯 蔡 宗 親 會\n品 攜手 行 善 感恩 有 您 所\n",
-            "confidence": 60
-          }
         ]
       },
       "isPttOnly": true
@@ -1004,6 +990,35 @@
             "url": "https://i.imgur.com/u91VOer.jpeg",
             "text": "痊 , 台 中 太平 聖 濟 宮 則\n+\n\n打包 用 7 作對 基 六 點 人\n荒 # 和 同 : 蟬 清香 議 人\n議\n\nQc-\n\n2 1!250cc\n[209 兄 連 國 四\nSQ 人 盟國 閱 輻 辣 語 是 贍\nAu 和 訪 呈\n剛\n“條 二 3 史\n二 三 詞 < L sa 比 二 入 人 三 、 全 凡\n\n只 器 作 還 了 語 5 地 生 區\n點 影 下 , 坊 選\n",
             "confidence": 20
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTgtNy8xOCjlha0p6auY6ZuE5YmN6YeRL+W3pueHn+aNkOihgOWupA==",
+      "time": "",
+      "organization": "高雄前金/左營捐血室",
+      "location": "高雄前金/左營捐血室",
+      "activityDate": "2026-07-18",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "subTags": [
+        "超商－全聯"
+      ],
+      "pttData": {
+        "rawLine": "7/18(六)高雄前金/左營捐血室",
+        "images": [
+          "https://i.imgur.com/nvOpEJd.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/nvOpEJd.jpeg",
+            "text": "4 人\n_ 一 繁 寺 A、\n信 有\n公\nyy\n噹 : 全 聯 禮 養\n250CC 蒜 公元 .500CC 嫂 公元\n7 月 18 日 (去 )\n前 金 捐血 室 : 9 點 至 17 點 半\n左 營 捐血 室 : 9 點 半 至 18 點\n下 座 活 動 日 期 : IH/EH( 六 )\n毋 承 宮 慈 善 協 會\n",
+            "confidence": 65
           }
         ]
       },
@@ -1150,6 +1165,35 @@
         ]
       },
       "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTktNy8xOSjml6Up6auY6ZuE5o236YGL6KGb5q2m54ef56uZNuiZn+WHuuWPow==",
+      "time": "",
+      "organization": "高雄捷運衛武營站6號出口",
+      "location": "高雄捷運衛武營站6號出口",
+      "activityDate": "2026-07-19",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "subTags": [
+        "超商－家樂福"
+      ],
+      "pttData": {
+        "rawLine": "7/19(日)高雄捷運衛武營站6號出口",
+        "images": [
+          "https://i.imgur.com/SjZeRhY.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/SjZeRhY.jpeg",
+            "text": "時 ~ 圖 、 計生 廬 國 放 上 國 點 ,\n2 闌 陳 My 人 2 9\n點 重則 和 尚 !0k 熱 箇 相 近 1\n一 ] 【 二 三 太 寢\n際 六 補 。 捐血 活動 專區 。 囊 吝\n還 am, 55,\n共 也 會 一 語\n0 好 全 7\n9 9\n了 人\n9 @ Me 凍\nS 到 共用\ni we 條 生\nl 嘆 還 品 二 2 表 全 若\nSA 人 和\n呈 席 捐血 250CC 好 禮 送 了 捐血 500CC 好 禮 加 碼 ! 席\n上 晤 斤 和 ? 即 可 獲得 e 點\n2 各 王 蟬 人 AG\n3 選 二 家 樂 福 櫥 人 全 卅 三 sh\n和 張 宁 隔 和 閃 必\nes 補 塌 ~ 了 Jo0 」 了\n二 二 二 二 人 久 一 Sn 09\n還 侍 活動 日 期 | 115 年 07 月 19 日 (星期 日) [八 勞\n吝 訓 (0 活動 時 間 | 上 午 09:00 ~ 下午 4:00 放生 人\n點 。 人 活動 地 點 | 衛 武 營 | 戶外 劇場 人 ES\n0 汪 (高 雄 捷 運 ~ 衛 武 營 6 號 出 口 ) 全\n說 人\n指導 單位 | 高 雄 市 政府 青年 局 主\n| 誤 人\n補助 單位 | 高 雄 市 政府 社會 局 三\n主 辦 單位 | 高 雄 市 鳳 山 國 際 青年 商 會 。 《 會 長 張 展 源 0918-829-758\n協辦 單位 | 南 區 會 、 鍾 易 仲 議員 服務 處 總 幹事 陳 亭 羽 0970-505-393\n",
+            "confidence": 47
+          }
+        ]
+      },
+      "isPttOnly": true
     }
   ],
   "2026-07-10": [
@@ -1171,13 +1215,6 @@
         "rawLine": "7/10(五)台中北屯環中路一段",
         "images": [
           "https://i.imgur.com/ySAVUA7.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/ySAVUA7.jpeg",
-            "text": "THE re 信人 和 說 人 六 儿 人 症 和\n二 G 人 2 六 了 人 有 2 一 記\n相 人 切 US\n2 ecoTTESSSHHNedl\n哈 損 血 好 禮 串\n還 呈 生 掉 箇 由 還 人 館 餐 站\n? 全 人 套餐 gmxy 送 完 為 目\n了 bm (WOW Na 2 (ce 伴 汪 六 人\n家 二 計\n時 反 外 上 和 汪 交 馮 500cc 賽 券 2 嘆\n主 聞 # 號 們 呈 宇 一 雪\n時 汪 學 蟬 金 國 -D 加 往 郭 泰 享\n臺中 玄 德 道 院\n地 址 : 台 中 市 北 屯 區 環 中 路 一 段 1220 號\n時 間 :9:00~16:00\n1. 元 發 金 屬 工 程 行 | 間 秦 施 、 郭 家 炎 , 赤 鬼 牛 排 餐 券 200 份 。\n2: 源 進 興 實業 有 限 公 司 。 | 劉 隆 乾 ” ___ 異 人 館 餐 券 200 份 |\n3. 順 源 興業 股份 有 限 公司 | 林 建成 異人 館 餐 券 100 份\n4. 八 方 盈 環 保科 技 有 限 公司 | 黃 淑 徵 異人 館 餐 券 100 份\n5. 中 古 車 買 賣 | 沫 池 財 哄 人 館 餐 券 100 份\n6. 鴻 源 環保 有 限 公司 | 徐 永吉 , 赤 鬼 牛 排 餐 券 100 份\n7 國泰 人 壽 . | 陳 沛 琳 異人 館 餐 券 100 份\n9. 建 欣 消防 工程 行 「 生 品 仁 哄 人 館 餐 券 100 份\n10. 尚 蜂 有 限 公司 | 蔡 旭 較 異人 館 餐 券 100 份\n11. 若 記 家 庭 關懷 協會 「 陳 若 妍 異人 館 餐 券 100 份\n12. 弦 偉 工程 有 限 公司 ( 座 架 )| 藍 偉 銘 異人 館 餐 券 100 份\n13. 允 泰 消防 機 電 有 限 公司 「 黃 順 明 異人 館 餐 券 100 份\n14. 高 智慧 、 張 起 神 赤 鬼 牛排 餐 其 100 份\n15. 元 發 金 屬 工程 行 | 部 說 字 海報 , 棚 架 / 紅 布 條 / 志 工 餐飲\n",
-            "confidence": 58
-          }
         ]
       },
       "isPttOnly": true
@@ -1208,15 +1245,135 @@
       "pttData": {
         "rawLine": "7/15(二)花蓮舊玉里國小",
         "images": [
-          "https://i.imgur.com/47IQt09.jpeg",
+          "https://i.imgur.com/47IQt09.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTUtNy8xNei1t++8jOaWvOWPsOWMl+WQhOaMh+WumuaNkOihgOermeWujOaIkOmmluasoeWIhumbouihk+aNkOihgO+8jOWKoOi0iOihgOiii+mAoOWei+mRsOWMmeWciOS4gOWAiyjpgIHlrozngrrmraIp",
+      "time": "",
+      "organization": "起，於台北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "location": "起，於台北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "activityDate": "2026-07-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "7/15起，於台北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+        "images": [
+          "https://i.imgur.com/BpiZC7r.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/BpiZC7r.jpeg",
+            "text": "vs\n分 能 術 指導\n、w 卻 了\n/// 崙 NM 全\n114 年 7 月 1 5 日 起\n首次 捐 分 離 術 血小板 成 功 者\n加 贈 紀念 小 物 )\n血 袋 造型 鑰匙 圈 1 個\n送 完 為 止 @\n台 北 捐血 中 心 轄區 內 分 離 術 捐血 點\n( 含 基隆 、 板 橋 、 宜 蘭 、 花 蓮 捐血 站 ) 人\n全 S 5\n",
+            "confidence": 71
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTUtNy8xNei1t++8jOaWvOaWsOWMl+WQhOaMh+WumuaNkOihgOermeWujOaIkOmmluasoeWIhumbouihk+aNkOihgO+8jOWKoOi0iOihgOiii+mAoOWei+mRsOWMmeWciOS4gOWAiyjpgIHlrozngrrmraIp",
+      "time": "",
+      "organization": "起，於新北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "location": "起，於新北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "activityDate": "2026-07-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "7/15起，於新北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+        "images": [
+          "https://i.imgur.com/BpiZC7r.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/BpiZC7r.jpeg",
+            "text": "vs\n分 能 術 指導\n、w 卻 了\n/// 崙 NM 全\n114 年 7 月 1 5 日 起\n首次 捐 分 離 術 血小板 成 功 者\n加 贈 紀念 小 物 )\n血 袋 造型 鑰匙 圈 1 個\n送 完 為 止 @\n台 北 捐血 中 心 轄區 內 分 離 術 捐血 點\n( 含 基隆 、 板 橋 、 宜 蘭 、 花 蓮 捐血 站 ) 人\n全 S 5\n",
+            "confidence": 71
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTUtNy8xNei1t++8jOaWvOWfuumahuaNkOihgOermeWujOaIkOmmluasoeWIhumbouihk+aNkOihgO+8jOWKoOi0iOihgOiii+mAoOWei+mRsOWMmeWciOS4gOWAiyjpgIHlrozngrrmraIp",
+      "time": "",
+      "organization": "起，於基隆捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "location": "起，於基隆捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "activityDate": "2026-07-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "7/15起，於基隆捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+        "images": [
+          "https://i.imgur.com/BpiZC7r.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/BpiZC7r.jpeg",
+            "text": "vs\n分 能 術 指導\n、w 卻 了\n/// 崙 NM 全\n114 年 7 月 1 5 日 起\n首次 捐 分 離 術 血小板 成 功 者\n加 贈 紀念 小 物 )\n血 袋 造型 鑰匙 圈 1 個\n送 完 為 止 @\n台 北 捐血 中 心 轄區 內 分 離 術 捐血 點\n( 含 基隆 、 板 橋 、 宜 蘭 、 花 蓮 捐血 站 ) 人\n全 S 5\n",
+            "confidence": 71
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTUtNy8xNei1t++8jOaWvOWunOiYreaNkOihgOermeWujOaIkOmmluasoeWIhumbouihk+aNkOihgO+8jOWKoOi0iOihgOiii+mAoOWei+mRsOWMmeWciOS4gOWAiyjpgIHlrozngrrmraIp",
+      "time": "",
+      "organization": "起，於宜蘭捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "location": "起，於宜蘭捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "activityDate": "2026-07-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "7/15起，於宜蘭捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+        "images": [
+          "https://i.imgur.com/BpiZC7r.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/BpiZC7r.jpeg",
+            "text": "vs\n分 能 術 指導\n、w 卻 了\n/// 崙 NM 全\n114 年 7 月 1 5 日 起\n首次 捐 分 離 術 血小板 成 功 者\n加 贈 紀念 小 物 )\n血 袋 造型 鑰匙 圈 1 個\n送 完 為 止 @\n台 北 捐血 中 心 轄區 內 分 離 術 捐血 點\n( 含 基隆 、 板 橋 、 宜 蘭 、 花 蓮 捐血 站 ) 人\n全 S 5\n",
+            "confidence": 71
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTUtNy8xNei1t++8jOaWvOiKseiTruaNkOihgOermeWujOaIkOmmluasoeWIhumbouihk+aNkOihgO+8jOWKoOi0iOihgOiii+mAoOWei+mRsOWMmeWciOS4gOWAiyjpgIHlrozngrrmraIp",
+      "time": "",
+      "organization": "起，於花蓮捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "location": "起，於花蓮捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "activityDate": "2026-07-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "subTags": [
+        "超商－7-11",
+        "超商－全家",
+        "禮券－百貨"
+      ],
+      "pttData": {
+        "rawLine": "7/15起，於花蓮捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+        "images": [
+          "https://i.imgur.com/BpiZC7r.jpeg",
           "https://i.imgur.com/w7rIJLT.jpeg",
           "https://i.imgur.com/Vu7OFHA.png"
         ],
         "ocrTexts": [
           {
-            "url": "https://i.imgur.com/47IQt09.jpeg",
-            "text": "你 密\n他 的 熱血 讓 突 鞍 續\nPi 1 一 點 玉生\n捐 對 廬 交\n時 。. 畫 二\nEE 央 馮 河 后\n生 己 77/7 和 1 避 ( 于 》\n1d08a(00 =0G8(00\n時 1 二 1 各\n你 捐血 我 送禮\n捐 250Cc 說 捐 500cc\n加 碼 剛 品 由\n櫻桃 鴨 一 隻 橋頭 奧 豆 腐 兌 換 券 代 和 全\n衛生 紙 黃 記 便當 折價 券 3\n精美 手提 袋 木 熔 民 宿 折價 券\n馬 蓋 先 玉里 麵 折價 券 人\n揪 厝 邊 同 陣 來 上 數量 有 限 贈 品 送 完 為 止\n二 念舊 玉里 國 小 (黑熊 館 ) 癌\n全 六 turt 記\n玉里 國 際 同 濟 會 格 全 食品 工業 股份 有 限 公司\n陸軍 軍官 學 校 專科 校友 會 馬 蓋 先 玉里 麵\n吳 新 文 代表 服務 處 玉里 橋頭 臭 豆腐\n木 迷 民 宿\n人 和 時 黃 記 全 當 生\n花蓮 砂 玉里 鎮 台 九 線 救 難 協會 。 。 鈺 春 職 人 *\n花蓮 砂 天 馬 Hakka 協 會 員\n全 ‧\n(會 0933799745 ( 偏 0912.865.275 (全 0921.170.896\n",
-            "confidence": 58
+            "url": "https://i.imgur.com/BpiZC7r.jpeg",
+            "text": "vs\n分 能 術 指導\n、w 卻 了\n/// 崙 NM 全\n114 年 7 月 1 5 日 起\n首次 捐 分 離 術 血小板 成 功 者\n加 贈 紀念 小 物 )\n血 袋 造型 鑰匙 圈 1 個\n送 完 為 止 @\n台 北 捐血 中 心 轄區 內 分 離 術 捐血 點\n( 含 基隆 、 板 橋 、 宜 蘭 、 花 蓮 捐血 站 ) 人\n全 S 5\n",
+            "confidence": 71
           },
           {
             "url": "https://i.imgur.com/w7rIJLT.jpeg",
