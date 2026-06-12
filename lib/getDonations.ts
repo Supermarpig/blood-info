@@ -28,17 +28,22 @@ async function readDataFile(file: string): Promise<string | null> {
   }
 }
 
+/** 讀 /data 下任意 JSON 檔並解析（build 走 fs、Workers runtime 走 ASSETS binding）。 */
+export async function loadDataJson<T = unknown>(file: string): Promise<T | null> {
+  const raw = await readDataFile(file);
+  if (!raw) return null;
+  try {
+    return JSON.parse(raw) as T;
+  } catch {
+    return null;
+  }
+}
+
 /** 讀單一月份檔（例如 bloodInfo-202606.json），解析成 { 日期: 活動[] }。 */
 export async function loadMonth<T = unknown>(
   file: string
 ): Promise<Record<string, T[]> | null> {
-  const raw = await readDataFile(file);
-  if (!raw) return null;
-  try {
-    return JSON.parse(raw) as Record<string, T[]>;
-  } catch {
-    return null;
-  }
+  return loadDataJson<Record<string, T[]>>(file);
 }
 
 /** 讀「當月 + 下個月」的捐血活動並合併。給 server component / API route 共用。 */
