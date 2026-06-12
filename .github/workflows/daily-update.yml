@@ -53,3 +53,19 @@ jobs:
           delete-branch: true
           add-paths: |
             data/*
+
+      # 在建立 PR 之後才檢查健康報告：即使有異常（如 PTT 掛掉），
+      # 正常爬到的官網資料仍會發 PR，但 workflow 會標記失敗、觸發 GitHub 失敗通知信
+      - name: Check data health
+        if: always()
+        run: |
+          if [ ! -f data-health.json ]; then
+            echo "::error::找不到 data-health.json，更新腳本可能未完整執行"
+            exit 1
+          fi
+          if [ "$(jq -r '.ok' data-health.json)" != "true" ]; then
+            echo "::error::資料健康檢查發現異常："
+            jq -r '.anomalies[]' data-health.json | sed 's/^/  - /'
+            exit 1
+          fi
+          echo "資料健康檢查通過"

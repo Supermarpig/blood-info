@@ -46,3 +46,6 @@ cloudflare-env.d.ts
 
 # generated static data (build 時從 /data 複製過來)
 /public/data/
+
+# updateData.js 健康檢查報告（由 GitHub Actions 讀取，不入版控）
+data-health.json

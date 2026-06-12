@@ -1068,8 +1068,14 @@ async function crawlData(startDate, endDate) {
     const results = await Promise.all(
         bloodCenters.map(center =>
             crawlCenter(center, startDate, endDate, httpsAgent, headers)
+                .then(centerData => {
+                    const eventCount = Object.values(centerData).reduce((sum, events) => sum + events.length, 0);
+                    recordCenterResult(center.name, true, eventCount);
+                    return centerData;
+                })
                 .catch(error => {
                     console.error(`${center.name} 爬取失敗:`, error.message);
+                    recordCenterResult(center.name, false, 0);
                     return {};
                 })
         )
@@ -1236,10 +1242,58 @@ async function fetchBloodInventory() {
     }
 }
 
+// ==================== 資料健康檢查 ====================
+// 異常不會中斷流程，而是寫入 data-health.json 由 GitHub Actions 在建立 PR 後檢查、
+// 標記 workflow 失敗以觸發 GitHub 的失敗通知信（資料 PR 不受影響）
+const HEALTH_REPORT_FILE = path.join(process.cwd(), 'data-health.json');
+const centerStats = {};
+
+function recordCenterResult(name, ok, eventCount) {
+    if (!centerStats[name]) {
+        centerStats[name] = { success: 0, failure: 0, events: 0 };
+    }
+    if (ok) {
+        centerStats[name].success++;
+        centerStats[name].events += eventCount;
+    } else {
+        centerStats[name].failure++;
+    }
+}
+
+function collectCenterAnomalies() {
+    const anomalies = [];
+    for (const center of bloodCenters) {
+        const stats = centerStats[center.name];
+        if (!stats || stats.success === 0) {
+            anomalies.push(`${center.name}捐血中心：所有請求皆失敗，未取得任何資料`);
+        } else if (stats.events === 0) {
+            anomalies.push(`${center.name}捐血中心：連線成功但解析到 0 筆活動（官網可能改版）`);
+        }
+    }
+    return anomalies;
+}
+
+async function saveHealthReport(anomalies) {
+    const report = {
+        ok: anomalies.length === 0,
+        anomalies,
+        centerStats,
+        checkedAt: new Date().toISOString(),
+    };
+    await fs.writeFile(HEALTH_REPORT_FILE, JSON.stringify(report, null, 2), 'utf-8');
+    if (anomalies.length > 0) {
+        console.error('\n⚠️ 資料健康檢查發現異常:');
+        anomalies.forEach(a => console.error(`  - ${a}`));
+    } else {
+        console.log('\n資料健康檢查通過');
+    }
+}
+
 // ==================================================
 
 // 主邏輯：更新數據
 async function updateData() {
+    const anomalies = [];
     try {
         console.log('開始更新資料...');
 
@@ -1249,6 +1303,9 @@ async function updateData() {
 
         // 1. 先取得 PTT 資料 (一次性)
         const pttResult = await fetchPttData();
+        if (!pttResult) {
+            anomalies.push('PTT 贈品資料抓取失敗（重試 3 次皆失敗，本次更新缺少 PTT 補充資料）');
+        }
         const pttData = pttResult?.events ?? null;
         const pttUrl = pttResult?.url ?? PTT_FALLBACK_URL;
 
@@ -1269,15 +1326,27 @@ async function updateData() {
         await processMonth(nextYear, nextMonth, pttData, pttUrl);
 
         // 4. 爬取血液庫存資料
-        await fetchBloodInventory();
+        const inventory = await fetchBloodInventory();
+        if (!inventory) {
+            anomalies.push('血液庫存爬取失敗');
+        } else if (inventory.centers.length === 0) {
+            anomalies.push('血液庫存連線成功但解析到 0 個捐血中心（官網可能改版）');
+        }
 
         // 5. 儲存 Geocoding 快取
         await saveGeocodeCache();
+
+        // 6. 彙整健康檢查結果
+        anomalies.push(...collectCenterAnomalies());
+        await saveHealthReport(anomalies);
 
         // Git operations are now handled by GitHub Actions
         console.log('資料更新完成！');
     } catch (error) {
         console.error('更新失敗:', error);
+        process.exitCode = 1;
+        anomalies.push(`更新流程發生致命錯誤: ${error.message}`);
+        await saveHealthReport(anomalies).catch(() => {});
         // 即使更新失敗也要儲存快取
         await saveGeocodeCache();
     }
