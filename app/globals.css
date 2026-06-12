@@ -278,6 +278,30 @@ body {
   animation: announceDock 0.72s cubic-bezier(0.5, 0, 0.75, 0) forwards;
 }
 
+/* 活動卡片 hover：右側箭頭輕輕往右點，邀請點進詳情頁 */
+@keyframes chevronNudge {
+  0%,
+  100% {
+    transform: translate(0, -50%);
+  }
+  50% {
+    transform: translate(4px, -50%);
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .group:hover .animate-chevron-nudge {
+    animation: chevronNudge 0.7s ease-in-out infinite;
+  }
+}
+
+/* 觸控裝置沒有 hover：卡片進入畫面時輕點兩下提示可點，之後停住 */
+@media (hover: none) and (prefers-reduced-motion: no-preference) {
+  .animate-chevron-nudge.in-view {
+    animation: chevronNudge 0.7s ease-in-out 0.3s 2;
+  }
+}
+
 /* 老虎機滾動：20 個數字（0-9 重複兩次），-50% 剛好回到第二個 0，seamless loop */
 @keyframes slot-spin {
   from { transform: translateY(0); }

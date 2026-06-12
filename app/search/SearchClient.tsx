@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ChevronRight, ChevronDown, ChevronUp, Search } from "lucide-react";
 import CardInfo from "@/components/CardInfo";
+import { normalizeSearchText } from "@/lib/searchNormalize";
 
 interface DonationEvent {
   id?: string;
@@ -62,7 +63,7 @@ export default function SearchClient() {
   };
 
   const { futureEvents, pastEvents } = useMemo(() => {
-    const q = keyword.trim().toLowerCase();
+    const q = normalizeSearchText(keyword.trim());
     const future: Record<string, DonationEvent[]> = {};
     const past: Record<string, DonationEvent[]> = {};
 
@@ -72,10 +73,10 @@ export default function SearchClient() {
       const matched = events.filter((e) => {
         const tags = [...(e.tags ?? []), ...(e.subTags ?? []), ...(e.pttData?.tags ?? [])].join(" ");
         return (
-          (e.organization ?? "").toLowerCase().includes(q) ||
-          (e.location ?? "").toLowerCase().includes(q) ||
-          (e.rawContent ?? "").toLowerCase().includes(q) ||
-          tags.toLowerCase().includes(q)
+          normalizeSearchText(e.organization ?? "").includes(q) ||
+          normalizeSearchText(e.location ?? "").includes(q) ||
+          normalizeSearchText(e.rawContent ?? "").includes(q) ||
+          normalizeSearchText(tags).includes(q)
         );
       });
       if (matched.length === 0) return;

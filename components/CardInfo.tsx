@@ -1,9 +1,11 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Clock, Building2, ExternalLink, Gift } from "lucide-react";
-import { useState, useRef } from "react";
+import { MapPin, Clock, Building2, ExternalLink, Gift, ChevronRight } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { normalizeSearchText, buildKeywordRegex } from "@/lib/searchNormalize";
 import {
   Dialog,
   DialogContent,
@@ -52,11 +54,12 @@ interface CardInfoProps {
 
 const highlightText = (text: string, keyword: string) => {
   if (!keyword) return text;
-  const parts = text.split(new RegExp(`(${keyword})`, "gi"));
+  const parts = text.split(buildKeywordRegex(keyword));
+  const normalizedKeyword = normalizeSearchText(keyword);
   return (
     <>
       {parts.map((part, index) =>
-        part.toLowerCase() === keyword.toLowerCase() ? (
+        normalizeSearchText(part) === normalizedKeyword ? (
           <span
             key={index}
             className="bg-yellow-200 text-yellow-900 rounded-sm px-0.5 font-medium"
@@ -76,9 +79,28 @@ export default function CardInfo({
   searchKeyword,
   className = "",
 }: CardInfoProps) {
+  const router = useRouter();
   const [isPttDialogOpen, setIsPttDialogOpen] = useState(false);
   const [showShareHint, setShowShareHint] = useState(false);
   const hoverTimer = useRef<ReturnType<typeof setTimeout>>();
+  const chevronRef = useRef<SVGSVGElement>(null);
+
+  // 觸控裝置沒有 hover，改在卡片進入畫面時播一次箭頭動畫（CSS 以 hover: none 篩選）
+  useEffect(() => {
+    const el = chevronRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("in-view");
+          io.disconnect();
+        }
+      },
+      { threshold: 0.6 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   const handleMouseEnter = () => {
     hoverTimer.current = setTimeout(() => setShowShareHint(true), 1200);
@@ -142,9 +164,19 @@ export default function CardInfo({
     }
   };
 
+  // 整卡可點：點到卡片內的連結或按鈕時，交給原本的行為
+  const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!detailPath) return;
+    if ((e.target as HTMLElement).closest("a, button")) return;
+    router.push(detailPath);
+  };
+
   return (
     <Card
-      className={`overflow-hidden transition-all duration-200 hover:shadow-md border-gray-200 flex flex-col ${className}`}
+      className={`group overflow-hidden transition-all duration-200 hover:shadow-md border-gray-200 flex flex-col ${
+        detailPath ? "cursor-pointer hover:-translate-y-0.5" : ""
+      } ${className}`}
+      onClick={handleCardClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -357,7 +389,15 @@ export default function CardInfo({
           </div>
 
           {/* 主要內容：地點與機構 */}
-          <div className="p-4 space-y-3 bg-white flex-grow">
+          <div className={`relative p-4 bg-white flex-grow ${detailPath ? "pr-9" : ""}`}>
+            {/* 整卡可點的視覺提示 */}
+            {detailPath && (
+              <ChevronRight
+                ref={chevronRef}
+                className="animate-chevron-nudge absolute right-2.5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-300 transition-colors group-hover:text-pink-500"
+              />
+            )}
+            <div className="space-y-3">
             <div>
               <h3 className="text-lg font-bold text-gray-900 leading-tight mb-1 flex items-start gap-2">
                 <Building2 className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
@@ -452,6 +492,7 @@ export default function CardInfo({
                 )}
               </div>
             )}
+            </div>
           </div>
         </div>
       </CardContent>

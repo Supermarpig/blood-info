@@ -23,6 +23,7 @@ import { getCityBySlug } from "@/lib/cityConfig";
 import { getRegionBySlug } from "@/lib/regionConfig";
 import { getEventCpScore, getTopSubTag } from "@/lib/cpScore";
 import { eventShortId } from "@/lib/eventId";
+import { normalizeSearchText } from "@/lib/searchNormalize";
 
 // 每 AD_INTERVAL 張捐血卡片後插入一張廣告卡
 const AD_INTERVAL = 10;
@@ -156,11 +157,12 @@ export default function SearchableDonationList({
 
     Object.entries(data).forEach(([date, events]) => {
       // 1. 篩選關鍵字
+      const normalizedKeyword = normalizeSearchText(searchKeyword);
       const keywordFilteredEvents = events.filter(
         (event) =>
-          event.organization.includes(searchKeyword) ||
-          event.location.includes(searchKeyword) ||
-          event.time.includes(searchKeyword)
+          normalizeSearchText(event.organization).includes(normalizedKeyword) ||
+          normalizeSearchText(event.location).includes(normalizedKeyword) ||
+          normalizeSearchText(event.time).includes(normalizedKeyword)
       );
 
       // 2. 篩選地區（center）
