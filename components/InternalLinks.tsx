@@ -25,6 +25,7 @@ export default function InternalLinks() {
         <div className="grid grid-cols-2 gap-2">
           {REGIONS.map((r) => (
             <Link
+              prefetch={false}
               key={r.slug}
               href={`/region/${r.slug}`}
               className="flex flex-col bg-white border border-gray-100 rounded-xl px-4 py-3 hover:border-red-200 hover:bg-red-50/50 transition-colors"
@@ -48,6 +49,7 @@ export default function InternalLinks() {
         <div className="grid grid-cols-3 gap-2">
           {CITIES.filter((c) => c.level !== "district").map((c) => (
             <Link
+              prefetch={false}
               key={c.slug}
               href={`/city/${c.slug}`}
               className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
@@ -68,6 +70,7 @@ export default function InternalLinks() {
         <div className="grid grid-cols-3 gap-2">
           {CITIES.filter((c) => c.level === "district").map((c) => (
             <Link
+              prefetch={false}
               key={c.slug}
               href={`/city/${c.slug}`}
               className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
@@ -87,6 +90,7 @@ export default function InternalLinks() {
         </h2>
         <div className="grid grid-cols-3 gap-2">
           <Link
+            prefetch={false}
             href="/organization/lions-club"
             className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
           >
@@ -94,6 +98,7 @@ export default function InternalLinks() {
           </Link>
           {lionsOrgs.filter((o) => o.slug !== "lions-club").map((o) => (
             <Link
+              prefetch={false}
               key={o.slug}
               href={`/organization/${o.slug}`}
               className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
@@ -102,6 +107,7 @@ export default function InternalLinks() {
             </Link>
           ))}
           <Link
+            prefetch={false}
             href="/organization"
             className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
           >
@@ -116,6 +122,7 @@ export default function InternalLinks() {
           捐血新聞與衛教
         </h2>
         <Link
+          prefetch={false}
           href="/news/2026-05-10-blood-donation-complete-guide"
           className="flex flex-col bg-white border border-red-100 rounded-xl px-4 py-3 mb-2 hover:border-red-300 hover:bg-red-50/50 transition-colors"
         >
@@ -127,6 +134,7 @@ export default function InternalLinks() {
           </span>
         </Link>
         <Link
+          prefetch={false}
           href="/news"
           className="inline-flex items-center bg-white border border-gray-100 rounded-xl px-4 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
         >
@@ -142,6 +150,7 @@ export default function InternalLinks() {
         <div className="grid grid-cols-3 gap-2">
           {GIFTS.map((g) => (
             <Link
+              prefetch={false}
               key={g.slug}
               href={`/gift/${g.slug}`}
               className="flex items-center gap-2 bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-amber-200 hover:bg-amber-50/50 transition-colors"

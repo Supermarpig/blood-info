@@ -14,6 +14,12 @@ import InternalLinks from "@/components/InternalLinks";
 import { getCachedAnnouncement } from "@/services/announcementService";
 import { getDonations } from "@/lib/getDonations";
 
+// 活動資料每天 07:40 才更新一次（GitHub Actions PR 觸發重新部署）。
+// 不設的話預設 s-maxage=2，等於每個訪客都回 origin 重算。
+// 實際生效值會被 getCachedAnnouncement 的 revalidate: 300 壓到 5 分鐘（取最小值），
+// 讓後台公告能在 5 分鐘內上線，仍遠優於預設。
+export const revalidate = 3600;
+
 interface DonationEvent {
   id?: string;
   time: string;

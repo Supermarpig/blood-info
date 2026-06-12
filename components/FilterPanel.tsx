@@ -161,6 +161,7 @@ export default function FilterPanel({
                 // URL 模式：跳頁（城市頁、地區子頁）
                 <>
                   <Link
+                    prefetch={false}
                     href="/"
                     className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
                       !activeRegionSlug
@@ -173,6 +174,7 @@ export default function FilterPanel({
                   </Link>
                   {REGIONS.map((region) => (
                     <Link
+                      prefetch={false}
                       key={region.slug}
                       href={`/region/${region.slug}`}
                       className={`px-3.5 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 ${
@@ -202,6 +204,7 @@ export default function FilterPanel({
             <div className="flex flex-wrap gap-2">
               {CITIES.filter((city) => city.level !== "district").map((city) => (
                 <Link
+                  prefetch={false}
                   key={city.slug}
                   href={`/city/${city.slug}`}
                   className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${

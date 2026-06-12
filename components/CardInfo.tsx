@@ -403,6 +403,7 @@ export default function CardInfo({
                 <Building2 className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
                 {detailPath ? (
                   <Link
+                    prefetch={false}
                     href={detailPath}
                     className="hover:text-pink-600 hover:underline decoration-pink-300 underline-offset-2 transition-colors"
                   >
