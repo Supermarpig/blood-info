@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Clock, Building2, ExternalLink, Gift, ChevronRight } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { useRouter } from "next/navigation";
 import { normalizeSearchText, buildKeywordRegex } from "@/lib/searchNormalize";
 import {

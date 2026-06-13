@@ -2,7 +2,7 @@
 
 import { useId, useState, useEffect, useCallback, useRef } from "react";
 import dynamic from "next/dynamic";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { Loader2, Navigation2, ExternalLink, Gift, X, Heart } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";

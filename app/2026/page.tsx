@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { ChevronRight, Gift } from "lucide-react";
 
 export const metadata: Metadata = {

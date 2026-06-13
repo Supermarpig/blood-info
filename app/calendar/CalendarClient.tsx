@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useNearbyLocations } from "@/hooks/useNearbyLocations";
 import NearbyLocationsModal from "@/components/NearbyLocationsModal";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { zhTW } from "date-fns/locale";
 import Image from "next/image";
 

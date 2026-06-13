@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/Link";
 import Image from "next/image";
 import { ChevronRight, Newspaper } from "lucide-react";
 import { getAllNews } from "@/lib/newsUtils";

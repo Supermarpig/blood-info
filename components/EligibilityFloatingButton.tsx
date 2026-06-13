@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/Link";
 import { ClipboardCheck } from "lucide-react";
 
 export default function EligibilityFloatingButton() {

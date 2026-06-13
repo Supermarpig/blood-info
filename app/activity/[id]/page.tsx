@@ -2,7 +2,7 @@ export const revalidate = 604800; // 7 days — reduces ISR writes vs daily reva
 
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { promises as fs } from "fs";
 import path from "path";
 import { ChevronLeft, Clock, MapPin, Building2, ExternalLink, Gift, Heart, Droplets, Utensils, Moon, Ban, CreditCard } from "lucide-react";

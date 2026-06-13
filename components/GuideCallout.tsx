@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/Link";
 import { ChevronRight } from "lucide-react";
 
 // 全站指向「捐血懶人包」支柱頁的內鏈卡片。

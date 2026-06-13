@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { ChevronRight, HelpCircle, ListOrdered } from "lucide-react";
 import { FAQ_DATA } from "@/data/faq";
 

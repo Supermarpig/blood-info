@@ -6,7 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { MapPin, ChevronDown } from "lucide-react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText, MorphSVGPlugin);

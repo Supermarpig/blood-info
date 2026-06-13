@@ -1,7 +1,7 @@
 // app/page.tsx
 import { promises as fs } from "fs";
 import path from "path";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { Search as SearchIcon } from "lucide-react";
 import SearchModal from "@/components/SearchModal";
 import SearchableDonationList from "@/components/SearchableDonationList";

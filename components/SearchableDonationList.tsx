@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { Flip } from "gsap/Flip";
 
 gsap.registerPlugin(Flip);
-import Link from "next/link";
+import Link from "@/components/Link";
 import { ChevronDown, ChevronUp, Calendar } from "lucide-react";
 import { debounce } from "@/utils";
 import CardInfo from "@/components/CardInfo";

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { ChevronRight, Heart, Mail } from "lucide-react";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;

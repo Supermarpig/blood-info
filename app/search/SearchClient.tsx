@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useRef } from "react";
 import { useSearchParams } from "next/navigation";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { ChevronRight, ChevronDown, ChevronUp, Search } from "lucide-react";
 import CardInfo from "@/components/CardInfo";
 import { normalizeSearchText } from "@/lib/searchNormalize";

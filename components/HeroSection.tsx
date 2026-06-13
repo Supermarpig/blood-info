@@ -25,7 +25,7 @@ const GIFT_ICONS: Record<string, LucideIcon> = {
   food: UtensilsCrossed,
 };
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import Link from "@/components/Link";
 import BloodInventoryPanel, { type BloodInventory } from "@/components/BloodInventoryPanel";
 import { GIFTS } from "@/lib/giftConfig";
 import gsap from "gsap";
