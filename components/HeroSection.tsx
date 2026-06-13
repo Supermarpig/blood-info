@@ -236,22 +236,24 @@ function CpCard({ isTop, colorClass, giftName, area, topLabel, subTags }: CpCard
   useEffect(() => {
     if (labels.length <= 1) return;
     const interval = setInterval(() => {
-      setActiveIdx((prev) => {
-        const next = (prev + 1) % labels.length;
-        // Animate out then in
-        if (giftRef.current) {
-          gsap.fromTo(
-            giftRef.current,
-            { opacity: 0, y: 8 },
-            { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }
-          );
-        }
-        return next;
-      });
+      setActiveIdx((prev) => (prev + 1) % labels.length);
     }, 2000);
     return () => clearInterval(interval);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [labels.length]);
+
+  // 新 label commit 進 DOM 後才跑進場動畫，避免舊文字先被 snap 成透明
+  const isFirstLabelRender = useRef(true);
+  useGSAP(() => {
+    if (isFirstLabelRender.current) {
+      isFirstLabelRender.current = false;
+      return;
+    }
+    gsap.fromTo(
+      giftRef.current,
+      { opacity: 0, y: 8 },
+      { opacity: 1, y: 0, duration: 0.3, ease: "power2.out", overwrite: "auto" }
+    );
+  }, { dependencies: [activeIdx], scope: ref });
 
   const onMouseEnter = contextSafe(() => {
     isHovering.current = true;
@@ -320,10 +322,11 @@ function CpCard({ isTop, colorClass, giftName, area, topLabel, subTags }: CpCard
         </div>
       )}
       <div className="font-semibold truncate max-w-[84px] text-[11px] opacity-70">{area}</div>
-      <div ref={giftRef} className="mt-0.5 font-bold text-[14px] flex items-center gap-1">
-        {labels[activeIdx]}
+      {/* 多 label 時固定寬度，換字才不會改變卡片寬、推動整排卡片 reflow */}
+      <div ref={giftRef} className={`mt-0.5 font-bold text-[14px] flex items-center gap-1 ${labels.length > 1 ? "w-[84px]" : ""}`}>
+        <span className="truncate">{labels[activeIdx]}</span>
         {labels.length > 1 && (
-          <span className="text-[9px] opacity-40 font-normal">{activeIdx + 1}/{labels.length}</span>
+          <span className="text-[9px] opacity-40 font-normal flex-shrink-0">{activeIdx + 1}/{labels.length}</span>
         )}
       </div>
     </div>
