@@ -91,14 +91,21 @@ export async function getAnnouncement(): Promise<{
   return { data, issueNumber: issue.number, state: issue.state };
 }
 
-/** 讀取公告（含 Next.js 跨 invocation 快取，5 分鐘 TTL）。前台請用這個。 */
+/**
+ * 讀取公告（含 Next.js 跨 invocation 快取，1 小時 TTL）。前台請用這個。
+ *
+ * TTL 設 3600 而非更短，是因為首頁 app/page.tsx 在 render 時會讀這個，page 的有效
+ * revalidate 取所有快取的最小值 —— TTL 太短會讓首頁頻繁重 render（每次解析 ~1.5MB
+ * 捐血資料），在 Cloudflare Worker 的 CPU 上限附近反覆觸發 → 間歇 5xx。
+ * 後台發布公告時會 revalidateTag 立即失效，所以拉長 TTL 不會延遲公告上線。
+ */
 export const getCachedAnnouncement = unstable_cache(
   async (): Promise<Announcement> => {
     const { data } = await getAnnouncement();
     return data;
   },
   [ANNOUNCEMENT_CACHE_TAG],
-  { revalidate: 300, tags: [ANNOUNCEMENT_CACHE_TAG] }
+  { revalidate: 3600, tags: [ANNOUNCEMENT_CACHE_TAG] }
 );
 
 /** 儲存公告（更新既有 issue 或建立新 issue），存檔時會重新開啟 issue 使其生效。 */

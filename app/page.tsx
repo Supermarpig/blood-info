@@ -16,8 +16,9 @@ import { getDonations } from "@/lib/getDonations";
 
 // 活動資料每天 07:40 才更新一次（GitHub Actions PR 觸發重新部署）。
 // 不設的話預設 s-maxage=2，等於每個訪客都回 origin 重算。
-// 實際生效值會被 getCachedAnnouncement 的 revalidate: 300 壓到 5 分鐘（取最小值），
-// 讓後台公告能在 5 分鐘內上線，仍遠優於預設。
+// getCachedAnnouncement 的 TTL 也已對齊 3600，避免把首頁重 render 拉到更短週期
+// （每次都解析 ~1.5MB 捐血資料，逼近 Worker CPU 上限 → 間歇 5xx）。
+// 後台發布公告會 revalidateTag 立即失效，不靠這個 TTL 上線。
 export const revalidate = 3600;
 
 interface DonationEvent {
