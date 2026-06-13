@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
+import { fetchBloodRooms } from "@/lib/staticData";
 
 const LOCATION_CACHE_KEY = "nearby_user_location";
 const LOCATION_CACHE_TTL = 10 * 60 * 1000; // 10 minutes
@@ -184,24 +185,20 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
       // 3. 載入固定捐血室座標，作為補充（有 tag 篩選時略過，避免混入無 tag 的地標）
       let staticRooms: DonationEvent[] = [];
       if (!skipStaticRooms) try {
-        const res = await fetch("/api/blood-rooms");
-        if (res.ok) {
-          const json = await res.json();
-          const today = new Date().toISOString().split("T")[0];
-          let rooms = json.rooms as { name: string; lat: number; lng: number; hours?: string; center?: string }[];
-          // filter by center field to avoid showing wrong-region rooms
-          if (centerFilter) {
-            rooms = rooms.filter((r) => r.center === centerFilter);
-          }
-          staticRooms = rooms.map((r) => ({
-            location: r.name,
-            organization: r.name,
-            time: r.hours ?? "",
-            rawContent: r.name,
-            activityDate: today,
-            coordinates: { lat: r.lat, lng: r.lng },
-          }));
+        let rooms = await fetchBloodRooms();
+        const today = new Date().toISOString().split("T")[0];
+        // filter by center field to avoid showing wrong-region rooms
+        if (centerFilter) {
+          rooms = rooms.filter((r) => r.center === centerFilter);
         }
+        staticRooms = rooms.map((r) => ({
+          location: r.name,
+          organization: r.name,
+          time: r.hours ?? "",
+          rawContent: r.name,
+          activityDate: today,
+          coordinates: { lat: r.lat, lng: r.lng },
+        }));
       } catch {
         // 靜默失敗，靜態捐血室資料僅為補充
       }

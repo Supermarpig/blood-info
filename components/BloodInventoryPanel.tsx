@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { REGIONS } from "@/lib/regionConfig";
+import { fetchInventory } from "@/lib/staticData";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -166,12 +167,9 @@ export default function BloodInventoryPanel({
 
   useEffect(() => {
     if (initialInventory) return;
-    fetch("/api/blood-inventory")
-      .then((res) => res.json())
-      .then((json) => {
-        if (json.success && json.data) setInventory(json.data);
-      })
-      .catch(() => {});
+    fetchInventory<BloodInventory>().then((data) => {
+      if (data) setInventory(data);
+    });
   }, [initialInventory]);
 
   useGSAP(() => {

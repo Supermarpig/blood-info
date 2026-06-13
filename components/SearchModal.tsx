@@ -5,6 +5,7 @@ import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { Search, X, ChevronDown, ChevronUp } from "lucide-react";
 import CardInfo from "@/components/CardInfo";
 import { normalizeSearchText } from "@/lib/searchNormalize";
+import { fetchDonations } from "@/lib/staticData";
 
 interface DonationEvent {
   id?: string;
@@ -41,11 +42,8 @@ export default function SearchModal({ children }: SearchModalProps) {
   // Load data once when modal first opens
   useEffect(() => {
     if (!open || dataLoaded) return;
-    fetch("/api/blood-donations")
-      .then((r) => r.json())
-      .then((json) => {
-        if (json.success && json.data) setAllData(json.data);
-      })
+    fetchDonations<DonationEvent>()
+      .then((data) => setAllData(data))
       .catch(() => {})
       .finally(() => setDataLoaded(true));
   }, [open, dataLoaded]);

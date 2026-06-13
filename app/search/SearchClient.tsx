@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ChevronRight, ChevronDown, ChevronUp, Search } from "lucide-react";
 import CardInfo from "@/components/CardInfo";
 import { normalizeSearchText } from "@/lib/searchNormalize";
+import { fetchDonations } from "@/lib/staticData";
 
 interface DonationEvent {
   id?: string;
@@ -38,11 +39,8 @@ export default function SearchClient() {
   const today = new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Taipei" });
 
   useEffect(() => {
-    fetch("/api/blood-donations")
-      .then((r) => r.json())
-      .then((json) => {
-        if (json.success && json.data) setAllData(json.data);
-      })
+    fetchDonations<DonationEvent>()
+      .then((data) => setAllData(data))
       .catch(() => {})
       .finally(() => setLoading(false));
   }, []);
