@@ -329,7 +329,7 @@ export default function AddDonationEventModal() {
                             </Button>
                           </FormControl>
                         </PopoverTrigger>
-                        <PopoverContent className="w-auto p-0" align="start">
+                        <PopoverContent className="w-auto p-0 z-highest" align="start">
                           <Calendar
                             mode="single"
                             selected={
