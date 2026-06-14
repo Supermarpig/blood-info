@@ -18,8 +18,10 @@ interface WishlistInput {
 
 type ReportInput = LocationReportInput | WishlistInput;
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const GITHUB_REPO = process.env.GITHUB_REPO;
+// trim 掉貼到環境變數時常見的結尾換行/空白；
+// token 含換行會讓 Authorization header 直接丟 TypeError，repo 含空白會讓 URL 變 404。
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN?.trim();
+const GITHUB_REPO = process.env.GITHUB_REPO?.trim();
 
 async function createGitHubIssue(
   title: string,
@@ -31,23 +33,32 @@ async function createGitHubIssue(
     return { success: false, error: "伺服器設定錯誤，請聯繫管理員" };
   }
 
-  const response = await fetch(
-    `https://api.github.com/repos/${GITHUB_REPO}/issues`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${GITHUB_TOKEN}`,
-        Accept: "application/vnd.github+json",
-        "Content-Type": "application/json",
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-      body: JSON.stringify({ title, body, labels }),
-    }
-  );
+  let response: Response;
+  try {
+    response = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/issues`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${GITHUB_TOKEN}`,
+          Accept: "application/vnd.github+json",
+          "Content-Type": "application/json",
+          "X-GitHub-Api-Version": "2022-11-28",
+          // GitHub API 要求帶 User-Agent，否則部分請求會被拒
+          "User-Agent": "blood-info-app",
+        },
+        body: JSON.stringify({ title, body, labels }),
+      }
+    );
+  } catch (err) {
+    // fetch 本身丟例外（例如 token 含非法字元導致 header 無效、網路錯誤）
+    console.error("GitHub fetch threw:", err);
+    return { success: false, error: "無法連線至 GitHub，請稍後再試" };
+  }
 
   if (!response.ok) {
-    const errorData = await response.json();
-    console.error("GitHub API error:", errorData);
+    const errorData = await response.text();
+    console.error("GitHub API error:", response.status, errorData);
     return { success: false, error: "無法建立 Issue，請稍後再試" };
   }
 
