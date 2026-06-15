@@ -11,15 +11,15 @@ import AnnouncementTab from "@/components/AnnouncementTab";
 import EligibilityFloatingButton from "@/components/EligibilityFloatingButton";
 import FaqSection from "@/components/FaqSection";
 import InternalLinks from "@/components/InternalLinks";
-import { getCachedAnnouncement } from "@/services/announcementService";
 import { getDonations } from "@/lib/getDonations";
 
-// 活動資料每天 07:40 才更新一次（GitHub Actions PR 觸發重新部署）。
-// 不設的話預設 s-maxage=2，等於每個訪客都回 origin 重算。
-// getCachedAnnouncement 的 TTL 也已對齊 3600，避免把首頁重 render 拉到更短週期
-// （每次都解析 ~1.5MB 捐血資料，逼近 Worker CPU 上限 → 間歇 5xx）。
-// 後台發布公告會 revalidateTag 立即失效，不靠這個 TTL 上線。
-export const revalidate = 3600;
+// 首頁完全靜態化（build 時預渲染，由 ASSETS 直接送出，worker 不在 runtime 重 render）。
+// 活動資料每天 07:40 才更新一次（GitHub Actions PR 觸發重新部署），所以不需要 runtime ISR；
+// 設 revalidate=3600 時，唯讀的 incremental cache 過期後會讓 worker 對每個請求重 render
+// （每次解析 ~1.5MB 捐血資料），白白燒 CPU 又拖慢 TTFB。
+// 公告（後台隨時可改）改由 client 端抓最新：AnnouncementTab 沒收到 initialAnn 時
+// 會自己 fetch /api/announcement；庫存仍吃 build 時的 initialInventory（每日資產，跟著 redeploy）。
+export const revalidate = false;
 
 interface DonationEvent {
   id?: string;
@@ -81,8 +81,6 @@ export default async function BloodDonationPage() {
   let data: Record<string, DonationEvent[]> = {};
   let error = null;
   let initialInventory = undefined;
-
-  const initialAnn = await getCachedAnnouncement().catch(() => undefined);
 
   try {
     const inventoryPath = path.join(process.cwd(), "data", "bloodInventory.json");
@@ -310,7 +308,7 @@ export default async function BloodDonationPage() {
 
       <InternalLinks />
       <FaqSection />
-      <AnnouncementTab todayEvents={data[today] ?? []} initialAnn={initialAnn} />
+      <AnnouncementTab todayEvents={data[today] ?? []} />
       <HealthFloatingButton />
       <EligibilityFloatingButton />
     </div>

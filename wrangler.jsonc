@@ -4,6 +4,9 @@
   "main": ".open-next/worker.js",
   "compatibility_date": "2025-05-05",
   "compatibility_flags": ["nodejs_compat"],
+  // 付費方案 CPU 預設上限 30s。明確設個天花板當防呆：
+  // 萬一某條路由失控，單請求最多吃 30s 就被砍，不會在大量請求下把帳單拉爆。
+  "limits": { "cpu_ms": 30000 },
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
