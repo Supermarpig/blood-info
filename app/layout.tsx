@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Footer from "@/components/Footer";
-import AnchorAd from "@/components/AnchorAd";
 import "./globals.css";
 
 const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
@@ -117,7 +116,6 @@ export default function RootLayout({
       >
         {children}
         <Footer />
-        <AnchorAd />
       </body>
     </html>
   );
