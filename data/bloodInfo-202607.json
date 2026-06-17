@@ -911,6 +911,13 @@
         "rawLine": "7/5(日)桃園大有國中",
         "images": [
           "https://i.imgur.com/jtkTzpW.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/jtkTzpW.jpeg",
+            "text": "侈 / \\9\nje 中\n還 捐血 一 袋 救 人 一 命 如\n時 間 :115 年 7 月 5 日 上 午 9:00 起\n地 點 : 大 有 國 中 頌 上\n\n5 0 人 |\n2 品\n2\n卻\nuie\n計時 呈 1000 覓\n| 2 六 全 禮券\n人 5\n| 點 ar\n| 主辦 單位 : 大 同 扶 輪 社 (人 @) 桃 園區 柯 蔡 宗 親 會\n品 攜手 行 善 感恩 有 您 所\n",
+            "confidence": 60
+          }
         ]
       },
       "isPttOnly": true
@@ -1230,6 +1237,30 @@
         ]
       },
       "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTktNy8xOSjml6Up5Y+w5Lit5r2t5a2Q5r2t5rC05Lqt6KeA6Z+z5aq95buf",
+      "time": "",
+      "organization": "台中潭子潭水亭觀音媽廟",
+      "location": "台中潭子潭水亭觀音媽廟",
+      "activityDate": "2026-07-19",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "7/19(日)台中潭子潭水亭觀音媽廟",
+        "images": [
+          "https://i.imgur.com/mjW6SaX.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/mjW6SaX.jpeg",
+            "text": "cr 一 人 PSD 人 ~ 二 可\n燒 佃 注 交 希望\nLUyeww 和 有 JAVA 二 三\n人 品 AB 了 , ee 移\n|「p】 了\n、 公 7 上\n_ 穩定 血庫 需要 您 ~ 敬 請 熱血 朋友 們 摧 仙 身分 證 來 捐血\n時 間 :115 年 7 日 19 日 t 慚 日 ) 09:00 一 16:00\n地 點 : 沽 水 記 額 齊 骨 說 (尖子 區 和 加 路 二 段 89 上\n協辦 : 潭 子 國 中 加 當 天 2 台 捐血 車 作業\n引 短 呈 了 _” 捐血 有 品 限量 400 份 送 完 訪 止\n還 過 號 重 抽\n加 也 em [\n0\n, 富國 mso00 說 誠信 9 估 各 1 倪 | 加 汪 一邊 二\n調和 戰 打 全 各 汪 15 培 覓 上 信人 了 不 信和 放 條 擴 上 人 介 紅 折 、 本 手 2 虹 是 生 廬 拓\n",
+            "confidence": 38
+          }
+        ]
+      },
+      "isPttOnly": true
     }
   ],
   "2026-07-10": [
@@ -1309,6 +1340,102 @@
         "超商－全家",
         "禮券－百貨"
       ]
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTUtNy8xNei1t++8jOaWvOaWsOWMl+WQhOaMh+WumuaNkOihgOermeWujOaIkOmmluasoeWIhumbouihk+aNkOihgO+8jOWKoOi0iOihgOiii+mAoOWei+mRsOWMmeWciOS4gOWAiyjpgIHlrozngrrmraIp",
+      "time": "",
+      "organization": "起，於新北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "location": "起，於新北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "activityDate": "2026-07-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "pttData": {
+        "rawLine": "7/15起，於台北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+        "images": [
+          "https://i.imgur.com/BpiZC7r.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "subTags": [
+        "超商－7-11",
+        "超商－全家",
+        "禮券－百貨"
+      ]
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTUtNy8xNei1t++8jOaWvOWfuumahuaNkOihgOermeWujOaIkOmmluasoeWIhumbouihk+aNkOihgO+8jOWKoOi0iOihgOiii+mAoOWei+mRsOWMmeWciOS4gOWAiyjpgIHlrozngrrmraIp",
+      "time": "",
+      "organization": "起，於基隆捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "location": "起，於基隆捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "activityDate": "2026-07-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "pttData": {
+        "rawLine": "7/15起，於台北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+        "images": [
+          "https://i.imgur.com/BpiZC7r.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "subTags": [
+        "超商－7-11",
+        "超商－全家",
+        "禮券－百貨"
+      ]
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTUtNy8xNei1t++8jOaWvOWunOiYreaNkOihgOermeWujOaIkOmmluasoeWIhumbouihk+aNkOihgO+8jOWKoOi0iOihgOiii+mAoOWei+mRsOWMmeWciOS4gOWAiyjpgIHlrozngrrmraIp",
+      "time": "",
+      "organization": "起，於宜蘭捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "location": "起，於宜蘭捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "activityDate": "2026-07-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "pttData": {
+        "rawLine": "7/15起，於台北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+        "images": [
+          "https://i.imgur.com/BpiZC7r.jpeg"
+        ]
+      },
+      "isPttOnly": true,
+      "subTags": [
+        "超商－7-11",
+        "超商－全家",
+        "禮券－百貨"
+      ]
+    },
+    {
+      "id": "cHR0LTIwMjYtMDctMTUtNy8xNei1t++8jOaWvOiKseiTruaNkOihgOermeWujOaIkOmmluasoeWIhumbouihk+aNkOihgO+8jOWKoOi0iOihgOiii+mAoOWei+mRsOWMmeWciOS4gOWAiyjpgIHlrozngrrmraIp",
+      "time": "",
+      "organization": "起，於花蓮捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "location": "起，於花蓮捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+      "activityDate": "2026-07-15",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "超商"
+      ],
+      "subTags": [
+        "超商－7-11",
+        "超商－全家",
+        "禮券－百貨"
+      ],
+      "pttData": {
+        "rawLine": "7/15起，於台北各指定捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
+        "images": [
+          "https://i.imgur.com/BpiZC7r.jpeg"
+        ]
+      },
+      "isPttOnly": true
     },
     {
       "id": "cHR0LTIwMjYtMDctMTUtNy8xNei1t++8jOaWvOaWsOWMl+WQhOaMh+WumuaNkOihgOermeWujOaIkOmmluasoeWIhumbouihk+aNkOihgO+8jOWKoOi0iOihgOiii+mAoOWei+mRsOWMmeWciOS4gOWAiyjpgIHlrozngrrmraIp",
@@ -1785,9 +1912,7 @@
       "pttData": {
         "rawLine": "7/15起，於花蓮捐血站完成首次分離術捐血，加贈血袋造型鑰匙圈一個(送完為止)",
         "images": [
-          "https://i.imgur.com/BpiZC7r.jpeg",
-          "https://i.imgur.com/w7rIJLT.jpeg",
-          "https://i.imgur.com/Vu7OFHA.png"
+          "https://i.imgur.com/BpiZC7r.jpeg"
         ]
       },
       "isPttOnly": true
