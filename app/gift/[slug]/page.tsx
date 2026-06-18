@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "@/components/Link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Gift } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
-import { getGiftBySlug, getAllGiftSlugs, GiftConfig } from "@/lib/giftConfig";
+import { GIFTS, getGiftBySlug, getAllGiftSlugs, GiftConfig } from "@/lib/giftConfig";
 import { getDonations } from "@/lib/getDonations";
 import AdCard from "@/components/AdCard";
 
@@ -156,6 +156,18 @@ function generateJsonLd(gift: GiftConfig, eventCount: number) {
         numberOfItems: eventCount,
       },
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: gift.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    },
   ];
 }
 
@@ -226,6 +238,67 @@ export default async function GiftPage({ params }: PageProps) {
       <SearchableDonationList data={data} staticFilterLabel={gift.name} />
 
       <AdCard slot={AD_SLOT_GIFT} variant="inline" className="mt-8" />
+
+      {/* 常態說明：讓 live 場次少時頁面仍有內容可排名 */}
+      <section className="mt-10">
+        <h2 className="text-lg font-bold text-gray-800 mb-4">
+          關於捐血送{gift.name}
+        </h2>
+        <ul className="space-y-2.5">
+          {gift.highlights.map((point, i) => (
+            <li key={i} className="flex gap-2.5 text-sm text-gray-700 leading-relaxed">
+              <Gift className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* 常見問題（對應 FAQPage 結構化資料） */}
+      <section className="mt-10">
+        <h2 className="text-lg font-bold text-gray-800 mb-4">
+          捐血送{gift.name}常見問題
+        </h2>
+        <div className="space-y-3">
+          {gift.faqs.map((faq, i) => (
+            <details
+              key={i}
+              className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-red-200 transition-colors"
+            >
+              <summary className="flex items-center justify-between p-4 cursor-pointer list-none">
+                <span className="font-medium text-gray-900 pr-4 text-sm">
+                  {faq.question}
+                </span>
+                <ChevronRight className="w-4 h-4 text-gray-400 group-open:rotate-90 transition-transform flex-shrink-0" />
+              </summary>
+              <div className="px-4 pb-4 pt-0">
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      {/* 其他贈品分類交叉內鏈 */}
+      <section className="mt-10">
+        <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">
+          其他捐血贈品查詢
+        </h2>
+        <div className="flex flex-wrap gap-2">
+          {GIFTS.filter((g) => g.slug !== gift.slug).map((g) => (
+            <Link
+              key={g.slug}
+              href={`/gift/${g.slug}`}
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-white border border-gray-200 rounded-full text-sm text-gray-700 hover:border-red-300 hover:text-red-600 transition-colors"
+            >
+              捐血送{g.name}
+              <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
     </>
   );
