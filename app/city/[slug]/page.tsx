@@ -8,6 +8,7 @@ import { getCityBySlug, getAllCitySlugs, getNearbyCities, CityConfig } from "@/l
 import { getDonations } from "@/lib/getDonations";
 import AdCard from "@/components/AdCard";
 import GuideCallout from "@/components/GuideCallout";
+import CityGiftHighlight from "@/components/CityGiftHighlight";
 
 const AD_SLOT_CITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
 
@@ -220,6 +221,9 @@ export default async function CityPage({ params }: PageProps) {
       <SearchableDonationList data={data} currentCitySlug={slug} />
 
       <AdCard slot={AD_SLOT_CITY} variant="inline" className="mt-8" />
+
+      {/* 本月贈品（接「{城市}捐血活動贈品」查詢） */}
+      <CityGiftHighlight cityName={city.displayName} data={data} />
 
       {/* City FAQ */}
       <section className="mt-10">
