@@ -14,6 +14,7 @@ import { loadMonth } from "@/lib/getDonations";
 import ShareButton from "./ShareButton";
 import { ActivityImages } from "./ActivityImages";
 import AdCard from "@/components/AdCard";
+import OnsiteReport from "@/components/OnsiteReport";
 
 const AD_SLOT_ACTIVITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
 const AD_SLOT_SIDEBAR = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
@@ -398,6 +399,13 @@ export default async function ActivityPage({ params }: PageProps) {
             </div>
           )}
         </div>
+
+        {/* 現場真相回報——捐血人到現場才知道的實況（贈品 vs 公告、排隊、活動有沒有來）。
+            這是官方網站不會有、抄襲者爬不到的護城河資料。 */}
+        <OnsiteReport
+          eventId={id}
+          announcedGifts={giftLinks.map((g) => g!.name)}
+        />
 
         {/* 捐血小提醒 */}
         <div className="mt-4 bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
