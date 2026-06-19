@@ -15,6 +15,7 @@ import ShareButton from "./ShareButton";
 import { ActivityImages } from "./ActivityImages";
 import AdCard from "@/components/AdCard";
 import OnsiteReport from "@/components/OnsiteReport";
+import { taiwanToday } from "@/lib/twDate";
 
 const AD_SLOT_ACTIVITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
 const AD_SLOT_SIDEBAR = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
@@ -401,11 +402,18 @@ export default async function ActivityPage({ params }: PageProps) {
         </div>
 
         {/* 現場真相回報——捐血人到現場才知道的實況（贈品 vs 公告、排隊、活動有沒有來）。
-            這是官方網站不會有、抄襲者爬不到的護城河資料。 */}
-        <OnsiteReport
-          eventId={id}
-          announcedGifts={giftLinks.map((g) => g!.name)}
-        />
+            這是官方網站不會有、抄襲者爬不到的護城河資料。
+            活動過期就不掛這個元件：現場狀況已無意義，也省下每次瀏覽的 API 呼叫。 */}
+        {event.activityDate >= taiwanToday() ? (
+          <OnsiteReport
+            eventId={id}
+            announcedGifts={giftLinks.map((g) => g!.name)}
+          />
+        ) : (
+          <div className="mt-4 px-5 py-4 bg-white rounded-2xl border border-gray-200 shadow-sm text-sm text-gray-400 text-center">
+            活動已結束，現場回報已關閉。
+          </div>
+        )}
 
         {/* 捐血小提醒 */}
         <div className="mt-4 bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">

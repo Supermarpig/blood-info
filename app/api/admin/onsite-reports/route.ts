@@ -29,7 +29,7 @@ export async function GET(request: Request) {
       countByModeration(),
     ]);
     const data = docs.map((d) => ({
-      id: String(d._id),
+      id: String(d.id),
       eventId: d.eventId,
       giftMatch: d.giftMatch,
       actualGift: d.actualGift,

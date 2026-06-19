@@ -7,6 +7,7 @@ import { NextResponse } from "next/server";
 import { listRecentApproved } from "@/services/onsiteReportService";
 import { loadMonth } from "@/lib/getDonations";
 import { eventShortId } from "@/lib/eventId";
+import { taiwanToday } from "@/lib/twDate";
 
 export const dynamic = "force-dynamic";
 
@@ -62,7 +63,8 @@ export async function GET(request: Request) {
   }
 
   try {
-    const docs = await listRecentApproved(limit);
+    // 只取「今天與未來」活動的回報——過期活動的現場狀況已無決策價值
+    const docs = await listRecentApproved(limit, taiwanToday());
     const monthMap = new Map<string, Record<string, FeedEvent[]> | null>();
     const reports: RecentReport[] = [];
     for (const d of docs) {
