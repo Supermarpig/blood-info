@@ -4,6 +4,7 @@ import Link from "@/components/Link";
 import { ChevronRight, Gift } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
+import RecentOnsiteReports from "@/components/RecentOnsiteReports";
 import { GIFTS, getGiftBySlug, getAllGiftSlugs, GiftConfig } from "@/lib/giftConfig";
 import { getDonations } from "@/lib/getDonations";
 import AdCard from "@/components/AdCard";
@@ -280,6 +281,8 @@ export default async function GiftPage({ params }: PageProps) {
           ))}
         </div>
       </section>
+
+      <RecentOnsiteReports limit={4} />
 
       {/* 其他贈品分類交叉內鏈 */}
       <section className="mt-10">

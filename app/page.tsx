@@ -11,6 +11,7 @@ import AnnouncementTab from "@/components/AnnouncementTab";
 import EligibilityFloatingButton from "@/components/EligibilityFloatingButton";
 import FaqSection from "@/components/FaqSection";
 import InternalLinks from "@/components/InternalLinks";
+import RecentOnsiteReports from "@/components/RecentOnsiteReports";
 import { getDonations } from "@/lib/getDonations";
 
 // 首頁完全靜態化（build 時預渲染，由 ASSETS 直接送出，worker 不在 runtime 重 render）。
@@ -274,6 +275,7 @@ export default async function BloodDonationPage() {
           <AddDonationEventModal />
         </div>
       </div>
+      <RecentOnsiteReports variant="marquee" limit={10} className="mb-5" />
       <SearchableDonationList data={data} initialInventory={initialInventory} />
 
       <details className="my-8 rounded-lg border border-gray-100 bg-gray-50/60 group">

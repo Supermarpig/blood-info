@@ -9,6 +9,7 @@ import { getDonations } from "@/lib/getDonations";
 import AdCard from "@/components/AdCard";
 import GuideCallout from "@/components/GuideCallout";
 import CityGiftHighlight from "@/components/CityGiftHighlight";
+import RecentOnsiteReports from "@/components/RecentOnsiteReports";
 
 const AD_SLOT_CITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
 
@@ -272,6 +273,8 @@ export default async function CityPage({ params }: PageProps) {
           </div>
         </section>
       )}
+
+      <RecentOnsiteReports limit={4} />
 
       <GuideCallout className="mt-10" />
     </div>

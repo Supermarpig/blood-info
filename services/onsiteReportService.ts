@@ -34,6 +34,17 @@ export async function getVisibleReports(
     .lean<IOnsiteReport[]>();
 }
 
+/** 跨活動取最新已公開回報（給首頁/gift/city 的聚合 feed） */
+export async function listRecentApproved(
+  limit = 6
+): Promise<IOnsiteReport[]> {
+  await dbConnect();
+  return OnsiteReportModel.find({ moderation: "approved" })
+    .sort({ createdAt: -1 })
+    .limit(Math.min(Math.max(limit, 1), 20))
+    .lean<IOnsiteReport[]>();
+}
+
 /** 後台：依審核狀態列出回報（預設待審） */
 export async function listOnsiteReports(
   moderation?: Moderation
