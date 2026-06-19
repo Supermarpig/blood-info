@@ -11,6 +11,17 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  // 現場真相回報的儲存層（D1 / SQLite）。取代 mongoose——MongoDB 長連線 driver
+  // 在 Workers 上會因背景計時器在請求結束後做 I/O 而拋 1101。
+  // database_id 由 `npx wrangler d1 create blood-info` 產生後填入。
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "blood-info",
+      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
   "vars": {
     "GITHUB_REPO": "Supermarpig/blood-info"
   }

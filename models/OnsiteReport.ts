@@ -1,15 +1,17 @@
 // /models/OnsiteReport.ts
 //
-// 「現場真相回報」的 Mongoose 模型。儲存層從 GitHub Issues 改為 MongoDB：
-// 依 eventId 建索引可快速讀取、可分頁、無速率限制、不污染 issue tracker。
+// 「現場真相回報」的型別定義。儲存層為 Cloudflare D1（SQLite，Workers 原生）。
+// 不再使用 mongoose——MongoDB 的長連線 driver 在 Cloudflare Workers 上會因背景
+// 監控計時器（心跳 / SRV 輪詢）在請求結束後仍嘗試做 I/O，被 runtime 殺掉而拋出
+// 無法 catch 的 1101 例外。實際讀寫見 services/onsiteReportService.ts。
 //
 // 注意命名：`status` 是「活動是否正常舉辦」的領域資料（與 lib/onsiteReport 一致），
 // `moderation` 才是審核狀態（approved/pending/rejected）。兩者不同，勿混用。
-import mongoose, { Schema, Document, Model } from "mongoose";
 
 export type Moderation = "approved" | "pending" | "rejected";
 
-export interface IOnsiteReport extends Document {
+export interface IOnsiteReport {
+  id: number;
   eventId: string;
   giftMatch: string;
   actualGift: string;
@@ -23,8 +25,9 @@ export interface IOnsiteReport extends Document {
   submitterToken: string;
   /** 來源 IP 的雜湊（不存原始 IP），供限流/濫用追蹤 */
   ipHash: string;
-  createdAt: Date;
-  updatedAt: Date;
+  /** ISO 8601 UTC 字串（字典序即時間序，方便比較與排序） */
+  createdAt: string;
+  updatedAt: string;
 }
 
 export type IOnsiteReportInput = Pick<
@@ -41,39 +44,3 @@ export type IOnsiteReportInput = Pick<
   | "submitterToken"
   | "ipHash"
 >;
-
-const OnsiteReportSchema = new Schema<IOnsiteReport>(
-  {
-    eventId: { type: String, required: true, index: true },
-    giftMatch: { type: String, default: "" },
-    actualGift: { type: String, default: "" },
-    crowd: { type: String, default: "" },
-    status: { type: String, default: "" },
-    note: { type: String, default: "" },
-    nickname: { type: String, default: "" },
-    photoUrl: { type: String, default: "" },
-    moderation: {
-      type: String,
-      enum: ["approved", "pending", "rejected"],
-      default: "pending",
-      index: true,
-    },
-    submitterToken: { type: String, default: "" },
-    ipHash: { type: String, default: "", index: true },
-  },
-  {
-    timestamps: true,
-    collection: "onsiteReports",
-  }
-);
-
-type IOnsiteReportModel = Model<IOnsiteReport>;
-
-const OnsiteReportModel =
-  (mongoose.models.OnsiteReport as IOnsiteReportModel) ||
-  mongoose.model<IOnsiteReport, IOnsiteReportModel>(
-    "OnsiteReport",
-    OnsiteReportSchema
-  );
-
-export default OnsiteReportModel;

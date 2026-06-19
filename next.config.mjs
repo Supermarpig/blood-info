@@ -1,5 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+
+// 讓 `next dev` 也能拿到 wrangler.jsonc 裡的 Cloudflare bindings（D1 等）。
+// production 走 Workers runtime 不需要這行；只影響本機開發。
+initOpenNextCloudflareForDev();
 
 // Cloudflare Workers 沒有檔案系統，runtime 無法用 fs 讀 /data。
 // 在 build/dev 時把 /data 複製到 public/data，讓資料變成靜態資源（由 CDN 直接提供）。
