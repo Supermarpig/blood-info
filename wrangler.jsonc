@@ -18,7 +18,7 @@
     {
       "binding": "DB",
       "database_name": "blood-info",
-      "database_id": "REPLACE_WITH_D1_DATABASE_ID",
+      "database_id": "011f318f-0404-4ff3-b8f3-8de6ac9d8fbd",
       "migrations_dir": "migrations"
     }
   ],
