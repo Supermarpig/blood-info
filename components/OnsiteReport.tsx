@@ -11,11 +11,24 @@
  * 依序滑入、送出後自己的回報高亮一下。
  */
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { Camera, Loader2, Check, ChevronDown, X, User } from "lucide-react";
+import {
+  Camera,
+  Loader2,
+  Check,
+  ChevronDown,
+  X,
+  User,
+  Gift,
+  Users,
+  CalendarCheck,
+  Flame,
+  Droplets,
+  type LucideIcon,
+} from "lucide-react";
 import Confetti from "@/components/Confetti";
 import {
   GIFT_MATCH_LABELS,
@@ -37,6 +50,80 @@ interface Props {
   announcedGifts: string[];
 }
 
+/**
+ * 「現場熱度」隱喻：最近一直有人回報＝火（熱門），冷清＝水（平靜）。
+ * 用最近度加權算分（剛回報的權重高、舊的趨近 0），再分三段對應外層卡片光暈。
+ */
+type HeatTier = "calm" | "warm" | "hot";
+
+const HEAT: Record<
+  HeatTier,
+  {
+    /** 流動漸層（同時用於彩色邊框與後方柔光；首末色相同以無縫循環） */
+    aura: string;
+    borderOpacity: number; // 彩色邊框的不透明度（清楚看得到）
+    glowOpacity: number; // 後方柔光的峰值不透明度
+    flow: number; // 漸層流動一輪的秒數（越熱越快）
+    breath: number; // 柔光呼吸一輪的秒數
+    icon: LucideIcon;
+    iconClass: string;
+    badge: string;
+    label: string;
+  }
+> = {
+  calm: {
+    aura: "linear-gradient(115deg, #38bdf8, #22d3ee, #2dd4bf, #22d3ee, #38bdf8)",
+    borderOpacity: 0.7,
+    glowOpacity: 0.35,
+    flow: 12,
+    breath: 4.5,
+    icon: Droplets,
+    iconClass: "text-sky-500",
+    badge: "bg-sky-50 text-sky-600 border-sky-100",
+    label: "平靜",
+  },
+  warm: {
+    aura: "linear-gradient(115deg, #fbbf24, #fb923c, #f59e0b, #fb923c, #fbbf24)",
+    borderOpacity: 0.85,
+    glowOpacity: 0.45,
+    flow: 8,
+    breath: 3.2,
+    icon: Flame,
+    iconClass: "text-amber-500",
+    badge: "bg-amber-50 text-amber-600 border-amber-100",
+    label: "熱絡",
+  },
+  hot: {
+    aura: "linear-gradient(115deg, #fb923c, #f43f5e, #f59e0b, #ef4444, #fb923c)",
+    borderOpacity: 1,
+    glowOpacity: 0.65,
+    flow: 4.5,
+    breath: 2,
+    icon: Flame,
+    iconClass: "text-rose-500",
+    badge: "bg-rose-50 text-rose-600 border-rose-100",
+    label: "熱門",
+  },
+};
+
+function computeHeat(reports: PublicOnsiteReport[]): {
+  tier: HeatTier;
+  score: number;
+} {
+  const now = Date.now();
+  let score = 0;
+  for (const r of reports) {
+    const ageH = (now - new Date(r.createdAt).getTime()) / 3600000;
+    if (Number.isNaN(ageH)) score += 1;
+    else if (ageH < 3) score += 3;
+    else if (ageH < 24) score += 2;
+    else if (ageH < 24 * 7) score += 1;
+    else score += 0.4;
+  }
+  const tier: HeatTier = score >= 6 ? "hot" : score >= 2 ? "warm" : "calm";
+  return { tier, score };
+}
+
 function timeAgo(iso: string): string {
   const diff = Date.now() - new Date(iso).getTime();
   if (Number.isNaN(diff)) return "";
@@ -53,24 +140,49 @@ function timeAgo(iso: string): string {
 function Chip({
   active,
   onClick,
+  dot,
   children,
 }: {
   active: boolean;
   onClick: () => void;
+  dot?: string;
   children: React.ReactNode;
 }) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`px-3.5 py-2 rounded-xl text-sm border transition-all duration-150 active:scale-[0.97] ${
+      className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm border transition-all duration-150 active:scale-[0.97] ${
         active
           ? "bg-gray-900 text-white border-gray-900 font-medium shadow-sm"
-          : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
+          : "bg-white text-gray-600 border-gray-200 hover:border-gray-300 hover:bg-gray-50"
       }`}
     >
+      {dot && (
+        <span
+          className={`w-1.5 h-1.5 rounded-full shrink-0 ${dot} ${
+            active ? "ring-2 ring-white/25" : ""
+          }`}
+        />
+      )}
       {children}
     </button>
+  );
+}
+
+/** 問題標題：前綴一個小 lucide 圖示建立視覺層次（灰階，無 emoji） */
+function FieldLabel({
+  icon: Icon,
+  children,
+}: {
+  icon: LucideIcon;
+  children: React.ReactNode;
+}) {
+  return (
+    <p className="flex items-center gap-1.5 text-sm font-semibold text-gray-700 mb-2.5">
+      <Icon className="w-4 h-4 text-gray-400 shrink-0" strokeWidth={2} />
+      {children}
+    </p>
   );
 }
 
@@ -106,12 +218,22 @@ function ReportItem({ r }: { r: PublicOnsiteReport }) {
             </span>
           )}
           {r.crowd && (
-            <span className="text-xs px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50 text-gray-500">
+            <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50 text-gray-500">
+              <span
+                className={`w-1.5 h-1.5 rounded-full ${
+                  CROWD_LABELS[r.crowd as Exclude<Crowd, "">].dot
+                }`}
+              />
               {CROWD_LABELS[r.crowd as Exclude<Crowd, "">].label}
             </span>
           )}
           {r.status && (
-            <span className="text-xs px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50 text-gray-500">
+            <span className="inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50 text-gray-500">
+              <span
+                className={`w-1.5 h-1.5 rounded-full ${
+                  STATUS_LABELS[r.status as Exclude<EventStatus, "">].dot
+                }`}
+              />
               {STATUS_LABELS[r.status as Exclude<EventStatus, "">].label}
             </span>
           )}
@@ -148,6 +270,7 @@ function ReportItem({ r }: { r: PublicOnsiteReport }) {
 }
 
 export default function OnsiteReport({ eventId, announcedGifts }: Props) {
+  const rootRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const tokenRef = useRef("");
   const [reports, setReports] = useState<PublicOnsiteReport[]>([]);
@@ -169,6 +292,11 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
   const [photoUrl, setPhotoUrl] = useState("");
   const [uploading, setUploading] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
+
+  // 現場熱度 → 決定外層卡片光暈的顏色與流速（火＝熱門、水＝平靜）
+  const heat = useMemo(() => computeHeat(reports), [reports]);
+  const cfg = HEAT[heat.tier];
+  const HeatIcon = cfg.icon;
 
   useEffect(() => {
     let alive = true;
@@ -204,6 +332,71 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
       alive = false;
     };
   }, [eventId]);
+
+  // 現場熱度光暈：漸層沿卡片外緣流動 + 呼吸明滅，圖示隨火/水律動
+  useGSAP(
+    () => {
+      const reduce =
+        typeof window !== "undefined" &&
+        window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+      const border = rootRef.current?.querySelector<HTMLElement>(".heat-border");
+      const glow = rootRef.current?.querySelector<HTMLElement>(".heat-glow");
+      const icon = rootRef.current?.querySelector<HTMLElement>(".heat-icon");
+
+      // 邊框與柔光：漸層沿卡片外緣流動
+      [border, glow].forEach((el) => {
+        if (!el) return;
+        if (reduce) {
+          gsap.set(el, { backgroundPosition: "50% 50%" });
+        } else {
+          gsap.fromTo(
+            el,
+            { backgroundPosition: "0% 50%" },
+            { backgroundPosition: "200% 50%", duration: cfg.flow, ease: "none", repeat: -1 }
+          );
+        }
+      });
+      // 柔光額外呼吸明滅
+      if (glow && !reduce) {
+        gsap.fromTo(
+          glow,
+          { opacity: cfg.glowOpacity * 0.5 },
+          {
+            opacity: cfg.glowOpacity,
+            duration: cfg.breath,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+          }
+        );
+      }
+
+      if (icon && !reduce) {
+        if (heat.tier === "hot") {
+          // 火：快速跳動，原點偏下像火苗
+          gsap.to(icon, {
+            scale: 1.18,
+            duration: 0.5,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+            transformOrigin: "50% 85%",
+          });
+        } else if (heat.tier === "calm") {
+          // 水：緩慢起伏
+          gsap.to(icon, {
+            y: -1.5,
+            scale: 1.06,
+            duration: 2.4,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+          });
+        }
+      }
+    },
+    { dependencies: [heat.tier], scope: rootRef }
+  );
 
   // 初次載入：回報項目依序進場
   useGSAP(
@@ -362,21 +555,49 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
   }
 
   return (
-    <div
-      ref={panelRef}
-      className="mt-4 bg-white rounded-2xl border border-gray-200/60 shadow-sm overflow-hidden"
-    >
-      <Confetti key={confettiKey} isActive={celebrate} duration={2500} />
-      <div className="bg-gray-50 border-b border-gray-100 px-5 py-3 flex items-center gap-2">
-        <span className="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0" />
-        <h2 className="text-sm font-semibold text-gray-800">現場真相</h2>
-        <span className="text-xs text-gray-400">捐血人實際回報</span>
-        {reports.length > 0 && (
-          <span className="ml-auto text-xs font-semibold text-gray-500 bg-gray-100 rounded-full px-2 py-0.5">
-            {reports.length}
-          </span>
-        )}
-      </div>
+    <div ref={rootRef} className="relative mt-4">
+      {/* 後方柔光：blur 擴散，火＝熱門、水＝平靜，會呼吸明滅 */}
+      <div
+        aria-hidden
+        className="heat-glow pointer-events-none absolute -inset-2 rounded-[28px] blur-2xl z-0"
+        style={{
+          backgroundImage: cfg.aura,
+          backgroundSize: "200% 200%",
+          opacity: cfg.glowOpacity,
+        }}
+      />
+      {/* 流動的彩色邊框：繞著卡片外緣跑（越熱越快） */}
+      <div
+        aria-hidden
+        className="heat-border pointer-events-none absolute -inset-[2px] rounded-[18px] z-0"
+        style={{
+          backgroundImage: cfg.aura,
+          backgroundSize: "200% 200%",
+          opacity: cfg.borderOpacity,
+        }}
+      />
+      <div
+        ref={panelRef}
+        className="relative z-10 bg-white rounded-2xl border border-gray-200/60 shadow-sm overflow-hidden"
+      >
+        <Confetti key={confettiKey} isActive={celebrate} duration={2500} />
+        <div className="bg-gray-50 border-b border-gray-100 px-5 py-3 flex items-center gap-2">
+          <span className="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0" />
+          <h2 className="text-sm font-semibold text-gray-800">現場真相</h2>
+          <span className="text-xs text-gray-400">捐血人實際回報</span>
+          {reports.length > 0 && (
+            <span
+              className={`ml-auto inline-flex items-center gap-1 text-xs font-semibold rounded-full border px-2 py-0.5 ${cfg.badge}`}
+              title={`${cfg.label}（${reports.length} 則回報）`}
+            >
+              <HeatIcon
+                className={`heat-icon w-3.5 h-3.5 ${cfg.iconClass}`}
+                strokeWidth={2.2}
+              />
+              {reports.length}
+            </span>
+          )}
+        </div>
 
       <div className="p-5">
         {announcedGifts.length > 0 && (
@@ -418,16 +639,15 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
             <ChevronDown className="w-4 h-4 text-gray-300" />
           </button>
         ) : (
-          <div className="mt-4 space-y-4">
+          <div className="mt-4 space-y-4 rounded-2xl border border-gray-100 bg-gray-50/60 p-4">
             <div className="onsite-form-row">
-              <p className="text-sm font-medium text-gray-700 mb-2">
-                現場贈品跟公告一樣嗎？
-              </p>
+              <FieldLabel icon={Gift}>現場贈品跟公告一樣嗎？</FieldLabel>
               <div className="flex flex-wrap gap-2">
                 {GIFT_MATCH_KEYS.map((k) => (
                   <Chip
                     key={k}
                     active={giftMatch === k}
+                    dot={GIFT_MATCH_LABELS[k].dot}
                     onClick={() => toggle(giftMatch, k, setGiftMatch, "")}
                   >
                     {GIFT_MATCH_LABELS[k].label}
@@ -441,18 +661,17 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
               onChange={(e) => setActualGift(e.target.value)}
               maxLength={60}
               placeholder="實際拿到什麼？例如：7-11 100元禮券、泡麵"
-              className="onsite-form-row w-full px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100 transition-shadow"
+              className="onsite-form-row w-full px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 bg-white focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100 transition-shadow"
             />
 
             <div className="onsite-form-row">
-              <p className="text-sm font-medium text-gray-700 mb-2">
-                現場要排隊嗎？
-              </p>
+              <FieldLabel icon={Users}>現場要排隊嗎？</FieldLabel>
               <div className="flex flex-wrap gap-2">
                 {CROWD_KEYS.map((k) => (
                   <Chip
                     key={k}
                     active={crowd === k}
+                    dot={CROWD_LABELS[k].dot}
                     onClick={() => toggle(crowd, k, setCrowd, "")}
                   >
                     {CROWD_LABELS[k].label}
@@ -462,14 +681,13 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
             </div>
 
             <div className="onsite-form-row">
-              <p className="text-sm font-medium text-gray-700 mb-2">
-                活動有正常舉辦嗎？
-              </p>
+              <FieldLabel icon={CalendarCheck}>活動有正常舉辦嗎？</FieldLabel>
               <div className="flex flex-wrap gap-2">
                 {STATUS_KEYS.map((k) => (
                   <Chip
                     key={k}
                     active={status === k}
+                    dot={STATUS_LABELS[k].dot}
                     onClick={() => toggle(status, k, setStatus, "")}
                   >
                     {STATUS_LABELS[k].label}
@@ -484,7 +702,7 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
               maxLength={300}
               rows={2}
               placeholder="補充說明（選填）：停車、護理師、排隊動線……"
-              className="onsite-form-row w-full px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100 transition-shadow resize-none"
+              className="onsite-form-row w-full px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 bg-white focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100 transition-shadow resize-none"
             />
 
             <div className="onsite-form-row flex items-center gap-2">
@@ -493,7 +711,7 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
                 onChange={(e) => setNickname(e.target.value)}
                 maxLength={20}
                 placeholder="暱稱（選填）"
-                className="flex-1 px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100 transition-shadow"
+                className="flex-1 px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 bg-white focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100 transition-shadow"
               />
               <input
                 ref={fileRef}
@@ -506,7 +724,7 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
                 type="button"
                 onClick={() => fileRef.current?.click()}
                 disabled={uploading}
-                className="flex items-center gap-1.5 px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 text-gray-600 hover:border-gray-300 disabled:opacity-50 transition-colors"
+                className="flex items-center gap-1.5 px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 bg-white text-gray-600 hover:border-gray-300 disabled:opacity-50 transition-colors"
               >
                 {uploading ? (
                   <Loader2 className="w-4 h-4 animate-spin" />
@@ -551,7 +769,7 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
               <button
                 type="button"
                 onClick={() => setOpen(false)}
-                className="px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-500 hover:bg-gray-50 transition-colors"
+                className="px-4 py-3 rounded-xl border border-gray-200 bg-white text-sm text-gray-500 hover:bg-gray-100 transition-colors"
               >
                 取消
               </button>
@@ -561,6 +779,7 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
             </p>
           </div>
         )}
+        </div>
       </div>
     </div>
   );

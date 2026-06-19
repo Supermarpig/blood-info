@@ -44,19 +44,19 @@ export const GIFT_MATCH_LABELS: Record<
 
 export const CROWD_LABELS: Record<
   Exclude<Crowd, "">,
-  { label: string }
+  { label: string; dot: string }
 > = {
-  none: { label: "不用排隊" },
-  some: { label: "稍微等一下" },
-  long: { label: "要等很久" },
+  none: { label: "不用排隊", dot: "bg-emerald-500" },
+  some: { label: "稍微等一下", dot: "bg-amber-500" },
+  long: { label: "要等很久", dot: "bg-rose-500" },
 };
 
 export const STATUS_LABELS: Record<
   Exclude<EventStatus, "">,
-  { label: string }
+  { label: string; dot: string }
 > = {
-  normal: { label: "正常舉辦" },
-  noshow: { label: "沒看到或取消" },
+  normal: { label: "正常舉辦", dot: "bg-emerald-500" },
+  noshow: { label: "沒看到或取消", dot: "bg-rose-500" },
 };
 
 export const GIFT_MATCH_KEYS = ["same", "better", "less", "none"] as const;
