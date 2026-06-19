@@ -13,7 +13,7 @@
  * 「最新」凍結在 build；client 抓取可保持永遠最新，且不增加 build 對 Mongo 的依賴。
  */
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { MapPin, ChevronRight } from "lucide-react";
@@ -26,6 +26,8 @@ import {
   type Crowd,
   type EventStatus,
 } from "@/lib/onsiteReport";
+import { HEAT, computeHeat, type HeatTier } from "@/lib/onsiteHeat";
+import HeatParticles from "@/components/HeatParticles";
 
 gsap.registerPlugin(useGSAP);
 
@@ -85,12 +87,26 @@ function Badges({ r }: { r: RecentReport }) {
   );
 }
 
-function SectionHeader() {
+function SectionHeader({ tier }: { tier?: HeatTier }) {
+  const cfg = tier ? HEAT[tier] : null;
+  const HeatIcon = cfg?.icon;
   return (
     <div className="flex items-center gap-2 mb-3">
       <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
       <h2 className="text-sm font-semibold text-gray-800">最新現場真相</h2>
       <span className="text-xs text-gray-400">捐血人到現場的實際回報</span>
+      {cfg && HeatIcon && (
+        <span
+          className={`ml-auto inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-semibold ${cfg.badge}`}
+          title={cfg.label}
+        >
+          <HeatIcon
+            className={`heat-icon h-3.5 w-3.5 ${cfg.iconClass}`}
+            strokeWidth={2.2}
+          />
+          {cfg.label}
+        </span>
+      )}
     </div>
   );
 }
@@ -109,6 +125,12 @@ export default function RecentOnsiteReports({
   const tweenRef = useRef<gsap.core.Tween | null>(null);
   const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [reports, setReports] = useState<RecentReport[] | null>(null);
+
+  // 整條 feed 的現場熱度：火＝最近一直有人回報、水＝冷清
+  const heat = useMemo(
+    () => (reports?.length ? computeHeat(reports) : null),
+    [reports]
+  );
 
   useEffect(() => {
     let alive = true;
@@ -138,6 +160,64 @@ export default function RecentOnsiteReports({
       });
     },
     { dependencies: [reports, variant], scope: ref }
+  );
+
+  // 熱度：後方柔光漸層流動 + 呼吸，標題徽章圖示隨火/水律動
+  useGSAP(
+    () => {
+      if (!heat) return;
+      const reduce = window.matchMedia?.(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      const cfg = HEAT[heat.tier];
+      const glow = ref.current?.querySelector<HTMLElement>(".heat-glow");
+      const icon = ref.current?.querySelector<HTMLElement>(".heat-icon");
+
+      if (glow) {
+        if (reduce) {
+          gsap.set(glow, { backgroundPosition: "50% 50%" });
+        } else {
+          gsap.fromTo(
+            glow,
+            { backgroundPosition: "0% 50%" },
+            { backgroundPosition: "200% 50%", duration: cfg.flow, ease: "none", repeat: -1 }
+          );
+          gsap.fromTo(
+            glow,
+            { opacity: cfg.glowOpacity * 0.5 },
+            {
+              opacity: cfg.glowOpacity,
+              duration: cfg.breath,
+              ease: "sine.inOut",
+              yoyo: true,
+              repeat: -1,
+            }
+          );
+        }
+      }
+      if (icon && !reduce) {
+        if (heat.tier === "hot") {
+          gsap.to(icon, {
+            scale: 1.18,
+            duration: 0.5,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+            transformOrigin: "50% 85%",
+          });
+        } else if (heat.tier === "calm") {
+          gsap.to(icon, {
+            y: -1.5,
+            scale: 1.06,
+            duration: 2.4,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+          });
+        }
+      }
+    },
+    { dependencies: [heat?.tier], scope: ref }
   );
 
   // marquee：自動推進「捲動容器」的 scrollLeft（內容複製一份，捲到一輪寬度就歸零→無縫）。
@@ -197,19 +277,31 @@ export default function RecentOnsiteReports({
 
   if (variant === "marquee") {
     const loop = [...reports, ...reports];
+    const cfg = HEAT[heat!.tier];
     return (
       <section ref={ref} className={className}>
-        <SectionHeader />
-        <div
-          ref={scrollerRef}
-          onMouseEnter={pauseAuto}
-          onMouseLeave={scheduleResume}
-          onTouchStart={pauseAuto}
-          onTouchEnd={scheduleResume}
-          className="overflow-x-auto overscroll-x-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden [-webkit-overflow-scrolling:touch] [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
-        >
-          <div className="flex w-max gap-3">
-            {loop.map((r, i) => (
+        <SectionHeader tier={heat!.tier} />
+        <div className="relative">
+          {/* 後方柔光：火＝熱門、水＝平靜，會流動與呼吸 */}
+          <div
+            aria-hidden
+            className="heat-glow pointer-events-none absolute -inset-2 rounded-[28px] blur-2xl z-0"
+            style={{
+              backgroundImage: cfg.aura,
+              backgroundSize: "200% 200%",
+              opacity: cfg.glowOpacity,
+            }}
+          />
+          <div
+            ref={scrollerRef}
+            onMouseEnter={pauseAuto}
+            onMouseLeave={scheduleResume}
+            onTouchStart={pauseAuto}
+            onTouchEnd={scheduleResume}
+            className="relative z-10 overflow-x-auto overscroll-x-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden [-webkit-overflow-scrolling:touch] [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
+          >
+            <div className="flex w-max gap-3">
+              {loop.map((r, i) => (
               <Link
                 key={`${r.eventId}-${i}`}
                 href={`/activity/${r.eventId}`}
@@ -231,7 +323,14 @@ export default function RecentOnsiteReports({
                 </div>
               </Link>
             ))}
+            </div>
           </div>
+          {/* 熱度粒子層：疊在跑馬燈上方，火星上竄 / 水泡上浮 */}
+          <HeatParticles
+            tier={heat!.tier}
+            count={24}
+            className="z-20 [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
+          />
         </div>
       </section>
     );
@@ -239,7 +338,7 @@ export default function RecentOnsiteReports({
 
   return (
     <section ref={ref} className={`mt-10 ${className}`}>
-      <SectionHeader />
+      <SectionHeader tier={heat?.tier} />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {reports.map((r, i) => (
           <Link

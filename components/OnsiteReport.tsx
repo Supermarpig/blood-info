@@ -25,10 +25,10 @@ import {
   Gift,
   Users,
   CalendarCheck,
-  Flame,
-  Droplets,
   type LucideIcon,
 } from "lucide-react";
+import { HEAT, computeHeat } from "@/lib/onsiteHeat";
+import HeatParticles from "@/components/HeatParticles";
 import Confetti from "@/components/Confetti";
 import {
   GIFT_MATCH_LABELS,
@@ -48,80 +48,6 @@ gsap.registerPlugin(useGSAP);
 interface Props {
   eventId: string;
   announcedGifts: string[];
-}
-
-/**
- * 「現場熱度」隱喻：最近一直有人回報＝火（熱門），冷清＝水（平靜）。
- * 用最近度加權算分（剛回報的權重高、舊的趨近 0），再分三段對應外層卡片光暈。
- */
-type HeatTier = "calm" | "warm" | "hot";
-
-const HEAT: Record<
-  HeatTier,
-  {
-    /** 流動漸層（同時用於彩色邊框與後方柔光；首末色相同以無縫循環） */
-    aura: string;
-    borderOpacity: number; // 彩色邊框的不透明度（清楚看得到）
-    glowOpacity: number; // 後方柔光的峰值不透明度
-    flow: number; // 漸層流動一輪的秒數（越熱越快）
-    breath: number; // 柔光呼吸一輪的秒數
-    icon: LucideIcon;
-    iconClass: string;
-    badge: string;
-    label: string;
-  }
-> = {
-  calm: {
-    aura: "linear-gradient(115deg, #38bdf8, #22d3ee, #2dd4bf, #22d3ee, #38bdf8)",
-    borderOpacity: 0.7,
-    glowOpacity: 0.35,
-    flow: 12,
-    breath: 4.5,
-    icon: Droplets,
-    iconClass: "text-sky-500",
-    badge: "bg-sky-50 text-sky-600 border-sky-100",
-    label: "平靜",
-  },
-  warm: {
-    aura: "linear-gradient(115deg, #fbbf24, #fb923c, #f59e0b, #fb923c, #fbbf24)",
-    borderOpacity: 0.85,
-    glowOpacity: 0.45,
-    flow: 8,
-    breath: 3.2,
-    icon: Flame,
-    iconClass: "text-amber-500",
-    badge: "bg-amber-50 text-amber-600 border-amber-100",
-    label: "熱絡",
-  },
-  hot: {
-    aura: "linear-gradient(115deg, #fb923c, #f43f5e, #f59e0b, #ef4444, #fb923c)",
-    borderOpacity: 1,
-    glowOpacity: 0.65,
-    flow: 4.5,
-    breath: 2,
-    icon: Flame,
-    iconClass: "text-rose-500",
-    badge: "bg-rose-50 text-rose-600 border-rose-100",
-    label: "熱門",
-  },
-};
-
-function computeHeat(reports: PublicOnsiteReport[]): {
-  tier: HeatTier;
-  score: number;
-} {
-  const now = Date.now();
-  let score = 0;
-  for (const r of reports) {
-    const ageH = (now - new Date(r.createdAt).getTime()) / 3600000;
-    if (Number.isNaN(ageH)) score += 1;
-    else if (ageH < 3) score += 3;
-    else if (ageH < 24) score += 2;
-    else if (ageH < 24 * 7) score += 1;
-    else score += 0.4;
-  }
-  const tier: HeatTier = score >= 6 ? "hot" : score >= 2 ? "warm" : "calm";
-  return { tier, score };
 }
 
 function timeAgo(iso: string): string {
@@ -580,6 +506,8 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
         ref={panelRef}
         className="relative z-10 bg-white rounded-2xl border border-gray-200/60 shadow-sm overflow-hidden"
       >
+        {/* 熱度粒子：火星上竄 / 水泡上浮，疊在卡片上方不擋互動 */}
+        <HeatParticles tier={heat.tier} count={18} className="z-20 rounded-2xl" />
         <Confetti key={confettiKey} isActive={celebrate} duration={2500} />
         <div className="bg-gray-50 border-b border-gray-100 px-5 py-3 flex items-center gap-2">
           <span className="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0" />
