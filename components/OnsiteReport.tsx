@@ -1,0 +1,567 @@
+"use client";
+
+/**
+ * 「現場真相回報」元件——放在活動詳情頁。
+ *
+ * 護城河的引擎：① 即時抓取並「展示」其他捐血人的現場回報（看到自己的貢獻被
+ * 顯示 → 願意再回報 → 數據飛輪），② 把回報門檻壓到幾顆 chip + 一張照片。
+ * 公告 vs 現場的對照，是官方網站永遠不會有、抄襲者也無法靠爬蟲補回的資料。
+ *
+ * 動畫用 GSAP（與全站一致的 useGSAP）：回報項目進場 stagger、展開表單欄位
+ * 依序滑入、送出後自己的回報高亮一下。
+ */
+
+import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { Camera, Loader2, Check, ChevronDown, X, User } from "lucide-react";
+import Confetti from "@/components/Confetti";
+import {
+  GIFT_MATCH_LABELS,
+  CROWD_LABELS,
+  STATUS_LABELS,
+  GIFT_MATCH_KEYS,
+  CROWD_KEYS,
+  STATUS_KEYS,
+  type GiftMatch,
+  type Crowd,
+  type EventStatus,
+  type PublicOnsiteReport,
+} from "@/lib/onsiteReport";
+
+gsap.registerPlugin(useGSAP);
+
+interface Props {
+  eventId: string;
+  announcedGifts: string[];
+}
+
+function timeAgo(iso: string): string {
+  const diff = Date.now() - new Date(iso).getTime();
+  if (Number.isNaN(diff)) return "";
+  const min = Math.floor(diff / 60000);
+  if (min < 1) return "剛剛";
+  if (min < 60) return `${min} 分鐘前`;
+  const hr = Math.floor(min / 60);
+  if (hr < 24) return `${hr} 小時前`;
+  const day = Math.floor(hr / 24);
+  if (day < 30) return `${day} 天前`;
+  return new Date(iso).toLocaleDateString("zh-TW");
+}
+
+function Chip({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`px-3.5 py-2 rounded-xl text-sm border transition-all duration-150 active:scale-[0.97] ${
+        active
+          ? "bg-gray-900 text-white border-gray-900 font-medium shadow-sm"
+          : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
+      }`}
+    >
+      {children}
+    </button>
+  );
+}
+
+function ReportItem({ r }: { r: PublicOnsiteReport }) {
+  const gm = r.giftMatch
+    ? GIFT_MATCH_LABELS[r.giftMatch as Exclude<GiftMatch, "">]
+    : null;
+  const initial = r.nickname?.trim()?.[0]?.toUpperCase() || "";
+  return (
+    <div className="onsite-item flex gap-3 py-4 border-t border-gray-100 first:border-t-0 first:pt-1 rounded-lg">
+      <div className="w-9 h-9 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center flex-shrink-0 text-sm font-semibold text-gray-500">
+        {initial || <User className="w-4 h-4 text-gray-400" />}
+      </div>
+      <div className="min-w-0 flex-1">
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-medium text-gray-800">
+            {r.nickname || "匿名捐血人"}
+          </span>
+          <span className="text-xs text-gray-400">{timeAgo(r.createdAt)}</span>
+          {r.pending && (
+            <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 border border-amber-200 text-amber-600">
+              審核中
+            </span>
+          )}
+        </div>
+        <div className="flex flex-wrap gap-1.5 mt-2">
+          {gm && (
+            <span
+              className={`inline-flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full border ${gm.tone}`}
+            >
+              <span className={`w-1.5 h-1.5 rounded-full ${gm.dot}`} />
+              {gm.label}
+            </span>
+          )}
+          {r.crowd && (
+            <span className="text-xs px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50 text-gray-500">
+              {CROWD_LABELS[r.crowd as Exclude<Crowd, "">].label}
+            </span>
+          )}
+          {r.status && (
+            <span className="text-xs px-2.5 py-1 rounded-full border border-gray-200 bg-gray-50 text-gray-500">
+              {STATUS_LABELS[r.status as Exclude<EventStatus, "">].label}
+            </span>
+          )}
+        </div>
+        {r.actualGift && (
+          <p className="text-sm text-gray-700 mt-2">
+            <span className="text-gray-400">實際拿到</span>　{r.actualGift}
+          </p>
+        )}
+        {r.note && (
+          <p className="text-sm text-gray-500 mt-1 whitespace-pre-wrap break-words leading-relaxed">
+            {r.note}
+          </p>
+        )}
+        {r.photoUrl && (
+          <a
+            href={r.photoUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="block mt-2.5 w-24 h-24 relative rounded-xl overflow-hidden border border-gray-200"
+          >
+            <Image
+              src={r.photoUrl}
+              alt="現場照片"
+              fill
+              sizes="96px"
+              className="object-cover transition-transform duration-300 hover:scale-105"
+            />
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default function OnsiteReport({ eventId, announcedGifts }: Props) {
+  const panelRef = useRef<HTMLDivElement>(null);
+  const tokenRef = useRef("");
+  const [reports, setReports] = useState<PublicOnsiteReport[]>([]);
+  const [loadedAt, setLoadedAt] = useState(0);
+  const [addedCount, setAddedCount] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [doneMsg, setDoneMsg] = useState("");
+  const [error, setError] = useState("");
+  const [confettiKey, setConfettiKey] = useState(0);
+  const [celebrate, setCelebrate] = useState(false);
+
+  const [giftMatch, setGiftMatch] = useState<GiftMatch>("");
+  const [actualGift, setActualGift] = useState("");
+  const [crowd, setCrowd] = useState<Crowd>("");
+  const [status, setStatus] = useState<EventStatus>("");
+  const [note, setNote] = useState("");
+  const [nickname, setNickname] = useState("");
+  const [photoUrl, setPhotoUrl] = useState("");
+  const [uploading, setUploading] = useState(false);
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    let alive = true;
+    // viewer token：審核前讓本人仍看得到自己的 pending 回報
+    let token = "";
+    try {
+      token = localStorage.getItem("onsite_token") || "";
+      if (!token) {
+        token =
+          (typeof crypto !== "undefined" && crypto.randomUUID?.()) ||
+          Math.random().toString(36).slice(2);
+        localStorage.setItem("onsite_token", token);
+      }
+    } catch {
+      /* localStorage 不可用時退化為匿名 */
+    }
+    tokenRef.current = token;
+
+    fetch(
+      `/api/onsite-reports?eventId=${encodeURIComponent(
+        eventId
+      )}&token=${encodeURIComponent(token)}`
+    )
+      .then((r) => r.json())
+      .then((d) => {
+        if (alive && Array.isArray(d.reports)) {
+          setReports(d.reports);
+          setLoadedAt(Date.now());
+        }
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [eventId]);
+
+  // 初次載入：回報項目依序進場
+  useGSAP(
+    () => {
+      if (!loadedAt) return;
+      gsap.from(".onsite-item", {
+        y: 12,
+        opacity: 0,
+        duration: 0.4,
+        stagger: 0.07,
+        ease: "power2.out",
+      });
+    },
+    { dependencies: [loadedAt], scope: panelRef }
+  );
+
+  // 展開回報表單：欄位依序滑入
+  useGSAP(
+    () => {
+      if (!open) return;
+      gsap.from(".onsite-form-row", {
+        y: 10,
+        opacity: 0,
+        duration: 0.32,
+        stagger: 0.05,
+        ease: "power2.out",
+      });
+    },
+    { dependencies: [open], scope: panelRef }
+  );
+
+  // 送出後：自己的回報插到最上面，淡綠高亮一下
+  useGSAP(
+    () => {
+      if (!addedCount) return;
+      const first = panelRef.current?.querySelector(".onsite-item");
+      if (!first) return;
+      gsap.from(first, { y: -10, opacity: 0, duration: 0.4, ease: "power2.out" });
+      gsap.fromTo(
+        first,
+        { backgroundColor: "rgba(16,185,129,0.10)" },
+        { backgroundColor: "rgba(16,185,129,0)", duration: 1.4, ease: "power1.out" }
+      );
+    },
+    { dependencies: [addedCount], scope: panelRef }
+  );
+
+  // 彩帶播完自動卸載，避免最後一幀凍結在畫面上（連續送出會用 confettiKey 重觸發）
+  useEffect(() => {
+    if (!celebrate) return;
+    const t = setTimeout(() => setCelebrate(false), 2700);
+    return () => clearTimeout(t);
+  }, [celebrate, confettiKey]);
+
+  const toggle = <T extends string>(
+    cur: T,
+    val: T,
+    set: (v: T) => void,
+    empty: T
+  ) => set(cur === val ? empty : val);
+
+  const handlePhoto = useCallback(
+    async (e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      setUploading(true);
+      setError("");
+      try {
+        const fd = new FormData();
+        fd.append("file", file);
+        const res = await fetch("/api/upload-image-public", {
+          method: "POST",
+          body: fd,
+        });
+        const data = await res.json();
+        if (res.ok && data.url) setPhotoUrl(data.url);
+        else setError(data.error || "照片上傳失敗");
+      } catch {
+        setError("照片上傳失敗");
+      } finally {
+        setUploading(false);
+      }
+    },
+    []
+  );
+
+  const canSubmit =
+    !submitting &&
+    (giftMatch || crowd || status || actualGift.trim() || note.trim() || photoUrl);
+
+  async function submit() {
+    if (!canSubmit) {
+      setError("請至少回報一項現場狀況");
+      return;
+    }
+    setSubmitting(true);
+    setError("");
+    try {
+      const res = await fetch("/api/onsite-reports", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          eventId,
+          giftMatch,
+          actualGift: actualGift.trim(),
+          crowd,
+          status,
+          note: note.trim(),
+          nickname: nickname.trim(),
+          photoUrl,
+          submitterToken: tokenRef.current,
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        setError(data.error || "提交失敗，請稍後再試");
+        return;
+      }
+      const pending = data.moderation === "pending";
+      // 樂觀更新：立刻把自己的回報插到最上面，看見貢獻被展示
+      setReports((prev) => [
+        {
+          giftMatch,
+          actualGift: actualGift.trim(),
+          crowd,
+          status,
+          note: note.trim(),
+          nickname: nickname.trim(),
+          photoUrl,
+          createdAt: new Date().toISOString(),
+          pending,
+        },
+        ...prev,
+      ]);
+      setAddedCount((c) => c + 1);
+      setDoneMsg(
+        data.message ||
+          (pending ? "已送出，審核後對外公開。" : "感謝回報，已即時顯示。")
+      );
+      // 撒彩帶慶祝貢獻（沿用站上的 Confetti，bump key 重新觸發）
+      setCelebrate(true);
+      setConfettiKey((k) => k + 1);
+      setOpen(false);
+      setGiftMatch("");
+      setActualGift("");
+      setCrowd("");
+      setStatus("");
+      setNote("");
+      setNickname("");
+      setPhotoUrl("");
+    } catch {
+      setError("提交失敗，請稍後再試");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
+  return (
+    <div
+      ref={panelRef}
+      className="mt-4 bg-white rounded-2xl border border-gray-200/60 shadow-sm overflow-hidden"
+    >
+      <Confetti key={confettiKey} isActive={celebrate} duration={2500} />
+      <div className="bg-gray-50 border-b border-gray-100 px-5 py-3 flex items-center gap-2">
+        <span className="w-1.5 h-1.5 bg-red-500 rounded-full shrink-0" />
+        <h2 className="text-sm font-semibold text-gray-800">現場真相</h2>
+        <span className="text-xs text-gray-400">捐血人實際回報</span>
+        {reports.length > 0 && (
+          <span className="ml-auto text-xs font-semibold text-gray-500 bg-gray-100 rounded-full px-2 py-0.5">
+            {reports.length}
+          </span>
+        )}
+      </div>
+
+      <div className="p-5">
+        {announcedGifts.length > 0 && (
+          <p className="text-xs text-gray-400 mb-3">
+            官方公告贈品：
+            <span className="text-gray-500">{announcedGifts.join("、")}</span>
+          </p>
+        )}
+
+        {reports.length > 0 ? (
+          <div>
+            {reports.map((r, i) => (
+              <ReportItem key={`${r.createdAt}-${i}`} r={r} />
+            ))}
+          </div>
+        ) : (
+          <p className="text-sm text-gray-400 leading-relaxed">
+            還沒有人回報這場的現場狀況，你會是第一個幫到後面捐血人的人。
+          </p>
+        )}
+
+        {doneMsg && (
+          <div className="flex items-center gap-1.5 text-sm text-emerald-600 mt-4">
+            <Check className="w-4 h-4" />
+            {doneMsg}
+          </div>
+        )}
+
+        {!open ? (
+          <button
+            type="button"
+            onClick={() => {
+              setOpen(true);
+              setDoneMsg("");
+            }}
+            className="mt-4 w-full flex items-center justify-center gap-1.5 py-3 rounded-xl bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 active:scale-[0.99] transition-all"
+          >
+            我去過這場，回報現場狀況
+            <ChevronDown className="w-4 h-4 text-gray-300" />
+          </button>
+        ) : (
+          <div className="mt-4 space-y-4">
+            <div className="onsite-form-row">
+              <p className="text-sm font-medium text-gray-700 mb-2">
+                現場贈品跟公告一樣嗎？
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {GIFT_MATCH_KEYS.map((k) => (
+                  <Chip
+                    key={k}
+                    active={giftMatch === k}
+                    onClick={() => toggle(giftMatch, k, setGiftMatch, "")}
+                  >
+                    {GIFT_MATCH_LABELS[k].label}
+                  </Chip>
+                ))}
+              </div>
+            </div>
+
+            <input
+              value={actualGift}
+              onChange={(e) => setActualGift(e.target.value)}
+              maxLength={60}
+              placeholder="實際拿到什麼？例如：7-11 100元禮券、泡麵"
+              className="onsite-form-row w-full px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100 transition-shadow"
+            />
+
+            <div className="onsite-form-row">
+              <p className="text-sm font-medium text-gray-700 mb-2">
+                現場要排隊嗎？
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {CROWD_KEYS.map((k) => (
+                  <Chip
+                    key={k}
+                    active={crowd === k}
+                    onClick={() => toggle(crowd, k, setCrowd, "")}
+                  >
+                    {CROWD_LABELS[k].label}
+                  </Chip>
+                ))}
+              </div>
+            </div>
+
+            <div className="onsite-form-row">
+              <p className="text-sm font-medium text-gray-700 mb-2">
+                活動有正常舉辦嗎？
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {STATUS_KEYS.map((k) => (
+                  <Chip
+                    key={k}
+                    active={status === k}
+                    onClick={() => toggle(status, k, setStatus, "")}
+                  >
+                    {STATUS_LABELS[k].label}
+                  </Chip>
+                ))}
+              </div>
+            </div>
+
+            <textarea
+              value={note}
+              onChange={(e) => setNote(e.target.value)}
+              maxLength={300}
+              rows={2}
+              placeholder="補充說明（選填）：停車、護理師、排隊動線……"
+              className="onsite-form-row w-full px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100 transition-shadow resize-none"
+            />
+
+            <div className="onsite-form-row flex items-center gap-2">
+              <input
+                value={nickname}
+                onChange={(e) => setNickname(e.target.value)}
+                maxLength={20}
+                placeholder="暱稱（選填）"
+                className="flex-1 px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 focus:border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-100 transition-shadow"
+              />
+              <input
+                ref={fileRef}
+                type="file"
+                accept="image/*"
+                onChange={handlePhoto}
+                className="hidden"
+              />
+              <button
+                type="button"
+                onClick={() => fileRef.current?.click()}
+                disabled={uploading}
+                className="flex items-center gap-1.5 px-3.5 py-2.5 text-sm rounded-xl border border-gray-200 text-gray-600 hover:border-gray-300 disabled:opacity-50 transition-colors"
+              >
+                {uploading ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Camera className="w-4 h-4" />
+                )}
+                現場照
+              </button>
+            </div>
+
+            {photoUrl && (
+              <div className="onsite-form-row relative w-20 h-20 rounded-xl overflow-hidden border border-gray-200">
+                <Image
+                  src={photoUrl}
+                  alt="預覽"
+                  fill
+                  sizes="80px"
+                  className="object-cover"
+                />
+                <button
+                  type="button"
+                  onClick={() => setPhotoUrl("")}
+                  className="absolute top-0.5 right-0.5 w-5 h-5 bg-black/50 rounded-full flex items-center justify-center"
+                >
+                  <X className="w-3 h-3 text-white" />
+                </button>
+              </div>
+            )}
+
+            {error && <p className="onsite-form-row text-sm text-red-500">{error}</p>}
+
+            <div className="onsite-form-row flex items-center gap-2 pt-1">
+              <button
+                type="button"
+                onClick={submit}
+                disabled={!canSubmit}
+                className="flex-1 flex items-center justify-center gap-1.5 py-3 rounded-xl bg-gray-900 text-white text-sm font-medium hover:bg-gray-800 active:scale-[0.99] disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+              >
+                {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
+                送出回報
+              </button>
+              <button
+                type="button"
+                onClick={() => setOpen(false)}
+                className="px-4 py-3 rounded-xl border border-gray-200 text-sm text-gray-500 hover:bg-gray-50 transition-colors"
+              >
+                取消
+              </button>
+            </div>
+            <p className="onsite-form-row text-xs text-gray-400 text-center">
+              回報即代表同意公開顯示，請勿填寫個資。
+            </p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

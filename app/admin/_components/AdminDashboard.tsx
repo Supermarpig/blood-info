@@ -11,11 +11,13 @@ import {
   Loader2,
   Megaphone,
   DatabaseZap,
+  MapPin,
 } from "lucide-react";
 import ReportsPanel from "./ReportsPanel";
 import WishlistPanel from "./WishlistPanel";
 import AddEventPanel from "./AddEventPanel";
 import AnnouncementPanel from "./AnnouncementPanel";
+import OnsiteReportsPanel from "./OnsiteReportsPanel";
 
 interface Stats {
   reportsPending: number;
@@ -65,15 +67,21 @@ function Badge({ count }: { count?: number }) {
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState<Stats | null>(null);
+  const [onsitePending, setOnsitePending] = useState(0);
   const [loading, setLoading] = useState(true);
   const [clearing, setClearing] = useState(false);
   const [clearMsg, setClearMsg] = useState<string | null>(null);
 
   const loadStats = useCallback(async () => {
     try {
-      const res = await fetch("/api/admin/stats");
-      const data = await res.json();
+      const [statsRes, onsiteRes] = await Promise.all([
+        fetch("/api/admin/stats"),
+        fetch("/api/admin/onsite-reports?moderation=pending"),
+      ]);
+      const data = await statsRes.json();
       if (data.success) setStats(data.data);
+      const onsite = await onsiteRes.json();
+      if (onsite.success) setOnsitePending(onsite.counts?.pending ?? 0);
     } catch {
       // 統計失敗不影響主要功能
     } finally {
@@ -152,11 +160,16 @@ export default function AdminDashboard() {
       </div>
 
       <Tabs defaultValue="reports" className="w-full">
-        <TabsList className="grid w-full grid-cols-4">
+        <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="reports" className="gap-1.5">
             <ClipboardList className="h-4 w-4" />
             回報審核
             <Badge count={stats?.reportsPending} />
+          </TabsTrigger>
+          <TabsTrigger value="onsite" className="gap-1.5">
+            <MapPin className="h-4 w-4" />
+            現場真相
+            <Badge count={onsitePending} />
           </TabsTrigger>
           <TabsTrigger value="wishlist" className="gap-1.5">
             <Lightbulb className="h-4 w-4" />
@@ -175,6 +188,10 @@ export default function AdminDashboard() {
 
         <TabsContent value="reports" className="mt-4">
           <ReportsPanel onChanged={loadStats} />
+        </TabsContent>
+
+        <TabsContent value="onsite" className="mt-4">
+          <OnsiteReportsPanel onChanged={loadStats} />
         </TabsContent>
 
         <TabsContent value="wishlist" className="mt-4">
