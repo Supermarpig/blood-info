@@ -13,7 +13,7 @@
  * 「最新」凍結在 build；client 抓取可保持永遠最新，且不增加 build 對 Mongo 的依賴。
  */
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { MapPin, ChevronRight } from "lucide-react";
@@ -105,8 +105,9 @@ export default function RecentOnsiteReports({
   className?: string;
 }) {
   const ref = useRef<HTMLElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLDivElement>(null);
   const tweenRef = useRef<gsap.core.Tween | null>(null);
+  const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [reports, setReports] = useState<RecentReport[] | null>(null);
 
   useEffect(() => {
@@ -139,23 +140,57 @@ export default function RecentOnsiteReports({
     { dependencies: [reports, variant], scope: ref }
   );
 
-  // marquee：橫向無縫捲動（內容複製一份，xPercent -50 剛好捲一輪）
-  useGSAP(
-    () => {
-      if (variant !== "marquee" || !reports?.length || !trackRef.current) return;
-      const reduce =
-        typeof window !== "undefined" &&
-        window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-      if (reduce) return; // 尊重減少動態偏好：不自動捲，改用可手動橫向捲
-      tweenRef.current = gsap.to(trackRef.current, {
-        xPercent: -50,
-        duration: Math.max(reports.length * 4, 18),
-        ease: "none",
-        repeat: -1,
-      });
-    },
-    { dependencies: [reports, variant], scope: ref, revertOnUpdate: true }
-  );
+  // marquee：自動推進「捲動容器」的 scrollLeft（內容複製一份，捲到一輪寬度就歸零→無縫）。
+  // 這比 transform 動畫更穩：容器本身能手動橫向滑，iOS Safari 一定可用；
+  // 開了「減少動態」就只剩手滑、不自動捲，但永遠不會卡住。
+  const startAuto = useCallback(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
+    const loopW = el.scrollWidth / 2; // 內容複製一份，一輪寬 = 一半
+    if (loopW < el.clientWidth) return; // 內容塞得下就不需要捲
+    tweenRef.current?.kill();
+    let start = el.scrollLeft;
+    if (start >= loopW) {
+      start -= loopW; // 從複製區回到對應的原始位置，續捲不跳
+      el.scrollLeft = start;
+    }
+    const proxy = { v: start };
+    tweenRef.current = gsap.to(proxy, {
+      v: loopW,
+      duration: (loopW - start) / 50, // 約 50px/秒
+      ease: "none",
+      onUpdate: () => {
+        const e = scrollerRef.current;
+        if (e) e.scrollLeft = proxy.v;
+      },
+      onComplete: () => {
+        const e = scrollerRef.current;
+        if (e) e.scrollLeft = 0; // 到一輪寬＝視覺等同 0，瞬間歸零無縫
+        startAuto();
+      },
+    });
+  }, []);
+
+  const pauseAuto = useCallback(() => {
+    tweenRef.current?.kill();
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+  }, []);
+
+  const scheduleResume = useCallback(() => {
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    resumeTimerRef.current = setTimeout(() => startAuto(), 1800);
+  }, [startAuto]);
+
+  useEffect(() => {
+    if (variant !== "marquee" || !reports?.length) return;
+    const t = setTimeout(startAuto, 150); // 等版面與字體就緒再量寬度
+    return () => {
+      clearTimeout(t);
+      tweenRef.current?.kill();
+      if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    };
+  }, [variant, reports, startAuto]);
 
   // 還沒載入或沒有任何回報 → 不顯示整個區塊（避免空box / 版面跳動）
   if (!reports || reports.length === 0) return null;
@@ -166,11 +201,14 @@ export default function RecentOnsiteReports({
       <section ref={ref} className={className}>
         <SectionHeader />
         <div
-          className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
-          onMouseEnter={() => tweenRef.current?.pause()}
-          onMouseLeave={() => tweenRef.current?.resume()}
+          ref={scrollerRef}
+          onMouseEnter={pauseAuto}
+          onMouseLeave={scheduleResume}
+          onTouchStart={pauseAuto}
+          onTouchEnd={scheduleResume}
+          className="overflow-x-auto overscroll-x-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden [-webkit-overflow-scrolling:touch] [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
         >
-          <div ref={trackRef} className="flex w-max gap-3">
+          <div className="flex w-max gap-3">
             {loop.map((r, i) => (
               <Link
                 key={`${r.eventId}-${i}`}
