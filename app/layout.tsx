@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import { BASE_URL } from "@/lib/baseUrl";
 
 const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
@@ -16,11 +17,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
-if (!baseUrl) {
-  throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
-}
+const baseUrl = BASE_URL;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

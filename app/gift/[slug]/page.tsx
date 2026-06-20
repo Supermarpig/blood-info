@@ -8,6 +8,7 @@ import RecentOnsiteReports from "@/components/RecentOnsiteReports";
 import { GIFTS, getGiftBySlug, getAllGiftSlugs, GiftConfig } from "@/lib/giftConfig";
 import { getDonations } from "@/lib/getDonations";
 import AdCard from "@/components/AdCard";
+import { BASE_URL } from "@/lib/baseUrl";
 
 const AD_SLOT_GIFT = process.env.NEXT_PUBLIC_ADSENSE_SLOT_GIFT;
 
@@ -61,7 +62,7 @@ export async function generateMetadata({
     };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
 
   return {
     title: gift.title,
@@ -122,7 +123,7 @@ function filterEventsByGift(
  * Generate JSON-LD for the gift page
  */
 function generateJsonLd(gift: GiftConfig, eventCount: number) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
 
   return [
     {

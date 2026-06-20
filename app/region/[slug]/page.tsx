@@ -11,6 +11,7 @@ import {
   RegionConfig,
 } from "@/lib/regionConfig";
 import { getDonations } from "@/lib/getDonations";
+import { BASE_URL } from "@/lib/baseUrl";
 
 interface DonationEvent {
   id?: string;
@@ -61,7 +62,7 @@ export async function generateMetadata({
     };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
 
   return {
     title: region.title,
@@ -121,7 +122,7 @@ function filterEventsByRegion(
  * Generate JSON-LD for the region page
  */
 function generateJsonLd(region: RegionConfig, eventCount: number) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
 
   return [
     {

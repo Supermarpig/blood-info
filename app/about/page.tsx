@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import Link from "@/components/Link";
 import { ChevronRight, Heart, Mail } from "lucide-react";
+import { BASE_URL } from "@/lib/baseUrl";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const baseUrl = BASE_URL;
 
 export const metadata: Metadata = {
   title: "關於我們 | 台灣捐血活動查詢",

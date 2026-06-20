@@ -11,6 +11,7 @@ import {
   OrgConfig,
 } from "@/lib/organizationConfig";
 import { getDonations } from "@/lib/getDonations";
+import { BASE_URL } from "@/lib/baseUrl";
 
 const AD_SLOT_CITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
 
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const org = getOrgBySlug(slug);
   if (!org) return { title: "找不到此單位" };
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
   return {
     title: org.title,
     description: org.description,
@@ -80,7 +81,7 @@ function filterEventsByOrg(
 }
 
 function generateJsonLd(org: OrgConfig, eventCount: number) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
   return [
     {
       "@context": "https://schema.org",

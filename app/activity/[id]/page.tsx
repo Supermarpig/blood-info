@@ -16,6 +16,7 @@ import { ActivityImages } from "./ActivityImages";
 import AdCard from "@/components/AdCard";
 import OnsiteReport from "@/components/OnsiteReport";
 import { taiwanToday } from "@/lib/twDate";
+import { BASE_URL } from "@/lib/baseUrl";
 
 const AD_SLOT_ACTIVITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
 const AD_SLOT_SIDEBAR = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
@@ -94,7 +95,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { event } = await getDayData(id);
   if (!event) return { title: "找不到此活動" };
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
   const tagHint = event.tags?.length ? `，捐血贈品：${event.tags.join("、")}` : "";
   const title = `${event.activityDate} ${event.organization}捐血活動｜${event.location}捐血贈品查詢`;
   const description = `${event.activityDate} ${event.organization} 捐血活動，地點：${event.location}，時間：${event.time}${tagHint}。查詢附近捐血車、捐血站出車資訊。`;
@@ -167,7 +168,7 @@ export default async function ActivityPage({ params }: PageProps) {
 
   const images = event.pttData?.images || event.reportData?.images || [];
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
   const pageUrl = `${baseUrl}/activity/${id}`;
 
   const breadcrumbItems: Array<{ "@type": string; position: number; name: string; item: string }> = [

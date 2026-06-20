@@ -6,18 +6,10 @@ import { ChevronRight } from "lucide-react";
 import { getNewsBySlug, getAllNewsSlugs, getAllNews } from "@/lib/newsUtils";
 import AdCard from "@/components/AdCard";
 import { GUIDE_SLUG } from "@/components/GuideCallout";
+import { BASE_URL, SITE_HOST } from "@/lib/baseUrl";
 
 const AD_SLOT_NEWS = process.env.NEXT_PUBLIC_ADSENSE_SLOT_NEWS;
 const AD_SLOT_SIDEBAR = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
-
-// 本站網域（由 NEXT_PUBLIC_BASE_URL 推導，不寫死網址），用來判斷站內 / 站外連結
-const SITE_HOST = (() => {
-  try {
-    return new URL(process.env.NEXT_PUBLIC_BASE_URL ?? "").host.replace(/^www\./, "");
-  } catch {
-    return "";
-  }
-})();
 
 // 自動把內文中出現的網址轉成可點擊連結：站內網址走 client-side 導航，站外網址開新分頁
 function renderContent(content: string) {
@@ -71,7 +63,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!article) return { title: "找不到文章" };
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
 
   const keywords = article.sections.map((s) => s.heading);
 
@@ -107,7 +99,7 @@ export default async function NewsArticlePage({ params }: PageProps) {
 
   if (!article) notFound();
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
 
   const author = article.author ?? "血荒資訊編輯部";
 

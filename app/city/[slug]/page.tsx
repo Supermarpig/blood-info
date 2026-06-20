@@ -10,6 +10,7 @@ import AdCard from "@/components/AdCard";
 import GuideCallout from "@/components/GuideCallout";
 import CityGiftHighlight from "@/components/CityGiftHighlight";
 import RecentOnsiteReports from "@/components/RecentOnsiteReports";
+import { BASE_URL } from "@/lib/baseUrl";
 
 const AD_SLOT_CITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
 
@@ -54,7 +55,7 @@ export async function generateMetadata({
     return { title: "找不到此城市" };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
 
   return {
     title: city.title,
@@ -110,7 +111,7 @@ function filterEventsByCity(
 }
 
 function generateJsonLd(city: CityConfig, eventCount: number) {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
 
   return [
     {

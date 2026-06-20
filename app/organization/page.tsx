@@ -2,8 +2,9 @@ import { Metadata } from "next";
 import Link from "@/components/Link";
 import { ChevronRight } from "lucide-react";
 import { ORGANIZATIONS } from "@/lib/organizationConfig";
+import { BASE_URL } from "@/lib/baseUrl";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const baseUrl = BASE_URL;
 
 export const metadata: Metadata = {
   title: "主辦單位捐血活動查詢｜獅子會、慈善團體、企業贊助捐血",
