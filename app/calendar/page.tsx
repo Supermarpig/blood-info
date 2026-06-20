@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import CalendarClient from "./CalendarClient";
 import { getDonations } from "@/lib/getDonations";
+import { BASE_URL } from "@/lib/baseUrl";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const baseUrl = BASE_URL;
 
 export const revalidate = 86400;
 

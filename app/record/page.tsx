@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import RecordClient from "./RecordClient";
+import { BASE_URL } from "@/lib/baseUrl";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const baseUrl = BASE_URL;
 
 export const metadata: Metadata = {
   title: "捐血紀錄本｜記錄每次捐血、計算下次可捐日期",

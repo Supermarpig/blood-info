@@ -7,6 +7,7 @@ import { getAllCitySlugs } from "@/lib/cityConfig";
 import { getAllOrgSlugs } from "@/lib/organizationConfig";
 import { getAllNews } from "@/lib/newsUtils";
 import { eventShortId } from "@/lib/eventId";
+import { BASE_URL } from "@/lib/baseUrl";
 
 interface DonationEvent {
   id?: string;
@@ -57,10 +58,7 @@ async function getActivitySitemapEntries(
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  if (!baseUrl) {
-    throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
-  }
+  const baseUrl = BASE_URL;
 
   const regionSlugs = getAllRegionSlugs();
   const giftSlugs = getAllGiftSlugs();

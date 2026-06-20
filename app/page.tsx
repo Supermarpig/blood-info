@@ -13,6 +13,7 @@ import FaqSection from "@/components/FaqSection";
 import InternalLinks from "@/components/InternalLinks";
 import RecentOnsiteReports from "@/components/RecentOnsiteReports";
 import { getDonations } from "@/lib/getDonations";
+import { BASE_URL } from "@/lib/baseUrl";
 
 // 首頁完全靜態化（build 時預渲染，由 ASSETS 直接送出，worker 不在 runtime 重 render）。
 // 活動資料每天 07:40 才更新一次（GitHub Actions PR 觸發重新部署），所以不需要 runtime ISR；
@@ -108,10 +109,7 @@ export default async function BloodDonationPage() {
 
   // 生成 JSON-LD
   // 1. WebSite Schema
-  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  if (!siteUrl) {
-    throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
-  }
+  const siteUrl = BASE_URL;
   const websiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",

@@ -1,7 +1,8 @@
 import { getAllNews } from "@/lib/newsUtils";
+import { BASE_URL } from "@/lib/baseUrl";
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.bloodtw.com";
+  const baseUrl = BASE_URL;
   const articles = getAllNews().slice(0, 20);
 
   const items = articles

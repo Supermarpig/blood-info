@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ChevronRight, Newspaper } from "lucide-react";
 import { getAllNews } from "@/lib/newsUtils";
 import AdCard from "@/components/AdCard";
+import { BASE_URL } from "@/lib/baseUrl";
 
 const AD_SLOT_NEWS = process.env.NEXT_PUBLIC_ADSENSE_SLOT_NEWS;
 const AD_SLOT_SIDEBAR = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
@@ -14,19 +15,19 @@ export const metadata: Metadata = {
     "台灣捐血最新新聞與公告：血庫庫存動態、捐血活動特別主題、捐血政策更新等，掌握最新捐血資訊。",
   keywords: ["捐血新聞", "捐血公告", "血庫庫存", "捐血活動消息", "台灣捐血最新"],
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/news`,
+    canonical: `${BASE_URL}/news`,
   },
   openGraph: {
     title: "捐血最新消息 | 台灣捐血活動查詢",
     description:
       "台灣捐血最新新聞與公告：血庫庫存動態、捐血活動特別主題、捐血政策更新等，掌握最新捐血資訊。",
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/news`,
+    url: `${BASE_URL}/news`,
     siteName: "台灣捐血活動查詢",
     locale: "zh_TW",
     type: "website",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/imgs/og-img.webp`,
+        url: `${BASE_URL}/imgs/og-img.webp`,
         width: 1200,
         height: 630,
         alt: "捐血最新消息",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function NewsPage() {
   const articles = getAllNews();
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",

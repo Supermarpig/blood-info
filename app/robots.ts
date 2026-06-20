@@ -1,11 +1,8 @@
 import { MetadataRoute } from "next";
+import { BASE_URL } from "@/lib/baseUrl";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
-  if (!baseUrl) {
-    throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
-  }
+  const baseUrl = BASE_URL;
 
   return {
     rules: {

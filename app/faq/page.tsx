@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "@/components/Link";
 import { ChevronRight, HelpCircle, ListOrdered } from "lucide-react";
 import { FAQ_DATA } from "@/data/faq";
+import { BASE_URL } from "@/lib/baseUrl";
 
 const HOW_TO_STEPS = [
   {
@@ -30,7 +31,6 @@ const HOW_TO_STEPS = [
   },
 ];
 
-
 export const metadata: Metadata = {
   title: "捐血常見問題 FAQ | 台灣捐血活動查詢",
   description:
@@ -50,18 +50,18 @@ export const metadata: Metadata = {
     "捐血需要預約嗎",
   ],
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/faq`,
+    canonical: `${BASE_URL}/faq`,
   },
   openGraph: {
     title: "捐血常見問題 FAQ | 台灣捐血活動查詢",
     description: "捐血常見問題解答，完整捐血 FAQ 一次了解。",
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/faq`,
+    url: `${BASE_URL}/faq`,
     siteName: "台灣捐血活動查詢",
     locale: "zh_TW",
     type: "website",
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/imgs/og-img.webp`,
+        url: `${BASE_URL}/imgs/og-img.webp`,
         width: 1200,
         height: 630,
         alt: "捐血常見問題 FAQ",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
 };
 
 function generateHowToJsonLd() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
   return {
     "@context": "https://schema.org",
     "@type": "HowTo",
@@ -93,7 +93,7 @@ function generateHowToJsonLd() {
  * Generate FAQ Schema for Google Rich Results
  */
 function generateFaqJsonLd() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const baseUrl = BASE_URL;
 
   return [
     {

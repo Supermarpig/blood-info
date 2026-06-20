@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import { getDonations } from "@/lib/getDonations";
+import { BASE_URL } from "@/lib/baseUrl";
 
 interface DonationEvent {
   id?: string;
@@ -28,7 +29,7 @@ interface DonationEvent {
   };
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+const baseUrl = BASE_URL;
 
 export const metadata: Metadata = {
   title: "近期捐血活動｜未來 7 天全台捐血行程查詢",
