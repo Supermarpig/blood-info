@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { ArrowRight } from "lucide-react";
+import Link from "@/components/Link";
 import { REGIONS } from "@/lib/regionConfig";
 import { fetchInventory } from "@/lib/staticData";
 import gsap from "gsap";
@@ -291,6 +292,16 @@ export default function BloodInventoryPanel({
             ))}
           </div>
         </div>
+
+        {/* 連到完整缺血看板 */}
+        <Link
+          prefetch={false}
+          href="/blood-shortage"
+          className="flex items-center justify-center gap-1 text-[11px] font-medium text-gray-500 hover:text-gray-800 transition-colors"
+        >
+          看全台血液庫存與缺血說明
+          <ArrowRight className="w-3 h-3" />
+        </Link>
       </div>
     </div>
   );
