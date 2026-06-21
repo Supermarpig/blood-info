@@ -12,6 +12,9 @@ export default function Footer() {
             <Link prefetch={false} href="/search" className="hover:text-gray-800 transition-colors">
               搜尋活動
             </Link>
+            <Link prefetch={false} href="/blood-shortage" className="hover:text-gray-800 transition-colors">
+              血液庫存
+            </Link>
             <Link prefetch={false} href="/record" className="hover:text-gray-800 transition-colors">
               紀錄本
             </Link>
