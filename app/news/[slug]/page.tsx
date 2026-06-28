@@ -67,6 +67,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const keywords = article.sections.map((s) => s.heading);
 
+  // 原創品牌化 OG 圖（取代重複的罐頭 stock，利於 Google Discover）
+  const ogImage = `${baseUrl}/api/og/news/${slug}`;
+
   return {
     title: article.title,
     description: article.summary,
@@ -78,7 +81,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: article.title,
       description: article.summary,
       url: `${baseUrl}/news/${slug}`,
-      images: [{ url: article.imageUrl, alt: article.imageAlt }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: article.title }],
       type: "article",
       publishedTime: article.date,
       authors: [article.author ?? "血荒資訊編輯部"],
@@ -88,7 +91,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: article.title,
       description: article.summary,
-      images: [article.imageUrl],
+      images: [ogImage],
     },
   };
 }
@@ -117,7 +120,7 @@ export default async function NewsArticlePage({ params }: PageProps) {
     description: article.summary,
     datePublished: article.date,
     dateModified: article.date,
-    image: article.imageUrl,
+    image: `${baseUrl}/api/og/news/${article.slug}`,
     url: `${baseUrl}/news/${article.slug}`,
     author: {
       "@type": "Organization",
