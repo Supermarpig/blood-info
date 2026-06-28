@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
 import GuideCallout from "@/components/GuideCallout";
+import RegionShortageStrip from "@/components/RegionShortageStrip";
 import {
   getRegionBySlug,
   getAllRegionSlugs,
@@ -224,6 +225,12 @@ export default async function RegionPage({ params }: PageProps) {
         <AddDonationEventModal />
       </div>
       <p className="text-sm text-gray-500 mb-6">{region.intro}</p>
+
+      {/* 本區即時血液庫存 → 內鏈缺血看板，並為頁面帶來每日新鮮內容 */}
+      <RegionShortageStrip
+        centerFilter={region.centerFilter}
+        displayName={region.displayName}
+      />
 
       {/* Event list with region navigation */}
       <SearchableDonationList data={data} currentRegionSlug={slug} />
