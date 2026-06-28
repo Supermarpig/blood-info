@@ -127,6 +127,12 @@ export default async function NewsArticlePage({ params }: PageProps) {
       "@type": "Organization",
       name: "台灣捐血活動查詢",
       url: baseUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: `${baseUrl}/icons/icon-512.png`,
+        width: 512,
+        height: 512,
+      },
     },
     speakable: {
       "@type": "SpeakableSpecification",
