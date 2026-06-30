@@ -21163,7 +21163,14 @@
       "coordinates": {
         "lat": 25.0637253,
         "lng": 121.6567136
-      }
+      },
+      "pttData": {
+        "rawLine": "6/29-7/10(一-五)新北汐止捐血室",
+        "images": [
+          "https://i.imgur.com/CdMLhg6.jpeg"
+        ]
+      },
+      "tags": []
     },
     {
       "id": "5paw56u5LTIwMjYvMDYvMjktMDk6MDB+MTY6MDAt5pWR5ZyL5ZyY5qWK5qKF5Y2A5ZyY5aeU5pyD",
@@ -21425,6 +21432,23 @@
         "lat": 22.6109204,
         "lng": 120.3171752
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMjktNi8yOS03LzMo5LiALeS6lCnmlrDljJfmlrDlupfmjZDooYDlrqQv5paw6I6K6Jmf5o2Q6KGA6LuK77yM5o2Q5YWo6KGA5Y+K5YiG6Zui6KGT6YCB5L+d6aSK5ZOB",
+      "time": "",
+      "organization": "新北新店捐血室/新莊號捐血車，捐全血及分離術送保養品",
+      "location": "新北新店捐血室/新莊號捐血車，捐全血及分離術送保養品",
+      "activityDate": "2026-06-29",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "6/29-7/3(一-五)新北新店捐血室/新莊號捐血車，捐全血及分離術送保養品",
+        "images": [
+          "https://i.imgur.com/8LsELvQ.jpeg"
+        ]
+      },
+      "isPttOnly": true
     }
   ],
   "2026-06-30": [
@@ -21742,6 +21766,30 @@
         "lat": 22.4610393,
         "lng": 120.4934096
       }
+    },
+    {
+      "id": "cHR0LTIwMjYtMDYtMzAtNi8zMC03LzMo5LqMLeS6lCnlj7DljJfpl5zmuKHmjZDooYDlrqQv5bOo5bWL6Jmf5o2Q6KGA6LuK77yM5o2Q5YWo6KGA5Y+K5YiG6Zui6KGT6YCB5L+d6aSK5ZOB",
+      "time": "",
+      "organization": "台北關渡捐血室/峨嵋號捐血車，捐全血及分離術送保養品",
+      "location": "台北關渡捐血室/峨嵋號捐血車，捐全血及分離術送保養品",
+      "activityDate": "2026-06-30",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "6/30-7/3(二-五)台北關渡捐血室/峨嵋號捐血車，捐全血及分離術送保養品",
+        "images": [
+          "https://i.imgur.com/8LsELvQ.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/8LsELvQ.jpeg",
+            "text": "時 失 電 間宮 誤\n0 2\n二\n、 靖 誠 后 全\n2 閃 返 优\n[2\n2 閃 返 您 / 嗚\n+ 炎 6/29 ~7/3 # 箇\n{過 一 ~ 週 五 厂 定 』\n把 可 獲得 嫂 洛 媚 絲 公益 好 禮 。 全 合\n以 人 次 加 贈 , 公 箇 及 分 離 術 炙 凜\n鹼 束 以 現場 芳 主 熏 品 數 曙 有 限 / 送 完 為 目\n生 一 但 0\n# 區 上 丰 ~ 關 渡 捐血 室\n2 。” 7 崴 咭 號 捐血 還\n9 一 仿 - / 新 店 捐血\n。 / 室\n/ 呈 劑 0 甩 / 。 新 註 號 扣 血 車\noo 全\n.\" 和 床 婦 合作 守護 健康 今\n2 立即 參與 捐血 一 起 守護 健康 說\n",
+            "confidence": 38
+          }
+        ]
+      },
+      "isPttOnly": true
     }
   ]
 }
