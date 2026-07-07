@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026年07月06日 07時31分",
+  "updatedAt": "2026年07月07日 07時31分",
   "centers": [
     {
       "name": "台北",
       "bloodTypes": {
-        "A": "normal",
+        "A": "low",
         "B": "normal",
-        "O": "normal",
-        "AB": "normal"
+        "O": "low",
+        "AB": "low"
       }
     },
     {
@@ -15,7 +15,7 @@
       "bloodTypes": {
         "A": "normal",
         "B": "normal",
-        "O": "normal",
+        "O": "low",
         "AB": "normal"
       }
     },
@@ -31,7 +31,7 @@
     {
       "name": "高雄",
       "bloodTypes": {
-        "A": "normal",
+        "A": "low",
         "B": "normal",
         "O": "low",
         "AB": "low"
