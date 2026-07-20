@@ -190,7 +190,13 @@ async function main() {
   const highlights = pickHighlights(regionEvents);
 
   const caption = buildCaption({ region, regionEvents, highlights, dateStr, weekday });
-  const imageUrl = `${BASE_URL}/api/og/threads?region=${region.slug}&date=${dateStr}`;
+  const imageParams = new URLSearchParams({
+    region: region.slug,
+    date: dateStr,
+    count: String(regionEvents.length),
+    area: region.areaNote,
+  });
+  const imageUrl = `${BASE_URL}/api/og/threads?${imageParams.toString()}`;
 
   console.log(`[postToThreads] 今天推薦轄區：${region.displayName}（共 ${regionEvents.length} 場活動）`);
   console.log(`[postToThreads] 貼文內容預覽：\n${caption}`);

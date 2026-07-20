@@ -6,25 +6,35 @@ export const runtime = "nodejs";
 
 const SITE = "bloodtw.com";
 const TAGLINE = "全台捐血活動・血液庫存即時查詢";
-const HEADLINE = "今日全台捐血地點推薦";
+const HEADLINE = "今日捐血地點推薦";
 
 /**
- * 給 scripts/postToThreads.js 用的每日社群貼文配圖。
+ * 給 scripts/postToThreads.js 用的每日社群貼文配圖（1080×1080）。
  *
- * 刻意只吃 region + date 兩個查詢參數（不帶當日活動明細），這樣圖片內容
- * 只取決於「哪個轄區、哪一天」，跟 /data 底下的資料檔是否已部署完全無關——
- * 排程貼文腳本可以在剛爬完當天資料、PR 都還沒 merge 的當下就直接產文，
- * 這張圖仍然會是對的。實際活動明細放在貼文文字內容，不放圖上。
+ * 這支 route 本身「不讀」/data 資料檔——它只把收到的查詢參數畫出來，
+ * 所以圖片內容跟資料檔是否已部署完全無關。發文腳本手上有當日資料，
+ * 就把場次數（count）、涵蓋縣市（area）當參數帶進來，讓圖片有實際資訊；
+ * 沒帶時也能正常降級（只顯示轄區）。
+ *
+ * 參數：
+ * - region：轄區 slug（north / hsinchu / central / south）
+ * - date：YYYY-MM-DD
+ * - count：當日該轄區場次數（選填）
+ * - area：涵蓋縣市字串，例如「高雄、台南、嘉義、屏東」（選填）
  */
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const regionSlug = searchParams.get("region") ?? "";
   const date = searchParams.get("date") ?? "";
+  const count = searchParams.get("count") ?? "";
+  const area = (searchParams.get("area") ?? "").replace(/[、,]/g, "・");
 
   const region = getRegionBySlug(regionSlug);
-  const regionLabel = region ? `${region.displayName}` : "全台";
+  const regionLabel = region ? region.displayName : "全台";
 
-  const font = await loadTcFont(`${HEADLINE}${SITE}${TAGLINE}${regionLabel}${date}捐血資訊`);
+  const font = await loadTcFont(
+    `${HEADLINE}${SITE}${TAGLINE}${regionLabel}${date}${count}${area}場捐血活動今日進行中查看完整地點`
+  );
 
   return new ImageResponse(
     (
@@ -55,37 +65,74 @@ export async function GET(req: Request) {
           </div>
         </div>
 
-        {/* 主標題（左側紅色強調條） */}
+        {/* 主內容（垂直置中、左側紅色強調條） */}
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: "28px",
+            gap: "24px",
             borderLeft: "10px solid #ef4444",
-            paddingLeft: "36px",
+            paddingLeft: "40px",
           }}
         >
           <div
             style={{
-              fontSize: "72px",
+              display: "flex",
+              fontSize: "58px",
               fontWeight: 700,
               color: "#111827",
-              lineHeight: 1.3,
-              display: "flex",
+              lineHeight: 1.2,
             }}
           >
             {HEADLINE}
           </div>
+
           <div
             style={{
-              fontSize: "48px",
+              display: "flex",
+              fontSize: "112px",
               fontWeight: 700,
               color: "#ef4444",
-              display: "flex",
+              lineHeight: 1.1,
             }}
           >
             {regionLabel}
           </div>
+
+          {area ? (
+            <div style={{ display: "flex", fontSize: "38px", color: "#4b5563" }}>
+              {area}
+            </div>
+          ) : (
+            <div style={{ display: "flex" }} />
+          )}
+
+          {count ? (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                gap: "16px",
+                marginTop: "16px",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  fontSize: "72px",
+                  fontWeight: 700,
+                  color: "#111827",
+                }}
+              >
+                {count}
+              </div>
+              <div style={{ display: "flex", fontSize: "40px", color: "#4b5563" }}>
+                場捐血活動今日進行中
+              </div>
+            </div>
+          ) : (
+            <div style={{ display: "flex" }} />
+          )}
         </div>
 
         {/* 頁尾：標語 + 日期 */}
@@ -110,7 +157,7 @@ export async function GET(req: Request) {
         ? [{ name: "Noto Sans TC", data: font, weight: 700 as const, style: "normal" as const }]
         : undefined,
       headers: {
-        // 每張圖對應固定的 region+date，內容不會變，可以放心長快取。
+        // 圖片內容由 region+date(+count+area) 決定，可放心長快取。
         "Cache-Control": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800",
       },
     }
