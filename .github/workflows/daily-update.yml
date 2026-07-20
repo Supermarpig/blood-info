@@ -35,6 +35,16 @@ jobs:
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
 
+      # 用這次 checkout 剛爬到的 /data 內容直接組貼文，不等下面的 PR merge、
+      # 不等站台重新部署。沒設定 THREADS_* secrets 時腳本會自動跳過。
+      # continue-on-error：社群發文是錦上添花，失敗不該讓資料更新 workflow 變紅字。
+      - name: Post today's recommendation to Threads
+        continue-on-error: true
+        run: node scripts/postToThreads.js
+        env:
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
         with:
