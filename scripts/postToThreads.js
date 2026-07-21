@@ -35,8 +35,37 @@ const REGIONS = [
   { slug: "south", displayName: "南區", centerFilter: "高雄", areaNote: "高雄、台南、嘉義、屏東" },
 ];
 
-// 贈品吸引力排序（越前面越好康）。
+// 贈品吸引力排序（粗分類，備援用，越前面越好康）。
 const GIFT_RANK = ["電影票", "禮券", "超商", "餐飲", "生活用品", "食品"];
+
+// CP 值細項評分。⚠️ 必須與 lib/cpScore.ts 的 CP_SCORES 完全一致——這是網頁「今日最強」
+// 的判斷標準，Threads 要挑到跟網頁同一場，就得用同一份分數。
+const CP_SCORES = {
+  "食品－龍蝦": 5, "餐飲－牛排": 5, "電影票－IMAX": 5,
+  "食品－烤雞": 4, "電影票－威秀": 4, "電影票－國賓": 4, "電影票－秀泰": 4,
+  "電影票－美麗華": 4, "電影票－in89": 4, "電影票－喜滿客": 4, "電影票－京站": 4,
+  "禮券－百貨": 4,
+  "食品－雞腿": 3, "禮券－金聯": 3, "禮券－全聯": 3, "禮券－家樂福": 3,
+  "超商－7-11": 3, "超商－全家": 3, "超商－萊爾富": 3, "超商－OK": 3,
+  "超商－全聯": 3, "超商－家樂福": 3, "餐飲－星巴克": 3, "餐飲－路易莎": 3,
+  "超商－美廉社": 2, "餐飲－麥當勞": 2, "餐飲－肯德基": 2, "餐飲－摩斯": 2,
+  "餐飲－咖啡": 2, "餐飲－便當": 2, "餐飲－早餐": 2, "食品－米": 2, "食品－蛋": 2,
+  "食品－蛋糕": 2, "食品－麵包": 2, "生活用品－保溫杯": 2, "生活用品－雨傘": 2,
+  "餐飲－飲料": 1, "食品－泡麵": 1, "食品－餅乾": 1, "食品－零食": 1,
+  "生活用品－衛生紙": 1, "生活用品－毛巾": 1, "生活用品－購物袋": 1, "生活用品－餐具": 1,
+};
+
+/** 一場活動的 CP 分數＝所有 subTags 取最高分（對齊 lib/cpScore.ts 的 getEventCpScore）。 */
+function cpScore(subTags) {
+  if (!subTags || !subTags.length) return 0;
+  return Math.max(...subTags.map((t) => CP_SCORES[t] ?? 1));
+}
+
+/** 最高分的細項贈品（對齊 lib/cpScore.ts 的 getTopSubTag），例："食品－米"。 */
+function topSubTag(subTags) {
+  if (!subTags || !subTags.length) return null;
+  return subTags.reduce((best, t) => ((CP_SCORES[t] ?? 0) > (CP_SCORES[best] ?? 0) ? t : best));
+}
 
 // 每日輪替的開場白（避免天天同一句），用「一年第幾天 % 長度」挑，相鄰兩天一定不同。
 const HOOKS = [
@@ -127,25 +156,38 @@ function bestGiftIndex(event) {
   return idxs.length ? Math.min(...idxs) : Infinity;
 }
 
-/** 從今天活動中挑「有贈品 + 有海報圖」且最好康的一場（挑不到回 null）。 */
+/**
+ * 從今天活動中挑「有海報圖」且最好康的一場（挑不到回 null）。
+ * 好康程度與網頁「今日最強」一致：優先用 CP 分數（subTags），挑最高分那場。
+ */
 function pickGiftEvent(events) {
-  const candidates = events.filter(
-    (e) =>
-      Array.isArray(e.tags) &&
-      e.tags.some((t) => GIFT_RANK.includes(t)) &&
-      e.pttData &&
-      Array.isArray(e.pttData.images) &&
-      e.pttData.images.length > 0
+  const withImage = events.filter(
+    (e) => e.pttData && Array.isArray(e.pttData.images) && e.pttData.images.length > 0
   );
-  if (candidates.length === 0) return null;
+  if (withImage.length === 0) return null;
 
-  candidates.sort((a, b) => {
-    const d = bestGiftIndex(a) - bestGiftIndex(b);
-    if (d !== 0) return d;
-    // 同名次時，贈品項目較多的（tags 多）通常整體好康度更高，排前面
-    return (b.tags?.length || 0) - (a.tags?.length || 0);
-  });
-  return candidates[0];
+  // 主：對齊網頁——用 CP 分數（subTags）挑最高分（同分時 subTags 多的排前面）
+  const scored = withImage
+    .map((e) => ({ e, score: cpScore(e.subTags) }))
+    .filter((x) => x.score > 0);
+  if (scored.length) {
+    scored.sort(
+      (a, b) => b.score - a.score || (b.e.subTags?.length || 0) - (a.e.subTags?.length || 0)
+    );
+    return scored[0].e;
+  }
+
+  // 備援：今天沒有任何有 CP 細項評分的場次，退用粗分類排序（仍然有真實海報可用）
+  const coarse = withImage.filter(
+    (e) => Array.isArray(e.tags) && e.tags.some((t) => GIFT_RANK.includes(t))
+  );
+  if (coarse.length) {
+    coarse.sort(
+      (a, b) => bestGiftIndex(a) - bestGiftIndex(b) || (b.tags?.length || 0) - (a.tags?.length || 0)
+    );
+    return coarse[0];
+  }
+  return null;
 }
 
 /** 確認圖片網址目前抓得到（Threads 會去抓，抓不到就整篇失敗，所以先驗證）。 */
@@ -162,9 +204,22 @@ async function isImageReachable(url) {
 }
 
 function buildGiftCaption({ event, hook, dateStr, weekday }) {
-  const knownGifts = (event.tags || []).filter((t) => GIFT_RANK.includes(t));
-  const best = GIFT_RANK[bestGiftIndex(event)];
-  const giftList = knownGifts.join("、");
+  const top = topSubTag(event.subTags); // 例："食品－米"
+  const coarse = (event.tags || []).filter((t) => GIFT_RANK.includes(t));
+
+  let giftLine;
+  let hashGift;
+  if (top) {
+    const item = top.split("－")[1] || top; // 取細項名，如「米」
+    giftLine = `今日最強贈品：${item} 等好禮（完整內容見圖）`;
+    hashGift = "捐血好康";
+  } else if (coarse.length) {
+    giftLine = `今日贈品：${coarse.join("、")}（完整內容見圖）`;
+    hashGift = `捐血送${GIFT_RANK[bestGiftIndex(event)]}`;
+  } else {
+    giftLine = "今日贈品：完整內容見圖";
+    hashGift = "捐血好康";
+  }
 
   const lines = [];
   lines.push(hook);
@@ -173,12 +228,12 @@ function buildGiftCaption({ event, hook, dateStr, weekday }) {
   lines.push(event.location);
   lines.push(`${dateStr}（週${weekday}）· ${event.time}`);
   lines.push("");
-  lines.push(`今日贈品：${giftList}（完整內容見圖）`);
+  lines.push(giftLine);
   lines.push("");
   lines.push("活動詳情與地圖：");
   lines.push(activityUrl(event));
   lines.push("");
-  lines.push(`#捐血 #捐血送${best} #台灣捐血`);
+  lines.push(`#捐血 #${hashGift} #台灣捐血`);
   return lines.join("\n");
 }
 
