@@ -103,23 +103,8 @@ const HOOKS = [
 
 const WEEKDAY_LABELS = ["日", "一", "二", "三", "四", "五", "六"];
 
-/**
- * 由活動 id 產生活動詳情頁短碼：djb2 hash → base36 補零 6 碼。
- * ⚠️ 必須與 lib/eventId.ts 的 eventShortId 保持一致，否則組出的 /activity URL 會 404。
- */
-function eventShortId(id) {
-  let hash = 5381;
-  for (let i = 0; i < id.length; i++) {
-    hash = ((hash << 5) + hash) + id.charCodeAt(i);
-    hash = hash >>> 0;
-  }
-  return hash.toString(36).padStart(6, "0");
-}
-
-/** 活動詳情頁完整網址：/activity/{activityDate}-{eventShortId(id)} */
-function activityUrl(event) {
-  return `${BASE_URL}/activity/${event.activityDate}-${eventShortId(event.id)}`;
-}
+// 貼文 CTA 導到首頁聚合頁（全台今日好康 + 附近 + 即時血量），這是單張海報給不了的價值。
+const SITE_CTA_URL = `${BASE_URL}/?ref=threads`;
 
 /** 取得台灣時區（UTC+8，無日光節約）的今天日期字串與相關欄位。 */
 function getTaipeiToday() {
@@ -203,7 +188,7 @@ async function isImageReachable(url) {
   }
 }
 
-function buildGiftCaption({ event, hook, dateStr, weekday }) {
+function buildGiftCaption({ event, hook, spotCount, dateStr, weekday }) {
   const top = topSubTag(event.subTags); // 例："食品－米"
   const coarse = (event.tags || []).filter((t) => GIFT_RANK.includes(t));
 
@@ -230,8 +215,10 @@ function buildGiftCaption({ event, hook, dateStr, weekday }) {
   lines.push("");
   lines.push(giftLine);
   lines.push("");
-  lines.push("活動詳情與地圖：");
-  lines.push(activityUrl(event));
+  // CTA：只有網站有的價值——不是重複這張海報，而是「全台今天所有好康 + 附近 + 即時血量」
+  lines.push(`這只是今天最強的一場。全台今天有 ${spotCount} 處捐血地點，`);
+  lines.push("哪裡有好康、你附近的、血量夠不夠，一次查 👇");
+  lines.push(SITE_CTA_URL);
   lines.push("");
   lines.push(`#捐血 #${hashGift} #台灣捐血`);
   return lines.join("\n");
@@ -353,7 +340,13 @@ async function planPost(events, meta) {
     if (await isImageReachable(imageUrl)) {
       return {
         kind: "gift",
-        caption: buildGiftCaption({ event: giftEvent, hook, dateStr, weekday }),
+        caption: buildGiftCaption({
+          event: giftEvent,
+          hook,
+          spotCount: events.length,
+          dateStr,
+          weekday,
+        }),
         imageUrl,
       };
     }
