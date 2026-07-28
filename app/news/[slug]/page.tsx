@@ -12,7 +12,7 @@ const AD_SLOT_NEWS = process.env.NEXT_PUBLIC_ADSENSE_SLOT_NEWS;
 const AD_SLOT_SIDEBAR = process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR;
 
 // 自動把內文中出現的網址轉成可點擊連結：站內網址走 client-side 導航，站外網址開新分頁
-function renderContent(content: string) {
+function linkify(content: string, keyPrefix: string) {
   const parts = content.split(/(https?:\/\/[\w./?#=&%~:@+-]+|www\.[\w./?#=&%~:@+-]+)/g);
   return parts.map((part, i) => {
     if (!/^(https?:\/\/|www\.)/.test(part)) return part;
@@ -29,7 +29,7 @@ function renderContent(content: string) {
 
     return isInternal ? (
       <Link
-        key={i}
+        key={`${keyPrefix}-${i}`}
         href={`${url.pathname}${url.search}${url.hash}`}
         className="text-red-600 hover:underline"
       >
@@ -37,7 +37,7 @@ function renderContent(content: string) {
       </Link>
     ) : (
       <a
-        key={i}
+        key={`${keyPrefix}-${i}`}
         href={href}
         target="_blank"
         rel="noopener noreferrer"
@@ -47,6 +47,36 @@ function renderContent(content: string) {
       </a>
     );
   });
+}
+
+// 內文的 **粗體** 標記轉成 <strong>；其餘文字仍走 linkify
+function renderInline(text: string, keyPrefix: string) {
+  return text.split(/(\*\*[^*\n]+\*\*)/g).flatMap((seg, i) => {
+    if (/^\*\*[^*\n]+\*\*$/.test(seg)) {
+      return [
+        <strong key={`${keyPrefix}-b${i}`} className="font-semibold text-gray-900">
+          {linkify(seg.slice(2, -2), `${keyPrefix}-b${i}`)}
+        </strong>,
+      ];
+    }
+    return linkify(seg, `${keyPrefix}-t${i}`);
+  });
+}
+
+/**
+ * 文章內文以空行分段。JSON 內文用 \n\n 表示換段、**text** 表示強調，
+ * 這裡把兩者還原成實際的段落與粗體——否則整段會擠成一坨、還會露出星號。
+ */
+function renderContent(content: string) {
+  return content
+    .split(/\n{2,}/)
+    .map((para) => para.trim())
+    .filter(Boolean)
+    .map((para, i) => (
+      <p key={`p${i}`} className="text-gray-700 leading-relaxed">
+        {renderInline(para, `p${i}`)}
+      </p>
+    ));
 }
 
 interface PageProps {
@@ -239,9 +269,7 @@ export default async function NewsArticlePage({ params }: PageProps) {
                   <h2 className="text-lg font-bold text-gray-900 mb-3">
                     {section.heading}
                   </h2>
-                  <p className="text-gray-700 leading-relaxed">
-                    {renderContent(section.content)}
-                  </p>
+                  <div className="space-y-3">{renderContent(section.content)}</div>
                 </section>
               );
               if (index === midPoint) {

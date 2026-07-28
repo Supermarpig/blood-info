@@ -485,6 +485,17 @@ export default function BloodShortagePage() {
               加上 O 型在台灣人口比例本來就高、用量也高，只要供需稍微失衡，
               O 型往往是第一個見底的血型，因此在庫存看板上最常看到 O 型急缺。
             </p>
+            <p className="mt-3">
+              不確定自己或家人的血型？可以用
+              <Link
+                prefetch={false}
+                href="/blood-type"
+                className="font-medium text-gray-800 underline decoration-gray-300 underline-offset-2 hover:text-gray-900"
+              >
+                血型遺傳表計算機
+              </Link>
+              從父母血型推算可能的血型，也能一次看懂各血型的輸血相容關係。
+            </p>
           </section>
 
           <section>
