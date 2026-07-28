@@ -1,7 +1,8 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Clock, Building2, ExternalLink, Gift, ChevronRight } from "lucide-react";
+import { MapPin, ExternalLink, Gift, ChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 import { useState, useRef, useEffect } from "react";
 import Link from "@/components/Link";
 import { useRouter } from "next/navigation";
@@ -16,6 +17,38 @@ import {
 import { getGiftByTagId } from "@/lib/giftConfig";
 import { CITIES } from "@/lib/cityConfig";
 import ShareModal from "@/components/ShareModal";
+import { cva } from "class-variance-authority";
+import { getEventStatus, type EventStatus } from "@/lib/eventStatus";
+
+/** 狀態徽章：整面清單唯一會隨時間變化的東西，也是每張卡的視覺落點 */
+const statusBadge = cva(
+  "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold",
+  {
+    variants: {
+      kind: {
+        ongoing: "bg-emerald-50 text-emerald-700",
+        "ending-soon": "bg-red-50 text-red-600",
+        "not-started": "bg-gray-100 text-gray-500",
+        finished: "bg-gray-100 text-gray-400",
+        past: "bg-gray-100 text-gray-400",
+        upcoming: "hidden",
+      },
+    },
+  }
+);
+
+const statusDot = cva("h-1.5 w-1.5 rounded-full", {
+  variants: {
+    kind: {
+      ongoing: "bg-emerald-500",
+      "ending-soon": "bg-red-500 motion-safe:animate-pulse",
+      "not-started": "bg-gray-400",
+      finished: "bg-gray-300",
+      past: "bg-gray-300",
+      upcoming: "hidden",
+    },
+  },
+});
 
 interface DonationEvent {
   id?: string;
@@ -85,6 +118,20 @@ export default function CardInfo({
   const hoverTimer = useRef<ReturnType<typeof setTimeout>>();
   const chevronRef = useRef<SVGSVGElement>(null);
 
+  /**
+   * 狀態必須等 mount 後才算：它依賴「現在幾點」，
+   * 在 render 期間算會造成 hydration mismatch，而且清單頁是靜態產生的，
+   * server 端的值會被凍在 build 當下。每分鐘更新一次讓「剩 N 分鐘」不會停住。
+   */
+  const [status, setStatus] = useState<EventStatus | null>(null);
+  useEffect(() => {
+    const update = () =>
+      setStatus(getEventStatus(donation.activityDate, donation.time));
+    update();
+    const timer = setInterval(update, 60_000);
+    return () => clearInterval(timer);
+  }, [donation.activityDate, donation.time]);
+
   // 觸控裝置沒有 hover，改在卡片進入畫面時播一次箭頭動畫（CSS 以 hover: none 篩選）
   useEffect(() => {
     const el = chevronRef.current;
@@ -146,23 +193,40 @@ export default function CardInfo({
     高雄: "南區",
   };
 
-  // 根據中心決定顏色標籤
-  const getCenterColor = (center?: string) => {
-    switch (center) {
-      case "台北":
-        return "bg-blue-100 text-blue-700 border-blue-200";
-      case "新竹":
-        return "bg-cyan-100 text-cyan-700 border-cyan-200";
-      case "台中":
-        return "bg-orange-100 text-orange-700 border-orange-200";
-      case "高雄":
-        return "bg-rose-100 text-rose-700 border-rose-200";
-      case "使用者回報":
-        return "bg-emerald-100 text-emerald-700 border-emerald-200";
-      default:
-        return "bg-gray-100 text-gray-700 border-gray-200";
-    }
-  };
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    donation.location
+  )}`;
+
+  /** 贈品名稱：有 subTags 用細項，否則用大類 */
+  const giftChips: { key: string; label: string; href?: string }[] =
+    donation.subTags && donation.subTags.length > 0
+      ? [
+          ...donation.subTags.map((subTag) => {
+            const gift = getGiftByTagId(subTag.split("－")[0]);
+            return {
+              key: subTag,
+              label: subTag,
+              href: gift ? `/gift/${gift.slug}` : undefined,
+            };
+          }),
+          ...giftLinks
+            .filter(
+              (g) =>
+                !(donation.subTags || []).some((st) =>
+                  st.startsWith(g!.tagId + "－")
+                )
+            )
+            .map((g) => ({
+              key: g!.slug,
+              label: g!.name,
+              href: `/gift/${g!.slug}`,
+            })),
+        ]
+      : giftLinks.map((g) => ({
+          key: g!.slug,
+          label: g!.name,
+          href: `/gift/${g!.slug}`,
+        }));
 
   // 整卡可點：點到卡片內的連結或按鈕時，交給原本的行為
   const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -173,37 +237,42 @@ export default function CardInfo({
 
   return (
     <Card
-      className={`group overflow-hidden transition-all duration-200 hover:shadow-md border-gray-200 flex flex-col ${
-        detailPath ? "cursor-pointer hover:-translate-y-0.5" : ""
-      } ${className}`}
+      className={cn(
+        "group flex flex-col overflow-hidden border-gray-200 transition-[transform,box-shadow,border-color] duration-200 motion-reduce:transition-none",
+        detailPath &&
+          "cursor-pointer hover:-translate-y-0.5 hover:border-gray-300 hover:shadow-md motion-reduce:hover:translate-y-0",
+        className
+      )}
       onClick={handleCardClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <CardContent className="p-0 flex-grow flex flex-col">
-        <div className="flex flex-col h-full">
-          {/* 頭部：時間與中心標籤 */}
-          <div className="flex items-stretch border-b border-gray-100">
-            <div className="flex-none bg-slate-50 px-4 py-3 flex items-center justify-center border-r border-gray-100">
-              <div className="flex items-center gap-1.5">
-                <Clock className="w-4 h-4 text-slate-400 flex-shrink-0" />
-                <span className="font-bold text-slate-700 whitespace-nowrap">
-                  {highlightText(donation.time, searchKeyword)}
-                </span>
-              </div>
-            </div>
-            <div className="flex-grow p-3 flex items-center justify-between bg-white relative">
-              {donation.center && (
-                <span
-                  className={`text-xs px-2 py-1 rounded-full border font-medium ${getCenterColor(
-                    donation.center
-                  )}`}
-                >
-                  {centerDisplayNames[donation.center] || donation.center}
-                </span>
-              )}
+      <CardContent className="flex flex-grow flex-col p-0">
+        <div className="flex h-full flex-col">
+          {/* 中繼資料列：時間為主、即時狀態為錨點、分區為輔 */}
+          <div className="flex items-center gap-2 px-4 pt-3.5">
+            <span className="text-sm font-bold tabular-nums text-gray-900">
+              {highlightText(donation.time, searchKeyword)}
+            </span>
+            {status && status.kind !== "upcoming" && (
+              <span className={statusBadge({ kind: status.kind })}>
+                <span className={statusDot({ kind: status.kind })} />
+                {status.label}
+              </span>
+            )}
 
-              <div className="ml-auto flex items-center gap-2">
+            <div className="-mr-1.5 ml-auto flex items-center gap-0.5">
+              {/* 導航改成圖示：原本每張卡都印一行「在 Google 地圖開啟」，整面重複反而最搶眼 */}
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="在 Google 地圖開啟"
+                aria-label={`在 Google 地圖開啟 ${donation.location}`}
+                className="rounded-full p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-blue-600"
+              >
+                <ExternalLink className="h-4 w-4" />
+              </a>
                 {/* PTT 或使用者回報 Dialog */}
                 {(donation.pttData || donation.reportData) && (
                   <Dialog
@@ -223,23 +292,14 @@ export default function CardInfo({
                             : "查看活動詳情與贈品"
                         }
                       >
-                        <Gift className="w-5 h-5" />
-                        <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                          <span
-                            className={`animate-ping absolute inline-flex h-full w-full rounded-full ${
-                              donation.isUserReport
-                                ? "bg-emerald-400"
-                                : "bg-pink-400"
-                            } opacity-75`}
-                          ></span>
-                          <span
-                            className={`relative inline-flex rounded-full h-3 w-3 ${
-                              donation.isUserReport
-                                ? "bg-emerald-500"
-                                : "bg-pink-500"
-                            }`}
-                          ></span>
-                        </span>
+                        <Gift className="h-4 w-4" />
+                        {/* 一張清單同時有 30 張卡，常駐 ping 動畫會變成整面雜訊；改成靜態小點 */}
+                        <span
+                          className={cn(
+                            "absolute right-0.5 top-0.5 h-1.5 w-1.5 rounded-full",
+                            donation.isUserReport ? "bg-emerald-500" : "bg-pink-500"
+                          )}
+                        />
                       </button>
                     </DialogTrigger>
                     <DialogContent className="w-[calc(100%-2rem)] max-w-md max-h-[80vh] p-0 gap-0 overflow-hidden flex flex-col rounded-xl">
@@ -386,115 +446,86 @@ export default function CardInfo({
                 />
               </div>
             </div>
-          </div>
 
-          {/* 主要內容：地點與機構 */}
-          <div className={`relative p-4 bg-white flex-grow ${detailPath ? "pr-9" : ""}`}>
-            {/* 整卡可點的視覺提示 */}
-            {detailPath && (
-              <ChevronRight
-                ref={chevronRef}
-                className="animate-chevron-nudge absolute right-2.5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-300 transition-colors group-hover:text-pink-500"
-              />
-            )}
-            <div className="space-y-3">
-            <div>
-              <h3 className="text-lg font-bold text-gray-900 leading-tight mb-1 flex items-start gap-2">
-                <Building2 className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+          {/*
+            主要內容。刻意把「地點」提為標題、「機構」降為副標：
+            機構名（例如「國泰人壽汐止通訊處」）幾乎不影響去不去，
+            真正決定的是「在哪、我到得了嗎」。標題連到站內活動頁，
+            Google 地圖降級成明確的次要動作，才不會讓卡片上最醒目的連結是「離開本站」。
+          */}
+          <div className="flex flex-grow flex-col px-4 pb-3.5 pt-2">
+            <div className="flex items-start gap-2">
+              <MapPin className="mt-[3px] h-4 w-4 flex-none text-gray-400" />
+              <div className="min-w-0 flex-1">
                 {detailPath ? (
                   <Link
                     prefetch={false}
                     href={detailPath}
-                    className="hover:text-pink-600 hover:underline decoration-pink-300 underline-offset-2 transition-colors"
+                    className="block text-[15px] font-bold leading-snug text-gray-900 transition-colors group-hover:text-pink-700"
                   >
-                    {highlightText(donation.organization, searchKeyword)}
+                    {highlightText(donation.location, searchKeyword)}
                   </Link>
                 ) : (
-                  <span>{highlightText(donation.organization, searchKeyword)}</span>
+                  <span className="block text-[15px] font-bold leading-snug text-gray-900">
+                    {highlightText(donation.location, searchKeyword)}
+                  </span>
                 )}
-              </h3>
-            </div>
-
-            <div>
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                  donation.location
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-start gap-2 text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <MapPin className="w-5 h-5 text-red-500 group-hover:text-red-600 flex-shrink-0 mt-0.5" />
-                <span className="text-base font-medium group-hover:underline decoration-blue-400 underline-offset-2">
-                  {highlightText(donation.location, searchKeyword)}
-                </span>
-                <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity mt-1.5" />
-              </a>
+                {/* 分區只用文字，不再加色點——狀態徽章已經有一個點，每張卡兩個點會變雜訊 */}
+                <p className="mt-1 truncate text-xs leading-relaxed text-gray-500">
+                  {donation.center && (
+                    <>
+                      <span className="text-gray-400">
+                        {centerDisplayNames[donation.center] || donation.center}
+                      </span>
+                      <span className="mx-1.5 text-gray-300">·</span>
+                    </>
+                  )}
+                  {highlightText(donation.organization, searchKeyword)}
+                </p>
+              </div>
+              {detailPath && (
+                <ChevronRight
+                  ref={chevronRef}
+                  className="animate-chevron-nudge mt-0.5 h-4 w-4 flex-none text-gray-300 transition-colors group-hover:text-pink-500"
+                />
+              )}
             </div>
 
             {donation.customNote && (
-              <div className="text-sm text-amber-600 bg-amber-50 px-3 py-2 rounded-md border border-amber-100 mt-2">
-                <span className="font-semibold block text-xs uppercase tracking-wider text-amber-500 mb-0.5">
-                  Note
-                </span>
+              <p className="mt-2.5 rounded-md bg-amber-50 px-2.5 py-1.5 text-xs leading-relaxed text-amber-700">
                 {donation.customNote}
-              </div>
+              </p>
             )}
-
-            {/* 贈品 Tags 連結 + 細項 */}
-            {(giftLinks.length > 0 || (donation.subTags && donation.subTags.length > 0)) && (
-              <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-gray-100">
-                {/* 有 subTags 時，用 subTags 連結到對應大類頁面；否則顯示大類 */}
-                {donation.subTags && donation.subTags.length > 0 ? (
-                  <>
-                    {donation.subTags.map((subTag) => {
-                      const parentTag = subTag.split('－')[0];
-                      const gift = getGiftByTagId(parentTag);
-                      return gift ? (
-                        <Link
-                          key={subTag}
-                          href={`/gift/${gift.slug}`}
-                          className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full hover:bg-pink-100 transition-colors"
-                        >
-                          {subTag}
-                        </Link>
-                      ) : (
-                        <span
-                          key={subTag}
-                          className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full"
-                        >
-                          {subTag}
-                        </span>
-                      );
-                    })}
-                    {/* 沒有 subTags 對應到的大類，仍顯示大類 badge */}
-                    {giftLinks
-                      .filter(g => !(donation.subTags || []).some(st => st.startsWith(g!.tagId + '－')))
-                      .map((gift) => (
-                        <Link
-                          key={gift!.slug}
-                          href={`/gift/${gift!.slug}`}
-                          className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full hover:bg-pink-100 transition-colors"
-                        >
-                          {gift!.name}
-                        </Link>
-                      ))}
-                  </>
-                ) : (
-                  giftLinks.map((gift) => (
-                    <Link
-                      key={gift!.slug}
-                      href={`/gift/${gift!.slug}`}
-                      className="text-xs px-2 py-1 bg-pink-50 text-pink-600 rounded-full hover:bg-pink-100 transition-colors"
-                    >
-                      {gift!.name}
-                    </Link>
-                  ))
-                )}
-              </div>
-            )}
-            </div>
           </div>
+
+          {/*
+            贈品帶——這張卡唯一的飽和色，也是整面清單裡唯一會跳出來的東西。
+            贈品是本站點擊率最高的資訊，只有帶贈品的場次會長出這一條，
+            所以往下滑時「哪幾場值得去」一眼就掃得到。
+          */}
+          {giftChips.length > 0 && (
+            <div className="mt-auto flex flex-wrap items-center gap-1.5 border-t border-pink-100 bg-pink-50/70 px-4 py-2.5">
+              <Gift className="h-3.5 w-3.5 flex-none text-pink-500" />
+              {giftChips.map((chip) =>
+                chip.href ? (
+                  <Link
+                    key={chip.key}
+                    href={chip.href}
+                    className="text-xs font-semibold text-pink-700 underline decoration-pink-200 underline-offset-2 transition-colors hover:decoration-pink-500"
+                  >
+                    {chip.label}
+                  </Link>
+                ) : (
+                  <span
+                    key={chip.key}
+                    className="text-xs font-semibold text-pink-700"
+                  >
+                    {chip.label}
+                  </span>
+                )
+              )}
+            </div>
+          )}
         </div>
       </CardContent>
     </Card>
