@@ -17,6 +17,8 @@ export const HEAT: Record<
   {
     /** 流動漸層（同時用於彩色邊框與後方柔光；首末色相同以無縫循環） */
     aura: string;
+    /** 高對比橫向漸層，配合 background-position 平移做「流動邊框」，明暗交錯讓移動看得出來 */
+    ring: string;
     borderOpacity: number; // 彩色邊框的不透明度（清楚看得到）
     glowOpacity: number; // 後方柔光的峰值不透明度
     flow: number; // 漸層流動一輪的秒數（越熱越快）
@@ -39,6 +41,7 @@ export const HEAT: Record<
 > = {
   calm: {
     aura: "linear-gradient(115deg, #38bdf8, #22d3ee, #2dd4bf, #22d3ee, #38bdf8)",
+    ring: "linear-gradient(90deg, #bae6fd, #0ea5e9, #bae6fd, #0369a1, #bae6fd)",
     borderOpacity: 0.7,
     glowOpacity: 0.35,
     flow: 12,
@@ -57,6 +60,7 @@ export const HEAT: Record<
   },
   warm: {
     aura: "linear-gradient(115deg, #fbbf24, #fb923c, #f59e0b, #fb923c, #fbbf24)",
+    ring: "linear-gradient(90deg, #fef3c7, #f59e0b, #fef3c7, #ea580c, #fef3c7)",
     borderOpacity: 0.85,
     glowOpacity: 0.45,
     flow: 8,
@@ -76,6 +80,7 @@ export const HEAT: Record<
   },
   hot: {
     aura: "linear-gradient(115deg, #fb923c, #f43f5e, #f59e0b, #ef4444, #fb923c)",
+    ring: "linear-gradient(90deg, #fecdd3, #e11d48, #fecdd3, #ea580c, #fecdd3)",
     borderOpacity: 1,
     glowOpacity: 0.8,
     flow: 3.4,

@@ -16,7 +16,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { MapPin, ChevronRight } from "lucide-react";
+import { MapPin, ChevronRight, User } from "lucide-react";
 import Link from "@/components/Link";
 import {
   GIFT_MATCH_LABELS,
@@ -27,7 +27,6 @@ import {
   type EventStatus,
 } from "@/lib/onsiteReport";
 import { HEAT, computeHeat, type HeatTier } from "@/lib/onsiteHeat";
-import HeatParticles from "@/components/HeatParticles";
 
 gsap.registerPlugin(useGSAP);
 
@@ -87,23 +86,55 @@ function Badges({ r }: { r: RecentReport }) {
   );
 }
 
+/** 文字一個字一個字接力彈跳，像 loading 動畫那樣持續循環 */
+function WaveText({ text, className = "" }: { text: string; className?: string }) {
+  const wrapRef = useRef<HTMLSpanElement>(null);
+
+  useGSAP(
+    () => {
+      const reduce = window.matchMedia?.(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      if (reduce) return;
+      gsap.to(".wave-char", {
+        y: -4,
+        duration: 0.35,
+        ease: "sine.inOut",
+        stagger: { each: 0.06, yoyo: true, repeat: -1 },
+      });
+    },
+    { scope: wrapRef }
+  );
+
+  return (
+    <span ref={wrapRef} className={className}>
+      {[...text].map((ch, i) => (
+        <span key={i} className="wave-char inline-block">
+          {ch === " " ? " " : ch}
+        </span>
+      ))}
+    </span>
+  );
+}
+
 function SectionHeader({ tier }: { tier?: HeatTier }) {
   const cfg = tier ? HEAT[tier] : null;
   const HeatIcon = cfg?.icon;
   return (
     <div className="flex items-center gap-2 mb-3">
-      <span className="w-1.5 h-1.5 bg-red-500 rounded-full" />
-      <h2 className="text-sm font-semibold text-gray-800">最新現場真相</h2>
-      <span className="text-xs text-gray-400">捐血人到現場的實際回報</span>
+      <span className="relative flex h-2 w-2">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
+      </span>
+      <h2 className="text-sm font-semibold text-gray-800">
+        <WaveText text="最新現場真相" />
+      </h2>
       {cfg && HeatIcon && (
         <span
-          className={`ml-auto inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-semibold ${cfg.badge}`}
-          title={cfg.label}
+          className={`heat-icon ml-auto inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-semibold ${cfg.badge}`}
+          title={`${cfg.label}：捐血人到現場的實際回報`}
         >
-          <HeatIcon
-            className={`heat-icon h-3.5 w-3.5 ${cfg.iconClass}`}
-            strokeWidth={2.2}
-          />
+          <HeatIcon className="h-3.5 w-3.5" strokeWidth={2.2} />
           {cfg.label}
         </span>
       )}
@@ -147,77 +178,79 @@ export default function RecentOnsiteReports({
     };
   }, [limit]);
 
-  // grid：卡片依序進場
+  // 卡片進場：grid 是平順滑入，marquee 用帶回彈的彈跳，讓卡片一出現就有精神
   useGSAP(
     () => {
-      if (variant !== "grid" || !reports?.length) return;
-      gsap.from(".recent-onsite-card", {
-        y: 14,
-        opacity: 0,
-        duration: 0.4,
-        stagger: 0.06,
-        ease: "power2.out",
-      });
+      if (!reports?.length) return;
+      if (variant === "grid") {
+        gsap.from(".recent-onsite-card", {
+          y: 14,
+          opacity: 0,
+          duration: 0.4,
+          stagger: 0.06,
+          ease: "power2.out",
+        });
+      } else {
+        gsap.from(".recent-onsite-card-marquee", {
+          y: 10,
+          opacity: 0,
+          scale: 0.94,
+          duration: 0.5,
+          stagger: 0.08,
+          ease: "back.out(1.7)",
+        });
+      }
     },
     { dependencies: [reports, variant], scope: ref }
   );
 
-  // 熱度：後方柔光漸層流動 + 呼吸，標題徽章圖示隨火/水律動
+  // 熱度：標題徽章圖示隨火/水律動（安靜的小動作，不做大面積背景特效）
   useGSAP(
     () => {
       if (!heat) return;
       const reduce = window.matchMedia?.(
         "(prefers-reduced-motion: reduce)"
       ).matches;
-      const cfg = HEAT[heat.tier];
-      const glow = ref.current?.querySelector<HTMLElement>(".heat-glow");
-      const icon = ref.current?.querySelector<HTMLElement>(".heat-icon");
+      const badge = ref.current?.querySelector<HTMLElement>(".heat-icon");
 
-      if (glow) {
-        if (reduce) {
-          gsap.set(glow, { backgroundPosition: "50% 50%" });
-        } else {
-          gsap.fromTo(
-            glow,
-            { backgroundPosition: "0% 50%" },
-            { backgroundPosition: "200% 50%", duration: cfg.flow, ease: "none", repeat: -1 }
-          );
-          gsap.fromTo(
-            glow,
-            { opacity: cfg.glowOpacity * 0.5 },
-            {
-              opacity: cfg.glowOpacity,
-              duration: cfg.breath,
-              ease: "sine.inOut",
-              yoyo: true,
-              repeat: -1,
-            }
-          );
-        }
-      }
-      if (icon && !reduce) {
-        if (heat.tier === "hot") {
-          gsap.to(icon, {
-            scale: 1.18,
-            duration: 0.5,
-            ease: "sine.inOut",
-            yoyo: true,
-            repeat: -1,
-            transformOrigin: "50% 85%",
-          });
-        } else if (heat.tier === "calm") {
-          gsap.to(icon, {
-            y: -1.5,
-            scale: 1.06,
-            duration: 2.4,
-            ease: "sine.inOut",
-            yoyo: true,
-            repeat: -1,
-          });
-        }
+      if (badge && !reduce) {
+        const scaleByTier = { hot: 1.08, warm: 1.06, calm: 1.03 } as const;
+        const durationByTier = { hot: 0.5, warm: 0.8, calm: 2.2 } as const;
+        gsap.to(badge, {
+          scale: scaleByTier[heat.tier],
+          duration: durationByTier[heat.tier],
+          ease: "sine.inOut",
+          yoyo: true,
+          repeat: -1,
+          transformOrigin: "50% 50%",
+        });
       }
     },
     { dependencies: [heat?.tier], scope: ref }
+  );
+
+  // marquee 卡片：邊框漸層左右平移。漸層本身明暗交錯（不是同色系漸變），
+  // 平移距離拉大到 400%，這樣移動才看得出來，且完全不用絕對定位/裁切，不會跑出框外
+  useGSAP(
+    () => {
+      if (!heat || variant !== "marquee") return;
+      const reduce = window.matchMedia?.(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      if (reduce) return;
+      const cfg = HEAT[heat.tier];
+      gsap.fromTo(
+        ".flame-border",
+        { backgroundPosition: "0% 50%" },
+        {
+          backgroundPosition: "400% 50%",
+          duration: cfg.flow,
+          ease: "none",
+          repeat: -1,
+        }
+      );
+    },
+    { dependencies: [heat?.tier, variant], scope: ref }
   );
 
   // marquee：自動推進「捲動容器」的 scrollLeft（內容複製一份，捲到一輪寬度就歸零→無縫）。
@@ -278,36 +311,50 @@ export default function RecentOnsiteReports({
   if (variant === "marquee") {
     const loop = [...reports, ...reports];
     const cfg = HEAT[heat!.tier];
+    // 卡片數不多時裝不滿容器、根本不會捲動，邊緣淡出遮罩反而只會洗白邊框；
+    // 超過 3 則才夠可能溢出捲動，這時邊緣遮罩才有意義（暗示「還可以往右滑」）
+    const showEdgeMask = reports.length > 3;
     return (
       <section ref={ref} className={className}>
         <SectionHeader tier={heat!.tier} />
-        <div className="relative">
-          {/* 後方柔光：火＝熱門、水＝平靜，會流動與呼吸 */}
-          <div
-            aria-hidden
-            className="heat-glow pointer-events-none absolute -inset-2 rounded-[28px] blur-2xl z-0"
-            style={{
-              backgroundImage: cfg.aura,
-              backgroundSize: "200% 200%",
-              opacity: cfg.glowOpacity,
-            }}
-          />
-          <div
-            ref={scrollerRef}
-            onMouseEnter={pauseAuto}
-            onMouseLeave={scheduleResume}
-            onTouchStart={pauseAuto}
-            onTouchEnd={scheduleResume}
-            className="relative z-10 overflow-x-auto overscroll-x-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden [-webkit-overflow-scrolling:touch] [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
-          >
-            <div className="flex w-max gap-3">
-              {loop.map((r, i) => (
-              <Link
-                key={`${r.eventId}-${i}`}
-                href={`/activity/${r.eventId}`}
-                aria-hidden={i >= reports.length}
-                className="group flex w-60 flex-shrink-0 flex-col gap-1.5 rounded-2xl border border-gray-200/60 bg-white p-3.5 shadow-sm hover:border-gray-300 transition-colors"
-              >
+        <div
+          ref={scrollerRef}
+          onMouseEnter={pauseAuto}
+          onMouseLeave={scheduleResume}
+          onTouchStart={pauseAuto}
+          onTouchEnd={scheduleResume}
+          className={`overflow-x-auto overscroll-x-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden [-webkit-overflow-scrolling:touch] ${
+            showEdgeMask
+              ? "[mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
+              : ""
+          }`}
+        >
+          <div className="flex w-max gap-3">
+            {loop.map((r, i) => (
+            <Link
+              key={`${r.eventId}-${i}`}
+              href={`/activity/${r.eventId}`}
+              aria-hidden={i >= reports.length}
+              className="flame-border group flex-shrink-0 w-64 rounded-xl p-[3px] transition-all duration-200 hover:-translate-y-1 hover:shadow-md"
+              style={{ backgroundImage: cfg.ring, backgroundSize: "400% 100%" }}
+            >
+              <div className="recent-onsite-card-marquee flex h-full flex-col gap-2 rounded-[9px] bg-white p-3.5">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-gray-100 to-gray-200 text-xs font-semibold text-gray-500">
+                    {r.nickname?.trim()?.[0]?.toUpperCase() || (
+                      <User className="h-3.5 w-3.5 text-gray-400" />
+                    )}
+                  </span>
+                  <span className="min-w-0 flex-1 truncate text-sm font-medium text-gray-800">
+                    {r.nickname || "匿名捐血人"}
+                  </span>
+                  <span className="flex flex-shrink-0 items-center gap-1 text-xs text-gray-400">
+                    {i === 0 && (
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    )}
+                    {timeAgo(r.createdAt)}
+                  </span>
+                </div>
                 <Badges r={r} />
                 {(r.actualGift || r.note) && (
                   <p className="text-sm text-gray-700 line-clamp-1">
@@ -317,20 +364,11 @@ export default function RecentOnsiteReports({
                 <div className="flex items-center gap-1 text-xs text-gray-400">
                   <MapPin className="h-3 w-3 flex-shrink-0" />
                   <span className="truncate">{r.eventTitle}</span>
-                  <span className="ml-auto flex-shrink-0">
-                    {timeAgo(r.createdAt)}
-                  </span>
                 </div>
-              </Link>
-            ))}
-            </div>
+              </div>
+            </Link>
+          ))}
           </div>
-          {/* 熱度粒子層：疊在跑馬燈上方，火星上竄 / 水泡上浮 */}
-          <HeatParticles
-            tier={heat!.tier}
-            count={24}
-            className="z-20 [mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_4%,black_96%,transparent)]"
-          />
         </div>
       </section>
     );

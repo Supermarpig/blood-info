@@ -239,7 +239,7 @@ export default async function BloodDonationPage() {
       )}
       <div className="container mx-auto p-8">
 
-      <div className="flex justify-between items-center mb-2">
+      <div className="flex justify-between items-center pb-4 mb-4 border-b border-gray-100">
         <div className="flex items-center gap-2">
           <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
             <defs>
@@ -273,7 +273,7 @@ export default async function BloodDonationPage() {
           <AddDonationEventModal />
         </div>
       </div>
-      <RecentOnsiteReports variant="marquee" limit={10} className="mb-5" />
+      <RecentOnsiteReports variant="marquee" limit={10} className="mb-6" />
       <SearchableDonationList data={data} initialInventory={initialInventory} />
 
       <details className="my-8 rounded-lg border border-gray-100 bg-gray-50/60 group">
