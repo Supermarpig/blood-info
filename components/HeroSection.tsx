@@ -74,6 +74,8 @@ interface HeroSectionProps {
   daysAhead?: number;
   onDaysAheadChange?: (days: number) => void;
   nearbyCpEvents?: CpEvent[];
+  /** 點統計卡時同步切換下方清單的分頁，否則只捲動過去卻停在別的分頁 */
+  onTabSelect?: (tab: "today" | "week" | "upcoming") => void;
 }
 
 // 星星位置與動畫延遲設定
@@ -344,6 +346,7 @@ export default function HeroSection({
   initialInventory,
   daysAhead,
   onDaysAheadChange,
+  onTabSelect,
   nearbyCpEvents,
 }: HeroSectionProps) {
   const heroBannerRef = useRef<HTMLDivElement>(null);
@@ -438,6 +441,7 @@ export default function HeroSection({
       <div className="grid grid-cols-2 gap-3">
         <a
           href="#today-events"
+          onClick={() => onTabSelect?.("today")}
           className="group relative bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-4 border border-emerald-100/50 hover:shadow-md hover:border-emerald-300/60 hover:from-emerald-100 hover:to-teal-100 transition-all duration-200 animate-fade-in-up cursor-pointer"
           style={{ animationDelay: "80ms" }}
         >
@@ -465,6 +469,7 @@ export default function HeroSection({
 
         <a
           href="#upcoming-events"
+          onClick={() => onTabSelect?.("upcoming")}
           className="group relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-4 border border-blue-100/50 hover:shadow-md hover:border-blue-300/60 hover:from-blue-100 hover:to-indigo-100 transition-all duration-200 animate-fade-in-up cursor-pointer"
           style={{ animationDelay: "140ms" }}
         >

@@ -6,12 +6,11 @@ import { Flip } from "gsap/Flip";
 
 gsap.registerPlugin(Flip);
 import Link from "@/components/Link";
-import { ChevronDown, ChevronUp, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { debounce } from "@/utils";
 import CardInfo from "@/components/CardInfo";
 import AdCard from "@/components/AdCard";
 import BackToTopButton from "@/components/BackToTopButton";
-import { Button } from "@/components/ui/button";
 import { useNearbyLocations } from "@/hooks/useNearbyLocations";
 import HeroSection from "@/components/HeroSection";
 import type { BloodInventory } from "@/components/BloodInventoryPanel";
@@ -28,6 +27,55 @@ import { normalizeSearchText } from "@/lib/searchNormalize";
 // 每 AD_INTERVAL 張捐血卡片後插入一張廣告卡
 const AD_INTERVAL = 10;
 const AD_SLOT_FEED = process.env.NEXT_PUBLIC_ADSENSE_SLOT_FEED;
+
+/** 「本週」採滾動 7 天（今天起算 7 天內），而非日曆週 */
+const WEEK_DAYS_AHEAD = 7;
+
+type TabKey = "today" | "week" | "upcoming" | "past";
+
+const TABS: { key: TabKey; label: string; dot: string }[] = [
+  { key: "today", label: "今日活動", dot: "bg-green-500" },
+  { key: "week", label: "本週捐血活動", dot: "bg-amber-500" },
+  { key: "upcoming", label: "即將開始", dot: "bg-blue-500" },
+  { key: "past", label: "已過期", dot: "bg-gray-400" },
+];
+
+/**
+ * 跨日期累計裁切到 limit 張卡。
+ *
+ * 原本只有「今日」需要分批載入，且只有一個日期，所以直接對單日 slice 就夠。
+ * 改成 tab 後每個分頁都可能橫跨多天（本週有數百場），必須跨日期累計計算，
+ * 否則「每天各取 N 張」會一次塞進上千張卡。
+ */
+function limitEventsByDate<T>(
+  eventsByDate: Record<string, T[]>,
+  limit: number
+): Record<string, T[]> {
+  const out: Record<string, T[]> = {};
+  let used = 0;
+  for (const date of Object.keys(eventsByDate).sort()) {
+    if (used >= limit) break;
+    const take = eventsByDate[date].slice(0, limit - used);
+    if (take.length > 0) {
+      out[date] = take;
+      used += take.length;
+    }
+  }
+  return out;
+}
+
+function countEvents<T>(eventsByDate: Record<string, T[]>): number {
+  return Object.values(eventsByDate).reduce((s, arr) => s + arr.length, 0);
+}
+
+const WEEKDAY = ["日", "一", "二", "三", "四", "五", "六"];
+
+/** 「7/28 二」這種短標籤，日期分頁列用 */
+function shortDateLabel(iso: string): string {
+  const [y, m, d] = iso.split("-").map(Number);
+  const wd = WEEKDAY[new Date(y, m - 1, d).getDay()];
+  return `${m}/${d} ${wd}`;
+}
 
 interface DonationEvent {
   id?: string;
@@ -74,10 +122,11 @@ export default function SearchableDonationList({
   const [searchKeyword, setSearchKeyword] = useState<string>("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedCenter, setSelectedCenter] = useState<string | null>(null);
-  const [showPastEvents, setShowPastEvents] = useState<boolean>(false);
   const [daysAhead, setDaysAhead] = useState<number>(0);
-  const [todayCardLimit, setTodayCardLimit] = useState<number>(10);
-  const todaySentinelRef = useRef<HTMLDivElement>(null);
+  const [activeTab, setActiveTab] = useState<TabKey>("today");
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [cardLimit, setCardLimit] = useState<number>(30);
+  const listSentinelRef = useRef<HTMLDivElement>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -99,6 +148,24 @@ export default function SearchableDonationList({
     setSelectedCenter(center);
   }, [captureFlipState]);
 
+  /**
+   * 分頁與 Hero 的日期範圍 chip 接成同一套狀態，避免兩個控制項各說各話。
+   * 「7天」chip 與「本週」分頁是同一個範圍，所以互相對應；選「即將開始」則把範圍放到最寬。
+   */
+  const handleTabSelect = useCallback((tab: TabKey) => {
+    setActiveTab(tab);
+    if (tab === "today") setDaysAhead(0);
+    else if (tab === "week") setDaysAhead(WEEK_DAYS_AHEAD);
+    else if (tab === "upcoming") setDaysAhead(0);
+  }, []);
+
+  const handleDaysAheadChange = useCallback((days: number) => {
+    setDaysAhead(days);
+    if (days === 0) setActiveTab("today");
+    else if (days === WEEK_DAYS_AHEAD) setActiveTab("week");
+    else setActiveTab("upcoming");
+  }, []);
+
   useLayoutEffect(() => {
     if (!flipStateRef.current) return;
     const state = flipStateRef.current;
@@ -114,15 +181,25 @@ export default function SearchableDonationList({
 
 
   useEffect(() => {
-    const sentinel = todaySentinelRef.current;
+    const sentinel = listSentinelRef.current;
     if (!sentinel) return;
     const observer = new IntersectionObserver(
-      (entries) => { if (entries[0].isIntersecting) setTodayCardLimit((p) => p + 15); },
+      (entries) => { if (entries[0].isIntersecting) setCardLimit((p) => p + 30); },
       { rootMargin: "400px" }
     );
     observer.observe(sentinel);
     return () => observer.disconnect();
-  }, []);
+  }, [activeTab]);
+
+  // 換分頁或改篩選條件時，卡片數量重新從第一批開始
+  useEffect(() => {
+    setCardLimit(30);
+  }, [activeTab, selectedDate, searchKeyword, selectedTags, selectedCenter, daysAhead]);
+
+  // 換分頁或改篩選條件時，日期選擇回到「全部」，避免停在已不存在的日期上
+  useEffect(() => {
+    setSelectedDate(null);
+  }, [activeTab, searchKeyword, selectedTags, selectedCenter, daysAhead]);
 
   const {
     isLoading: isNearbyLoading,
@@ -210,17 +287,81 @@ export default function SearchableDonationList({
     );
   }, [upcomingEvents, daysAhead, today]);
 
-  const visibleTodayEvents = useMemo(() => {
+  /** 本週＝今天起算 7 天內（含今天），跨越「今日」與「即將開始」兩組資料 */
+  const weekEvents = useMemo(() => {
+    const [y, m, d] = today.split("-").map(Number);
+    const cutoff = new Date(y, m - 1, d + WEEK_DAYS_AHEAD);
+    const cutoffStr = cutoff.toLocaleDateString("en-CA");
     return Object.fromEntries(
-      Object.entries(todayEvents).map(([d, events]) => [d, events.slice(0, todayCardLimit)])
+      [...Object.entries(todayEvents), ...Object.entries(upcomingEvents)]
+        .filter(([date]) => date <= cutoffStr)
+        .sort(([a], [b]) => a.localeCompare(b))
     );
-  }, [todayEvents, todayCardLimit]);
+  }, [todayEvents, upcomingEvents, today]);
 
-  const totalTodayCards = useMemo(
-    () => Object.values(todayEvents).reduce((s, arr) => s + arr.length, 0),
-    [todayEvents]
+  /**
+   * 「即將開始」分頁的資料。Hero 上的日期範圍 chip（daysAhead）沒選時是 0，
+   * 原本會讓 visibleUpcomingEvents 直接變成空物件——分頁化之後那會讓整個分頁開起來是空的，
+   * 所以未選範圍時顯示全部未來活動，選了才收斂。
+   * 注意不要改動 visibleUpcomingEvents 本身，它同時餵給「找附近」與精選贈品，語意不同。
+   */
+  const upcomingTabEvents = useMemo(
+    () => (daysAhead === 0 ? upcomingEvents : visibleUpcomingEvents),
+    [daysAhead, upcomingEvents, visibleUpcomingEvents]
   );
-  const hasMoreToday = totalTodayCards > todayCardLimit;
+
+  const tabDataset: Record<TabKey, Record<string, DonationEvent[]>> = useMemo(
+    () => ({
+      today: todayEvents,
+      week: weekEvents,
+      upcoming: upcomingTabEvents,
+      past: pastEvents,
+    }),
+    [todayEvents, weekEvents, upcomingTabEvents, pastEvents]
+  );
+
+  /** 分頁下方的範圍說明，讓「本週」到底算到哪一天不用猜 */
+  const activeTabHint = useMemo(() => {
+    const fmt = (iso: string) => {
+      const [, m, d] = iso.split("-");
+      return `${Number(m)}/${Number(d)}`;
+    };
+    if (activeTab === "today") return `${today}（今天）`;
+    if (activeTab === "week") {
+      const [y, m, d] = today.split("-").map(Number);
+      const end = new Date(y, m - 1, d + WEEK_DAYS_AHEAD);
+      return `${fmt(today)}–${fmt(end.toLocaleDateString("en-CA"))}，今天起算 ${WEEK_DAYS_AHEAD} 天內的活動`;
+    }
+    if (activeTab === "upcoming") {
+      return daysAhead === 0
+        ? "今天之後的所有活動（可用上方日期範圍縮小）"
+        : `今天之後 ${daysAhead} 天內的活動`;
+    }
+    return "已經結束的活動";
+  }, [activeTab, today, daysAhead]);
+
+  const activeEvents = tabDataset[activeTab];
+
+  /** 分頁內再依日期切一層：本週有 300+ 場橫跨 7 天，全部堆在一起太難找 */
+  const activeDates = useMemo(
+    () => Object.keys(activeEvents).sort(),
+    [activeEvents]
+  );
+
+  const dateFilteredEvents = useMemo(() => {
+    if (!selectedDate || !activeEvents[selectedDate]) return activeEvents;
+    return { [selectedDate]: activeEvents[selectedDate] };
+  }, [activeEvents, selectedDate]);
+
+  const activeTotal = useMemo(
+    () => countEvents(dateFilteredEvents),
+    [dateFilteredEvents]
+  );
+  const visibleActiveEvents = useMemo(
+    () => limitEventsByDate(dateFilteredEvents, cardLimit),
+    [dateFilteredEvents, cardLimit]
+  );
+  const hasMoreCards = activeTotal > cardLimit;
 
 
   // 取得所有當前和未來的活動事件（用於找附近功能，隨日期範圍篩選更新）
@@ -269,24 +410,12 @@ export default function SearchableDonationList({
   }, [allCurrentEvents, userLocation]);
 
 
-  const renderEventSection = (
-    eventsByDate: Record<string, DonationEvent[]>,
-    title: string,
-    icon: React.ReactNode
-  ) => {
+  const renderEventGrid = (eventsByDate: Record<string, DonationEvent[]>) => {
     const dates = Object.keys(eventsByDate).sort();
     if (dates.length === 0) return null;
 
     return (
       <div className="mb-8 animate-fade-in-up">
-        <div className="flex items-center gap-2 mb-4">
-          {icon}
-          <h2 className="text-xl font-bold text-gray-800">{title}</h2>
-          <span className="text-sm font-normal text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">
-            {dates.reduce((acc, date) => acc + eventsByDate[date].length, 0)} 場
-          </span>
-        </div>
-
         <div className="space-y-6">
           {dates.map((date) => (
             <div key={date} className="relative">
@@ -480,7 +609,8 @@ export default function SearchableDonationList({
         filterLabel={filterLabel}
         initialInventory={initialInventory}
         daysAhead={daysAhead}
-        onDaysAheadChange={setDaysAhead}
+        onDaysAheadChange={handleDaysAheadChange}
+        onTabSelect={handleTabSelect}
         nearbyCpEvents={nearbyCpEvents}
       />
 
@@ -514,56 +644,114 @@ export default function SearchableDonationList({
         />
       </div>
       <div id="today-events" className="scroll-mt-44" />
+      <div id="upcoming-events" className="scroll-mt-44" />
+
+      {/* 分頁切換：今日 / 本週 / 即將開始 / 已過期 */}
+      <div
+        role="tablist"
+        aria-label="捐血活動時間範圍"
+        className="flex gap-2 overflow-x-auto pb-2 mb-4 -mx-2 px-2 scrollbar-none"
+      >
+        {TABS.map((tab) => {
+          const active = activeTab === tab.key;
+          const count = countEvents(tabDataset[tab.key]);
+          return (
+            <button
+              key={tab.key}
+              role="tab"
+              aria-selected={active}
+              onClick={() => handleTabSelect(tab.key)}
+              className={`flex shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+                active
+                  ? "border-gray-900 bg-gray-900 text-white"
+                  : "border-gray-200 bg-white text-gray-600 hover:border-gray-300 hover:bg-gray-50"
+              }`}
+            >
+              <span
+                className={`h-2 w-2 rounded-full ${active ? "bg-white" : tab.dot}`}
+              />
+              {tab.label}
+              <span
+                className={`rounded-full px-1.5 py-0.5 text-xs font-medium ${
+                  active ? "bg-white/20 text-white" : "bg-gray-100 text-gray-500"
+                }`}
+              >
+                {count}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* 日期分頁：分頁內橫跨多天時才出現 */}
+      {activeDates.length > 1 && (
+        <div
+          role="tablist"
+          aria-label="依日期篩選"
+          className="flex gap-1.5 overflow-x-auto pb-2 mb-3 -mx-2 px-2 scrollbar-none"
+        >
+          <button
+            role="tab"
+            aria-selected={selectedDate === null}
+            onClick={() => setSelectedDate(null)}
+            className={`shrink-0 rounded-lg border px-3 py-1.5 text-xs font-semibold transition-colors ${
+              selectedDate === null
+                ? "border-gray-800 bg-gray-100 text-gray-900"
+                : "border-gray-200 bg-white text-gray-500 hover:bg-gray-50"
+            }`}
+          >
+            全部 {countEvents(activeEvents)}
+          </button>
+          {activeDates.map((date) => {
+            const active = selectedDate === date;
+            return (
+              <button
+                key={date}
+                role="tab"
+                aria-selected={active}
+                onClick={() => setSelectedDate(date)}
+                className={`shrink-0 rounded-lg border px-3 py-1.5 text-xs font-semibold transition-colors ${
+                  active
+                    ? "border-gray-800 bg-gray-100 text-gray-900"
+                    : "border-gray-200 bg-white text-gray-500 hover:bg-gray-50"
+                }`}
+              >
+                {shortDateLabel(date)}
+                <span className="ml-1 font-normal text-gray-400">
+                  {activeEvents[date].length}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
       {/* 主要內容區 */}
       <div ref={contentRef} className="space-y-8 pb-20">
-        {/* 今日活動 */}
-        {renderEventSection(
-          visibleTodayEvents,
-          "今日活動",
-          <span className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-          </span>
-        )}
-        {hasMoreToday && <div ref={todaySentinelRef} className="h-px" />}
-
-        {/* 未來活動 */}
-        <div id="upcoming-events" className="scroll-mt-44" />
-        {renderEventSection(
-          visibleUpcomingEvents,
-          "即將開始",
-          <span className="inline-block w-2 h-2 rounded-full bg-blue-500 ml-1"></span>
-        )}
-
-        {/* 歷史活動控制 */}
-        <div className="pt-8 border-t border-gray-100">
-          <Button
-            variant="ghost"
-            onClick={() => setShowPastEvents(!showPastEvents)}
-            className="w-full flex items-center justify-center gap-2 text-gray-500 hover:text-gray-700 hover:bg-gray-50 h-12"
-          >
-            {showPastEvents ? (
-              <>
-                <ChevronUp className="w-4 h-4" />
-                隱藏已過期的活動
-              </>
-            ) : (
-              <>
-                <ChevronDown className="w-4 h-4" />
-                查看已過期的活動 ({Object.keys(pastEvents).length} 天)
-              </>
-            )}
-          </Button>
-
-          {showPastEvents && (
-            <div className="mt-6 opacity-60 hover:opacity-100 transition-opacity duration-300">
-              {renderEventSection(
-                pastEvents,
-                "已過期活動",
-                <span className="w-2 h-2 rounded-full bg-gray-400"></span>
+        <div key={`${activeTab}-${selectedDate ?? "all"}`}>
+          <p className="mb-3 text-xs text-gray-400">{activeTabHint}</p>
+          {activeTotal > 0 ? (
+            renderEventGrid(visibleActiveEvents)
+          ) : (
+            <div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50/60 px-6 py-12 text-center">
+              <p className="text-sm font-medium text-gray-600">
+                這個範圍目前沒有符合條件的捐血活動
+              </p>
+              <p className="mt-1 text-xs text-gray-400">
+                試著清除搜尋或篩選條件，或切換到其他時間範圍看看。
+              </p>
+              {activeTab !== "upcoming" && (
+                <button
+                  type="button"
+                  onClick={() => handleTabSelect("upcoming")}
+                  className="mt-4 inline-flex items-center gap-1 rounded-xl bg-gray-900 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-gray-800"
+                >
+                  看所有即將開始的活動
+                </button>
               )}
             </div>
           )}
+          {hasMoreCards && <div ref={listSentinelRef} className="h-px" />}
         </div>
       </div>
 
