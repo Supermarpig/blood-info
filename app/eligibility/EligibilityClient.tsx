@@ -2,11 +2,12 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "@/components/Link";
-import { RotateCcw, MapPin, Clock } from "lucide-react";
+import { RotateCcw, MapPin, Clock, ArrowRight } from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Draggable } from "gsap/Draggable";
 import confetti from "canvas-confetti";
+import QuizShareButtons from "@/components/QuizShareButtons";
 
 gsap.registerPlugin(useGSAP, Draggable);
 
@@ -346,9 +347,26 @@ function fireConfetti() {
   }, 550);
 }
 
+/* ─── Myth quiz cross-link ───────────────────────────────────── */
+
+function MythQuizPromo() {
+  return (
+    <Link
+      href="/myth-quiz"
+      className="mt-3 flex items-center justify-between gap-3 rounded-2xl border border-gray-200 bg-white px-4 py-3.5 transition-colors hover:border-gray-300 hover:bg-gray-50"
+    >
+      <span>
+        <span className="block text-sm font-semibold text-gray-800">捐血迷思大挑戰</span>
+        <span className="mt-0.5 block text-xs text-gray-500">10 題測出你破解了多少迷思</span>
+      </span>
+      <ArrowRight className="h-4 w-4 shrink-0 text-gray-400" />
+    </Link>
+  );
+}
+
 /* ─── Pass Result ────────────────────────────────────────────── */
 
-function PassResult({ onRestart }: { onRestart: () => void }) {
+function PassResult({ onRestart, pageUrl }: { onRestart: () => void; pageUrl: string }) {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => { fireConfetti(); }, []);
 
@@ -360,42 +378,53 @@ function PassResult({ onRestart }: { onRestart: () => void }) {
   }, { scope: ref });
 
   return (
-    <div ref={ref} className="bg-white rounded-3xl shadow-sm border border-emerald-200 p-7 text-center">
-      <div className="pass-icon w-20 h-20 mx-auto mb-4 rounded-full bg-emerald-100 border-4 border-emerald-300 flex items-center justify-center">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <path d="M7 18l7.5 7.5L29 10" stroke="#10b981" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+    <div ref={ref}>
+      <div className="bg-white rounded-3xl shadow-sm border border-emerald-200 p-7 text-center">
+        <div className="pass-icon w-20 h-20 mx-auto mb-4 rounded-full bg-emerald-100 border-4 border-emerald-300 flex items-center justify-center">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <path d="M7 18l7.5 7.5L29 10" stroke="#10b981" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+        <h2 className="pass-heading text-2xl font-bold text-emerald-600 mb-2">可以捐血！</h2>
+        <p className="pass-text text-gray-500 text-sm leading-relaxed mb-6">
+          你符合捐血資格，謝謝你願意伸出援手<br />
+          快去找附近的捐血活動吧！
+        </p>
+        <div className="pass-actions">
+          <Link
+            href="/"
+            className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-2xl font-bold text-base shadow-md mb-3"
+          >
+            <MapPin size={18} />
+            查詢附近捐血活動
+          </Link>
+          <button
+            onClick={onRestart}
+            className="flex items-center justify-center gap-2 w-full py-3 text-gray-400 hover:text-gray-600 text-sm transition-colors"
+          >
+            <RotateCcw size={14} />
+            重新測驗
+          </button>
+        </div>
       </div>
-      <h2 className="pass-heading text-2xl font-bold text-emerald-600 mb-2">可以捐血！</h2>
-      <p className="pass-text text-gray-500 text-sm leading-relaxed mb-6">
-        你符合捐血資格，謝謝你願意伸出援手<br />
-        快去找附近的捐血活動吧！
-      </p>
-      <div className="pass-actions">
-        <Link
-          href="/"
-          className="flex items-center justify-center gap-2 w-full py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-2xl font-bold text-base shadow-md mb-3"
-        >
-          <MapPin size={18} />
-          查詢附近捐血活動
-        </Link>
-        <button
-          onClick={onRestart}
-          className="flex items-center justify-center gap-2 w-full py-3 text-gray-400 hover:text-gray-600 text-sm transition-colors"
-        >
-          <RotateCcw size={14} />
-          重新測驗
-        </button>
+      <div className="pass-actions mt-4">
+        <QuizShareButtons
+          shareText={`我剛測了「我可以捐血嗎」測驗，結果是可以捐血！你也來測測看自己符不符合資格 → ${pageUrl}`}
+          shareUrl={pageUrl}
+          label="分享這個測驗，拉朋友一起測"
+        />
       </div>
+      <MythQuizPromo />
     </div>
   );
 }
 
 /* ─── Fail Result ────────────────────────────────────────────── */
 
-function FailResult({ failReason, onRestart }: {
+function FailResult({ failReason, onRestart, pageUrl }: {
   failReason: { msg: string; waitTime: string | null };
   onRestart: () => void;
+  pageUrl: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -408,38 +437,48 @@ function FailResult({ failReason, onRestart }: {
   }, { scope: ref });
 
   return (
-    <div ref={ref} className="bg-white rounded-3xl shadow-sm border border-orange-100 p-7 text-center">
-      <div className="fail-icon w-16 h-16 mx-auto mb-4 rounded-full bg-orange-50 border-4 border-orange-200 flex items-center justify-center">
-        <Clock className="w-7 h-7 text-orange-400" />
-      </div>
-      <h2 className="fail-heading text-xl font-bold text-orange-600 mb-3">這次暫時不行</h2>
-      <p className="fail-text text-gray-600 text-sm leading-relaxed mb-4">{failReason.msg}</p>
-      {failReason.waitTime && (
-        <div className="fail-wait flex items-center justify-center gap-2 bg-orange-50 border border-orange-200 rounded-2xl px-4 py-3 mb-5">
-          <span className="w-2 h-2 rounded-full bg-orange-400 flex-shrink-0" />
-          <span className="text-orange-700 text-sm font-medium">{failReason.waitTime}再來捐血</span>
+    <div ref={ref}>
+      <div className="bg-white rounded-3xl shadow-sm border border-orange-100 p-7 text-center">
+        <div className="fail-icon w-16 h-16 mx-auto mb-4 rounded-full bg-orange-50 border-4 border-orange-200 flex items-center justify-center">
+          <Clock className="w-7 h-7 text-orange-400" />
         </div>
-      )}
-      <p className="text-xs text-gray-400 mb-5">
-        有疑問可撥打捐血諮詢專線{" "}
-        <a href="tel:0800024995" className="text-rose-500 font-medium underline underline-offset-2">
-          0800-024-995
-        </a>
-      </p>
-      <ButtonAnimated
-        onClick={onRestart}
-        className="fail-restart flex items-center justify-center gap-2 w-full py-4 border-2 border-rose-200 bg-rose-50 text-rose-600 font-bold rounded-2xl"
-      >
-        <RotateCcw size={17} />
-        重新測驗
-      </ButtonAnimated>
+        <h2 className="fail-heading text-xl font-bold text-orange-600 mb-3">這次暫時不行</h2>
+        <p className="fail-text text-gray-600 text-sm leading-relaxed mb-4">{failReason.msg}</p>
+        {failReason.waitTime && (
+          <div className="fail-wait flex items-center justify-center gap-2 bg-orange-50 border border-orange-200 rounded-2xl px-4 py-3 mb-5">
+            <span className="w-2 h-2 rounded-full bg-orange-400 flex-shrink-0" />
+            <span className="text-orange-700 text-sm font-medium">{failReason.waitTime}再來捐血</span>
+          </div>
+        )}
+        <p className="text-xs text-gray-400 mb-5">
+          有疑問可撥打捐血諮詢專線{" "}
+          <a href="tel:0800024995" className="text-rose-500 font-medium underline underline-offset-2">
+            0800-024-995
+          </a>
+        </p>
+        <ButtonAnimated
+          onClick={onRestart}
+          className="fail-restart flex items-center justify-center gap-2 w-full py-4 border-2 border-rose-200 bg-rose-50 text-rose-600 font-bold rounded-2xl"
+        >
+          <RotateCcw size={17} />
+          重新測驗
+        </ButtonAnimated>
+      </div>
+      <div className="fail-restart mt-4">
+        <QuizShareButtons
+          shareText={`我剛測了「我可以捐血嗎」測驗，你也可以測測看自己符不符合捐血資格 → ${pageUrl}`}
+          shareUrl={pageUrl}
+          label="分享給朋友，讓他也測測看"
+        />
+      </div>
+      <MythQuizPromo />
     </div>
   );
 }
 
 /* ─── Main Component ─────────────────────────────────────────── */
 
-export default function EligibilityClient() {
+export default function EligibilityClient({ pageUrl }: { pageUrl: string }) {
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState(1);
   const [mood, setMood] = useState<Mood>("neutral");
@@ -593,8 +632,10 @@ export default function EligibilityClient() {
               </div>
             )}
 
-            {result === "pass" && <PassResult onRestart={restart} />}
-            {result === "fail" && failReason && <FailResult failReason={failReason} onRestart={restart} />}
+            {result === "pass" && <PassResult onRestart={restart} pageUrl={pageUrl} />}
+            {result === "fail" && failReason && (
+              <FailResult failReason={failReason} onRestart={restart} pageUrl={pageUrl} />
+            )}
 
           </div>
         </div>

@@ -454,6 +454,16 @@ export default function BloodTypePage() {
             <div className="space-y-2">
               {[
                 {
+                  href: "/myth-quiz",
+                  title: "捐血迷思大挑戰",
+                  desc: "10 題測出你破解了多少常見捐血迷思",
+                },
+                {
+                  href: "/eligibility",
+                  title: "我可以捐血嗎？資格快速測驗",
+                  desc: "8 題測出你今天符不符合捐血資格",
+                },
+                {
                   href: "/news/2026-07-28-blood-test-report-guide",
                   title: "抽血報告怎麼看？血紅素、白血球、血小板紅字代表什麼",
                   desc: "看懂血液常規報告上的每一個數字",

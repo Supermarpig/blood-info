@@ -18,6 +18,12 @@ export default function Footer() {
             <Link prefetch={false} href="/blood-type" className="hover:text-gray-800 transition-colors">
               血型遺傳
             </Link>
+            <Link prefetch={false} href="/eligibility" className="hover:text-gray-800 transition-colors">
+              我可以捐血嗎
+            </Link>
+            <Link prefetch={false} href="/myth-quiz" className="hover:text-gray-800 transition-colors">
+              迷思大挑戰
+            </Link>
             <Link prefetch={false} href="/record" className="hover:text-gray-800 transition-colors">
               紀錄本
             </Link>
