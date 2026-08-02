@@ -49,3 +49,9 @@ cloudflare-env.d.ts
 
 # updateData.js 健康檢查報告（由 GitHub Actions 讀取，不入版控）
 data-health.json
+
+# gscInsights.js 產出的 Search Console 分析結果（每次重跑，不入版控）
+/data-seo/
+
+# Search Console service account 金鑰 — 絕對不要進版控
+.gsc-service-account.json
