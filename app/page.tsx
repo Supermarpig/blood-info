@@ -2,7 +2,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import Link from "@/components/Link";
-import { Search as SearchIcon } from "lucide-react";
+import { Search as SearchIcon, CalendarDays } from "lucide-react";
 import SearchModal from "@/components/SearchModal";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
@@ -265,6 +265,15 @@ export default async function BloodDonationPage() {
         </div>
         <h1 className="sr-only">捐血活動查詢｜今天哪裡有捐血車</h1>
         <div className="flex items-center gap-2">
+          <Link
+            href="/calendar"
+            className="flex items-center gap-1.5 px-2 py-2 sm:px-3 rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-800 transition-colors"
+            aria-label="捐血活動月曆"
+            title="以月曆查看每日捐血活動"
+          >
+            <CalendarDays className="w-5 h-5" />
+            <span className="hidden sm:inline text-sm font-medium">月曆</span>
+          </Link>
           <SearchModal>
             <button className="p-2 rounded-full hover:bg-gray-100 transition-colors" aria-label="搜尋捐血活動">
               <SearchIcon className="w-5 h-5 text-gray-500" />
