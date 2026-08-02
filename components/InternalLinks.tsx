@@ -41,6 +41,25 @@ export default function InternalLinks() {
         </div>
       </div>
 
+      {/* 固定捐血點名錄 —— 錨點帶「捐血中心」，這是 /blood-center 的主要目標詞 */}
+      <div>
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2.5">
+          固定捐血點
+        </h2>
+        <Link
+          prefetch={false}
+          href="/blood-center"
+          className="flex flex-col bg-white border border-gray-100 rounded-xl px-4 py-3 hover:border-red-200 hover:bg-red-50/50 transition-colors"
+        >
+          <span className="text-sm font-semibold text-gray-800">
+            全台捐血中心與捐血站一覽
+          </span>
+          <span className="text-xs text-gray-400 mt-0.5">
+            各縣市固定捐血點地址與服務時間
+          </span>
+        </Link>
+      </div>
+
       {/* 縣市 */}
       <div>
         <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2.5">
