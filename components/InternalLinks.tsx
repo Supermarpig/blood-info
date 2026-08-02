@@ -54,8 +54,12 @@ export default function InternalLinks() {
               href={`/city/${c.slug}`}
               className="flex items-center bg-white border border-gray-100 rounded-xl px-3 py-2.5 hover:border-red-200 hover:bg-red-50/50 transition-colors"
             >
+              {/* 錨點必須帶「捐血」：這是首頁唯一連到縣市頁的地方，
+                  只寫「台中市」等於沒告訴 Google 這頁在講什麼。
+                  下方行政區區塊本來就是這樣寫，縣市這裡漏掉，
+                  結果 GSC 上「台中捐血」排到的是首頁而不是 /city/taichung。 */}
               <span className="text-xs font-medium text-gray-700">
-                {c.displayName}
+                {c.displayName}捐血
               </span>
             </Link>
           ))}
