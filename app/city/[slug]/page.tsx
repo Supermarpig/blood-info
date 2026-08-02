@@ -4,7 +4,13 @@ import Link from "@/components/Link";
 import { ChevronRight } from "lucide-react";
 import SearchableDonationList from "@/components/SearchableDonationList";
 import AddDonationEventModal from "@/components/AddDonationEventModal";
-import { getCityBySlug, getAllCitySlugs, getNearbyCities, CityConfig } from "@/lib/cityConfig";
+import {
+  getCityBySlug,
+  getAllCitySlugs,
+  getNearbyCities,
+  filterEventsByCity,
+  CityConfig,
+} from "@/lib/cityConfig";
 import { getDonations } from "@/lib/getDonations";
 import AdCard from "@/components/AdCard";
 import GuideCallout from "@/components/GuideCallout";
@@ -87,27 +93,6 @@ export async function generateMetadata({
       images: [`${baseUrl}/imgs/og-img.webp`],
     },
   };
-}
-
-function filterEventsByCity(
-  data: Record<string, DonationEvent[]>,
-  city: CityConfig
-): Record<string, DonationEvent[]> {
-  const filtered: Record<string, DonationEvent[]> = {};
-
-  Object.entries(data).forEach(([date, events]) => {
-    const matched = events.filter(
-      (event) =>
-        event.center === city.centerFilter &&
-        city.locationKeywords.some((kw) => event.location.includes(kw))
-    );
-
-    if (matched.length > 0) {
-      filtered[date] = matched;
-    }
-  });
-
-  return filtered;
 }
 
 function generateJsonLd(city: CityConfig, eventCount: number) {

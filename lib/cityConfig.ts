@@ -1290,3 +1290,35 @@ export function getNearbyCities(city: CityConfig): CityConfig[] {
     (c) => c.regionSlug === city.regionSlug && c.slug !== city.slug
   );
 }
+
+/** 縣市層級（排除行政區長尾頁），供篩選 UI 使用 */
+export function getTopLevelCities(): CityConfig[] {
+  return CITIES.filter((c) => c.level !== "district");
+}
+
+type CityMatchable = { center?: string; location: string };
+
+/** 單一活動是否屬於某縣市：捐血中心相符 + 地址含關鍵字 */
+export function eventMatchesCity(event: CityMatchable, city: CityConfig): boolean {
+  return (
+    event.center === city.centerFilter &&
+    city.locationKeywords.some((kw) => event.location.includes(kw))
+  );
+}
+
+/** 把 { 日期: 活動[] } 依縣市過濾，空日期會被移除 */
+export function filterEventsByCity<T extends CityMatchable>(
+  data: Record<string, T[]>,
+  city: CityConfig
+): Record<string, T[]> {
+  const filtered: Record<string, T[]> = {};
+
+  Object.entries(data).forEach(([date, events]) => {
+    const matched = events.filter((event) => eventMatchesCity(event, city));
+    if (matched.length > 0) {
+      filtered[date] = matched;
+    }
+  });
+
+  return filtered;
+}
