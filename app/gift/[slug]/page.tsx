@@ -65,7 +65,10 @@ export async function generateMetadata({
   const baseUrl = BASE_URL;
 
   return {
-    title: gift.title,
+    // 用 absolute 跳過 layout 的 "%s | 台灣捐血活動查詢" 模板：贈品標題本身就 22~28 字，
+    // 加 11 字後綴會變 33~39 字，SERP 一定截斷，被砍掉的是尾巴的「今日出車地點」那段。
+    // 同 /blood-center 與 /city 的處理。
+    title: { absolute: gift.title },
     description: gift.description,
     keywords: gift.keywords,
     alternates: {
@@ -107,6 +110,11 @@ function filterEventsByGift(
 
   Object.entries(data).forEach(([date, events]) => {
     const matchedEvents = events.filter((event) => {
+      // 品牌型贈品（全聯…）掛在 subTag，而且會橫跨兩個主分類，所以要另外比對
+      if (gift.subTagIds) {
+        const subTags = event.subTags || [];
+        return gift.subTagIds.some((s) => subTags.includes(s));
+      }
       const eventTags = event.tags || event.pttData?.tags || [];
       return eventTags.includes(gift.tagId);
     });

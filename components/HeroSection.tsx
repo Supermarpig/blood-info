@@ -13,6 +13,7 @@ import {
   Coffee,
   Package,
   UtensilsCrossed,
+  ShoppingCart,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -23,6 +24,7 @@ const GIFT_ICONS: Record<string, LucideIcon> = {
   "food-beverage": Coffee,
   "daily-necessities": Package,
   food: UtensilsCrossed,
+  pxmart: ShoppingCart,
 };
 import { Button } from "@/components/ui/button";
 import Link from "@/components/Link";
