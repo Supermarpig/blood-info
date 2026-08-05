@@ -14,7 +14,11 @@
 
 import { promises as fs } from "fs";
 import path from "path";
-import { CITIES, type CityConfig } from "@/lib/cityConfig";
+import { CITIES, filterEventsByCity, type CityConfig } from "@/lib/cityConfig";
+import {
+  SUPPLEMENTAL_STATIONS,
+  type SupplementalStation,
+} from "@/lib/fixedStationsSupplement";
 
 export interface StationEvent {
   location: string;
@@ -39,6 +43,8 @@ export interface FixedStation {
   coordinates: { lat: number; lng: number } | null;
   /** 這個點在資料裡出現過幾場，用來排序（常出現＝比較穩定的固定點） */
   sessionCount: number;
+  /** 只有人工補充的名錄才有（官方公告的電話）；反推出來的沒有 */
+  phone?: string;
 }
 
 /**
@@ -329,6 +335,72 @@ export async function loadAllStationEvents(): Promise<Record<string, StationEven
     }
   }
   return merged;
+}
+
+/** 人工補充名錄轉成 FixedStation；sessionCount 給 0（沒有場次可數，排序時落在反推的後面） */
+function toFixedStation(s: SupplementalStation): FixedStation {
+  return {
+    name: s.name,
+    address: s.address,
+    city: s.city,
+    citySlug: findCitySlug(s.address, null),
+    center: null,
+    hours: s.hours,
+    coordinates: null,
+    sessionCount: 0,
+    phone: s.phone,
+  };
+}
+
+/**
+ * 合併反推名錄與人工補充名錄，同名時**以人工補充為準**
+ *（那份抄自官方頁，地址與服務時間都比反推的完整，還多了電話）。
+ */
+function mergeWithSupplement(
+  base: FixedStation[],
+  supplement: FixedStation[]
+): FixedStation[] {
+  const byName = new Map(base.map((s) => [s.name, s]));
+  for (const s of supplement) byName.set(s.name, s);
+  return [...byName.values()].sort(
+    (a, b) => b.sessionCount - a.sessionCount || a.name.localeCompare(b.name, "zh-TW")
+  );
+}
+
+/** 全站固定捐血點名錄（反推 + 人工補充），給 /blood-center 用 */
+export function getAllFixedStations(
+  data: Record<string, StationEvent[]>
+): FixedStation[] {
+  return mergeWithSupplement(
+    extractFixedStations(data),
+    SUPPLEMENTAL_STATIONS.map(toFixedStation)
+  );
+}
+
+/**
+ * 取某個縣市／行政區頁該顯示的固定捐血點。
+ *
+ * 反推的部分刻意複用 filterEventsByCity 而不是自己比對 station.citySlug：
+ * - citySlug 只反查得到縣市層級，板橋／中壢／左營這些行政區頁會全部落空，
+ *   但 GSC 顯示「板橋捐血站」單一查詢就有 469 曝光，正是最需要這塊內容的頁。
+ * - 城市頁的活動列表本來就用這支篩，兩邊同一套規則才不會出現
+ *   「活動列在板橋頁、捐血室卻沒列」的前後不一致。
+ *
+ * 人工補充的部分則直接用地址比對 locationKeywords——它們不是活動，沒有 center 欄位可篩，
+ * 而且官方地址一定帶完整的縣市＋行政區，比對得比反推的還準。
+ */
+export function getStationsForCity(
+  data: Record<string, StationEvent[]>,
+  city: CityConfig
+): FixedStation[] {
+  const supplement = SUPPLEMENTAL_STATIONS.filter((s) =>
+    city.locationKeywords.some((kw) => s.address.includes(kw))
+  ).map(toFixedStation);
+
+  return mergeWithSupplement(
+    extractFixedStations(filterEventsByCity(data, city)),
+    supplement
+  );
 }
 
 export interface CityGroup {

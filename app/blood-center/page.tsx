@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import Link from "@/components/Link";
-import { ChevronRight, MapPin, Clock, Building2, Info, ArrowRight } from "lucide-react";
+import { ChevronRight, MapPin, Clock, Phone, Building2, Info, ArrowRight } from "lucide-react";
 import { BASE_URL } from "@/lib/baseUrl";
 import { REGIONS } from "@/lib/regionConfig";
 import {
   loadAllStationEvents,
-  extractFixedStations,
+  getAllFixedStations,
   groupStationsByCity,
 } from "@/lib/bloodCenters";
 
@@ -67,7 +67,7 @@ function mapUrl(address: string, coordinates: { lat: number; lng: number } | nul
 
 export default async function BloodCenterPage() {
   const events = await loadAllStationEvents();
-  const stations = extractFixedStations(events);
+  const stations = getAllFixedStations(events);
   const groups = groupStationsByCity(stations);
 
   return (
@@ -155,6 +155,17 @@ export default async function BloodCenterPage() {
                     <Clock className="w-3 h-3 shrink-0 text-gray-400" />
                     {station.hours ?? "以現場公告為準"}
                   </p>
+                  {station.phone && (
+                    <p className="flex items-center gap-1.5 text-xs text-gray-500 mt-1">
+                      <Phone className="w-3 h-3 shrink-0 text-gray-400" />
+                      <a
+                        href={`tel:${station.phone.replace(/[^\d+#]/g, "")}`}
+                        className="hover:text-gray-900 underline underline-offset-2 decoration-gray-300"
+                      >
+                        {station.phone}
+                      </a>
+                    </p>
+                  )}
                 </li>
               ))}
             </ul>

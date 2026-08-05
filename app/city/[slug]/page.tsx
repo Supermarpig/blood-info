@@ -12,9 +12,11 @@ import {
   CityConfig,
 } from "@/lib/cityConfig";
 import { getDonations } from "@/lib/getDonations";
+import { loadAllStationEvents, getStationsForCity } from "@/lib/bloodCenters";
 import AdCard from "@/components/AdCard";
 import GuideCallout from "@/components/GuideCallout";
 import CityGiftHighlight from "@/components/CityGiftHighlight";
+import CityFixedStations from "@/components/CityFixedStations";
 import RecentOnsiteReports from "@/components/RecentOnsiteReports";
 import { BASE_URL } from "@/lib/baseUrl";
 
@@ -64,7 +66,10 @@ export async function generateMetadata({
   const baseUrl = BASE_URL;
 
   return {
-    title: city.title,
+    // 用 absolute 跳過 layout 的 "%s | 台灣捐血活動查詢" 模板。城市標題本身就有 24~26 字，
+    // 加上 11 字的品牌後綴會變成 35~37 字，在 SERP 一定被截斷——而被砍掉的正是尾巴的
+    // 「捐血活動贈品2026」，也就是這些頁最會轉換的那組字。/blood-center 已經這樣處理。
+    title: { absolute: city.title },
     description: city.description,
     keywords: city.keywords,
     alternates: {
@@ -166,6 +171,11 @@ export default async function CityPage({ params }: PageProps) {
     0
   );
 
+  // 固定捐血點名錄：讀全部月份檔（不是只有當月＋次月），因為一個捐血室不會
+  // 因為這兩個月剛好沒被爬到就不存在。只在 build 期讀得到 /data，Workers runtime
+  // 拿不到檔案時會回空陣列，區塊自然不顯示。
+  const stations = getStationsForCity(await loadAllStationEvents(), city);
+
   const jsonLd = generateJsonLd(city, totalEvents);
   const nearbyCities = getNearbyCities(city);
 
@@ -206,6 +216,9 @@ export default async function CityPage({ params }: PageProps) {
       <p className="text-sm text-gray-500 mb-6">{city.intro}</p>
 
       <SearchableDonationList data={data} currentCitySlug={slug} />
+
+      {/* 固定捐血點（接「{城市}捐血中心／捐血站／捐血室」查詢，這群詞不挑星期） */}
+      <CityFixedStations displayName={city.displayName} stations={stations} />
 
       <AdCard slot={AD_SLOT_CITY} variant="inline" className="mt-8" />
 
