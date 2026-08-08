@@ -2066,7 +2066,7 @@
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
       "tags": [],
       "pttData": {
-        "rawLine": "8/1-8/31，50-65歲於新北各固定捐血站、室完成首次捐血，加贈英雄舒活組合包一份(送完",
+        "rawLine": "8/1-8/31，50-65歲於台北各固定捐血站、室完成首次捐血，加贈英雄舒活組合包一份(送完",
         "images": [
           "https://i.imgur.com/NkWBUxL.jpeg"
         ]
@@ -2083,7 +2083,7 @@
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
       "tags": [],
       "pttData": {
-        "rawLine": "8/1-8/31，50-65歲於基隆捐血站完成首次捐血，加贈英雄舒活組合包一份(送完為止)",
+        "rawLine": "8/1-8/31，50-65歲於台北各固定捐血站、室完成首次捐血，加贈英雄舒活組合包一份(送完",
         "images": [
           "https://i.imgur.com/NkWBUxL.jpeg"
         ]
@@ -2100,7 +2100,7 @@
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
       "tags": [],
       "pttData": {
-        "rawLine": "8/1-8/31，50-65歲於宜蘭捐血站完成首次捐血，加贈英雄舒活組合包一份(送完為止)",
+        "rawLine": "8/1-8/31，50-65歲於台北各固定捐血站、室完成首次捐血，加贈英雄舒活組合包一份(送完",
         "images": [
           "https://i.imgur.com/NkWBUxL.jpeg"
         ]
@@ -2117,7 +2117,7 @@
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
       "tags": [],
       "pttData": {
-        "rawLine": "8/1-8/31，50-65歲於花蓮捐血站完成首次捐血，加贈英雄舒活組合包一份(送完為止)",
+        "rawLine": "8/1-8/31，50-65歲於台北各固定捐血站、室完成首次捐血，加贈英雄舒活組合包一份(送完",
         "images": [
           "https://i.imgur.com/NkWBUxL.jpeg"
         ]
@@ -7368,7 +7368,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 25.0415111,
         "lng": 121.5484258
@@ -7408,7 +7407,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 23.9782947,
         "lng": 121.5996726
@@ -7499,15 +7497,7 @@
             "confidence": 54
           }
         ]
-      },
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ]
+      }
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDgvMDgtMDk6MDB+MTY6MzAt5reh5rC05Y2A6YSn5YWs6YeM56aP5b635a6u",
@@ -7578,23 +7568,9 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 25.044291,
         "lng": 121.5057097
-      }
-    },
-    {
-      "id": "5Y+w5YyXLTIwMjYvMDgvMDgtMDk6MzB+MTY6MzAt5LiJ6Iqd542F5pyDQiAx",
-      "time": "09:30~16:30",
-      "organization": "三芝獅會B 1",
-      "location": "新北市三芝區淡金路一段38號(三芝國中)",
-      "activityDate": "2026-08-08",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q212489000637249470",
-      "coordinates": {
-        "lat": 25.259347,
-        "lng": 121.5018147
       }
     },
     {
@@ -7618,9 +7594,6 @@
           }
         ]
       },
-      "tags": [
-        "電影票"
-      ],
       "coordinates": {
         "lat": 25.0354793,
         "lng": 121.5663914
@@ -7660,12 +7633,6 @@
           }
         ]
       },
-      "tags": [
-        "食品"
-      ],
-      "subTags": [
-        "食品－米"
-      ],
       "coordinates": {
         "lat": 24.8108593,
         "lng": 120.9577185
@@ -7692,7 +7659,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 24.6921554,
         "lng": 120.8796045
@@ -7719,12 +7685,6 @@
           }
         ]
       },
-      "tags": [
-        "食品"
-      ],
-      "subTags": [
-        "食品－米"
-      ],
       "coordinates": {
         "lat": 24.9929776,
         "lng": 121.3058
@@ -7790,7 +7750,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 24.962725,
         "lng": 121.2236022
@@ -7869,7 +7828,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 23.8170737,
         "lng": 120.7225649
@@ -7909,7 +7867,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 23.5761376,
         "lng": 120.3038055
@@ -7936,12 +7893,6 @@
           }
         ]
       },
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯"
-      ],
       "coordinates": {
         "lat": 24.2395276,
         "lng": 120.5492143
@@ -8033,7 +7984,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 22.6897737,
         "lng": 120.488831
@@ -8086,16 +8036,6 @@
           }
         ]
       },
-      "tags": [
-        "禮券",
-        "超商",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "超商－全聯",
-        "禮券－全聯"
-      ],
       "coordinates": {
         "lat": 22.6829286,
         "lng": 120.356909
@@ -8193,16 +8133,6 @@
           "https://i.imgur.com/krReHTU.jpeg"
         ]
       },
-      "tags": [
-        "禮券",
-        "超商",
-        "生活用品"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯",
-        "生活用品－衛生紙"
-      ],
       "coordinates": {
         "lat": 23.1324288,
         "lng": 120.2967849
@@ -8229,19 +8159,6 @@
           }
         ]
       },
-      "tags": [
-        "禮券",
-        "超商",
-        "餐飲",
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－蛋",
-        "超商－全聯",
-        "餐飲－早餐",
-        "生活用品－衛生紙"
-      ],
       "coordinates": {
         "lat": 22.5777505,
         "lng": 120.321695
@@ -8303,7 +8220,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 22.5438408,
         "lng": 120.459217
@@ -8330,45 +8246,9 @@
           }
         ]
       },
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
       "coordinates": {
         "lat": 23.001842,
         "lng": 120.2092165
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMDgtOC84KOWFrSnlrpzomK3mjZDooYDnq5k=",
-      "time": "",
-      "organization": "宜蘭捐血站",
-      "location": "宜蘭捐血站",
-      "activityDate": "2026-08-08",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/8(六)宜蘭捐血站",
-        "images": [
-          "https://i.imgur.com/CsLO0Kf.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/CsLO0Kf.jpeg",
-            "text": "人 一 2 2 人\n2NNS 多 2\nWAY 剛 3 和 剛 22\n和 去 )\n087/0807\nk 條 人\n3\n宣 蘭 儿 血 站 ”\n2 但 欄 在 負 玫 路 16-7 號 上 0\n人 @ 急 師 鮑 二 > 08:00-17:00 //,\n捐血 感恩 禮 :\n含 勸募\n, 聯 合 勒 募 禮 3 張\n彈 ( 捐 500CC 贈 送 2 份 )\n品 數 量 有 限 , 送 完 為 止\n二 捐血 前 小 叮嚀\nss 捐血 請 攜帶 身份 證 (可 加 速 捐血 流程 ) 。\n\\A_ 長 如 有 健康 疑慮 (手術 誤 出 國 疫 區 ), 請 先 查詢 台 灣 血 液 基金 會 健康 標準 。\n4 捐血 前 8 小 時 請 勿 飲酒 , 襄 足 睡眠 、 匆 空腹 捐血 。\n和\n生 辦 暢 位 : 得 安 診 所\n協辦 單位 : 安 得 傘 所\n宜蘭 縣 成 美 國 際 同 濟 會\n贊助 單位 : 安 得 管理 顧問 股份 有 限 分 司\n",
-            "confidence": 63
-          }
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 24.74435,
-        "lng": 121.7506361
       }
     }
   ],
@@ -8406,16 +8286,7 @@
             "confidence": 48
           }
         ]
-      },
-      "tags": [
-        "餐飲",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "食品－蛋糕",
-        "餐飲－飲料"
-      ]
+      }
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDgvMDktMDg6MDB+MTc6MDAt5bel6Z2S5LqM6ZqK",
@@ -8522,19 +8393,6 @@
       }
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDgvMDktMDk6MDB+MTc6MDAt5paw5YyX5biC5LiJ6YeN5Y2A5a2d6aCG6YGT5b635L+D6YCy5pyD",
-      "time": "09:00~17:00",
-      "organization": "新北市三重區孝順道德促進會",
-      "location": "新北市三重區仁愛街111號土崙公",
-      "activityDate": "2026-08-09",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q212489021081521982",
-      "coordinates": {
-        "lat": 25.0743531,
-        "lng": 121.4957707
-      }
-    },
-    {
       "id": "5Y+w5YyXLTIwMjYvMDgvMDktMDk6MzB+MTY6MzAt5LiJ6bav542F5a2Q5pyDQiAy",
       "time": "09:30~16:30",
       "organization": "三鶯獅子會B 2",
@@ -8580,8 +8438,7 @@
             "confidence": 66
           }
         ]
-      },
-      "tags": []
+      }
     },
     {
       "id": "5Y+w5YyXLTIwMjYvMDgvMDktMTE6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSAz5Y2A5Y+w5YyX5biCQUnkurrlt6XmmbrmhafnjYXlrZDmnIM=",
@@ -8645,19 +8502,6 @@
       }
     },
     {
-      "id": "5Y+w5YyXLTIwMjYvMDgvMDktMDk6MzB+MTY6MzAt5Z+66ZqG5biC5aSp6KGM6ICF5oWI5ZaE5Y2U5pyD",
-      "time": "09:30~16:30",
-      "organization": "基隆市天行者慈善協會",
-      "location": "基隆市仁愛區愛二路78號(基隆二信)",
-      "activityDate": "2026-08-09",
-      "center": "台北",
-      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q212489013273783414",
-      "coordinates": {
-        "lat": 25.1296829,
-        "lng": 121.7427441
-      }
-    },
-    {
       "id": "5Y+w5YyXLTIwMjYvMDgvMDktMDk6MzB+MTY6MzAt5pa56ZGr542F5a2Q5pyDQiAy",
       "time": "09:30~16:30",
       "organization": "方鑫獅子會B 2",
@@ -8717,15 +8561,6 @@
           }
         ]
       },
-      "tags": [
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－蛋",
-        "生活用品－衛生紙",
-        "生活用品－保溫杯"
-      ],
       "coordinates": {
         "lat": 24.8108593,
         "lng": 120.9577185
@@ -8778,15 +8613,6 @@
           }
         ]
       },
-      "tags": [
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－蛋",
-        "生活用品－衛生紙",
-        "生活用品－保溫杯"
-      ],
       "coordinates": {
         "lat": 24.8336688,
         "lng": 120.997844
@@ -8878,7 +8704,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 23.959301,
         "lng": 120.5695517
@@ -8911,14 +8736,6 @@
           "https://i.imgur.com/CJtn0Dc.jpeg"
         ]
       },
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
       "coordinates": {
         "lat": 24.0572566,
         "lng": 120.4350548
@@ -8958,14 +8775,6 @@
           }
         ]
       },
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－百貨"
-      ],
       "coordinates": {
         "lat": 24.1641111,
         "lng": 120.6421111
@@ -9005,7 +8814,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 24.0816236,
         "lng": 120.5383779
@@ -9167,7 +8975,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 22.6897737,
         "lng": 120.488831
@@ -9194,9 +9001,6 @@
           }
         ]
       },
-      "tags": [
-        "禮券"
-      ],
       "coordinates": {
         "lat": 22.9985349,
         "lng": 120.1853155
@@ -9255,17 +9059,6 @@
           "https://i.imgur.com/OKvKw0X.jpeg"
         ]
       },
-      "tags": [
-        "餐飲",
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "食品－蛋",
-        "餐飲－咖啡",
-        "生活用品－毛巾"
-      ],
       "coordinates": {
         "lat": 22.6127672,
         "lng": 120.3043248
@@ -9292,7 +9085,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 22.5955737,
         "lng": 120.3314338
@@ -9338,12 +9130,6 @@
           "https://i.imgur.com/YWwCIFI.jpeg"
         ]
       },
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯"
-      ],
       "coordinates": {
         "lat": 22.6374475,
         "lng": 120.3385598
@@ -9411,14 +9197,6 @@
           "https://i.imgur.com/f1cNhMt.jpeg"
         ]
       },
-      "tags": [
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "生活用品－衛生紙"
-      ],
       "coordinates": {
         "lat": 23.310485,
         "lng": 120.3156425
@@ -9436,141 +9214,135 @@
         "lat": 23.0006759,
         "lng": 120.2282403
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMDktOC85KOaXpSnlj7DkuK3ku4HlkozmjZDooYDou4o=",
-      "time": "",
-      "organization": "台中仁和捐血車",
-      "location": "台中仁和捐血車",
-      "activityDate": "2026-08-09",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/9(日)台中仁和捐血車",
-        "images": [
-          "https://i.imgur.com/g5xZoEq.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/g5xZoEq.jpeg",
-            "text": "一 一 有 雅 豐 不 動產 團隊 @% 一 一\n/,\\ 2 人 了 半 呈\n11 自\n\n人 損 出 一 袋 熱血 延續 無 數 生 命 的 希望 。 )\n\n》;#m# | 115.08.09 ()\nG0 活動 時 間 | 上 午 10:00 - 下 午 5:00\n(CC》 汪 mit5i | 仁和 捐血 車\n( 北 屯 區 昌平 路 與 松竹 路 口 )\n*\" 爹 靖 血 做 公益 | 好 禮 旋 心意 @ 4\n有 有 血 li 也 du\n人 仿\n廬 點 就 送\n褒 100z 。 痢 200z sa #rx\n全 聯 禮券 全 聯 禮券 三 段 風 速 完 電 風扇\n\n單位 中 華 民國 不 動產 仲介 經 紀 商 業 同 業 公會 全 國 聯合 會\n直人 人 導 台 中 市 不 動產 仲介 經 紀 商 業 同 業 公 會 人\n承辦 單位 | 侈 雅 豐 不 動產 團隊\n",
-            "confidence": 66
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMDktOC85KOaXpSnlj7DkuK3lpKrljp/ot6/kuInmrrXoiIfnpaXpoIbot6/kuIDmrrXot6/lj6M=",
-      "time": "",
-      "organization": "台中太原路三段與祥順路一段路口",
-      "location": "台中太原路三段與祥順路一段路口",
-      "activityDate": "2026-08-09",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "8/9(日)台中太原路三段與祥順路一段路口",
-        "images": [
-          "https://i.imgur.com/Wu462Gg.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMDktOC85KOaXpSnlvbDljJbmjZDooYDnq5k=",
-      "time": "",
-      "organization": "彰化捐血站",
-      "location": "彰化捐血站",
-      "activityDate": "2026-08-09",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/9(日)彰化捐血站",
-        "images": [
-          "https://i.imgur.com/vu2odPM.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 24.0606039,
-        "lng": 120.5352666
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMDktOC85KOaXpSnlj7DljZflronljZfntpzlkIjovrLnlKLlk4HmibnnmbzluILloLQ=",
-      "time": "",
-      "organization": "台南安南綜合農產品批發市場",
-      "location": "台南安南綜合農產品批發市場",
-      "activityDate": "2026-08-09",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/9(日)台南安南綜合農產品批發市場",
-        "images": [
-          "https://i.imgur.com/pyA7WVA.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/pyA7WVA.jpeg",
-            "text": "g 司 捐血 活動\n日, 過\n共 襄 盛 舉 。\n蔬 革 ~\n天 地 有 作 育 大 德 、 我 豈 無 慈悲 宏願 。 各\n| 日 期\n【\n@ 115 年 售\n8 月 9 日 @ @ 9\n【\n@ | 時 間 餓\n8:00~16:30 人\n2 | 地 點 捐 出 熱血\n台 南 市 綜合 農產品 批 發 市 場 二 # 款 計 1 衝 全\n(台 南 市 安南 區 怡 安 路 102 號 )\n250cc 送\n0 amsa 全 聯 提貨 券 3 張\nSa\n全 聯 提貨 券 6 張\n國 2 位, 【 協辦 單位\n社團 法 人 邱 昭 勝\n台 南 市 太 陽 慈 善 會 | 議員 服務 處\n捐血 有 愛 俯 因為 有 您 俯 讓 社會 更 溫暖 !\n",
-            "confidence": 71
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMDktOC85KOaXpSnoirHok67mjZDooYDnq5kv6YGg55m+5ZKM5bmz5buj5aC0",
-      "time": "",
-      "organization": "花蓮捐血站/遠百和平廣場",
-      "location": "花蓮捐血站/遠百和平廣場",
-      "activityDate": "2026-08-09",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/9(日)花蓮捐血站/遠百和平廣場",
-        "images": [
-          "https://i.imgur.com/3WJpI2Z.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/3WJpI2Z.jpeg",
-            "text": "二 永久 產品 公司\n比 >o2e 全 2 了\n冤 信和 沁\n袋 袋 奶 電 3\n\n人 加 說\n\n喲 ka 店 器 近 序 閃\n\nMA 和\n\n3 加 一 4\n2\n",
-            "confidence": 21
-          }
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-10": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTAtMTA6MDB+MTc6MDAt5Y+w5YyX5biC5LiN5YuV55Si5Luy5LuL57aT57SA5ZWG5qWt5ZCM5qWt5YWs5pyD",
+      "time": "10:00~17:00",
+      "organization": "台北市不動產仲介經紀商業同業公會",
+      "location": "臺北市松山區八德路三段76號(中崙市場)",
+      "activityDate": "2026-08-10",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390936546194569"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTAtMTA6MzB+MTc6MDAtKOiKsSnkuK3mraPpuqXnlbbli54=",
+      "time": "10:30~17:00",
+      "organization": "(花)中正麥當勞",
+      "location": "花蓮中正麥當勞店前(花蓮市中正路625號)",
+      "activityDate": "2026-08-10",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390936081063597",
+      "coordinates": {
+        "lat": 23.9791736,
+        "lng": 121.6099754
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTAtMDk6MzB+MTY6MzAt5ZyL5rOw5Lq65aO95Z+655Ge6YCa6KiK6JmV",
+      "time": "09:30~16:30",
+      "organization": "國泰人壽基瑞通訊處",
+      "location": "基隆市仁愛區仁一路281號(中巴)",
+      "activityDate": "2026-08-10",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390935902215542",
+      "coordinates": {
+        "lat": 25.128421,
+        "lng": 121.747276
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTAtMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-08-10",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390935368346515",
+      "coordinates": {
+        "lat": 25.1285625,
+        "lng": 121.7566158
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTAtMDg6MDB+MTc6MDAt5a6c6Jit6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "宜蘭郵局",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2026-08-10",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390931818579083",
+      "coordinates": {
+        "lat": 24.7443841,
+        "lng": 121.750738
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTAtMDg6MzB+MTc6MDAt6Iqx6JOu5LiN5YuV55Si5Luy5LuL5YWs5pyD",
+      "time": "08:30~17:00",
+      "organization": "花蓮不動產仲介公會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-08-10",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390931353458001",
+      "coordinates": {
+        "lat": 23.9997389,
+        "lng": 121.5919821
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTAtMDk6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "09:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "新北市汐止區新台五路一段207號11樓B室(配合汐止室)",
+      "activityDate": "2026-08-10",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390930630721038",
+      "coordinates": {
+        "lat": 25.0637253,
+        "lng": 121.6567136
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTAtMDk6MzB+MTY6MzAt5LqU56aP542F5pyDQiAy",
+      "time": "09:30~16:30",
+      "organization": "五福獅會B 2",
+      "location": "新北市樹林區保安街一段7號(濟安宮對面)",
+      "activityDate": "2026-08-10",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390930274600056",
+      "coordinates": {
+        "lat": 24.9935079,
+        "lng": 121.4266193
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTAtMTA6MDB+MTc6MDAt5L+h576p5oi/5bGL5qWt5YWr5Y2A",
+      "time": "10:00~17:00",
+      "organization": "信義房屋業八區",
+      "location": "臺北市中山區南京東路二段148號",
+      "activityDate": "2026-08-10",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390924723467597",
+      "coordinates": {
+        "lat": 25.0518241,
+        "lng": 121.5341483
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTAtMDg6MDB+MTc6MDAt5p2/5qmL6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "板橋郵局",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-08-10",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390920096852001",
+      "coordinates": {
+        "lat": 25.0315012,
+        "lng": 121.4706982
+      }
+    },
     {
       "id": "5paw56u5LTIwMjYvMDgvMTAtMDg6MDB+MTc6MDAt5paw56u557ij5LiN5YuV55Si5Luy5LuL57aT57SA5ZWG5qWt5ZCM5qWt5YWs5pyD",
       "time": "08:00~17:00",
@@ -9650,14 +9422,6 @@
           "https://i.imgur.com/rME6Emg.jpeg"
         ]
       },
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
       "coordinates": {
         "lat": 23.9762982,
         "lng": 120.6833542
@@ -9697,9 +9461,6 @@
           }
         ]
       },
-      "tags": [
-        "禮券"
-      ],
       "coordinates": {
         "lat": 24.1583933,
         "lng": 120.6411671
@@ -9921,9 +9682,6 @@
           }
         ]
       },
-      "tags": [
-        "禮券"
-      ],
       "coordinates": {
         "lat": 22.6153148,
         "lng": 120.2950584
@@ -9989,7 +9747,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 23.310485,
         "lng": 120.3156425
@@ -10016,7 +9773,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 22.666698,
         "lng": 120.3218713
@@ -10043,7 +9799,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 22.72947,
         "lng": 120.3466819
@@ -10061,61 +9816,170 @@
         "lat": 22.9674925,
         "lng": 120.1857017
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTAtOC8xMCjkuIAp5paw5YyX5qi55p6X5r+f5a6J5a6u",
-      "time": "",
-      "organization": "新北樹林濟安宮",
-      "location": "新北樹林濟安宮",
-      "activityDate": "2026-08-10",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/10(一)新北樹林濟安宮",
-        "images": [
-          "https://i.imgur.com/wcfvP0B.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 24.9938647,
-        "lng": 121.4269278
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTAtOC8xMCjkuIAp5Y+w5Y2X5Y2X5Y2A5aSP6YO95Z+O5peF",
-      "time": "",
-      "organization": "台南南區夏都城旅",
-      "location": "台南南區夏都城旅",
-      "activityDate": "2026-08-10",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/10(一)台南南區夏都城旅",
-        "images": [
-          "https://i.imgur.com/eqeNMSv.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/eqeNMSv.jpeg",
-            "text": "捐血 條 件 : 捐血 注意 事項 :\n置 嵌 崗 1 年齡 17-65 歲 1 攜帶 身分 證\n2. 體 重 45 公 斤 以 上 2. 睡 飽 吃 飽 來 捐血\n~ 一 站 ~\n和 房 知 壺 厂 媽 誠 旁 7/ 敘 上 4\n和 oo e@\n令 S2\n馮 房 活 旺 生 5.\n捐血 贈\n日 期 : 8/10( 一 ) 250cc: 聖 大 臣 砂 了 券 50x 朮\n和 平 咖 兌 換 券 選 張 (一\n時 間 : 10:00-18:00 當 上 人 密 個 。 品\n地 點 : 南 區 500cc: 聖 大 臣 耕 券 120。\n點: 南 區 夏 都 城 旅 旁 和平 曙 人 換 閃 張 (fa 品\n(新 和 東路 & 新 建 路 交 偏 口 ) 洗 昭 生 兩 個 r\n感謝 美 食 店 家 愛 心 助力 聖 大 覽 酥 雞 / 和 平 咖\n",
-            "confidence": 60
-          }
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-11": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMDk6MzB+MTY6MzAt5qie55+z5ZCM5r+f5pyDKOWMl+W4guWNgCk=",
+      "time": "09:30~16:30",
+      "organization": "樞石同濟會(北市區)",
+      "location": "臺北市大同區酒泉街+庫倫街口(大龍峒孔廟)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390949626417641",
+      "coordinates": {
+        "lat": 25.0727623,
+        "lng": 121.5161793
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMDg6MzB+MTc6MDAt6Iqx6JOu5LiN5YuV55Si5Luy5LuL5YWs5pyD",
+      "time": "08:30~17:00",
+      "organization": "花蓮不動產仲介公會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390949260386668",
+      "coordinates": {
+        "lat": 23.9997389,
+        "lng": 121.5919821
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMDk6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "09:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "新北市汐止區新台五路一段207號11樓B室(配合汐止室)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390948448669696",
+      "coordinates": {
+        "lat": 25.0637253,
+        "lng": 121.6567136
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMDk6MzB+MTY6MzAt5a6J5qGC542F5pyDQiAx",
+      "time": "09:30~16:30",
+      "organization": "安桂獅會B 1",
+      "location": "新北市林口區文化一路與仁愛一路口(林口運動公園)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390948082538614"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMDg6MDB+MTc6MDAt5p2/5qmL6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "板橋郵局",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390947803790669",
+      "coordinates": {
+        "lat": 25.0315012,
+        "lng": 121.4706982
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMTA6MzB+MTc6MDAtKOiKsSnkuK3mraPpuqXnlbbli54=",
+      "time": "10:30~17:00",
+      "organization": "(花)中正麥當勞",
+      "location": "花蓮中正麥當勞店前(花蓮市中正路625號)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390944998801155",
+      "coordinates": {
+        "lat": 23.9791736,
+        "lng": 121.6099754
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMTE6MDB+MTk6MDAt5Y+w5YyX5biC6ZuZ5ZyS542F5a2Q5pyDQTI=",
+      "time": "11:00~19:00",
+      "organization": "台北市雙園獅子會A2",
+      "location": "臺北市大安區B1東區地下街9號出口旁副走道(第四廣場旁配合忠孝室)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390944354922127",
+      "coordinates": {
+        "lat": 25.0415111,
+        "lng": 121.5484258
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMTA6MDB+MTc6MDAt5Lit5bGx5Y2A5aSn55u06YeM",
+      "time": "10:00~17:00",
+      "organization": "中山區大直里",
+      "location": "臺北市中山區大直街25號(大直圖書館前)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390943710053100",
+      "coordinates": {
+        "lat": 25.081884,
+        "lng": 121.5467567
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390943175175173",
+      "coordinates": {
+        "lat": 25.1285625,
+        "lng": 121.7566158
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMDk6MzB+MTY6MzAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+46Ie65YyX6YO15bGA",
+      "time": "09:30~16:30",
+      "organization": "中華郵政股份有限公司臺北郵局",
+      "location": "臺北市忠孝西路一段114號",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390942531206155"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMTA6MDB+MTg6MDAt5aSn6I+v5Zq05a+6",
+      "time": "10:00~18:00",
+      "organization": "大華嚴寺",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390937625942614",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMTA6MDB+MTc6MDAt5Lit5ZyL5L+h6KiX5ZWG5qWt6YqA6KGM6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "10:00~17:00",
+      "organization": "中國信託商業銀行股份有限公司",
+      "location": "臺北市南港區經貿二路106巷",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390937269811642",
+      "coordinates": {
+        "lat": 25.0581861,
+        "lng": 121.6154469
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTEtMDg6MDB+MTc6MzAt5Y+w54Gj5Zyf6YqA57i96KGM",
+      "time": "08:00~17:30",
+      "organization": "台灣土銀總行",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-08-11",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390932997327138",
+      "coordinates": {
+        "lat": 25.0328333,
+        "lng": 121.516972
+      }
+    },
     {
       "id": "5paw56u5LTIwMjYvMDgvMTEtMDk6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5paw56u556ys5YWt5YiG5pyD",
       "time": "09:00~17:00",
@@ -10386,13 +10250,6 @@
           "https://i.imgur.com/eBohuid.jpeg"
         ]
       },
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯"
-      ],
       "coordinates": {
         "lat": 23.959301,
         "lng": 120.5695517
@@ -10484,12 +10341,6 @@
           }
         ]
       },
-      "tags": [
-        "食品"
-      ],
-      "subTags": [
-        "食品－蛋"
-      ],
       "coordinates": {
         "lat": 22.5067637,
         "lng": 120.386521
@@ -10533,37 +10384,126 @@
         "lat": 22.7291063,
         "lng": 120.3206996
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTEtOC8xMSjkuowp5paw5YyX5p6X5Y+j6YGL5YuV5YWs5ZyS",
-      "time": "",
-      "organization": "新北林口運動公園",
-      "location": "新北林口運動公園",
-      "activityDate": "2026-08-11",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/11(二)新北林口運動公園",
-        "images": [
-          "https://i.imgur.com/n1tOp9q.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/n1tOp9q.jpeg",
-            "text": "MOAy 2 公 二 旦 全 知 人 還\n人 攻 台 三 加 / 古 時 ) 字 了 人\n全 和 時 2 六\n人 生 人 一 汪 一 一 人 ]\n了 - 翎 「 放 一 到 一 一 | 人 !\n人 和 ~ 為 償 大 人 ee- 人 2 和 歸\n! 》 1\n/ 公益 傳 愛 9\naa 區 和 玫 > 談 愛 廷 #\n您 的 每 一 份 愛 心 , 都 將 化 為 更 多 人 的 希望 。\n凍 活動 日 其 | 0 活動 時 間 9 活動 地 點\n115 年 @ 月 1 日 。 09:30-16:30 ; 林 口 運 動 公園\n(星期 二 ) : 09:30- 16:30 (文 化 一 路 與 仁愛 一 路 口 )\n和 20 | 店\n捐血 加 me\n送 好 禮 人 ssy\n和 送 好 禮 只\n區 是 時 關 (數 量 有 限 , 送 完 疙 目 ) 財 衝 Ma ~ !\nIFr 二 一 ki\n全 和 二 區 現 場 精 退 團 | ) 員\n3 上 7 全\n區 才 > 上 全 式 好 怕 二\n表 賣 2 售 | 人 ee\n訪 2 全\nis 下 菩 2 點 |: 圖 ! 旱\n- 了\n圖 全 只 蒜 , ) 司 /\n說 計 一 <4 『「) 下\n喧 - 店 。” 二 |\n食 精選 生 活用 品 。 入 還\n二 『 旦 含\n冰 實用 好 物 8 一 一 宙\n創意 小 家 電 記 《2 )\n伍 時 ee as _\n令 依 捐 一 你 熱 血 9 es 一 袋 熱 血 , 獻 一 份 愛 心 ;\n買 一 份 義 賣 。 Sea.Se 說 毗 員 一 份 義 焉 , 傳 一 份 希 望 。\n和 了 太 生\n全 攝 人 1 \\ 感謝 有 您 !\n",
-            "confidence": 46
-          }
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 25.0742569,
-        "lng": 121.3755778
-      }
     }
   ],
   "2026-08-12": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTItMDg6MzB+MTc6MDAt6Iqx6JOu5LiN5YuV55Si5Luy5LuL5YWs5pyD",
+      "time": "08:30~17:00",
+      "organization": "花蓮不動產仲介公會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-08-12",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390956890476172",
+      "coordinates": {
+        "lat": 23.9997389,
+        "lng": 121.5919821
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTItMTA6MzB+MTc6MDAtKOiKsSnkuK3mraPpuqXnlbbli54=",
+      "time": "10:30~17:00",
+      "organization": "(花)中正麥當勞",
+      "location": "花蓮中正麥當勞店前(花蓮市中正路625號)",
+      "activityDate": "2026-08-12",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390951527982668",
+      "coordinates": {
+        "lat": 23.9791736,
+        "lng": 121.6099754
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTItMDk6MzB+MTY6MzAt6Ie65YyX5biC576p5YuH5raI6Ziy57i96ZqK",
+      "time": "09:30~16:30",
+      "organization": "臺北市義勇消防總隊",
+      "location": "臺北市信義區松仁路1號",
+      "activityDate": "2026-08-12",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390946255507154",
+      "coordinates": {
+        "lat": 25.0408,
+        "lng": 121.5688206
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTItMDk6MzB+MTY6MzAt5reh5rC06YO15bGA",
+      "time": "09:30~16:30",
+      "organization": "淡水郵局",
+      "location": "新北市淡水區中正路298號(淡水藝術工坊中巴)",
+      "activityDate": "2026-08-12",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390945611528127",
+      "coordinates": {
+        "lat": 25.1723719,
+        "lng": 121.4373839
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTItMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-08-12",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390945077659100",
+      "coordinates": {
+        "lat": 25.1285625,
+        "lng": 121.7566158
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTItMDk6MDB+MTU6MzAt6Iux5qWt6YGU6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:00~15:30",
+      "organization": "英業達股份有限公司",
+      "location": "臺北市士林區後港街66號",
+      "activityDate": "2026-08-12",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390944433770172",
+      "coordinates": {
+        "lat": 25.085416,
+        "lng": 121.5214931
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTItMTM6MDB+MjE6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSAx5Y2A5o2Q6KGA5a6j5bCO5aeU5ZOh5pyD",
+      "time": "13:00~21:00",
+      "organization": "國際獅子會300A 1區捐血宣導委員會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-08-12",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390941983013641",
+      "coordinates": {
+        "lat": 25.044291,
+        "lng": 121.5057097
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTItMDg6MDB+MTc6MDAt5p2/5qmL6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "板橋郵局",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-08-12",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390940705265696",
+      "coordinates": {
+        "lat": 25.0315012,
+        "lng": 121.4706982
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTItMDk6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "09:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "新北市汐止區新台五路一段207號11樓B室(配合汐止室)",
+      "activityDate": "2026-08-12",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390940349134613",
+      "coordinates": {
+        "lat": 25.0637253,
+        "lng": 121.6567136
+      }
+    },
     {
       "id": "5paw56u5LTIwMjYvMDgvMTItMDg6MDB+MTc6MDAt5paw56u557ij5LiN5YuV55Si5Luy5LuL57aT57SA5ZWG5qWt5ZCM5qWt5YWs5pyD",
       "time": "08:00~17:00",
@@ -10747,12 +10687,6 @@
           "https://i.imgur.com/EZXU8Jn.jpeg"
         ]
       },
-      "tags": [
-        "食品"
-      ],
-      "subTags": [
-        "食品－米"
-      ],
       "coordinates": {
         "lat": 23.9039573,
         "lng": 120.3673171
@@ -10944,9 +10878,6 @@
           }
         ]
       },
-      "tags": [
-        "禮券"
-      ],
       "coordinates": {
         "lat": 22.632136,
         "lng": 120.313026
@@ -11040,13 +10971,6 @@
           "https://i.imgur.com/As16Cfj.jpeg"
         ]
       },
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯"
-      ],
       "coordinates": {
         "lat": 23.0006759,
         "lng": 120.2282403
@@ -11067,6 +10991,171 @@
     }
   ],
   "2026-08-13": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDg6MzB+MTc6MDAt6Iqx6JOu5LiN5YuV55Si5Luy5LuL5YWs5pyD",
+      "time": "08:30~17:00",
+      "organization": "花蓮不動產仲介公會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390959960799153",
+      "coordinates": {
+        "lat": 23.9997389,
+        "lng": 121.5919821
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDk6MzB+MTY6MzAt6JiG5rSy6YO15bGA",
+      "time": "09:30~16:30",
+      "organization": "蘆洲郵局",
+      "location": "新北市蘆洲區三民路95號(蘆洲區公所前)",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390959781941109",
+      "coordinates": {
+        "lat": 25.0846613,
+        "lng": 121.4738221
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDk6MzB+MTY6MzAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD6ZuZ5ZKM5YiG5pyD",
+      "time": "09:30~16:30",
+      "organization": "國際佛光會中華總會雙和分會",
+      "location": "新北市永和區國光路.竹林路交叉口國父紀念館側門",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390959325820126",
+      "coordinates": {
+        "lat": 25.0086794,
+        "lng": 121.5202731
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDg6MDB+MTc6MDAt5p2/5qmL6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "板橋郵局",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390958602103154",
+      "coordinates": {
+        "lat": 25.0315012,
+        "lng": 121.4706982
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDk6MDB+MTc6MDAt5Y+w5Lit6YqA6KGM5paw5bqX5YiG6KGM",
+      "time": "09:00~17:00",
+      "organization": "台中銀行新店分行",
+      "location": "新北市新店區民權路95號6樓之2(配合新店室)",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390957434355109",
+      "coordinates": {
+        "lat": 24.9825236,
+        "lng": 121.5370854
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDk6MzB+MTY6MzAt5YWo55CD5Lq65aO95L+d6Zqq6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:30~16:30",
+      "organization": "全球人壽保險股份有限公司",
+      "location": "臺北市信義區市民大道六段與中坡北路口(松山車站)",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390957078224126"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMTA6MzB+MTc6MDAtKOiKsSnkuK3mraPpuqXnlbbli54=",
+      "time": "10:30~17:00",
+      "organization": "(花)中正麥當勞",
+      "location": "花蓮中正麥當勞店前(花蓮市中正路625號)",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390954697214630",
+      "coordinates": {
+        "lat": 23.9791736,
+        "lng": 121.6099754
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDk6MzB+MTY6MzAt6LKh5ZyY5rOV5Lq65Y+w5YyX5biC5p2+5bGx5oWI56WQ5a6u",
+      "time": "09:30~16:30",
+      "organization": "財團法人台北市松山慈祐宮",
+      "location": "臺北市松山區八德路四段761號",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390954053335612",
+      "coordinates": {
+        "lat": 25.0511315,
+        "lng": 121.5777658
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390953975588667",
+      "coordinates": {
+        "lat": 25.1285625,
+        "lng": 121.7566158
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDk6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "09:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "新北市汐止區新台五路一段207號11樓B室(配合汐止室)",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390953419467685",
+      "coordinates": {
+        "lat": 25.0637253,
+        "lng": 121.6567136
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMTA6MDB+MTg6MDAt5aSn6I+v5Zq05a+6",
+      "time": "10:00~18:00",
+      "organization": "大華嚴寺",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390952706730613",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDk6MDB+MTc6MDAt5Y+w5Lit6YqA6KGM5b6p6IiI5YiG6KGM",
+      "time": "09:00~17:00",
+      "organization": "台中銀行復興分行",
+      "location": "臺北市松山區復興北路69號5樓(配合長春室)",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390952340619630",
+      "coordinates": {
+        "lat": 25.0508548,
+        "lng": 121.5442985
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTMtMDk6MzB+MTY6MzAt6LKh5ZyY5rOV5Lq65paw5YyX5biC56u55p6X5bGx6KeA6Z+z5a+6",
+      "time": "09:30~16:30",
+      "organization": "財團法人新北市竹林山觀音寺",
+      "location": "新北市林口區竹林路325號",
+      "activityDate": "2026-08-13",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390952162861695",
+      "coordinates": {
+        "lat": 25.0836668,
+        "lng": 121.389117
+      }
+    },
     {
       "id": "5paw56u5LTIwMjYvMDgvMTMtMDk6MDB+MTY6MDAt5ZyL5rOw5Lq65aO95qGD5biC6YCa6KiK6JmV",
       "time": "09:00~16:00",
@@ -11469,13 +11558,7 @@
             "confidence": 47
           }
         ]
-      },
-      "tags": [
-        "食品"
-      ],
-      "subTags": [
-        "食品－米"
-      ]
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDgvMTMtMDk6MDB+MTc6MDAt5pyJ5bei5rCP5oi/5bGL6IiI5qWt",
@@ -11558,6 +11641,280 @@
   ],
   "2026-08-14": [
     {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MDB+MTc6MDAt5Y+w5Lit6YqA6KGM5LiJ6YeN5YiG6KGM",
+      "time": "09:00~17:00",
+      "organization": "台中銀行三重分行",
+      "location": "新北市三重區重新路四段12號7樓之2(配合三重室)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390979134233611",
+      "coordinates": {
+        "lat": 25.057692,
+        "lng": 121.4887094
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDg6MzB+MTc6MDAt6Iqx6JOu5LiN5YuV55Si5Luy5LuL5YWs5pyD",
+      "time": "08:30~17:00",
+      "organization": "花蓮不動產仲介公會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390974406628124",
+      "coordinates": {
+        "lat": 23.9997389,
+        "lng": 121.5919821
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDg6MDB+MTc6MzAt5ZyL6Zqb542F5a2Q5pyDMzAwQTLljYDlj7DljJfluILmsLjmlrDnjYXlrZDmnIM=",
+      "time": "08:00~17:30",
+      "organization": "國際獅子會300A2區台北市永新獅子會",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390969590354683",
+      "coordinates": {
+        "lat": 25.0328333,
+        "lng": 121.516972
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5LiJ6YeN56ys5LiA5YiG5pyD",
+      "time": "09:00~17:00",
+      "organization": "國際佛光會中華總會三重第一分會",
+      "location": "新北市三重區三和路4段103號(三和國中捷運站2號出口)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390968956485666",
+      "coordinates": {
+        "lat": 25.0767446,
+        "lng": 121.4871066
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMTE6MDB+MTk6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSAx5Y2A5o2Q6KGA5a6j5bCO5aeU5ZOh5pyD",
+      "time": "11:00~19:00",
+      "organization": "國際獅子會300A 1區捐血宣導委員會",
+      "location": "臺北市大安區B1東區地下街9號出口旁副走道(第四廣場旁配合忠孝室)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390968312416639",
+      "coordinates": {
+        "lat": 25.0415111,
+        "lng": 121.5484258
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMTA6MDB+MTg6MDAt5Lit5riv542F5pyDQiAx",
+      "time": "10:00~18:00",
+      "organization": "中港獅會B 1",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390967777537611",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MzB+MTY6MzAt5ZyL5rOw5Lq65aO95piM5rOw6YCa6KiK6JmV",
+      "time": "09:30~16:30",
+      "organization": "國泰人壽昌泰通訊處",
+      "location": "臺北市中山區南京東路二段2號",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390967133668684"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390966599789666",
+      "coordinates": {
+        "lat": 25.1285625,
+        "lng": 121.7566158
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MzB+MTY6MzAt5paH5bGx5Y2A5qif5paH6YeM6L6m5YWs6JmV",
+      "time": "09:30~16:30",
+      "organization": "文山區樟文里辦公處",
+      "location": "臺北市文山區木新路三段312號(景美女中)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390966410931612",
+      "coordinates": {
+        "lat": 24.9807217,
+        "lng": 121.5560706
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MDB+MTc6MDAt5Y+w5Lit6YqA6KGM5b6p6IiI5YiG6KGM",
+      "time": "09:00~17:00",
+      "organization": "台中銀行復興分行",
+      "location": "臺北市松山區復興北路69號5樓(配合長春室)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390966054810639",
+      "coordinates": {
+        "lat": 25.0508548,
+        "lng": 121.5442985
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMTA6MDB+MTg6MDAt5Y+w5Lit6YqA6KGM5Zyf5Z+O5YiG6KGM",
+      "time": "10:00~18:00",
+      "organization": "台中銀行土城分行",
+      "location": "新北市板橋區中山路一段50巷36號2樓之4(配合府中室)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390964862749197",
+      "coordinates": {
+        "lat": 25.0091382,
+        "lng": 121.4620058
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMTA6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5YyX5oqV56ys5LiA5YiG5pyD",
+      "time": "10:00~17:00",
+      "organization": "國際佛光會中華總會北投第一分會",
+      "location": "臺北市士林區德行西路47號天母家樂福",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390963684991142",
+      "coordinates": {
+        "lat": 25.1055268,
+        "lng": 121.5228549
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MzB+MTY6MzAt5Y+w5YyX5biC5LiN5YuV55Si5Luy5LuL57aT57SA5ZWG5qWt5ZCM5qWt5YWs5pyD",
+      "time": "09:30~16:30",
+      "organization": "台北市不動產仲介經紀商業同業公會",
+      "location": "臺北市中正區牯嶺街137號對側(牯嶺公園)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390963228870170",
+      "coordinates": {
+        "lat": 25.0233146,
+        "lng": 121.5191143
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMTM6MDB+MjE6MDAt55yf5ZaE576O542F5pyDQSAx",
+      "time": "13:00~21:00",
+      "organization": "真善美獅會A 1",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390963049022125",
+      "coordinates": {
+        "lat": 25.044291,
+        "lng": 121.5057097
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "09:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "新北市汐止區新台五路一段207號11樓B室(配合汐止室)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390962861274170",
+      "coordinates": {
+        "lat": 25.0637253,
+        "lng": 121.6567136
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MzB+MTY6MzAt5Lit5ZKM5b+g5a2d6YeM",
+      "time": "09:30~16:30",
+      "organization": "中和忠孝里",
+      "location": "新北市中和區忠孝街31巷口(中巴)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390962405143198",
+      "coordinates": {
+        "lat": 24.9843531,
+        "lng": 121.5100822
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MzB+MTY6MzAt5a+S6IiN6aSQ5peF566h55CG6aGn5ZWP6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:30~16:30",
+      "organization": "寒舍餐旅管理顧問股份有限公司",
+      "location": "臺北市中正區鎮江街(台北喜來登飯店旁)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390961782426125"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDg6MDB+MTc6MDAt5p2/5qmL6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "板橋郵局",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390961327395143",
+      "coordinates": {
+        "lat": 25.0315012,
+        "lng": 121.4706982
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MzB+MTY6MzAt5a6P5LqO6Zu75qmf6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:30~16:30",
+      "organization": "宏于電機股份有限公司",
+      "location": "新北市樹林區武林街6號(樹林工業區服務中心停車場)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390960148547108",
+      "coordinates": {
+        "lat": 25.0015679,
+        "lng": 121.4182006
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MDB+MTY6MDAt6LKh5pS/6YOo5YyX5Y2A5ZyL56iF5bGA5a6c6Jit5YiG5bGA",
+      "time": "09:00~16:00",
+      "organization": "財政部北區國稅局宜蘭分局",
+      "location": "宜蘭縣宜蘭市負郭里泰山路65號(宜蘭國稅局宜蘭分局)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390955876062684",
+      "coordinates": {
+        "lat": 24.7541422,
+        "lng": 121.7463068
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMTA6MDB+MTY6MDAt5ZyL5rOw5Lq65aO95bGV5qWt6Iqx57ij546J6YeM6Kqy",
+      "time": "10:00~16:00",
+      "organization": "國泰人壽展業花縣玉里課",
+      "location": "花蓮玉里鎮圓環邊(花蓮玉里巡迴點)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390955232183667"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTQtMDk6MDB+MTc6MDAt5Y+w5Lit6YqA6KGM5paw5bqX5YiG6KGM",
+      "time": "09:00~17:00",
+      "organization": "台中銀行新店分行",
+      "location": "新北市新店區民權路95號6樓之2(配合新店室)",
+      "activityDate": "2026-08-14",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390950504678171",
+      "coordinates": {
+        "lat": 24.9825236,
+        "lng": 121.5370854
+      }
+    },
+    {
       "id": "5paw56u5LTIwMjYvMDgvMTQtMDk6MDB+MTY6MzAt5paw56u55biC56ys5LiA542F5a2Q5pyD",
       "time": "09:00~16:30",
       "organization": "新竹市第一獅子會",
@@ -11617,7 +11974,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 24.8098161,
         "lng": 120.9751319
@@ -12112,53 +12468,278 @@
         "lat": 22.9985349,
         "lng": 120.1853155
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTQtOC8xNCjkupQp5Y+w5YyX5Zac5L6G55m76Y6u5rGf6KGX5YG06ZaA",
-      "time": "",
-      "organization": "台北喜來登鎮江街側門",
-      "location": "台北喜來登鎮江街側門",
-      "activityDate": "2026-08-14",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "餐飲",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米"
-      ],
-      "pttData": {
-        "rawLine": "8/14(五)台北喜來登鎮江街側門",
-        "images": [
-          "https://i.imgur.com/FhvlGom.png"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTQtOC8xNCjkupQp5paw5YyX5qi55p6X55Si5qWt5ZyS5Y2A5pyN5YuZ5Lit5b+D",
-      "time": "",
-      "organization": "新北樹林產業園區服務中心",
-      "location": "新北樹林產業園區服務中心",
-      "activityDate": "2026-08-14",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "pttData": {
-        "rawLine": "8/14(五)新北樹林產業園區服務中心",
-        "images": [
-          "https://i.verb.tw/3IDJBqfY.jpg"
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-15": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMTA6MDB+MTc6MDAt5paw6I6K5ZCM5r+f5pyDKOWMl+S4gOWNgCk=",
+      "time": "10:00~17:00",
+      "organization": "新莊同濟會(北一區)",
+      "location": "新北市新莊區四維路9號(福營行政中心)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390989843546296",
+      "coordinates": {
+        "lat": 25.0243341,
+        "lng": 121.4237686
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDg6MDB+MTc6MzAt5Y+w5YyX5biC5Lit5Y2A542F5a2Q5pyDQTI=",
+      "time": "08:00~17:30",
+      "organization": "台北市中區獅子會A2",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390989209667278",
+      "coordinates": {
+        "lat": 25.0328333,
+        "lng": 121.516972
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MDB+MTY6MzAt5LqU5bel5om26Lyq56S+",
+      "time": "09:00~16:30",
+      "organization": "五工扶輪社",
+      "location": "新北市三重區疏洪五路一段(原住民族主題園區)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390988665798241"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MzB+MTY6MzAt5paw5YyX5biC5LiN5YuV55Si5Luy5LuL57aT57SA5ZWG5qWt5ZCM5qWt5YWs5pyD",
+      "time": "09:30~16:30",
+      "organization": "新北市不動產仲介經紀商業同業公會",
+      "location": "新北市淡水區中山北路一段160號(水碓派出所)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390988121829223",
+      "coordinates": {
+        "lat": 25.1782682,
+        "lng": 121.4443711
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDg6MzB+MTc6MDAt6Iqx6JOu5LiN5YuV55Si5Luy5LuL5YWs5pyD",
+      "time": "08:30~17:00",
+      "organization": "花蓮不動產仲介公會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390985750900737",
+      "coordinates": {
+        "lat": 23.9997389,
+        "lng": 121.5919821
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MDB+MTY6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A5a6c6Jit57ij6JiH5r6z542F5a2Q5pyD",
+      "time": "09:00~16:00",
+      "organization": "國際獅子會300A 5區宜蘭縣蘇澳獅子會",
+      "location": "宜蘭縣蘇澳鎮蘇港路85號(蘇澳永光社區)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390985116031709",
+      "coordinates": {
+        "lat": 24.5940009,
+        "lng": 121.8521289
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMTM6MDB+MjE6MDAt5Y+w5YyX5biC5qau6I+v542F5a2Q5pyDQTI=",
+      "time": "13:00~21:00",
+      "organization": "台北市榮華獅子會A2",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390984937283754",
+      "coordinates": {
+        "lat": 25.044291,
+        "lng": 121.5057097
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMTA6MDB+MTg6MDAt6I+B57e7542F5a2Q5pyDQTI=",
+      "time": "10:00~18:00",
+      "organization": "菁緻獅子會A2",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390984571152782",
+      "coordinates": {
+        "lat": 25.0422528,
+        "lng": 121.5139472
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMTE6MDB+MTg6MDAt5Y+w5YyX5biC5LiN5YuV55Si5Luy5LuL57aT57SA5ZWG5qWt5ZCM5qWt5YWs5pyD",
+      "time": "11:00~18:00",
+      "organization": "台北市不動產仲介經紀商業同業公會",
+      "location": "臺北市信義區松壽路16巷",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390983393304737",
+      "coordinates": {
+        "lat": 25.0354793,
+        "lng": 121.5663914
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MzB+MTY6MzAt5ZyL6Zqb542F5a2Q5pyDMzAwQSA15Y2A6Iqx6JOu6b6N5ZCf542F5a2Q5pyD",
+      "time": "09:30~16:30",
+      "organization": "國際獅子會300A 5區花蓮龍吟獅子會",
+      "location": "花蓮遠東百貨前廣場(花蓮市和平路581號)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390980488415223",
+      "coordinates": {
+        "lat": 23.9782947,
+        "lng": 121.5996726
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MDB+MTc6MDAt5paw5YyX5biC5LiN5YuV55Si5Luy5LuL57aT57SA5ZWG5qWt5ZCM5qWt5YWs5pyD",
+      "time": "09:00~17:00",
+      "organization": "新北市不動產仲介經紀商業同業公會",
+      "location": "新北市三重區重新路四段12號7樓之2(配合三重室)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390977942071279",
+      "coordinates": {
+        "lat": 25.057692,
+        "lng": 121.4887094
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMTA6MDB+MTg6MDAt5paw5YyX5biC5LiN5YuV55Si5Luy5LuL57aT57SA5ZWG5qWt5ZCM5qWt5YWs5pyD",
+      "time": "10:00~18:00",
+      "organization": "新北市不動產仲介經紀商業同業公會",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390977308192241",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MDB+MTc6MDAt5YW456+E542F5a2Q5pyDQSAz",
+      "time": "09:00~17:00",
+      "organization": "典範獅子會A 3",
+      "location": "臺北市大安區建國南路二段地下停車場入口旁空地(配合大安號)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390976764223224",
+      "coordinates": {
+        "lat": 25.0320486,
+        "lng": 121.5373988
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMTA6MDB+MTc6MDAt5paw5YyX5biC5paH5bGx542F5pyDQiAy",
+      "time": "10:00~17:00",
+      "organization": "新北市文山獅會B 2",
+      "location": "新北市新店區中興路3段1號(新店家樂福)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390976129344297",
+      "coordinates": {
+        "lat": 24.9765087,
+        "lng": 121.5461652
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MDB+MTc6MDAt5pif55+z5paH5Ym16IKh5Lu95pyJ6ZmQ5YWs5Y+4",
+      "time": "09:00~17:00",
+      "organization": "星石文創股份有限公司",
+      "location": "臺北市南港區經貿二路1號 (南港展覽館)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390975941596242",
+      "coordinates": {
+        "lat": 25.0566019,
+        "lng": 121.6181159
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45Z+66ZqG6YO15bGA",
+      "time": "08:00~17:00",
+      "organization": "中華郵政股份有限公司基隆郵局",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390975585475279",
+      "coordinates": {
+        "lat": 25.1285625,
+        "lng": 121.7566158
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MDB+MTc6MDAt5Y+w5YyX5biC6YGg5p2x542F5a2Q5pyDQSAz",
+      "time": "09:00~17:00",
+      "organization": "台北市遠東獅子會A 3",
+      "location": "臺北市松山區復興北路69號5樓(配合長春室)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390971491839700",
+      "coordinates": {
+        "lat": 25.0508548,
+        "lng": 121.5442985
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDg6MDB+MTc6MDAt5paw5YyX5biC5LiN5YuV55Si5Luy5LuL57aT57SA5ZWG5qWt5ZCM5qWt5YWs5pyD",
+      "time": "08:00~17:00",
+      "organization": "新北市不動產仲介經紀商業同業公會",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390971036708738",
+      "coordinates": {
+        "lat": 25.0315012,
+        "lng": 121.4706982
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MDB+MTc6MDAt5YWr6YeM542F5a2Q5pyDQiAx",
+      "time": "09:00~17:00",
+      "organization": "八里獅子會B 1",
+      "location": "新北市八里區中山路二段356巷16號(八里市民活動中心)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390970857950783",
+      "coordinates": {
+        "lat": 25.1493786,
+        "lng": 121.4014526
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MzB+MTc6MDAt5p2/5qmL5oSb5b+D5oWI5ZaE5pyD",
+      "time": "09:30~17:00",
+      "organization": "板橋愛心慈善會",
+      "location": "新北市板橋區站前路板橋車站(北2門)",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390970779102638",
+      "coordinates": {
+        "lat": 25.0153483,
+        "lng": 121.4635428
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTUtMDk6MDB+MTY6MzAt5LiA5paw5pyJ6ZmQ5YWs5Y+4",
+      "time": "09:00~16:30",
+      "organization": "一新有限公司",
+      "location": "新北市三重區碧華街50號",
+      "activityDate": "2026-08-15",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390970213081765",
+      "coordinates": {
+        "lat": 25.0813925,
+        "lng": 121.4835972
+      }
+    },
     {
       "id": "5paw56u5LTIwMjYvMDgvMTUtMDk6MzB+MTY6MzAt5qGD5ZyS5biC5oiQ5Yqf542F5a2Q5pyD",
       "time": "09:30~16:30",
@@ -12303,16 +12884,6 @@
           "https://i.imgur.com/OZhxR8Z.jpeg"
         ]
       },
-      "tags": [
-        "超商",
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "超商－全聯",
-        "生活用品－保溫杯"
-      ],
       "coordinates": {
         "lat": 23.7131852,
         "lng": 120.5407583
@@ -12332,16 +12903,6 @@
           "https://i.imgur.com/OZhxR8Z.jpeg"
         ]
       },
-      "tags": [
-        "超商",
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "超商－全聯",
-        "生活用品－保溫杯"
-      ],
       "coordinates": {
         "lat": 23.7958869,
         "lng": 120.2718388
@@ -12400,14 +12961,6 @@
           "https://i.imgur.com/jlhrlbW.jpeg"
         ]
       },
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
       "coordinates": {
         "lat": 24.2256943,
         "lng": 120.5708073
@@ -12453,16 +13006,6 @@
           "https://i.imgur.com/OZhxR8Z.jpeg"
         ]
       },
-      "tags": [
-        "超商",
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "超商－全聯",
-        "生活用品－保溫杯"
-      ],
       "coordinates": {
         "lat": 23.8030848,
         "lng": 120.4643342
@@ -12521,15 +13064,6 @@
           "https://i.imgur.com/gJOUxNz.jpeg"
         ]
       },
-      "tags": [
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "食品－蛋",
-        "生活用品－衛生紙"
-      ],
       "coordinates": {
         "lat": 24.2677537,
         "lng": 120.6939361
@@ -12653,16 +13187,6 @@
           "https://i.imgur.com/OZhxR8Z.jpeg"
         ]
       },
-      "tags": [
-        "超商",
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "超商－全聯",
-        "生活用品－保溫杯"
-      ],
       "coordinates": {
         "lat": 23.0179174,
         "lng": 120.208046
@@ -12715,7 +13239,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 22.9873532,
         "lng": 120.1657996
@@ -12748,14 +13271,6 @@
           "https://i.imgur.com/6p4HlXj.jpeg"
         ]
       },
-      "tags": [
-        "餐飲",
-        "生活用品"
-      ],
-      "subTags": [
-        "餐飲－咖啡",
-        "生活用品－保溫杯"
-      ],
       "coordinates": {
         "lat": 23.0376723,
         "lng": 120.3107977
@@ -12821,7 +13336,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 22.6390209,
         "lng": 120.3543689
@@ -12930,57 +13444,248 @@
         "lat": 22.4610393,
         "lng": 120.4934096
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTUtOC8xNSjlha0p5Y+w5YyX5Y2X5riv5bGV6Ka96aSoSeWNgOWMl+mWgOWklg==",
-      "time": "",
-      "organization": "台北南港展覽館I區北門外",
-      "location": "台北南港展覽館I區北門外",
-      "activityDate": "2026-08-15",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/15(六)台北南港展覽館I區北門外",
-        "images": [
-          "https://i.imgur.com/HOUSfmz.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/HOUSfmz.jpeg",
-            "text": "今 了\n攻 C2 創 . 近 繞 2 眶 血 應 撼 ! 特 別 活動 贈品\nNeoicomicEcho2\n3\nex 公益 小 卡 套 組 一 誠 吉\n“有 蹭 饞 蝦 譯 圖\n只 信任 貸 還\n陳忠 1 太 友人 1 疚\n台 北 捐血 中 心 *CCC 追 漫 台 <NicE 創 迴響 數 諒 \" 歡 夫 , 肯 儿 >\n5? 點 [和 昌 人 x 人\n凡 在 指定 捐血 特 別 活動 上 捐血 , 並 取得 卓 譏 所 則 反 中 由 者 了 注 臨 過\n即 可 依 規 定 兌換 由 CCC 追 漫 台 旗下 漫畫 家 等 人 繪製 的 而 細 茲 渦 廬 詣 紀 寺 生 和 m 點\n襄 ~ 一 飼 轎 全 | 汪 全 國 一 倫\n移 世論 旋 計 生 則 人 說\n相 六 蝴 熏 仿 0 坎 1 六 , 點 人\nAA 衝 選\n做 SA/ 間 ! 代詞 國 和\n同 (2\n公 不 um 及\n說 同 去\niilustrated by huhs 說 ha 如何 櫥 取 ? 中 上 上\n主 辦 單 位 : 星 石 文 神 stststudiosms 回 六 僵 sestsudo ms NiCE 創 ‧ 誤 響 』 偽 請 各 位 同 好 多 多 支持 這 些 精彩 迷人 的 故事 , 舉 創意 無 限 的 創作 者 !\n‧ 3 記 A 晤 員 s 呈 | 旦 幅\nNiCE2 活 動 當 日 捐血 NiCE2 活 動 前 捐血 ! 入場 也 有 禮 !\n家 2026/08/15 (六 ) 09:00 一 17:00 (16:30 巷 止 報到 ) 稻 2026/08/08 (六 ) - 2026/08/14 (五) 凡 參 加 Mi\n全 NicE 創 、 迴 響 2 場外 捐血 車 區 北門 外 / 南港 LaLaport 對 面\n國 傘 忠孝 捐血 室 11:00 一 19:00 。 帶 蝦 時 號 捐血 車 13:00 一 21:00 憑 當 日 入 場 手 環 即 可 至 場外 服務 處\n《@ 事前 預約 (推 薦 !! 確 保 贈品 名 額 ) 主 沁 司 血 東區 地 下 街 9 號 出 口 旁 副 走 導 台 北市 萬 華 區 曙 時 街 立 骨 停 車 場 旁\n1 區 車 第 四 廣場 旁 近 西 門 町 昆明 街 口\n本 區 2 時 還 交 店 免費 領取 公益 小 卡 乙 張\n品 說 口 sssms 血\n回 【 | 穫 人 限 領 1\n預約 網 址 R 全 ~、 馬 現場 幸 到 。 。。 @@ 領取 「 良 心 回 得 卡 」 @ 好 神 兌換\n亦 有 開 放 現場 報名 寢 還 活動 期 間 至 上 向 捐血 車 工作 人 員 領取 活動 當 日 至 活動 電 外 服務 處 有 斷 冊\n兩 處 指定 捐血 點 滬 「 良 心 回 電 卡 」 * 捐 血 請 務必 攜帶 可 辨識 本 人 之 身分 證 或 附 照 片 的 健保 卡\n$@ 現場 報到 領取 「 良 心 回 得 卡 」 (0 好 禮 兌 換 完成 捐血 2 兌換 公益 小 卡 套 組 (8 款 ) + 捐血 前 請 評估 自 身 狀況 及 條 件 , 相 關 疑 問 可 洽 詢 捐血 單位\n當 日 間 向 捐血 車 工作 人 員 領取 瑟 「 良 心 回 電 卡 」 18 + 捐血 車 及 櫃 樹 皆 設 於 場外 空間 , 不 用 購買 活動 門票 即 可 參加 捐血\n到 現場 捐 血 瞄 林 四 二 爺 換 公益 小 卡 守 組 (8 款 )\n並 至 場外 捐血 車 完成 捐血 「 三 同\n了 二 1 全 還 仙 唱 間 指導 單位 : 台 北 捐血 中 心 | 主辦 單位 : 星 石 文 創 | 協辦 單位 : CCC 追 漫 台\n續 下 頁 r 續 下 頁 外 續 下 頁\n",
-            "confidence": 59
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTUtOC8xNSjlha0p5paw5YyX5ZCE5oyH5a6a5o2Q6KGA6bue",
-      "time": "",
-      "organization": "新北各指定捐血點",
-      "location": "新北各指定捐血點",
-      "activityDate": "2026-08-15",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/15(六)新北各指定捐血點",
-        "images": [
-          "https://i.imgur.com/soDdcCf.jpeg"
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-16": [
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDg6MzB+MTc6MDAt6Iqx6JOu5LiN5YuV55Si5Luy5LuL5YWs5pyD",
+      "time": "08:30~17:00",
+      "organization": "花蓮不動產仲介公會",
+      "location": "花蓮縣花蓮市中山路一段170號(配合花蓮站)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390999653959770",
+      "coordinates": {
+        "lat": 23.9997389,
+        "lng": 121.5919821
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDg6MDB+MTc6MzAt5Y+w5YyX5biC5Lit5YyX542F5a2Q5pyDQTI=",
+      "time": "08:00~17:30",
+      "organization": "台北市中北獅子會A2",
+      "location": "臺北市中正區南海路1號3樓(配合南海室)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390999474101736",
+      "coordinates": {
+        "lat": 25.0328333,
+        "lng": 121.516972
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDk6MDB+MTY6MDAt5Yqf6byO5bu66Kit5pyJ6ZmQ5YWs5Y+4",
+      "time": "09:00~16:00",
+      "organization": "功鼎建設有限公司",
+      "location": "宜蘭縣宜蘭市神農路二段117號(新月神農廣場)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390999018070753"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDk6MzB+MTY6MzAt5Y+w5YyX5biC5LiN5YuV55Si5Luy5LuL57aT57SA5ZWG5qWt5ZCM5qWt5YWs5pyD",
+      "time": "09:30~16:30",
+      "organization": "台北市不動產仲介經紀商業同業公會",
+      "location": "臺北市文山區興隆路三段222號(文山運動中心)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390998830232708"
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDk6MDB+MTc6MDAt5rGQ5q2i5o2Q6KGA5Lq65Y2U5pyD",
+      "time": "09:00~17:00",
+      "organization": "汐止捐血人協會",
+      "location": "新北市汐止區中興里環河街1號北峰國小",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390998295353781",
+      "coordinates": {
+        "lat": 25.0633154,
+        "lng": 121.6323479
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMTA6MDB+MTg6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5Y+w5YyX5L+h576p56ys5LiA5YiG5pyD",
+      "time": "10:00~18:00",
+      "organization": "國際佛光會中華總會台北信義第一分會",
+      "location": "臺北市中正區襄陽路與公園路交叉口(配合公園號)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390997651484753",
+      "coordinates": {
+        "lat": 25.0422528,
+        "lng": 121.5139472
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDk6MzB+MTY6MzAt5oSb5b+D542F5a2Q5pyDQiAy",
+      "time": "09:30~16:30",
+      "organization": "愛心獅子會B 2",
+      "location": "新北市樹林區保安街一段7號(濟安宮對面)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390997017505736",
+      "coordinates": {
+        "lat": 24.9935079,
+        "lng": 121.4266193
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDk6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwQSAx5Y2A5o2Q6KGA5a6j5bCO5aeU5ZOh5pyD",
+      "time": "09:00~17:00",
+      "organization": "國際獅子會300A 1區捐血宣導委員會",
+      "location": "新北市中和區中安街圖書館旁823公園內(配合中和號)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390996573636709",
+      "coordinates": {
+        "lat": 25.0014294,
+        "lng": 121.5127029
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDk6MzB+MTY6MzAt6Iqx6JOu5LiN5YuV55Si5Luy5LuL5YWs5pyD",
+      "time": "09:30~16:30",
+      "organization": "花蓮不動產仲介公會",
+      "location": "花蓮遠東百貨前廣場(花蓮市和平路581號)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390995925444294",
+      "coordinates": {
+        "lat": 23.9782947,
+        "lng": 121.5996726
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMTA6MDB+MTc6MDAt56S+5ZyY5rOV5Lq65ZyL6Zqb5om26LyqMzQ4MuWcsOWNgA==",
+      "time": "10:00~17:00",
+      "organization": "社團法人國際扶輪3482地區",
+      "location": "臺北市信義區松壽路16巷",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390994746696249",
+      "coordinates": {
+        "lat": 25.0354793,
+        "lng": 121.5663914
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDg6MDB+MTc6MDAt5Yqf6byO5bu66Kit5pyJ6ZmQ5YWs5Y+4",
+      "time": "08:00~17:00",
+      "organization": "功鼎建設有限公司",
+      "location": "宜蘭縣宜蘭市擺厘路16-7號1樓(配合宜蘭站)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390994380565267",
+      "coordinates": {
+        "lat": 24.7443841,
+        "lng": 121.750738
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMTM6MDB+MjE6MDAt5Y+w54Gj6K2m6ZuB6Zec5oe35Y2U5pyD",
+      "time": "13:00~21:00",
+      "organization": "台灣警雁關懷協會",
+      "location": "臺北市萬華區峨嵋街83號峨嵋立體停車場旁(配合峨嵋號)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390993568848295",
+      "coordinates": {
+        "lat": 25.044291,
+        "lng": 121.5057097
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDg6MDB+MTc6MDAt5Z+66ZqG5biC5b2w5YyW5ZCM6YSJ5pyD",
+      "time": "08:00~17:00",
+      "organization": "基隆市彰化同鄉會",
+      "location": "基隆市信義區信一路14號1樓(配合基隆站)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390993102717212",
+      "coordinates": {
+        "lat": 25.1285625,
+        "lng": 121.7566158
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDk6MzB+MTY6MzAt55Ge6Iqz542F5pyDQiAy",
+      "time": "09:30~16:30",
+      "organization": "瑞芳獅會B 2",
+      "location": "新北市瑞芳區民權街17號(區民廣場)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390992745111212",
+      "coordinates": {
+        "lat": 25.1072412,
+        "lng": 121.8081812
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMTE6MDB+MTk6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD5p2+6ZqG5YiG5pyD",
+      "time": "11:00~19:00",
+      "organization": "國際佛光會中華總會松隆分會",
+      "location": "臺北市大安區B1東區地下街9號出口旁副走道(第四廣場旁配合忠孝室)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390992389090240",
+      "coordinates": {
+        "lat": 25.0415111,
+        "lng": 121.5484258
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMTA6MDB+MTg6MDAt5paw5YyX5biC5Lit5rqQ542F5pyDQiAx",
+      "time": "10:00~18:00",
+      "organization": "新北市中源獅會B 1",
+      "location": "新北市新莊區中華路+復興路口(配合新莊號)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390991201242295",
+      "coordinates": {
+        "lat": 25.0454311,
+        "lng": 121.4597332
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMTA6MDB+MTc6MDAt5ZyL6Zqb5L2b5YWJ5pyD5Lit6I+v57i95pyD6YeR5YWJ5piO5YiG5pyD",
+      "time": "10:00~17:00",
+      "organization": "國際佛光會中華總會金光明分會",
+      "location": "新北市三峽區學勤路1號",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390986938757781",
+      "coordinates": {
+        "lat": 24.9458169,
+        "lng": 121.3732657
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDg6MDB+MTc6MDAt5Lit6I+v5rCR5ZyL5LiA6LKr6YGT57i95pyD5paw5YyX5biC5YiG5pyD",
+      "time": "08:00~17:00",
+      "organization": "中華民國一貫道總會新北市分會",
+      "location": "新北市板橋區雙十路三段27號2樓(配合板橋站)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390981666263268",
+      "coordinates": {
+        "lat": 25.0315012,
+        "lng": 121.4706982
+      }
+    },
+    {
+      "id": "5Y+w5YyXLTIwMjYvMDgvMTYtMDk6MDB+MTY6MDAt5a6c6Jit57ij5LiA6LKr6YGT5Y2U5pyD",
+      "time": "09:00~16:00",
+      "organization": "宜蘭縣一貫道協會",
+      "location": "宜蘭縣羅東鎮中興路3號宜蘭縣羅東鎮公所前(配合萬連號)",
+      "activityDate": "2026-08-16",
+      "center": "台北",
+      "detailUrl": "https://www.tp.blood.org.tw/xcevent/cont?sid=0Q219390980022394240",
+      "coordinates": {
+        "lat": 24.6769245,
+        "lng": 121.7669529
+      }
+    },
     {
       "id": "5paw56u5LTIwMjYvMDgvMTYtMDk6MDB+MTY6MDAt5qGD5ZyS54Cn5pif542F5a2Q5pyD",
       "time": "09:00~16:00",
@@ -13303,14 +14008,6 @@
           "https://i.imgur.com/8fwBY0A.jpeg"
         ]
       },
-      "tags": [
-        "禮券",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "禮券－金聯"
-      ],
       "coordinates": {
         "lat": 23.9515531,
         "lng": 120.4807772
@@ -13381,14 +14078,7 @@
         "images": [
           "https://i.imgur.com/olvfWsf.jpeg"
         ]
-      },
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯"
-      ]
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDgvMTYtMDg6MzB+MTc6MDAt6Imv5aCF5bu66Kit6IKh5Lu95pyJ6ZmQ5YWs5Y+4",
@@ -13443,13 +14133,6 @@
           "https://i.imgur.com/TRHAJpT.jpeg"
         ]
       },
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯"
-      ],
       "coordinates": {
         "lat": 23.485528,
         "lng": 120.4426343
@@ -13469,9 +14152,9 @@
       }
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDgvMTYtMDg6MDB+MTc6MDAt5bGP5p2x5LiN5YuV55Si5ZWG5qWt5YWs5pyD",
+      "id": "6auY6ZuELTIwMjYvMDgvMTYtMDg6MDB+MTc6MDAt5ZyL6Zqb542F5a2Q5pyDMzAwRTLljYDmjZDooYDlp5Tlk6HmnIM=",
       "time": "08:00~17:00",
-      "organization": "屏東不動產商業公會",
+      "organization": "國際獅子會300E2區捐血委員會",
       "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
       "activityDate": "2026-08-16",
       "center": "高雄",
@@ -13571,146 +14254,6 @@
         "lat": 22.6055196,
         "lng": 120.3956199
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTYtOC8xNijml6Up5Y+w5YyX5L+h576p5aiB56eA",
-      "time": "",
-      "organization": "台北信義威秀",
-      "location": "台北信義威秀",
-      "activityDate": "2026-08-16",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "電影票"
-      ],
-      "subTags": [
-        "電影票－威秀"
-      ],
-      "pttData": {
-        "rawLine": "8/16(日)台北信義威秀",
-        "images": [
-          "https://i.imgur.com/m6Neunk.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 25.035157,
-        "lng": 121.5672427
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTYtOC8xNijml6Up5Y+w5YyX5paH5bGx6YGL5YuV5Lit5b+D",
-      "time": "",
-      "organization": "台北文山運動中心",
-      "location": "台北文山運動中心",
-      "activityDate": "2026-08-16",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/16(日)台北文山運動中心",
-        "images": [
-          "https://i.imgur.com/NWEcgoV.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTYtOC8xNijml6Up5paw5YyX5qi55p6X5YWs5omY5YmN",
-      "time": "",
-      "organization": "新北樹林公托前",
-      "location": "新北樹林公托前",
-      "activityDate": "2026-08-16",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/16(日)新北樹林公托前",
-        "images": [
-          "https://i.imgur.com/S9veNmi.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTYtOC8xNijml6Up6auY6ZuE5qWg5qKT5ZyL5piM5ZyL5Lit",
-      "time": "",
-      "organization": "高雄楠梓國昌國中",
-      "location": "高雄楠梓國昌國中",
-      "activityDate": "2026-08-16",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "生活用品－衛生紙"
-      ],
-      "pttData": {
-        "rawLine": "8/16(日)高雄楠梓國昌國中",
-        "images": [
-          "https://i.imgur.com/FDKade5.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/FDKade5.jpeg",
-            "text": "和 和 人 人\n還 7 不 S 生 交 /\n7\n超 寢 ,: 4 7\n\n損 茵 救 人 . 愛 台 灣\nlm\n115 年 秋季 損 血 碼\n日 期 : 8/i6( 日 ) 早 上 8 點 至 下 午 5 點\n地 點 : 國 昌 國 中 (高 雄 市 楠 梓 區 德 民 路 1O10 號 )\n挫 血 即 禮 送 ~ 6 米 . 洗 衣 精 . 衛 生 紙 等 ~\n挫 50O0CC0 碼 送 ! ! )\n- 立 即 參與 。 隊\n逗 陣 來 挽 袖 , 捐 血 一 袋 , 救 人 一 命 。\n《\n主 辦 : 社團 法 人 觀世音 慈 心 會 高 雄 區 域 委員 會 IN  /\n協辦 : 高 雄 捐血 中 心 六 也 2 人\n",
-            "confidence": 69
-          }
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 22.71917,
-        "lng": 120.286
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTYtOC8xNijml6Up5a6c6Jit5paw5pyI56We6L6y5buj5aC0",
-      "time": "",
-      "organization": "宜蘭新月神農廣場",
-      "location": "宜蘭新月神農廣場",
-      "activityDate": "2026-08-16",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "電影票",
-        "禮券",
-        "餐飲"
-      ],
-      "subTags": [
-        "餐飲－麥當勞",
-        "餐飲－早餐"
-      ],
-      "pttData": {
-        "rawLine": "8/16(日)宜蘭新月神農廣場",
-        "images": [
-          "https://i.imgur.com/hzyVUsL.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/hzyVUsL.jpeg",
-            "text": "人 同 多\n< 人 2\n/ /\n“生 生 不 息\n/ 選 us\n一\nAA\n愛\n谷\n2 讓 愛 延續 , 讓 生 命 綻放 希望 弘 及 字 肥\n二 而 A 軋\n人 115 年 8 月 16 日 H) 約 和 人 了\n延續 !\n(0 09:00-16:00\nGO 匾 喊 新 月 神 農 廣 電\n( 宣 蘭 市 神 農 路 二 段 117 號) @' 外 5B 伙 -\n上 紀 。 滬 覓 自 250cc:\n娘 贈 新 月 電影 票 1 張 或 愛 心 禮券 2 張\n多 環 血 500cc:\n贈 新 月 電影 票 2 張 或 愛 心 禮券 4 張\n玄 前 100 名 FB 打 卡 贈 『 麥 當 勞 早 餐 』\n宣 蘭 捐血 站 同 步 舉 辦 (電影 栗 或 愛 心 禮 限量 80 份 )\n08:00-17:00 (宜蘭 市 擺 里 路 16-7 號 )\n捐血 請 攜帶 身分 證 證件 , 主 辦 單位 保留 修改 感恩 禮\n一 一 一 一 主 辦 單位 一 一 一 一 人 4\n224 功 昌 建 設 有 限 公司 」 , 卓 眶 建設 開 發 有 限 公 司 人\n",
-            "confidence": 66
-          }
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-17": [
@@ -13858,13 +14401,17 @@
       }
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDgvMTctMTA6MDB+MTg6MDAt5Y+w5Y2X5biC5LuB5b635Y2A5paH6LOi5ZyL5bCP",
+      "id": "6auY6ZuELTIwMjYvMDgvMTctMTA6MDB+MTg6MDAt6IyE6JCj6YeR6ZG+5a6u",
       "time": "10:00~18:00",
-      "organization": "台南市仁德區文賢國小",
-      "location": "臺南市仁德區文賢路一段886號(文賢國小)",
+      "organization": "茄萣金鑾宮",
+      "location": "高雄市茄萣區保定里港東街111號",
       "activityDate": "2026-08-17",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q212581311160917565"
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q212581311160917565",
+      "coordinates": {
+        "lat": 22.8950787,
+        "lng": 120.1836189
+      }
     },
     {
       "id": "6auY6ZuELTIwMjYvMDgvMTctMTA6MDB+MTY6MzAt5pWR5ZyL5ZyY5Y+w5Y2X5biC5q245LuB5Y2A5ZyY5aeU5pyD",
@@ -14114,66 +14661,6 @@
         "lat": 23.1324288,
         "lng": 120.2967849
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTgtOC8xOCjkuowp5Y2X5oqVRmVlbGluZzE45ben5YWL5Yqb5bel5oi/5YGc6LuK5aC0",
-      "time": "",
-      "organization": "南投Feeling18巧克力工房停車場",
-      "location": "南投Feeling18巧克力工房停車場",
-      "activityDate": "2026-08-18",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商",
-        "餐飲"
-      ],
-      "subTags": [
-        "超商－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/18(二)南投Feeling18巧克力工房停車場",
-        "images": [
-          "https://i.imgur.com/wh8pZSz.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/wh8pZSz.jpeg",
-            "text": "C18 捐 熱血 \"分 享 愛 ~\nHa\n世間 115 年 08 月 18 日 (二 ) 9:00 一 15:30\n慚 軒 Feeling18 巧 克 力 工房 停車 場\n庄 納 18 度 C 文 化 基金 會 、 台 中 市 山 明 猴子 會 、 埔 時 慈善 全\n婦女 聯合 協 進 全\n遇 獎 宰\n引 500cc 抽 獎 禮 : 日 高 鍋物 父 券 1500 元 一 1 名\n嘆 之 兌 250cc 抽 獎 禮 : 日 高 鍋物 餐 券 1000 元 一 2 名\n[ 捐 血 補 ])( 因 時 有 限 , 送 完 放 上)\n1.18 度 C 文 化 基金 會 -Feeling18 原 味 生 吐 司 一 條 、 手 威 帆布 袋 一 個\n2. 台 中 市 山 明 獅 子 會 -250c,c 贈 送 冷水 壺 + 保溫 袋 一 組\n500c.c 加 贈 高 級 鍋 具 一 只\n3. 埔 里 枯 善 會 - 全 聯 100 元 神 券 一 張 (500c.c 兩 張 )\n4 婦女 聯合 協 進 會 - 坎 當 勞 50 元 禮券 兩 張 (500c.c 四 張 )\n記 ‧\n2 人 @ 侈 轉 同\n扣 血 注意 事項 XN EE 心 多 六\n和\n",
-            "confidence": 69
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTgtOC8xOCjkuowp6Zuy5p6X5o2Q6KGA56uZ",
-      "time": "",
-      "organization": "雲林捐血站",
-      "location": "雲林捐血站",
-      "activityDate": "2026-08-18",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "餐飲",
-        "生活用品"
-      ],
-      "subTags": [
-        "餐飲－咖啡",
-        "餐飲－飲料",
-        "生活用品－毛巾"
-      ],
-      "pttData": {
-        "rawLine": "8/18(二)雲林捐血站",
-        "images": [
-          "https://i.imgur.com/D31NOVn.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 23.7131852,
-        "lng": 120.5407583
-      }
     }
   ],
   "2026-08-19": [
@@ -14384,205 +14871,6 @@
         "lat": 23.0006759,
         "lng": 120.2282403
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTktOC8xOSjkuIkp5Y+w5YyX5ZCE5oyH5a6a5o2Q6KGA6bue",
-      "time": "",
-      "organization": "台北各指定捐血點",
-      "location": "台北各指定捐血點",
-      "activityDate": "2026-08-19",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/19(三)台北各指定捐血點",
-        "images": [
-          "https://i.imgur.com/nQkXf5f.png"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/nQkXf5f.png",
-            "text": "e 倫 合 人 AA\n捐血 250cc 捐血 500cc 念 。 愉 說 選 紗 。,\n9 人 Vy 3 閱 由 交 vw wwWQ9 9\n2026 年 8 月 19 日 (三 )\n店 司 萬 海 松 江 辦 公 室 萬 海內 湖 辦公 室\n| 和 蕉 #:\n, | 關 :\n員 MG 區 度 臣 中 正 公園 捐血 室 台 中 港 34 號 碼頭\n~ 說 和\ntty 廬 了 前 金 捐血 室 高 雄 港 63 號 碼頭\nAt 作 人 上\nmy 禽 - 含 , 例 . @ . No 4 1 Xi y\n為 全 信人 人\n全 , 納 說 愧 族人 含 :\n人 全 學 VW 六 WWW\n2026 年 8 月 20 日 (四 )\n基隆 寶 昇 船 務 長 春 捐血 室\n南海 捐血 室 忠 孝 捐血 室\n東\n峨 岬 號 捐血 車 板橋 捐血 站\n入 ri A\n",
-            "confidence": 52
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTktOC8xOSjkuIkp5qGD5ZyS6Jed5paH5buj5aC0",
-      "time": "",
-      "organization": "桃園藝文廣場",
-      "location": "桃園藝文廣場",
-      "activityDate": "2026-08-19",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/19(三)桃園藝文廣場",
-        "images": [
-          "https://i.imgur.com/EjOun42.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/EjOun42.jpeg",
-            "text": "@ 殼 八 今 CMgmsea\n202%\nWe\n屢 必 下 面 @ 你 的 主 側 @ 是 城市 的 脈動\n加 凍 公 ~ 說 | | | 請\n只 SY 咯 宮 !\n二 及 AA 史 人\n0 Say 4 共 2SSN B ,\n8 ~ WE25O0 500cc\n/ ( 恒 人 有 品 語 品\n9 說 310 記 1 6310 中 到 相 台\n主 詹 早 位 | @ 也 不 生 本 全 名 選用 信 有 則 所 必 必 全 台 說 不 生 拓 早 位 | 永 度 划 療 侈 會 全 和 和\n",
-            "confidence": 31
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTktOC8xOSjkuIkp5Y+w5Lit5ZCE5oyH5a6a5o2Q6KGA6bue",
-      "time": "",
-      "organization": "台中各指定捐血點",
-      "location": "台中各指定捐血點",
-      "activityDate": "2026-08-19",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/19(三)台中各指定捐血點",
-        "images": [
-          "https://i.imgur.com/nQkXf5f.png"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/nQkXf5f.png",
-            "text": "e 倫 合 人 AA\n捐血 250cc 捐血 500cc 念 。 愉 說 選 紗 。,\n9 人 Vy 3 閱 由 交 vw wwWQ9 9\n2026 年 8 月 19 日 (三 )\n店 司 萬 海 松 江 辦 公 室 萬 海內 湖 辦公 室\n| 和 蕉 #:\n, | 關 :\n員 MG 區 度 臣 中 正 公園 捐血 室 台 中 港 34 號 碼頭\n~ 說 和\ntty 廬 了 前 金 捐血 室 高 雄 港 63 號 碼頭\nAt 作 人 上\nmy 禽 - 含 , 例 . @ . No 4 1 Xi y\n為 全 信人 人\n全 , 納 說 愧 族人 含 :\n人 全 學 VW 六 WWW\n2026 年 8 月 20 日 (四 )\n基隆 寶 昇 船 務 長 春 捐血 室\n南海 捐血 室 忠 孝 捐血 室\n東\n峨 岬 號 捐血 車 板橋 捐血 站\n入 ri A\n",
-            "confidence": 52
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTktOC8xOSjkuIkp5Y+w5Lit6YqA6KGM6Iqx5aOH5YiG6KGM",
-      "time": "",
-      "organization": "台中銀行花壇分行",
-      "location": "台中銀行花壇分行",
-      "activityDate": "2026-08-19",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "超商－全聯",
-        "禮券－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/19(三)台中銀行花壇分行",
-        "images": [
-          "https://i.imgur.com/P1yYCdL.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/P1yYCdL.jpeg",
-            "text": "4 一 主 証\n9 1 一 了 是 L\n加 記 還 有 人\n和 當 踢\n全 上 3\n* 失 只 li 和 計 5 點 還 認 AS\n| 吐 選 | 4 1 有 川 > 8863 生 碑 一 2\n入 ,\n7 MY\n熱血 成 卻 : 研 究 所\n虛 115/08/19 (==) 9:30~16:00 / 偽 網 哇\n請 攜帶 具 照 片 及 身分 證 字 號 之 證件 前 往 捐 血 【,, 7\n捐血 皆 贈送 精美 小 禮 「 讚 家 族 野 餐 墊 』 一\n(實際 贈品 以 現場 為 主 , 數 量 有 限 , 送 完 為 止 ) 圖 片 僅 供 參考\n米 活動 詳情 以 台 中 銀行 官網 及 粉絲 專 頁 公告 為 主 台 中 銀 讚 家 族 - 野 餐 墊\n@ 活動 地 點 台 中 銀行 花壇 分 行\n偽 “ 凡 參與 活動 即 可 獲得 以 下 禮品 各 一 份 (※ 完 # 止 ) 催\n沙拉 脫 ( 洗 碗 精 ) 全 聯 禮 券 200 元 全 雞 一 隻 保溫 扛\n和 2 曙 芭\n戀 弦 S 一 江\n圖 片 僅 供 參考 圖 片 僅 供 參考 圖 片 僅 供 參考 圖 片 僅 供 參考\n人 炙 抽獎 活動 凡 捐 血 250cc 即 可 獲取 一 次 抽獎 機 會 (每 人 上 限 雨 次 )\n114 PHILIPS 50 時 電視 一 台 412 DYSON V8 吸塵 器 一 支\n多 as\n主 辦 單 位 全 台 中 商 業 銀 行 花壇 分 行\n國 還 轎 包 還 人\n",
-            "confidence": 67
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTktOC8xOSjkuIkp5b2w5YyW5ZKM576O6bm/5ZKM6Lev",
-      "time": "",
-      "organization": "彰化和美鹿和路",
-      "location": "彰化和美鹿和路",
-      "activityDate": "2026-08-19",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "食品"
-      ],
-      "subTags": [
-        "食品－米"
-      ],
-      "pttData": {
-        "rawLine": "8/19(三)彰化和美鹿和路",
-        "images": [
-          "https://i.imgur.com/MeS17sQ.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTktOC8xOSjkuIkp44CBOC8yNijkuIkp6Zuy5p6X6JmO5bC+6YO15bGA",
-      "time": "",
-      "organization": "、8/26(三)雲林虎尾郵局",
-      "location": "、8/26(三)雲林虎尾郵局",
-      "activityDate": "2026-08-19",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/19(三)、8/26(三)雲林虎尾郵局",
-        "images": [
-          "https://i.imgur.com/cdccqMh.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/cdccqMh.jpeg",
-            "text": "廣告\n@ 人 誠\n郵政 賣 險\n安心 首選 血 @\n捐 熱 愛 心\n學 人 as\n凡 時 人\n全 > 一\n當 全 QQ (? 9 》\n補 人 2\n1 | 0 了\n和\n! O+\n二 皿 人\n活動 資訊\n全 記 巷 寺 林 捐血 站 ( 半 六 市 漢口 路 187 號 )\n8/2、3、7、10、11、12、13、14、\nis 今 、\n全 記 誠 》 旋 尾 郵 局 (虎尾 鎮 中 山里 林 森路 段 495 號 ) 注意 事項 飼\n8/19、26( 三\n螞 訕 年 齡 : 年 滿 16 歲 ~ 未 滿 65 歲\n/-( 珊 血 剛 品 一 一 一 一 一 一 一 一 下 9945AFrR\n| 和 250 4 LA 訕 請 攜帶 有 照片 及 身分 證 字 號 的 證件\n品\n加 還 > 則 勿 空腹\nae 「_‧3 不 ”**\n| “人 合計 | ( 記 汪 2 | 勿 服用 治療 性 藥物\n| 本 側 菩 ee\n( 价 中 華 郵 下\n",
-            "confidence": 52
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTktOC8xOSjkuIkp6auY6ZuE5aSn6YGg55m+5LiD5aSV5YWp5Lq65ZCM6KGM5rS75YuV77yI6ZyAOC8xOCAxNjozMOWJjee2sui3r+WgseWQjQ==",
-      "time": "",
-      "organization": "高雄大遠百七夕兩人同行活動（需8/18 16:30前網路報名",
-      "location": "高雄大遠百七夕兩人同行活動（需8/18 16:30前網路報名",
-      "activityDate": "2026-08-19",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/19(三)高雄大遠百七夕兩人同行活動（需8/18 16:30前網路報名",
-        "images": [
-          "https://i.imgur.com/kpjgm6V.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/kpjgm6V.jpeg",
-            "text": "9 號\n“當 一 一 倪 , 仿 ,\n【 【/\n說 入 了\n8/19 2 說\n兩 人 同 行 且 提前 網 路 報名 , : 嘲\n當 日 凡 一 人 捐血 成 功 2 全\n同 上 8 臣 ,\n(2 捍 1) 語\n可 * 寺 sa\n本 3 高 雄大 遠 百\n(高 雄 市 雅 區 三 多 四 路 21 號 ) 兩 人 同 行 且 提前 網 路 報名 ,\n呈 S 位. 當 日 兩 人 捐血 成 功\n過\n4\n和\n說\n+3 he 人 每 組 至 少 需 二 人 ; 每 組 合 應 為 情侶 或 夫妻 。 3\n站 賓 】 人 全\n如 二 人 角 活動 專屬 攝影 拍 下 專屬 紀念 照 讓 捐血 情人 帶 回 家 ( 拍 立 得 )。 和 人\n活動 詳情 請 上 高 雄 捐血 中 心 粉絲 專 頁 查詢 , 活動 辦法 如 有 任何 變更 人 【\n了 以 粉絲 專 頁 公告 為 準 。 說 /\n曳 和 本 中 心 有 隨時 調整 活動 辦法 、 時 間 、 內 容 及 終止 活動 之 權利 之\n",
-            "confidence": 66
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMTktOC8xOSjkuIkp6auY6ZuE5ZCE5oyH5a6a5o2Q6KGA6bue",
-      "time": "",
-      "organization": "高雄各指定捐血點",
-      "location": "高雄各指定捐血點",
-      "activityDate": "2026-08-19",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/19(三)高雄各指定捐血點",
-        "images": [
-          "https://i.imgur.com/nQkXf5f.png"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/nQkXf5f.png",
-            "text": "e 倫 合 人 AA\n捐血 250cc 捐血 500cc 念 。 愉 說 選 紗 。,\n9 人 Vy 3 閱 由 交 vw wwWQ9 9\n2026 年 8 月 19 日 (三 )\n店 司 萬 海 松 江 辦 公 室 萬 海內 湖 辦公 室\n| 和 蕉 #:\n, | 關 :\n員 MG 區 度 臣 中 正 公園 捐血 室 台 中 港 34 號 碼頭\n~ 說 和\ntty 廬 了 前 金 捐血 室 高 雄 港 63 號 碼頭\nAt 作 人 上\nmy 禽 - 含 , 例 . @ . No 4 1 Xi y\n為 全 信人 人\n全 , 納 說 愧 族人 含 :\n人 全 學 VW 六 WWW\n2026 年 8 月 20 日 (四 )\n基隆 寶 昇 船 務 長 春 捐血 室\n南海 捐血 室 忠 孝 捐血 室\n東\n峨 岬 號 捐血 車 板橋 捐血 站\n入 ri A\n",
-            "confidence": 52
-          }
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-20": [
@@ -14646,7 +14934,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 24.8108593,
         "lng": 120.9577185
@@ -14673,7 +14960,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 24.8283339,
         "lng": 121.0090699
@@ -14739,7 +15025,6 @@
           }
         ]
       },
-      "tags": [],
       "coordinates": {
         "lat": 24.8336688,
         "lng": 120.997844
@@ -14926,56 +15211,6 @@
         "lat": 22.7658777,
         "lng": 121.139119
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjAtOC8yMCjlm5sp5Y+w5Lit5biC5pS/5bqc",
-      "time": "",
-      "organization": "台中市政府",
-      "location": "台中市政府",
-      "activityDate": "2026-08-20",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/20(四)台中市政府",
-        "images": [
-          "https://i.imgur.com/5VraJ0X.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/5VraJ0X.jpeg",
-            "text": "82G 捐血 園 遊 會\n\nDs 7 月 JLEA 百 -\n表 主 2 出 , + 量 去 人 抽\ni+ ) ~/ 1】 世 以 和 和 佃 。】 邊 去 划 1\n\n沙 上 “但 7\n\n時 還 8/20( 四 ) 10:00~18:00 Q@ 臺中 市 政府 廣場 )\n\n一\n\n, HIEHEEI\n4 加 莒 和 硬 人 0 G) 了\n250cc 全 聯 禮券 生 點 施 券 bb (冷風 記 )\n\n- 100 100 1\n點 伍 上 1OE 人\n500c 麻 7 還 讓 了 旋 的\n2Z00 元 200 元 2 請問 購 行\n字 贈品 數 量 有 限 , 送 完 為 止 , 主 辦 單位 保留 活動 變更 之 權利 。 如 2 六\n+ ‧ 括 信 。\n9 痞 必用\n‧ (好 說 9\nGe Q /《\n還 汪 全 宮下 載 ( 友 克 化 Pikmin Bloom)+\n\n2 當 天 活動 現場 點 他 仿 作 9 +\n人 為 全 八 」 一 50002 約 :\nAA GIEETETTD》 Go\n層 人 和 多 中 出 示 遊戲 主 畫 面 諺\n台 對 2 全 5 CEEED》 和 克\n歡 說 人 人 上 說 精美 小 禮物 1 份\n|「@GQe@Ge@e 同 。 (了 機 財 送 )\n主 盎 單 位 公文 生 中 改 胡 和 履 為 。(@) 未 譚 冀 普 基金 會\n公辦 呈 位 0) 夭 雇 不動 育 @@ 永基 用 必食 有 果 丘 話 必 人 @ 主 不 重利\n",
-            "confidence": 38
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjAtOC8yMCjlm5sp5Y+w5Lit5aSq5bmz5p2x5bmz5aSc5biC",
-      "time": "",
-      "organization": "台中太平東平夜市",
-      "location": "台中太平東平夜市",
-      "activityDate": "2026-08-20",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "食品"
-      ],
-      "pttData": {
-        "rawLine": "8/20(四)台中太平東平夜市",
-        "images": [
-          "https://i.imgur.com/pjprH2f.jpeg"
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-21": [
@@ -15188,19 +15423,6 @@
       }
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDgvMjEtMDg6MDB+MTc6MzAt6KW/5aCk54mb5o6S",
-      "time": "08:00~17:30",
-      "organization": "西堤牛排",
-      "location": "屏東縣屏東市忠孝路295號(S73屏東捐血站)",
-      "activityDate": "2026-08-21",
-      "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q212581342401460606",
-      "coordinates": {
-        "lat": 22.6897737,
-        "lng": 120.488831
-      }
-    },
-    {
       "id": "6auY6ZuELTIwMjYvMDgvMjEtMDk6MzB+MTc6MDAt5ZyL6Zqb5om26LyqMzUxMOWcsOWNgOWMl+mrmOmbhOaJtui8quekvg==",
       "time": "09:30~17:00",
       "organization": "國際扶輪3510地區北高雄扶輪社",
@@ -15264,462 +15486,6 @@
         "lat": 22.7658777,
         "lng": 121.139119
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5Y+w5YyX5ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "台北各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "台北各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)台北各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5paw5YyX5ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "新北各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "新北各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)新北各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5Z+66ZqG5o2Q6KGA56uZ6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmOiiiyjmr4/ml6U=",
-      "time": "",
-      "organization": "基隆捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-      "location": "基隆捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)基隆捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5qGD5ZyS5ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "桃園各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "桃園各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)桃園各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5paw56u55ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "新竹各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "新竹各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)新竹各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp6IuX5qCX5ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "苗栗各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "苗栗各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)苗栗各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5Y+w5Lit5ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "台中各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "台中各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)台中各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5b2w5YyW5ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "彰化各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "彰化各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)彰化各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5Y2X5oqV5ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "南投各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "南投各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)南投各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg",
-          "https://i.imgur.com/kec9nFB.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          },
-          {
-            "url": "https://i.imgur.com/kec9nFB.jpeg",
-            "text": "an 品 生 到 生 太 打 二\n即 日 起 至 雲 林 捐血 站 ,,\n計 次 捐血 者 贈送 ,G\n+ 首次 捐 首 送 ,\naee+ 折 狼 恒 仿若 克\n三 1 生 寢 個 /\n國 讓 人 生 第 一 次 捐血 , 條\n革 完成 人 二 三 痞 的 紀念 !\n名 下 是 有 說 玉 語 2\n四 扣 務 As\n中 各 罕 附和 es 人\n同 還 Pa 尼 泌\n是\n同 有 雲 林 捐血 lu 庄 l 同 , 請\nak\n放 ii 「、 加 蟬 玉 還 有 >」\n(5 茲 條 是 入 一 一 起 克 賓 ,\nPaee- 人\n六 本 活動 由 雲 林 捐血 站 分 離 術 捐血 人 林 瑞祥 先 生 熱心 提供 。 丙\n馬克 杯 贈送 日 期 , 依 雲 林 捐血 站 粉絲 團 公告 為 準 。 G9 | 人)\n",
-            "confidence": 49
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp6Zuy5p6X5o2Q6KGA56uZ6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmOiiiyjmr4/ml6U=",
-      "time": "",
-      "organization": "雲林捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-      "location": "雲林捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)雲林捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5ZiJ576p5ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "嘉義各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "嘉義各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)嘉義各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5Y+w5Y2X5ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "台南各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "台南各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)台南各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp6auY6ZuE5ZCE5oyH5a6a5o2Q6KGA6bue6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmA==",
-      "time": "",
-      "organization": "高雄各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "location": "高雄各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)高雄各指定捐血點送西提牛排五折券(依人次計)，首捐或500cc加贈海灘",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5bGP5p2x5o2Q6KGA56uZ6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmOiiiyjmr4/ml6U=",
-      "time": "",
-      "organization": "屏東捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-      "location": "屏東捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)屏東捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjEtOC8yMS04LzI0KOS6lC3kuIAp5a6c6Jit5o2Q6KGA56uZ6YCB6KW/5o+Q54mb5o6S5LqU5oqY5Yi4KOS+neS6uuasoeioiCnvvIzpppbmjZDmiJY1MDBjY+WKoOi0iOa1t+eBmOiiiyjmr4/ml6U=",
-      "time": "",
-      "organization": "宜蘭捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-      "location": "宜蘭捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-      "activityDate": "2026-08-21",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "餐飲－牛排",
-        "超商－家樂福"
-      ],
-      "pttData": {
-        "rawLine": "8/21-8/24(五-一)宜蘭捐血站送西提牛排五折券(依人次計)，首捐或500cc加贈海灘袋(每日",
-        "images": [
-          "https://i.imgur.com/vfZCZOG.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/vfZCZOG.jpeg",
-            "text": "記 旋 而 計 人 方 加\n可 ASTY\n西堤 牛排 同\n人 了 2 人 mt\n品 員 玉 全 2 人\nMe 生 ~\n且 | 昌 宮 加 全 一\nEE 和 3 [讓 品 謂 放 畫 傘\n二 、) 二 放生 噶\n加 讓 L 了 一 人 若\n* 入 - 讓 , 受 亞 頃 說\nbo (三\n入 謂 佃 謂 宮 全 全 訪 六 5\n電 血 時 間 . 讀 富 | 2 /\n| 抽 竹 , 台 中 、 高 雄 捐血 中 心 |!\n| 8/2A 到 台北 擴 血 四 捐血 依 人 次 計較 f\n| 2026 8/21 指定 捐 上 /\n| 加 國 還 全 人 學 時 讓\n| 歡 玉 | 單 客 吧 一 共 , |\n| 人 圖 西 電 咎 下 二 寢\n怀 磚 全\n還 1 和 直 4\n首次 捐血 中 | 以 折 芳 \"|」 吧 2 /\n1 | 條 區 一 「 史 ,\n和 區 0 | 2\n捐血 500cc” 呢 加 人 日 晶 8/21\nww 和 還 / 中 入 讓\nau ! 記 世\n9 / | 信者\n加 由 點 4 一 路 識\n!\neeeeoeeoeoeoseoeeeeeeooedooo\n台 北 捐血 中 心 資訊 台 中 捐血 中 心 資訊\naa oa 主 本 點 電話 地 區 捐血 點 地 址 服務 時 間 電話\n還 li 是 還 還 于 還 點 本\n還 ii 還\n主 EE\nDE\n語 -\n下\nds\n臺中 市 豐原 區 北陽 路 2 號\n還 避 呈 本 還 加\n臺北 市 中 正 區 南海 路 1 號 3 樓 「wmera|92am-ie|\n計 屆 ETCEEEEE\n區 下 較 較 各 二 二 還 還 還 EE 本 了 本\n同 EE 玫\nEE 還 ad\ner RE\neeasleouw\n店\n| 號 和 車 | 新 北市 中 和 區 中 安 和 號 / 回 立 中 加 畫 艙 823 公 點 內 |9mrirm|m29996| am 匣 了 潑 有 和 讓 1\n店 和 點 還 加 多 克 本\nam mm 點 蕊 2 加 加 已 me\n上 rm 加 已 可 眉 本 避\n新 北市 三 重 區 重新 路 四 段 12 號 7 樓 之 2 本\n上 HIDEE 加 了 2 還 EE\n店 加 還 由\nEE 加 也 中 了 E 本 時 了\n選 全 玫\n蕊 二 TEMNEEHEEEI 點\nEE\n2 點 09:00-17:00\nIs\n加 EE\n08:00-16:00\n[as | 由 em\n高 雄 捐血 中 心 資訊\nes 地 區 捐血 點 地 址 服務 時 間 電話\nma ge\n以 捐血 點 地 址 服務 時 間 電話 區 還\nBE 全 Wei\n桃園 捐血 站 桃園 市 桃園 區 文 康 街 61 號 08:00-17:00「03-332-7651 | Mt 半 | 台 南 市 北 區 北 安 路 一 段 183 號 | air War3t0|\n桃園 市 傾 山 區 復興 街 5 號 1 100 下 2 區 點 台 南 公園 (公園 路 上 ) - 台 南韓 運 站 對 面 | mr | 2295ms\n選 (林 口 長 庚 醫 院 醫學 大 樓 地 下 街 ) 信和 生 台 南 市 新 營區 中 正路 23_1 號\n晤 es\nIT 還 EE\nee\n桃園 市 桃園 區 三 民 路 三 段 182 號 3 樓 之 1 jmuiem jam\nmg | Wang | 机 M 說 Aa 全 ad aa\n加 可 國定\n上 國 菩 TE 還\nee EE\n5\n新 竹 縣 竹 北 市 縣 政 九 路 135 巷 36 號 前 11:00-18:00 | 高 雄 市 鳳 山區 五 甲 二 路 563 之 2 號 生 lm\n( 竹 北 免費 公車 家 樂 福 站 後 方 ) ( 週 三 ~ 週 五 作業 ) 09:00-17:30\n選 as 還 和 人 時 和 局 生\nal IN 蕊 卅 aa 和 Ma\nICED 本\n和 還 可 的 可 四 IN 本\n主 辦 單位 “和 2 人 協辦 單位 SS 台 灣 切 液 基 全 會\n",
-            "confidence": 44
-          }
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-22": [
@@ -15867,14 +15633,6 @@
           "https://i.imgur.com/ngd5n4D.jpeg"
         ]
       },
-      "tags": [
-        "超商",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "超商－家樂福"
-      ],
       "coordinates": {
         "lat": 22.6161783,
         "lng": 120.4721273
@@ -16076,12 +15834,6 @@
           "https://i.imgur.com/Cek8NvR.jpeg"
         ]
       },
-      "tags": [
-        "食品"
-      ],
-      "subTags": [
-        "食品－米"
-      ],
       "coordinates": {
         "lat": 23.0179174,
         "lng": 120.208046
@@ -16134,15 +15886,6 @@
           }
         ]
       },
-      "tags": [
-        "禮券",
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－蛋",
-        "生活用品－保溫杯"
-      ],
       "coordinates": {
         "lat": 22.9071388,
         "lng": 120.2137418
@@ -16160,30 +15903,6 @@
         "lat": 22.7658777,
         "lng": 121.139119
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjItOC8yMijlha0p6Zuy5p6X5paX5YWt6Iao6byg5YWs5ZyS",
-      "time": "",
-      "organization": "雲林斗六膨鼠公園",
-      "location": "雲林斗六膨鼠公園",
-      "activityDate": "2026-08-22",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/22(六)雲林斗六膨鼠公園",
-        "images": [
-          "https://i.imgur.com/46fjWZs.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/46fjWZs.jpeg",
-            "text": "永 慶 慈 善 基金 會 主 辦\n和 說\n熱血 愛, ,69.\nke 一 世人 ,\n7s% ~ 一 和 念 命 3\n一 起 拘 起 衣 袖 / 人 Aa\n4 7s 2 】\n讓 愛 延續 2\n弓 -2 夫 一 對 11 三 1 紹 箇 第 人 “全 自 以 人 、 二 還 芍 二\n【 偽 一 袋 熱血 。 一 份 希望 駁 廳 / 1\n說 旦 還 也 昌 記\n全 請 您 掀起 表 視 ,。 捐 出 熱血 多 并 生 aa 同 (Wi\n幫助 需要 的 人 , 讓 世界 更 美 好 ! 和 避 史 全 和\n全 Ba 人 2| 了 全 到 則 加\n位 捐 和 日 期 品 生\n115/8/22, 人 責\n/8/22,, N< 仿生 人 和 人 人\nAM09:00~PM16:00 訪 計 如 is 展\nBe 2\n名 捐血 車 兩 台 【 鄧 俱 3 人\n(we “人 神\n)》 捐血 地 點 人 全 yy ps A\n『 斗 六 膨 鼠 公園 ma 說\n(公明 路 ) 捐血 送 好 禮 。 感謝 有 您\n》 捐血 活動 好 禮\nEE 到 wema\n了 已 太 骨 有\n250z 語 4 哆 還\naa 上 站 2 9 于 am @ ee [本\n汪 全 生 則\n區 wa 是 恥 回 章 說\n同 ※ 捐 血 禮品 贈 完 為 止 , 數量 有 限 同\n苔 汪 T 誠 (@ 永 慶 慈善 基金 會 。 區 LEE 還 昔 3 雲 林 縣 不 動產 仲介 經 紀 商 業 同 業 公會\nEE 人 (G) 永 度 不 動產 」 坊 永 義 房 屋 他 有 打 氏 房 屋 」 倫 @ 度 不 動產\n一 一\n5 您 的 熱血 , 是 他 們 重 獲 新 生 的 希望! @@ [了 計 Hi\n",
-            "confidence": 45
-          }
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-23": [
@@ -16498,37 +16217,6 @@
         "lat": 23.485528,
         "lng": 120.4426343
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjMtOC8yMyjml6Up5b2w5YyW5ZKM576O6Y6u5YWs5omA",
-      "time": "",
-      "organization": "彰化和美鎮公所",
-      "location": "彰化和美鎮公所",
-      "activityDate": "2026-08-23",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商",
-        "餐飲",
-        "生活用品",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "食品－蛋糕",
-        "超商－全聯",
-        "禮券－全聯",
-        "餐飲－飲料",
-        "生活用品－衛生紙"
-      ],
-      "pttData": {
-        "rawLine": "8/23(日)彰化和美鎮公所",
-        "images": [
-          "https://i.imgur.com/yNw5M8X.jpeg"
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-24": [
@@ -16847,17 +16535,13 @@
       }
     },
     {
-      "id": "6auY6ZuELTIwMjYvMDgvMjUtMTA6MDB+MTg6MDAt5LiL6IyE6JCj6YeR6ZG+5a6u",
+      "id": "6auY6ZuELTIwMjYvMDgvMjUtMTA6MDB+MTg6MDAt5paH6LOi5ZyL5bCP",
       "time": "10:00~18:00",
-      "organization": "下茄萣金鑾宮",
-      "location": "高雄市茄萣區保定里港東街111號(下茄萣金鑾宮)",
+      "organization": "文賢國小",
+      "location": "臺南市仁德區保安里文賢路一段886號(文賢國小)",
       "activityDate": "2026-08-25",
       "center": "高雄",
-      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q216599576099030457",
-      "coordinates": {
-        "lat": 22.8951469,
-        "lng": 120.1835743
-      }
+      "detailUrl": "https://www.ks.blood.org.tw/xcevent/cont?sid=0Q216599576099030457"
     },
     {
       "id": "6auY6ZuELTIwMjYvMDgvMjUtMDg6MDB+MTc6MDAt5Lit6I+v6YO15pS/6IKh5Lu95pyJ6ZmQ5YWs5Y+45bGP5p2x6YO15bGA",
@@ -16910,28 +16594,6 @@
         "lat": 22.9333033,
         "lng": 120.1800769
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjUtOC8yNSjkuowp6Zuy5p6X5YyX5riv6YGL5YuV5YWs5ZyS",
-      "time": "",
-      "organization": "雲林北港運動公園",
-      "location": "雲林北港運動公園",
-      "activityDate": "2026-08-25",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "食品"
-      ],
-      "subTags": [
-        "食品－米"
-      ],
-      "pttData": {
-        "rawLine": "8/25(二)雲林北港運動公園",
-        "images": [
-          "https://i.imgur.com/gYeIarR.jpeg"
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-26": [
@@ -17116,30 +16778,6 @@
         "lat": 22.9905068,
         "lng": 120.2093431
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjYtOC8yNijkuIkp44CBMTEvMjYo5ZubKeW9sOWMluaYrei8neWvpualrQ==",
-      "time": "",
-      "organization": "、11/26(四)彰化昭輝實業",
-      "location": "、11/26(四)彰化昭輝實業",
-      "activityDate": "2026-08-26",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/26(三)、11/26(四)彰化昭輝實業",
-        "images": [
-          "https://i.imgur.com/05zw8g3.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/05zw8g3.jpeg",
-            "text": "導 ,) 三\n『 各 和\nut\nsa RAM\nNeoA\n還 1 和 負 守 ,\n只 , 和\nIg 漣 實業 股 份 有 限 公司\n1159 年 捐血 日 期\n2//0 () / /6 !\n點 7)》( 1 /20 也\n9/ 0 4 過\n計 革 入 同\n噴 唱 1 以 歡 列\n有 3\n說 了) Go\n| 2\n還\n",
-            "confidence": 29
-          }
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-27": [
@@ -17394,56 +17032,6 @@
         "lat": 23.5520251,
         "lng": 120.3475914
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjctOC8yNyjlm5sp5b2w5YyW5ZOh5p6X5Lit5bGx6Lev5LiA5q61",
-      "time": "",
-      "organization": "彰化員林中山路一段",
-      "location": "彰化員林中山路一段",
-      "activityDate": "2026-08-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/27(四)彰化員林中山路一段",
-        "images": [
-          "https://i.imgur.com/Xl1Xq8v.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/Xl1Xq8v.jpeg",
-            "text": "9, 和 太\n際 jg 家\n攻 廳 愛 , 協會 1 店 抽 本 「 廊\nee 至 導 太 傳 受 据 - 一 一 寺\n用 記 2 信\n刁 酉 - r 和 主 xy 、 人\n嚷 》7 和 2 年 月 </ 晶 (四) = 人 說 人 生\n) 點 至 7 點 人\n9 / /{ 人 箇 一 表\n林 3》 員 林 市 中 崗 踏 一 及 45 號 點 救 人 一 命\n( 啟 德 廚 了 重機 車 業 ) 2 有\n糧 雇 痰 即 六 定點\n丈 2 月 全 7 生 人 MR\n250cc 由 划 3 彩 mm l\n2 央 3 00 AN 賓 噴 全 7\n影 。 、 9 、1-\n說 人\n交點 靖 箇 完成 這 通 瓦 參 謂 益 獎\n| 生 品 5 人 # |\n『 ) 放 “各 席 2 選 了\n明星 膨 計\n| iPhone 17 iPad AirPods4 主 聯 商 品 禮 紛 ,\nee\n和 (0 年 上 限 市 : 17 導 至 65 放 還\n上 Wat、= 和 ag ~ 四 ~ ap 全 圖 0 點 轉 嶼 市 : 女 性 45 公 斤 以 上 夸 >\naf : amaa9ia7stRmUi 6\n十 、 困 四 仙 了 公 司 、 和 自 、 上 本 還 有 交點 件 (如 身分 論 、 六 昭 或 健保 卡 ) AA\nWan ~8ammg、 cmm mum GO 拓 250 間 和 (ml) : 間隔 須加 2 個 月 以 上 產 v |\nma\n同 AV 一 說 悶 血 有 饋 . 要 不 止息 $ 人\n",
-            "confidence": 34
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjctOC8yNyjlm5sp44CBOS8yNyjml6Up5b2w5YyW5ZKM576O6b6N6I+v5oWI5oOg5aCC",
-      "time": "",
-      "organization": "、9/27(日)彰化和美龍華慈惠堂",
-      "location": "、9/27(日)彰化和美龍華慈惠堂",
-      "activityDate": "2026-08-27",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商",
-        "食品"
-      ],
-      "subTags": [
-        "食品－米",
-        "超商－全聯",
-        "禮券－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/27(四)、9/27(日)彰化和美龍華慈惠堂",
-        "images": [
-          "https://i.imgur.com/k0TNqho.jpeg"
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-28": [
@@ -17866,16 +17454,6 @@
           "https://i.imgur.com/o1tuY0I.jpeg"
         ]
       },
-      "tags": [
-        "禮券",
-        "超商",
-        "餐飲"
-      ],
-      "subTags": [
-        "超商－全家",
-        "超商－全聯",
-        "禮券－全聯"
-      ],
       "coordinates": {
         "lat": 22.9821464,
         "lng": 120.2460038
@@ -18114,54 +17692,6 @@
         "lat": 23.485528,
         "lng": 120.4426343
       }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjktOC8yOSjlha0p5Y+w5YyX5Lit5bGx5o236YGL56uZNuiZn+WHuuWPow==",
-      "time": "",
-      "organization": "台北中山捷運站6號出口",
-      "location": "台北中山捷運站6號出口",
-      "activityDate": "2026-08-29",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/29(六)台北中山捷運站6號出口",
-        "images": [
-          "https://i.imgur.com/2tZEBZF.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/2tZEBZF.jpeg",
-            "text": "鋪 ! 呈 明說 導彈 會\n22ezz/z oo2 zzo24\n捐血 時 間 : 115 年 8 月 29 日 (星期 六 ) 09 : 30 至 17 : 00\n捐血 地 點 : 中 山 捷 運 站 6 號 出 口 (台 北市 大 同 區 南京 西 路 62 號 )\n主 辦 戰 位: 中華 民 國 威 震 愛 心 發 展 協會\n表 Boss 信介 加 地 2\n捐血 時 請 記得 攜帶 身分 證 , 謝 謝 您 !\n",
-            "confidence": 76
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMjktOC8yOSjml6Up5b2w5YyW5aSn5p2R5raI6Ziy6ZqK",
-      "time": "",
-      "organization": "彰化大村消防隊",
-      "location": "彰化大村消防隊",
-      "activityDate": "2026-08-29",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/29(日)彰化大村消防隊",
-        "images": [
-          "https://i.imgur.com/YglD7Zy.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/YglD7Zy.jpeg",
-            "text": "點\n@ @ 急需 您 的 捐血 救 授 @ 信和 大 村 義 消 分 隊\n品 還 人 GO//72G\n國 ] - ( 轎 了 品 二 一 說 說 了 【 呈 基 六 圖 圖\n5 肛 時 一 一 > G 09:30~16:00\n> 加 入 義 消 。 守 護 家 G 地 點 : 大 村 消防 分 隊\n名 選 (大 村 鄉 匣 共 路 1 段 52 號 )\n捐血 一 袋 x 衝\n救 人 ~- 命 他 店 (G\nss 者 人 2\n已 條 偶\n避 了 指 天 嘲 位 4 主 澡 位 人 了 2\n‧ 彰化 縣 消防 局 《 急 義 消 第 二 大 隊\n‧ 彰化 縣 義勇 消防 總 隊 ‧ 大 村 義 消 分 隊\n和 es 協辦 單位 計生\n禹 尚 企 業 只 煙 殼 了 宮 馬 覓 避 綴 對 買 易\n正 新 輪胎 下 全 條 今 騰 工業\n藝 帶 企業 華 豐 橡 膠 工 業 歐 典 生 物 科技\n圓 老 鑽 手工 粉 圓 。 老 先 覺 大 村 店 協 盛 行\n可 宸 科技 味 特 生 物 科 技 森田 藥 粧\n美 利達 公司 今 仁 企業 大 村 鄉 調解 委員 會\n禹 昌 企 業 鴻 程 消防 主 席 徐 有 得\n堡 勝 企業 旭 聚 企業 彰化 縣 榮譽 觀 護 人 協 進 會\n明 係 集 轉 涯 豐 生 物 科 技 簡單 集 轉\n久 旺 科技 安 麒 兒 幼兒 園 TEA TopP 第 一 味 」\n「 碩 量 一\n捐血 250cc 賠 送 諜 豬 招生 500Occ 昭 送 刻 光\n櫥 券 神 卷 》 送 完 為 止 對\n說 店 生 女 四 說 全 廬 示 克\n軟式 威 如 頓 。 洗 潔 精 襄 - 加 商 四 漲 放 軟式 或 靈 頓 洗澡 精 香 茅 精油 PT\n吸水 地 整 洗衣 液 面膜 吸水 地 整 洗衣 液 面 錢\nx1 x1 x1 x1 x1 x2 x2 x2 x2 x2\n完成 者 贈送 捐血 500cc 加 贈 雙 份\n圓 老 次 吃 一 口 包子 mm 同 老 資 包子\n說 。 手工 粉 回 ! 手工 粉 點 go 誠\n說 1 ec321m 用 寬 2+ 0C2322a\n彰 一 起 靖 夯 . 秒 拖 愛 心 。- 閉 人 一 命 ‧ 讀 愛 算 細\n",
-            "confidence": 60
-          }
-        ]
-      },
-      "isPttOnly": true
     }
   ],
   "2026-08-30": [
@@ -18523,80 +18053,6 @@
       "coordinates": {
         "lat": 23.0006759,
         "lng": 120.2282403
-      }
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMzAtOC8zMCjml6Up5paw5YyX5paw5bqX5aSq5bmz5a6u",
-      "time": "",
-      "organization": "新北新店太平宮",
-      "location": "新北新店太平宮",
-      "activityDate": "2026-08-30",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/30(日)新北新店太平宮",
-        "images": [
-          "https://i.imgur.com/VcM9PCZ.jpeg"
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMzAtOC8zMCjml6Up5Y+w5Lit56We5bKh5paw5ZKM5a6u",
-      "time": "",
-      "organization": "台中神岡新和宮",
-      "location": "台中神岡新和宮",
-      "activityDate": "2026-08-30",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [],
-      "pttData": {
-        "rawLine": "8/30(日)台中神岡新和宮",
-        "images": [
-          "https://i.imgur.com/gL59nMX.jpeg"
-        ],
-        "ocrTexts": [
-          {
-            "url": "https://i.imgur.com/gL59nMX.jpeg",
-            "text": "調 政 ( 呈 ) !\n2026 2 人\n8.30, “人 5 人 全\n1 計 0 放 )\n\n感謝 有 您 ! 好\n\n只 @eo@eo 人 @\n\n人 和! 二\n人 人 賦 二 員\n\na IT 人 熙 站\n",
-            "confidence": 22
-          }
-        ]
-      },
-      "isPttOnly": true
-    },
-    {
-      "id": "cHR0LTIwMjYtMDgtMzAtOC8zMCjml6Up5b2w5YyW5b2p6bOz5bq1",
-      "time": "",
-      "organization": "彰化彩鳳庵",
-      "location": "彰化彩鳳庵",
-      "activityDate": "2026-08-30",
-      "center": "PTT",
-      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
-      "tags": [
-        "禮券",
-        "超商"
-      ],
-      "subTags": [
-        "超商－全聯",
-        "禮券－全聯"
-      ],
-      "pttData": {
-        "rawLine": "8/30(日)彰化彩鳳庵",
-        "images": [
-          "https://i.imgur.com/DAAMQQZ.jpeg"
-        ]
-      },
-      "isPttOnly": true,
-      "coordinates": {
-        "lat": 24.0887302,
-        "lng": 120.5388019
       }
     }
   ],
