@@ -101,7 +101,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const ogImage = `${baseUrl}/api/og/news/${slug}`;
 
   return {
-    title: article.title,
+    // 用 absolute 跳過 layout 的 "%s | 台灣捐血活動查詢" 模板：衛教標題本身就 21~33 字，
+    // 加上 11 字後綴後 SERP 會從尾巴截斷，砍掉的正是「等滿1年」「隔2個月」這類答案。
+    title: { absolute: article.title },
     description: article.summary,
     keywords,
     alternates: {

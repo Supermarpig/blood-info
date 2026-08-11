@@ -106,7 +106,11 @@ export default function AboutPage() {
         <section>
           <h2 className="text-lg font-bold text-gray-900 mb-3">聯絡我們</h2>
           <p className="text-gray-600 mb-3">
-            如有資料錯誤回報、合作洽詢或其他意見，歡迎透過電子郵件與我們聯繫。
+            如有資料錯誤回報或其他意見，歡迎透過電子郵件與我們聯繫。品牌與廣告合作請參考
+            <Link href="/advertise" className="text-red-600 hover:underline mx-1">
+              廣告合作說明
+            </Link>
+            。
           </p>
           <a
             href="mailto:cody.yu@bloodtw.com"

@@ -33,6 +33,9 @@ export default function Footer() {
             <Link prefetch={false} href="/about" className="hover:text-gray-800 transition-colors">
               關於我們
             </Link>
+            <Link prefetch={false} href="/advertise" className="hover:text-gray-800 transition-colors">
+              廣告合作
+            </Link>
             <Link prefetch={false} href="/privacy" className="hover:text-gray-800 transition-colors">
               隱私權政策
             </Link>
