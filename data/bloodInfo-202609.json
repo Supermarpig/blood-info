@@ -15,6 +15,13 @@
         "rawLine": "9/6(日)、9/11(五)、10/9(五)、10/23(五)、11/29(日)、12/25(五)台北松壽路16巷愛迪達",
         "images": [
           "https://i.imgur.com/SQL9Y7F.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/SQL9Y7F.jpeg",
+            "text": "點 國 點 國\n安 致 勤 資 公 益 信 託 捐血 活動\n捐 導 0 請 看 嶄 ) 影\n時 間 : 11:00-18:00\n地 點 : 松 壽 路 16 巷 愛 迪 達 旁\n1/9、1/25、2/14\n3/13、4/3、5/1\n5/30、6/12、8/8\n9/6、9/1I、10/9\n10/23、11/29、12/25\n計 歡迎 拍照 分 享\nSi\n3 凍 2\n全 “2\n2 襄 | 人 9 捐 500cc 送 二 張\n",
+            "confidence": 61
+          }
         ]
       },
       "isPttOnly": true,
@@ -98,6 +105,97 @@
         ]
       },
       "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDktMDYtOS82KOaXpSnoi5fmoJfmjZDooYDnq5k=",
+      "time": "",
+      "organization": "苗栗捐血站",
+      "location": "苗栗捐血站",
+      "activityDate": "2026-09-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券",
+        "超商"
+      ],
+      "subTags": [
+        "超商－全聯",
+        "禮券－全聯"
+      ],
+      "pttData": {
+        "rawLine": "9/6(日)苗栗捐血站",
+        "images": [
+          "https://i.imgur.com/Ye4RZlc.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/Ye4RZlc.jpeg",
+            "text": "2\n人 和\n本 A 革\n食 。 作 伙 挺 台 灣\n_G@ 公\n\n日 期 :9/6 日)\n時 間 : 上 午 8 時 ~ 下 午 4 時\n地 點 : 新 竹 捐血 中 心 苗 栗 捐 血 站\n\n(苗栗 市 為 公路 282 號 )\n捐血 送 好 禮 1\n250CC 送 全 聯 禮 券 200 元\n500CC 送 全 聯 禮 券 500 元\n\n2 ‧\n\n全 。W0 基 No 了 本 夭 嗚\n@ 苗 栗 縣 小 英之 友 會 人 辦\n人 @ 民 主 進 步 黨 苗栗 縣 黨 部\n",
+            "confidence": 70
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDktMDYtOS82KOaXpSnlvbDljJblk6HmnpfmjZDooYDlrqQ=",
+      "time": "",
+      "organization": "彰化員林捐血室",
+      "location": "彰化員林捐血室",
+      "activityDate": "2026-09-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券"
+      ],
+      "pttData": {
+        "rawLine": "9/6(日)彰化員林捐血室",
+        "images": [
+          "https://i.imgur.com/mBzZlfK.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/mBzZlfK.jpeg",
+            "text": "王 二\n救國 團 工 青 五 隊 。\n捐血 公 盆 活動\n回 倫 浙 動\n5\n回 E115 年 9 月 6 日 日) 也\nti 王 員 林 火車 站 捐血 中 心\n大,\n回 gm 9:00-16:00\n送 20 0 元 禮券 、 精 美 租 品 ~ 份 蔽 乒\n個 呈\n仿 伺 司 ※400 8, 和 ga- 箇 說\n呈 蟬 上 rm\npi\n則 樂團 表 演 茶席 噁 和 各\n救國 團 彰 化 縣 團委 會 生 只\n座 和 所 二 人 圖 救國 團 彰化 縣 團 友 會 感謝 有 您\n救國 團 彰 化 縣 工 青 五 隊 熱血 相 /\n全 圖 冠 品 若 坊 、 童 人 知 團購 網 、 彰 化 縣 幸福 民歌 協會 > 了 生 和\n語 員 林 市 民代 表 張 偉 傑 、 彰 化 縣 議員 涂 俊 任 、 人\n彰化 縣 議員 劉 惠 娟 、 彰 化 縣 議員 參 選 人 張 詠 勝 /\n",
+            "confidence": 63
+          }
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDktMDYtOS82KOaXpSnlj7DljZfmnbHoiIjmjZDooYDlrqQ=",
+      "time": "",
+      "organization": "台南東興捐血室",
+      "location": "台南東興捐血室",
+      "activityDate": "2026-09-06",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券",
+        "食品"
+      ],
+      "subTags": [
+        "食品－麵包"
+      ],
+      "pttData": {
+        "rawLine": "9/6(日)台南東興捐血室",
+        "images": [
+          "https://i.imgur.com/kPJsC1s.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/kPJsC1s.jpeg",
+            "text": "~” 捐血 救 人 交 太 和 人 人\n5 年\n二 昌 、 全\n\n好 = 全 公 廊 條\n\nrz 及 冉 0 仿效 Sea\n生 也\n\n下 愛 心 捐血 活動 鹿 】\n\n(一 一 一 we 一\n天 EE 划 、 您 的 熱血 ‧ 是 他 人 重生 的 希望 者\n主\n活動 日 其 (0 活動 時 間 | 活動 地 點 全\n音 115 年 08;30 東興 捐血 室 [人 )\n9 月 6 日 @ 」 17:00 由 生 人 和 人 號 色\n字 二 說\n- 捐血 送 好 禮 .‧ 感 謝 有 您\n【 捐血 250cc 贈 品 大 捐血 500cc 賠 品 Gel\n午 | 自\n人\n如 |( 划 人 點 人 加 10\n還\n黑 麥 汁 。。 苹 麥 奶 。 麵包 餐 盒 。 | 黑 麥 汁 從 包 餐 盒 。 開 說 時 禮券\n\n螺 ※※ 贈品 數 量 有 限 , 送 完 為 止 , 主 辦 單位 保有 變更 贈品 之 權利 。 語 記\n\n【 指導 單位 說 二 了 二 ii 主 計 半\n【 主 疾 單 位 】 中 華 民國 一 貫 道 總 會 臺南 市 分 會 人 生生 全 全 全 和\n\n4 【t8MM 戰 位 誠 擊 邀請 各 道場 領導 與 全 體 道 親 前 賢 共 襄 盛舉 , 噁\n\n有 如 論 ‧ 財團 法 人 一 貫 道 發 一 崇 德 臺南 宗教 發 展 基金 會 將 慈悲 心 念 化 為 挽 袖 之 行 動\n人 2 ‧ 發 一 崇 估 慈善 基金 會 臺南 辦事 處 齊心 點 亮 愛 與 希望 人 世\n巒 。。 ‧ 哄 道 場 南 興 光 祥 愛 心 聞 基 全 」 將 大 首 的 慈光 播 攏 至 社會 每 一 個 需要 的 角落 人\n\n‧@ 實 光 道 場 聯合 體 ( 實 光 玉 山 、 實 光 崇 正 、 寶 光 建 德 )\n+ 說 A 辣 化 /\n",
+            "confidence": 54
+          }
+        ]
+      },
+      "isPttOnly": true,
+      "coordinates": {
+        "lat": 22.99874,
+        "lng": 120.23264
+      }
     }
   ],
   "2026-09-11": [
@@ -445,6 +543,13 @@
         "rawLine": "9/16(三)宜蘭警局三星分局",
         "images": [
           "https://i.imgur.com/rvQL6eg.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/rvQL6eg.jpeg",
+            "text": "_w se 人 D\n捐血 一 全 生命 之 說 9\noa\n\n月 1 6iH(==) wu\n她 點 : 宜 蘭 縣 警察 局 三 星 分 局 前 廣場\n\n(三 星 綁 三 星 路 五 段 6 號 ) 他\n0 pa 人\n新 月 電影 飄 二 愛心 傘 十 愛 心 東\n(新 月 電影 票 數 量 有 限 , 發 完 會 以 聯合 勸募 禮 代 替 )\n\n( 捐 500CC 賠 送 2 份 , 數 量 有 限 , 送 完 為 止\n\n窗 ? 現場 有 社區 血糖 檢測 服務\n捐血 前 小 叮 喀\n万 捐血 請 攜帶 身份 證 ( 可 加 速 捐血 流程 ) 。\n玄 如 有 健康 疑慮 (手術 葡 出 國 疫 區 ), 請 先 查詢 台 灣 血 液 基金 會 健康 森 準 。\n玄 損 血 前 8 小 時 請 勿 飲酒 , 爺 足 睡眠 、 勿 空腹 捐血 。 / 仿\n寢 主 辦 單 位 係 留 修 改 紀念 品 贈送 方式 之 權利 。\n人 全 下放 了 全 修 擴 ( 信\n$ 信 協辦 單位 : 三 星 分 局\n",
+            "confidence": 69
+          }
         ]
       },
       "isPttOnly": true
@@ -487,10 +592,38 @@
       "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
       "tags": [
         "禮券",
-        "超商"
+        "超商",
+        "餐飲"
       ],
       "subTags": [
         "超商－全聯",
+        "禮券－全聯",
+        "餐飲－飲料"
+      ],
+      "pttData": {
+        "rawLine": "9/13(日)台北內湖成功路",
+        "images": [
+          "https://i.imgur.com/F7quwmu.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDktMTMtOS8xMyjml6Up5Y+w5YyX5YWn5rmW5o236YGL56uZMeiZn+WHuuWPo+mZhOi/kQ==",
+      "time": "",
+      "organization": "台北內湖捷運站1號出口附近",
+      "location": "台北內湖捷運站1號出口附近",
+      "activityDate": "2026-09-13",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [
+        "禮券",
+        "超商",
+        "餐飲"
+      ],
+      "subTags": [
+        "超商－全聯",
+        "餐飲－飲料",
         "禮券－全聯"
       ],
       "pttData": {
@@ -574,6 +707,56 @@
         "rawLine": "9/1(二)高雄重愛公園",
         "images": [
           "https://i.imgur.com/xluKikR.jpeg"
+        ]
+      },
+      "isPttOnly": true
+    },
+    {
+      "id": "cHR0LTIwMjYtMDktMDEtOS8xKOS6jCnpq5jpm4Tps7PlsbHooYzmlL/kuK3lv4M=",
+      "time": "",
+      "organization": "高雄鳳山行政中心",
+      "location": "高雄鳳山行政中心",
+      "activityDate": "2026-09-01",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "9/1(二)高雄鳳山行政中心",
+        "images": [
+          "https://i.imgur.com/021VyvH.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/021VyvH.jpeg",
+            "text": "俯 ) 人 說 是 純 旋 六\n」 讓 (入 ge\nyy 一 ttCD》DbY AA 7\n一 1 還 CA 人 - 沁 /\n號 《 人 8 全 人 AA\nKA 穫 中 2 全\n> 才 信\nC31WVWtK2 CO |\n@ 說 一 全\n還\n說 人 1 中\n4 晤 當 生 | B\n說 人 入\n太 同 蕉 | 鳳 山 行政 中 心 由 。 則 生 畫\n、 自 山 !- 人 生\nml 古 再 所 轉 由\n則 放 襄 上 拒 gl 用 划 | 謹\n向 am:9/1 0 人\n2 (L) 時 間 : 09:00-17:00 (當 尖 (@ 會 2 R 7\n@ 8:aufirh 心 還 k 詞 GO\n“(所 山區 光 重 路 二 衝 132 束 ) , 計 語 Re\n了 人 革\n(人 鈴 庫存 仿 低 國 風 4\n! 請 參戰 蟬 , 屆 人 辣\n人 且 +\n0\n必 “- 250CC 贈 | 500CC 贈 ve | 說\n- 抽 2 #28 | 9894 表\n+ 在) 能 人 中 “多 還 ,\n人 及 全\n說 殉 入 EE 。 善心 人 士 張 許 瑋 先 生 信\n",
+            "confidence": 27
+          }
+        ]
+      },
+      "isPttOnly": true
+    }
+  ],
+  "2026-09-27": [
+    {
+      "id": "cHR0LTIwMjYtMDktMjctOS8yN+aXpSnlj7DkuK3pvo3kupXnjonlupzlpKnlrq4=",
+      "time": "",
+      "organization": "日)台中龍井玉府天宮",
+      "location": "日)台中龍井玉府天宮",
+      "activityDate": "2026-09-27",
+      "center": "PTT",
+      "detailUrl": "https://www.ptt.cc/bbs/Lifeismoney/M.1767366026.A.B74.html",
+      "tags": [],
+      "pttData": {
+        "rawLine": "9/27日)台中龍井玉府天宮",
+        "images": [
+          "https://i.imgur.com/dJSn6Td.jpeg"
+        ],
+        "ocrTexts": [
+          {
+            "url": "https://i.imgur.com/dJSn6Td.jpeg",
+            "text": "| 有 加 本 圖 人 需 全 紀 六 和\n_ 濟 水 牌 @ 章 /C》 有 / 0 |\n放 人 2 侈 選 2// 字 // 生 一 說\n222 六” 人 am 信人 2\n全 銜 上 本 下 條 讓 束 海 新 子 會\n‧ 公益 捐血 活動\n品 吳 還 中 上 則\n人 說 同 一 職 和\n人 人 劑 員 S am 人 條 一 人 展\n@ 戰 一 化 熟 血 。 一 份 希望 看 全 人 生\n欽 。 您 的 熱血 , 能 圖 助 需要 的 人 和 吉 玉 人\n全 一 起 挽 起 袖子 , 讓 愛 延續 ! 人 。\n二 輸 說 記 /|\nema250ce | ma500ce\n和 # 和 和 有 用 吏 全\n人 @ 人 個 點 | 倫 甸 圖 + 糯 雞\n! 加 碼 ) 六 訪 廬\n! 2 人 呢 人 人\n國 全 較 點 生\n和 者 L 玉 人\n| 篇 和 選 員 : 光 罰\n共和 剛 me\n了 [刁難 數 量 100 信 aa 0( 隻 多\n字 謂 點 說\n依 捐 血 基本 條 件 | @ 依 捐血 間隔 與 年 捐血 量 | @ 于 到 ) 2o2e 9/2705) |\nV 年 滿 16~65 歲 | 捐 250cc 需 隔 2 個 月 (zzmmm) |\n> 45 公 斤 以 上 捐 500cec 需 隔 3 個 月 09:30-16:00\n有 睡眠 充足 主 劑 基 還 |\n年 捐血 量 (以 個 人 生 日 為 周期 ) 上\nv 勿 空腹 | | 天宮\n若 細 2 巡 四 8 還 客人\n(感冒. 打 針 . 吃 藥 ) 女 10UUcc ni 你 | ww 讓 攻 20 3\n讓 語 和 全 全 放 、 訪 江\n過 來 做 公司 抽 誠\n八 捐血 有 愛 ‧ 年 滿 17.65 歲 , 男 雪 體 重 均 剛 50 公 乒 以 上 噶 4\n因為 有 您 we 5\n",
+            "confidence": 39
+          }
         ]
       },
       "isPttOnly": true
