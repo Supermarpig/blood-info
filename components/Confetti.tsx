@@ -105,8 +105,7 @@ export default function Confetti({ isActive, duration = 4000 }: ConfettiProps) {
       ctx.rotate((p.rotation * Math.PI) / 180);
       ctx.globalAlpha = p.opacity;
       ctx.fillStyle = p.color;
-      ctx.shadowColor = p.color;
-      ctx.shadowBlur = 6;
+      // 不開 shadowBlur：130 顆粒子每幀都算陰影模糊，低階手機會掉幀（彩帶很卡的元凶）
 
       switch (p.shape) {
         case "circle":
