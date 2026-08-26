@@ -313,7 +313,9 @@ export function extractFixedStations(
  *
  * 僅供 build 期靜態產生使用（與 app/sitemap.ts 同樣直接用 fs 讀 /data）。
  */
-export async function loadAllStationEvents(): Promise<Record<string, StationEvent[]>> {
+export async function loadAllStationEvents<
+  T extends StationEvent = StationEvent
+>(): Promise<Record<string, T[]>> {
   const dataDir = path.join(process.cwd(), "data");
   let files: string[];
   try {
@@ -322,11 +324,11 @@ export async function loadAllStationEvents(): Promise<Record<string, StationEven
     return {};
   }
 
-  const merged: Record<string, StationEvent[]> = {};
+  const merged: Record<string, T[]> = {};
   for (const file of files.sort()) {
     try {
       const raw = await fs.readFile(path.join(dataDir, file), "utf-8");
-      const month: Record<string, StationEvent[]> = JSON.parse(raw);
+      const month: Record<string, T[]> = JSON.parse(raw);
       for (const [date, events] of Object.entries(month)) {
         merged[date] = merged[date] ? [...merged[date], ...events] : events;
       }

@@ -8,6 +8,7 @@ import {
   getAllFixedStations,
   groupStationsByCity,
 } from "@/lib/bloodCenters";
+import { getStationSlug } from "@/lib/stationSlugs";
 
 // 名錄資料在 build 時從 /data 讀檔產生（Cloudflare Workers runtime 沒有 fs）
 export const dynamic = "force-static";
@@ -138,7 +139,16 @@ export default async function BloodCenterPage() {
                   className="rounded-xl border border-gray-100 bg-white px-4 py-3"
                 >
                   <h3 className="text-sm font-semibold text-gray-800 mb-1.5">
-                    {station.name}
+                    {getStationSlug(station.name) ? (
+                      <Link
+                        href={`/blood-center/${getStationSlug(station.name)}`}
+                        className="hover:text-red-600 underline underline-offset-2 decoration-gray-300"
+                      >
+                        {station.name}
+                      </Link>
+                    ) : (
+                      station.name
+                    )}
                   </h3>
                   <p className="flex items-start gap-1.5 text-xs text-gray-500 mb-1">
                     <MapPin className="w-3 h-3 shrink-0 mt-0.5 text-gray-400" />

@@ -1,6 +1,7 @@
 import Link from "@/components/Link";
 import { MapPin, Clock, Phone, ArrowRight } from "lucide-react";
 import type { FixedStation } from "@/lib/bloodCenters";
+import { getStationSlug } from "@/lib/stationSlugs";
 
 /**
  * 城市頁的「固定捐血點」區塊：捐血中心／捐血站／捐血室的地址與服務時間。
@@ -55,7 +56,16 @@ export default function CityFixedStations({ displayName, stations }: Props) {
             className="rounded-xl border border-gray-100 bg-white px-4 py-3"
           >
             <h3 className="text-sm font-semibold text-gray-800 mb-1.5">
-              {station.name}
+              {getStationSlug(station.name) ? (
+                <Link
+                  href={`/blood-center/${getStationSlug(station.name)}`}
+                  className="hover:text-red-600 underline underline-offset-2 decoration-gray-300"
+                >
+                  {station.name}
+                </Link>
+              ) : (
+                station.name
+              )}
             </h3>
             <p className="flex items-start gap-1.5 text-xs text-gray-500 mb-1">
               <MapPin className="w-3 h-3 shrink-0 mt-0.5 text-gray-400" />

@@ -5,6 +5,8 @@ import { getAllRegionSlugs } from "@/lib/regionConfig";
 import { getAllGiftSlugs } from "@/lib/giftConfig";
 import { getAllCitySlugs } from "@/lib/cityConfig";
 import { getAllOrgSlugs } from "@/lib/organizationConfig";
+import { loadAllStationEvents, getAllFixedStations } from "@/lib/bloodCenters";
+import { STATION_SLUGS } from "@/lib/stationSlugs";
 import { getAllNews } from "@/lib/newsUtils";
 import { eventShortId } from "@/lib/eventId";
 import { BASE_URL } from "@/lib/baseUrl";
@@ -97,6 +99,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   ];
 
+  // 固定捐血點詳情頁：名錄有此站且對照表有 slug 才收
+  //（與 blood-center/[slug] 的 generateStaticParams 同一組條件，避免 sitemap 收到沒預渲染的頁）。
+  // 不給 lastModified：名錄內容極少變動，硬塞 new Date() 只會讓 Google 不信任這個欄位。
+  const stationNames = new Set(
+    getAllFixedStations(await loadAllStationEvents()).map((s) => s.name)
+  );
+  const stationPages: MetadataRoute.Sitemap = Object.entries(STATION_SLUGS)
+    .filter(([name]) => stationNames.has(name))
+    .map(([, slug]) => ({
+      url: `${baseUrl}/blood-center/${slug}`,
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
+    }));
+
   const newsPages: MetadataRoute.Sitemap = newsArticles.map((article) => ({
     url: `${baseUrl}/news/${article.slug}`,
     lastModified: new Date(article.date),
@@ -185,6 +201,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...regionPages,
     ...cityPages,
     ...orgPages,
+    ...stationPages,
     ...giftPages,
     ...newsPages,
     ...activityPages,
