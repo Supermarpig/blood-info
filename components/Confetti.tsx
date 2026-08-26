@@ -183,14 +183,19 @@ export default function Confetti({ isActive, duration = 4000 }: ConfettiProps) {
       }
     }, 300);
 
-    // 動畫循環 — 持續跑直到 cleanupTimer 停止
+    // 動畫循環 — duration 到點後不硬停，改快速淡出收尾。
+    // 之前是 cancelAnimationFrame 硬停但沒清 canvas，最後一幀會凍在畫面上，
+    // 要等父層各自的卸載 timer 才消失（OnsiteReport 晚 200ms、回報 modal 晚 1 秒，
+    // timer 被節流時凍更久）——這就是「彩帶卡住」的原因。
     let stopped = false;
+    let fading = false;
     const animate = () => {
       if (stopped) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       for (let i = particles.length - 1; i >= 0; i--) {
         const p = particles[i];
+        if (fading) p.opacity -= 0.08; // 約 0.2 秒內淡完
         if (updateParticle(p, canvas.height)) {
           drawParticle(ctx, p);
         } else {
@@ -198,22 +203,25 @@ export default function Confetti({ isActive, duration = 4000 }: ConfettiProps) {
         }
       }
 
+      // 淡出完畢就收工；此時本幀開頭的 clearRect 已把畫面清空，不會留殘影
+      if (fading && particles.length === 0) return;
+
       animationRef.current = requestAnimationFrame(animate);
     };
 
     animationRef.current = requestAnimationFrame(animate);
 
-    const cleanupTimer = setTimeout(() => {
-      stopped = true;
-      cancelAnimationFrame(animationRef.current);
-      particles.length = 0;
+    const fadeTimer = setTimeout(() => {
+      fading = true;
     }, duration);
 
     return () => {
       stopped = true;
       cancelAnimationFrame(animationRef.current);
-      clearTimeout(cleanupTimer);
+      clearTimeout(fadeTimer);
       particles.length = 0;
+      // effect 重跑或元件卸載時把畫面清乾淨，任何情況都不留凍結幀
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
     };
   }, [isActive, duration, createParticle, updateParticle, drawParticle]);
 
