@@ -18,6 +18,7 @@ import GuideCallout from "@/components/GuideCallout";
 import CityGiftHighlight from "@/components/CityGiftHighlight";
 import CityFixedStations from "@/components/CityFixedStations";
 import RecentOnsiteReports from "@/components/RecentOnsiteReports";
+import RegionShortageStrip from "@/components/RegionShortageStrip";
 import { BASE_URL } from "@/lib/baseUrl";
 
 const AD_SLOT_CITY = process.env.NEXT_PUBLIC_ADSENSE_SLOT_CITY;
@@ -216,6 +217,19 @@ export default async function CityPage({ params }: PageProps) {
       <p className="text-sm text-gray-500 mb-6">{city.intro}</p>
 
       <SearchableDonationList data={data} currentCitySlug={slug} />
+
+      {/*
+        看完今天的場次之後的第一個下一步。放這裡而不是頁尾，是因為城市頁是全站
+        最大流量來源（49 頁 7,267 點擊/28天），卻只透過 Footer 連到 /blood-shortage
+        ——而 /blood-shortage 是站上唯一在成長的頁（曝光 +89%、點擊 +323%）。
+        順帶讓 49 個城市頁每天都有一段會變動的內容。
+      */}
+      <RegionShortageStrip
+        centerFilter={city.centerFilter}
+        displayName={`${city.centerFilter}捐血中心`}
+        contextNote={`${city.displayName}屬${city.centerFilter}捐血中心轄區`}
+        className="mt-8"
+      />
 
       {/* 固定捐血點（接「{城市}捐血中心／捐血站／捐血室」查詢，這群詞不挑星期） */}
       <CityFixedStations displayName={city.displayName} stations={stations} />

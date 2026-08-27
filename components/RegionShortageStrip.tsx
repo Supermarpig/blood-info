@@ -20,15 +20,22 @@ const STATUS = {
 type StatusKey = keyof typeof STATUS;
 
 /**
- * 區域頁的即時血液庫存小條：顯示該區捐血中心 4 種血型狀態，
- * 內鏈到 /blood-shortage。同時為區域頁帶來每日新鮮內容（利於排名與 Discover）。
+ * 區域／城市頁的即時血液庫存小條：顯示該區捐血中心 4 種血型狀態，
+ * 內鏈到 /blood-shortage。同時為頁面帶來每日新鮮內容（利於排名與 Discover）。
+ *
+ * contextNote：城市頁用。庫存是「捐血中心轄區」等級的資料，不是單一縣市的，
+ * 所以城市頁必須講清楚這份數字屬於哪個轄區，不能寫成「桃園血液庫存」。
  */
 export default function RegionShortageStrip({
   centerFilter,
   displayName,
+  contextNote,
+  className = "mb-6",
 }: {
   centerFilter: string;
   displayName: string;
+  contextNote?: string;
+  className?: string;
 }) {
   const center = inventory.centers.find((c) => c.name === centerFilter);
   if (!center) return null;
@@ -45,8 +52,8 @@ export default function RegionShortageStrip({
       : "庫存大致穩定，感謝持續捐血";
 
   return (
-    <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
-      <div className="mb-3 flex items-center justify-between gap-2">
+    <div className={`${className} rounded-2xl border border-gray-200 bg-white p-4 shadow-sm`}>
+      <div className="mb-3 flex items-start justify-between gap-2">
         <div className="flex items-center gap-2">
           <span
             className={`h-2 w-2 rounded-full ${
@@ -57,11 +64,16 @@ export default function RegionShortageStrip({
                 : "bg-emerald-500"
             }`}
           />
-          <h2 className="text-sm font-bold text-gray-800">
-            {displayName}血液庫存即時
-          </h2>
+          <div>
+            <h2 className="text-sm font-bold text-gray-800">
+              {displayName}血液庫存即時
+            </h2>
+            {contextNote && (
+              <p className="mt-0.5 text-[11px] text-gray-400">{contextNote}</p>
+            )}
+          </div>
         </div>
-        <span className="text-[11px] text-gray-400">{inventory.updatedAt}</span>
+        <span className="shrink-0 text-[11px] text-gray-400">{inventory.updatedAt}</span>
       </div>
       <div className="grid grid-cols-4 gap-2">
         {BLOOD_TYPES.map((t) => {
