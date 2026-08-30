@@ -556,20 +556,50 @@ async function createAndWaitContainer({ text, imageUrl }) {
 }
 
 /**
- * 輪播：先為每張圖各建一個 is_carousel_item 容器（這種容器不帶文字），
- * 再用 media_type=CAROUSEL 把它們的 id 串成一則貼文，文字掛在 CAROUSEL 上。
- * 依官方文件，輪播最少 2 張最多 20 張，且整串只算一則貼文。
+ * 建一個 is_carousel_item 子容器並「等它處理完」。
+ * ⚠️ 這個等待不能省：建立只是回一個 id，Threads 還要自己去抓那張圖，
+ * 沒 FINISHED 就拿去組輪播，母容器會被打回 Invalid Carousel Children（曾經天天發文失敗的原因）。
+ * 單張失敗回 null，讓上層剔除那張而不是整篇不發。
  */
-async function createAndWaitCarousel({ text, imageUrls }) {
-  const childIds = [];
-  for (const imageUrl of imageUrls) {
-    childIds.push(
+async function createCarouselItem(imageUrl) {
+  try {
+    return await waitForContainer(
       await createContainer({ media_type: "IMAGE", image_url: imageUrl, is_carousel_item: "true" })
     );
+  } catch (err) {
+    console.log(`[postToThreads] 輪播子圖處理失敗，跳過這張：${imageUrl}（${err.message}）`);
+    return null;
   }
-  return waitForContainer(
-    await createContainer({ media_type: "CAROUSEL", children: childIds.join(","), text })
-  );
+}
+
+/**
+ * 輪播：每張圖各一個 is_carousel_item 容器（不帶文字），再用 media_type=CAROUSEL
+ * 把 id 串成一則貼文，文字掛在 CAROUSEL 上。官方規格最少 2 張最多 20 張。
+ * 回傳可發布的容器 id；圖全掛回 null（交給呼叫端退到備援）。
+ */
+async function createAndWaitCarousel(plan) {
+  const results = await Promise.all(plan.imageUrls.map(createCarouselItem));
+  const usable = results
+    .map((id, index) => ({ id, index }))
+    .filter((child) => child.id);
+
+  if (usable.length >= 2) {
+    return waitForContainer(
+      await createContainer({
+        media_type: "CAROUSEL",
+        children: usable.map((child) => child.id).join(","),
+        text: plan.caption,
+      })
+    );
+  }
+  if (usable.length === 1) {
+    // 只剩一張圖，輪播湊不成；改發那一場的單場文案（不要留下「今日精選 3 場」配一張圖）
+    const { index } = usable[0];
+    console.log("[postToThreads] 輪播只剩一張圖可用，改發單圖版。");
+    console.log(`[postToThreads] 改用文案：\n${plan.soloCaptions[index]}`);
+    return createAndWaitContainer({ text: plan.soloCaptions[index], imageUrl: plan.imageUrls[index] });
+  }
+  return null;
 }
 
 async function publishContainer(containerId) {
@@ -589,56 +619,58 @@ async function publishContainer(containerId) {
 const CAROUSEL_MAX = 3;
 
 /**
- * 決定今天要發什麼。回傳 { kind, caption, imageUrls }。
- * 優先序：多場輪播 → 單場單圖 → 轄區 banner 備援。
+ * 主策略：今日最好康的前幾場 + 各自的真實海報。
+ * 回傳 { kind, caption, imageUrls, soloCaptions }，soloCaptions 與 imageUrls 同序，
+ * 供「輪播只剩一張圖」時改發單場文案用。今天沒有可用的好康場次回 null。
  */
-async function planPost(events, meta) {
-  const { dateStr, weekday, dayOfYear } = meta;
+async function planGiftPost(events, meta) {
+  const { dayOfYear } = meta;
   const hook = HOOKS[dayOfYear % HOOKS.length]; // 每日輪替開場白
 
-  // 主策略：今日最好康的前幾場 + 各自的真實海報
   const giftEvents = pickGiftEvents(events, CAROUSEL_MAX);
-  if (giftEvents.length) {
-    // Threads 抓不到圖會整篇失敗，所以先驗證；抓不到的那場直接剔除而不是放棄整篇
-    const usable = (
-      await Promise.all(
-        giftEvents.map(async (event) => {
-          const imageUrl = event.pttData.images[0];
-          if (await isImageReachable(imageUrl)) return { event, imageUrl };
-          console.log(`[postToThreads] 海報圖抓不到，跳過這場：${imageUrl}`);
-          return null;
-        })
-      )
-    ).filter(Boolean);
+  if (!giftEvents.length) return null;
 
-    if (usable.length >= 2) {
-      return {
-        kind: "carousel",
-        caption: buildCarouselCaption({
-          events: usable.map((u) => u.event),
-          hook,
-          spotCount: events.length,
-          dayOfYear,
-        }),
-        imageUrls: usable.map((u) => u.imageUrl),
-      };
-    }
-    if (usable.length === 1) {
-      return {
-        kind: "gift",
-        caption: buildGiftCaption({
-          event: usable[0].event,
-          hook,
-          spotCount: events.length,
-          dayOfYear,
-        }),
-        imageUrls: [usable[0].imageUrl],
-      };
-    }
-    console.log("[postToThreads] 今天好康場次的海報圖都抓不到，改用備援 banner。");
+  // Threads 抓不到圖會整篇失敗，所以先粗篩一次（真正的把關在子容器 FINISHED）
+  const usable = (
+    await Promise.all(
+      giftEvents.map(async (event) => {
+        const imageUrl = event.pttData.images[0];
+        if (await isImageReachable(imageUrl)) return { event, imageUrl };
+        console.log(`[postToThreads] 海報圖抓不到，跳過這場：${imageUrl}`);
+        return null;
+      })
+    )
+  ).filter(Boolean);
+
+  if (!usable.length) return null;
+
+  const spotCount = events.length;
+  const soloCaptions = usable.map((u) =>
+    buildGiftCaption({ event: u.event, hook, spotCount, dayOfYear })
+  );
+  const imageUrls = usable.map((u) => u.imageUrl);
+
+  if (usable.length === 1) {
+    return { kind: "gift", caption: soloCaptions[0], imageUrls, soloCaptions };
   }
+  return {
+    kind: "carousel",
+    caption: buildCarouselCaption({
+      events: usable.map((u) => u.event),
+      hook,
+      spotCount,
+      dayOfYear,
+    }),
+    imageUrls,
+    soloCaptions,
+  };
+}
 
-  // 備援：轄區輪替 + 自製 banner
+/** 備援：轄區輪替 + 自製 banner（配圖是自家 OG endpoint，不依賴外部圖床）。 */
+function planRegionPost(events, meta) {
+  const { dateStr, weekday, dayOfYear } = meta;
+  const hook = HOOKS[dayOfYear % HOOKS.length];
+
   const picked = pickRegion(events, dayOfYear);
   if (!picked) return null;
   const { region, regionEvents } = picked;
@@ -656,6 +688,17 @@ async function planPost(events, meta) {
   };
 }
 
+function logPlan(plan) {
+  const kindLabel = {
+    carousel: `好康場次輪播（${plan.imageUrls.length} 張）`,
+    gift: "好康贈品場次（單圖）",
+    region: "轄區 banner（備援）",
+  }[plan.kind];
+  console.log(`[postToThreads] 今天發文類型：${kindLabel}`);
+  console.log(`[postToThreads] 貼文內容預覽：\n${plan.caption}`);
+  console.log(`[postToThreads] 配圖網址：\n  ${plan.imageUrls.join("\n  ")}`);
+}
+
 async function main() {
   if (!THREADS_USER_ID || !THREADS_ACCESS_TOKEN) {
     console.log("[postToThreads] 尚未設定 THREADS_USER_ID / THREADS_ACCESS_TOKEN，略過本次發文。");
@@ -669,25 +712,33 @@ async function main() {
     return;
   }
 
-  const plan = await planPost(events, meta);
-  if (!plan) {
-    console.log(`[postToThreads] ${meta.dateStr} 找不到可發的內容，略過本次發文。`);
-    return;
+  // 優先序：好康場次（輪播／單圖）→ 轄區 banner 備援。
+  // 海報是外部圖床，Threads 抓不到是常態；抓不到就退到自家 banner，不要整天沒發。
+  let containerId = null;
+  const giftPlan = await planGiftPost(events, meta);
+  if (giftPlan) {
+    logPlan(giftPlan);
+    try {
+      containerId =
+        giftPlan.kind === "carousel"
+          ? await createAndWaitCarousel(giftPlan)
+          : await createAndWaitContainer({ text: giftPlan.caption, imageUrl: giftPlan.imageUrls[0] });
+    } catch (err) {
+      console.log(`[postToThreads] 好康場次發文失敗：${err.message}`);
+    }
+    if (!containerId) console.log("[postToThreads] 好康場次的海報 Threads 抓不到，改用備援 banner。");
   }
 
-  const kindLabel = {
-    carousel: `好康場次輪播（${plan.imageUrls.length} 張）`,
-    gift: "好康贈品場次（單圖）",
-    region: "轄區 banner（備援）",
-  }[plan.kind];
-  console.log(`[postToThreads] 今天發文類型：${kindLabel}`);
-  console.log(`[postToThreads] 貼文內容預覽：\n${plan.caption}`);
-  console.log(`[postToThreads] 配圖網址：\n  ${plan.imageUrls.join("\n  ")}`);
+  if (!containerId) {
+    const fallback = planRegionPost(events, meta);
+    if (!fallback) {
+      console.log(`[postToThreads] ${meta.dateStr} 找不到可發的內容，略過本次發文。`);
+      return;
+    }
+    logPlan(fallback);
+    containerId = await createAndWaitContainer({ text: fallback.caption, imageUrl: fallback.imageUrls[0] });
+  }
 
-  const containerId =
-    plan.kind === "carousel"
-      ? await createAndWaitCarousel({ text: plan.caption, imageUrls: plan.imageUrls })
-      : await createAndWaitContainer({ text: plan.caption, imageUrl: plan.imageUrls[0] });
   const postId = await publishContainer(containerId);
   console.log(`[postToThreads] 發布成功，Threads 貼文 id：${postId}`);
 }
