@@ -103,7 +103,10 @@ async function viaNominatim(lat: number, lng: number): Promise<string | null> {
   const city = a.city || a.county || a.state || "";
   const district = a.city_district || a.suburb || a.town || a.village || "";
   const road = a.road || a.quarter || a.neighbourhood || "";
-  const number = a.house_number ? `${a.house_number}號` : "";
+  // OSM 的門牌有時本來就帶「號」，直接補會變成「100號號」（正式站實際回過）
+  const number = a.house_number
+    ? `${a.house_number.replace(/號\s*$/, "")}號`
+    : "";
   const composed = `${city}${district}${road}${number}`.trim();
   return composed.length >= 6 ? composed : null;
 }

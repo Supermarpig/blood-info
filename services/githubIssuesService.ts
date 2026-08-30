@@ -41,7 +41,19 @@ function ghHeaders(): HeadersInit {
     Accept: "application/vnd.github+json",
     "Content-Type": "application/json",
     "X-GitHub-Api-Version": "2022-11-28",
+    // GitHub 強制要求 User-Agent，沒帶一律 403（跟 token 無關）。
+    // Node runtime 的 fetch 會自動補一個，Workers 的不會——搬到 Cloudflare 後
+    // 整個後台就是這樣全掛的，別拿掉。前台 app/api/reports 也帶了同樣的 header。
+    "User-Agent": "blood-info-admin",
   };
+}
+
+/** 把 GitHub 的錯誤訊息帶進例外，不然前端只看到一個沒有線索的狀態碼 */
+async function ghError(res: Response): Promise<Error> {
+  const detail = await res.text().catch(() => "");
+  return new Error(
+    `GitHub API 錯誤: ${res.status}${detail ? ` — ${detail.slice(0, 200)}` : ""}`
+  );
 }
 
 /**
@@ -180,7 +192,7 @@ export async function listIssues(opts: {
 
   const res = await fetch(url, { headers: ghHeaders(), cache: "no-store" });
   if (!res.ok) {
-    throw new Error(`GitHub API 錯誤: ${res.status}`);
+    throw await ghError(res);
   }
   const issues: RawIssue[] = await res.json();
   return issues.filter((i) => !i.pull_request).map(toAdminIssue);
@@ -222,7 +234,7 @@ export async function countIssues(
   const url = `${API}/search/issues?q=${encodeURIComponent(q)}&per_page=1`;
   const res = await fetch(url, { headers: ghHeaders(), cache: "no-store" });
   if (!res.ok) {
-    throw new Error(`GitHub API 錯誤: ${res.status}`);
+    throw await ghError(res);
   }
   const data = await res.json();
   return typeof data.total_count === "number" ? data.total_count : 0;
@@ -246,7 +258,7 @@ export async function createDonationIssue(
     }),
   });
   if (!res.ok) {
-    throw new Error(`GitHub API 錯誤: ${res.status}`);
+    throw await ghError(res);
   }
   return toAdminIssue(await res.json());
 }
@@ -266,7 +278,7 @@ export async function createIssue(
     body: JSON.stringify({ title, body, labels }),
   });
   if (!res.ok) {
-    throw new Error(`GitHub API 錯誤: ${res.status}`);
+    throw await ghError(res);
   }
   return toAdminIssue(await res.json());
 }
@@ -293,7 +305,7 @@ export async function updateIssue(
     }
   );
   if (!res.ok) {
-    throw new Error(`GitHub API 錯誤: ${res.status}`);
+    throw await ghError(res);
   }
   return toAdminIssue(await res.json());
 }

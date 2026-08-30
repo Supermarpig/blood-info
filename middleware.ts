@@ -6,7 +6,9 @@ import { auth } from "@/auth";
  */
 export default auth((req) => {
   const { pathname } = req.nextUrl;
-  const isLoggedIn = !!req.auth;
+  // 必須看到 user 才算登入：AUTH_SECRET 沒設時 req.auth 可能是個沒有 user 的物件，
+  // 只判斷 `!!req.auth` 會讓 /admin 頁面直接放行（見 lib/apiAuth.ts 的說明）。
+  const isLoggedIn = !!req.auth?.user;
   const isLoginPage = pathname === "/admin/login";
 
   if (isLoginPage) {
