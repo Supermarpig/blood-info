@@ -124,7 +124,7 @@ export async function POST(request: Request) {
     // 限流查詢失敗不阻擋正常回報
   }
 
-  // 混合審核：含照片或自由文字 → 待審；只點 chip → 自動公開
+  // 預設直接公開，只有明顯廣告才進待審（見 lib/onsiteReport 的 needsReview）
   const moderation = needsReview(report) ? "pending" : "approved";
   const submitterToken = clamp(body.submitterToken, 64);
 
@@ -135,7 +135,7 @@ export async function POST(request: Request) {
         message:
           moderation === "approved"
             ? "感謝你的現場回報，已即時顯示給其他捐血人！"
-            : "感謝回報！含照片或文字的回報送審後就會對外公開。",
+            : "感謝回報！這筆需要我們確認一下，稍後就會公開。",
         moderation,
       },
       { status: 201 }

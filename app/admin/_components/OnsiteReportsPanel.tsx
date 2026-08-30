@@ -54,6 +54,7 @@ export default function OnsiteReportsPanel({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
+  const [bulkBusy, setBulkBusy] = useState(false);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -93,6 +94,31 @@ export default function OnsiteReportsPanel({
     }
   };
 
+  /**
+   * 一次通過整批待審。
+   * 現在回報預設就直接公開（只有明顯廣告才進待審），這顆按鈕是給
+   * 改制前累積的那批，以及偶爾被誤判擋下的回報用的。
+   */
+  const approveAll = async () => {
+    if (items.length === 0) return;
+    if (!confirm(`確定把這 ${items.length} 筆全部通過公開？`)) return;
+    setBulkBusy(true);
+    try {
+      // 逐筆送，不用 Promise.all：D1 是單一資料庫，同時灌沒有比較快
+      for (const item of items) {
+        await fetch(`/api/admin/onsite-reports/${item.id}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ moderation: "approved" }),
+        });
+      }
+      await load();
+      onChanged?.();
+    } finally {
+      setBulkBusy(false);
+    }
+  };
+
   const remove = async (id: string) => {
     if (!confirm("確定刪除這筆回報？此操作無法復原。")) return;
     setBusy(id);
@@ -126,6 +152,22 @@ export default function OnsiteReportsPanel({
         <div className="flex items-center gap-3">
           {!loading && (
             <span className="text-xs text-gray-400">共 {items.length} 筆</span>
+          )}
+          {filter === "pending" && items.length > 0 && (
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={approveAll}
+              disabled={bulkBusy}
+              className="gap-1.5 text-emerald-600 hover:text-emerald-700"
+            >
+              {bulkBusy ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <Check className="h-4 w-4" />
+              )}
+              全部通過（{items.length}）
+            </Button>
           )}
           <Button variant="ghost" size="sm" onClick={load} className="gap-1.5">
             <RefreshCw className="h-4 w-4" />

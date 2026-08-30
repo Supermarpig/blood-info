@@ -92,10 +92,25 @@ export function hasMeaningfulContent(r: OnsiteReport): boolean {
 }
 
 /**
- * 是否需要人工審核（混合策略）：
- *  - 只點 chip 的結構化回報 → 風險低，自動公開（approved）
- *  - 含照片或自由文字 → 進待審（pending），審過才對外公開
+ * 明顯的廣告／洗版特徵。只留這幾條是刻意的——寧可漏抓也不要誤擋真實回報，
+ * 真的有漏網的，後台隨時可以「退回隱藏」。
+ */
+const SPAM_PATTERNS = [
+  /https?:\/\//i,
+  /www\.[a-z0-9-]+\./i,
+  /(line|賴|加賴)\s*(id)?\s*[:：@]\s*\S{4,}/i,
+];
+
+/**
+ * 是否需要人工審核。
+ *
+ * 原本是「含照片或自由文字就送審」，實際跑下來等於每一筆都要人工按過——
+ * 結果是 23 筆回報躺在後台沒公開，對捐血人來說等同於不存在，
+ * 現場回報最有價值的「即時」也就沒了。
+ *
+ * 現在改成預設直接公開，只有明顯的廣告字樣才進待審。
  */
 export function needsReview(r: OnsiteReport): boolean {
-  return !!(r.photoUrl || hasText(r));
+  const text = `${r.actualGift} ${r.note} ${r.nickname}`;
+  return SPAM_PATTERNS.some((pattern) => pattern.test(text));
 }
