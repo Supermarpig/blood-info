@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Confetti from "@/components/Confetti";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -16,6 +16,7 @@ import {
   Package,
   UtensilsCrossed,
   MapPin,
+  LocateFixed,
   Lightbulb,
   ImagePlus,
   X,
@@ -51,7 +52,10 @@ import {
   TAIWAN_CITIES,
   checkAddressDetail,
   composeAddress,
+  splitCityFromAddress,
 } from "@/lib/addressValidation";
+// 只取型別：lib/knownLocations 會讀檔，import type 在編譯期就被抹掉，不會進 client bundle
+import type { KnownLocation } from "@/lib/knownLocations";
 
 type ReportMode = "location" | "wishlist";
 
@@ -131,6 +135,112 @@ export default function AddDonationEventModal() {
     watchedDetail.trim().length >= 2
       ? composeAddress(watchedCity, watchedDetail)
       : "";
+
+  /**
+   * 地點快選：打兩個字就從「我們資料裡真的辦過捐血的地址」挑一個。
+   * 原本使用者打兩個字就送出（「台北」），現在同樣兩個字，換來的是精確地址。
+   */
+  const [suggestions, setSuggestions] = useState<KnownLocation[]>([]);
+  const [nearby, setNearby] = useState<
+    (KnownLocation & { distanceM?: number })[]
+  >([]);
+  const [pickedAddress, setPickedAddress] = useState("");
+  const [locating, setLocating] = useState(false);
+  const [locateError, setLocateError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const query = watchedDetail.trim();
+    // 已經從清單點過的就別再跳建議，否則選完清單還賴著不走
+    if (!watchedCity || query.length < 1 || addressPreview === pickedAddress) {
+      setSuggestions([]);
+      return;
+    }
+    const controller = new AbortController();
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch(
+          `/api/known-locations?city=${encodeURIComponent(
+            watchedCity
+          )}&q=${encodeURIComponent(query)}&limit=5`,
+          { signal: controller.signal }
+        );
+        const data = await res.json();
+        setSuggestions(Array.isArray(data.locations) ? data.locations : []);
+      } catch {
+        /* 建議清單只是加分項，失敗就當作沒有 */
+      }
+    }, 250);
+    return () => {
+      clearTimeout(timer);
+      controller.abort();
+    };
+  }, [watchedCity, watchedDetail, addressPreview, pickedAddress]);
+
+  /** 點選一筆已知地址：拆成縣市 + 詳細地址填回兩個欄位 */
+  const applyAddress = (address: string, keepNearby = false) => {
+    const parts = splitCityFromAddress(address);
+    locationForm.setValue("city", parts.city || watchedCity, {
+      shouldValidate: true,
+    });
+    locationForm.setValue("addressDetail", parts.detail || address, {
+      shouldValidate: true,
+    });
+    setPickedAddress(address);
+    setSuggestions([]);
+    // 定位帶入時要留著附近清單：GPS 只到門牌，點附近的已知場地才是最精確的答案
+    if (!keepNearby) setNearby([]);
+    setLocateError(null);
+  };
+
+  /**
+   * 用目前位置：一次做兩件事——把座標換成地址填進欄位，
+   * 同時列出附近已知的捐血地點（在既有場地回報時，點清單比用 GPS 地址更精確）。
+   */
+  const handleUseCurrentLocation = () => {
+    if (typeof navigator === "undefined" || !navigator.geolocation) {
+      setLocateError("這支瀏覽器不支援定位，請手動填寫");
+      return;
+    }
+    setLocating(true);
+    setLocateError(null);
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        try {
+          const [geoRes, nearRes] = await Promise.all([
+            fetch(`/api/reverse-geocode?lat=${latitude}&lng=${longitude}`),
+            fetch(
+              `/api/known-locations?lat=${latitude}&lng=${longitude}&limit=4`
+            ),
+          ]);
+
+          const nearData = await nearRes.json().catch(() => ({}));
+          setNearby(Array.isArray(nearData.locations) ? nearData.locations : []);
+
+          const geoData = await geoRes.json().catch(() => ({}));
+          if (geoRes.ok && geoData.formatted) {
+            applyAddress(geoData.formatted, true);
+          } else {
+            setLocateError(geoData.error || "找不到這個位置的地址，請手動填寫");
+          }
+        } catch {
+          setLocateError("定位查詢失敗，請手動填寫");
+        } finally {
+          setLocating(false);
+        }
+      },
+      (error) => {
+        setLocating(false);
+        setLocateError(
+          error.code === error.PERMISSION_DENIED
+            ? "沒有取得定位權限，請手動填寫地址"
+            : "定位失敗，請手動填寫地址"
+        );
+      },
+      { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+    );
+  };
 
   const wishlistForm = useForm<WishlistFormData>({
     resolver: zodResolver(wishlistSchema),
@@ -338,6 +448,30 @@ export default function AddDonationEventModal() {
                     </span>
                   </div>
 
+                  {/* 人多半就站在捐血車旁邊：定位一次，兩個欄位都填好 */}
+                  <button
+                    type="button"
+                    onClick={handleUseCurrentLocation}
+                    disabled={isLoading || locating}
+                    className="flex h-11 w-full items-center justify-center gap-2 rounded-md border border-gray-200 bg-gray-50 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 disabled:opacity-60"
+                  >
+                    {locating ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        定位中...
+                      </>
+                    ) : (
+                      <>
+                        <LocateFixed className="h-4 w-4 text-gray-500" />
+                        用我現在的位置填入
+                      </>
+                    )}
+                  </button>
+
+                  {locateError && (
+                    <p className="text-xs text-amber-600">{locateError}</p>
+                  )}
+
                   <div className="flex gap-2">
                     <FormField
                       control={locationForm.control}
@@ -385,6 +519,55 @@ export default function AddDonationEventModal() {
                       )}
                     />
                   </div>
+
+                  {/* 附近的已知捐血點：GPS 只會給門牌，點這裡才是我們資料裡的精確場地 */}
+                  {nearby.length > 0 && (
+                    <div className="space-y-1">
+                      <p className="text-xs text-gray-500">你附近辦過捐血的地點：</p>
+                      <div className="divide-y divide-gray-100 overflow-hidden rounded-lg border border-gray-200">
+                        {nearby.map((item) => (
+                          <button
+                            key={item.address}
+                            type="button"
+                            onClick={() => applyAddress(item.address)}
+                            className="flex w-full items-start gap-2 px-3 py-2.5 text-left text-sm text-gray-700 transition-colors hover:bg-gray-50"
+                          >
+                            <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-400" />
+                            <span className="flex-1">{item.address}</span>
+                            {typeof item.distanceM === "number" && (
+                              <span className="shrink-0 text-xs text-gray-400">
+                                {item.distanceM < 1000
+                                  ? `${item.distanceM} 公尺`
+                                  : `${(item.distanceM / 1000).toFixed(1)} 公里`}
+                              </span>
+                            )}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* 打字時的快選：兩個字就能點到正確地址 */}
+                  {suggestions.length > 0 && (
+                    <div className="space-y-1">
+                      <p className="text-xs text-gray-500">
+                        以前在這裡辦過捐血，點一下直接帶入：
+                      </p>
+                      <div className="divide-y divide-gray-100 overflow-hidden rounded-lg border border-gray-200">
+                        {suggestions.map((item) => (
+                          <button
+                            key={item.address}
+                            type="button"
+                            onClick={() => applyAddress(item.address)}
+                            className="flex w-full items-start gap-2 px-3 py-2.5 text-left text-sm text-gray-700 transition-colors hover:bg-gray-50"
+                          >
+                            <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-400" />
+                            <span>{item.address}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {addressPreview ? (
                     <p className="flex items-start gap-1.5 rounded-md bg-gray-50 px-2.5 py-1.5 text-xs text-gray-600">

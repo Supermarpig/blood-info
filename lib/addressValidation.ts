@@ -123,6 +123,43 @@ export function composeAddress(city: string, detail: string): string {
 }
 
 /**
+ * 反向操作：把完整地址拆成 { 縣市, 其餘 }。
+ * 給「反向地理編碼帶回的地址」與「已知捐血地點清單」共用——兩者都是完整地址，
+ * 但表單是縣市下拉 + 詳細地址兩欄，得先拆開才能填進去。
+ * 找不到縣市時 city 回空字串，讓使用者自己選。
+ */
+export function splitCityFromAddress(address: string): {
+  city: string;
+  detail: string;
+} {
+  // Google 會回「100台灣台北市…」這種前綴（郵遞區號、國名，順序不固定），先剝乾淨
+  let clean = (address || "").trim();
+  let previous = "";
+  while (clean !== previous) {
+    previous = clean;
+    clean = clean.replace(/^\d{3,6}/, "").replace(/^(台灣|臺灣)/, "").trim();
+  }
+
+  // 只做「臺→台」的 1:1 置換來比對，長度不變，才能安全地用 slice 切
+  const comparable = clean.replace(/臺/g, "台");
+
+  // 先比對完整縣市名，再比對省略「市／縣」的簡稱。
+  // 順序不能顛倒：「新竹縣竹北市…」若先用簡稱比，會先撞到「新竹市」。
+  for (const city of TAIWAN_CITIES) {
+    if (comparable.startsWith(city)) {
+      return { city, detail: clean.slice(city.length).trim() };
+    }
+  }
+  for (const city of TAIWAN_CITIES) {
+    const short = city.replace(/[市縣]$/, "");
+    if (comparable.startsWith(short)) {
+      return { city, detail: clean.slice(short.length).trim() };
+    }
+  }
+  return { city: "", detail: clean };
+}
+
+/**
  * 伺服端用：檢查送進來的完整地址夠不夠具體（表單以外的來源也會走這裡）。
  * 通過回 null，否則回錯誤訊息。
  */
