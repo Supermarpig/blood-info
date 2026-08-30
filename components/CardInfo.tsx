@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, ExternalLink, Gift, ChevronRight, Camera } from "lucide-react";
+import { MapPin, ExternalLink, Gift, ChevronRight, ImageUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState, useRef, useEffect } from "react";
 import Link from "@/components/Link";
@@ -17,6 +17,8 @@ import {
 import { getGiftByTagId } from "@/lib/giftConfig";
 import { CITIES } from "@/lib/cityConfig";
 import ShareModal from "@/components/ShareModal";
+import EventPosterUploadModal from "@/components/EventPosterUploadModal";
+import { useEventPosters } from "@/lib/useEventPosters";
 import { cva } from "class-variance-authority";
 import { getEventStatus, type EventStatus } from "@/lib/eventStatus";
 
@@ -114,6 +116,7 @@ export default function CardInfo({
 }: CardInfoProps) {
   const router = useRouter();
   const [isPttDialogOpen, setIsPttDialogOpen] = useState(false);
+  const [isPosterUploadOpen, setIsPosterUploadOpen] = useState(false);
   const [showShareHint, setShowShareHint] = useState(false);
   const hoverTimer = useRef<ReturnType<typeof setTimeout>>();
   const chevronRef = useRef<SVGSVGElement>(null);
@@ -175,9 +178,22 @@ export default function CardInfo({
     return hash.toString(36).padStart(6, "0");
   };
 
-  const detailPath = donation.id
-    ? `/activity/${donation.activityDate}-${eventShortId(donation.id)}`
-    : null;
+  /** 與活動詳情頁、現場回報共用的活動代碼（YYYY-MM-DD-shortId） */
+  const eventKey = donation.id
+    ? `${donation.activityDate}-${eventShortId(donation.id)}`
+    : "";
+
+  const detailPath = eventKey ? `/activity/${eventKey}` : null;
+
+  /**
+   * 圖片來源：PTT 海報 / 使用者回報的圖 / 投稿並通過審核的海報。
+   * 投稿海報是非同步取的（整頁的卡片會合併成一次請求，見 lib/useEventPosters）。
+   */
+  const posterImages = useEventPosters(eventKey);
+  const images = [
+    ...(donation.pttData?.images || donation.reportData?.images || []),
+    ...posterImages,
+  ];
 
   const shareUrl = detailPath
     ? `https://www.bloodtw.com${detailPath}`
@@ -196,6 +212,7 @@ export default function CardInfo({
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     donation.location
   )}`;
+
 
   /** 贈品名稱：有 subTags 用細項，否則用大類 */
   const giftChips: { key: string; label: string; href?: string }[] =
@@ -273,24 +290,8 @@ export default function CardInfo({
               >
                 <ExternalLink className="h-4 w-4" />
               </a>
-
-              {/*
-                回報入口：清單頁才是絕大多數人待的地方，回報表單卻只在詳情頁，
-                等於沒人找得到。這裡直接帶去詳情頁並自動展開表單（?report=1）——
-                地點、日期都已經在網址裡，回報者一個字都不用打。
-              */}
-              {detailPath && (
-                <Link
-                  href={`${detailPath}?report=1`}
-                  title="回報現場狀況、上傳照片"
-                  aria-label={`回報 ${donation.location} 的現場狀況或上傳照片`}
-                  className="rounded-full p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-900"
-                >
-                  <Camera className="h-4 w-4" />
-                </Link>
-              )}
-                {/* PTT 或使用者回報 Dialog */}
-                {(donation.pttData || donation.reportData) && (
+                {/* 圖片 Dialog：PTT 海報、使用者回報的圖、或通過審核的投稿海報 */}
+                {images.length > 0 && (
                   <Dialog
                     open={isPttDialogOpen}
                     onOpenChange={setIsPttDialogOpen}
@@ -365,12 +366,8 @@ export default function CardInfo({
                       </DialogHeader>
 
                       <div className="overflow-y-auto p-4 flex-grow">
-                        {/* 圖片區域 - 支援 pttData 和 reportData */}
+                        {/* 圖片區域 - PTT / 使用者回報 / 投稿海報 */}
                         {(() => {
-                          const images =
-                            donation.pttData?.images ||
-                            donation.reportData?.images ||
-                            [];
                           return images.length > 0 ? (
                             <div className="space-y-4 mb-6">
                               {images.map((imgUrl, idx) => (
@@ -541,6 +538,39 @@ export default function CardInfo({
                 )
               )}
             </div>
+          )}
+
+          {/*
+            上傳海報入口。只有被 PTT 貼過的場次有海報，其餘幾千場都只有純文字，
+            而海報上才有贈品長相與詳細時間——主辦單位手上就有這張圖，
+            捐血人現場也拍得到，缺的只是一個上傳的地方。
+
+            做成有字的一整列而不是圖示：上面那排已經有三顆灰圖示，
+            再加一顆沒有人看得出是「上傳海報」。
+            已經有圖的場次就不再邀請投稿，改成只在沒有圖時出現。
+          */}
+          {donation.id && images.length === 0 && (
+            <button
+              type="button"
+              onClick={() => setIsPosterUploadOpen(true)}
+              className={cn(
+                "flex items-center gap-1.5 border-t border-gray-100 px-4 py-2.5 text-left text-xs text-gray-500 transition-colors hover:bg-gray-50 hover:text-gray-900",
+                giftChips.length === 0 && "mt-auto"
+              )}
+            >
+              <ImageUp className="h-3.5 w-3.5 flex-none text-gray-400" />
+              有這場的海報嗎？幫忙上傳
+              <ChevronRight className="ml-auto h-3.5 w-3.5 flex-none text-gray-300" />
+            </button>
+          )}
+
+          {donation.id && (
+            <EventPosterUploadModal
+              open={isPosterUploadOpen}
+              onOpenChange={setIsPosterUploadOpen}
+              eventId={eventKey}
+              eventLabel={`${donation.activityDate}　${donation.organization}｜${donation.location}`}
+            />
           )}
         </div>
       </CardContent>

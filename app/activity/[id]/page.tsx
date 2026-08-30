@@ -371,7 +371,12 @@ export default async function ActivityPage({ params }: PageProps) {
           </div>
 
           {/* 圖片 */}
-          <ActivityImages images={images} organization={event.organization} />
+          <ActivityImages
+            images={images}
+            organization={event.organization}
+            eventId={id}
+            eventLabel={`${event.activityDate}　${event.organization}｜${event.location}`}
+          />
 
           {/* 來源 */}
           {(event.pttData || event.reportData) && (
