@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, ExternalLink, Gift, ChevronRight } from "lucide-react";
+import { MapPin, ExternalLink, Gift, ChevronRight, Camera } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState, useRef, useEffect } from "react";
 import Link from "@/components/Link";
@@ -273,6 +273,22 @@ export default function CardInfo({
               >
                 <ExternalLink className="h-4 w-4" />
               </a>
+
+              {/*
+                回報入口：清單頁才是絕大多數人待的地方，回報表單卻只在詳情頁，
+                等於沒人找得到。這裡直接帶去詳情頁並自動展開表單（?report=1）——
+                地點、日期都已經在網址裡，回報者一個字都不用打。
+              */}
+              {detailPath && (
+                <Link
+                  href={`${detailPath}?report=1`}
+                  title="回報現場狀況、上傳照片"
+                  aria-label={`回報 ${donation.location} 的現場狀況或上傳照片`}
+                  className="rounded-full p-1.5 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-900"
+                >
+                  <Camera className="h-4 w-4" />
+                </Link>
+              )}
                 {/* PTT 或使用者回報 Dialog */}
                 {(donation.pttData || donation.reportData) && (
                   <Dialog

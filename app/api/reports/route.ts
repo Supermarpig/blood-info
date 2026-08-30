@@ -1,5 +1,6 @@
 // /app/api/reports/route.ts
 import { NextResponse } from "next/server";
+import { checkFullAddress } from "@/lib/addressValidation";
 
 interface LocationReportInput {
   type: "location";
@@ -72,6 +73,13 @@ function handleLocationReport(data: LocationReportInput) {
   // 基本驗證
   if (!address || !activityDate) {
     return { error: "缺少必要欄位：地址或日期", status: 400 };
+  }
+
+  // 地址不夠具體的回報等於沒有回報（標不到地圖、也查不出實際地點）。
+  // 表單已經先擋一次，這裡是給舊快取的前端與直接打 API 的情況兜底。
+  const addressError = checkFullAddress(address);
+  if (addressError) {
+    return { error: addressError, status: 400 };
   }
 
   // 轉換時間標籤

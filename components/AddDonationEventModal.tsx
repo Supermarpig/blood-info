@@ -47,6 +47,11 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  TAIWAN_CITIES,
+  checkAddressDetail,
+  composeAddress,
+} from "@/lib/addressValidation";
 
 type ReportMode = "location" | "wishlist";
 
@@ -62,7 +67,15 @@ const GIFT_TAGS = [
 const TIME_TAGS = ["早上", "下午", "整天"];
 
 const locationReportSchema = z.object({
-  address: z.string().min(2, "地址至少需要 2 個字"),
+  // 地址拆成「縣市」＋「詳細地址」：原本單一自由欄位收到的回報大量只寫「台北」，
+  // 標不到地圖也查不出實際地點。縣市用選的，剩下那段才由使用者打，並強制夠具體。
+  city: z.string().min(1, "請選擇縣市"),
+  addressDetail: z.string().superRefine((value, ctx) => {
+    const issue = checkAddressDetail(value);
+    if (issue) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: issue.message });
+    }
+  }),
   activityDate: z.string().min(1, "請選擇日期"),
   tags: z.array(z.string()).default([]),
   email: z.string().email("請輸入有效的 Email").or(z.literal("")).optional(),
@@ -87,12 +100,37 @@ export default function AddDonationEventModal() {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [uploadError, setUploadError] = useState<string | null>(null);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const locationForm = useForm<LocationFormData>({
     resolver: zodResolver(locationReportSchema),
-    defaultValues: { address: "", activityDate: "", tags: [], email: "" },
+    defaultValues: {
+      city: "",
+      addressDetail: "",
+      activityDate: "",
+      tags: [],
+      email: "",
+    },
   });
+
+  /** 台北時區的 yyyy-MM-dd（用當地中午換算，避開跨日與時區邊界） */
+  const taipeiDate = (offsetDays: number) => {
+    const today = new Date().toLocaleDateString("en-CA", {
+      timeZone: "Asia/Taipei",
+    });
+    const d = new Date(`${today}T12:00:00`);
+    d.setDate(d.getDate() + offsetDays);
+    return d.toLocaleDateString("en-CA");
+  };
+
+  // 讓使用者看到「實際會送出的地址」，選了縣市又自己再打一次也不會變成「新北市新北市…」
+  const watchedCity = locationForm.watch("city");
+  const watchedDetail = locationForm.watch("addressDetail");
+  const addressPreview =
+    watchedDetail.trim().length >= 2
+      ? composeAddress(watchedCity, watchedDetail)
+      : "";
 
   const wishlistForm = useForm<WishlistFormData>({
     resolver: zodResolver(wishlistSchema),
@@ -122,6 +160,7 @@ export default function AddDonationEventModal() {
 
   const onLocationSubmit = async (data: LocationFormData) => {
     setIsLoading(true);
+    setSubmitError(null);
     try {
       let imgUrl: string | undefined;
 
@@ -141,11 +180,13 @@ export default function AddDonationEventModal() {
         imgUrl = uploadData.url;
       }
 
+      const { city, addressDetail, ...rest } = data;
       const response = await fetch("/api/reports", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          ...data,
+          ...rest,
+          address: composeAddress(city, addressDetail),
           tags: selectedTags,
           type: "location",
           imgurUrl: imgUrl,
@@ -160,9 +201,11 @@ export default function AddDonationEventModal() {
       } else {
         const errorData = await response.json();
         console.error("Submission failed:", errorData);
+        setSubmitError(errorData.error || "提交失敗，請稍後再試");
       }
     } catch (error) {
       console.error("Error during submission:", error);
+      setSubmitError("提交失敗，請檢查網路後再試一次");
     } finally {
       setIsLoading(false);
     }
@@ -170,6 +213,7 @@ export default function AddDonationEventModal() {
 
   const onWishlistSubmit = async (data: WishlistFormData) => {
     setIsLoading(true);
+    setSubmitError(null);
     try {
       const response = await fetch("/api/reports", {
         method: "POST",
@@ -183,9 +227,11 @@ export default function AddDonationEventModal() {
       } else {
         const errorData = await response.json();
         console.error("Submission failed:", errorData);
+        setSubmitError(errorData.error || "提交失敗，請稍後再試");
       }
     } catch (error) {
       console.error("Error during submission:", error);
+      setSubmitError("提交失敗，請檢查網路後再試一次");
     } finally {
       setIsLoading(false);
     }
@@ -205,6 +251,7 @@ export default function AddDonationEventModal() {
     wishlistForm.reset();
     setSelectedTags([]);
     setIsSubmitted(false);
+    setSubmitError(null);
     clearImage();
   };
 
@@ -234,7 +281,7 @@ export default function AddDonationEventModal() {
             </DialogTitle>
             <DialogDescription>
               {mode === "location"
-                ? "填寫地址、日期，選擇標籤，可附上圖片。"
+                ? "填寫完整地址與日期，選擇標籤，可附上圖片。"
                 : "告訴我們您想要什麼新功能！"}
             </DialogDescription>
           </DialogHeader>
@@ -282,24 +329,74 @@ export default function AddDonationEventModal() {
                 onSubmit={locationForm.handleSubmit(onLocationSubmit)}
                 className="space-y-4"
               >
-                {/* 地址 */}
-                <FormField
-                  control={locationForm.control}
-                  name="address"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>地址</FormLabel>
-                      <FormControl>
-                        <Input
-                          placeholder="例如：新北市板橋區中山路一段152號"
-                          {...field}
-                          disabled={isLoading}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
+                {/* 地址：縣市用選的，詳細地址強制寫到區＋路名或地標 */}
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm font-medium">地址</p>
+                    <span className="text-xs text-gray-400">
+                      要能在地圖上找得到
+                    </span>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <FormField
+                      control={locationForm.control}
+                      name="city"
+                      render={({ field }) => (
+                        <FormItem className="w-[7rem] shrink-0 space-y-1">
+                          <FormControl>
+                            <select
+                              {...field}
+                              aria-label="縣市"
+                              disabled={isLoading}
+                              className={`flex h-11 w-full rounded-md border border-input bg-transparent px-2 text-base shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 ${
+                                field.value ? "" : "text-muted-foreground"
+                              }`}
+                            >
+                              <option value="">縣市</option>
+                              {TAIWAN_CITIES.map((city) => (
+                                <option key={city} value={city}>
+                                  {city}
+                                </option>
+                              ))}
+                            </select>
+                          </FormControl>
+                          <FormMessage className="text-xs" />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={locationForm.control}
+                      name="addressDetail"
+                      render={({ field }) => (
+                        <FormItem className="flex-1 space-y-1">
+                          <FormControl>
+                            <Input
+                              // h-11 / text-base：長輩點得到，且 16px 以上 iOS 才不會一聚焦就放大整頁
+                              className="h-11 text-base"
+                              placeholder="板橋區中山路一段152號"
+                              {...field}
+                              disabled={isLoading}
+                            />
+                          </FormControl>
+                          <FormMessage className="text-xs" />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  {addressPreview ? (
+                    <p className="flex items-start gap-1.5 rounded-md bg-gray-50 px-2.5 py-1.5 text-xs text-gray-600">
+                      <MapPin className="mt-0.5 h-3 w-3 shrink-0 text-gray-400" />
+                      <span>將送出：{addressPreview}</span>
+                    </p>
+                  ) : (
+                    <p className="text-xs text-gray-500">
+                      只寫「台北」我們找不到地點。請寫到區＋路名門牌，或寫得出招牌的地標，例如「板橋國小」。
+                    </p>
                   )}
-                />
+                </div>
 
                 {/* 日期 */}
                 <FormField
@@ -308,13 +405,38 @@ export default function AddDonationEventModal() {
                   render={({ field }) => (
                     <FormItem className="flex flex-col">
                       <FormLabel>日期</FormLabel>
+                      {/* 九成的回報都是今天或明天的活動，先給兩顆按鈕省掉翻月曆 */}
+                      <div className="mb-1.5 flex gap-1.5">
+                        {[
+                          { label: "今天", offset: 0 },
+                          { label: "明天", offset: 1 },
+                        ].map(({ label, offset }) => {
+                          const value = taipeiDate(offset);
+                          const isSelected = field.value === value;
+                          return (
+                            <button
+                              key={label}
+                              type="button"
+                              disabled={isLoading}
+                              onClick={() => field.onChange(value)}
+                              className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
+                                isSelected
+                                  ? "bg-gray-900 text-white"
+                                  : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                              }`}
+                            >
+                              {label}
+                            </button>
+                          );
+                        })}
+                      </div>
                       <Popover modal={true}>
                         <PopoverTrigger asChild>
                           <FormControl>
                             <Button
                               variant="outline"
                               disabled={isLoading}
-                              className={`w-full pl-3 text-left font-normal ${
+                              className={`h-11 w-full pl-3 text-left text-base font-normal ${
                                 !field.value ? "text-muted-foreground" : ""
                               }`}
                             >
@@ -486,6 +608,10 @@ export default function AddDonationEventModal() {
                   )}
                 />
 
+                {submitError && (
+                  <p className="text-sm text-red-500">{submitError}</p>
+                )}
+
                 <Button
                   type="submit"
                   disabled={isLoading}
@@ -543,6 +669,10 @@ export default function AddDonationEventModal() {
                     </FormItem>
                   )}
                 />
+
+                {submitError && (
+                  <p className="text-sm text-red-500">{submitError}</p>
+                )}
 
                 <Button
                   type="submit"

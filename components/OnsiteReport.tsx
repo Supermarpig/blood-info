@@ -259,6 +259,26 @@ export default function OnsiteReport({ eventId, announcedGifts }: Props) {
     };
   }, [eventId]);
 
+  /**
+   * 從清單卡片的相機圖示進來時（?report=1）直接把表單打開並捲到位，
+   * 讓「想回報」到「能填」之間不用再找按鈕。
+   *
+   * 不用 useSearchParams：那會讓整頁被迫進 Suspense/動態渲染，這裡只是個
+   * 一次性的進場行為，讀 window.location 就夠。讀完把參數清掉，
+   * 重新整理或分享網址時才不會又跳一次。
+   */
+  useEffect(() => {
+    if (!new URLSearchParams(window.location.search).has("report")) return;
+    setOpen(true);
+    const url = new URL(window.location.href);
+    url.searchParams.delete("report");
+    window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+    const timer = setTimeout(() => {
+      rootRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   // 現場熱度光暈：漸層沿卡片外緣流動 + 呼吸明滅，圖示隨火/水律動
   useGSAP(
     () => {
