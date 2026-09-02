@@ -2,6 +2,11 @@
 
 import { useState, useCallback, useEffect } from "react";
 import { fetchBloodRooms } from "@/lib/staticData";
+import {
+  GEO_ERROR,
+  getCurrentPositionSafely,
+  type GeoCoords,
+} from "@/lib/geolocate";
 
 const LOCATION_CACHE_KEY = "nearby_user_location";
 const LOCATION_CACHE_TTL = 10 * 60 * 1000; // 10 minutes
@@ -110,38 +115,28 @@ function toRad(deg: number): number {
 
 /**
  * 取得用戶當前位置
+ *
+ * 走 getCurrentPositionSafely：假定位外掛會把 callback eval 重建，閉包（resolve/
+ * reject）會整個消失，原本的寫法會安靜地永遠不回來。詳見 lib/geolocate.ts。
  */
-function getUserLocation(): Promise<GeolocationPosition> {
-  return new Promise((resolve, reject) => {
-    if (!navigator.geolocation) {
-      reject(new Error("瀏覽器不支援定位功能"));
-      return;
+async function getUserLocation(): Promise<GeoCoords> {
+  try {
+    return await getCurrentPositionSafely();
+  } catch (error) {
+    const code = (error as { code?: number })?.code;
+    switch (code) {
+      case GEO_ERROR.PERMISSION_DENIED:
+        throw new Error("請允許位置存取權限以使用此功能");
+      case GEO_ERROR.POSITION_UNAVAILABLE:
+        throw new Error("無法取得您的位置資訊");
+      case GEO_ERROR.TIMEOUT:
+        throw new Error("取得位置逾時，請重試");
+      case GEO_ERROR.UNSUPPORTED:
+        throw new Error("瀏覽器不支援定位功能");
+      default:
+        throw new Error("定位發生未知錯誤");
     }
-
-    navigator.geolocation.getCurrentPosition(
-      resolve,
-      (error) => {
-        switch (error.code) {
-          case error.PERMISSION_DENIED:
-            reject(new Error("請允許位置存取權限以使用此功能"));
-            break;
-          case error.POSITION_UNAVAILABLE:
-            reject(new Error("無法取得您的位置資訊"));
-            break;
-          case error.TIMEOUT:
-            reject(new Error("取得位置逾時，請重試"));
-            break;
-          default:
-            reject(new Error("定位發生未知錯誤"));
-        }
-      },
-      {
-        enableHighAccuracy: true,
-        timeout: 10000,
-        maximumAge: 60000, // 快取 1 分鐘
-      }
-    );
-  });
+  }
 }
 
 export function useNearbyLocations(): UseNearbyLocationsReturn {
@@ -171,8 +166,8 @@ export function useNearbyLocations(): UseNearbyLocationsReturn {
         setUserLocation(prev => (prev?.lat === userLat && prev?.lng === userLng ? prev : { lat: userLat, lng: userLng }));
       } else {
         const position = await getUserLocation();
-        userLat = position.coords.latitude;
-        userLng = position.coords.longitude;
+        userLat = position.lat;
+        userLng = position.lng;
         const loc = { lat: userLat, lng: userLng };
         setUserLocation(prev => (prev?.lat === userLat && prev?.lng === userLng ? prev : loc));
         saveLocation(loc);

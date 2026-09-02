@@ -56,6 +56,7 @@ import {
 } from "@/lib/addressValidation";
 // 只取型別：lib/knownLocations 會讀檔，import type 在編譯期就被抹掉，不會進 client bundle
 import type { KnownLocation } from "@/lib/knownLocations";
+import { GEO_ERROR, getCurrentPositionSafely } from "@/lib/geolocate";
 
 type ReportMode = "location" | "wishlist";
 
@@ -196,50 +197,41 @@ export default function AddDonationEventModal() {
    * 用目前位置：一次做兩件事——把座標換成地址填進欄位，
    * 同時列出附近已知的捐血地點（在既有場地回報時，點清單比用 GPS 地址更精確）。
    */
-  const handleUseCurrentLocation = () => {
-    if (typeof navigator === "undefined" || !navigator.geolocation) {
-      setLocateError("這支瀏覽器不支援定位，請手動填寫");
-      return;
-    }
+  const handleUseCurrentLocation = async () => {
     setLocating(true);
     setLocateError(null);
 
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const { latitude, longitude } = position.coords;
-        try {
-          const [geoRes, nearRes] = await Promise.all([
-            fetch(`/api/reverse-geocode?lat=${latitude}&lng=${longitude}`),
-            fetch(
-              `/api/known-locations?lat=${latitude}&lng=${longitude}&limit=4`
-            ),
-          ]);
+    try {
+      const { lat, lng } = await getCurrentPositionSafely();
+      const [geoRes, nearRes] = await Promise.all([
+        fetch(`/api/reverse-geocode?lat=${lat}&lng=${lng}`),
+        fetch(`/api/known-locations?lat=${lat}&lng=${lng}&limit=4`),
+      ]);
 
-          const nearData = await nearRes.json().catch(() => ({}));
-          setNearby(Array.isArray(nearData.locations) ? nearData.locations : []);
+      const nearData = await nearRes.json().catch(() => ({}));
+      setNearby(Array.isArray(nearData.locations) ? nearData.locations : []);
 
-          const geoData = await geoRes.json().catch(() => ({}));
-          if (geoRes.ok && geoData.formatted) {
-            applyAddress(geoData.formatted, true);
-          } else {
-            setLocateError(geoData.error || "找不到這個位置的地址，請手動填寫");
-          }
-        } catch {
-          setLocateError("定位查詢失敗，請手動填寫");
-        } finally {
-          setLocating(false);
-        }
-      },
-      (error) => {
-        setLocating(false);
-        setLocateError(
-          error.code === error.PERMISSION_DENIED
-            ? "沒有取得定位權限，請手動填寫地址"
-            : "定位失敗，請手動填寫地址"
-        );
-      },
-      { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
-    );
+      const geoData = await geoRes.json().catch(() => ({}));
+      if (geoRes.ok && geoData.formatted) {
+        applyAddress(geoData.formatted, true);
+      } else {
+        setLocateError(geoData.error || "找不到這個位置的地址，請手動填寫");
+      }
+    } catch (error) {
+      const code = (error as { code?: number })?.code;
+      setLocateError(
+        code === GEO_ERROR.PERMISSION_DENIED
+          ? "沒有取得定位權限，請手動填寫地址"
+          : code === GEO_ERROR.UNSUPPORTED
+          ? "這支瀏覽器不支援定位，請手動填寫"
+          : code === GEO_ERROR.TIMEOUT
+          ? "定位逾時，請手動填寫地址"
+          : "定位失敗，請手動填寫地址"
+      );
+    } finally {
+      // 不管上面怎麼死，按鈕一定要活過來（外掛把 callback eval 掉也一樣）
+      setLocating(false);
+    }
   };
 
   const wishlistForm = useForm<WishlistFormData>({
